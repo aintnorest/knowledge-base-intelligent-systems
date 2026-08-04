@@ -2,7 +2,7 @@
 type: Synthesis
 title: Claim-Bounded Sandbox Evidence
 description: Designing an AI evaluation sandbox as a bounded evidence apparatus whose deployment claims are explicitly limited by represented dynamics, scenarios, controls, artifacts, and residual risk.
-tags: [synthesis, ai-sandboxes, evaluation, assurance, safety, security, governance, cyber-physical-systems]
+tags: [sandboxing, evaluation, reliability, governance]
 timestamp: 2026-07-14T16:26:53Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: VLM Prompt Learning
 description: Learning soft prompt vectors for vision-language models instead of handcrafting text prompts, enabling adaptive and task-specific visual-textual alignment.
-tags: [synthesis, prompting, vlm, vision-language, clip, prompt-tuning, multimodal]
+tags: [prompting, multimodal, fine-tuning]
 timestamp: 2026-07-11T16:36:00Z
 ---
 

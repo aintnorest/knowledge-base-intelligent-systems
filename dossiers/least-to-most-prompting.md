@@ -4,7 +4,7 @@ title: Least-to-Most Prompting Enables Complex Reasoning in Large Language Model
 description: Historical study notes on least-to-most prompting, a decomposition-and-sequential-solving method for extrapolating from simple demonstrations to harder reasoning problems.
 resource: https://arxiv.org/abs/2205.10625v3
 source: /archive/least-to-most-prompting.pdf
-tags: [least-to-most, prompting, decomposition, reasoning, compositional-generalization, study-note]
+tags: [decomposition, prompting, reasoning, generalization]
 timestamp: 2026-07-13T00:04:46Z
 ---
 

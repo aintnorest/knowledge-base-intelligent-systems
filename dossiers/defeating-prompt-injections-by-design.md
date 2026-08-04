@@ -4,7 +4,7 @@ title: Defeating Prompt Injections by Design
 description: Study notes on CaMeL, a capability-enforcing agent runtime that isolates untrusted parsing from planning and checks provenance-aware policies at tool boundaries.
 resource: https://arxiv.org/abs/2503.18813v2
 source: /archive/defeating-prompt-injections-by-design.pdf
-tags: [prompt-injection, agent-security, capabilities, information-flow-control, tool-use, study-note]
+tags: [agent-security, prompt-injection, access-control, tool-use, agents]
 timestamp: 2026-07-14T16:09:17Z
 ---
 

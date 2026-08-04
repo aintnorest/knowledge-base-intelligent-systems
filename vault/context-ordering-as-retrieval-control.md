@@ -2,7 +2,7 @@
 type: Synthesis
 title: Context Ordering as Retrieval Control
 description: Treating the selection, ordering, and truncation of supplied evidence as a reader-specific retrieval policy rather than a neutral prompt-formatting detail.
-tags: [synthesis, retrieval, rag, long-context, reranking, context-engineering]
+tags: [retrieval, long-context, context-engineering]
 timestamp: 2026-07-14T15:53:29Z
 ---
 

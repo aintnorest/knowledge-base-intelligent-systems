@@ -4,7 +4,7 @@ title: 'TextGrad: Automatic “Differentiation” via Text'
 description: Personal study notes on TextGrad, a framework that propagates LLM-generated natural-language critiques through compound AI computation graphs to revise text-valued components.
 resource: https://arxiv.org/abs/2406.07496v1
 source: /archive/textgrad-automatic-differentiation-via-text.pdf
-tags: [textgrad, textual-gradients, llm-optimization, compound-ai, prompt-optimization, self-refinement, study-note]
+tags: [prompt-optimization, self-improvement, llm-as-judge]
 timestamp: 2026-07-13T18:15:11Z
 ---
 

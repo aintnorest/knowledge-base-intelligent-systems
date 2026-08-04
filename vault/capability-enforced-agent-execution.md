@@ -2,7 +2,7 @@
 type: Synthesis
 title: Capability-Enforced Agent Execution
 description: A reference-monitor pattern that propagates data provenance and permitted-reader capabilities through an agent runtime, then checks them at every consequential tool call.
-tags: [synthesis, agent-security, capabilities, information-flow-control, tool-use, prompt-injection]
+tags: [agent-security, access-control, prompt-injection, tool-use, agents]
 timestamp: 2026-07-14T16:09:17Z
 ---
 

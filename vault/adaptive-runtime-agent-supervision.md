@@ -2,7 +2,7 @@
 type: Synthesis
 title: Adaptive Runtime Agent Supervision
 description: Selectively intervening in agent execution with cheap triggers and context-aware corrective actions to control errors, wasteful loops, and oversized observations without redesigning the base workflow.
-tags: [synthesis, multi-agent-systems, runtime-control, agent-reliability, token-efficiency, context-engineering, tool-use]
+tags: [multi-agent, orchestration, reliability, context-engineering, token-efficiency, agents]
 timestamp: 2026-07-14T15:57:50Z
 ---
 

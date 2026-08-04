@@ -2,7 +2,7 @@
 type: Synthesis
 title: Closed-Loop VLM Visual Generation
 description: Iterative visual generation for academic manuscripts where a vision-language model critiques renders and requests redraws until design objectives are met.
-tags: [synthesis, visual-generation, vlm, academic-papers, closed-loop, critique]
+tags: [multimodal, llm-as-judge, agents, verification]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

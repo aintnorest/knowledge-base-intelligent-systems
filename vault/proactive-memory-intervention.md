@@ -2,7 +2,7 @@
 type: Synthesis
 title: Proactive Memory Intervention
 description: Agent-memory pattern where a separate memory policy decides whether remembered execution state should enter the next action context.
-tags: [synthesis, agent-memory, context-engineering, intervention-policy, long-horizon-agents]
+tags: [agent-memory, context-engineering, long-horizon, agents]
 timestamp: 2026-07-12T21:18:44Z
 ---
 

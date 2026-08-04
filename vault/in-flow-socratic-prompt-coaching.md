@@ -2,7 +2,7 @@
 type: Synthesis
 title: In-Flow Socratic Prompt Coaching
 description: A learning-oriented prompt-improvement pattern that diagnoses a live prompt, privately inspects likely consequences, and asks context-grounded questions instead of supplying a rewrite.
-tags: [synthesis, prompt-engineering, agentic-tutor, socratic-guidance, software-development, in-flow-learning]
+tags: [prompting, evaluation, context-engineering]
 timestamp: 2026-07-13T16:16:19Z
 ---
 

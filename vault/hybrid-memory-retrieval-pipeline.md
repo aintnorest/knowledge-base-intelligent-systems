@@ -2,7 +2,7 @@
 type: Synthesis
 title: Hybrid Memory Retrieval Pipeline
 description: A staged memory-retrieval pattern that combines need detection, query shaping, dense and sparse retrieval, fusion, reranking, policy filters, and compact context packing.
-tags: [synthesis, agent-memory, retrieval, hybrid-search, rag, reranking, context-engineering]
+tags: [agent-memory, retrieval, context-engineering, agents]
 timestamp: 2026-07-13T17:56:03Z
 ---
 

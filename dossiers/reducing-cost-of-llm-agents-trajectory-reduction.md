@@ -4,7 +4,7 @@ title: Reducing Cost of LLM Agents with Trajectory Reduction
 description: Personal study notes on Xiao et al.'s AgentDiet, an inference-time reflection module that locally removes useless, redundant, and expired agent-trajectory content to cut coding-agent cost.
 resource: https://doi.org/10.1145/3797084
 source: /archive/reducing-cost-of-llm-agents-trajectory-reduction.pdf
-tags: [llm-agents, coding-agents, trajectory-reduction, context-management, token-efficiency, kv-cache, software-engineering, study-note]
+tags: [coding-agents, compaction, token-efficiency, agents]
 timestamp: 2026-07-14T15:00:00Z
 ---
 

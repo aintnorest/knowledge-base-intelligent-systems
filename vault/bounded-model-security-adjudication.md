@@ -2,7 +2,7 @@
 type: Synthesis
 title: Bounded Model Security Adjudication
 description: Using a learned model for a narrowly defined security judgment over structured, minimal artifacts, while deterministic controls constrain its inputs, output, and authority.
-tags: [synthesis, agent-security, prompt-injection, policy-enforcement, structured-inputs, model-judges, human-in-the-loop]
+tags: [agent-security, prompt-injection, access-control, llm-as-judge, human-in-the-loop, agents]
 timestamp: 2026-07-14T16:16:51Z
 ---
 

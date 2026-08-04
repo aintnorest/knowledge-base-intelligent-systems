@@ -2,7 +2,7 @@
 type: Synthesis
 title: Configuration-Aware Multi-Agent Prompt Optimization
 description: Treating the joint prompts of a multi-agent system as configuration-dependent parameters that must be optimized and validated against the deployed task, graph, protocol, aggregation, and team size.
-tags: [synthesis, multi-agent-systems, prompt-optimization, evaluation, coordination, system-prompts]
+tags: [multi-agent, prompt-optimization, agents, evaluation]
 timestamp: 2026-07-13T18:01:03Z
 ---
 

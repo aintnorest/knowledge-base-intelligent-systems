@@ -2,7 +2,7 @@
 type: Synthesis
 title: Nested Sandbox Capability Evaluation
 description: Evaluating an agent's ability to cross an inner security boundary while enclosing the whole experiment in a stronger outer boundary that contains any successful crossing.
-tags: [synthesis, agent-evaluation, sandboxing, agent-security, containment, cybersecurity, benchmarks]
+tags: [agent-security, sandboxing, evaluation, benchmark, agents]
 timestamp: 2026-07-14T16:14:53Z
 ---
 

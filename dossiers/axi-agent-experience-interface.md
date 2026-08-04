@@ -4,7 +4,7 @@ title: AXI: Agent eXperience Interface
 description: Personal study notes on AXI's ten design principles for token-efficient, discoverable command-line interfaces for agents and its browser and GitHub benchmark claims.
 resource: https://axi.md/
 source: https://axi.md/
-tags: [agent-interfaces, cli, mcp, tool-design, token-efficiency, browser-automation, study-note]
+tags: [agent-harness, tool-use, mcp, token-efficiency, agents]
 timestamp: 2026-07-13T16:13:34Z
 ---
 

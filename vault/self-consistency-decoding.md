@@ -2,7 +2,7 @@
 type: Synthesis
 title: Self-Consistency Decoding
 description: Sampling multiple reasoning paths and marginalizing across them to select the most supported normalized answer, replacing greedy decoding in constrained-answer reasoning.
-tags: [synthesis, prompting, decoding, self-consistency, reasoning, ensemble]
+tags: [chain-of-thought, test-time-scaling, reasoning, prompting]
 timestamp: 2026-07-12T23:58:09Z
 ---
 

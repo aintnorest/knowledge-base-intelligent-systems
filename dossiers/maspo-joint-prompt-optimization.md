@@ -4,7 +4,7 @@ title: 'MASPO: Joint Prompt Optimization for LLM-based Multi-Agent Systems'
 description: Personal study notes on MASPO, a trace-driven method for jointly improving multi-agent prompts using downstream-aware evaluation, misalignment cases, and refreshed evolutionary beam search.
 resource: https://arxiv.org/abs/2605.06623v1
 source: /archive/maspo-joint-prompt-optimization.pdf
-tags: [multi-agent-systems, prompt-optimization, credit-assignment, evaluation, beam-search, coordination, study-note]
+tags: [multi-agent, prompt-optimization, llm-as-judge, agents]
 timestamp: 2026-07-13T18:01:03Z
 ---
 

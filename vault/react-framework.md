@@ -2,7 +2,7 @@
 type: Synthesis
 title: ReAct Framework
 description: Agent-control pattern that interleaves decision-relevant reasoning, bounded actions, and observations to ground tool use and maintain a revisable task state.
-tags: [synthesis, prompting, react, reasoning, tool-use, agents]
+tags: [agents, tool-use, reasoning, prompting]
 timestamp: 2026-07-13T00:05:37Z
 ---
 

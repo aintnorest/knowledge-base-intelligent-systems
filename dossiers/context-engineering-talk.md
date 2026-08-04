@@ -4,7 +4,7 @@ title: Mergeable by Default
 description: Personal study notes on Peter Werry's talk about building a context engine for coding agents, organizational memory, conflict handling, and token-efficient task execution.
 resource: https://www.youtube.com/watch?v=5ID22ACI7IM
 source: /archive/context-engineering-talk.md
-tags: [context-engineering, coding-agents, organizational-memory, retrieval, study-note]
+tags: [context-engineering, coding-agents, retrieval, agents, access-control]
 timestamp: 2026-07-12T21:27:50Z
 ---
 

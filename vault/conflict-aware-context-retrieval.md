@@ -2,7 +2,7 @@
 type: Synthesis
 title: Conflict-Aware Context Retrieval
 description: Retrieval pattern where the system detects conflicting evidence, ranks likely truth, and surfaces unresolved conflicts instead of hiding them behind naive heuristics.
-tags: [synthesis, context-engineering, retrieval, conflict-resolution, coding-agents]
+tags: [context-engineering, retrieval, coding-agents, agents]
 timestamp: 2026-07-12T21:27:50Z
 ---
 

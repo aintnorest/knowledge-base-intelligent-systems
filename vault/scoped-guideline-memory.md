@@ -2,7 +2,7 @@
 type: Synthesis
 title: Scoped Guideline Memory
 description: Maintaining agent instructions as small rules whose lifetime is explicitly limited to a task or promoted to persistent memory only after a confidence and quality gate.
-tags: [synthesis, agents, memory, context-engineering, prompt-optimization, governance]
+tags: [agents, agent-memory, context-engineering, prompt-optimization, governance]
 timestamp: 2026-07-13T18:06:35Z
 ---
 

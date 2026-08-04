@@ -4,7 +4,7 @@ title: ISOLATE GPT: An Execution Isolation Architecture for LLM-Based Agentic Sy
 description: Study notes on a hub-and-spoke, process-isolated architecture for third-party LLM apps that mediates cross-app data flow through structured messages, user consent, and a trusted hub.
 resource: https://arxiv.org/abs/2403.04960v2
 source: /archive/isolate-gpt-execution-isolation-agentic-systems.pdf
-tags: [agent-security, execution-isolation, llm-agents, sandboxing, permissions, inter-process-communication, prompt-injection, study-note]
+tags: [agent-security, sandboxing, access-control, prompt-injection, multi-agent, agents]
 timestamp: 2026-07-14T16:07:20Z
 ---
 

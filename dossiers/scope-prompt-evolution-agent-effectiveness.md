@@ -4,7 +4,7 @@ title: 'SCOPE: Prompt Evolution for Enhancing Agent Effectiveness'
 description: Personal study notes on SCOPE, a trace-driven framework that evolves per-agent prompts during execution with scoped guideline memory and diverse optimization perspectives.
 resource: https://arxiv.org/abs/2512.15374v2
 source: /archive/scope-prompt-evolution-agent-effectiveness.pdf
-tags: [scope, prompt-evolution, context-management, self-improving-agents, multi-agent-systems, study-note]
+tags: [self-improvement, prompt-optimization, agent-memory, tool-use, agents]
 timestamp: 2026-07-13T18:06:35Z
 ---
 

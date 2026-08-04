@@ -2,7 +2,7 @@
 type: Synthesis
 title: Authorization–Provenance Graph Alignment
 description: Enforcing consequential agent actions by comparing a clean, intent-derived authorization graph with an execution-provenance graph, including source constraints for each high-impact parameter.
-tags: [synthesis, agent-security, authorization, provenance, graph-alignment, prompt-injection, runtime-enforcement, tool-use]
+tags: [agent-security, access-control, provenance, prompt-injection, tool-use, agents]
 timestamp: 2026-07-14T16:21:42Z
 ---
 

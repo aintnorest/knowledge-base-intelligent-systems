@@ -2,7 +2,7 @@
 type: Synthesis
 title: Prompting Distance
 description: A model-relative way to compare outputs through the similarity of their shortest approximate generating prompts.
-tags: [synthesis, prompting, similarity, prompt-optimization, controllability]
+tags: [prompting, prompt-optimization, evaluation]
 timestamp: 2026-07-13T17:51:25Z
 ---
 

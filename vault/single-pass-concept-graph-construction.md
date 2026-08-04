@@ -2,7 +2,7 @@
 type: Synthesis
 title: Single-Pass Concept Graph Construction
 description: Building a retrieval graph by using an LLM only for compact concept extraction, then performing deduplication, passage linkage, and graph topology construction with deterministic non-LLM operations.
-tags: [synthesis, graph-rag, retrieval, knowledge-graphs, token-efficiency, indexing, rag]
+tags: [retrieval, knowledge-graphs, token-efficiency]
 timestamp: 2026-07-14T15:53:34Z
 ---
 

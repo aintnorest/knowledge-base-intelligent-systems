@@ -2,7 +2,7 @@
 type: Synthesis
 title: Model-Aware Harness Design
 description: Keeping agent-harness abstractions portable while adapting prompts, tool interfaces, and handoff instructions to each model's learned interaction patterns.
-tags: [synthesis, agent-harness, model-adaptation, tool-design, context-engineering, coding-agents]
+tags: [agent-harness, coding-agents, tool-use, context-engineering, agents]
 timestamp: 2026-07-13T16:02:28Z
 ---
 

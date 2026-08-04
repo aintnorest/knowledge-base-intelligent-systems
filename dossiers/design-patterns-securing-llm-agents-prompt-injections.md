@@ -4,7 +4,7 @@ title: Design Patterns for Securing LLM Agents against Prompt Injections
 description: Study notes on six system-design patterns that restrict how untrusted natural-language data can influence an LLM agent's actions, with ten application case studies.
 resource: https://arxiv.org/abs/2506.08837v3
 source: /archive/design-patterns-securing-llm-agents-prompt-injections.pdf
-tags: [llm-agents, prompt-injection, agent-security, trust-boundaries, tool-use, study-note]
+tags: [agents, agent-security, prompt-injection, tool-use, access-control]
 timestamp: 2026-07-14T16:11:55Z
 ---
 

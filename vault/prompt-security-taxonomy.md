@@ -2,7 +2,7 @@
 type: Synthesis
 title: Prompt Security Taxonomy
 description: A structured overview of attack vectors targeting LLMs through their prompt interfaces, including adversarial attacks, backdoors, injection, and model stealing.
-tags: [synthesis, prompting, security, adversarial, backdoor, injection, hacking, stealing]
+tags: [prompt-injection, adversarial-robustness, taxonomy, prompting]
 timestamp: 2026-07-11T16:36:00Z
 ---
 

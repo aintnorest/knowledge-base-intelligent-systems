@@ -4,7 +4,7 @@ title: Validating Agentic Behavior When Correct Isn't Deterministic
 description: Personal study notes on GitHub's dominator-analysis Trust Layer for validating non-deterministic computer-use agent runs from a few successful execution traces.
 resource: https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/
 source: https://github.blog/ai-and-ml/generative-ai/validating-agentic-behavior-when-correct-isnt-deterministic/
-tags: [agent-evaluation, agentic-testing, computer-use, dominator-analysis, study-note]
+tags: [computer-use, agents, verification, evaluation]
 timestamp: 2026-07-13T02:42:42Z
 ---
 

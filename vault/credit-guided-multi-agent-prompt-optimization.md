@@ -2,7 +2,7 @@
 type: Synthesis
 title: Credit-Guided Multi-Agent Prompt Optimization
 description: Diagnosing a multi-agent LLM trajectory by role and interaction round, then revising only the prompt components with persistently weak evidence.
-tags: [synthesis, multi-agent, prompt-optimization, credit-assignment, aggregation, textual-gradients, evaluation]
+tags: [multi-agent, prompt-optimization, agents, evaluation]
 timestamp: 2026-07-13T17:58:53Z
 ---
 

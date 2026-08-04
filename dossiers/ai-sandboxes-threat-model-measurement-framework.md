@@ -4,7 +4,7 @@ title: AI Sandboxes: A Threat Model, Taxonomy, and Measurement Framework
 description: Study notes on an assurance-oriented framework for AI sandboxes that bounds deployment claims by explicit assumptions, evidence artifacts, and their weakest claim-relevant measurement dimension.
 resource: https://arxiv.org/abs/2606.18532v1
 source: /archive/ai-sandboxes-threat-model-measurement-framework.pdf
-tags: [ai-sandboxes, assurance, evaluation, cyber-physical-systems, physical-ai, security, governance, study-note]
+tags: [sandboxing, evaluation, governance, taxonomy]
 timestamp: 2026-07-14T16:26:53Z
 ---
 

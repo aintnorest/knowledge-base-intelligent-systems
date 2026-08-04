@@ -4,7 +4,7 @@ title: Chain-of-Thought Prompting Elicits Reasoning in Large Language Models
 description: Historical study notes on the foundational few-shot chain-of-thought paper and its evidence for eliciting intermediate reasoning steps in large language models.
 resource: https://arxiv.org/abs/2201.11903v6
 source: /archive/chain-of-thought-prompting-elicits-reasoning.pdf
-tags: [chain-of-thought, prompting, reasoning, in-context-learning, llm, study-note]
+tags: [chain-of-thought, prompting, reasoning, in-context-learning]
 timestamp: 2026-07-12T22:25:44Z
 ---
 

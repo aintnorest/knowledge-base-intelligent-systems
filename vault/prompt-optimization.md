@@ -2,7 +2,7 @@
 type: Synthesis
 title: Prompt Optimization
 description: Automated methods for improving prompts and multi-stage LLM programs, including gradient-based, black-box, model-adaptive, agentic, cost-aware, instruction-generation, compiler-driven, and configuration-aware multi-agent approaches.
-tags: [synthesis, prompting, optimization, automated, pro-tegi, bpo, mapo, promptagent, ape, opro, dspy, multi-agent]
+tags: [prompt-optimization, prompting, multi-agent, evaluation, agents]
 timestamp: 2026-07-13T18:08:50Z
 ---
 

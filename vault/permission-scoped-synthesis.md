@@ -2,7 +2,7 @@
 type: Synthesis
 title: Permission-Scoped Synthesis
 description: Context-engineering principle that access controls must constrain not only retrieval, but also summaries, memories, and cross-source conclusions.
-tags: [synthesis, context-engineering, permissions, governance, privacy]
+tags: [context-engineering, access-control, governance, privacy, agents]
 timestamp: 2026-07-12T21:27:50Z
 ---
 

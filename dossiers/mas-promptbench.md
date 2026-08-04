@@ -4,7 +4,7 @@ title: 'MAS-PromptBench: When Does Prompt Optimization Improve Multi-Agent LLM S
 description: Personal study notes on a controlled benchmark of system-prompt optimization across multi-agent task domains, coordination topologies, communication protocols, and team sizes.
 resource: https://arxiv.org/abs/2606.23664v1
 source: /archive/mas-promptbench.pdf
-tags: [multi-agent-systems, prompt-optimization, benchmark, system-prompts, coordination, communication-protocols, study-note]
+tags: [multi-agent, prompt-optimization, benchmark, orchestration, agents]
 timestamp: 2026-07-13T17:56:21Z
 ---
 

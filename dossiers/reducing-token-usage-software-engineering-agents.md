@@ -4,7 +4,7 @@ title: Reducing Token Usage of Software Engineering Agents
 description: Study notes on Hrubec's diploma thesis evaluating source-code minification in a state-in-context software-repair agent, including its token savings, repair-quality trade-off, and transformation-induced patch failures.
 resource: https://doi.org/10.34726/hss.2025.136382
 source: /archive/reducing-token-usage-software-engineering-agents.pdf
-tags: [software-engineering-agents, code-minification, context-management, token-efficiency, program-repair, swe-bench, study-note]
+tags: [coding-agents, token-efficiency, context-engineering, agents]
 timestamp: 2026-07-14T16:07:15Z
 ---
 

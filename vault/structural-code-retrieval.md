@@ -2,7 +2,7 @@
 type: Synthesis
 title: Structural Code Retrieval
 description: Answering recurrent repository-structure questions from a persistent, typed code graph, while retaining source retrieval for details the graph cannot faithfully represent.
-tags: [synthesis, coding-agents, code-retrieval, knowledge-graphs, static-analysis, tree-sitter, mcp, token-efficiency]
+tags: [coding-agents, retrieval, knowledge-graphs, mcp, token-efficiency]
 timestamp: 2026-07-14T15:58:59Z
 ---
 

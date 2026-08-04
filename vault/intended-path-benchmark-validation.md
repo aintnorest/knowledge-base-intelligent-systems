@@ -2,7 +2,7 @@
 type: Synthesis
 title: Intended-Path Benchmark Validation
 description: Establishing that an agent benchmark is solvable and that measured successes follow the target capability rather than an unintended shortcut or harness artifact.
-tags: [synthesis, agent-evaluation, benchmark-design, validation, trace-analysis, cybersecurity, capability-evaluations]
+tags: [evaluation, verification, benchmark, agent-security, agents]
 timestamp: 2026-07-14T16:14:53Z
 ---
 

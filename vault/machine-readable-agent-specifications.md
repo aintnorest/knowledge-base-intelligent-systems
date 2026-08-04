@@ -2,7 +2,7 @@
 type: Synthesis
 title: Machine-Readable Agent Specifications
 description: Converting organizational policies, quality standards, procedures, and agreements into versioned, scoped, testable artifacts that can govern a fleet of agents consistently.
-tags: [synthesis, agents, specifications, governance, policy-as-code, enterprise-ai, evaluation]
+tags: [governance, enterprise, evaluation, agents]
 timestamp: 2026-07-13T18:03:01Z
 ---
 

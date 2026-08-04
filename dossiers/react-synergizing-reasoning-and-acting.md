@@ -4,7 +4,7 @@ title: ReAct: Synergizing Reasoning and Acting in Language Models
 description: Personal study notes on the ICLR 2023 paper that interleaves language-model reasoning, tool actions, and environment observations for grounded question answering and interactive decision making.
 resource: https://arxiv.org/abs/2210.03629v3
 source: /archive/react-synergizing-reasoning-and-acting.pdf
-tags: [react, agents, tool-use, reasoning, retrieval, decision-making, study-note]
+tags: [agents, tool-use, reasoning, retrieval]
 timestamp: 2026-07-13T00:05:37Z
 ---
 

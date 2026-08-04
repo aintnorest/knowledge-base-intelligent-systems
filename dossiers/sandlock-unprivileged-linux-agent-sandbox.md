@@ -4,7 +4,7 @@ title: Sandlock: Confining AI Agent Code with Unprivileged Linux Primitives
 description: Study notes on an unprivileged Linux sandbox for frequent agent commands that compiles static policy into Landlock and seccomp-bpf while reserving a narrow, TOCTOU-conscious supervisor for runtime-dependent decisions and reversible effects.
 resource: https://arxiv.org/abs/2605.26298v1
 source: /archive/sandlock-unprivileged-linux-agent-sandbox.pdf
-tags: [agent-security, sandboxing, linux, landlock, seccomp, least-privilege, runtime-enforcement, copy-on-write, prompt-injection, study-note]
+tags: [agent-security, sandboxing, access-control, agents]
 timestamp: 2026-07-14T16:20:08Z
 ---
 

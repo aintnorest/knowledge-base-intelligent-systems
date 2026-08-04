@@ -2,7 +2,7 @@
 type: Synthesis
 title: Structured Agent Communication Contracts
 description: Using an explicit, validated message schema for inter-agent handoffs so state, evidence, confidence, and next actions remain interpretable and transferable through a workflow.
-tags: [synthesis, multi-agent-systems, communication-protocols, schemas, coordination, validation]
+tags: [multi-agent, agents, verification, orchestration]
 timestamp: 2026-07-13T17:56:21Z
 ---
 

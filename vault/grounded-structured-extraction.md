@@ -2,7 +2,7 @@
 type: Synthesis
 title: Grounded Structured Extraction
 description: A pattern for producing structured extractions through staged candidate generation, source-grounding checks, contextual labeling, and set-level consistency verification.
-tags: [synthesis, information-extraction, structured-output, grounding, verification, span-extraction, multi-agent]
+tags: [verification, decomposition, multi-agent, agents]
 timestamp: 2026-07-13T17:51:00Z
 ---
 

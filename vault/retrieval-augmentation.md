@@ -2,7 +2,7 @@
 type: Synthesis
 title: Retrieval Augmentation for Hallucination Reduction
 description: Incorporating external, up-to-date knowledge and verification steps into prompts to ground LLM outputs and reduce factual hallucinations.
-tags: [synthesis, prompting, retrieval, rag, hallucination, grounding]
+tags: [retrieval, prompting, context-engineering]
 timestamp: 2026-07-12T21:41:16Z
 ---
 

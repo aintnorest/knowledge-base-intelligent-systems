@@ -4,7 +4,7 @@ title: Large Language Models are Zero-Shot Reasoners
 description: Historical study notes on Zero-shot-CoT, a two-stage prompting method that elicited stepwise reasoning from 2022-era large language models without worked examples.
 resource: https://arxiv.org/abs/2205.11916v4
 source: /archive/large-language-models-are-zero-shot-reasoners.pdf
-tags: [zero-shot-cot, chain-of-thought, prompting, reasoning, llm, study-note]
+tags: [chain-of-thought, prompting, reasoning]
 timestamp: 2026-07-12T22:29:57Z
 ---
 

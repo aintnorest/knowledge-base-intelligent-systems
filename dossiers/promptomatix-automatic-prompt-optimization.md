@@ -4,7 +4,7 @@ title: "Promptomatix: An Automatic Prompt Optimization Framework for Large Langu
 description: Study notes on Promptomatix, a zero-configuration prompt-optimization wrapper that infers task configuration, generates synthetic data, selects a prompting backend and metric, and tracks feedback-driven re-optimization.
 resource: https://arxiv.org/abs/2507.14241v3
 source: /archive/promptomatix-automatic-prompt-optimization.pdf
-tags: [prompt-optimization, automatic-prompting, synthetic-data, dspy, mipro, evaluation, cost-awareness, study-note]
+tags: [prompt-optimization, evaluation, prompting]
 timestamp: 2026-07-13T18:08:00Z
 ---
 

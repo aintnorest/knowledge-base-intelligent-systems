@@ -2,7 +2,7 @@
 type: Synthesis
 title: Cross-Mechanism Execution-Security Evaluation
 description: Evaluating agent-security controls as a composed system against shared, independently derived failure cases, including stale state, weak policies, and authorized-but-unrequested actions.
-tags: [synthesis, agent-security, evaluation, sandboxing, authorization, policy-enforcement, toctou, scope-creep]
+tags: [agent-security, evaluation, access-control, sandboxing, agents, coding-agents]
 timestamp: 2026-07-14T16:29:37Z
 ---
 

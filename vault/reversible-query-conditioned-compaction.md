@@ -2,7 +2,7 @@
 type: Synthesis
 title: Reversible, Query-Conditioned Compaction
 description: Pairing a compact default representation with query-time recovery from retained source material so future questions need not be predicted perfectly in advance.
-tags: [synthesis, memory-compaction, retrieval, reversibility, query-conditioning, agent-memory, long-context]
+tags: [compaction, retrieval, agent-memory, long-context]
 timestamp: 2026-07-13T17:51:09Z
 ---
 

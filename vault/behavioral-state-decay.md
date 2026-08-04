@@ -2,7 +2,7 @@
 type: Synthesis
 title: Behavioral State Decay
 description: Failure mode where decision-relevant execution state stops influencing an agent even when it remains present in the trajectory or context.
-tags: [synthesis, agent-memory, context-engineering, long-horizon-agents, failure-mode]
+tags: [agent-memory, context-engineering, long-horizon, agents]
 timestamp: 2026-07-12T21:18:44Z
 ---
 

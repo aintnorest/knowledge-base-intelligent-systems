@@ -4,7 +4,7 @@ title: "From Prompts to Contracts: Harness Engineering for Auditable Enterprise 
 description: Personal study notes on a contract-based harness that turns a prompt-dominant enterprise LLM prototype into a source-governed, traceable application with validated fallback composition.
 resource: https://arxiv.org/abs/2607.08028v1
 source: /archive/auditable-enterprise-llm-harness.pdf
-tags: [agent-harness, enterprise-ai, auditability, source-grounding, validation, traces, llm-agents, study-note]
+tags: [agent-harness, enterprise, verification, provenance, agents]
 timestamp: 2026-07-13T17:54:59Z
 ---
 

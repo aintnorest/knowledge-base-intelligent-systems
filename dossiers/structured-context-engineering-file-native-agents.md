@@ -4,7 +4,7 @@ title: Structured Context Engineering for File-Native Agentic Systems
 description: Personal study notes on an experiment comparing file-native and prompt-injected schemas, four schema formats, model tiers, and partitioned navigation for agentic text-to-SQL.
 resource: https://arxiv.org/abs/2602.05447v2
 source: /archive/structured-context-engineering-file-native-agents.pdf
-tags: [context-engineering, file-native-agents, text-to-sql, schema-retrieval, model-adaptation, token-efficiency, study-note]
+tags: [context-engineering, retrieval, token-efficiency, agents, tool-use]
 timestamp: 2026-07-13T18:04:21Z
 ---
 

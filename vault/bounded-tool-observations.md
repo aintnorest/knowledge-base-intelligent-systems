@@ -2,7 +2,7 @@
 type: Synthesis
 title: Bounded Tool Observations
 description: Giving agents compact, unambiguous tool results by default while preserving explicit paths to retrieve detail, so observation cost does not grow with raw response size.
-tags: [synthesis, agents, tool-output, token-efficiency, context-engineering, observability]
+tags: [tool-use, token-efficiency, context-engineering, agents]
 timestamp: 2026-07-13T16:13:34Z
 ---
 

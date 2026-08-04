@@ -4,7 +4,7 @@ title: Are We Ready For An Agent-Native Memory System?
 description: Personal study notes on Zhou et al.'s data-management evaluation of 12 agent-memory systems across representation, extraction, retrieval, maintenance, update robustness, long-horizon stability, and cost.
 resource: https://arxiv.org/abs/2606.24775v1
 source: /archive/agent-native-memory-system-readiness.pdf
-tags: [agent-memory, memory-systems, data-management, evaluation, retrieval, memory-maintenance, long-horizon-agents, study-note]
+tags: [agent-memory, agents, retrieval, compaction, long-horizon, evaluation]
 timestamp: 2026-07-13T17:56:03Z
 ---
 

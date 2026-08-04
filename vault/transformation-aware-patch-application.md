@@ -2,7 +2,7 @@
 type: Synthesis
 title: Transformation-Aware Patch Application
 description: Maintaining an explicit bridge between a transformed model-facing source representation and the original files that must receive an executable patch.
-tags: [synthesis, code-agents, program-repair, source-maps, transformations, patch-validation]
+tags: [coding-agents, token-efficiency, verification, agents]
 timestamp: 2026-07-14T16:07:15Z
 ---
 

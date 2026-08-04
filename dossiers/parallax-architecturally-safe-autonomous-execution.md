@@ -4,7 +4,7 @@ title: "Parallax: Why AI Agents That Think Must Never Act"
 description: Study notes on Parallax, a proposed architecture that removes execution authority from an untrusted agent reasoner and interposes independent validation, data-flow tracking, and rollback before consequential effects.
 resource: https://arxiv.org/abs/2604.12986v1
 source: /archive/parallax-architecturally-safe-autonomous-execution.pdf
-tags: [agent-security, execution-isolation, privilege-separation, information-flow-control, validation, prompt-injection, study-note]
+tags: [agent-security, access-control, verification, provenance, agents]
 timestamp: 2026-07-14T17:10:00Z
 ---
 

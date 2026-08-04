@@ -2,7 +2,7 @@
 type: Synthesis
 title: Perspective-Diverse Prompt Evolution
 description: Maintaining separately evolved prompt policies that optimize explicit, competing priorities and selecting among their outcomes with a task-aligned evaluator.
-tags: [synthesis, agents, prompt-optimization, ensembles, multi-objective, exploration]
+tags: [prompt-optimization, evaluation, agents]
 timestamp: 2026-07-13T18:06:35Z
 ---
 

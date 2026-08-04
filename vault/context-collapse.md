@@ -2,7 +2,7 @@
 type: Synthesis
 title: Context Collapse
 description: Failure mode where iterative LLM rewriting compresses accumulated context into a shorter, less informative artifact and erases useful knowledge.
-tags: [synthesis, context-engineering, memory, prompt-optimization, failure-mode]
+tags: [compaction, context-engineering, agent-memory, agents]
 timestamp: 2026-07-12T19:02:08Z
 ---
 

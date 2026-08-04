@@ -2,7 +2,7 @@
 type: Synthesis
 title: AI Agent Evolution
 description: The five-phase progression from raw language models to multi-agent systems, contextualizing where prompt engineering fits in the trajectory of AI capabilities.
-tags: [synthesis, ai-agents, evolution, multi-agent, prompt-engineering, future]
+tags: [agents, multi-agent, prompting, orchestration]
 timestamp: 2026-07-11T16:36:00Z
 ---
 

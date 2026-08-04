@@ -4,7 +4,7 @@ title: Is Grep All You Need? How Agent Harnesses Reshape Agentic Search
 description: Personal study notes on a LongMemEval comparison of grep and vector retrieval across custom and provider-native agent harnesses, inline and file-based result delivery, and increasing distractor history.
 resource: https://arxiv.org/abs/2605.15184v1
 source: /archive/grep-agent-harnesses-agentic-search.pdf
-tags: [agentic-search, retrieval, lexical-search, vector-search, agent-harnesses, long-memory, context-engineering, evaluation, study-note]
+tags: [retrieval, agent-harness, context-engineering, evaluation, agents]
 timestamp: 2026-07-14T16:02:15Z
 ---
 

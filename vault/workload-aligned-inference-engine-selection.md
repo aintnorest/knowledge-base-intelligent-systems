@@ -2,7 +2,7 @@
 type: Synthesis
 title: Workload-Aligned Inference Engine Selection
 description: Selecting an LLM inference engine from concurrency, latency, hardware, and deployment constraints instead of treating model compatibility or isolated tokens-per-second as decisive.
-tags: [synthesis, llm-inference, model-serving, throughput, latency, benchmarking, vllm, llama-cpp]
+tags: [model-serving, inference-efficiency, evaluation]
 timestamp: 2026-07-13T16:12:33Z
 ---
 

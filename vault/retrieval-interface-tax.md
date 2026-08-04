@@ -2,7 +2,7 @@
 type: Synthesis
 title: Retrieval Interface Tax
 description: The runtime token and tool-call overhead created when a representation is dense, verbose, or unfamiliar enough that an agent retrieves excessive material or retries searches despite a compact source file.
-tags: [synthesis, context-engineering, token-efficiency, tool-use, retrieval, interface-design, evaluation]
+tags: [retrieval, token-efficiency, context-engineering, tool-use, evaluation]
 timestamp: 2026-07-13T18:04:21Z
 ---
 

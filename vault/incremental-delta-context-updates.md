@@ -2,7 +2,7 @@
 type: Synthesis
 title: Incremental Delta Context Updates
 description: Updating long-lived context through localized additions and patches rather than regenerating the whole context.
-tags: [synthesis, context-engineering, memory, delta-updates, curation]
+tags: [context-engineering, agent-memory, compaction, agents]
 timestamp: 2026-07-12T19:02:08Z
 ---
 

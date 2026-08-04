@@ -2,7 +2,7 @@
 type: Synthesis
 title: Behavioral Prompting Complexity
 description: A controllability measure for the shortest plausible prompt that reaches any output satisfying a specified behavior.
-tags: [synthesis, prompting, behavioral-evaluation, llm-as-judge, safety, controllability]
+tags: [prompting, llm-as-judge, evaluation]
 timestamp: 2026-07-13T17:51:25Z
 ---
 

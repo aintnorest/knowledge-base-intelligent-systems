@@ -2,7 +2,7 @@
 type: Synthesis
 title: Citation F1 Metric
 description: A partitioned citation coverage metric that separates must-cite references from good-to-cite references to prevent shallow-review inflation.
-tags: [synthesis, metrics, citations, f1, evaluation, coverage]
+tags: [evaluation, agents, multi-agent]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Benchmark Reverse Engineering
 description: Constructing evaluation datasets for automated systems by extracting and anonymizing raw materials from published human-authored work.
-tags: [synthesis, benchmark, reverse-engineering, evaluation, dataset-construction, anonymization]
+tags: [benchmark, evaluation, verification]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Classifier-Based Prompt Optimization
 description: An amortized prompt-optimization pattern that predicts a bounded structured prompt configuration and renders it through a deterministic template instead of generating a new prompt at runtime.
-tags: [synthesis, prompt-optimization, classification, structured-prompting, latency, amortization]
+tags: [prompt-optimization, routing, prompting, inference-efficiency]
 timestamp: 2026-07-13T18:16:22Z
 ---
 

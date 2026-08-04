@@ -4,7 +4,7 @@ title: Agents' Last Exam
 description: Personal study notes on ALE, a broad benchmark for generalist computer-use agents completing long-horizon professional workflows with deliverable-based verification.
 resource: https://arxiv.org/abs/2606.05405v2
 source: /archive/agents-last-exam.pdf
-tags: [agent-evaluation, computer-use-agents, benchmarks, professional-workflows, deliverable-verification, gui-agents, study-note]
+tags: [computer-use, agents, benchmark, evaluation, verification]
 timestamp: 2026-07-14T16:06:03Z
 ---
 

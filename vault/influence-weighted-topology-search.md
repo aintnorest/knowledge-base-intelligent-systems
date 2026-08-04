@@ -2,7 +2,7 @@
 type: Synthesis
 title: Influence-Weighted Topology Search
 description: Reducing a multi-agent workflow search space by measuring the validation benefit of minimal agent blocks, preferentially sampling helpful blocks under a budget, and validating complete workflows.
-tags: [synthesis, multi-agent-systems, topology-search, prompt-optimization, workflow-design, search-space-design]
+tags: [multi-agent, orchestration, prompt-optimization, agents]
 timestamp: 2026-07-13T18:12:41Z
 ---
 

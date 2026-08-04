@@ -4,7 +4,7 @@ title: Designing, Refining, and Maintaining Agent Skills at Perplexity
 description: Personal study notes on Perplexity's practice for designing agent Skills as progressively loaded context, evaluating their routing, and maintaining them through failure-driven gotchas.
 resource: https://research.perplexity.ai/articles/designing-refining-and-maintaining-agent-skills-at-perplexity
 source: https://research.perplexity.ai/articles/designing-refining-and-maintaining-agent-skills-at-perplexity
-tags: [agent-skills, context-engineering, skill-routing, progressive-disclosure, agent-evaluation, study-note]
+tags: [agent-skills, context-engineering, evaluation, agents]
 timestamp: 2026-07-13T16:07:36Z
 ---
 

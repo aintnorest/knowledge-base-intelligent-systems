@@ -4,7 +4,7 @@ title: 'Context Engineering: From Prompts to Corporate Multi-Agent Architecture'
 description: Personal study notes on a practitioner framework that treats agent context as engineered state and proposes a four-level corporate maturity model spanning prompts, context, intent, and machine-readable specifications.
 resource: https://arxiv.org/abs/2603.09619v2
 source: /archive/context-engineering-corporate-multi-agent-architecture.pdf
-tags: [context-engineering, multi-agent-systems, enterprise-ai, governance, agent-memory, intent-engineering, study-note]
+tags: [context-engineering, agents, multi-agent, enterprise, governance, agent-memory]
 timestamp: 2026-07-13T18:03:01Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Mediated Agent Execution Isolation
 description: Treating each third-party agent integration as an isolated security principal and allowing cross-agent data or capability use only through a trusted mediator, validated contracts, and explicit authorization.
-tags: [synthesis, agent-security, execution-isolation, sandboxing, permissions, multi-agent-systems, structured-communication]
+tags: [agent-security, sandboxing, access-control, multi-agent, agents]
 timestamp: 2026-07-14T16:07:20Z
 ---
 

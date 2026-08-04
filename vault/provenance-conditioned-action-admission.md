@@ -2,7 +2,7 @@
 type: Synthesis
 title: Provenance-Conditioned Action Admission
 description: Admitting or escalating consequential agent actions based on their structural trace and each argument's source, trust, derivation, and correspondence to the current user request.
-tags: [synthesis, agent-security, provenance, runtime-enforcement, prompt-injection, tool-use, anomaly-detection]
+tags: [agent-security, provenance, access-control, prompt-injection, tool-use, agents]
 timestamp: 2026-07-14T16:14:45Z
 ---
 

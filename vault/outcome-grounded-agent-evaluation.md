@@ -2,7 +2,7 @@
 type: Synthesis
 title: Outcome-Grounded Agent Evaluation
 description: Evaluating agent changes with layered offline and online evidence, including delayed product outcomes that better reflect whether users kept the result.
-tags: [synthesis, agent-evaluation, online-experiments, product-metrics, coding-agents, observability]
+tags: [evaluation, coding-agents, reliability, agents]
 timestamp: 2026-07-13T16:02:28Z
 ---
 

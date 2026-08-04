@@ -2,7 +2,7 @@
 type: Synthesis
 title: Tree of Thoughts
 description: Structured reasoning that explores multiple reasoning paths, evaluates intermediate steps, and backtracks when necessary — treating reasoning as a tree search rather than a linear chain.
-tags: [synthesis, prompting, tree-of-thoughts, reasoning, search, backtracking]
+tags: [prompting, reasoning, test-time-scaling, decomposition]
 timestamp: 2026-07-12T23:58:44Z
 ---
 

@@ -4,7 +4,7 @@ title: A Systematic Survey of Prompt Engineering in Large Language Models
 description: Personal study notes on an application-centric survey of prompt engineering techniques for large language models.
 resource: https://arxiv.org/abs/2402.07927v2
 source: /archive/systematic-survey-prompt-engineering-llms.pdf
-tags: [prompt-engineering, survey, llm, taxonomy, study-note]
+tags: [prompting, taxonomy, reasoning]
 timestamp: 2026-07-12T21:41:16Z
 ---
 

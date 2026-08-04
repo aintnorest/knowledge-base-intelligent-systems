@@ -4,7 +4,7 @@ title: Architecting Secure AI Agents: Perspectives on System-Level Defenses Agai
 description: Study notes on a position paper advocating security-aware dynamic replanning, bounded learned security judgments over structured artifacts, and human resolution of inherently ambiguous agent-security decisions.
 resource: https://arxiv.org/abs/2603.30016v1
 source: /archive/architecting-secure-ai-agents.pdf
-tags: [agent-security, prompt-injection, system-level-defense, replanning, policy-enforcement, human-in-the-loop, study-note]
+tags: [agent-security, prompt-injection, agents, human-in-the-loop, access-control, orchestration]
 timestamp: 2026-07-14T16:16:51Z
 ---
 

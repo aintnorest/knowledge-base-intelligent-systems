@@ -2,7 +2,7 @@
 type: Synthesis
 title: Agent-Ergonomic Interface Design
 description: Designing tool interfaces around the state an agent needs for its next decision, with bounded output, explicit recovery signals, and local guidance instead of protocol-dependent assumptions.
-tags: [synthesis, agents, tool-design, cli, mcp, context-engineering, token-efficiency]
+tags: [tool-use, mcp, context-engineering, token-efficiency, agents]
 timestamp: 2026-07-13T16:13:34Z
 ---
 

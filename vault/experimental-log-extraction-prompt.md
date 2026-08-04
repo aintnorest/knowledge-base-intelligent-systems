@@ -2,7 +2,7 @@
 type: Synthesis
 title: Experimental Log Extraction Prompt
 description: A prompt pattern for extracting raw empirical data from published papers into a standalone, self-contained experimental log with no references to figures or tables.
-tags: [synthesis, prompts, extraction, experimental-log, raw-data, decontextualization]
+tags: [prompting, benchmark, agents]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

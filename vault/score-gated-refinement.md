@@ -2,7 +2,7 @@
 type: Synthesis
 title: Score-Gated Refinement
 description: Iterative improvement using simulated peer-review feedback, with monotonic score constraints to prevent degradation loops.
-tags: [synthesis, refinement, peer-review, iterative, quality-assurance, monotonic]
+tags: [peer-review, agents, evaluation, verification]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

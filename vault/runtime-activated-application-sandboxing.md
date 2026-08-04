@@ -2,7 +2,7 @@
 type: Synthesis
 title: Runtime-Activated Application Sandboxing
 description: Installing an irreversible least-privilege sandbox after trusted runtime initialization and before an application processes untrusted input.
-tags: [synthesis, sandboxing, linux-security, least-privilege, application-security, runtime-control]
+tags: [sandboxing, access-control, verification]
 timestamp: 2026-07-14T16:24:37Z
 ---
 

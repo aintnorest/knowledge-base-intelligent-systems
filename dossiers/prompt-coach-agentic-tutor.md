@@ -4,7 +4,7 @@ title: 'Prompt Coach: An Empirical Evaluation of an Agentic Tutor for Learning P
 description: Personal study notes on Prompt Coach, an IDE-embedded multi-agent tutor that uses dimensional assessment and Socratic guidance to teach code-generation prompting.
 resource: https://arxiv.org/abs/2607.06074v1
 source: /archive/prompt-coach-agentic-tutor.pdf
-tags: [prompt-engineering, agentic-tutor, software-development, socratic-guidance, code-generation, llm-as-judge, study-note]
+tags: [multi-agent, prompting, llm-as-judge, orchestration, agents]
 timestamp: 2026-07-13T16:16:19Z
 ---
 

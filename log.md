@@ -431,3 +431,113 @@ maintenance as a non-ingest event.
 * **Ingest**: `arxiv:2606.08433` — `AI Code Sandboxes: A Comparative Security Study — Engine-Level Properties dossier` at `/dossiers/ai-code-sandboxes-engine-level-security-study.md` — canonical: https://arxiv.org/abs/2606.08433v1
 * **Archive**: Moved source PDF to [/archive/ai-code-sandboxes-engine-level-security-study.pdf](/archive/ai-code-sandboxes-engine-level-security-study.pdf)
 * **Vault**: Created [deployment-conditioned-sandbox-security](/vault/deployment-conditioned-sandbox-security.md), [downstream-security-patch-propagation](/vault/downstream-security-patch-propagation.md)
+
+## 2026-07-21 (Inbox batch)
+* **Ingest**: `doi:10.18653/v1/2025.findings-emnlp.1120` — `ReviewEval: An Evaluation Framework for AI-Generated Reviews dossier` at `/dossiers/revieweval-ai-generated-reviews.md` — canonical: https://aclanthology.org/2025.findings-emnlp.1120/
+* **Archive**: Moved source PDF to [/archive/revieweval-ai-generated-reviews.pdf](/archive/revieweval-ai-generated-reviews.pdf)
+* **Ingest**: `doi:10.48550/arxiv.2607.12227` — `Rethinking the Evaluation of Harness Evolution for Agents dossier` at `/dossiers/rethinking-harness-evolution-evaluation.md` — canonical: https://arxiv.org/abs/2607.12227v1
+* **Archive**: Moved source PDF to [/archive/rethinking-harness-evolution-evaluation.pdf](/archive/rethinking-harness-evolution-evaluation.pdf)
+* **Ingest**: `doi:10.48550/arxiv.2607.13104` — `Self-Improvements in Modern Agentic Systems: A Survey dossier` at `/dossiers/self-improvements-modern-agentic-systems-survey.md` — canonical: https://arxiv.org/abs/2607.13104v1
+* **Archive**: Moved source PDF to [/archive/self-improvements-modern-agentic-systems-survey.pdf](/archive/self-improvements-modern-agentic-systems-survey.pdf)
+* **Ingest**: `doi:10.48550/arxiv.2607.14159` — `MemoHarness: Agent Harnesses That Learn from Experience dossier` at `/dossiers/memoharness-agent-harnesses-experience.md` — canonical: https://arxiv.org/abs/2607.14159v1
+* **Archive**: Moved source PDF to [/archive/memoharness-agent-harnesses-experience.pdf](/archive/memoharness-agent-harnesses-experience.pdf)
+* **Ingest**: `url:openreview.net/forum?id=7iX2Z2bPFB` — `Beyond Imitation: A Framework and Benchmark for LLM-Assisted Peer Review dossier` at `/dossiers/beyond-imitation-llm-assisted-peer-review.md` — canonical: https://openreview.net/forum?id=7iX2Z2bPFB
+* **Archive**: Moved source PDF to [/archive/beyond-imitation-llm-assisted-peer-review.pdf](/archive/beyond-imitation-llm-assisted-peer-review.pdf)
+* **Ingest**: `doi:10.1007/s10462-025-11147-4` — `Adversarial Machine Learning: A Review of Methods, Tools, and Critical Industry Sectors dossier` at `/dossiers/adversarial-machine-learning-review-critical-sectors.md` — canonical: https://doi.org/10.1007/s10462-025-11147-4
+* **Archive**: Moved source PDF to [/archive/adversarial-machine-learning-review-critical-sectors.pdf](/archive/adversarial-machine-learning-review-critical-sectors.pdf)
+* **Ingest**: `sha256:38a474d525dabe3bbcef49e19ea221fa377725bef0518d3e38e8ecba8a2020a3` — `Isolation Approaches for Concurrent AI Coding Agents: A Synthesis dossier` at `/dossiers/isolation-approaches-concurrent-ai-coding-agents-synthesis.md` — canonical: /archive/isolation-approaches-concurrent-ai-coding-agents-synthesis.pdf
+* **Archive**: Moved source PDF to [/archive/isolation-approaches-concurrent-ai-coding-agents-synthesis.pdf](/archive/isolation-approaches-concurrent-ai-coding-agents-synthesis.pdf)
+* **Ingest**: `sha256:92b07d28b73d85aae1ab735963bbf4e525405e6470d063ea9cf8e874601a89f4` — `Isolation Approaches for Parallel AI Coding Agents — A Deep Research Report dossier` at `/dossiers/multi-agent-isolation-deep-research.md` — canonical: /archive/multi-agent-isolation-deep-research.pdf
+* **Archive**: Moved source PDF to [/archive/multi-agent-isolation-deep-research.pdf](/archive/multi-agent-isolation-deep-research.pdf)
+* **Ingest**: `sha256:6f688339b34459a513fc9fda5219e6e0263ec4e1a4123b87ad6902cc717cf042` — `Multi-Agent Coding Isolation: Architectures, Implementations, and Trade-offs dossier` at `/dossiers/multi-agent-coding-isolation-report.md` — canonical: /archive/multi-agent-coding-isolation-report.pdf
+* **Archive**: Moved source PDF to [/archive/multi-agent-coding-isolation-report.pdf](/archive/multi-agent-coding-isolation-report.pdf)
+* **Vault**: Created [budget-matched-harness-evolution-evaluation](/vault/budget-matched-harness-evolution-evaluation.md), [self-improvement-update-targets](/vault/self-improvement-update-targets.md), [experience-conditioned-harness-adaptation](/vault/experience-conditioned-harness-adaptation.md), [verification-centric-generated-review-evaluation](/vault/verification-centric-generated-review-evaluation.md), [adversarial-ml-threat-lifecycle](/vault/adversarial-ml-threat-lifecycle.md), [layered-concurrent-agent-isolation](/vault/layered-concurrent-agent-isolation.md)
+
+## 2026-07-21 (Tool-use inbox batch)
+* **Ingest**: `arxiv:2510.22977` — `The Reasoning Trap: How Enhancing LLM Reasoning Amplifies Tool Hallucination dossier` at `/dossiers/reasoning-trap-tool-hallucination.md` — canonical: https://arxiv.org/abs/2510.22977v2
+* **Archive**: Moved source PDF to [/archive/reasoning-trap-tool-hallucination.pdf](/archive/reasoning-trap-tool-hallucination.pdf)
+* **Ingest**: `arxiv:2605.00136` — `Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents dossier` at `/dossiers/tool-use-tax-llm-agents.md` — canonical: https://arxiv.org/abs/2605.00136v1
+* **Archive**: Moved source PDF to [/archive/tool-use-tax-llm-agents.pdf](/archive/tool-use-tax-llm-agents.pdf)
+* **Ingest**: `arxiv:2605.09252` — `LLM Agents Already Know When to Call Tools – Even Without Reasoning dossier` at `/dossiers/when2tool-tool-call-decisions.md` — canonical: https://arxiv.org/abs/2605.09252v1
+* **Archive**: Moved source PDF to [/archive/when2tool-tool-call-decisions.pdf](/archive/when2tool-tool-call-decisions.pdf)
+* **Vault**: Created [tool-availability-abstention](/vault/tool-availability-abstention.md), [tool-use-protocol-tax](/vault/tool-use-protocol-tax.md), [latent-tool-necessity-routing](/vault/latent-tool-necessity-routing.md)
+
+## 2026-07-23 (Inbox batch)
+* **Ingest**: `arxiv:2110.00641` — `Batch Size-invariance for Policy Optimization dossier` at `/dossiers/batch-size-invariance-policy-optimization.md` — canonical: https://arxiv.org/abs/2110.00641v3
+* **Archive**: Moved source PDF to [/archive/batch-size-invariance-policy-optimization.pdf](/archive/batch-size-invariance-policy-optimization.pdf)
+* **Ingest**: `arxiv:2207.04901` — `Exploring Length Generalization in Large Language Models dossier` at `/dossiers/exploring-length-generalization-language-models.md` — canonical: https://arxiv.org/abs/2207.04901v2
+* **Archive**: Moved source PDF to [/archive/exploring-length-generalization-language-models.pdf](/archive/exploring-length-generalization-language-models.pdf)
+* **Ingest**: `arxiv:2402.01030` — `Executable Code Actions Elicit Better LLM Agents dossier` at `/dossiers/executable-code-actions-llm-agents.md` — canonical: https://arxiv.org/abs/2402.01030v4
+* **Archive**: Moved source PDF to [/archive/executable-code-actions-llm-agents.pdf](/archive/executable-code-actions-llm-agents.pdf)
+* **Ingest**: `arxiv:2510.26692` — `Kimi Linear: An Expressive, Efficient Attention Architecture dossier` at `/dossiers/kimi-linear-attention-architecture.md` — canonical: https://arxiv.org/abs/2510.26692v2
+* **Archive**: Moved source PDF to [/archive/kimi-linear-attention-architecture.pdf](/archive/kimi-linear-attention-architecture.pdf)
+* **Ingest**: `arxiv:2601.18089` — `LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts dossier` at `/dossiers/latentmoe.md` — canonical: https://arxiv.org/abs/2601.18089v1
+* **Archive**: Moved source PDF to [/archive/latentmoe.pdf](/archive/latentmoe.pdf)
+* **Ingest**: `arxiv:2602.02276` — `Kimi K2.5: Visual Agentic Intelligence dossier` at `/dossiers/kimi-k2-5-visual-agentic-intelligence.md` — canonical: https://arxiv.org/abs/2602.02276v1
+* **Archive**: Moved source PDF to [/archive/kimi-k2-5-visual-agentic-intelligence.pdf](/archive/kimi-k2-5-visual-agentic-intelligence.pdf)
+* **Ingest**: `arxiv:2603.15031` — `Attention Residuals dossier` at `/dossiers/attention-residuals.md` — canonical: https://arxiv.org/abs/2603.15031v1
+* **Archive**: Moved source PDF to [/archive/attention-residuals.pdf](/archive/attention-residuals.pdf)
+* **Ingest**: `arxiv:2604.27998` — `Latent-GRPO: Group Relative Policy Optimization for Latent Reasoning dossier` at `/dossiers/latent-grpo.md` — canonical: https://arxiv.org/abs/2604.27998v1
+* **Archive**: Moved source PDF to [/archive/latent-grpo.pdf](/archive/latent-grpo.pdf)
+* **Vault**: Created [decoupled-behavior-proximal-policies](/vault/decoupled-behavior-proximal-policies.md), [executable-code-actions](/vault/executable-code-actions.md), [hybrid-linear-global-attention](/vault/hybrid-linear-global-attention.md), [latent-space-expert-routing](/vault/latent-space-expert-routing.md), [depth-wise-attention-residuals](/vault/depth-wise-attention-residuals.md), [manifold-safe-latent-rl](/vault/manifold-safe-latent-rl.md)
+* **Vault**: Updated [chain-of-thought-prompting](/vault/chain-of-thought-prompting.md), [multi-agent-orchestration](/vault/multi-agent-orchestration.md)
+
+## 2026-07-28 (DeepReview repair ingest)
+* **Ingest**: `doi:10.18653/v1/2025.acl-long.1420` — `DeepReview: Improving LLM-based Paper Review with Human-like Deep Thinking Process dossier` at `/dossiers/deepreview-structured-llm-paper-review.md` — canonical: https://aclanthology.org/2025.acl-long.1420/
+* **Archive**: Registered existing source PDF at [/archive/deepreview-structured-llm-paper-review.pdf](/archive/deepreview-structured-llm-paper-review.pdf); SHA-256 `5285d1ef5137cc018e8f437a4adf5a45502bd37ce45d72fb078f66553c78d8f6`
+* **Vault**: Created [staged-evidence-grounded-judgment](/vault/staged-evidence-grounded-judgment.md), [dual-axis-judge-test-time-scaling](/vault/dual-axis-judge-test-time-scaling.md), [decomposition-induced-injection-resistance](/vault/decomposition-induced-injection-resistance.md)
+
+## 2026-07-28 (taxonomy introduction)
+* **Taxonomy**: Created [/TAXONOMY.md](/TAXONOMY.md) — controlled tag vocabulary of 54 tags in 10 facets, with tagging rules, an alias map for consolidated historical tags, and a watchlist of candidate tags for periodic re-evaluation
+* **Retag**: Rewrote `tags:` frontmatter on all 95 dossiers and 139 vault pages to conform to the taxonomy; dropped `study-note`/`synthesis` (redundant with `type:`) and generic `llm`/`llm-agents`
+* **Ingest playbook**: Added a Tagging section to [/INGEST.md](/INGEST.md) requiring taxonomy-only tags and gap-flagging in ingest reports
+
+## 2026-07-28 (source-access research note ingest)
+* **Ingest**: `sha256:0aee1208a126d55ba10941b6c2eb41c3514f8c2b9a8b93262143c37582007a59` — [Source Access Is a Systems Property dossier](/dossiers/ai-assistant-source-access-and-retrieval-partnerships.md) — canonical: /archive/ai-assistant-source-access-and-retrieval-partnerships.md
+* **Archive**: Moved source note to [/archive/ai-assistant-source-access-and-retrieval-partnerships.md](/archive/ai-assistant-source-access-and-retrieval-partnerships.md)
+* **Vault**: Created [retrieval-as-host-capability](/vault/retrieval-as-host-capability.md), [source-adapter-decoupling](/vault/source-adapter-decoupling.md), [retrieval-depth-grading](/vault/retrieval-depth-grading.md)
+
+## 2026-07-30 (Power of Scale for Parameter-Efficient Prompt Tuning)
+* **Ingest**: `arxiv:2104.08691` — `The Power of Scale for Parameter-Efficient Prompt Tuning dossier` at `/dossiers/power-of-scale-prompt-tuning.md` — canonical: https://arxiv.org/abs/2104.08691v2
+* **Archive**: Moved source PDF to [/archive/power-of-scale-prompt-tuning.pdf](/archive/power-of-scale-prompt-tuning.pdf)
+* **Vault**: Created [prompt-tuning](/vault/prompt-tuning.md)
+* **Vault**: Updated [prompt-contingency](/vault/prompt-contingency.md)
+
+## 2026-07-30 (Emergent Abilities of Large Language Models)
+* **Ingest**: `arxiv:2206.07682` — `Emergent Abilities of Large Language Models dossier` at `/dossiers/emergent-abilities-large-language-models.md` — canonical: https://arxiv.org/abs/2206.07682v2
+* **Archive**: Moved source PDF to [/archive/emergent-abilities-large-language-models.pdf](/archive/emergent-abilities-large-language-models.pdf)
+* **Vault**: Created [emergent-abilities](/vault/emergent-abilities.md)
+* **Vault**: Updated [chain-of-thought-prompting](/vault/chain-of-thought-prompting.md), [in-context-learning](/vault/in-context-learning.md), [prompt-contingency](/vault/prompt-contingency.md)
+
+## 2026-07-30 (SelfCheckGPT)
+* **Ingest**: `arxiv:2303.08896` — `SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models dossier` at `/dossiers/selfcheckgpt-zero-resource-black-box-hallucination-detection.md` — canonical: https://arxiv.org/abs/2303.08896v3
+* **Archive**: Moved source PDF to [/archive/selfcheckgpt-zero-resource-black-box-hallucination-detection.pdf](/archive/selfcheckgpt-zero-resource-black-box-hallucination-detection.pdf)
+* **Vault**: Created [sample-consistency-hallucination-detection](/vault/sample-consistency-hallucination-detection.md)
+
+## 2026-07-30 (Just Ask for Calibration)
+* **Ingest**: `arxiv:2305.14975` — `Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from LMs Fine-Tuned with Human Feedback dossier` at `/dossiers/just-ask-for-calibration.md` — canonical: https://arxiv.org/abs/2305.14975v2
+* **Archive**: Moved source PDF to [/archive/just-ask-for-calibration.pdf](/archive/just-ask-for-calibration.pdf)
+
+## 2026-07-30 (Universal and Transferable Adversarial Attacks)
+* **Ingest**: `arxiv:2307.15043` — `Universal and Transferable Adversarial Attacks on Aligned Language Models dossier` at `/dossiers/universal-transferable-adversarial-attacks-aligned-language-models.md` — canonical: https://arxiv.org/abs/2307.15043v2
+* **Archive**: Moved source PDF to [/archive/universal-transferable-adversarial-attacks-aligned-language-models.pdf](/archive/universal-transferable-adversarial-attacks-aligned-language-models.pdf)
+
+## 2026-07-30 (The Dawn of LMMs)
+* **Ingest**: `arxiv:2309.17421` — `The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision) dossier` at `/dossiers/dawn-of-lmms-gpt-4-vision.md` — canonical: https://arxiv.org/abs/2309.17421v2
+* **Archive**: Moved source PDF to [/archive/dawn-of-lmms-gpt-4-vision.pdf](/archive/dawn-of-lmms-gpt-4-vision.pdf)
+
+## 2026-07-30 (Prompt Formatting Sensitivity)
+* **Ingest**: `arxiv:2310.11324` — `Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design dossier` at `/dossiers/quantifying-language-models-sensitivity-spurious-features-prompt-design.md` — canonical: https://arxiv.org/abs/2310.11324v2
+* **Archive**: Moved source PDF to [/archive/quantifying-language-models-sensitivity-spurious-features-prompt-design.pdf](/archive/quantifying-language-models-sensitivity-spurious-features-prompt-design.pdf)
+
+## 2026-07-30 (Efficient Prompting Methods Survey)
+* **Ingest**: `arxiv:2404.01077` — `Efficient Prompting Methods for Large Language Models: A Survey dossier` at `/dossiers/efficient-prompting-methods-large-language-models-survey.md` — canonical: https://arxiv.org/abs/2404.01077v1
+* **Archive**: Moved source PDF to [/archive/efficient-prompting-methods-large-language-models-survey.pdf](/archive/efficient-prompting-methods-large-language-models-survey.pdf)
+
+## 2026-07-30 (PEARL)
+* **Ingest**: `arxiv:2601.11957` — `PEARL: Self-Evolving Assistant for Time Management with Reinforcement Learning dossier` at `/dossiers/pearl-self-evolving-assistant-time-management-reinforcement-learning.md` — canonical: https://arxiv.org/abs/2601.11957v4
+* **Archive**: Moved source PDF to [/archive/pearl-self-evolving-assistant-time-management-reinforcement-learning.pdf](/archive/pearl-self-evolving-assistant-time-management-reinforcement-learning.pdf)
+
+## 2026-07-30 (Function Calling)
+* **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
+* **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)

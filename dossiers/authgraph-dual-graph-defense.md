@@ -4,7 +4,7 @@ title: 'Aligning Provenance with Authorization: A Dual-Graph Defense for LLM Age
 description: Study notes on AUTHGRAPH, a prompt-injection defense that aligns an execution-provenance graph with a clean, least-privilege authorization graph down to parameter sources.
 resource: https://arxiv.org/abs/2605.26497v1
 source: /archive/authgraph-dual-graph-defense.pdf
-tags: [agent-security, prompt-injection, authorization, provenance, tool-use, information-flow-control, graph-alignment, study-note]
+tags: [agent-security, prompt-injection, provenance, tool-use, access-control, agents]
 timestamp: 2026-07-14T16:21:42Z
 ---
 

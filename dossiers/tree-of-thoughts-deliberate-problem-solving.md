@@ -4,7 +4,7 @@ title: Tree of Thoughts: Deliberate Problem Solving with Large Language Models
 description: Personal study notes on Tree of Thoughts, an inference-time framework that combines language-model generation and self-evaluation with tree search.
 resource: https://arxiv.org/abs/2305.10601v2
 source: /archive/tree-of-thoughts-deliberate-problem-solving.pdf
-tags: [tree-of-thoughts, reasoning, search, planning, prompting, study-note]
+tags: [chain-of-thought, test-time-scaling, reasoning, prompting]
 timestamp: 2026-07-12T23:58:44Z
 ---
 

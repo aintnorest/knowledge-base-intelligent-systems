@@ -2,7 +2,7 @@
 type: Synthesis
 title: Rate–Distortion Memory Compaction
 description: Treating memory compression at every LLM and agent layer as a budgeted trade between retained context information and downstream task error.
-tags: [synthesis, memory-compaction, rate-distortion, information-bottleneck, long-context, agent-memory]
+tags: [compaction, agent-memory, long-context, token-efficiency]
 timestamp: 2026-07-13T17:51:09Z
 ---
 

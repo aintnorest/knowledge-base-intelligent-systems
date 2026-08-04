@@ -2,7 +2,7 @@
 type: Synthesis
 title: Downstream Security Patch Propagation
 description: Treating the delivery of upstream security fixes into the exact runtime artifact a user deploys as a separate, continuously verified security control.
-tags: [synthesis, security, vulnerability-management, patch-management, deployment, supply-chain, sandboxing]
+tags: [agent-security, sandboxing, provenance, governance]
 timestamp: 2026-07-14T16:26:33Z
 ---
 

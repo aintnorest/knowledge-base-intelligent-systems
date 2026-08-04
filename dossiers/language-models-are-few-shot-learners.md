@@ -4,7 +4,7 @@ title: Language Models are Few-Shot Learners
 description: Historical study notes on the GPT-3 paper that established large-scale in-context learning as a practical language-model evaluation paradigm.
 resource: https://arxiv.org/abs/2005.14165v4
 source: /archive/language-models-are-few-shot-learners.pdf
-tags: [gpt-3, in-context-learning, few-shot-learning, scaling, benchmark-contamination, study-note]
+tags: [in-context-learning, evaluation, generalization]
 timestamp: 2026-07-12T22:20:26Z
 ---
 

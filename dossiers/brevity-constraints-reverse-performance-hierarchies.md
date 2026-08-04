@@ -4,7 +4,7 @@ title: Brevity Constraints Reverse Performance Hierarchies in Language Models
 description: Personal study notes on a preprint that reports item-level inverse scaling under fixed prompts and tests whether concise-response instructions recover large-model accuracy.
 resource: https://arxiv.org/abs/2604.00025v1
 source: /archive/brevity-constraints-reverse-performance-hierarchies.pdf
-tags: [prompting, reasoning, brevity, inverse-scaling, llm-evaluation, model-selection, study-note]
+tags: [prompting, reasoning, evaluation]
 timestamp: 2026-07-13T18:01:03Z
 ---
 

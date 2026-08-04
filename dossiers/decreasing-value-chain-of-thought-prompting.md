@@ -4,7 +4,7 @@ title: "Prompting Science Report 2: The Decreasing Value of Chain of Thought in 
 description: Personal study notes on a Wharton Generative AI Labs report testing when an explicit chain-of-thought prompt improves GPQA Diamond performance, reliability, and latency.
 resource: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5285532
 source: /archive/decreasing-value-chain-of-thought-prompting.pdf
-tags: [chain-of-thought, prompting, llm-evaluation, reliability, gpqa, study-note]
+tags: [chain-of-thought, prompting, evaluation, reliability]
 timestamp: 2026-07-13T02:32:26Z
 ---
 

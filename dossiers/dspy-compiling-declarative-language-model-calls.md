@@ -4,7 +4,7 @@ title: "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pip
 description: Personal study notes on the original DSPy paper, which replaces hand-written prompt strings with declarative signatures, composable modules, and metric-driven compilation.
 resource: https://arxiv.org/abs/2310.03714v1
 source: /archive/dspy-compiling-declarative-language-model-calls.pdf
-tags: [dspy, llm-programming, prompt-optimization, compilation, retrieval, agents, study-note]
+tags: [prompt-optimization, retrieval, chain-of-thought, agents]
 timestamp: 2026-07-13T00:11:06Z
 ---
 

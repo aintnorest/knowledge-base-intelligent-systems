@@ -2,7 +2,7 @@
 type: Synthesis
 title: Feedback-Grounded Context Adaptation
 description: Improving LLM context only when reflections are grounded in reliable signals such as labels, execution results, tests, or environment feedback.
-tags: [synthesis, context-engineering, feedback, self-improvement, evaluation]
+tags: [self-improvement, context-engineering, agent-memory, agents]
 timestamp: 2026-07-12T19:02:08Z
 ---
 

@@ -4,7 +4,7 @@ title: What to Keep, What to Forget: A Rate–Distortion View of Memory Compacti
 description: Personal study notes on Colaco and Lahjouji's survey that frames KV, prompt, architectural, and agent-memory compaction as a shared rate–distortion problem.
 resource: https://arxiv.org/abs/2607.08032v1
 source: /archive/rate-distortion-memory-compaction.pdf
-tags: [memory-compaction, agent-memory, kv-cache, prompt-compression, long-context, rate-distortion, study-note]
+tags: [compaction, agent-memory, long-context, survey]
 timestamp: 2026-07-13T17:51:09Z
 ---
 

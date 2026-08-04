@@ -2,7 +2,7 @@
 type: Synthesis
 title: Source-Backed Claim Admission
 description: Governing an LLM's factual runtime context by admitting only atomic claims with explicit source provenance, entity scope, verification state, and use policy.
-tags: [synthesis, source-grounding, provenance, claims, retrieval, enterprise-ai, governance]
+tags: [provenance, retrieval, enterprise, governance]
 timestamp: 2026-07-13T17:54:59Z
 ---
 

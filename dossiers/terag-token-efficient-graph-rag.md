@@ -4,7 +4,7 @@ title: TERAG: Token-Efficient Graph-Based Retrieval-Augmented Generation
 description: Study notes on TERAG, a graph-RAG pipeline that confines LLM work to compact concept extraction and answer generation, then uses non-LLM graph construction and personalized PageRank for multi-hop retrieval.
 resource: https://arxiv.org/abs/2509.18667v3
 source: /archive/terag-token-efficient-graph-rag.pdf
-tags: [terag, graph-rag, retrieval-augmented-generation, knowledge-graphs, token-efficiency, multi-hop-qa, study-note]
+tags: [retrieval, knowledge-graphs, token-efficiency]
 timestamp: 2026-07-14T15:53:34Z
 ---
 

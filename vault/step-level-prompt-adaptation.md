@@ -2,7 +2,7 @@
 type: Synthesis
 title: Step-Level Prompt Adaptation
 description: Revising an agent's operating guidance at an observable action boundary so a grounded lesson can influence later steps within the same task.
-tags: [synthesis, agents, prompt-optimization, online-learning, traces, feedback]
+tags: [self-improvement, agents, prompt-optimization, tool-use]
 timestamp: 2026-07-13T18:06:35Z
 ---
 

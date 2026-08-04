@@ -2,7 +2,7 @@
 type: Synthesis
 title: Deployment-Conditioned Sandbox Security
 description: Assessing a code-execution sandbox as the combination of its isolation engine, product defaults, wrapper behavior, guest image, and operating posture rather than as an engine-class label alone.
-tags: [synthesis, agent-security, sandboxing, code-execution, isolation, defense-in-depth, deployment]
+tags: [sandboxing, agent-security, agents, coding-agents]
 timestamp: 2026-07-14T16:26:33Z
 ---
 

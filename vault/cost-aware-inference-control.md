@@ -2,7 +2,7 @@
 type: Synthesis
 title: Cost-Aware Inference Control
 description: Operating AI inference as a request-level control problem that balances task quality, latency, and unit cost through measurement, routing, reuse, and serving configuration.
-tags: [synthesis, ai-inference, unit-economics, model-routing, caching, model-serving, optimization]
+tags: [inference-efficiency, model-serving, routing, quantization]
 timestamp: 2026-07-13T16:02:21Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Prompting Complexity
 description: A model-relative measure of the shortest plausible prompt that deterministically generates a target text.
-tags: [synthesis, prompting, prompt-optimization, compression, algorithmic-complexity]
+tags: [prompting, prompt-optimization, evaluation]
 timestamp: 2026-07-13T17:51:25Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Declarative LM Pipeline Compilation
 description: Expressing an LLM application as composable typed transformations, then compiling its prompts, demonstrations, models, or fine-tuning choices against an explicit end-to-end metric.
-tags: [synthesis, dspy, llm-programming, compilation, prompting, pipelines, optimization]
+tags: [prompt-optimization, orchestration, agents, tool-use]
 timestamp: 2026-07-13T18:08:50Z
 ---
 

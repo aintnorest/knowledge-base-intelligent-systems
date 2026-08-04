@@ -2,7 +2,7 @@
 type: Synthesis
 title: Co-occurrence-Grounded Retrieval Compression
 description: Compressing a hybrid retrieval set by ranking compact facts and contextual passages together through their shared provenance, entities, and query relevance rather than concatenating every retrieved item.
-tags: [synthesis, retrieval, rag, graph-rag, context-compression, personalized-pagerank, provenance, token-efficiency]
+tags: [retrieval, knowledge-graphs, token-efficiency, provenance]
 timestamp: 2026-07-14T15:57:43Z
 ---
 

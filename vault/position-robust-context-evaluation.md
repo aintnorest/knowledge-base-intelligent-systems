@@ -2,7 +2,7 @@
 type: Synthesis
 title: Position-Robust Context Evaluation
 description: Evaluation pattern that holds relevant evidence constant while varying its location and surrounding context to measure whether a model reliably uses long inputs.
-tags: [synthesis, long-context, evaluation, retrieval, positional-bias, rag]
+tags: [long-context, evaluation, retrieval]
 timestamp: 2026-07-14T15:53:29Z
 ---
 

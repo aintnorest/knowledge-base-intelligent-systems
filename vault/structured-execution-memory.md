@@ -2,7 +2,7 @@
 type: Synthesis
 title: Structured Execution Memory
 description: Maintaining live task state in separate status, knowledge, and procedural memory fields so long-horizon agents can preserve constraints and attempts.
-tags: [synthesis, agent-memory, execution-state, context-engineering, tool-use]
+tags: [agent-memory, context-engineering, tool-use, long-horizon, agents]
 timestamp: 2026-07-12T21:18:44Z
 ---
 

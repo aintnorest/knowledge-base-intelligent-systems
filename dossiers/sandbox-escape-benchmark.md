@@ -4,7 +4,7 @@ title: Quantifying Frontier LLM Capabilities for Container Sandbox Escape
 description: Study notes on SANDBOXESCAPEBENCH, a nested-sandbox CTF evaluation of agents' ability to escape container and pod environments through intentionally introduced, known weaknesses.
 resource: https://arxiv.org/abs/2603.02277v2
 source: /archive/sandbox-escape-benchmark.pdf
-tags: [sandboxing, agent-security, cybersecurity, agent-evaluation, container-security, capability-evaluations, benchmark, study-note]
+tags: [sandboxing, agent-security, benchmark, agents]
 timestamp: 2026-07-14T16:14:53Z
 ---
 

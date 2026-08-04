@@ -2,7 +2,7 @@
 type: Synthesis
 title: Action-Observation Fusion
 description: Packaging a state-changing or navigational action with the targeted post-action evidence an agent needs for its next decision.
-tags: [synthesis, agents, tool-use, interface-design, browser-automation, context-efficiency]
+tags: [tool-use, agents, computer-use, context-engineering, token-efficiency]
 timestamp: 2026-07-13T16:13:34Z
 ---
 

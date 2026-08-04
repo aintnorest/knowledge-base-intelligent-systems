@@ -2,7 +2,7 @@
 type: Synthesis
 title: Memory Lifecycle Governance
 description: Treating agent memory as governed records with provenance, scope, validity, supersession, redaction, deletion, and auditability rather than an append-only store.
-tags: [synthesis, agent-memory, governance, privacy, provenance, temporal-data]
+tags: [agent-memory, governance, privacy, provenance, agents]
 timestamp: 2026-07-13T17:56:03Z
 ---
 

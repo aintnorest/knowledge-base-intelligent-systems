@@ -2,7 +2,7 @@
 type: Synthesis
 title: Kernel-First Split Enforcement
 description: Enforcing invariant agent-execution policy in the earliest available kernel mechanism, while routing only irreducibly runtime-dependent operations through a narrow, fail-closed supervisor that can validate, virtualize, or tighten policy.
-tags: [synthesis, agent-security, sandboxing, runtime-enforcement, least-privilege, seccomp, landlock, reference-monitor]
+tags: [sandboxing, access-control, agent-security, agents]
 timestamp: 2026-07-14T16:20:08Z
 ---
 

@@ -4,7 +4,7 @@ title: "TeaRAG: A Token-Efficient Agentic Retrieval-Augmented Generation Framewo
 description: Study notes on TeaRAG, an agentic RAG system that compresses per-step evidence with a co-occurrence graph and trains concise retrieval-and-reasoning paths with process-aware iterative DPO.
 resource: https://arxiv.org/abs/2511.05385v1
 source: /archive/tearag-token-efficient-agentic-rag.pdf
-tags: [tearag, agentic-rag, graph-rag, retrieval-augmented-generation, token-efficiency, personalized-pagerank, direct-preference-optimization, process-rewards, study-note]
+tags: [retrieval, token-efficiency, knowledge-graphs, agents, reinforcement-learning]
 timestamp: 2026-07-14T15:57:43Z
 ---
 

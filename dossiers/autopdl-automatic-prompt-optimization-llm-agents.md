@@ -4,7 +4,7 @@ title: "AutoPDL: Automatic Prompt Optimization for LLM Agents"
 description: Personal study notes on AutoPDL, which jointly searches prompting patterns, instructions, and few-shot demonstrations as executable PDL programs using successive halving.
 resource: https://arxiv.org/abs/2504.04365v5
 source: /archive/autopdl-automatic-prompt-optimization-llm-agents.pdf
-tags: [prompt-optimization, agents, few-shot-learning, chain-of-thought, react, rewoo, automl, llm-programming, study-note]
+tags: [prompt-optimization, agents, tool-use, chain-of-thought, in-context-learning]
 timestamp: 2026-07-13T18:08:50Z
 ---
 

@@ -10,6 +10,27 @@ timestamp: 2026-07-11T16:00:00Z
 
 ## Dossiers
 
+* [Batch Size-invariance for Policy Optimization](/dossiers/batch-size-invariance-policy-optimization.md) — PPO/PPG analysis that separates sampling-policy correction from update-proximity control and derives small-batch EWMA scaling rules
+* [Exploring Length Generalization in Large Language Models](/dossiers/exploring-length-generalization-language-models.md) — Controlled evidence that short-instance fine-tuning and scratchpads can fail to extrapolate, while few-shot scratchpads can activate a compatible pretrained sequential template
+* [Executable Code Actions Elicit Better LLM Agents](/dossiers/executable-code-actions-llm-agents.md) — CodeAct’s executable-Python agent action language for tool composition, state reuse, execution feedback, and instruction tuning
+* [Kimi Linear: An Expressive, Efficient Attention Architecture](/dossiers/kimi-linear-attention-architecture.md) — Hybrid Kimi Delta Attention/global-attention architecture for long-context quality, fixed-state decoding, and KV-cache-efficient serving
+* [LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts](/dossiers/latentmoe.md) — Hardware-aware latent expert computation that trades routed width for expert diversity, serving cost, and accuracy
+* [Kimi K2.5: Visual Agentic Intelligence](/dossiers/kimi-k2-5-visual-agentic-intelligence.md) — Multimodal post-training and Agent Swarm orchestration with learned parallel decomposition, critical-step objectives, and context sharding
+* [Attention Residuals](/dossiers/attention-residuals.md) — Input-dependent depth-wise attention residuals and a blockwise scalable implementation for more selective cross-layer information flow
+* [Latent-GRPO: Group Relative Policy Optimization for Latent Reasoning](/dossiers/latent-grpo.md) — Latent-reasoning RL with validity masking, aligned one-sided noise, correct-path selection, and shorter reasoning traces
+* [The Reasoning Trap: How Enhancing LLM Reasoning Amplifies Tool Hallucination](/dossiers/reasoning-trap-tool-hallucination.md) — Controlled evidence on unavailable or distractor tools, reasoning-enhancement-associated tool hallucination, and the reliability-capability trade-off
+* [Are Tools All We Need? Unveiling the Tool-Use Tax in LLM Agents](/dossiers/tool-use-tax-llm-agents.md) — Factorized analysis of function-call formatting, protocol overhead, execution gain, and capability overlap under semantic distractors
+* [LLM Agents Already Know When to Call Tools – Even Without Reasoning](/dossiers/when2tool-tool-call-decisions.md) — WHEN2TOOL benchmark and hidden-state probe for calibrated direct-answer versus tool-call routing
+* [ReviewEval: An Evaluation Framework for AI-Generated Reviews](/dossiers/revieweval-ai-generated-reviews.md) — Multi-axis framework for generated scholarly reviews: factuality, actionability, depth, human-reference alignment, and guideline adherence
+* [DeepReview: Improving LLM-based Paper Review with Human-like Deep Thinking Process](/dossiers/deepreview-structured-llm-paper-review.md) — Three-stage evidence-grounded paper review, DeepReviewer-14B, dual-axis test-time scaling, and bounded adversarial-resilience evidence
+* [Rethinking the Evaluation of Harness Evolution for Agents](/dossiers/rethinking-harness-evolution-evaluation.md) — Controlled evidence that reusable harness evolution needs feedback-budget-matched task-discovery baselines and held-out transfer tests
+* [Self-Improvements in Modern Agentic Systems: A Survey](/dossiers/self-improvements-modern-agentic-systems-survey.md) — Systems taxonomy separating foundation-model updates from prompt, memory, tool, and full-scaffold self-improvement
+* [MemoHarness: Agent Harnesses That Learn from Experience](/dossiers/memoharness-agent-harnesses-experience.md) — Six-dimensional agent harness that retrieves per-case and global experience to adapt without test-time labels
+* [Beyond Imitation: A Framework and Benchmark for LLM-Assisted Peer Review](/dossiers/beyond-imitation-llm-assisted-peer-review.md) — Under-review verification-centric peer-review benchmark with graph-grounded synthetic contradictions and manipulation tests
+* [Adversarial Machine Learning: A Review of Methods, Tools, and Critical Industry Sectors](/dossiers/adversarial-machine-learning-review-critical-sectors.md) — Broad AML survey of evasion, privacy, poisoning, defenses, benchmarks, and safety-critical deployment domains
+* [Isolation Approaches for Concurrent AI Coding Agents: A Synthesis](/dossiers/isolation-approaches-concurrent-ai-coding-agents-synthesis.md) — Local synthesis distinguishing context, workspace, runtime, service, credential, and integration boundaries for parallel coding agents
+* [Isolation Approaches for Parallel AI Coding Agents — A Deep Research Report](/dossiers/multi-agent-isolation-deep-research.md) — Time-sensitive generated landscape report on worktrees, sandboxes, external state, and merge coherence
+* [Multi-Agent Coding Isolation: Architectures, Implementations, and Trade-offs](/dossiers/multi-agent-coding-isolation-report.md) — Layered control-plane reference architecture for parallel agent workspaces, services, credentials, and integration
 * [Locking Down Science Gateways with Landlock and Seccomp](/dossiers/locking-down-science-gateways-landlock-seccomp.md) — Runtime Landlock/Seccomp confinement for MPI science codes and a public gateway shim, with explicit limits around UDP, resources, kernel bugs, and policy design
 * [AI Sandboxes: A Threat Model, Taxonomy, and Measurement Framework](/dossiers/ai-sandboxes-threat-model-measurement-framework.md) — Assurance-oriented framework that bounds AI sandbox claims by explicit assumptions, evidence artifacts, and the weakest claim-relevant dimension
 * [Agents’ Last Exam](/dossiers/agents-last-exam.md) — Benchmark of long-horizon, deliverable-verified professional workflows for generalist computer-use agents across 55 industry subdomains
@@ -27,6 +48,8 @@ timestamp: 2026-07-11T16:00:00Z
 * [MAS-PromptBench: When Does Prompt Optimization Improve Multi-Agent LLM Systems?](/dossiers/mas-promptbench.md) — Controlled benchmark of how prompt optimization varies with MAS task, topology, communication protocol, and team size
 * [Guest post: AI Inference Is Breaking Unit Economics](/dossiers/ai-inference-unit-economics.md) — Practitioner overview of AI inference cost as a unit-economics constraint and the serving techniques used to control it
 * [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](/dossiers/chain-of-thought-prompting-elicits-reasoning.md) — Foundational few-shot chain-of-thought paper on intermediate reasoning demonstrations, scaling, and model-generated rationale limits
+* [Emergent Abilities of Large Language Models](/dossiers/emergent-abilities-large-language-models.md) — TMLR 2022 survey defining scale-threshold emergence and cataloging phase-transition curves for few-shot tasks and augmented prompting strategies
+* [The Power of Scale for Parameter-Efficient Prompt Tuning](/dossiers/power-of-scale-prompt-tuning.md) — Foundational soft-prompt-tuning paper showing learned continuous prompts on frozen T5 close the gap with model tuning as scale increases
 * [Context Engineering: From Prompts to Corporate Multi-Agent Architecture](/dossiers/context-engineering-corporate-multi-agent-architecture.md) — Practitioner framework for engineered agent state, explicit organizational intent, and machine-readable specifications
 * [Prompting Science Report 2: The Decreasing Value of Chain of Thought in Prompting](/dossiers/decreasing-value-chain-of-thought-prompting.md) — GPQA evidence that generic explicit CoT has model- and reliability-dependent value and can impose substantial latency
 * [DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines](/dossiers/dspy-compiling-declarative-language-model-calls.md) — Original DSPy paper on declarative LM programs, trace bootstrapping, and metric-driven pipeline compilation
@@ -84,9 +107,46 @@ timestamp: 2026-07-11T16:00:00Z
 * [Aligning Provenance with Authorization: A Dual-Graph Defense for LLM Agents](/dossiers/authgraph-dual-graph-defense.md) — AUTHGRAPH aligns a clean authorization graph with execution provenance to block unauthorized tools and wrong-source parameters
 * [Sandlock: Confining AI Agent Code with Unprivileged Linux Primitives](/dossiers/sandlock-unprivileged-linux-agent-sandbox.md) — Unprivileged Linux agent sandbox that compiles static policy into Landlock/seccomp and uses a narrow, TOCTOU-conscious supervisor for dynamic decisions and reversible effects
 * [AI Code Sandboxes: A Comparative Security Study — Engine-Level Properties](/dossiers/ai-code-sandboxes-engine-level-security-study.md) — Six-axis, time-bounded comparison of sandbox engine surface, leakage, hardening compatibility, CVE history, patch propagation, and public fuzzing posture
+* [Source Access Is a Systems Property](/dossiers/ai-assistant-source-access-and-retrieval-partnerships.md) — Dated comparative map of how assistant hosts, licenses, crawler permissions, source adapters, and connectors — not model weights — determine retrievable evidence
+
+* [SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection](/dossiers/selfcheckgpt-zero-resource-black-box-hallucination-detection.md) — Black-box factuality triage by measuring claim agreement across stochastic model samples
+
+* [Just Ask for Calibration](/dossiers/just-ask-for-calibration.md) — Evidence that directly elicited confidence can be more calibrated than answer-token probabilities in 2023 RLHF language models
+
+* [Universal and Transferable Adversarial Attacks on Aligned Language Models](/dossiers/universal-transferable-adversarial-attacks-aligned-language-models.md) — GCG automated jailbreak optimization and the 2023 evidence for cross-model transfer
+
+* [The Dawn of LMMs: Preliminary Explorations with GPT-4V(ision)](/dossiers/dawn-of-lmms-gpt-4-vision.md) — 2023 qualitative map of early GPT-4V multimodal interaction patterns and proposed applications
+
+* [Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design](/dossiers/quantifying-language-models-sensitivity-spurious-features-prompt-design.md) — FORMAT SPREAD evidence that semantically equivalent few-shot formatting can radically change reported accuracy
+
+* [Efficient Prompting Methods for Large Language Models: A Survey](/dossiers/efficient-prompting-methods-large-language-models-survey.md) — 2024 taxonomy of prompt compression and automatic prompt optimization
+
+* [PEARL: Self-Evolving Assistant for Time Management with Reinforcement Learning](/dossiers/pearl-self-evolving-assistant-time-management-reinforcement-learning.md) — Long-horizon preference-memory and RL approach to synthetic calendar conflict resolution
+
+* [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
 ## Vault
 
+* [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
+* [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
+* [Dual-Axis Judge Test-Time Scaling](/vault/dual-axis-judge-test-time-scaling.md)
+* [Decomposition-Induced Injection Resistance](/vault/decomposition-induced-injection-resistance.md)
+* [Decoupled Behavior and Proximal Policies](/vault/decoupled-behavior-proximal-policies.md)
+* [Executable Code Actions](/vault/executable-code-actions.md)
+* [Hybrid Linear–Global Attention](/vault/hybrid-linear-global-attention.md)
+* [Latent-Space Expert Routing](/vault/latent-space-expert-routing.md)
+* [Depth-Wise Attention Residuals](/vault/depth-wise-attention-residuals.md)
+* [Manifold-Safe Latent Reinforcement Learning](/vault/manifold-safe-latent-rl.md)
+* [Tool-Availability Abstention](/vault/tool-availability-abstention.md)
+* [Tool-Use Protocol Tax](/vault/tool-use-protocol-tax.md)
+* [Latent Tool-Necessity Routing](/vault/latent-tool-necessity-routing.md)
+* [Hook-Driven tmux Agent Transport](/vault/hook-driven-tmux-agent-transport.md)
+* [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)
+* [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)
+* [Experience-Conditioned Harness Adaptation](/vault/experience-conditioned-harness-adaptation.md)
+* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+* [Adversarial-ML Threat Lifecycle](/vault/adversarial-ml-threat-lifecycle.md)
+* [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
 * [Runtime-Activated Application Sandboxing](/vault/runtime-activated-application-sandboxing.md)
 * [Claim-Bounded Sandbox Evidence](/vault/claim-bounded-sandbox-evidence.md)
 * [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
@@ -173,6 +233,8 @@ timestamp: 2026-07-11T16:00:00Z
 * [Frequency-Weighted Personalized PageRank](/vault/frequency-weighted-personalized-pagerank.md)
 * [Retrieval Interface Tax](/vault/retrieval-interface-tax.md)
 * [VLM Prompt Learning](/vault/vlm-prompt-learning.md)
+* [Prompt Tuning](/vault/prompt-tuning.md)
+* [Emergent Abilities](/vault/emergent-abilities.md)
 * [Workload-Aligned Agent Memory Architecture](/vault/workload-aligned-agent-memory-architecture.md)
 * [Workload-Aligned Inference Engine Selection](/vault/workload-aligned-inference-engine-selection.md)
 * [Prompt Security Taxonomy](/vault/prompt-security-taxonomy.md)
@@ -204,3 +266,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Authorization–Provenance Graph Alignment](/vault/authorization-provenance-graph-alignment.md)
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
+* [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
+* [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
+* [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)

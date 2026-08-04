@@ -2,7 +2,7 @@
 type: Synthesis
 title: Workload-Aligned Agent Memory Architecture
 description: Selecting agent-memory representations, retrieval paths, and maintenance policies from the shape of evidence and correctness required by the workload rather than adopting one universal memory stack.
-tags: [synthesis, agent-memory, architecture, evaluation, retrieval, temporal-reasoning, long-horizon-agents]
+tags: [agent-memory, retrieval, evaluation, long-horizon, agents]
 timestamp: 2026-07-13T17:56:03Z
 ---
 

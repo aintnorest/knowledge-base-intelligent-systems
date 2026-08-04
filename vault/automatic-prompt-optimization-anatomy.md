@@ -2,7 +2,7 @@
 type: Synthesis
 title: Automatic Prompt Optimization Anatomy
 description: A five-part operating model for black-box prompt search that makes seed prompts, feedback, candidate generation, selection, and stopping criteria explicit and reproducible.
-tags: [synthesis, automatic-prompt-optimization, prompt-optimization, evaluation, search, experimentation]
+tags: [prompt-optimization, evaluation, verification]
 timestamp: 2026-07-13T18:11:59Z
 ---
 

@@ -4,7 +4,7 @@ title: 'The Prompt Report: A Systematic Survey of Prompt Engineering Techniques'
 description: Personal study notes on a PRISMA-grounded survey that defines prompt terminology, catalogs prompting methods, and examines practical evaluation, safety, and engineering.
 resource: https://arxiv.org/abs/2406.06608v6
 source: /archive/prompt-report.pdf
-tags: [prompt-engineering, survey, taxonomy, evaluation, security, llm, multimodal, study-note]
+tags: [prompting, survey, evaluation, agents, multimodal]
 timestamp: 2026-07-13T00:14:22Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Repeated-Compaction Evaluation
 description: Evaluating memory policies over many consolidation cycles, including recovery of discarded evidence, rather than judging one post-compression snapshot.
-tags: [synthesis, evaluation, memory-compaction, agent-memory, long-horizon-agents, retrieval]
+tags: [compaction, evaluation, agent-memory, long-horizon, retrieval, agents]
 timestamp: 2026-07-13T17:51:09Z
 ---
 

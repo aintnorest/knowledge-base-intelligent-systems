@@ -4,7 +4,7 @@ title: A Systematic Survey of Automatic Prompt Optimization Techniques
 description: "Study notes on a five-part taxonomy of black-box automatic prompt optimization: seeds, evaluation and feedback, candidate generation, selection, and iteration control."
 resource: https://arxiv.org/abs/2502.16923v2
 source: /archive/automatic-prompt-optimization-techniques.pdf
-tags: [automatic-prompt-optimization, prompt-optimization, survey, black-box-optimization, evaluation, search, study-note]
+tags: [prompt-optimization, survey, evaluation]
 timestamp: 2026-07-13T18:11:59Z
 ---
 

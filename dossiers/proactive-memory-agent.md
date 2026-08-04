@@ -4,7 +4,7 @@ title: Remember When It Matters
 description: Personal study notes on Proactive Memory Agent, a memory-intervention architecture for long-horizon LLM agents.
 resource: https://arxiv.org/abs/2607.08716v1
 source: /archive/proactive-memory-agent.pdf
-tags: [proactive-memory-agent, agent-memory, long-horizon-agents, context-engineering, study-note]
+tags: [agent-memory, long-horizon, context-engineering, agents]
 timestamp: 2026-07-12T21:18:44Z
 ---
 

@@ -4,7 +4,7 @@ title: How AI Agent Memory Works
 description: Personal study notes on Mert Cobanov's interactive essay explaining agent memory as context construction, governed storage, hybrid retrieval, and production infrastructure.
 resource: https://memory.cobanov.dev/
 source: https://memory.cobanov.dev/
-tags: [agent-memory, context-engineering, retrieval, rag, governance, production-systems, study-note]
+tags: [agent-memory, context-engineering, retrieval, agents, governance]
 timestamp: 2026-07-13T02:43:17Z
 ---
 

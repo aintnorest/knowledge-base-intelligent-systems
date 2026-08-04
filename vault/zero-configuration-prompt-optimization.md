@@ -2,7 +2,7 @@
 type: Synthesis
 title: Zero-Configuration Prompt Optimization
 description: An optimization interface that derives a prompt program's task schema, data, strategy, metric, and budget from a natural-language objective while exposing those inferred choices for review.
-tags: [synthesis, prompt-optimization, configuration, synthetic-data, evaluation, human-in-the-loop]
+tags: [prompt-optimization, evaluation, human-in-the-loop]
 timestamp: 2026-07-13T18:08:00Z
 ---
 

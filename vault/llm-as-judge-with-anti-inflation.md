@@ -2,7 +2,7 @@
 type: Synthesis
 title: LLM-as-Judge with Anti-Inflation
 description: A structured LLM evaluation framework with explicit score caps, penalties, and weighted axes to prevent the score inflation common in naive LLM judging.
-tags: [synthesis, metrics, llm-as-judge, evaluation, anti-inflation, scoring]
+tags: [llm-as-judge, evaluation, peer-review, agents]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

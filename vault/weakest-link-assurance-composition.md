@@ -2,7 +2,7 @@
 type: Synthesis
 title: Weakest-Link Assurance Composition
 description: Licensing a deployment-facing claim no more strongly than its weakest necessary evidence dimension, so improvements target real assurance bottlenecks rather than inflate aggregate scores.
-tags: [synthesis, assurance, evaluation, evidence, risk, safety-case, security, validation]
+tags: [reliability, evaluation, verification, governance]
 timestamp: 2026-07-14T16:26:53Z
 ---
 

@@ -4,7 +4,7 @@ title: Codebase-Memory: Tree-Sitter-Based Knowledge Graphs for LLM Code Explorat
 description: Personal study notes on a Tree-Sitter code graph exposed through MCP for structural code exploration, with incremental synchronization, hybrid graph-and-source retrieval, and an unusually extensive MCP-server release-verification proposal.
 resource: https://arxiv.org/abs/2603.27277v1
 source: /archive/codebase-memory-tree-sitter-knowledge-graphs.pdf
-tags: [codebase-memory, code-exploration, knowledge-graphs, tree-sitter, mcp, structural-retrieval, coding-agents, token-efficiency, study-note]
+tags: [coding-agents, knowledge-graphs, retrieval, mcp, token-efficiency, agents]
 timestamp: 2026-07-14T15:58:59Z
 ---
 

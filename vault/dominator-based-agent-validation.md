@@ -2,7 +2,7 @@
 type: Synthesis
 title: Dominator-Based Agent Validation
 description: Validating non-deterministic agent executions against essential observable milestones learned from successful traces, rather than against one fixed action script.
-tags: [synthesis, agent-evaluation, testing, execution-traces, dominator-analysis, computer-use]
+tags: [evaluation, verification, computer-use, agents]
 timestamp: 2026-07-13T02:42:42Z
 ---
 

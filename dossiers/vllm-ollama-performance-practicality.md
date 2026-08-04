@@ -4,7 +4,7 @@ title: Performance vs Practicality: A Comparison of vLLM and Ollama
 description: Personal study notes on Robert McDermott's hands-on comparison of vLLM and Ollama, including a same-host concurrency benchmark and deployment trade-offs.
 resource: https://robert-mcdermott.medium.com/performance-vs-practicality-a-comparison-of-vllm-and-ollama-104acad250fd
 source: https://robert-mcdermott.medium.com/performance-vs-practicality-a-comparison-of-vllm-and-ollama-104acad250fd
-tags: [vllm, ollama, llm-inference, model-serving, benchmarking, throughput, latency, study-note]
+tags: [model-serving, inference-efficiency, evaluation]
 timestamp: 2026-07-13T16:12:33Z
 ---
 

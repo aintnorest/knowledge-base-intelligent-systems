@@ -2,7 +2,7 @@
 type: Synthesis
 title: Dataset-Level Feature Discovery
 description: Discovering one interpretable feature schema for a text corpus by optimizing the schema against downstream utility, coverage, and explicit resistance to target-label proxies.
-tags: [synthesis, feature-discovery, feature-engineering, prompt-optimization, interpretability, information-extraction, evaluation]
+tags: [prompt-optimization, evaluation, verification]
 timestamp: 2026-07-13T18:05:15Z
 ---
 

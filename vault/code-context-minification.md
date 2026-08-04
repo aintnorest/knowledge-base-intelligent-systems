@@ -2,7 +2,7 @@
 type: Synthesis
 title: Code Context Minification
 description: Reducing code-heavy agent inputs with controlled lexical transformations while preserving the mapping and patch protocol needed to act on the original source.
-tags: [synthesis, software-engineering-agents, context-management, code-minification, token-efficiency, patch-generation]
+tags: [coding-agents, context-engineering, token-efficiency, agents]
 timestamp: 2026-07-14T16:07:15Z
 ---
 

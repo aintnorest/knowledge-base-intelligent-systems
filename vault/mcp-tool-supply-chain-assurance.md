@@ -2,7 +2,7 @@
 type: Synthesis
 title: MCP Tool Supply-Chain Assurance
 description: Treating an agent tool server as privileged supply-chain software and layering provenance, dependency integrity, adversarial testing, constrained behavior, and least privilege before granting it autonomous access.
-tags: [synthesis, mcp, agent-security, supply-chain-security, tool-use, provenance, dependency-integrity, least-privilege]
+tags: [mcp, agent-security, tool-use, access-control, provenance, agents]
 timestamp: 2026-07-14T15:58:59Z
 ---
 

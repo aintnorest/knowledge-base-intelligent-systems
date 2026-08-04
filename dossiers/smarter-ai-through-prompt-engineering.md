@@ -4,7 +4,7 @@ title: Smarter AI Through Prompt Engineering
 description: Personal study notes on a review of prompt engineering techniques, empirical case studies, optimization frameworks, and deployment tradeoffs in data science applications.
 resource: https://arxiv.org/abs/2602.00337
 source: /archive/smarter-ai-through-prompt-engineering.pdf
-tags: [prompt-engineering, data-science, prompt-optimization, study-note]
+tags: [prompting, prompt-optimization, reasoning, evaluation]
 timestamp: 2026-07-12T21:31:48Z
 ---
 

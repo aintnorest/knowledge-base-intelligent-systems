@@ -2,7 +2,7 @@
 type: Synthesis
 title: Assume-Compromise Boundary Testing
 description: Testing an agent security control by treating the planning model as already compromised and injecting adversarial action requests directly at the enforcement boundary.
-tags: [synthesis, agent-security, evaluation, adversarial-testing, validation, tool-use, prompt-injection]
+tags: [agent-security, verification, prompt-injection, tool-use, evaluation, agents]
 timestamp: 2026-07-14T17:10:00Z
 ---
 

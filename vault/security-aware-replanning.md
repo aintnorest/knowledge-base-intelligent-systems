@@ -2,7 +2,7 @@
 type: Synthesis
 title: Security-Aware Replanning
 description: Allowing an agent to revise its plan and least-privilege policy from runtime feedback while treating each revision as a bounded, attributable security-sensitive change.
-tags: [synthesis, agent-security, prompt-injection, replanning, policy-enforcement, tool-use, runtime-control]
+tags: [agent-security, access-control, prompt-injection, orchestration, tool-use, agents]
 timestamp: 2026-07-14T16:16:51Z
 ---
 

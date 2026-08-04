@@ -4,7 +4,7 @@ title: Locking Down Science Gateways with Landlock and Seccomp
 description: Study notes on applying runtime-enabled Linux Landlock and Seccomp restrictions to MPI scientific codes and a Rust science-gateway frontend.
 resource: https://arxiv.org/abs/2509.18548v2
 source: /archive/locking-down-science-gateways-landlock-seccomp.pdf
-tags: [science-gateways, landlock, seccomp, linux-security, mpi, sandboxing, study-note]
+tags: [sandboxing, access-control, reliability]
 timestamp: 2026-07-14T16:24:37Z
 ---
 

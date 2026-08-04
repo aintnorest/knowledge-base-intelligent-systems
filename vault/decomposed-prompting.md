@@ -2,7 +2,7 @@
 type: Synthesis
 title: Decomposed Prompting
 description: A modular approach to complex tasks where a decomposer LLM breaks problems into sub-queries handled by specialized sub-task handlers, coordinated by a controller.
-tags: [synthesis, prompting, decomposition, modular, handlers, decoupling]
+tags: [decomposition, prompting, orchestration]
 timestamp: 2026-07-11T16:36:00Z
 ---
 

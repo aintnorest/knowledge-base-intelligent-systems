@@ -2,8 +2,8 @@
 type: Synthesis
 title: Multi-Agent Orchestration
 description: Decomposing a complex task into specialized agents that run in a coordinated pipeline, with explicit handoffs, configuration-aware evaluation, and parallel execution where dependencies allow.
-tags: [synthesis, multi-agent, orchestration, pipeline, specialization, communication-protocols, evaluation]
-timestamp: 2026-07-13T17:56:21Z
+tags: [multi-agent, orchestration, evaluation, agents]
+timestamp: 2026-07-23T20:03:07Z
 ---
 
 # Multi-Agent Orchestration
@@ -51,6 +51,12 @@ Agent count, routing topology, message protocol, and aggregation rule determine 
 
 Use structured handoff contracts when downstream decisions repeatedly depend on status, evidence, confidence, or the next action. These contracts make the information flow inspectable and give local prompt changes a stable interface, but they should be validated for semantic usefulness rather than treated as formatting alone.
 
+## Learn Parallelism Against the Critical Path
+
+For broad search or naturally separable work, let an orchestrator decide whether, when, and how to create specialists rather than hard-coding a large fan-out. Evaluate a parallel stage by its longest branch plus coordination work, not by total workers or total actions. This critical-path view rewards balanced decomposition and prevents a policy from receiving credit merely for spawning many irrelevant subagents.
+
+When outcome rewards are sparse, holding executor policies fixed while learning the orchestrator can stabilize credit assignment. Return bounded findings, evidence references, confidence, and necessary artifacts from each subagent; keep raw local traces out of the coordinator’s context unless they are required to resolve a conflict. This makes parallelism an explicit context-sharding strategy as well as a latency strategy.
+
 ## Search the Workflow in Stages
 
 When both role instructions and routing remain unsettled, first establish competent minimal building blocks, then search a bounded workflow grammar using measured block benefit as a sampling prior, and finally adapt the prompts to the chosen graph. This reduces waste on unpromising structures without mistaking local block scores for the final decision: every selected workflow still needs end-to-end holdout evaluation for quality, cost, and safety-relevant handoffs.
@@ -61,3 +67,4 @@ When both role instructions and routing remain unsettled, first establish compet
 - [MASTE: A Multi-Agent Pipeline for Zero-Shot Aspect Sentiment Triplet Extraction dossier](/dossiers/maste-zero-shot-aspect-sentiment-triplet-extraction.md) — sequential typed stages for aspect, opinion, sentiment, and triplet-set consistency; reported gains come with four calls per sentence and aspect-stage recall risk.
 - [MAS-PromptBench dossier](/dossiers/mas-promptbench.md) — finds that prompt-optimization effects vary by task, topology, communication structure, and team size; its tested optimizers generally benefited more from structured protocols and smaller teams.
 - [Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies dossier](/dossiers/multi-agent-design-prompts-topologies.md) — searches prompt and topology variables in three stages, prioritizing topology blocks by measured validation influence before adapting prompts to the selected workflow.
+- [Kimi K2.5: Visual Agentic Intelligence dossier](/dossiers/kimi-k2-5-visual-agentic-intelligence.md) — technical-report evidence for a frozen-subagent/trainable-orchestrator design, auxiliary parallelism/completion rewards, critical-step latency, and context sharding.

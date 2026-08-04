@@ -4,7 +4,7 @@ title: 'Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies
 description: Personal study notes on Mass, a staged multi-agent-system search method that optimizes agent prompts, prunes topology choices using measured influence, and then adapts the selected workflow jointly.
 resource: https://arxiv.org/abs/2502.02533v2
 source: /archive/multi-agent-design-prompts-topologies.pdf
-tags: [multi-agent-systems, prompt-optimization, topology-search, workflow-design, agent-orchestration, study-note]
+tags: [multi-agent, prompt-optimization, orchestration, agents]
 timestamp: 2026-07-13T18:12:41Z
 ---
 

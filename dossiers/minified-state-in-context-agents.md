@@ -4,7 +4,7 @@ title: Reducing Token Usage of State-in-Context Agents using Minification
 description: Personal study notes on Hrubec and Cito's replication of DirectSolve and its evaluation of Python-code minification as a repair-context cost reduction technique.
 resource: https://arxiv.org/abs/2606.01326v1
 source: /archive/minified-state-in-context-agents.pdf
-tags: [software-engineering-agents, state-in-context, code-minification, context-management, token-efficiency, swe-bench, study-note]
+tags: [coding-agents, token-efficiency, context-engineering, agents]
 timestamp: 2026-07-14T16:02:37Z
 ---
 

@@ -4,7 +4,7 @@ title: The Balkanization of Execution-Security Research for AI Coding Agents
 description: Study notes on a 39-paper systematization of coding-agent execution security, its mechanism taxonomy, four cross-category root causes, and five evaluation and design gaps.
 resource: https://arxiv.org/abs/2607.05743v1
 source: /archive/execution-security-research-ai-coding-agents.pdf
-tags: [agent-security, coding-agents, execution-security, sandboxing, access-control, toctou, mcp, systematization, study-note]
+tags: [agent-security, coding-agents, sandboxing, access-control, mcp, agents]
 timestamp: 2026-07-14T16:29:37Z
 ---
 

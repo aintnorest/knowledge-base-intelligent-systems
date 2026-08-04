@@ -4,7 +4,7 @@ title: Continually Improving Our Agent Harness
 description: Personal study notes on Cursor's practice of evolving a coding-agent harness through dynamic context, layered evaluation, tool reliability work, and model-specific adaptation.
 resource: https://cursor.com/blog/continually-improving-agent-harness
 source: https://cursor.com/blog/continually-improving-agent-harness
-tags: [agent-harness, coding-agents, context-engineering, agent-evaluation, tool-reliability, model-adaptation, study-note]
+tags: [agent-harness, coding-agents, context-engineering, evaluation, reliability, agents]
 timestamp: 2026-07-13T16:02:28Z
 ---
 

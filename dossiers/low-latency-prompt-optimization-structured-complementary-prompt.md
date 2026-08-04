@@ -4,7 +4,7 @@ title: Don't Generate, Classify! Low-Latency Prompt Optimization with Structured
 description: EACL 2026 study of a classifier-based prompt optimizer that predicts structured system-prompt fields instead of autoregressively rewriting prompts.
 resource: https://aclanthology.org/2026.eacl-long.204/
 source: /archive/low-latency-prompt-optimization-structured-complementary-prompt.pdf
-tags: [prompt-optimization, structured-prompting, classification, latency, instruction-following, llm, study-note]
+tags: [prompt-optimization, inference-efficiency, prompting]
 timestamp: 2026-07-13T18:16:22Z
 ---
 

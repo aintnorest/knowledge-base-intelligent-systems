@@ -4,7 +4,7 @@ title: Agentic Context Engineering
 description: Personal study notes on ACE, a framework for evolving context playbooks for self-improving LLM agents and domain-specific reasoning systems.
 resource: https://arxiv.org/abs/2510.04618v3
 source: /archive/agentic-context-engineering.pdf
-tags: [agentic-context-engineering, context-engineering, self-improving-agents, study-note]
+tags: [context-engineering, agents, self-improvement, agent-memory]
 timestamp: 2026-07-12T19:02:08Z
 ---
 

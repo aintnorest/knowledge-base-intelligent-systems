@@ -2,7 +2,7 @@
 type: Synthesis
 title: Query-Class Retrieval Routing
 description: Selecting graph traversal, text search, source reads, or semantic retrieval by the evidence a question requires, with an explicit fallback when the first retrieval mode is incomplete.
-tags: [synthesis, retrieval, routing, coding-agents, knowledge-graphs, source-code, tool-use, context-engineering]
+tags: [retrieval, routing, coding-agents, knowledge-graphs, context-engineering, agents]
 timestamp: 2026-07-14T15:58:59Z
 ---
 

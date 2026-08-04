@@ -2,7 +2,7 @@
 type: Synthesis
 title: Harness-Conditioned Retrieval Evaluation
 description: Evaluating retrieval as an end-to-end agent behavior whose quality depends jointly on retriever, model, harness, tool-result delivery, and corpus conditions.
-tags: [synthesis, retrieval, agent-harness, evaluation, tool-use, context-engineering, long-context]
+tags: [retrieval, agent-harness, evaluation, tool-use, context-engineering, agents]
 timestamp: 2026-07-14T16:02:15Z
 ---
 

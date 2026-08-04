@@ -2,7 +2,7 @@
 type: Synthesis
 title: Delayed Local Trajectory Reduction
 description: Reducing an agent's accumulated context by selectively rewriting one older, high-cost interaction step with bounded neighboring context, instead of compacting the whole trajectory.
-tags: [synthesis, llm-agents, context-management, trajectory-reduction, token-efficiency, kv-cache, cost-control]
+tags: [compaction, token-efficiency, agent-memory, agents, coding-agents]
 timestamp: 2026-07-14T15:00:00Z
 ---
 

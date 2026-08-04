@@ -4,7 +4,7 @@ title: "vLLM or llama.cpp: Choosing the right LLM inference engine for your use 
 description: Personal study notes on Red Hat's controlled H200 comparison of vLLM and llama.cpp, emphasizing how concurrency, deployment environment, and latency objectives determine the appropriate inference engine.
 resource: https://developers.redhat.com/articles/2025/09/30/vllm-or-llamacpp-choosing-right-llm-inference-engine-your-use-case
 source: https://developers.redhat.com/articles/2025/09/30/vllm-or-llamacpp-choosing-right-llm-inference-engine-your-use-case
-tags: [llm-inference, model-serving, vllm, llama-cpp, benchmarking, throughput, latency, study-note]
+tags: [model-serving, inference-efficiency, evaluation]
 timestamp: 2026-07-13T16:10:26Z
 ---
 

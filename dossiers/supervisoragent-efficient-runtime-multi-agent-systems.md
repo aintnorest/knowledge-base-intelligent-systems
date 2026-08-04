@@ -4,7 +4,7 @@ title: 'Stop Wasting Your Tokens: Towards Efficient Runtime Multi-Agent Systems'
 description: Study notes on SUPERVISORAGENT, a runtime meta-agent that selectively corrects errors, redirects inefficient behavior, and purifies long observations in multi-agent systems.
 resource: https://arxiv.org/abs/2510.26585v2
 source: /archive/supervisoragent-efficient-runtime-multi-agent-systems.pdf
-tags: [multi-agent-systems, runtime-supervision, agent-reliability, token-efficiency, context-engineering, tool-use, study-note]
+tags: [multi-agent, orchestration, reliability, context-engineering, token-efficiency, agents]
 timestamp: 2026-07-14T15:57:50Z
 ---
 

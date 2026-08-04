@@ -2,7 +2,7 @@
 type: Synthesis
 title: Intent Engineering for Agents
 description: Encoding organizational priorities, trade-off rules, and escalation boundaries as testable decision policy so an agent does not optimize a convenient proxy for its actual mandate.
-tags: [synthesis, agents, governance, alignment, decision-policy, evaluation, enterprise-ai]
+tags: [governance, agents, evaluation, enterprise]
 timestamp: 2026-07-13T18:03:01Z
 ---
 

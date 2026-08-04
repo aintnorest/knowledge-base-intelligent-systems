@@ -4,7 +4,7 @@ title: "AI Code Sandboxes: A Comparative Security Study — Engine-Level Propert
 description: Study notes on Andronchik and Lokhmakov's six-axis comparison of five AI code-sandbox products, covering host attack surface, information leakage, hardening stackability, public CVEs, patch propagation, and fuzzing posture.
 resource: https://arxiv.org/abs/2606.08433v1
 source: /archive/ai-code-sandboxes-engine-level-security-study.pdf
-tags: [agent-security, sandboxing, code-execution, isolation, containers, microvms, gvisor, vulnerability-management, study-note]
+tags: [sandboxing, agent-security, agents, coding-agents]
 timestamp: 2026-07-14T16:26:33Z
 ---
 

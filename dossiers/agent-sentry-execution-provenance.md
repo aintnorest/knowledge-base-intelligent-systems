@@ -4,7 +4,7 @@ title: Agent-Sentry: Bounding LLM Agents via Execution Provenance
 description: Study notes on a runtime prompt-injection defense that learns normal action provenance from benign traces, deterministically handles most consequential calls, and reserves an LLM intent judge for unresolved cases.
 resource: https://arxiv.org/abs/2603.22868v2
 source: /archive/agent-sentry-execution-provenance.pdf
-tags: [agent-security, prompt-injection, provenance, tool-use, runtime-enforcement, anomaly-detection, llm-judge, study-note]
+tags: [agent-security, prompt-injection, provenance, tool-use, agents, llm-as-judge]
 timestamp: 2026-07-14T16:14:45Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Sparse Concept Note Prompt
 description: A prompt pattern for extracting high-level, conceptual summaries from dense technical documents — simulating an early brainstorming phase with no math or hyperparameters.
-tags: [synthesis, prompts, extraction, concept-note, brainstorming, sparse]
+tags: [prompting, context-engineering, evaluation]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Expert-Weighted Retrieval
 description: Retrieval pattern that uses ownership, review history, team relationships, and contributor expertise as ranking signals for task-specific context.
-tags: [synthesis, context-engineering, retrieval, expertise, organizational-memory]
+tags: [retrieval, context-engineering, coding-agents, agents]
 timestamp: 2026-07-12T21:27:50Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Intent-Then-Isolate Execution
 description: Deciding an agent's authorized action structure from trusted intent before untrusted data is read, then isolating or removing that data so it cannot steer later consequential decisions.
-tags: [synthesis, agent-security, prompt-injection, control-flow, planning, context-engineering]
+tags: [agent-security, prompt-injection, orchestration, context-engineering, agents]
 timestamp: 2026-07-14T16:11:55Z
 ---
 

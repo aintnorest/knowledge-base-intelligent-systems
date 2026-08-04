@@ -2,7 +2,7 @@
 type: Synthesis
 title: LLM Evaluation Methods
 description: A taxonomy of evaluation approaches for prompt engineering, distinguishing subjective human judgment, automated metrics, benchmark categories, reliability thresholds, and technique-specific metric matching.
-tags: [synthesis, evaluation, llm, metrics, benchmarks, reliability, bleu, rouge, bertscore]
+tags: [evaluation, reliability, prompting, taxonomy]
 timestamp: 2026-07-13T02:32:26Z
 ---
 

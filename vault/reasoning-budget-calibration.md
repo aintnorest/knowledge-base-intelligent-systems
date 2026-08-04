@@ -2,7 +2,7 @@
 type: Synthesis
 title: Reasoning-Budget Calibration
 description: Selecting and validating the amount and format of generated reasoning as a task- and model-specific operating policy rather than assuming more visible reasoning is always better.
-tags: [synthesis, prompting, reasoning, evaluation, latency, token-cost, reliability]
+tags: [reasoning, evaluation, prompting, reliability, inference-efficiency]
 timestamp: 2026-07-13T18:01:03Z
 ---
 

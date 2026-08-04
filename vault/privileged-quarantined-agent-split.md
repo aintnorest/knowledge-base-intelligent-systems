@@ -2,7 +2,7 @@
 type: Synthesis
 title: Privileged–Quarantined Agent Split
 description: Separating a tool-capable planner from an untrusted-data processor, then constraining or symbolically handling the processor's return values so untrusted text cannot become privileged instructions.
-tags: [synthesis, agent-security, prompt-injection, trust-boundaries, tool-use, orchestration]
+tags: [agent-security, prompt-injection, tool-use, orchestration, agents]
 timestamp: 2026-07-14T16:11:55Z
 ---
 

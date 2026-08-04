@@ -2,7 +2,7 @@
 type: Synthesis
 title: Downstream-Aware Prompt Evaluation
 description: Evaluating an intermediate agent's prompt by local role adherence, the usefulness of its output to direct successors, and the final workflow outcome rather than by local output quality alone.
-tags: [synthesis, multi-agent-systems, prompt-optimization, evaluation, credit-assignment, coordination]
+tags: [multi-agent, prompt-optimization, evaluation, agents]
 timestamp: 2026-07-13T18:01:03Z
 ---
 

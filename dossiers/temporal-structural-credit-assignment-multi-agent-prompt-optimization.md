@@ -4,7 +4,7 @@ title: Unifying Temporal and Structural Credit Assignment in LLM-Based Multi-Age
 description: Personal study notes on a credit-guided, test-time method that isolates weak agent roles and aggregation rounds before selectively revising their prompts.
 resource: https://arxiv.org/abs/2605.30227v1
 source: /archive/temporal-structural-credit-assignment-multi-agent-prompt-optimization.pdf
-tags: [multi-agent, prompt-optimization, credit-assignment, textual-gradients, aggregation, evaluation, study-note]
+tags: [multi-agent, prompt-optimization, agents, evaluation]
 timestamp: 2026-07-13T17:58:53Z
 ---
 

@@ -4,7 +4,7 @@ title: 'A Survey of Prompt Engineering Methods in Large Language Models for Diff
 description: Personal study notes on a task-centered survey that maps 39 prompting methods to 29 NLP task categories, datasets, model families, and reported best methods.
 resource: https://arxiv.org/abs/2407.12994v2
 source: /archive/survey-prompt-engineering-methods-nlp-tasks.pdf
-tags: [prompt-engineering, survey, taxonomy, nlp, benchmarking, reasoning, study-note]
+tags: [prompting, survey, reasoning, evaluation]
 timestamp: 2026-07-13T02:29:00Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: File-Native Context Retrieval
 description: Letting an agent navigate persistent structured knowledge through files and native search tools so it retrieves task-relevant context on demand rather than receiving every record in its initial prompt.
-tags: [synthesis, context-engineering, file-native-agents, retrieval, schemas, tool-use, model-adaptation]
+tags: [context-engineering, retrieval, tool-use, agents]
 timestamp: 2026-07-13T18:04:21Z
 ---
 

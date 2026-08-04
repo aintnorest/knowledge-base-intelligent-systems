@@ -4,7 +4,7 @@ title: Prompting Complexity: Shortest Prompts for Texts and Behaviors in LLMs
 description: Personal study notes on a theoretical framework that treats prompts as model-relative compressed descriptions of target texts and acceptable behaviors.
 resource: https://arxiv.org/abs/2607.06145v1
 source: /archive/prompting-complexity.pdf
-tags: [prompting-complexity, prompt-optimization, algorithmic-complexity, behavioral-evaluation, prompt-security, study-note]
+tags: [prompting, prompt-optimization, evaluation]
 timestamp: 2026-07-13T17:51:25Z
 ---
 

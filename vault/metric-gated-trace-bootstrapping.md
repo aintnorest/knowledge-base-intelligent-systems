@@ -2,7 +2,7 @@
 type: Synthesis
 title: Metric-Gated Trace Bootstrapping
 description: Creating candidate demonstrations for every component of a multi-stage LLM program by retaining only execution traces whose final behavior satisfies an explicit metric.
-tags: [synthesis, dspy, bootstrapping, weak-supervision, evaluation, few-shot, pipelines]
+tags: [prompt-optimization, evaluation, in-context-learning]
 timestamp: 2026-07-13T00:11:06Z
 ---
 

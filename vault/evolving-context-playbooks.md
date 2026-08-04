@@ -2,7 +2,7 @@
 type: Synthesis
 title: Evolving Context Playbooks
 description: Treating prompts, memory, tool rules, and domain guidance as structured playbooks that accumulate operational knowledge over time.
-tags: [synthesis, context-engineering, playbooks, agent-memory, self-improvement]
+tags: [context-engineering, agent-memory, self-improvement, agents]
 timestamp: 2026-07-12T19:02:08Z
 ---
 

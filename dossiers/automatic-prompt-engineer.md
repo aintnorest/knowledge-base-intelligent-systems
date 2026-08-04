@@ -4,7 +4,7 @@ title: Large Language Models Are Human-Level Prompt Engineers
 description: Study notes on Automatic Prompt Engineer, a black-box method that uses language models to propose, score, and select natural-language instructions from task demonstrations.
 resource: https://arxiv.org/abs/2211.01910v2
 source: /archive/automatic-prompt-engineer.pdf
-tags: [automatic-prompt-engineer, ape, prompt-optimization, instruction-induction, black-box-optimization, study-note]
+tags: [prompt-optimization, prompting, evaluation]
 timestamp: 2026-07-13T00:10:30Z
 ---
 

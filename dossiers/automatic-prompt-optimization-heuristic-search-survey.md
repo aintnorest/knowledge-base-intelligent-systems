@@ -4,7 +4,7 @@ title: A Survey of Automatic Prompt Optimization with Instruction-focused Heuris
 description: Study notes on a five-axis taxonomy for instruction-focused automatic prompt optimization, covering prompt space, target, objective, candidate-generation operators, and search algorithms.
 resource: https://arxiv.org/abs/2502.18746v2
 source: /archive/automatic-prompt-optimization-heuristic-search-survey.pdf
-tags: [automatic-prompt-optimization, prompt-optimization, heuristic-search, survey, instruction-optimization, study-note]
+tags: [prompt-optimization, survey, prompting]
 timestamp: 2026-07-13T18:11:05Z
 ---
 

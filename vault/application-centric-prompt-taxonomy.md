@@ -2,7 +2,7 @@
 type: Synthesis
 title: Application-Centric Prompt Taxonomy
 description: Classifying prompt engineering methods by the product or reasoning problem they address rather than by prompt surface form.
-tags: [synthesis, prompt-engineering, taxonomy, llm, reasoning]
+tags: [prompting, taxonomy, reasoning]
 timestamp: 2026-07-13T02:29:00Z
 ---
 

@@ -4,7 +4,7 @@ title: Automatic Prompt Optimization for Dataset-Level Feature Discovery
 description: Study notes on a multi-agent method that optimizes prompts for a shared, interpretable text-feature schema using downstream classifier performance and anti-label-leakage feedback.
 resource: https://arxiv.org/abs/2601.13922v1
 source: /archive/automatic-prompt-optimization-dataset-level-feature-discovery.pdf
-tags: [prompt-optimization, feature-discovery, feature-engineering, interpretable-machine-learning, information-extraction, multi-agent-systems, study-note]
+tags: [prompt-optimization, multi-agent, agents, evaluation]
 timestamp: 2026-07-13T18:05:15Z
 ---
 

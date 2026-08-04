@@ -2,7 +2,7 @@
 type: Synthesis
 title: Process-Aware Trajectory Preference Optimization
 description: Preference-optimizing multi-step agent traces with rewards for outcome, interface compliance, intermediate evidence coverage, and unnecessary action count instead of ranking paths by the final answer alone.
-tags: [synthesis, agents, preference-optimization, direct-preference-optimization, process-rewards, retrieval, reasoning, evaluation]
+tags: [reinforcement-learning, agents, evaluation, retrieval, reasoning]
 timestamp: 2026-07-14T15:57:43Z
 ---
 

@@ -4,7 +4,7 @@ title: Prompt Engineering is Complicated and Contingent
 description: Personal study notes on a Wharton Generative AI Labs report showing that LLM benchmark conclusions depend heavily on scoring thresholds, repeated sampling, and prompt formatting choices.
 resource: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5165270
 source: /archive/prompt-engineering-complicated-contingent.pdf
-tags: [prompt-engineering, llm-evaluation, benchmarking, gpqa, study-note]
+tags: [prompting, evaluation, reliability]
 timestamp: 2026-07-12T20:07:25Z
 ---
 

@@ -2,8 +2,8 @@
 type: Synthesis
 title: In-Context Learning
 description: Temporarily adapting a language model's behavior by placing instructions and demonstrations in its input context without updating model weights.
-tags: [synthesis, in-context-learning, few-shot, zero-shot, prompting, task-specification]
-timestamp: 2026-07-12T22:20:26Z
+tags: [in-context-learning, prompting, generalization]
+timestamp: 2026-07-30T09:05:42Z
 ---
 
 # In-Context Learning
@@ -32,7 +32,7 @@ Use in-context examples when a task lacks training data, when its desired output
 - Results depend on the model, task, prompt format, metric, and individual item.
 - Demonstrations do not remove factuality, safety, bias, or benchmark-contamination risks.
 
-The 2020 GPT-3 paper established the historical evidence that larger models in that model family often used demonstrations more effectively. Generalizing that scaling relationship or its benchmark results to current systems requires contemporary verification.
+The 2020 GPT-3 paper established the historical evidence that larger models in that model family often used demonstrations more effectively. The 2022 emergent-abilities survey sharpened this: on many benchmarks (MMLU, BIG-Bench arithmetic, TruthfulQA, Word in Context), few-shot performance sat near random across orders of magnitude of scale before jumping above random at a model-size threshold — see [Emergent Abilities](/vault/emergent-abilities.md). Generalizing that scaling relationship or its benchmark results to current systems requires contemporary verification.
 
 ## Sources
 
@@ -40,3 +40,4 @@ The 2020 GPT-3 paper established the historical evidence that larger models in t
 - [Prompt Engineering Survey dossier](/dossiers/prompt-engineering-survey.md) - later survey evidence that examples do not uniformly improve performance.
 - [A Systematic Survey of Prompt Engineering in Large Language Models](/dossiers/systematic-survey-prompt-engineering-llms.md) - later taxonomy retaining zero-shot and few-shot prompting for new tasks without extensive training.
 - [Prompt Engineering is Complicated and Contingent dossier](/dossiers/prompt-engineering-complicated-contingent.md) - 2025 evidence that prompt effects are model-, task-, metric-, and item-dependent.
+- [Emergent Abilities of Large Language Models dossier](/dossiers/emergent-abilities-large-language-models.md) - 2022 catalog showing few-shot task performance is often near-random below a model-scale threshold, so demonstration use can appear absent until scale unlocks it.

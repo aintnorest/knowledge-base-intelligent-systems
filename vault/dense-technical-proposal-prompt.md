@@ -2,7 +2,7 @@
 type: Synthesis
 title: Dense Technical Proposal Prompt
 description: A prompt pattern for extracting comprehensive, equation-rich technical proposals from published papers — simulating a mature research plan before experiments are run.
-tags: [synthesis, prompts, extraction, technical-proposal, dense, equations]
+tags: [prompting, benchmark, agents]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

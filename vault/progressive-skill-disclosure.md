@@ -2,7 +2,7 @@
 type: Synthesis
 title: Progressive Skill Disclosure
 description: Structuring a Skill so that its low-cost routing signal, focused root guidance, and heavy conditional material load in successive stages of need.
-tags: [synthesis, agent-skills, progressive-disclosure, context-engineering, information-architecture, token-efficiency]
+tags: [agent-skills, context-engineering, token-efficiency, agents]
 timestamp: 2026-07-13T16:07:36Z
 ---
 

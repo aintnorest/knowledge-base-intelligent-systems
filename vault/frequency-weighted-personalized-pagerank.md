@@ -2,7 +2,7 @@
 type: Synthesis
 title: Frequency-Weighted Personalized PageRank
 description: A graph-retrieval ranking policy that seeds personalized PageRank with concept weights combining query relevance and inverse corpus frequency, while preserving separate calibration for exact and approximate matches.
-tags: [synthesis, retrieval, graph-rag, personalized-pagerank, ranking, query-understanding, rag]
+tags: [retrieval, knowledge-graphs, context-engineering]
 timestamp: 2026-07-14T15:53:34Z
 ---
 

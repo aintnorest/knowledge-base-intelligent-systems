@@ -2,7 +2,7 @@
 type: Synthesis
 title: Prompt-Technique SWOT Analysis
 description: A selection framework for comparing prompting techniques by strengths, weaknesses, opportunities, and threats before adopting them in a task or product workflow.
-tags: [synthesis, prompt-engineering, swot-analysis, technique-selection, evaluation]
+tags: [prompting, evaluation, chain-of-thought, tool-use]
 timestamp: 2026-07-12T21:41:53Z
 ---
 

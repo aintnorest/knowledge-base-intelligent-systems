@@ -4,7 +4,7 @@ title: Exploring Prompt Engineering
 description: Personal study notes on a systematic review of prompt engineering techniques using linguistic framing, technique taxonomy, SWOT analysis, and evaluation metrics.
 resource: https://arxiv.org/abs/2410.12843v1
 source: /archive/exploring-prompt-engineering-swot.pdf
-tags: [prompt-engineering, swot-analysis, prompt-evaluation, linguistic-principles, study-note]
+tags: [prompting, survey, evaluation]
 timestamp: 2026-07-12T21:41:53Z
 ---
 

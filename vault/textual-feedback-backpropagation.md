@@ -2,7 +2,7 @@
 type: Synthesis
 title: Textual Feedback Backpropagation
 description: Improving a compound AI system by tracing outcome critiques backward to the specific text-valued variables and contexts that produced them, then validating targeted revisions.
-tags: [synthesis, llm-optimization, textual-gradients, compound-ai, feedback, computation-graphs, self-refinement]
+tags: [prompt-optimization, self-improvement, evaluation]
 timestamp: 2026-07-13T18:15:11Z
 ---
 

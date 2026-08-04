@@ -2,7 +2,7 @@
 type: Synthesis
 title: Validated Fallback Composition
 description: Treating model-generated phrasing as a replaceable component behind an output contract, with deterministic validation, traceable recovery, and a safe preapproved fallback.
-tags: [synthesis, agent-harness, validation, fallback, output-contracts, reliability, llm-agents]
+tags: [agent-harness, verification, reliability, evaluation]
 timestamp: 2026-07-13T17:54:59Z
 ---
 

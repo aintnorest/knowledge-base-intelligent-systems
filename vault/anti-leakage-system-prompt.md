@@ -2,7 +2,7 @@
 type: Synthesis
 title: Anti-Leakage System Prompt
 description: A universal system prompt that forces an LLM to treat only provided session materials as truth, preventing pre-training data contamination in evaluation pipelines.
-tags: [synthesis, prompts, anti-leakage, knowledge-isolation, evaluation, system-prompt]
+tags: [prompting, evaluation, verification]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

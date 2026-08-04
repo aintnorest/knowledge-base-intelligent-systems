@@ -2,8 +2,8 @@
 type: Synthesis
 title: Chain-of-Thought Prompting
 description: Eliciting intermediate natural-language reasoning before an answer, with benefits that depend on the model, baseline behavior, task, prompt, and evaluation setting.
-tags: [synthesis, prompting, chain-of-thought, reasoning, cot]
-timestamp: 2026-07-13T02:32:26Z
+tags: [chain-of-thought, prompting, reasoning]
+timestamp: 2026-07-30T09:05:42Z
 ---
 
 # Chain-of-Thought Prompting
@@ -43,6 +43,14 @@ Kojima et al. (2022) then reported that Zero-shot-CoT raised `text-davinci-002` 
 
 These numbers describe PaLM, GPT-3, LaMDA, Codex, and UL2 under 2022-era benchmark conditions. They are historical evidence for the mechanism, not current performance expectations.
 
+Wei et al. (2022, *Emergent Abilities*) reinterpreted this pattern as emergence of a technique benefit: chain of thought surpassed standard prompting only around 10^23 training FLOPs (~100B parameters) in their catalog, and was neutral or harmful below that threshold. The technique's value is therefore scale-gated, not only task-gated — see [Emergent Abilities](/vault/emergent-abilities.md).
+
+## Length Generalization Is a Separate Test
+
+Intermediate steps do not automatically teach a procedure that scales to longer instances. In controlled parity and variable-assignment tasks, ordinary fine-tuning and scratchpad fine-tuning could fit short sequences yet fail on longer dependency chains. A few short scratchpad examples sometimes did induce a pretrained model to apply the template much farther, but that depended on the base model already having compatible skill.
+
+When a chain of thought is meant to carry a sequential algorithm, evaluate beyond the demonstration and training lengths. Separate changes in token count, operation count, dependency depth, positional distance, and output length; a strong score on one is not evidence for the others.
+
 ## Limitations and Current Validity
 
 - A coherent trace can contain factual, semantic, symbol-mapping, or calculation errors and can occasionally reach the right answer by accident.
@@ -61,3 +69,5 @@ These numbers describe PaLM, GPT-3, LaMDA, Codex, and UL2 under 2022-era benchma
 - [A Systematic Survey of Prompt Engineering in Large Language Models](/dossiers/systematic-survey-prompt-engineering-llms.md) - later taxonomy that places chain of thought among a broader family of reasoning methods.
 - [Prompt Engineering is Complicated and Contingent dossier](/dossiers/prompt-engineering-complicated-contingent.md) - newer evidence that prompt effects and reliability depend on model, item, formatting, and scoring threshold; it does not directly retest chain of thought.
 - [Prompting Science Report 2 dossier](/dossiers/decreasing-value-chain-of-thought-prompting.md) - contemporary GPQA evidence that generic explicit CoT can improve mean performance for some non-reasoning models while reducing strict reliability, and adds substantial latency with little value for the tested reasoning models.
+- [Exploring Length Generalization in Large Language Models dossier](/dossiers/exploring-length-generalization-language-models.md) - controlled evidence that scratchpad fine-tuning can retain length-generalization failures while few-shot scratchpads can activate a length-robust pretrained template under task-specific conditions.
+- [Emergent Abilities of Large Language Models dossier](/dossiers/emergent-abilities-large-language-models.md) - catalogs chain-of-thought's benefit over standard prompting as emergent, appearing only near 10^23 training FLOPs (~100B parameters) in 2022-era models.

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Evaluated Skill Routing
 description: Treating an agent Skill's description and activation boundary as a tested classifier that must maximize useful loads while preventing off-target context injection.
-tags: [synthesis, agent-skills, routing, agent-evaluation, context-engineering, regression-testing]
+tags: [agent-skills, routing, evaluation, agents, context-engineering]
 timestamp: 2026-07-13T16:07:36Z
 ---
 

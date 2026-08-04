@@ -2,7 +2,7 @@
 type: Synthesis
 title: Control-Data Plane Separation for Agents
 description: An agent-security architecture that confines untrusted content to structured parsing while a privileged planner determines the allowed action structure and a separate runtime mediates effects.
-tags: [synthesis, agent-security, prompt-injection, tool-use, isolation, structured-extraction]
+tags: [agent-security, prompt-injection, tool-use, access-control, agents]
 timestamp: 2026-07-14T16:09:17Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Least-to-Most Prompting
 description: A sequential prompting pattern that decomposes a hard problem into ordered, dependent subproblems and carries each solved result forward to address easy-to-hard generalization.
-tags: [synthesis, prompting, decomposition, reasoning, compositional-generalization, sequential]
+tags: [prompting, decomposition, reasoning, generalization]
 timestamp: 2026-07-13T00:04:46Z
 ---
 

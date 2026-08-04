@@ -4,7 +4,7 @@ title: Self-Consistency Improves Chain of Thought Reasoning in Language Models
 description: Study notes on the ICLR 2023 paper that replaces greedy chain-of-thought decoding with sampled reasoning paths and answer-level aggregation.
 resource: https://arxiv.org/abs/2203.11171v4
 source: /archive/self-consistency-improves-chain-of-thought-reasoning.pdf
-tags: [self-consistency, chain-of-thought, decoding, reasoning, sampling, study-note]
+tags: [chain-of-thought, reasoning, test-time-scaling]
 timestamp: 2026-07-12T23:58:09Z
 ---
 

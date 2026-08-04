@@ -17,6 +17,14 @@ Read `README.md`, representative dossiers, and representative vault pages
 before making changes. Follow their established style where it does not
 conflict with this playbook.
 
+## Tagging
+
+All `tags:` frontmatter must use the controlled vocabulary in `TAXONOMY.md`:
+3–6 tags per page, most central first; `agents` on every agentic-systems page;
+at most one genre tag. Do not invent tags during ingest — if nothing fits, use
+the nearest broader tag and flag the gap in the final report as a candidate
+addition to `TAXONOMY.md`.
+
 ## Candidate Reconciliation
 
 Inspect source files in `inbox/`. Ignore `README.md`, hidden files, temporary

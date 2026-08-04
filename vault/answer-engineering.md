@@ -2,7 +2,7 @@
 type: Synthesis
 title: Answer Engineering
 description: Designing answer shape, answer space, and extraction so an LLM response becomes a reliable downstream value.
-tags: [synthesis, prompting, output-format, extraction, evaluation, reliability]
+tags: [prompting, verification, evaluation, reliability]
 timestamp: 2026-07-13T00:14:22Z
 ---
 

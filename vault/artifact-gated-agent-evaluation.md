@@ -2,7 +2,7 @@
 type: Synthesis
 title: Artifact-Gated Agent Evaluation
 description: Scoring an agent's final deliverable only after it satisfies explicit validity, safety, and provenance preconditions, then measuring quality with the most direct available signal.
-tags: [synthesis, agent-evaluation, deliverables, validation, gating, computer-use, benchmarks]
+tags: [evaluation, verification, agents, computer-use]
 timestamp: 2026-07-14T16:06:03Z
 ---
 

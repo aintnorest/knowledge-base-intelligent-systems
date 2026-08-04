@@ -4,7 +4,7 @@ title: PaperOrchestra
 description: Personal study notes on PaperOrchestra — a standalone multi-agent framework that writes LaTeX manuscripts from raw research materials.
 resource: https://arxiv.org/abs/2604.05018v1
 source: /archive/paperorchestra.pdf
-tags: [paperorchestra, study-note, multi-agent, manuscript-generation]
+tags: [multi-agent, tool-use, retrieval, agents]
 timestamp: 2026-07-11T16:00:00Z
 ---
 

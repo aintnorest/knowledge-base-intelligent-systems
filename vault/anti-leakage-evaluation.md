@@ -2,7 +2,7 @@
 type: Synthesis
 title: Anti-Leakage Evaluation
 description: Preventing pre-training data contamination in automated writing benchmarks through strict knowledge isolation prompts and de-contextualized inputs.
-tags: [synthesis, evaluation, anti-leakage, contamination, knowledge-isolation, benchmark]
+tags: [evaluation, prompting, verification]
 timestamp: 2026-07-12T22:20:26Z
 ---
 

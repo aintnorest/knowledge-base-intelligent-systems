@@ -4,7 +4,7 @@ title: Prompt Engineering Survey
 description: Personal study notes on the comprehensive survey of prompt engineering techniques for LLMs and VLMs by Chen et al.
 resource: https://arxiv.org/abs/2310.14735v6
 source: /archive/prompt-engineering-survey.pdf
-tags: [prompt-engineering, survey, llm, vlm, study-note]
+tags: [prompting, survey, chain-of-thought, multimodal]
 timestamp: 2026-07-11T16:36:00Z
 ---
 
