@@ -547,3 +547,7 @@ maintenance as a non-ingest event.
 * **Archive**: Moved KDD '24 published PDF to [/archive/geo-generative-engine-optimization.pdf](/archive/geo-generative-engine-optimization.pdf)
 * **Archive**: Moved duplicate arXiv:2311.09735v3 preprint copy of the same source to [/archive/geo-generative-engine-optimization-arxiv-v3.pdf](/archive/geo-generative-engine-optimization-arxiv-v3.pdf) — retained as a duplicate, not a separate ingest
 * **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [generative-engine-visibility-metrics](/vault/generative-engine-visibility-metrics.md), [generative-engines](/vault/generative-engines.md)
+## 2026-08-11 (The Impact of AI-Powered Search on SEO)
+* **Ingest**: `sha256:262820a4b6664de5e737918c4a1e9349b8fcfe7b70d45d2ec8fdbc3bbfa22d39` — `The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine Optimization dossier` at `/dossiers/ai-powered-search-seo-answer-engine-optimization.md` — canonical: /archive/ai-powered-search-seo-answer-engine-optimization.pdf
+* **Archive**: Moved source PDF to [/archive/ai-powered-search-seo-answer-engine-optimization.pdf](/archive/ai-powered-search-seo-answer-engine-optimization.pdf)
+* **Vault**: Created [answer-engine-optimization](/vault/answer-engine-optimization.md), [zero-click-search](/vault/zero-click-search.md)

@@ -126,6 +126,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
 * [GEO: Generative Engine Optimization](/dossiers/geo-generative-engine-optimization.md) — KDD '24 paper naming the GEO paradigm, defining citation-level visibility metrics, and measuring nine black-box content rewrites on GEO-bench and Perplexity.ai
+* [The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine Optimization](/dossiers/ai-powered-search-seo-answer-engine-optimization.md) — Questionnaire study framing the shift from link ranking to Answer Engine Optimization, zero-click answers, and the resulting measurement gap
 
 ## Vault
 
@@ -274,3 +275,5 @@ timestamp: 2026-07-11T16:00:00Z
 * [Generative Engine Optimization](/vault/generative-engine-optimization.md)
 * [Generative Engine Visibility Metrics](/vault/generative-engine-visibility-metrics.md)
 * [Generative Engines](/vault/generative-engines.md)
+* [Answer Engine Optimization](/vault/answer-engine-optimization.md)
+* [Zero-Click Search](/vault/zero-click-search.md)
