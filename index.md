@@ -138,6 +138,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Introducing AI Performance in Bing Webmaster Tools (Public Preview)](/dossiers/bing-webmaster-tools-ai-performance.md) — Microsoft's publisher-facing citation telemetry for Copilot and Bing AI answers, its metric definitions and disclaimers, and what citation counts can and cannot establish
 
+* [Optimizing Your Website for Generative AI Features on Google Search](/dossiers/google-search-generative-ai-optimization-guide.md) — Google Search Central's official AI Overviews/AI Mode guidance: RAG grounding and query fan-out, snippet-gated eligibility, and the AEO/GEO tactics Google says it ignores
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -309,3 +311,5 @@ timestamp: 2026-07-11T16:00:00Z
 * [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)
 * [Grounding Query Telemetry](/vault/grounding-query-telemetry.md)
 * [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md)
+* [Query Fan-Out](/vault/query-fan-out.md)
+* [Publisher AI Usage Controls](/vault/publisher-ai-usage-controls.md)

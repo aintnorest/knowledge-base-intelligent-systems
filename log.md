@@ -581,3 +581,7 @@ maintenance as a non-ingest event.
 * **Ingest**: `url:blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview` — `Introducing AI Performance in Bing Webmaster Tools (Public Preview) dossier` at `/dossiers/bing-webmaster-tools-ai-performance.md` — canonical: https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview
 * **Note**: Web-only source; no archive copy created.
 * **Vault**: Created [ai-search-visibility-measurement](/vault/ai-search-visibility-measurement.md), [grounding-query-telemetry](/vault/grounding-query-telemetry.md), [retrieval-legible-content-structure](/vault/retrieval-legible-content-structure.md)
+## 2026-08-11 (Google Search Generative AI Optimization Guide)
+* **Ingest**: `url:developers.google.com/search/docs/fundamentals/ai-optimization-guide` — `Optimizing Your Website for Generative AI Features on Google Search dossier` at `/dossiers/google-search-generative-ai-optimization-guide.md` — canonical: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+* **Archive**: None — web-only source retained by canonical URL (page last updated 2026-07-10 UTC)
+* **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [query-fan-out](/vault/query-fan-out.md), [publisher-ai-usage-controls](/vault/publisher-ai-usage-controls.md)
