@@ -569,3 +569,7 @@ maintenance as a non-ingest event.
 * **Archive**: Moved source PDF to [/archive/memory-caching-rnns-growing-memory.pdf](/archive/memory-caching-rnns-growing-memory.pdf)
 * **Vault**: Created [segmented-memory-checkpoint-caching](/vault/segmented-memory-checkpoint-caching.md), [content-keyed-block-routing](/vault/content-keyed-block-routing.md)
 * **Vault**: Updated [hybrid-linear-global-attention](/vault/hybrid-linear-global-attention.md), [rate-distortion-memory-compaction](/vault/rate-distortion-memory-compaction.md)
+## 2026-08-11 (Generative Engine Optimization: How to Dominate AI Search)
+* **Ingest**: `arxiv:2509.08919` — `Generative Engine Optimization: How to Dominate AI Search dossier` at `/dossiers/generative-engine-optimization-dominate-ai-search.md` — canonical: https://arxiv.org/abs/2509.08919v1
+* **Archive**: Moved source PDF to [/archive/generative-engine-optimization-dominate-ai-search.pdf](/archive/generative-engine-optimization-dominate-ai-search.pdf)
+* **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [earned-media-citation-bias](/vault/earned-media-citation-bias.md), [engine-specific-citation-ecosystems](/vault/engine-specific-citation-ecosystems.md), [big-brand-bias](/vault/big-brand-bias.md)

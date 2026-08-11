@@ -132,6 +132,8 @@ timestamp: 2026-07-11T16:00:00Z
 * [Causal Influence Control for Persistent Memory in Language Model Systems](/dossiers/causal-influence-control-persistent-memory.md) — Architecture preprint treating memory recall as a reversible, observed intervention with predicted influence signatures, side-effect budgets, rollback, and lineage
 * [What Generative Search Engines Like and How to Optimize Web Content Cooperatively](/dossiers/autogeo-generative-engine-optimization.md) — AutoGEO's mined generative-engine preference rules, prompt-based and RL-trained rewriters, and joint visibility/answer-utility evaluation
 
+* [Generative Engine Optimization: How to Dominate AI Search](/dossiers/generative-engine-optimization-dominate-ai-search.md) — August 2025 citation audit of ChatGPT, Claude, Gemini, and Perplexity against Google, finding earned-media dominance, disjoint per-engine source ecosystems, and a big-brand default
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -293,3 +295,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Cooperative Optimization Evaluation](/vault/cooperative-optimization-evaluation.md)
 * [Segmented Memory Checkpoint Caching](/vault/segmented-memory-checkpoint-caching.md)
 * [Content-Keyed Block Routing](/vault/content-keyed-block-routing.md)
+* [Earned-Media Citation Bias](/vault/earned-media-citation-bias.md)
+* [Engine-Specific Citation Ecosystems](/vault/engine-specific-citation-ecosystems.md)
+* [Big-Brand Bias](/vault/big-brand-bias.md)
