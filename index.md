@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](/dossiers/frontis-ma1-ai4ai-recursive-self-improvement.md) — Open MLE stack that post-trains Draft/Improve/Debug/Crossover operators on execution feedback and composes the same operators into experience-guided long-horizon search
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [Trained Program-Evolution Operators](/vault/trained-program-evolution-operators.md)
+* [Operator-Conditioned Search Memory](/vault/operator-conditioned-search-memory.md)
+* [Quality–Progress–Novelty Parent Selection](/vault/quality-progress-novelty-parent-selection.md)
+* [Policy-Adaptive Reward Bounds](/vault/policy-adaptive-reward-bounds.md)
