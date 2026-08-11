@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [Introducing AI Performance in Bing Webmaster Tools (Public Preview)](/dossiers/bing-webmaster-tools-ai-performance.md) — Microsoft's publisher-facing citation telemetry for Copilot and Bing AI answers, its metric definitions and disclaimers, and what citation counts can and cannot establish
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)
+* [Grounding Query Telemetry](/vault/grounding-query-telemetry.md)
+* [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md)

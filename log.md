@@ -541,3 +541,8 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (AI Performance in Bing Webmaster Tools)
+* **Ingest**: `url:blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview` — `Introducing AI Performance in Bing Webmaster Tools (Public Preview) dossier` at `/dossiers/bing-webmaster-tools-ai-performance.md` — canonical: https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview
+* **Note**: Web-only source; no archive copy created.
+* **Vault**: Created [ai-search-visibility-measurement](/vault/ai-search-visibility-measurement.md), [grounding-query-telemetry](/vault/grounding-query-telemetry.md), [retrieval-legible-content-structure](/vault/retrieval-legible-content-structure.md)
