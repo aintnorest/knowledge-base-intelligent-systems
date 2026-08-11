@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [Generative Engine Optimization in Practice](/dossiers/generative-engine-optimization-implementation-guide.md) — Locally authored, framework-agnostic synthesis of two practitioner GEO guides into a pipeline model, nine implementation areas, and a citation-based measurement loop
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+* [Answer-First Content Structure](/vault/answer-first-content-structure.md)
+* [Entity Consistency](/vault/entity-consistency.md)
+* [AI Citation Rate](/vault/ai-citation-rate.md)

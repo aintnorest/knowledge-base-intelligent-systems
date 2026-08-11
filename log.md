@@ -541,3 +541,9 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (GEO implementation synthesis ingest)
+* **Ingest**: `sha256:8e65c83dcd033170db57478e0c027f4017050bfb08442d1728a9d18a29e94876` — `Generative Engine Optimization in Practice: A Framework-Agnostic Implementation Guide dossier` at `/dossiers/generative-engine-optimization-implementation-guide.md` — canonical: /archive/generative-engine-optimization-implementation-guide.md
+* **Archive**: Authored locally and stored at [/archive/generative-engine-optimization-implementation-guide.md](/archive/generative-engine-optimization-implementation-guide.md) — original synthesis (2026-08-11) of two practitioner GEO guides: https://strapi.io/blog/generative-engine-optimization-geo-guide and https://dev.to/nerajno/geo-generative-engine-optimization-applied-27a3
+* **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [answer-first-content-structure](/vault/answer-first-content-structure.md), [entity-consistency](/vault/entity-consistency.md), [ai-citation-rate](/vault/ai-citation-rate.md)
+* **Taxonomy gap**: No SEO/GEO/AI-search facet exists; tagged with nearest broader terms (`retrieval`, `context-engineering`, `knowledge-graphs`, `evaluation`, `provenance`). Candidates flagged for TAXONOMY.md: `generative-engine-optimization` (or `ai-search-visibility`), `content-structure`, `web-crawling`. TAXONOMY.md not edited.
