@@ -541,3 +541,8 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (AutoGEO)
+* **Ingest**: `arxiv:2510.11438` — `What Generative Search Engines Like and How to Optimize Web Content Cooperatively dossier` at `/dossiers/autogeo-generative-engine-optimization.md` — canonical: https://arxiv.org/abs/2510.11438v1
+* **Archive**: Moved source PDF (ICLR 2026 camera-ready, OpenReview `K8EinVWtUB`) to [/archive/autogeo-generative-engine-optimization.pdf](/archive/autogeo-generative-engine-optimization.pdf)
+* **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [contrastive-preference-rule-extraction](/vault/contrastive-preference-rule-extraction.md), [rule-based-rewards](/vault/rule-based-rewards.md), [cooperative-optimization-evaluation](/vault/cooperative-optimization-evaluation.md)

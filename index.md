@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [What Generative Search Engines Like and How to Optimize Web Content Cooperatively](/dossiers/autogeo-generative-engine-optimization.md) — AutoGEO's mined generative-engine preference rules, prompt-based and RL-trained rewriters, and joint visibility/answer-utility evaluation
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+* [Contrastive Preference Rule Extraction](/vault/contrastive-preference-rule-extraction.md)
+* [Rule-Based Rewards](/vault/rule-based-rewards.md)
+* [Cooperative Optimization Evaluation](/vault/cooperative-optimization-evaluation.md)
