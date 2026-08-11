@@ -109,3 +109,4 @@ This directory contains immutable raw materials. Files are written once at inges
 | `efficient-prompting-methods-large-language-models-survey.pdf` | arXiv:2404.01077v1 | 2026-07-30 | [Efficient Prompting Methods for Large Language Models: A Survey](/dossiers/efficient-prompting-methods-large-language-models-survey.md) |
 | `pearl-self-evolving-assistant-time-management-reinforcement-learning.pdf` | arXiv:2601.11957v4 | 2026-07-30 | [PEARL: Self-Evolving Assistant for Time Management with Reinforcement Learning](/dossiers/pearl-self-evolving-assistant-time-management-reinforcement-learning.md) |
 | `function-calling.html` + `function-calling_files/` | https://developers.openai.com/api/docs/guides/function-calling | 2026-07-30 | [Function Calling](/dossiers/function-calling.md) |
+| `memory-caching-rnns-growing-memory.pdf` | arXiv:2602.24281v1 | 2026-08-11 | [Memory Caching: RNNs with Growing Memory](/dossiers/memory-caching-rnns-growing-memory.md) |

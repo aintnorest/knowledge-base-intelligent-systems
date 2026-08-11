@@ -541,3 +541,9 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (Memory Caching)
+* **Ingest**: `arxiv:2602.24281` — `Memory Caching: RNNs with Growing Memory dossier` at `/dossiers/memory-caching-rnns-growing-memory.md` — canonical: https://arxiv.org/abs/2602.24281v1
+* **Archive**: Moved source PDF to [/archive/memory-caching-rnns-growing-memory.pdf](/archive/memory-caching-rnns-growing-memory.pdf)
+* **Vault**: Created [segmented-memory-checkpoint-caching](/vault/segmented-memory-checkpoint-caching.md), [content-keyed-block-routing](/vault/content-keyed-block-routing.md)
+* **Vault**: Updated [hybrid-linear-global-attention](/vault/hybrid-linear-global-attention.md), [rate-distortion-memory-compaction](/vault/rate-distortion-memory-compaction.md)

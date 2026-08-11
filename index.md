@@ -124,6 +124,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [PEARL: Self-Evolving Assistant for Time Management with Reinforcement Learning](/dossiers/pearl-self-evolving-assistant-time-management-reinforcement-learning.md) — Long-horizon preference-memory and RL approach to synthetic calendar conflict resolution
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
+* [Memory Caching: RNNs with Growing Memory](/dossiers/memory-caching-rnns-growing-memory.md) — Per-segment recurrent memory checkpoints that let effective memory grow with sequence length, interpolating between RNN and Transformer cost and closing most of the recall gap
 
 ## Vault
 
@@ -269,3 +270,5 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [Segmented Memory Checkpoint Caching](/vault/segmented-memory-checkpoint-caching.md)
+* [Content-Keyed Block Routing](/vault/content-keyed-block-routing.md)
