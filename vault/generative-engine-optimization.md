@@ -42,6 +42,23 @@ Whether GEO is a distinct discipline depends on how the answer surface obtains i
 
 Where the engine is grounded in the vendor's own search index, the honest reduction is that GEO *is* SEO plus attention to snippet-level controls — the position Google Search takes explicitly. **Eligibility precedes style**: if the page is not crawlable, not indexed, or not snippet-eligible, no amount of rewriting matters (see [Publisher AI Usage Controls](/vault/publisher-ai-usage-controls.md)). Where the engine is not index-grounded, the levers move to whoever owns the retrieval layer and may not be publicly documented at all.
 
+## Where the Pipeline Can Drop You
+
+An answer system processes a page in stages, and each stage is a place to fail:
+
+| Stage | Controlled by | Failure mode |
+|---|---|---|
+| Discovery | Sitemaps, internal links, update notification, stable URLs | Never seen |
+| Fetch | Access policy, latency, rate limits, auth walls | Blocked or timed out |
+| Render/parse | Whether content is in the delivered response | Empty document |
+| Boilerplate strip | Semantic sectioning marking main content as main | Body discarded with the chrome |
+| Chunk | Heading hierarchy, paragraph independence, section length | Answer split across chunks |
+| Embed/index | Terminology consistency, entity naming, structured data | Chunk never matches its question |
+| Retrieve | Question-shaped headings, direct answers | Indexed but not selected |
+| Synthesize/cite | Self-containment, identity metadata | Used without citation, or mis-attributed |
+
+Condensed, a source must be **reachable** (discoverable and fetchable, with the answer text present without JavaScript execution), **locatable** (structure tells the machine which span answers which question), **extractable** (the answer is a contiguous, self-contained span that stays true when lifted), and **attributable** (authorship, dates, canonical URL, and entity identity survive boilerplate stripping). Two consequences dominate practice: **the chunk, not the page, is the unit of competition** — an excellent page whose key claim is spread across three sections has no single fragment that answers the question — and **verbosity competes against you for selection, not for capacity**, since retrievers pick a few chunks under a per-query budget regardless of how large model context windows become.
+
 ## What Works On-Page
 
 Empirically, the interventions that move visibility supply material a summarizer can lift and attribute:
@@ -53,7 +70,7 @@ Empirically, the interventions that move visibility supply material a summarizer
 | **Cite sources** | Attribution for claims the page already makes |
 | **Fluency / readability rewriting** | No new information — only clearer, more liftable prose |
 
-The rewarded properties look like ordinary editorial virtues: state the conclusion up front, keep one topic per document, structure with headings and lists, make claims specific and sourced, explain mechanism rather than assert, stay self-contained so no external link is needed, and cut filler. **Non-substitutable content matters most**: a synthesizer gains nothing from material it could have generated itself, so first-hand experience, primary data, and specific expert judgment are valuable precisely because they are unavailable elsewhere; commodity summaries are the first thing a synthesis drops.
+The rewarded properties look like ordinary editorial virtues: state the conclusion up front, keep one topic per document, structure with headings and lists, make claims specific and sourced, explain mechanism rather than assert, stay self-contained so no external link is needed, and cut filler (see [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md) for the writing discipline, and [Entity Consistency](/vault/entity-consistency.md) for the naming discipline). **Non-substitutable content matters most**: a synthesizer gains nothing from material it could have generated itself, so first-hand experience, primary data, and specific expert judgment are valuable precisely because they are unavailable elsewhere; commodity summaries are the first thing a synthesis drops.
 
 Two negative results are as informative as the positive ones. **Keyword stuffing**, the most familiar SEO reflex, performs at or below an unoptimized baseline. And a merely **authoritative or persuasive tone** moves objective visibility very little; assertiveness is not evidence.
 
@@ -68,13 +85,15 @@ The unifying property is that winning content is composed of *quotable, attribut
 5. **Local-language authority.** Some engines swap their entire source ecosystem by prompt language while others reuse English authority domains, so translating your own content does not substitute for earned coverage in the target language's press.
 6. **Lifecycle coverage.** Assistants are consulted at setup, troubleshooting, and resale, not only at discovery; a content gap at one stage hands that answer to a competitor.
 
+For implementation, order the work by return per unit of effort: verify reachability → fix document structure → rewrite answer-first → add and validate structured data → normalize entity naming → **stand up citation measurement before further changes, so later work is attributable** → add authority signals → publish access and discovery surfaces → institute a maintenance cadence → iterate. Most of this is ordinary web craft applied with an unusual objective; the genuinely novel work is the measurement loop.
+
 ## Tactics With Weak or Vendor-Denied Support
 
 Several widely circulated tactics are asserted rather than demonstrated, and at least one major engine states outright that it ignores them: dedicated machine-readable files such as `llms.txt`, aggressive "chunking" of pages into fragments, rewriting prose into an AI-specific register, manufacturing off-site "mentions," and treating structured data as an AI-visibility *requirement*. Treat every such claim as vendor-scoped: "engine X ignores this" is evidence about X only, and "engine Y rewards this" needs a mechanism, not a correlation.
 
 ## Measuring It
 
-Visibility is typically decomposed into how much answer text cites the source and where that text sits, with earlier positions weighted higher (see [Generative Engine Visibility Metrics](/vault/generative-engine-visibility-metrics.md)). For interventional measurement:
+Visibility is typically decomposed into how much answer text cites the source and where that text sits, with earlier positions weighted higher (see [Generative Engine Visibility Metrics](/vault/generative-engine-visibility-metrics.md); for the broader measurement practice see [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)). For interventional measurement:
 
 1. Define a visibility metric you can compute yourself from the engine's output — you will not get one from the engine.
 2. Rewrite a source along one strategy at a time, holding the query set and all competing sources fixed, and report against an unmodified baseline on the same engine.
@@ -84,7 +103,7 @@ Visibility is typically decomposed into how much answer text cites the source an
 
 For observational measurement, the workable instrument is a **citation audit**: issue a fixed battery of intent-matched prompts to each engine, collect every cited URL, reduce to registrable domains, and report (a) share of answers where you appear, (b) the typed distribution of cited sources, and (c) which domains recur — the "citation network" for the vertical. Overlap statistics (Jaccard, Coverage@k) across engines, languages, and paraphrases show how stable that visibility is.
 
-Two measurement cautions matter more than the metric choice: **visibility is not traffic** (cited word count is a proxy for attention, not clicks, conversions, or trust — and vendors that report citations rarely let you compare against visits), and **the engine is part of the measurement** — different answer models, retrieval stacks, and synthesis prompts induce different preferences, which transfer well across frontier models but noticeably less well across content domains. Answer surfaces also expand one question into several system-generated queries (see [Query Fan-Out](/vault/query-fan-out.md)), so per-keyword attribution degrades and third-party trackers have no access to vendor-internal selection data.
+Two measurement cautions matter more than the metric choice: **visibility is not traffic** (cited word count is a proxy for attention, not clicks, conversions, or trust — and vendors that report citations rarely let you compare against visits), and **the engine is part of the measurement** — different answer models, retrieval stacks, and synthesis prompts induce different preferences, which transfer well across frontier models but noticeably less well across content domains. Answer surfaces also expand one question into several system-generated queries (see [Query Fan-Out](/vault/query-fan-out.md)), so per-keyword attribution degrades and third-party trackers have no access to vendor-internal selection data. Expect feedback latency of weeks — re-crawl, re-index, and answer-cache turnover — during which exogenous model changes routinely move the metric.
 
 ## Two Postures
 
@@ -96,12 +115,12 @@ Two measurement cautions matter more than the metric choice: **visibility is not
 
 - **Visibility is zero-sum within a response.** Reported gains are measured against unoptimized competitors. When every source in the candidate set is optimized, gains redistribute rather than accumulate — relative visibility returns to baseline while overall answer quality rises. The return on GEO can therefore be a first-mover return rather than a durable one — worth stating before funding a program on it.
 - **The integrity boundary is not enforced by the technique.** "Add statistics" and "add quotations" are legitimate only if the statistics and quotations are true. Content-level GEO optimizes for *the appearance of evidence*; nothing in the method verifies the evidence exists. This is the seam between GEO and adversarial content manipulation, and it is a policy question, not a technical one. Engines correspondingly have an incentive to discount exactly the signals GEO advice targets.
-- **Much published GEO evidence is correlational audit data**: it records what engines cite, rarely manipulating a site and re-measuring. Interventional studies exist but are narrower. Findings are also **query-genre dependent** — ranking-style prompts ("top 10 X") preferentially pull listicles and review round-ups, which can manufacture the very source bias an audit reports.
-- **Optimizing for the machine can homogenize the web.** A corpus where every page opens with the same conclusion-first template is more parseable and less varied; the trade is real and rarely measured.
-- **Engines are moving targets** with undisclosed retrieval, spam, and authority signals. Any learned preference, method ranking, or directive semantics is a snapshot of one system under one answering prompt, and needs periodic re-derivation; the arms race resembles SEO's.
+- **Much published GEO evidence is correlational audit data or evidence-thin practitioner guidance**: audits record what engines cite, rarely manipulating a site and re-measuring; guides describe tactics that are mechanically plausible but largely unmeasured. Findings are also **query-genre dependent** — ranking-style prompts ("top 10 X") preferentially pull listicles and review round-ups, which can manufacture the very source bias an audit reports.
+- **Optimizing for the machine can homogenize the web.** A corpus where every page opens with the same conclusion-first template is more parseable and less varied, and self-containment pushed too far produces repetitive machine-shaped prose that both degrades human reading and resembles the low-quality content answer engines down-weight.
+- **Engines are moving targets** with undisclosed retrieval, spam, and authority signals. Any learned preference, method ranking, or directive semantics is a snapshot of one system under one answering prompt, and needs periodic re-derivation; the arms race resembles SEO's. The pipeline model outlasts the specific tactics, which should be re-derived from it.
 - **Downstream effects on classical search rank are usually unmeasured**, since that ranker is also a black box.
 - **Advice is interest-conflicted from both directions.** GEO guidance circulates from vendors selling GEO services, and engine guidance comes from the party that defines the target and benefits from publishers staying on its existing channel. Neither makes the disclosures wrong; both mean the framing is positioning. Separate the measurement from the pitch.
-- **The same guidance is useful outside marketing.** These properties describe what any corpus intended for retrieval — internal documentation, knowledge bases, support content — should look like.
+- **The same guidance is useful outside marketing.** These properties describe what any corpus intended for retrieval — internal documentation, knowledge bases, support content — should look like. The mirror-image view from the consuming side is [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md): what an assistant can reach is a property of its host, licenses, and crawler permissions.
 
 ## Sources
 
@@ -109,3 +128,4 @@ Two measurement cautions matter more than the metric choice: **visibility is not
 - [What Generative Search Engines Like and How to Optimize Web Content Cooperatively dossier](/dossiers/autogeo-generative-engine-optimization.md) — AutoGEO mines engine preference rules from visibility contrasts, applies them via prompting and RL, and evaluates visibility jointly with answer utility, including a global-adoption test where individual advantage disappears.
 - [Generative Engine Optimization: How to Dominate AI Search dossier](/dossiers/generative-engine-optimization-dominate-ai-search.md) — August 2025 audit of four assistants versus Google across verticals, regions, languages, paraphrases, and personas; derives the earned-media, per-engine, and machine-readability levers above.
 - [Optimizing Your Website for Generative AI Features on Google Search](/dossiers/google-search-generative-ai-optimization-guide.md) — Google's official position that AI Overviews and AI Mode are grounded in core Search ranking, that "AEO/GEO" is therefore still SEO, and an explicit list of tactics Google Search does not use.
+- [Generative Engine Optimization in Practice](/dossiers/generative-engine-optimization-implementation-guide.md) — framework-agnostic implementation synthesis: the eight-stage pipeline model, the four required properties, nine implementation areas, and evidence grading of two practitioner guides

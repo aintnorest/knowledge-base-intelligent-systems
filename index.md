@@ -140,6 +140,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Optimizing Your Website for Generative AI Features on Google Search](/dossiers/google-search-generative-ai-optimization-guide.md) — Google Search Central's official AI Overviews/AI Mode guidance: RAG grounding and query fan-out, snippet-gated eligibility, and the AEO/GEO tactics Google says it ignores
 
+* [Generative Engine Optimization in Practice](/dossiers/generative-engine-optimization-implementation-guide.md) — Locally authored, framework-agnostic synthesis of two practitioner GEO guides into a pipeline model, nine implementation areas, and a citation-based measurement loop
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -313,3 +315,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md)
 * [Query Fan-Out](/vault/query-fan-out.md)
 * [Publisher AI Usage Controls](/vault/publisher-ai-usage-controls.md)
+* [Answer-First Content Structure](/vault/answer-first-content-structure.md)
+* [Entity Consistency](/vault/entity-consistency.md)
+* [AI Citation Rate](/vault/ai-citation-rate.md)
