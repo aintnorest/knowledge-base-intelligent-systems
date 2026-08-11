@@ -541,3 +541,9 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (GEO: Generative Engine Optimization)
+* **Ingest**: `doi:10.1145/3637528.3671900` — `GEO: Generative Engine Optimization dossier` at `/dossiers/geo-generative-engine-optimization.md` — canonical: https://doi.org/10.1145/3637528.3671900
+* **Archive**: Moved KDD '24 published PDF to [/archive/geo-generative-engine-optimization.pdf](/archive/geo-generative-engine-optimization.pdf)
+* **Archive**: Moved duplicate arXiv:2311.09735v3 preprint copy of the same source to [/archive/geo-generative-engine-optimization-arxiv-v3.pdf](/archive/geo-generative-engine-optimization-arxiv-v3.pdf) — retained as a duplicate, not a separate ingest
+* **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [generative-engine-visibility-metrics](/vault/generative-engine-visibility-metrics.md), [generative-engines](/vault/generative-engines.md)
