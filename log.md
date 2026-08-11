@@ -551,3 +551,7 @@ maintenance as a non-ingest event.
 * **Ingest**: `sha256:262820a4b6664de5e737918c4a1e9349b8fcfe7b70d45d2ec8fdbc3bbfa22d39` — `The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine Optimization dossier` at `/dossiers/ai-powered-search-seo-answer-engine-optimization.md` — canonical: /archive/ai-powered-search-seo-answer-engine-optimization.pdf
 * **Archive**: Moved source PDF to [/archive/ai-powered-search-seo-answer-engine-optimization.pdf](/archive/ai-powered-search-seo-answer-engine-optimization.pdf)
 * **Vault**: Created [answer-engine-optimization](/vault/answer-engine-optimization.md), [zero-click-search](/vault/zero-click-search.md)
+## 2026-08-11 (Answer Engine Optimization Measurement Framework)
+* **Ingest**: `ssrn:6609678` — `Answer Engine Optimization: A Measurement Framework for Brand Visibility in Generative AI Search dossier` at `/dossiers/answer-engine-optimization-measurement-framework.md` — canonical: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6609678
+* **Archive**: Moved source PDF to [/archive/answer-engine-optimization-measurement-framework.pdf](/archive/answer-engine-optimization-measurement-framework.pdf)
+* **Vault**: Created [ai-search-visibility-measurement](/vault/ai-search-visibility-measurement.md), [citation-half-life](/vault/citation-half-life.md), [ai-crawler-traffic-classes](/vault/ai-crawler-traffic-classes.md), [ai-crawler-content-parsability](/vault/ai-crawler-content-parsability.md)
