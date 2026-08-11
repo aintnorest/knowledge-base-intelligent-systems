@@ -541,3 +541,9 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (Causal Influence Control for Persistent Memory)
+* **Ingest**: `sha256:ea973995ac45fd77d2b35813649dd4ad6fd8fc2516c541e98822eb4268707d2d` — `Causal Influence Control for Persistent Memory in Language Model Systems dossier` at `/dossiers/causal-influence-control-persistent-memory.md` — canonical: [/archive/causal-influence-control-persistent-memory.pdf](/archive/causal-influence-control-persistent-memory.pdf)
+* **Archive**: Moved source PDF to [/archive/causal-influence-control-persistent-memory.pdf](/archive/causal-influence-control-persistent-memory.pdf)
+* **Vault**: Created [causal-influence-signature](/vault/causal-influence-signature.md), [observed-effect-divergence-rollback](/vault/observed-effect-divergence-rollback.md), [falsification-bounded-architecture-proposal](/vault/falsification-bounded-architecture-proposal.md)
+* **Vault**: Updated [memory-lifecycle-governance](/vault/memory-lifecycle-governance.md)

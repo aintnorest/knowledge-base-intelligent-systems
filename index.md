@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [Causal Influence Control for Persistent Memory in Language Model Systems](/dossiers/causal-influence-control-persistent-memory.md) — Architecture preprint treating memory recall as a reversible, observed intervention with predicted influence signatures, side-effect budgets, rollback, and lineage
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [Causal Influence Signature](/vault/causal-influence-signature.md)
+* [Observed-Effect Divergence Rollback](/vault/observed-effect-divergence-rollback.md)
+* [Falsification-Bounded Architecture Proposal](/vault/falsification-bounded-architecture-proposal.md)
