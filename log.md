@@ -541,3 +541,8 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (The Impact of AI-Powered Search on SEO)
+* **Ingest**: `sha256:262820a4b6664de5e737918c4a1e9349b8fcfe7b70d45d2ec8fdbc3bbfa22d39` — `The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine Optimization dossier` at `/dossiers/ai-powered-search-seo-answer-engine-optimization.md` — canonical: /archive/ai-powered-search-seo-answer-engine-optimization.pdf
+* **Archive**: Moved source PDF to [/archive/ai-powered-search-seo-answer-engine-optimization.pdf](/archive/ai-powered-search-seo-answer-engine-optimization.pdf)
+* **Vault**: Created [answer-engine-optimization](/vault/answer-engine-optimization.md), [zero-click-search](/vault/zero-click-search.md)

@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine Optimization](/dossiers/ai-powered-search-seo-answer-engine-optimization.md) — Questionnaire study framing the shift from link ranking to Answer Engine Optimization, zero-click answers, and the resulting measurement gap
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,5 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [Answer Engine Optimization](/vault/answer-engine-optimization.md)
+* [Zero-Click Search](/vault/zero-click-search.md)
