@@ -541,3 +541,8 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (Google Search Generative AI Optimization Guide)
+* **Ingest**: `url:developers.google.com/search/docs/fundamentals/ai-optimization-guide` — `Optimizing Your Website for Generative AI Features on Google Search dossier` at `/dossiers/google-search-generative-ai-optimization-guide.md` — canonical: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
+* **Archive**: None — web-only source retained by canonical URL (page last updated 2026-07-10 UTC)
+* **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [query-fan-out](/vault/query-fan-out.md), [publisher-ai-usage-controls](/vault/publisher-ai-usage-controls.md)

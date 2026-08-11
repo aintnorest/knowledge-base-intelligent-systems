@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [Optimizing Your Website for Generative AI Features on Google Search](/dossiers/google-search-generative-ai-optimization-guide.md) — Google Search Central's official AI Overviews/AI Mode guidance: RAG grounding and query fan-out, snippet-gated eligibility, and the AEO/GEO tactics Google says it ignores
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+* [Query Fan-Out](/vault/query-fan-out.md)
+* [Publisher AI Usage Controls](/vault/publisher-ai-usage-controls.md)
