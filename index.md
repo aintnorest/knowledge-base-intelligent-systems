@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [Generative Engine Optimization: How to Dominate AI Search](/dossiers/generative-engine-optimization-dominate-ai-search.md) — August 2025 citation audit of ChatGPT, Claude, Gemini, and Perplexity against Google, finding earned-media dominance, disjoint per-engine source ecosystems, and a big-brand default
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+* [Earned-Media Citation Bias](/vault/earned-media-citation-bias.md)
+* [Engine-Specific Citation Ecosystems](/vault/engine-specific-citation-ecosystems.md)
+* [Big-Brand Bias](/vault/big-brand-bias.md)
