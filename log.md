@@ -560,3 +560,7 @@ maintenance as a non-ingest event.
 * **Archive**: Moved source PDF to [/archive/causal-influence-control-persistent-memory.pdf](/archive/causal-influence-control-persistent-memory.pdf)
 * **Vault**: Created [causal-influence-signature](/vault/causal-influence-signature.md), [observed-effect-divergence-rollback](/vault/observed-effect-divergence-rollback.md), [falsification-bounded-architecture-proposal](/vault/falsification-bounded-architecture-proposal.md)
 * **Vault**: Updated [memory-lifecycle-governance](/vault/memory-lifecycle-governance.md)
+## 2026-08-11 (AutoGEO)
+* **Ingest**: `arxiv:2510.11438` — `What Generative Search Engines Like and How to Optimize Web Content Cooperatively dossier` at `/dossiers/autogeo-generative-engine-optimization.md` — canonical: https://arxiv.org/abs/2510.11438v1
+* **Archive**: Moved source PDF (ICLR 2026 camera-ready, OpenReview `K8EinVWtUB`) to [/archive/autogeo-generative-engine-optimization.pdf](/archive/autogeo-generative-engine-optimization.pdf)
+* **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [contrastive-preference-rule-extraction](/vault/contrastive-preference-rule-extraction.md), [rule-based-rewards](/vault/rule-based-rewards.md), [cooperative-optimization-evaluation](/vault/cooperative-optimization-evaluation.md)

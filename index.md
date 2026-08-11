@@ -129,6 +129,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine Optimization](/dossiers/ai-powered-search-seo-answer-engine-optimization.md) — Questionnaire study framing the shift from link ranking to Answer Engine Optimization, zero-click answers, and the resulting measurement gap
 * [Answer Engine Optimization: A Measurement Framework for Brand Visibility in Generative AI Search](/dossiers/answer-engine-optimization-measurement-framework.md) — Practitioner framework proposing presence, citation, sentiment, and crawler-traffic signals, citation half-life, and AI bot traffic classes
 * [Causal Influence Control for Persistent Memory in Language Model Systems](/dossiers/causal-influence-control-persistent-memory.md) — Architecture preprint treating memory recall as a reversible, observed intervention with predicted influence signatures, side-effect budgets, rollback, and lineage
+* [What Generative Search Engines Like and How to Optimize Web Content Cooperatively](/dossiers/autogeo-generative-engine-optimization.md) — AutoGEO's mined generative-engine preference rules, prompt-based and RL-trained rewriters, and joint visibility/answer-utility evaluation
 
 ## Vault
 
@@ -286,3 +287,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Causal Influence Signature](/vault/causal-influence-signature.md)
 * [Observed-Effect Divergence Rollback](/vault/observed-effect-divergence-rollback.md)
 * [Falsification-Bounded Architecture Proposal](/vault/falsification-bounded-architecture-proposal.md)
+* [Contrastive Preference Rule Extraction](/vault/contrastive-preference-rule-extraction.md)
+* [Rule-Based Rewards](/vault/rule-based-rewards.md)
+* [Cooperative Optimization Evaluation](/vault/cooperative-optimization-evaluation.md)
