@@ -38,7 +38,14 @@ Governance policy also determines the physical cost and information loss of main
 
 Consolidation should be conservative rather than delayed indefinitely or made aggressively coarse. Experimental comparisons of agent-memory variants find better long-horizon answerability from selective merging than from delaying backend writes or forcing heterogeneous material into one summary. This is a design rule to validate per workload, not a substitute for an explicit retention, conflict, and deletion policy.
 
+## Reversibility as a Governance State
+
+Scope, permission, and temporal validity all decide whether a record *may* be used. They do not cover the case of an authorized, in-scope, in-date record whose effect on the current task is wrong — inaccurate, stale in a way the timestamps did not capture, adversarially shaped, or unsafe in this particular combination. That case needs a distinct control: the ability to withdraw a memory's effect after it has been applied.
+
+Practically this means adding suppressed and quarantined to the record state machine alongside `active`, `superseded`, `redacted`, and `deleted`, and pairing each with a rollback path appropriate to how the memory was applied — remove the context block, revoke the tool result, restore a checkpoint, or exclude the record from future selection pending review. Reversibility is weakest exactly where it matters most: once generated text, tool calls, or user decisions have left the system, only future suppression remains. That argues for reserving the strongest controls for the injections a system can still take back.
+
 ## Sources
 
 - [How AI Agent Memory Works dossier](/dossiers/how-ai-agent-memory-works.md) — presents write, age, supersede, redact, forget, and audit as the memory lifecycle, with temporal updates, PII filtering, scoped sharing, and deletion propagation.
+- [Causal Influence Control for Persistent Memory dossier](/dossiers/causal-influence-control-persistent-memory.md) — argues that access control and reversibility are separate memory-safety controls, and proposes suppression, quarantine, and rollback with recorded lineage for authorized memories whose realized effect diverges from what was predicted.
 - [Are We Ready For An Agent-Native Memory System? dossier](/dossiers/agent-native-memory-system-readiness.md) — evaluates timestamped versioning, eviction, and consolidation designs; its controlled maintenance results favor conservative, localized integration over delayed flushing and overly coarse summaries.

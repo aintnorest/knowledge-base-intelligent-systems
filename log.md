@@ -555,3 +555,8 @@ maintenance as a non-ingest event.
 * **Ingest**: `ssrn:6609678` — `Answer Engine Optimization: A Measurement Framework for Brand Visibility in Generative AI Search dossier` at `/dossiers/answer-engine-optimization-measurement-framework.md` — canonical: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6609678
 * **Archive**: Moved source PDF to [/archive/answer-engine-optimization-measurement-framework.pdf](/archive/answer-engine-optimization-measurement-framework.pdf)
 * **Vault**: Created [ai-search-visibility-measurement](/vault/ai-search-visibility-measurement.md), [citation-half-life](/vault/citation-half-life.md), [ai-crawler-traffic-classes](/vault/ai-crawler-traffic-classes.md), [ai-crawler-content-parsability](/vault/ai-crawler-content-parsability.md)
+## 2026-08-11 (Causal Influence Control for Persistent Memory)
+* **Ingest**: `sha256:ea973995ac45fd77d2b35813649dd4ad6fd8fc2516c541e98822eb4268707d2d` — `Causal Influence Control for Persistent Memory in Language Model Systems dossier` at `/dossiers/causal-influence-control-persistent-memory.md` — canonical: [/archive/causal-influence-control-persistent-memory.pdf](/archive/causal-influence-control-persistent-memory.pdf)
+* **Archive**: Moved source PDF to [/archive/causal-influence-control-persistent-memory.pdf](/archive/causal-influence-control-persistent-memory.pdf)
+* **Vault**: Created [causal-influence-signature](/vault/causal-influence-signature.md), [observed-effect-divergence-rollback](/vault/observed-effect-divergence-rollback.md), [falsification-bounded-architecture-proposal](/vault/falsification-bounded-architecture-proposal.md)
+* **Vault**: Updated [memory-lifecycle-governance](/vault/memory-lifecycle-governance.md)

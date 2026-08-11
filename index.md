@@ -128,6 +128,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [GEO: Generative Engine Optimization](/dossiers/geo-generative-engine-optimization.md) — KDD '24 paper naming the GEO paradigm, defining citation-level visibility metrics, and measuring nine black-box content rewrites on GEO-bench and Perplexity.ai
 * [The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine Optimization](/dossiers/ai-powered-search-seo-answer-engine-optimization.md) — Questionnaire study framing the shift from link ranking to Answer Engine Optimization, zero-click answers, and the resulting measurement gap
 * [Answer Engine Optimization: A Measurement Framework for Brand Visibility in Generative AI Search](/dossiers/answer-engine-optimization-measurement-framework.md) — Practitioner framework proposing presence, citation, sentiment, and crawler-traffic signals, citation half-life, and AI bot traffic classes
+* [Causal Influence Control for Persistent Memory in Language Model Systems](/dossiers/causal-influence-control-persistent-memory.md) — Architecture preprint treating memory recall as a reversible, observed intervention with predicted influence signatures, side-effect budgets, rollback, and lineage
 
 ## Vault
 
@@ -282,3 +283,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Citation Half-Life](/vault/citation-half-life.md)
 * [AI Crawler Traffic Classes](/vault/ai-crawler-traffic-classes.md)
 * [AI Crawler Content Parsability](/vault/ai-crawler-content-parsability.md)
+* [Causal Influence Signature](/vault/causal-influence-signature.md)
+* [Observed-Effect Divergence Rollback](/vault/observed-effect-divergence-rollback.md)
+* [Falsification-Bounded Architecture Proposal](/vault/falsification-bounded-architecture-proposal.md)
