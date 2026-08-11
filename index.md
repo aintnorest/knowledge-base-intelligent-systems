@@ -134,6 +134,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Generative Engine Optimization: How to Dominate AI Search](/dossiers/generative-engine-optimization-dominate-ai-search.md) — August 2025 citation audit of ChatGPT, Claude, Gemini, and Perplexity against Google, finding earned-media dominance, disjoint per-engine source ecosystems, and a big-brand default
 
+* [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](/dossiers/frontis-ma1-ai4ai-recursive-self-improvement.md) — Open MLE stack that post-trains Draft/Improve/Debug/Crossover operators on execution feedback and composes the same operators into experience-guided long-horizon search
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -298,3 +300,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [Earned-Media Citation Bias](/vault/earned-media-citation-bias.md)
 * [Engine-Specific Citation Ecosystems](/vault/engine-specific-citation-ecosystems.md)
 * [Big-Brand Bias](/vault/big-brand-bias.md)
+* [Trained Program-Evolution Operators](/vault/trained-program-evolution-operators.md)
+* [Operator-Conditioned Search Memory](/vault/operator-conditioned-search-memory.md)
+* [Quality–Progress–Novelty Parent Selection](/vault/quality-progress-novelty-parent-selection.md)
+* [Policy-Adaptive Reward Bounds](/vault/policy-adaptive-reward-bounds.md)

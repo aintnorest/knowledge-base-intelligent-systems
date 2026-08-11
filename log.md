@@ -573,3 +573,7 @@ maintenance as a non-ingest event.
 * **Ingest**: `arxiv:2509.08919` — `Generative Engine Optimization: How to Dominate AI Search dossier` at `/dossiers/generative-engine-optimization-dominate-ai-search.md` — canonical: https://arxiv.org/abs/2509.08919v1
 * **Archive**: Moved source PDF to [/archive/generative-engine-optimization-dominate-ai-search.pdf](/archive/generative-engine-optimization-dominate-ai-search.pdf)
 * **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [earned-media-citation-bias](/vault/earned-media-citation-bias.md), [engine-specific-citation-ecosystems](/vault/engine-specific-citation-ecosystems.md), [big-brand-bias](/vault/big-brand-bias.md)
+## 2026-08-11 (Frontis-MA1)
+* **Ingest**: `arxiv:2607.28568` — `Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering dossier` at `/dossiers/frontis-ma1-ai4ai-recursive-self-improvement.md` — canonical: https://arxiv.org/abs/2607.28568v1
+* **Archive**: Moved source PDF to [/archive/frontis-ma1-ai4ai-recursive-self-improvement.pdf](/archive/frontis-ma1-ai4ai-recursive-self-improvement.pdf)
+* **Vault**: Created [trained-program-evolution-operators](/vault/trained-program-evolution-operators.md), [operator-conditioned-search-memory](/vault/operator-conditioned-search-memory.md), [quality-progress-novelty-parent-selection](/vault/quality-progress-novelty-parent-selection.md), [policy-adaptive-reward-bounds](/vault/policy-adaptive-reward-bounds.md)
