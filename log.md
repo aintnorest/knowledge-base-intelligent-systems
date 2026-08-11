@@ -541,3 +541,8 @@ maintenance as a non-ingest event.
 ## 2026-07-30 (Function Calling)
 * **Ingest**: `url:developers.openai.com/api/docs/guides/function-calling` — `Function Calling dossier` at `/dossiers/function-calling.md` — canonical: https://developers.openai.com/api/docs/guides/function-calling
 * **Archive**: Moved local HTML capture and assets to [/archive/function-calling.html](/archive/function-calling.html)
+
+## 2026-08-11 (Answer Engine Optimization Measurement Framework)
+* **Ingest**: `ssrn:6609678` — `Answer Engine Optimization: A Measurement Framework for Brand Visibility in Generative AI Search dossier` at `/dossiers/answer-engine-optimization-measurement-framework.md` — canonical: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6609678
+* **Archive**: Moved source PDF to [/archive/answer-engine-optimization-measurement-framework.pdf](/archive/answer-engine-optimization-measurement-framework.pdf)
+* **Vault**: Created [ai-search-visibility-measurement](/vault/ai-search-visibility-measurement.md), [citation-half-life](/vault/citation-half-life.md), [ai-crawler-traffic-classes](/vault/ai-crawler-traffic-classes.md), [ai-crawler-content-parsability](/vault/ai-crawler-content-parsability.md)

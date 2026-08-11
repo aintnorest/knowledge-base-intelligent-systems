@@ -125,6 +125,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
 
+* [Answer Engine Optimization: A Measurement Framework for Brand Visibility in Generative AI Search](/dossiers/answer-engine-optimization-measurement-framework.md) — Practitioner framework proposing presence, citation, sentiment, and crawler-traffic signals, citation half-life, and AI bot traffic classes
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -269,3 +271,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
 * [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+* [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)
+* [Citation Half-Life](/vault/citation-half-life.md)
+* [AI Crawler Traffic Classes](/vault/ai-crawler-traffic-classes.md)
+* [AI Crawler Content Parsability](/vault/ai-crawler-content-parsability.md)
