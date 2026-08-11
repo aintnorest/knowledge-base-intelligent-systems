@@ -2,7 +2,7 @@
 type: Synthesis
 title: AI Crawler Content Parsability
 description: Making web content legible to retrieval systems — access permission, script-free rendering, early direct answers, explicit entity definitions — and the edge-served dual-path pattern for serving machines and humans separately.
-tags: [retrieval, enterprise, reliability]
+tags: [generative-search, retrieval, enterprise, reliability]
 timestamp: 2026-08-11T20:53:27Z
 ---
 

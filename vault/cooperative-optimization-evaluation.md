@@ -2,7 +2,7 @@
 type: Synthesis
 title: Cooperative Optimization Evaluation
 description: Evaluating an agent that optimizes against a shared system by reporting the host system's utility and the universal-adoption equilibrium alongside the optimizer's private gain.
-tags: [evaluation, reliability, governance, adversarial-robustness]
+tags: [generative-search, evaluation, reliability, governance, adversarial-robustness]
 timestamp: 2026-08-11T20:53:33Z
 ---
 

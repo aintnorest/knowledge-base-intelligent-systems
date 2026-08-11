@@ -2,7 +2,7 @@
 type: Synthesis
 title: Earned-Media Citation Bias
 description: The measured tendency of generative search assistants to cite independent editorial and review sources far more than brand-owned or community-generated ones, unlike traditional web search.
-tags: [retrieval, provenance, evaluation]
+tags: [generative-search, retrieval, provenance, evaluation]
 timestamp: 2026-08-11T21:04:00Z
 ---
 

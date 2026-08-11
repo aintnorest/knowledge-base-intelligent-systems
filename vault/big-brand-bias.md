@@ -2,7 +2,7 @@
 type: Synthesis
 title: Big-Brand Bias
 description: Under unbranded prompts, generative assistants disproportionately recommend market-leading incumbents over niche alternatives, because source prominence and model priors point the same way.
-tags: [retrieval, evaluation, enterprise]
+tags: [generative-search, retrieval, evaluation, enterprise]
 timestamp: 2026-08-11T21:08:00Z
 ---
 

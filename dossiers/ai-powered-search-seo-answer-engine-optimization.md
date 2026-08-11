@@ -4,7 +4,7 @@ title: "The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine O
 description: Personal study notes on a 244-respondent questionnaire study of how generative answer engines shift search visibility work from link ranking to Answer Engine Optimization, and on the paper's substantial methodological weaknesses.
 resource: https://www.researchgate.net/publication/390498377_The_Impact_of_AI-Powered_Search_on_SEO_The_Emergence_of_Answer_Engine_Optimization
 source: /archive/ai-powered-search-seo-answer-engine-optimization.pdf
-tags: [retrieval, enterprise, evaluation, governance]
+tags: [generative-search, retrieval, enterprise, evaluation, governance]
 timestamp: 2026-08-11T20:54:14Z
 ---
 
@@ -79,5 +79,5 @@ Net read: cite this for *framing* the AEO shift, the awareness gap, and the prac
 
 ## Vault Ideas Extracted
 
-* [Answer Engine Optimization](/vault/answer-engine-optimization.md)
+* [Generative Engine Optimization](/vault/generative-engine-optimization.md) — the AEO concept; merged into the GEO umbrella page during post-merge consolidation
 * [Zero-Click Search](/vault/zero-click-search.md)

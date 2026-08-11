@@ -4,7 +4,7 @@ title: Introducing AI Performance in Bing Webmaster Tools (Public Preview)
 description: Personal study notes on Microsoft's AI Performance dashboard, which reports how often a site is cited as a source in Copilot and Bing AI answers, and on what those citation metrics can and cannot establish.
 resource: https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview
 source: https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview
-tags: [retrieval, evaluation, provenance, governance]
+tags: [generative-search, retrieval, evaluation, provenance, governance]
 timestamp: 2026-08-11T14:20:00Z
 ---
 

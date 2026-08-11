@@ -2,7 +2,7 @@
 type: Synthesis
 title: AI Crawler Traffic Classes
 description: Segmenting AI bot hits on your own properties into real-time retrieval, periodic indexing, and training collection — and using the retrieval-without-citation gap as a page-level diagnostic.
-tags: [retrieval, evaluation, enterprise]
+tags: [generative-search, retrieval, evaluation, enterprise]
 timestamp: 2026-08-11T20:53:27Z
 ---
 

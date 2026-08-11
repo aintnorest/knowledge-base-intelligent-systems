@@ -4,7 +4,7 @@ title: "Answer Engine Optimization: A Measurement Framework for Brand Visibility
 description: Personal study notes on a practitioner-authored SSRN working paper proposing a four-signal AEO measurement framework — presence, citations, sentiment, and agent traffic — plus citation half-life and a three-class taxonomy of AI bot traffic.
 resource: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6609678
 source: /archive/answer-engine-optimization-measurement-framework.pdf
-tags: [retrieval, evaluation, enterprise, provenance]
+tags: [generative-search, retrieval, evaluation, enterprise, provenance]
 timestamp: 2026-08-11T20:53:27Z
 ---
 

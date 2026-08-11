@@ -2,7 +2,7 @@
 type: Synthesis
 title: Publisher AI Usage Controls
 description: The distinct, non-interchangeable layers a site owner can use to govern crawling, indexing, snippet extraction, generative-answer inclusion, and model training — and why conflating them produces the wrong outcome.
-tags: [governance, access-control, retrieval, provenance]
+tags: [generative-search, governance, access-control, retrieval, provenance]
 timestamp: 2026-08-11T20:55:21Z
 ---
 

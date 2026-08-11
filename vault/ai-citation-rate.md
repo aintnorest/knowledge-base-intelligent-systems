@@ -2,7 +2,7 @@
 type: Synthesis
 title: AI Citation Rate
 description: The share of generated answers to a fixed prompt set that cite your source — the primary outcome metric when the goal is inclusion in a synthesized answer rather than a click, and only meaningful with a held-constant prompt set and control pages.
-tags: [evaluation, retrieval, provenance]
+tags: [generative-search, evaluation, retrieval, provenance]
 timestamp: 2026-08-11T20:55:03Z
 ---
 
@@ -45,6 +45,7 @@ Use citation rate as the objective function for content experiments: change one 
 ## Related
 
 - [Generative Engine Optimization](/vault/generative-engine-optimization.md) — the practice this metric closes the loop on.
+- [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md) — the umbrella measurement practice; citation rate is its citation signal operationalized as an experiment-grade metric.
 - [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md) — the complementary consumer-side measure: not whether a source was cited, but what depth of artifact was actually retrieved from it.
 
 ## Sources

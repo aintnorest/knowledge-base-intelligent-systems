@@ -4,7 +4,7 @@ title: "Generative Engine Optimization in Practice: A Framework-Agnostic Impleme
 description: Personal study notes on a locally authored synthesis of two practitioner GEO guides, reorganized into a stack-independent method for making published content extractable, attributable, and measurable inside AI-generated answers.
 resource: Locally authored synthesis paper (2026-08-11), version 1.0
 source: /archive/generative-engine-optimization-implementation-guide.md
-tags: [retrieval, context-engineering, knowledge-graphs, evaluation, provenance]
+tags: [generative-search, retrieval, context-engineering, knowledge-graphs, evaluation, provenance]
 timestamp: 2026-08-11T20:55:03Z
 ---
 
@@ -75,6 +75,6 @@ The nine implementation areas, ordered by the paper's assessed leverage-per-effo
 ## Vault Ideas Extracted
 
 * [Generative Engine Optimization](/vault/generative-engine-optimization.md)
-* [Answer-First Content Structure](/vault/answer-first-content-structure.md)
+* [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md) — the answer-first, self-contained-passage writing discipline (merged into the existing page during post-merge consolidation)
 * [Entity Consistency](/vault/entity-consistency.md)
 * [AI Citation Rate](/vault/ai-citation-rate.md)

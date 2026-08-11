@@ -2,7 +2,7 @@
 type: Synthesis
 title: AI Search Visibility Measurement
 description: Measuring an entity's standing in generative AI answers — whether content is retrieved and cited as grounding, and how the entity is represented — as separable signals observed from platform, probe, and first-party vantage points.
-tags: [evaluation, retrieval, provenance, enterprise, governance]
+tags: [generative-search, evaluation, retrieval, provenance, enterprise, governance]
 timestamp: 2026-08-11T20:53:27Z
 ---
 
@@ -70,6 +70,11 @@ Every probe-side metric is defined relative to a prompt set, which makes the pro
 - **Framing classifiers miss the important cases.** A mention can be factually accurate and strategically damaging, or superficially positive and materially incomplete; a rubric-based judge fits better than sentiment polarity, at the cost of its own calibration problems. And none of these signals measure whether the model's description is *true* — accuracy of representation is a separate axis from visibility.
 - **Goodhart pressure is immediate.** A published visibility number becomes a target and will be optimized in ways that decouple it from reader value.
 - **Eligibility is a policy choice.** Crawl-preference controls (robots.txt and successors) gate retrieval, so opting out of grounding also opts out of the measurement — visibility reporting and access governance are one system.
+
+## Related
+
+- [AI Citation Rate](/vault/ai-citation-rate.md) — the citation signal operationalized as an experiment-grade metric, with the four-number reporting protocol and control pages.
+- [Generative Engine Visibility Metrics](/vault/generative-engine-visibility-metrics.md) — the academic metric family: cited word count, position-adjusted share, and judged impressions.
 
 ## Sources
 

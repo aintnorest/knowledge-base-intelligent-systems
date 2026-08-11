@@ -2,7 +2,7 @@
 type: Synthesis
 title: Grounding Query Telemetry
 description: The machine-issued retrieval queries a generative system uses to fetch grounding, exposed as an observable — a window onto the retriever's intent decomposition, not onto user demand.
-tags: [retrieval, evaluation, provenance]
+tags: [generative-search, retrieval, evaluation, provenance]
 timestamp: 2026-08-11T14:27:00Z
 ---
 

@@ -4,7 +4,7 @@ title: "Generative Engine Optimization: How to Dominate AI Search"
 description: Study notes on a large-scale August 2025 audit of ChatGPT, Claude, Gemini, and Perplexity citations against Google web results, finding a systematic earned-media bias, engine-specific source ecosystems, and a big-brand default under unbranded prompts.
 resource: https://arxiv.org/abs/2509.08919v1
 source: /archive/generative-engine-optimization-dominate-ai-search.pdf
-tags: [retrieval, evaluation, provenance, enterprise]
+tags: [generative-search, retrieval, evaluation, provenance, enterprise]
 timestamp: 2026-08-11T20:58:00Z
 ---
 

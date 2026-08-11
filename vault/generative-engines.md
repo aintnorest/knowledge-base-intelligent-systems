@@ -2,7 +2,7 @@
 type: Synthesis
 title: Generative Engines
 description: The system pattern behind LLM-powered search — query reformulation, retrieval, per-source summarization, and generation of a single attributed answer — and the stakeholder shift it causes.
-tags: [retrieval, verification, evaluation]
+tags: [generative-search, retrieval, verification, evaluation]
 timestamp: 2026-08-11T20:52:52Z
 ---
 

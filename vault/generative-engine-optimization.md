@@ -2,13 +2,15 @@
 type: Synthesis
 title: Generative Engine Optimization
 description: Optimizing source content and third-party authority so an LLM-backed answer engine retrieves, cites, and gives weight to it, where the objective is inclusion and share of the synthesized answer rather than rank in a results list.
-tags: [retrieval, evaluation, provenance, governance, adversarial-robustness, enterprise]
+tags: [generative-search, retrieval, evaluation, provenance, governance, adversarial-robustness]
 timestamp: 2026-08-11T21:02:00Z
 ---
 
 # Generative Engine Optimization
 
-Generative Engine Optimization (GEO), also called **Answer Engine Optimization (AEO)**, is the practice of shaping content — and the third-party coverage around it — so that a retrieval-augmented answer engine (ChatGPT, Claude, Gemini, Perplexity, or an AI overview embedded in a traditional search engine) is more likely to **retrieve it, cite it, and use it as justification** in a synthesized answer. It is the successor problem to search engine optimization, but the objective function is different: there is no ranked list to climb, only a generated answer in which a source may or may not appear, at some length and in some position.
+Generative Engine Optimization (GEO), also called **Answer Engine Optimization (AEO)**, is the practice of shaping content — and the third-party coverage around it — so that a retrieval-augmented answer engine (ChatGPT, Claude, Gemini, Perplexity, or an AI overview embedded in a traditional search engine) is more likely to **retrieve it, cite it, and use it as justification** in a synthesized answer. It is the successor problem to search engine optimization, but the objective function is different: there is no ranked list to climb, only a generated answer in which a source may or may not appear, at some length and in some position. A page can be ranked well and still never be used, and a page that is never visited can nonetheless be the basis of thousands of answers (see [Zero-Click Search](/vault/zero-click-search.md)).
+
+Not to be confused with [answer engineering](/vault/answer-engineering.md), which is about extracting a usable value from *your own* model's output.
 
 ## What Changes Relative to SEO
 
@@ -129,3 +131,4 @@ Two measurement cautions matter more than the metric choice: **visibility is not
 - [Generative Engine Optimization: How to Dominate AI Search dossier](/dossiers/generative-engine-optimization-dominate-ai-search.md) — August 2025 audit of four assistants versus Google across verticals, regions, languages, paraphrases, and personas; derives the earned-media, per-engine, and machine-readability levers above.
 - [Optimizing Your Website for Generative AI Features on Google Search](/dossiers/google-search-generative-ai-optimization-guide.md) — Google's official position that AI Overviews and AI Mode are grounded in core Search ranking, that "AEO/GEO" is therefore still SEO, and an explicit list of tactics Google Search does not use.
 - [Generative Engine Optimization in Practice](/dossiers/generative-engine-optimization-implementation-guide.md) — framework-agnostic implementation synthesis: the eight-stage pipeline model, the four required properties, nine implementation areas, and evidence grading of two practitioner guides
+- [The Impact of AI-Powered Search on SEO](/dossiers/ai-powered-search-seo-answer-engine-optimization.md) — names and frames AEO; reports 54.1% of practitioners unfamiliar with the concept and 35.7% implementing none of its tactics

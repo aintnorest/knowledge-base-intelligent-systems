@@ -2,7 +2,7 @@
 type: Synthesis
 title: Zero-Click Search
 description: When a generative answer layer satisfies the query in place, the click disappears — breaking both the traffic economics and the measurement instruments that assumed it.
-tags: [retrieval, evaluation, governance, enterprise]
+tags: [generative-search, retrieval, evaluation, governance, enterprise]
 timestamp: 2026-08-11T20:54:14Z
 ---
 

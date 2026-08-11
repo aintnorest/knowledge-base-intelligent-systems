@@ -2,7 +2,7 @@
 type: Synthesis
 title: Generative Engine Visibility Metrics
 description: Measuring what a cited source actually gets from an LLM-synthesized answer — attributed text volume, position weighting, and judged influence — instead of its rank on a results page.
-tags: [evaluation, retrieval, llm-as-judge]
+tags: [generative-search, evaluation, retrieval, llm-as-judge]
 timestamp: 2026-08-11T20:52:52Z
 ---
 

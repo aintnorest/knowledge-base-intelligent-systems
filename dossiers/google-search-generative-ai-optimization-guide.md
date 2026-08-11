@@ -4,7 +4,7 @@ title: "Optimizing Your Website for Generative AI Features on Google Search"
 description: Personal study notes on Google Search Central's official guidance for AI Overviews and AI Mode — RAG grounding and query fan-out, foundational SEO reframed, an explicit list of AEO/GEO tactics Google says it ignores, and the eligibility and preview controls that actually gate use.
 resource: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
 source: https://developers.google.com/search/docs/fundamentals/ai-optimization-guide
-tags: [retrieval, governance, evaluation]
+tags: [generative-search, retrieval, governance, evaluation]
 timestamp: 2026-08-11T20:55:21Z
 ---
 

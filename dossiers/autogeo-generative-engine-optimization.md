@@ -4,7 +4,7 @@ title: "What Generative Search Engines Like and How to Optimize Web Content Coop
 description: Study notes on AutoGEO, a framework that mines generative-engine content preferences into explicit rules and applies them through a prompt-based rewriter and an RL-trained compact rewriter, evaluated for visibility gain and answer utility together.
 resource: https://arxiv.org/abs/2510.11438v1
 source: /archive/autogeo-generative-engine-optimization.pdf
-tags: [retrieval, evaluation, reinforcement-learning, prompting, benchmark]
+tags: [generative-search, retrieval, evaluation, reinforcement-learning, prompting, benchmark]
 timestamp: 2026-08-11T20:53:33Z
 ---
 

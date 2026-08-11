@@ -2,7 +2,7 @@
 type: Synthesis
 title: Engine-Specific Citation Ecosystems
 description: Different retrieval-backed assistants answer the same query from largely disjoint source pools, so engine identity dominates prompt wording, language, and user persona as a source of variation.
-tags: [retrieval, evaluation, reliability]
+tags: [generative-search, retrieval, evaluation, reliability]
 timestamp: 2026-08-11T21:06:00Z
 ---
 

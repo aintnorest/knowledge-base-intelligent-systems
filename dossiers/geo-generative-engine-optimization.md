@@ -4,7 +4,7 @@ title: "GEO: Generative Engine Optimization"
 description: The KDD '24 paper that formalizes generative engines, defines creator-side visibility metrics for cited sources, introduces GEO-bench, and measures nine black-box content-rewriting strategies.
 resource: https://doi.org/10.1145/3637528.3671900
 source: /archive/geo-generative-engine-optimization.pdf
-tags: [retrieval, evaluation, benchmark, llm-as-judge]
+tags: [generative-search, retrieval, evaluation, benchmark, llm-as-judge]
 timestamp: 2026-08-11T20:52:52Z
 ---
 

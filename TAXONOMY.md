@@ -55,6 +55,12 @@ pages, not tags.
 | `token-efficiency` | Spending fewer tokens for the same outcome: minification, compact formats, observation budgets. |
 | `knowledge-graphs` | Graph-structured knowledge for machines: construction, traversal, graph-backed retrieval. |
 
+## Generative Search & Content Visibility
+
+| Tag | Definition |
+|---|---|
+| `generative-search` | Content-side visibility in AI answer surfaces: GEO/AEO, answer-engine citation behavior, visibility and citation measurement, publisher and crawler controls, zero-click economics. Contrast with `retrieval`, which covers building retrievers rather than being found by them. |
+
 ## Prompting & Reasoning
 
 | Tag | Definition |
@@ -139,6 +145,14 @@ stop accumulating evidence.
 | `dataset-construction` | Benchmark/dataset-building methodology: [benchmark-reverse-engineering](/vault/benchmark-reverse-engineering.md), [anti-leakage-evaluation](/vault/anti-leakage-evaluation.md), [anti-leakage-system-prompt](/vault/anti-leakage-system-prompt.md). |
 | `human-skill-coaching` | AI that develops the user's own skill: [prompt-coach-agentic-tutor](/dossiers/prompt-coach-agentic-tutor.md), [in-flow-socratic-prompt-coaching](/vault/in-flow-socratic-prompt-coaching.md). |
 | `active-learning` | Uncertainty-driven example selection: [active-prompt](/vault/active-prompt.md). |
+| `web-crawling` | Crawler identity/access, robots and AI-preview controls, fetch/render/parse mechanics: [publisher-ai-usage-controls](/vault/publisher-ai-usage-controls.md), [ai-crawler-traffic-classes](/vault/ai-crawler-traffic-classes.md), [ai-crawler-content-parsability](/vault/ai-crawler-content-parsability.md), plus the Google/Bing guide dossiers. Flagged independently by four 2026-08-11 ingests; strongest candidate. |
+| `citation-behavior` | Which sources answer engines consult and attribute — source-type distributions, per-engine ecosystems, incumbent bias: [earned-media-citation-bias](/vault/earned-media-citation-bias.md), [engine-specific-citation-ecosystems](/vault/engine-specific-citation-ecosystems.md), [big-brand-bias](/vault/big-brand-bias.md). |
+| `content-structure` | Machine-oriented document structuring distinct from prompt-side `context-engineering`: [retrieval-legible-content-structure](/vault/retrieval-legible-content-structure.md), [entity-consistency](/vault/entity-consistency.md). Flagged independently twice. |
+| `recurrent-models` | Linear-attention/RNN/state-space architectures where `attention` misdescribes the mechanism: [memory-caching-rnns-growing-memory](/dossiers/memory-caching-rnns-growing-memory.md), [kimi-linear-attention-architecture](/dossiers/kimi-linear-attention-architecture.md), [hybrid-linear-global-attention](/vault/hybrid-linear-global-attention.md), [segmented-memory-checkpoint-caching](/vault/segmented-memory-checkpoint-caching.md). |
+| `recursive-self-improvement` | AI-improving-AI where the improver's weights are the update target, straddling `self-improvement` (defined frozen-weights) and `reinforcement-learning`: [frontis-ma1-ai4ai-recursive-self-improvement](/dossiers/frontis-ma1-ai4ai-recursive-self-improvement.md), [trained-program-evolution-operators](/vault/trained-program-evolution-operators.md). |
+| `evolutionary-search` | Population/tree search with mutation and recombination operators, unrepresented by `test-time-scaling`: [quality-progress-novelty-parent-selection](/vault/quality-progress-novelty-parent-selection.md), [operator-conditioned-search-memory](/vault/operator-conditioned-search-memory.md). |
+| `interpretability` | Model-internals analysis (probes, influence functions, model editing): [causal-influence-control-persistent-memory](/dossiers/causal-influence-control-persistent-memory.md), [causal-influence-signature](/vault/causal-influence-signature.md). |
+| `reversibility` | Rollback, quarantine, undo, checkpoint restore as a governance state, currently split across `governance`/`reliability`: [observed-effect-divergence-rollback](/vault/observed-effect-divergence-rollback.md), [memory-lifecycle-governance](/vault/memory-lifecycle-governance.md). |
 
 ## Alias Map
 

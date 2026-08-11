@@ -2,7 +2,7 @@
 type: Synthesis
 title: Entity Consistency
 description: Naming the same person, product, organization, or concept identically — and pointing every mention at one canonical identifier — so a machine reader merges them into a single well-attested node instead of several weak ones.
-tags: [knowledge-graphs, retrieval, provenance]
+tags: [generative-search, knowledge-graphs, retrieval, provenance]
 timestamp: 2026-08-11T20:55:03Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Citation Half-Life
 description: Treating a document's citation rate in AI-generated answers as a decaying quantity — with content held constant — and the operating consequences of measuring visibility as decay rather than accrual.
-tags: [retrieval, evaluation, provenance, reliability]
+tags: [generative-search, retrieval, evaluation, provenance, reliability]
 timestamp: 2026-08-11T20:53:27Z
 ---
 

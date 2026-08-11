@@ -2,7 +2,7 @@
 type: Synthesis
 title: Query Fan-Out
 description: Expanding one user question into a set of concurrent generated sub-queries before retrieval, and the coverage, cost, and attribution consequences of doing so.
-tags: [retrieval, decomposition, evaluation]
+tags: [generative-search, retrieval, decomposition, evaluation]
 timestamp: 2026-08-11T20:55:21Z
 ---
 
