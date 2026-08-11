@@ -577,3 +577,7 @@ maintenance as a non-ingest event.
 * **Ingest**: `arxiv:2607.28568` — `Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering dossier` at `/dossiers/frontis-ma1-ai4ai-recursive-self-improvement.md` — canonical: https://arxiv.org/abs/2607.28568v1
 * **Archive**: Moved source PDF to [/archive/frontis-ma1-ai4ai-recursive-self-improvement.pdf](/archive/frontis-ma1-ai4ai-recursive-self-improvement.pdf)
 * **Vault**: Created [trained-program-evolution-operators](/vault/trained-program-evolution-operators.md), [operator-conditioned-search-memory](/vault/operator-conditioned-search-memory.md), [quality-progress-novelty-parent-selection](/vault/quality-progress-novelty-parent-selection.md), [policy-adaptive-reward-bounds](/vault/policy-adaptive-reward-bounds.md)
+## 2026-08-11 (AI Performance in Bing Webmaster Tools)
+* **Ingest**: `url:blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview` — `Introducing AI Performance in Bing Webmaster Tools (Public Preview) dossier` at `/dossiers/bing-webmaster-tools-ai-performance.md` — canonical: https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview
+* **Note**: Web-only source; no archive copy created.
+* **Vault**: Created [ai-search-visibility-measurement](/vault/ai-search-visibility-measurement.md), [grounding-query-telemetry](/vault/grounding-query-telemetry.md), [retrieval-legible-content-structure](/vault/retrieval-legible-content-structure.md)

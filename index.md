@@ -136,6 +136,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Frontis-MA1: Training an AI4AI Model towards Recursive Self-Improvement in Machine Learning Engineering](/dossiers/frontis-ma1-ai4ai-recursive-self-improvement.md) — Open MLE stack that post-trains Draft/Improve/Debug/Crossover operators on execution feedback and composes the same operators into experience-guided long-horizon search
 
+* [Introducing AI Performance in Bing Webmaster Tools (Public Preview)](/dossiers/bing-webmaster-tools-ai-performance.md) — Microsoft's publisher-facing citation telemetry for Copilot and Bing AI answers, its metric definitions and disclaimers, and what citation counts can and cannot establish
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -304,3 +306,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Operator-Conditioned Search Memory](/vault/operator-conditioned-search-memory.md)
 * [Quality–Progress–Novelty Parent Selection](/vault/quality-progress-novelty-parent-selection.md)
 * [Policy-Adaptive Reward Bounds](/vault/policy-adaptive-reward-bounds.md)
+* [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)
+* [Grounding Query Telemetry](/vault/grounding-query-telemetry.md)
+* [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md)
