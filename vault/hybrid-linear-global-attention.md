@@ -18,6 +18,12 @@ Hybrid linear–global attention assigns most layers to a fixed-size recurrent o
 4. Evaluate prefill, decode, cache memory, long-context retrieval, short-context quality, and post-training behavior as separate dimensions.
 5. Benchmark the actual kernel and serving stack. An asymptotic reduction becomes useful only when cache, scheduler, and batch shape expose it.
 
+## Why the Recipe Works
+
+A later analysis reduces the hybrid stack to a more general mechanism: a compressor layer whose state is read out and fed to a global attention block is equivalent to caching that recurrent state once per token and letting each query read every cached snapshot. On that reading, the global layer is not a separate retrieval system bolted onto the recurrence — it is enforcing snapshot retention, which is what raises the recurrent module's effective memory capacity.
+
+The reduction also exposes what the fixed hybrid gives up. In a hybrid, every query attends over the same predetermined sequence of prior-layer outputs. If the snapshots are instead *queried* rather than read as fixed vectors, each query assembles its own effective input sequence, and the snapshot interval becomes a free parameter rather than being pinned at one token. See [Segmented Memory Checkpoint Caching](/vault/segmented-memory-checkpoint-caching.md).
+
 ## Practical Use
 
 This pattern fits long-context code, agent, and document workloads where many tokens are redundant but a minority of queries require direct access to a distant detail. A fixed schedule is often easier to deploy than mixing attention types within every layer or dynamically routing individual heads.
@@ -31,3 +37,4 @@ This pattern fits long-context code, agent, and document workloads where many to
 ## Sources
 
 - [Kimi Linear: An Expressive, Efficient Attention Architecture dossier](/dossiers/kimi-linear-attention-architecture.md) — Kimi Delta Attention with a 3:1 linear-to-global schedule, matched-scale evaluations, and vLLM/kernel implementation evidence.
+- [Memory Caching: RNNs with Growing Memory dossier](/dossiers/memory-caching-rnns-growing-memory.md) — derives the compressor-plus-global-attention hybrid as memory caching with a one-token snapshot interval, and shows tunable intervals with query-conditioned reads beating the fixed form on recall.

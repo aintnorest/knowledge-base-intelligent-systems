@@ -124,6 +124,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [PEARL: Self-Evolving Assistant for Time Management with Reinforcement Learning](/dossiers/pearl-self-evolving-assistant-time-management-reinforcement-learning.md) — Long-horizon preference-memory and RL approach to synthetic calendar conflict resolution
 
 * [Function Calling](/dossiers/function-calling.md) — Captured OpenAI guide for model-proposed, application-executed structured tool calls
+* [Memory Caching: RNNs with Growing Memory](/dossiers/memory-caching-rnns-growing-memory.md) — Per-segment recurrent memory checkpoints that let effective memory grow with sequence length, interpolating between RNN and Transformer cost and closing most of the recall gap
 
 * [GEO: Generative Engine Optimization](/dossiers/geo-generative-engine-optimization.md) — KDD '24 paper naming the GEO paradigm, defining citation-level visibility metrics, and measuring nine black-box content rewrites on GEO-bench and Perplexity.ai
 * [The Impact of AI-Powered Search on SEO: The Emergence of Answer Engine Optimization](/dossiers/ai-powered-search-seo-answer-engine-optimization.md) — Questionnaire study framing the shift from link ranking to Answer Engine Optimization, zero-click answers, and the resulting measurement gap
@@ -290,3 +291,5 @@ timestamp: 2026-07-11T16:00:00Z
 * [Contrastive Preference Rule Extraction](/vault/contrastive-preference-rule-extraction.md)
 * [Rule-Based Rewards](/vault/rule-based-rewards.md)
 * [Cooperative Optimization Evaluation](/vault/cooperative-optimization-evaluation.md)
+* [Segmented Memory Checkpoint Caching](/vault/segmented-memory-checkpoint-caching.md)
+* [Content-Keyed Block Routing](/vault/content-keyed-block-routing.md)

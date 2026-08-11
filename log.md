@@ -564,3 +564,8 @@ maintenance as a non-ingest event.
 * **Ingest**: `arxiv:2510.11438` — `What Generative Search Engines Like and How to Optimize Web Content Cooperatively dossier` at `/dossiers/autogeo-generative-engine-optimization.md` — canonical: https://arxiv.org/abs/2510.11438v1
 * **Archive**: Moved source PDF (ICLR 2026 camera-ready, OpenReview `K8EinVWtUB`) to [/archive/autogeo-generative-engine-optimization.pdf](/archive/autogeo-generative-engine-optimization.pdf)
 * **Vault**: Created [generative-engine-optimization](/vault/generative-engine-optimization.md), [contrastive-preference-rule-extraction](/vault/contrastive-preference-rule-extraction.md), [rule-based-rewards](/vault/rule-based-rewards.md), [cooperative-optimization-evaluation](/vault/cooperative-optimization-evaluation.md)
+## 2026-08-11 (Memory Caching)
+* **Ingest**: `arxiv:2602.24281` — `Memory Caching: RNNs with Growing Memory dossier` at `/dossiers/memory-caching-rnns-growing-memory.md` — canonical: https://arxiv.org/abs/2602.24281v1
+* **Archive**: Moved source PDF to [/archive/memory-caching-rnns-growing-memory.pdf](/archive/memory-caching-rnns-growing-memory.pdf)
+* **Vault**: Created [segmented-memory-checkpoint-caching](/vault/segmented-memory-checkpoint-caching.md), [content-keyed-block-routing](/vault/content-keyed-block-routing.md)
+* **Vault**: Updated [hybrid-linear-global-attention](/vault/hybrid-linear-global-attention.md), [rate-distortion-memory-compaction](/vault/rate-distortion-memory-compaction.md)
