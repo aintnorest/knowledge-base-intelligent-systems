@@ -187,6 +187,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [In-Flow Socratic Prompt Coaching](/vault/in-flow-socratic-prompt-coaching.md)
 * [Evolving Context Playbooks](/vault/evolving-context-playbooks.md)
 * [Context Collapse](/vault/context-collapse.md)
+* [Recency-Checklist Deliberation Explosion](/vault/recency-checklist-deliberation-explosion.md)
 * [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
 * [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)
 * [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
