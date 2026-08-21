@@ -188,6 +188,7 @@ timestamp: 2026-07-11T16:00:00Z
 * [Evolving Context Playbooks](/vault/evolving-context-playbooks.md)
 * [Context Collapse](/vault/context-collapse.md)
 * [Recency-Checklist Deliberation Explosion](/vault/recency-checklist-deliberation-explosion.md)
+* [Effort-Conditioned Prompt Qualification](/vault/effort-conditioned-prompt-qualification.md)
 * [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
 * [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)
 * [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
