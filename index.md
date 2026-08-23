@@ -194,6 +194,8 @@ timestamp: 2026-07-11T16:00:00Z
 * [Complementary Failure Directions Under Downgrade](/vault/complementary-failure-directions-under-downgrade.md)
 * [Prompt Rule Identity](/vault/prompt-rule-identity.md)
 * [Gate-Forced Parroting](/vault/gate-forced-parroting.md)
+* [Two-Layer Schema Governance](/vault/two-layer-schema-governance.md)
+* [Dual-Surface Example Contamination](/vault/dual-surface-example-contamination.md)
 * [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
 * [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)
 * [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
