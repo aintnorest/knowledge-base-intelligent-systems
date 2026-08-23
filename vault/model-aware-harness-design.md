@@ -18,6 +18,12 @@ A portable agent harness should share stable system abstractions while allowing 
 - Version the adaptation: a new model revision may require a different configuration even within one provider.
 - When transferring a conversation between models, explicitly identify the handoff and constrain the target to its own available tools.
 
+## Migration as a Measured Transformation
+
+For a large prompt library, do not treat each model swap as an unrelated rewrite. Maintain a small, representative calibration suite; establish effective prompts for both the source and target model; and inspect whether the paired differences reveal a reusable source→target transformation. Apply that mapping to candidate prompts, then validate the adapted configuration against both frozen direct transfer and target-specific optimization.
+
+This turns model replacement into a compatibility migration with three measurable states: inherited behavior, adapted behavior, and the target's reachable ceiling. The approach complements model-specific harness design without removing the need for end-to-end tests: a mapped prompt can improve an individual agent while changing message shape, tool discipline, or coordination elsewhere in the workflow. See [Prompt–Model Drift](/vault/prompt-model-drift.md) and [Cross-Model Prompt Mapping](/vault/cross-model-prompt-mapping.md).
+
 ## Why It Helps
 
 Tool schemas and output formats are part of an agent's effective training distribution. Matching a familiar format can reduce inference-time translation work, while explicit handoff instructions prevent a replacement model from copying obsolete tool calls found in conversation history.
@@ -33,3 +39,4 @@ Per-model tuning creates configuration and testing overhead, and vendor-specific
 ## Sources
 
 - [Continually Improving Our Agent Harness dossier](/dossiers/continually-improving-agent-harness.md) — Cursor reports model-specific edit formats, prompts, and mid-chat handoff instructions in a shared harness architecture.
+- [PromptBridge dossier](/dossiers/promptbridge-cross-model-prompt-transfer.md) — measures prompt degradation under model substitution and learns reusable source→target prompt transformations from calibrated task pairs.

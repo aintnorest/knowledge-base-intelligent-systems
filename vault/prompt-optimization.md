@@ -146,6 +146,13 @@ This decomposition makes a reported improvement reproducible: record the represe
 - Represent each candidate as executable source code, including its tools, control flow, model settings, resolved demonstrations, metric, data split, and random seed. This makes the selected artifact inspectable, rerunnable, editable, and reversible rather than a one-off prompt string.
 - For costly evaluations, use progressive allocation: run many candidates on a small validation subset, retain only leading candidates, and increase the subset for survivors. Confirm the winner on held-out data; early pruning can otherwise promote noise.
 
+### Cross-Model Prompt Mapping
+
+- Treat a prompt validated for one model as a model-bound artifact rather than assuming it transfers unchanged. Measure the target model under the inherited prompt against a target-adapted candidate and a freshly optimized reference when feasible.
+- To amortize migration across many tasks, optimize paired prompts for the source and target models on a representative alignment suite, distill the recurring transformation, and apply that mapping to unseen source prompts.
+- Preserve alignment tasks, paired prompt anchors, extractor and adapter models, mapping text, evaluation settings, and held-out results. A generated transformation is an inspectable hypothesis, not proof that all tasks share one prompt delta.
+- **Use with care**: “training-free” mapping can still require a large prompt-search budget and a frontier helper model; instruction transfer does not automatically cover demonstrations, tool schemas, chat templates, or decoding settings.
+
 ### RL-based Optimization
 
 - Defines a reward function to evaluate prompt effectiveness.
@@ -169,6 +176,7 @@ This decomposition makes a reported improvement reproducible: record the represe
 | PromptWizard | Model outputs + critic | Agentic mutation of instructions/examples | Broad task suites where manual prompt design is brittle |
 | Multi-objective optimization | Metrics for several objectives | Search over tradeoff frontier | Production prompts with accuracy, cost, efficiency, or interpretability constraints |
 | Joint prompt-program search | Pattern library, examples, executable program, and validation metric | Search pattern, instruction, and demonstrations with progressive allocation | Tasks where direct prompting, CoT, and tool-use loops are plausible alternatives |
+| Cross-model prompt mapping | Paired source/target prompt calibrations + adapter | Distill a model-pair transformation and apply it to unseen prompts | Migrating a prompt library between model versions or providers |
 
 ## Sources
 
@@ -186,3 +194,4 @@ This decomposition makes a reported improvement reproducible: record the represe
 - [Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies dossier](/dossiers/multi-agent-design-prompts-topologies.md) — proposes Mass, which warm-starts block prompts, samples topology choices from validation-measured influence, then conducts workflow-level prompt optimization.
 - [TextGrad: Automatic “Differentiation” via Text dossier](/dossiers/textgrad-automatic-differentiation-via-text.md) — generalizes textual feedback to computation graphs and distinguishes reusable-prompt optimization from test-time instance optimization.
 - [Don't Generate, Classify! Low-Latency Prompt Optimization with Structured Complementary Prompt dossier](/dossiers/low-latency-prompt-optimization-structured-complementary-prompt.md) — evaluates an eight-field classifier plus fixed template against generative prompt optimizers; its task- and field-dependent results qualify the pattern.
+- [PromptBridge dossier](/dossiers/promptbridge-cross-model-prompt-transfer.md) — calibrates paired source/target prompts, distills a reusable model-level transformation, and evaluates unseen-task transfer across coding, agents, and planning.

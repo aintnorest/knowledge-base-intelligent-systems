@@ -142,6 +142,8 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [Generative Engine Optimization in Practice](/dossiers/generative-engine-optimization-implementation-guide.md) — Locally authored, framework-agnostic synthesis of two practitioner GEO guides into a pipeline model, nine implementation areas, and a citation-based measurement loop
 
+* [PromptBridge: Cross-Model Prompt Transfer for Large Language Models](/dossiers/promptbridge-cross-model-prompt-transfer.md) — Training-free prompt-library migration via model-specific calibration, distilled source→target prompt mappings, and unseen-task adaptation
+
 ## Vault
 
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
@@ -317,3 +319,5 @@ timestamp: 2026-07-11T16:00:00Z
 * [Publisher AI Usage Controls](/vault/publisher-ai-usage-controls.md)
 * [Entity Consistency](/vault/entity-consistency.md)
 * [AI Citation Rate](/vault/ai-citation-rate.md)
+* [Prompt–Model Drift](/vault/prompt-model-drift.md)
+* [Cross-Model Prompt Mapping](/vault/cross-model-prompt-mapping.md)

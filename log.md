@@ -597,3 +597,9 @@ maintenance as a non-ingest event.
 * **Vault**: Unified the parallel drafts of [generative-engine-optimization](/vault/generative-engine-optimization.md) (five sources) and [ai-search-visibility-measurement](/vault/ai-search-visibility-measurement.md) (two sources) produced by concurrent ingest branches
 * **Taxonomy**: Promoted `generative-search` to [/TAXONOMY.md](/TAXONOMY.md) (new "Generative Search & Content Visibility" facet) — flagged independently by seven ingests in this batch, with ~26 pages carrying it; added nine Watchlist candidates flagged during the batch (`web-crawling`, `citation-behavior`, `content-structure`, `recurrent-models`, `recursive-self-improvement`, `evolutionary-search`, `interpretability`, `reversibility`)
 * **Retag**: Added `generative-search` as the lead tag on the 8 GEO/AEO-cluster dossiers and 18 vault pages
+
+## 2026-08-23 (PromptBridge)
+* **Ingest**: `arxiv:2512.01420` — `PromptBridge: Cross-Model Prompt Transfer for Large Language Models dossier` at `/dossiers/promptbridge-cross-model-prompt-transfer.md` — canonical: https://arxiv.org/abs/2512.01420v1
+* **Archive**: Moved source PDF to [/archive/promptbridge-cross-model-prompt-transfer.pdf](/archive/promptbridge-cross-model-prompt-transfer.pdf)
+* **Vault**: Created [prompt-model-drift](/vault/prompt-model-drift.md), [cross-model-prompt-mapping](/vault/cross-model-prompt-mapping.md)
+* **Vault**: Updated [prompt-optimization](/vault/prompt-optimization.md), [model-aware-harness-design](/vault/model-aware-harness-design.md)
