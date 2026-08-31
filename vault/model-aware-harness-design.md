@@ -32,6 +32,8 @@ Tool schemas and output formats are part of an agent's effective training distri
 
 Model switching is also an infrastructure event. Provider- and model-specific prompt caches may miss, and summarizing the history to reduce that cost can omit task-critical information. For difficult work, a fresh-context subagent with a tightly framed task can be preferable to transferring an entire mixed-model history.
 
+Two transfer results refine that choice. First, evolved skills can cross model sizes and families, but a workaround learned by a small model can constrain a stronger one or consume its interaction budget; discovery quality and execution ability are separate properties. Second, a live coding trajectory can be a better handoff artifact than a detached plan: the receiving model inherits repository observations, a bounded checklist, and one grounded edit instead of paying to reconstruct the planner's context. Neither result supports blind transfer—evaluate the source–target pair and the handoff boundary end to end.
+
 ## Limitations
 
 Per-model tuning creates configuration and testing overhead, and vendor-specific behavior can change with new releases. Avoid opaque one-off tweaks: retain a common contract, record the observed failure each customization addresses, and evaluate it against quality, latency, and cost guardrails.
@@ -40,3 +42,5 @@ Per-model tuning creates configuration and testing overhead, and vendor-specific
 
 - [Continually Improving Our Agent Harness dossier](/dossiers/continually-improving-agent-harness.md) — Cursor reports model-specific edit formats, prompts, and mid-chat handoff instructions in a shared harness architecture.
 - [PromptBridge dossier](/dossiers/promptbridge-cross-model-prompt-transfer.md) — measures prompt degradation under model substitution and learns reusable source→target prompt transformations from calibrated task pairs.
+- [WikiSkill dossier](/dossiers/wikiskill-persistent-knowledge-skill-evolution.md) — finds both positive cross-family skill transfer and negative transfer from source-model-specific workarounds.
+- [Prewalk dossier](/dossiers/prewalk-trajectory-preserving-model-handoff.md) — switches models after grounded exploration and one edit, preserving the live trajectory rather than sending only a plan.

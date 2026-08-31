@@ -10,6 +10,11 @@ timestamp: 2026-07-11T16:00:00Z
 
 ## Dossiers
 
+* [WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution](/dossiers/wikiskill-persistent-knowledge-skill-evolution.md) — Persistent raw/wiki/skill layers for validation-gated, transferable agent skill evolution
+* [Measuring AI “Slop” in Text](/dossiers/measuring-ai-slop-in-text.md) — Human-centered, purpose-sensitive taxonomy of text defects and evidence that generic metrics and prompted LLM judges poorly reproduce expert assessments
+* [ASD-STE100 Simplified Technical English and Artificial Intelligence](/dossiers/asd-ste100-ai-assisted-technical-writing.md) — STEMG position on supervised, accountable AI assistance for controlled technical writing
+* [You Only Need the Frontier Model for One Single Edit](/dossiers/prewalk-trajectory-preserving-model-handoff.md) — Prewalk's live-trajectory handoff from a frontier coding model to a cheaper executor after the first edit
+* [Snapcompact: SoTA Compaction — Instant, Local, Free. Pick 3](/dossiers/snapcompact-pixel-context-carriers.md) — Dense pixel-font images as long-context carriers, with cost/fidelity benchmarks and visual-decoding probes
 * [Batch Size-invariance for Policy Optimization](/dossiers/batch-size-invariance-policy-optimization.md) — PPO/PPG analysis that separates sampling-policy correction from update-proximity control and derives small-batch EWMA scaling rules
 * [Exploring Length Generalization in Large Language Models](/dossiers/exploring-length-generalization-language-models.md) — Controlled evidence that short-instance fine-tuning and scratchpads can fail to extrapolate, while few-shot scratchpads can activate a compatible pretrained sequential template
 * [Executable Code Actions Elicit Better LLM Agents](/dossiers/executable-code-actions-llm-agents.md) — CodeAct’s executable-Python agent action language for tool composition, state reuse, execution feedback, and instruction tuning
@@ -144,8 +149,22 @@ timestamp: 2026-07-11T16:00:00Z
 
 * [PromptBridge: Cross-Model Prompt Transfer for Large Language Models](/dossiers/promptbridge-cross-model-prompt-transfer.md) — Training-free prompt-library migration via model-specific calibration, distilled source→target prompt mappings, and unseen-task adaptation
 
+* [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — SycophancyEval's four free-form metrics across five production assistants, and evidence that human preference data and preference models reward matching the user's beliefs
+* [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — Technical survey mapping sycophancy measurement methods, four causal factors, and five mitigation families by intervention point, with unreliable citations
+* [Verbosity Bias in Preference Labeling by Large Language Models](/dossiers/verbosity-bias-preference-labeling-llms.md) — Evidence that GPT-4 judges favor longer answers beyond human preference, plus a signed accuracy-parity metric for verbosity bias
+* [Verbosity ≠ Veracity: Demystify Verbosity Compensation Behavior of Large Language Models](/dossiers/verbosity-compensation-large-language-models.md) — Names and benchmarks verbosity compensation across 14 models and 5 QA datasets, ties padded answers to model uncertainty and a 8–20 point accuracy gap, and mitigates it with a verbosity-triggered cascade
+* [Bias Fitting to Mitigate Length Bias of Reward Model in RLHF](/dossiers/fimi-rm-bias-fitting-length-bias.md) — FiMi-RM's warm-up/fit/debias staging, where a 6.4K-parameter probe fits the non-linear length–reward curve and the reward model is trained to decorrelate from it
+* [Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4](/dossiers/principled-instructions-questioning-llms.md) — 26 directive-level prompt principles in five surface categories, paired human-evaluated on ATLAS with quality and correctness tracks and gains that grow with model scale
+* [Steering Large Language Models with Register Analysis for Arbitrary Style Transfer](/dossiers/register-analysis-arbitrary-style-transfer.md) — Prompting that anchors an LLM's intermediate style description to Biber's register-analysis framework, with a contrastive variant and target-overlap checks on exemplar copying
+* [PEEM: Prompt Engineering Evaluation Metrics for Interpretable Joint Evaluation of Prompts and Responses](/dossiers/peem-prompt-engineering-evaluation-metrics.md) — Nine-axis LLM-judge rubric scoring prompt and response separately with per-criterion rationales, validated against accuracy, humans, paraphrases, and adversarial rewrites, then reused as rewriting feedback
+* [Large Language Models Are Biased Because They Are Large Language Models](/dossiers/llms-are-biased-because-they-are-llms.md) — Position paper arguing harmful bias is an in-principle consequence of purely distributional language modeling, not a defect that RLHF-style mitigation can remove
+* [Scaling Instruction-Finetuned Language Models](/dossiers/scaling-instruction-finetuned-language-models.md) — Flan-PaLM/Flan-T5's joint scaling of task count, model size, and chain-of-thought data, with the ablation showing that a mixture missing a prompting paradigm degrades that paradigm below the no-finetuning baseline
+
 ## Vault
 
+* [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)
+* [Trajectory-Preserving Model Handoff](/vault/trajectory-preserving-model-handoff.md)
+* [Cross-Modal Context Carrier](/vault/cross-modal-context-carrier.md)
 * [Sample-Consistency Hallucination Detection](/vault/sample-consistency-hallucination-detection.md)
 * [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
 * [Dual-Axis Judge Test-Time Scaling](/vault/dual-axis-judge-test-time-scaling.md)
@@ -326,3 +345,35 @@ timestamp: 2026-07-11T16:00:00Z
 * [AI Citation Rate](/vault/ai-citation-rate.md)
 * [Prompt–Model Drift](/vault/prompt-model-drift.md)
 * [Cross-Model Prompt Mapping](/vault/cross-model-prompt-mapping.md)
+* [Sycophancy](/vault/sycophancy.md)
+* [User-Cue Perturbation Evaluation](/vault/user-cue-perturbation-evaluation.md)
+* [Preference-Data Feature Attribution](/vault/preference-data-feature-attribution.md)
+* [Prompted Preference-Model Debiasing](/vault/prompted-preference-model-debiasing.md)
+* [Leading-Query Contrastive Decoding](/vault/leading-query-contrastive-decoding.md)
+* [Side-Effect-Bounded Activation Steering](/vault/side-effect-bounded-activation-steering.md)
+* [Verbosity Bias in Preference Evaluation](/vault/verbosity-bias-in-preference-evaluation.md)
+* [Human-Anchored Judge-Bias Measurement](/vault/human-anchored-judge-bias-measurement.md)
+* [Judge Bias as Accuracy Parity](/vault/judge-bias-as-accuracy-parity.md)
+* [Verbosity Compensation](/vault/verbosity-compensation.md)
+* [Verbosity as an Uncertainty Signal](/vault/verbosity-as-uncertainty-signal.md)
+* [Verbosity-Triggered Model Cascade](/vault/verbosity-triggered-model-cascade.md)
+* [Learned Bias Fitting for Reward Debiasing](/vault/learned-bias-fitting-reward-debiasing.md)
+* [Stop-Gradient Correlation Decoupling](/vault/stop-gradient-correlation-decoupling.md)
+* [Confound-Partitioned Accuracy](/vault/confound-partitioned-accuracy.md)
+* [Prompt Incentive Framing](/vault/prompt-incentive-framing.md)
+* [Output Priming](/vault/output-priming.md)
+* [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
+* [Framework-Anchored Intermediate Descriptions](/vault/framework-anchored-intermediate-descriptions.md)
+* [Contrastive Exemplar Characterization](/vault/contrastive-exemplar-characterization.md)
+* [Exemplar Copy Leakage](/vault/exemplar-copy-leakage.md)
+* [Joint Prompt–Response Evaluation](/vault/joint-prompt-response-evaluation.md)
+* [Rationale-Guided Prompt Rewriting](/vault/rationale-guided-prompt-rewriting.md)
+* [Paraphrase–Adversarial Evaluator Validation](/vault/paraphrase-adversarial-evaluator-validation.md)
+* [Distributional Normativity Blindness](/vault/distributional-normativity-blindness.md)
+* [Overt–Covert Bias Divergence](/vault/overt-covert-bias-divergence.md)
+* [Anchor-Constrained Bias Mitigation](/vault/anchor-constrained-bias-mitigation.md)
+* [Bias as Prior Dominance](/vault/bias-as-prior-dominance.md)
+* [Clarification Need Decision](/vault/clarification-need-decision.md)
+* [Subscription-Billed Programmatic CLI Agent Access](/vault/subscription-billed-programmatic-cli-agent-access.md)
+* [CLI Agent Hook Event Surfaces](/vault/cli-agent-hook-event-surfaces.md)
+* [Instruction Tuning](/vault/instruction-tuning.md)

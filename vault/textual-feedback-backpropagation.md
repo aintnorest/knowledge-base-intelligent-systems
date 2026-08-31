@@ -36,3 +36,4 @@ Keep the variable role, forward inputs and outputs, feedback source, proposed pa
 ## Sources
 
 - [TextGrad: Automatic “Differentiation” via Text dossier](/dossiers/textgrad-automatic-differentiation-via-text.md) — introduces graph-based propagation of LLM textual critiques, role-aware variables, and Textual Gradient Descent across prompts, solutions, code, molecules, and planner parameters.
+- [PEEM dossier](/dossiers/peem-prompt-engineering-evaluation-metrics.md) — a single-node, rubric-anchored special case: criterion structure comes from a fixed rubric rather than from graph topology

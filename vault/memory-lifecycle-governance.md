@@ -44,8 +44,13 @@ Scope, permission, and temporal validity all decide whether a record *may* be us
 
 Practically this means adding suppressed and quarantined to the record state machine alongside `active`, `superseded`, `redacted`, and `deleted`, and pairing each with a rollback path appropriate to how the memory was applied — remove the context block, revoke the tool result, restore a checkpoint, or exclude the record from future selection pending review. Reversibility is weakest exactly where it matters most: once generated text, tool calls, or user decisions have left the system, only future suppression remains. That argues for reserving the strongest controls for the injections a system can still take back.
 
+## Separate Evidence, Knowledge, and Procedure
+
+Lifecycle policy should also follow the artifact's role. Raw execution evidence can be immutable; derived patterns can compound and be corrected with provenance; deployed procedures can be validation-gated and rolled back. WikiSkill operationalizes this split as `raw/`, `wiki/`, and `skills/`: rejected skill edits revert, but the wiki retains the attempted intervention and outcome so later optimization does not rediscover the same failure. This is compatible with governed deletion only when “immutable” means protected from optimizer rewrites, not exempt from privacy or legal erasure obligations.
+
 ## Sources
 
 - [How AI Agent Memory Works dossier](/dossiers/how-ai-agent-memory-works.md) — presents write, age, supersede, redact, forget, and audit as the memory lifecycle, with temporal updates, PII filtering, scoped sharing, and deletion propagation.
 - [Causal Influence Control for Persistent Memory dossier](/dossiers/causal-influence-control-persistent-memory.md) — argues that access control and reversibility are separate memory-safety controls, and proposes suppression, quarantine, and rollback with recorded lineage for authorized memories whose realized effect diverges from what was predicted.
 - [Are We Ready For An Agent-Native Memory System? dossier](/dossiers/agent-native-memory-system-readiness.md) — evaluates timestamped versioning, eviction, and consolidation designs; its controlled maintenance results favor conservative, localized integration over delayed flushing and overly coarse summaries.
+- [WikiSkill dossier](/dossiers/wikiskill-persistent-knowledge-skill-evolution.md) — separates immutable rollout evidence, compounding pattern knowledge, and reversible validation-gated skills, while recording rejected interventions for future iterations.

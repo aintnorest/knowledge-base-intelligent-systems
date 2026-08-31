@@ -30,6 +30,8 @@ Empirically this can invert the expected ordering: uniform-granularity segmentat
 - Allocate high-fidelity capacity to evidence-heavy or exact-recall work and cheaper representations to redundant or low-risk material.
 - Compare alternatives in a shared unit where possible, while also reporting latency, storage, and inference cost.
 
+The representation itself is part of the frontier. Snapcompact renders verbatim text into dense pixel-font images: billed input falls because the vision carrier uses fewer tokens, but the model spends additional reasoning/output compute decoding pixels. This is not semantic summarization, yet it still has distortion from OCR errors, resizing, font density, and patch alignment. Compare total carry-plus-decode cost at matched task quality; an input-token ratio alone can select the wrong operating point.
+
 ## Limitations
 
 The amount of history information a real task requires is usually unknown before evaluation. A single shared byte or token metric also hides differences in portability, retrieval delay, implementation complexity, and failure severity. This is a decision framework, not a guarantee that a chosen salience score is correct.
@@ -38,3 +40,4 @@ The amount of history information a real task requires is usually unknown before
 
 - [What to Keep, What to Forget dossier](/dossiers/rate-distortion-memory-compaction.md) — formalizes compaction as a rate–distortion and information-bottleneck problem across KV, prompts, bounded state, and agent memory.
 - [Memory Caching: RNNs with Growing Memory dossier](/dossiers/memory-caching-rnns-growing-memory.md) — segment size as an explicit compression/recall dial for recurrent state, with uniform segmentation outperforming a cheaper logarithmic schedule on recall while perplexity stays flat.
+- [Snapcompact dossier](/dossiers/snapcompact-pixel-context-carriers.md) — adds a cross-modal carrier to the frontier and shows that cheaper image input can impose model-specific visual-decoding cost and fidelity cliffs.

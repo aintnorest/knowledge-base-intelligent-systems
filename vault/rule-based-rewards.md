@@ -35,6 +35,7 @@ Rules also pair naturally with distillation. Filter a teacher model's outputs by
 ## Limitations
 
 - **The verifier is an LLM judge**, with its attendant leniency, position, and verbosity biases. A rule-compliance reward can be inflated by outputs that *announce* compliance. Spot-check verifier labels against human judgment on a held-out slice.
+- **Verbosity bias is measurable and correctable.** If the reward is dominated by a nameable surface attribute, [learned bias fitting](/vault/learned-bias-fitting-reward-debiasing.md) can fit the attribute-to-reward curve with a tiny probe and decorrelate against it.
 - **Checklist satisfaction is not quality.** Optimizing a fixed rule set converges toward a template. Retain an outcome term and an independent quality measure to detect the collapse.
 - **Rules encode a snapshot** of the preference they were derived from; they go stale when the target system or domain shifts.
 - **Verification cost scales with rules × candidates × steps**, which is real money in a group-sampling RL loop. Keep the rule set small.

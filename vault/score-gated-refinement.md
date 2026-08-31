@@ -40,6 +40,11 @@ Unconstrained iterative refinement often degrades output quality. An agent may o
 - **0% loss rate** — refinement never degrades quality under this gate
 - **+19%/+22%** simulated acceptance rate gains (CVPR/ICLR)
 
+## Beyond Document Revision
+
+The same monotonic gate applies to executable agent procedures. WikiSkill proposes skill edits from accumulated traces and patterns, evaluates each candidate on a held-out validation split, and rolls back a degrading skill while retaining the failure in persistent knowledge. This extends the pattern from revising one artifact to evolving a reusable procedure without forgetting rejected interventions. It also sharpens the limitation: a gate prevents measured regression only to the extent that the validation set represents future tasks.
+
 ## Sources
 
 - [PaperOrchestra dossier](/dossiers/paperorchestra.md) — Content Refinement Agent with AgentReview
+- [WikiSkill dossier](/dossiers/wikiskill-persistent-knowledge-skill-evolution.md) — validation-gates skill changes, rolls back degrading candidates, and preserves their outcomes in a persistent wiki.

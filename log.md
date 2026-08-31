@@ -603,3 +603,97 @@ maintenance as a non-ingest event.
 * **Archive**: Moved source PDF to [/archive/promptbridge-cross-model-prompt-transfer.pdf](/archive/promptbridge-cross-model-prompt-transfer.pdf)
 * **Vault**: Created [prompt-model-drift](/vault/prompt-model-drift.md), [cross-model-prompt-mapping](/vault/cross-model-prompt-mapping.md)
 * **Vault**: Updated [prompt-optimization](/vault/prompt-optimization.md), [model-aware-harness-design](/vault/model-aware-harness-design.md)
+
+## 2026-08-25 (Towards Understanding Sycophancy)
+* **Ingest**: `arxiv:2310.13548` — `Towards Understanding Sycophancy in Language Models dossier` at `/dossiers/understanding-sycophancy-language-models.md` — canonical: https://arxiv.org/abs/2310.13548v4
+* **Archive**: Moved source PDF (ICLR 2024 camera-ready, arXiv v4) to [/archive/understanding-sycophancy-language-models.pdf](/archive/understanding-sycophancy-language-models.pdf)
+* **Vault**: Created [sycophancy](/vault/sycophancy.md), [user-cue-perturbation-evaluation](/vault/user-cue-perturbation-evaluation.md), [preference-data-feature-attribution](/vault/preference-data-feature-attribution.md), [prompted-preference-model-debiasing](/vault/prompted-preference-model-debiasing.md)
+* **Taxonomy gap**: No alignment/model-behavior facet exists (sycophancy, truthfulness, reward hacking, scalable oversight); tagged with nearest broader terms (`reliability`, `reinforcement-learning`, `human-in-the-loop`, `evaluation`). Candidate flagged for TAXONOMY.md: `alignment`.
+
+## 2026-08-25 (Sycophancy: Causes and Mitigations)
+* **Ingest**: `arxiv:2411.15287` — `Sycophancy in Large Language Models: Causes and Mitigations dossier` at `/dossiers/sycophancy-large-language-models-causes-mitigations.md` — canonical: https://arxiv.org/abs/2411.15287v1
+* **Archive**: Moved source PDF to [/archive/sycophancy-large-language-models-causes-mitigations.pdf](/archive/sycophancy-large-language-models-causes-mitigations.pdf)
+* **Vault**: Created [leading-query-contrastive-decoding](/vault/leading-query-contrastive-decoding.md), [side-effect-bounded-activation-steering](/vault/side-effect-bounded-activation-steering.md)
+* **Vault**: Updated [sycophancy](/vault/sycophancy.md) (contributing causes, mitigations-by-intervention-point table, source) and [user-cue-perturbation-evaluation](/vault/user-cue-perturbation-evaluation.md) (FlipFlop metric definitions, source) — umbrella pages created by the same-day `arxiv:2310.13548` ingest; additions applied in the orchestrated merge
+* **Taxonomy gap**: Candidates flagged for TAXONOMY.md: `alignment`, `decoding` (inference-time intervention); adds evidence to the existing `interpretability` Watchlist entry.
+
+## 2026-08-25 (Verbosity Bias in Preference Labeling)
+* **Ingest**: `arxiv:2310.10076` — `Verbosity Bias in Preference Labeling by Large Language Models dossier` at `/dossiers/verbosity-bias-preference-labeling-llms.md` — canonical: https://arxiv.org/abs/2310.10076v1
+* **Archive**: Moved source PDF to [/archive/verbosity-bias-preference-labeling-llms.pdf](/archive/verbosity-bias-preference-labeling-llms.pdf)
+* **Vault**: Created [verbosity-bias-in-preference-evaluation](/vault/verbosity-bias-in-preference-evaluation.md), [human-anchored-judge-bias-measurement](/vault/human-anchored-judge-bias-measurement.md), [judge-bias-as-accuracy-parity](/vault/judge-bias-as-accuracy-parity.md)
+* **Taxonomy gap**: No facet for evaluator-side bias (verbosity/length, position, self-enhancement); tagged with nearest broader terms (`llm-as-judge`, `evaluation`, `reliability`). Candidate flagged: `evaluation-bias`.
+
+## 2026-08-25 (Verbosity ≠ Veracity)
+* **Ingest**: `arxiv:2411.07858` — `Verbosity ≠ Veracity: Demystify Verbosity Compensation Behavior of Large Language Models dossier` at `/dossiers/verbosity-compensation-large-language-models.md` — canonical: https://arxiv.org/abs/2411.07858v2
+* **Archive**: Moved arXiv:2411.07858v2 source PDF to [/archive/verbosity-compensation-large-language-models.pdf](/archive/verbosity-compensation-large-language-models.pdf)
+* **Archive**: Moved duplicate arXiv:2411.07858v1 revision of the same source to [/archive/verbosity-compensation-large-language-models-arxiv-v1.pdf](/archive/verbosity-compensation-large-language-models-arxiv-v1.pdf) — retained as a duplicate, not a separate ingest; v2 adds Appendix C supplementary experiments and was the revision ingested
+* **Vault**: Created [verbosity-compensation](/vault/verbosity-compensation.md), [verbosity-as-uncertainty-signal](/vault/verbosity-as-uncertainty-signal.md), [verbosity-triggered-model-cascade](/vault/verbosity-triggered-model-cascade.md)
+* **Vault**: Updated [verbosity-bias-in-preference-evaluation](/vault/verbosity-bias-in-preference-evaluation.md) (anti-correlation-with-correctness detection bullet, related link) — applied in the orchestrated merge
+* **Taxonomy gap**: No uncertainty/confidence facet exists; tagged with nearest broader terms (`reliability`, `evaluation`). Candidate flagged for TAXONOMY.md: `uncertainty-quantification`.
+
+## 2026-08-25 (FiMi-RM)
+* **Ingest**: `arxiv:2505.12843` — `Bias Fitting to Mitigate Length Bias of Reward Model in RLHF dossier` at `/dossiers/fimi-rm-bias-fitting-length-bias.md` — canonical: https://arxiv.org/abs/2505.12843v2
+* **Archive**: Moved source PDF to [/archive/fimi-rm-bias-fitting-length-bias.pdf](/archive/fimi-rm-bias-fitting-length-bias.pdf)
+* **Vault**: Created [learned-bias-fitting-reward-debiasing](/vault/learned-bias-fitting-reward-debiasing.md), [stop-gradient-correlation-decoupling](/vault/stop-gradient-correlation-decoupling.md), [confound-partitioned-accuracy](/vault/confound-partitioned-accuracy.md)
+* **Vault**: Updated [verbosity-bias-in-preference-evaluation](/vault/verbosity-bias-in-preference-evaluation.md) (reward-model manifestation, source) and [rule-based-rewards](/vault/rule-based-rewards.md) (correctable-verbosity-bias limitation) — applied in the orchestrated merge
+* **Taxonomy gap**: No reward-modeling/reward-design facet exists; tagged with nearest broader terms (`reinforcement-learning`, `evaluation`, `reliability`, `generalization`). Candidates flagged for TAXONOMY.md: `reward-modeling`, `shortcut-learning`.
+
+## 2026-08-25 (Principled Instructions)
+* **Ingest**: `arxiv:2312.16171` — `Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4 dossier` at `/dossiers/principled-instructions-questioning-llms.md` — canonical: https://arxiv.org/abs/2312.16171v2
+* **Archive**: Moved source PDF to [/archive/principled-instructions-questioning-llms.pdf](/archive/principled-instructions-questioning-llms.pdf)
+* **Vault**: Created [prompt-incentive-framing](/vault/prompt-incentive-framing.md), [output-priming](/vault/output-priming.md), [quality-versus-correctness-prompt-evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
+* **Vault**: Updated [prompt-contingency](/vault/prompt-contingency.md), [application-centric-prompt-taxonomy](/vault/application-centric-prompt-taxonomy.md), [answer-engineering](/vault/answer-engineering.md), [chain-of-thought-prompting](/vault/chain-of-thought-prompting.md)
+
+## 2026-08-25 (Register Analysis for Arbitrary Style Transfer)
+* **Ingest**: `arxiv:2505.00679` — `Steering Large Language Models with Register Analysis for Arbitrary Style Transfer dossier` at `/dossiers/register-analysis-arbitrary-style-transfer.md` — canonical: https://arxiv.org/abs/2505.00679v2
+* **Archive**: Moved source PDF to [/archive/register-analysis-arbitrary-style-transfer.pdf](/archive/register-analysis-arbitrary-style-transfer.pdf)
+* **Vault**: Created [framework-anchored-intermediate-descriptions](/vault/framework-anchored-intermediate-descriptions.md), [contrastive-exemplar-characterization](/vault/contrastive-exemplar-characterization.md), [exemplar-copy-leakage](/vault/exemplar-copy-leakage.md)
+* **Taxonomy gap**: No tag covers controllable text generation / style transfer as a task family; tagged with nearest broader terms (`prompting`, `in-context-learning`, `decomposition`, `evaluation`). Candidate flagged for TAXONOMY.md: `controllable-generation`.
+
+## 2026-08-25 (PEEM)
+* **Ingest**: `arxiv:2603.10477` — `PEEM: Prompt Engineering Evaluation Metrics for Interpretable Joint Evaluation of Prompts and Responses dossier` at `/dossiers/peem-prompt-engineering-evaluation-metrics.md` — canonical: https://arxiv.org/abs/2603.10477v2
+* **Archive**: Moved source PDF (arXiv:2603.10477v2, 8 Apr 2026) to [/archive/peem-prompt-engineering-evaluation-metrics.pdf](/archive/peem-prompt-engineering-evaluation-metrics.pdf)
+* **Vault**: Created [joint-prompt-response-evaluation](/vault/joint-prompt-response-evaluation.md), [rationale-guided-prompt-rewriting](/vault/rationale-guided-prompt-rewriting.md), [paraphrase-adversarial-evaluator-validation](/vault/paraphrase-adversarial-evaluator-validation.md)
+* **Vault**: Updated [prompt-optimization](/vault/prompt-optimization.md) (Rubric-Rationale Prompt Rewriting method entry), [llm-as-judge-with-anti-inflation](/vault/llm-as-judge-with-anti-inflation.md) (judge-leniency validation evidence), [textual-feedback-backpropagation](/vault/textual-feedback-backpropagation.md) (source)
+
+## 2026-08-25 (LLMs Are Biased Because They Are LLMs)
+* **Ingest**: `doi:10.1162/coli_a_00558` — `Large Language Models Are Biased Because They Are Large Language Models dossier` at `/dossiers/llms-are-biased-because-they-are-llms.md` — canonical: https://doi.org/10.1162/coli_a_00558
+* **Archive**: Moved source PDF (Computational Linguistics 51(3):885–906, CC BY-NC-ND 4.0) to [/archive/llms-are-biased-because-they-are-llms.pdf](/archive/llms-are-biased-because-they-are-llms.pdf)
+* **Vault**: Created [distributional-normativity-blindness](/vault/distributional-normativity-blindness.md), [overt-covert-bias-divergence](/vault/overt-covert-bias-divergence.md), [anchor-constrained-bias-mitigation](/vault/anchor-constrained-bias-mitigation.md), [bias-as-prior-dominance](/vault/bias-as-prior-dominance.md)
+* **Taxonomy gap**: No harmful-bias/fairness/alignment facet exists; tagged with nearest broader terms (`governance`, `reinforcement-learning`, `evaluation`, `reliability`, `fine-tuning`, `verification`). Candidates flagged for TAXONOMY.md: `bias-and-fairness`, `alignment`.
+
+## 2026-08-25 (post-merge consolidation)
+* **Vault**: Applied reciprocal cross-links between the batch's parallel ingest branches — [verbosity-bias-in-preference-evaluation](/vault/verbosity-bias-in-preference-evaluation.md) ↔ [verbosity-compensation](/vault/verbosity-compensation.md), [learned-bias-fitting-reward-debiasing](/vault/learned-bias-fitting-reward-debiasing.md), and [prompted-preference-model-debiasing](/vault/prompted-preference-model-debiasing.md); [joint-prompt-response-evaluation](/vault/joint-prompt-response-evaluation.md) ↔ [quality-versus-correctness-prompt-evaluation](/vault/quality-versus-correctness-prompt-evaluation.md); [llm-as-judge-with-anti-inflation](/vault/llm-as-judge-with-anti-inflation.md) → the verbosity-bias umbrella. No duplicate pages required merging: the nine parallel ingests were pre-assigned umbrella ownership (sycophancy → `arxiv:2310.13548`; judge verbosity bias → `arxiv:2310.10076`) and all 28 new vault pages are distinct concepts.
+* **Taxonomy**: Added eight Watchlist candidates flagged during the batch (`alignment` — flagged independently by three ingests, `evaluation-bias`, `uncertainty-quantification`, `reward-modeling`, `shortcut-learning`, `bias-and-fairness`, `controllable-generation`, `decoding`) and appended batch evidence to the existing `interpretability` entry. No promotions; several candidates are at or near the ~5-page bar and should be re-evaluated at the next taxonomy review.
+* **Note**: Pre-existing inconsistencies observed and left untouched, apparently from unregistered late-July work: `/vault/clarification-need-decision.md`, `/vault/subscription-billed-programmatic-cli-agent-access.md`, and `/vault/cli-agent-hook-event-surfaces.md` (all created 2026-07-28) exist on disk but appear in neither `index.md` nor `log.md`; `/dossiers/scaling-instruction-finetuned-language-models.md` (created 2026-07-30, PDF present in `archive/`) is likewise unregistered in `log.md` and links to a nonexistent `/vault/instruction-tuning.md`.
+
+## 2026-08-25 (Scaling Instruction-Finetuned LMs repair ingest)
+* **Ingest**: `arxiv:2210.11416` — `Scaling Instruction-Finetuned Language Models dossier` at `/dossiers/scaling-instruction-finetuned-language-models.md` — canonical: https://arxiv.org/abs/2210.11416v5
+* **Archive**: Registered existing source PDF at [/archive/scaling-instruction-finetuned-language-models.pdf](/archive/scaling-instruction-finetuned-language-models.pdf); SHA-256 `771f758c1b711c2a63ca2439e80ab90751351d721632897a058c0205ba9e2a22`
+* **Repair**: Removed the unregistered 2026-07-30 remnant dossier of the same slug (noted in the post-merge consolidation entry above) — it was registered in neither `log.md`, `index.md`, nor `archive/index.md` and linked to a then-nonexistent `/vault/instruction-tuning.md`. The user redownloaded the source to `inbox/2210.11416v5.pdf`; its SHA-256 was verified byte-identical to the archived copy before and after this ingest, so the archived file was left untouched and the inbox copy was removed. The dossier was rewritten from the source, not from the remnant.
+* **Vault**: Created [instruction-tuning](/vault/instruction-tuning.md) — the umbrella concept the remnant's broken link pointed at
+* **Vault**: Updated [chain-of-thought-prompting](/vault/chain-of-thought-prompting.md) (post-training-mixture dependence, zero-shot CoT as an instruction-tuning artifact, source), [emergent-abilities](/vault/emergent-abilities.md) (Flan qualifying the ~100B instruction-tuning threshold while CoT-prompting benefit stayed scale-gated, source), [prompt-contingency](/vault/prompt-contingency.md) (finetuning mixture as a contingency axis distinct from scale, source)
+* **Taxonomy**: No new gap unique to this source — `fine-tuning` covers instruction tuning by definition. The paper's Responsible AI appendix (toxic-generation rates, Winogender, translation misgendering) adds evidence to the existing `alignment` and `bias-and-fairness` Watchlist candidates; tagged with nearest broader terms.
+
+## 2026-08-25 (orphaned vault page registration)
+* **Repair**: Registered the three orphaned vault pages flagged in the post-merge consolidation entry above — [clarification-need-decision](/vault/clarification-need-decision.md), [subscription-billed-programmatic-cli-agent-access](/vault/subscription-billed-programmatic-cli-agent-access.md), and [cli-agent-hook-event-surfaces](/vault/cli-agent-hook-event-surfaces.md) — by adding each to `index.md`. All three are self-contained synthesis notes from unregistered mid/late-July work sessions (frontmatter timestamps 2026-07-15 to 2026-07-23, files created 2026-07-28); their content, frontmatter, and cross-links were verified intact and left unmodified. Not ingests — no external source file or source key is associated with these pages; the two CLI-transport notes are research syntheses companion to the already-registered [hook-driven-tmux-agent-transport](/vault/hook-driven-tmux-agent-transport.md).
+
+## 2026-08-31 (Inbox and Stencil article ingest)
+* **Ingest**: `arxiv:2509.19163` — `Measuring AI “Slop” in Text dossier` at `/dossiers/measuring-ai-slop-in-text.md` — canonical: https://arxiv.org/abs/2509.19163v2
+* **Archive**: Moved source PDF to [/archive/measuring-ai-slop-in-text.pdf](/archive/measuring-ai-slop-in-text.pdf); SHA-256 `60defef85f66fc383366bc46bcbfefcb930c2d1eca4ba1735c0d3ef76aebcc11`
+* **Vault candidate**: `purpose-conditioned-text-quality-evaluation` was drafted, then removed during corpus reconciliation in favor of existing quality-evaluation synthesis pages.
+* **Ingest**: `arxiv:2608.27454` — `WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution dossier` at `/dossiers/wikiskill-persistent-knowledge-skill-evolution.md` — canonical: https://arxiv.org/abs/2608.27454v1
+* **Archive**: Moved source PDF to [/archive/wikiskill-persistent-knowledge-skill-evolution.pdf](/archive/wikiskill-persistent-knowledge-skill-evolution.pdf); SHA-256 `65afc6e12f6f707483fe1b79a97ab67c03abf4b4992f82fde03eb7b8d9ad4a69`
+* **Vault candidate**: `lifecycle-separated-agent-knowledge` was drafted, then removed during corpus reconciliation in favor of existing memory, gating, and model-transfer synthesis pages.
+* **Ingest**: `sha256:678819db12b1c8900076341822232e49b45bdc060f243aa1b5c33cb94fba2df3` — `ASD-STE100 Simplified Technical English and Artificial Intelligence dossier` at `/dossiers/asd-ste100-ai-assisted-technical-writing.md` — canonical: /archive/asd-ste100-ai-assisted-technical-writing.pdf
+* **Archive**: Moved source PDF to [/archive/asd-ste100-ai-assisted-technical-writing.pdf](/archive/asd-ste100-ai-assisted-technical-writing.pdf); SHA-256 `678819db12b1c8900076341822232e49b45bdc060f243aa1b5c33cb94fba2df3`
+* **Vault**: Created [normative-source-grounded-ai-assistance](/vault/normative-source-grounded-ai-assistance.md)
+* **Ingest**: `url:stencil.so/blog/prewalk` — `You Only Need the Frontier Model for One Single Edit dossier` at `/dossiers/prewalk-trajectory-preserving-model-handoff.md` — canonical: https://stencil.so/blog/prewalk
+* **Vault**: Created [trajectory-preserving-model-handoff](/vault/trajectory-preserving-model-handoff.md)
+* **Ingest**: `url:stencil.so/blog/snapcompact` — `Snapcompact: SoTA Compaction — Instant, Local, Free. Pick 3 dossier` at `/dossiers/snapcompact-pixel-context-carriers.md` — canonical: https://stencil.so/blog/snapcompact
+* **Vault**: Created [cross-modal-context-carrier](/vault/cross-modal-context-carrier.md)
+* **Vault correction**: Removed the newly created `purpose-conditioned-text-quality-evaluation` and `lifecycle-separated-agent-knowledge` pages after corpus reconciliation showed that they duplicated broader existing synthesis topics.
+* **Vault**: Updated [quality-versus-correctness-prompt-evaluation](/vault/quality-versus-correctness-prompt-evaluation.md) and [llm-as-judge-with-anti-inflation](/vault/llm-as-judge-with-anti-inflation.md) from `arxiv:2509.19163`.
+* **Vault**: Updated [memory-lifecycle-governance](/vault/memory-lifecycle-governance.md), [score-gated-refinement](/vault/score-gated-refinement.md), and [model-aware-harness-design](/vault/model-aware-harness-design.md) from `arxiv:2608.27454`.
+* **Vault**: Retained [normative-source-grounded-ai-assistance](/vault/normative-source-grounded-ai-assistance.md), [trajectory-preserving-model-handoff](/vault/trajectory-preserving-model-handoff.md), and [cross-modal-context-carrier](/vault/cross-modal-context-carrier.md) as absent atomic concepts; expanded them with cross-source evidence and boundaries.
+* **Vault**: Updated [model-aware-harness-design](/vault/model-aware-harness-design.md) from Prewalk and [rate-distortion-memory-compaction](/vault/rate-distortion-memory-compaction.md) plus [code-context-minification](/vault/code-context-minification.md) from Snapcompact.

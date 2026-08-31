@@ -31,6 +31,8 @@ The founding Zero-shot-CoT paper used more than the familiar instruction. It fir
 
 Historically, this separated **elicitation** from **in-context teaching**: 2022-era large models could produce useful decompositions without worked examples. It did not show that the generated text was faithful or universally helpful.
 
+It also did not show that the trigger phrase works on a *base* model. The Flan paper found that "let's think step by step" improved instruction-finetuned Flan-PaLM on BBH while doing nothing for base PaLM 540B, whose zero-shot attempts looped, restated the question, or never stopped. It reconciles this with the Zero-shot-CoT paper by noting that most of that paper's successful results used InstructGPT, already instruction-finetuned, and that base-model successes were confined to math word problems. Zero-shot CoT is therefore better read as a capability unlocked by post-training than as a property of scale alone.
+
 ## Practical Use
 
 Use chain of thought as a candidate intervention for tasks with meaningful intermediate structure. Compare it with the intended production baseline—not only a prompt that prohibits reasoning—and measure final-answer accuracy, reliability, token cost, latency, and item-level regressions. When steps contain arithmetic, retrieval, or other checkable operations, route those operations to deterministic tools rather than trusting the generated trace.
@@ -45,6 +47,14 @@ These numbers describe PaLM, GPT-3, LaMDA, Codex, and UL2 under 2022-era benchma
 
 Wei et al. (2022, *Emergent Abilities*) reinterpreted this pattern as emergence of a technique benefit: chain of thought surpassed standard prompting only around 10^23 training FLOPs (~100B parameters) in their catalog, and was neutral or harmful below that threshold. The technique's value is therefore scale-gated, not only task-gated — see [Emergent Abilities](/vault/emergent-abilities.md).
 
+## CoT Ability Depends on the Post-Training Mixture
+
+Chain-of-thought competence is not a fixed property of a checkpoint's scale; it is contingent on what its finetuning mixture contained. The Flan paper's ablation is the primary evidence: instruction finetuning on answer-only data *degraded* held-out CoT benchmark performance below the no-finetuning baseline at 8B, 62B, and 540B, while adding nine reasoning datasets — under 3% of sampled mixture weight — repaired the loss and improved the non-CoT evaluations as well. The damage is symmetric: a reasoning-only mixture hurt direct-prompting scores. The proposed reading is that instruction finetuning generalizes to unseen *tasks* within the prompting paradigms the mixture contains, not across paradigms it omits — see [Instruction Tuning](/vault/instruction-tuning.md).
+
+Even after finetuning, the benefit of CoT *prompting* stayed gated. On BBH, non-finetuned models gained from CoT only at 62B and above, and among instruction-finetuned models only Flan-PaLM 540B, Flan-cont-PaLM 62B, and Flan-U-PaLM 540B gained. CoT did not beat direct prompting on MMLU at all, which that paper attributes to MMLU being mostly knowledge recall; only CoT combined with self-consistency exceeded direct prompting there.
+
+The operational consequence: when a model cannot do chain of thought, "too small" and "trained without reasoning traces" are distinct diagnoses with different remedies, and only the second is cheap to fix.
+
 ## Length Generalization Is a Separate Test
 
 Intermediate steps do not automatically teach a procedure that scales to longer instances. In controlled parity and variable-assignment tasks, ordinary fine-tuning and scratchpad fine-tuning could fit short sequences yet fail on longer dependency chains. A few short scratchpad examples sometimes did induce a pretrained model to apply the template much farther, but that depended on the base model already having compatible skill.
@@ -58,6 +68,7 @@ When a chain of thought is meant to carry a sequential algorithm, evaluate beyon
 - More intermediate tokens increase cost and latency, and an elaborate prompt can regress easy tasks.
 - Contemporary models may already produce a short reasoning trace by default; in that case, an explicit generic CoT request can have little value. Dedicated reasoning models may also incur substantial additional latency for marginal or negative accuracy changes.
 - Prompt effects depend on the model, task, examples, output format, and metric. The effective scale threshold reported in 2022 is not a universal cutoff.
+- A prompting technique can be removed by post-training. Whether a checkpoint responds to CoT at all depends on its finetuning mixture as well as its scale, so a model's CoT behavior should be re-measured after any adaptation run.
 - A two-stage answer extractor can hide ambiguity by selecting the first matching token from a trace containing multiple answers; evaluate the complete pipeline, not only the visible trigger phrase.
 - Later surveys in this knowledge base retain chain of thought as a foundational technique, but whether it improves a contemporary model or deployment **requires contemporary verification**.
 
@@ -71,3 +82,5 @@ When a chain of thought is meant to carry a sequential algorithm, evaluate beyon
 - [Prompting Science Report 2 dossier](/dossiers/decreasing-value-chain-of-thought-prompting.md) - contemporary GPQA evidence that generic explicit CoT can improve mean performance for some non-reasoning models while reducing strict reliability, and adds substantial latency with little value for the tested reasoning models.
 - [Exploring Length Generalization in Large Language Models dossier](/dossiers/exploring-length-generalization-language-models.md) - controlled evidence that scratchpad fine-tuning can retain length-generalization failures while few-shot scratchpads can activate a length-robust pretrained template under task-specific conditions.
 - [Emergent Abilities of Large Language Models dossier](/dossiers/emergent-abilities-large-language-models.md) - catalogs chain-of-thought's benefit over standard prompting as emergent, appearing only near 10^23 training FLOPs (~100B parameters) in 2022-era models.
+- [Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4 dossier](/dossiers/principled-instructions-questioning-llms.md) - 2024 catalog listing "think step by step" and CoT-combined-with-few-shot among 26 prompt principles; supporting evidence is ~20 human-judged items per principle on 2023-era models.
+- [Scaling Instruction-Finetuned Language Models dossier](/dossiers/scaling-instruction-finetuned-language-models.md) - primary evidence that instruction finetuning without CoT data degrades held-out CoT performance below the no-finetuning baseline, that a sub-3% reasoning-data fraction restores it, and that zero-shot CoT triggers work on instruction-finetuned but not base models.

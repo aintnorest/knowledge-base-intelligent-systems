@@ -24,6 +24,8 @@ A task can fail even when the model has useful information: the model may write 
 
 Prefer a constrained structured output and deterministic validation when the platform supports it. If a free-form response is necessary, define extraction rules in advance, log unparseable results, and measure extraction failures separately from task errors. A second LLM extractor can handle complicated output, but it adds cost and another source of variance.
 
+The prompt can also constrain the answer's opening directly rather than describing it: ending the prompt with the first tokens of the target structure leaves the model continuing an already-committed form. This is a strong format control and a weak content control, and it changes what the extractor receives — see [Output Priming](/vault/output-priming.md).
+
 ## Practical Use
 
 1. State the downstream type and every valid value before writing the prompt.

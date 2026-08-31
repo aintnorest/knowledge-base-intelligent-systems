@@ -28,7 +28,10 @@ Use segmentation rather than one global compression setting. Documentation remov
 
 “Semantics-preserving” source transformation is not necessarily reasoning-preserving: comments, docstrings, names, and formatting may be the evidence an agent needs to infer intent. Patch formats are especially sensitive; a minified input can cause malformed replacements or formatting churn even when its search block matches. The method also does not help where code is not the cost center, and a token reduction is not a quality result without end-task validation.
 
+Cross-modal carriers expose the same distinction at a different layer. Rendering exact source text into an image may preserve characters in principle while losing punctuation or identifiers through visual decoding. For code, that makes a bitmap carrier a high-risk escalation from lexical minification: validate exact transcription and patch applicability, not only semantic question answering, before considering it a usable code representation.
+
 ## Sources
 
 - [Reducing Token Usage of State-in-Context Agents using Minification dossier](/dossiers/minified-state-in-context-agents.md) — evaluates code minification in a DirectSolve-style SWE-bench repair agent; reports a 42% input reduction alongside a 12-point resolution loss, with dedentation causing syntax-sensitive patch failures.
 - [Reducing Token Usage of Software Engineering Agents dossier](/dossiers/reducing-token-usage-software-engineering-agents.md) — evaluates source-code minification in a state-in-context repair agent; reports a 42% repair-input reduction alongside patch-validity trade-offs.
+- [Snapcompact dossier](/dossiers/snapcompact-pixel-context-carriers.md) — demonstrates dense image carriers for prose context; its OCR and model-specific decoding limits motivate stricter exactness tests before applying the idea to code.

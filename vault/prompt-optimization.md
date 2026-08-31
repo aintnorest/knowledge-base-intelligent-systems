@@ -42,6 +42,13 @@ This decomposition makes a reported improvement reproducible: record the represe
 - For shared-prompt optimization, aggregate feedback from a minibatch, evaluate each candidate on validation, and retain a new instruction only after it beats the incumbent. The paper used GPT-4o as the feedback engine while optimizing an instruction-only GPT-3.5-Turbo prompt.
 - **Use with care**: textual feedback is not a numerical gradient or causal proof. Record the trace, keep independent holdouts and component-level constraints, and compare against equal-cost baselines because backward calls grow with graph size.
 
+### Rubric-Rationale Prompt Rewriting
+
+- Uses a fixed multi-axis evaluation rubric as the optimizer's feedback channel: the judge returns a per-axis score *and* a per-axis natural-language rationale, and a rewrite model revises the prompt from the full bundle. No gradients, training data, or human annotation.
+- The rationale's contribution is separately measurable — run one arm on scores only and one on scores plus rationales. In PEEM, the rationale arm won on AG News (83.9 vs 70.4), SST-2 (92.2 vs 87.7), and GSM8K (65.3 vs 58.8) from the same initial prompts.
+- Multi-axis justifications resist the scalar-reward failure mode: the rewriter must satisfy several named criteria rather than over-fit one number, and the edit trace stays auditable.
+- **Use with care**: the rewriter optimizes the judge, not the task; a frontier evaluator paired with a smaller task model distills judgment into the prompt string, so hold model roles constant when attributing gains; and four rounds of generate-plus-nine-axis-evaluation is a real per-instance bill that is rarely compared against the RL baselines it claims to beat.
+
 ### BPO (Black-box Prompt Optimization)
 
 - **Model-agnostic**: Works on any LLM, open-source or API-based, without access to internals.
@@ -195,3 +202,4 @@ This decomposition makes a reported improvement reproducible: record the represe
 - [TextGrad: Automatic “Differentiation” via Text dossier](/dossiers/textgrad-automatic-differentiation-via-text.md) — generalizes textual feedback to computation graphs and distinguishes reusable-prompt optimization from test-time instance optimization.
 - [Don't Generate, Classify! Low-Latency Prompt Optimization with Structured Complementary Prompt dossier](/dossiers/low-latency-prompt-optimization-structured-complementary-prompt.md) — evaluates an eight-field classifier plus fixed template against generative prompt optimizers; its task- and field-dependent results qualify the pattern.
 - [PromptBridge dossier](/dossiers/promptbridge-cross-model-prompt-transfer.md) — calibrates paired source/target prompts, distills a reusable model-level transformation, and evaluates unseen-task transfer across coding, agents, and planning.
+- [PEEM dossier](/dossiers/peem-prompt-engineering-evaluation-metrics.md) — closes a zero-shot rewriting loop on a nine-axis prompt/response rubric; isolates the value of rationales over scalars, but compares against baselines cited from PRewrite under a different task model.

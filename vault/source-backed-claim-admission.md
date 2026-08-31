@@ -25,6 +25,8 @@ Use this pattern where factual scope matters: regulated or financial briefings, 
 
 The smallest viable implementation can use structured records with source IDs, evidence pointers, entity IDs, status, and a claim-review workflow. The important separation is between raw availability and permission to state a fact at runtime.
 
+For standards-constrained authoring, admission must cover normative claims as well as factual ones. An AI assistant can retrieve terminology or propose controlled-language wording, but the applicable standard remains the authority and the human or organizational reviewer remains accountable for acceptance. Record the standard version and rule evidence behind a compliance decision rather than treating the model's “compliant” label as an admitted fact.
+
 ## Limitations
 
 - Admission controls provenance and policy, not truth. An incorrectly extracted or incorrectly reviewed claim can still be eligible, so claim-quality evaluation and correction paths remain necessary.
@@ -35,3 +37,4 @@ The smallest viable implementation can use structured records with source IDs, e
 ## Sources
 
 - [From Prompts to Contracts: Harness Engineering for Auditable Enterprise LLM Agents dossier](/dossiers/auditable-enterprise-llm-harness.md) — source manifests, evidence records, and company-scoped promoted claims form the runtime factual layer; maintained wiki context remains non-authoritative.
+- [ASD-STE100 and AI dossier](/dossiers/asd-ste100-ai-assisted-technical-writing.md) — makes the controlled-language standard authoritative over AI-generated wording and assigns final compliance responsibility to human authors and organizations.

@@ -32,6 +32,8 @@ The same prompt surface form can serve different purposes, and the same product 
 
 Application categories answer *why* a method is needed. A second, orthogonal view groups techniques by how they operate: in-context learning, thought generation, decomposition, ensembling, self-criticism, and prompt optimization. Use both views: identify the failure mode first, then choose an operational mechanism that can address it.
 
+A third view is coarser still and useful for non-experts: group interventions by the *prompt surface* they touch — structure and clarity, specificity and information, user interaction, content and language style, and complex-task decomposition. This view names levers a user can apply without knowing a technique's name (audience framing, delimiters, section tags, output primers, affirmative phrasing, explicit requirements). It is a checklist rather than a diagnosis, and its categories are the least evidence-bearing of the three: a lever grouped under "language style" is by construction unlikely to change accuracy.
+
 ## From Product Need to Comparable Evidence
 
 When a product category is still too broad, translate it into a narrower task shape and a representative benchmark slice. A task-centered survey maps methods to mathematical, logical, commonsense, multi-hop, contextual and context-free QA, spatial, tabular, code, truthfulness, extraction, classification, translation, and agentic task-completion settings. This makes the taxonomy useful for building an evaluation matrix, not only naming methods.
@@ -56,3 +58,4 @@ Application categories overlap. ReAct can be reasoning, retrieval, tool use, and
 - [A Systematic Survey of Prompt Engineering in Large Language Models dossier](/dossiers/systematic-survey-prompt-engineering-llms.md) - organizes more than 40 prompt engineering techniques by application area and summarizes their models, datasets, and metrics.
 - [The Prompt Report dossier](/dossiers/prompt-report.md) — groups 58 text-based techniques by operational mechanism and cautions that categories overlap in practice.
 - [A Survey of Prompt Engineering Methods in Large Language Models for Different NLP Tasks dossier](/dossiers/survey-prompt-engineering-methods-nlp-tasks.md) — maps 39 techniques to 29 NLP tasks and shows why method rankings must remain conditional on the reported model, dataset, and evaluation setup.
+- [Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4 dossier](/dossiers/principled-instructions-questioning-llms.md) — groups 26 directive-level prompt principles into five prompt-surface categories, and excludes five of them from its accuracy track as inapplicable to reasoning tasks.
