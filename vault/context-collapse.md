@@ -22,6 +22,8 @@ A failure mode in context adaptation where a model rewrites an accumulated conte
 
 LLMs are often trained and prompted to summarize, compress, and remove apparent redundancy. That behavior is helpful for human-readable notes, but harmful when the context is serving as executable guidance for an agent or domain reasoner.
 
+Loss can also come from a state-management bug rather than intentional summarization. In Claude Code, a session idle for over an hour could repeatedly clear all but the latest reasoning block on subsequent turns, while user messages during tool use could erase current-turn reasoning. Anthropic linked the progressive deletion to forgetfulness, repetition, odd tool choices, and cache misses. Compaction and history-retention code therefore need explicit invariants over which reasoning and tool state survives each transition.
+
 ## How To Avoid It
 
 - Store context as itemized entries rather than one monolithic prompt.
@@ -34,3 +36,4 @@ LLMs are often trained and prompted to summarize, compress, and remove apparent 
 
 - [Agentic Context Engineering dossier](/dossiers/agentic-context-engineering.md) - reports an AppWorld example where a useful 18k-token context collapsed to 122 tokens and performance fell below the no-context baseline.
 - First-party, GSL resume pipeline (`gsl` repo, `docs/resume-prompt-decisions.md`, the 2026-08-18 V2y entries) - the confirming counter-case: a four-prompt production restructure that cut 2,410 lines to 1,935 requalified 20/20 fixtures with zero fixture repairs, because it was done as an itemized conservation ledger - every normative statement inventoried, then carried, moved, or dropped with a named reason - rather than as a rewrite. The ledger is why nothing was silently shed at a 20% length reduction. Its residue is instructive too: the three requalification failures were losses of rule *encoding* (position, match precision, direction), not of rule text, which a text-level ledger cannot see. See [[prompt-rule-identity]].
+- [An update on recent Claude Code quality reports dossier](/dossiers/anthropic-claude-code-quality-postmortem.md) — production incident where repeated reasoning-history deletion caused progressive behavioral degradation.

@@ -22,6 +22,8 @@ Complex reasoning problems can admit multiple valid reasoning paths. Greedy deco
 
 It does not prove an answer correct. Samples can share the same misconception, and parser choices can fragment or falsely merge support. The agreement score is therefore a useful routing or uncertainty feature only after calibration on the target task.
 
+High candidate recall does not guarantee robust selection. On GSM-IC with 20 samples, at least one code-davinci-002 completion was correct on 99.7% of items, but majority voting reached 88.1% micro accuracy and only 30% base-problem consistency across all distractor variants. Samples shared the distractor-induced failure often enough that plurality selection left a large reliability gap.
+
 ## Integration
 
 Self-consistency can be combined with most sampling algorithms:
@@ -48,3 +50,4 @@ Note: This requires API access to control sampling parameters. UI-based models (
 
 - [Prompt Engineering Survey dossier](/dossiers/prompt-engineering-survey.md) — Wang et al. (2023)
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models dossier](/dossiers/self-consistency-improves-chain-of-thought-reasoning.md) — primary evidence for sampled-path marginalization, aggregation ablations, benchmark results, sampling robustness, and compute tradeoffs.
+- [Large Language Models Can Be Easily Distracted by Irrelevant Context dossier](/dossiers/irrelevant-context-distraction.md) — contrasts near-perfect candidate recall with much lower majority-vote and cross-variant robustness under irrelevant context.

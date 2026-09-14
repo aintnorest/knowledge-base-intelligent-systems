@@ -42,6 +42,8 @@ A single-run benchmark cannot distinguish "the model thinks this argument is goo
 - Verify the model has the correct answer *without* the cue before counting a cued error. A model that cannot attribute a poem correctly at baseline is not mimicking the user, it just doesn't know.
 - The design generalizes past sycophancy: swap the user-preference cue for a demographic hint, a claimed seniority, a stated urgency, or a spoofed authority to measure other prompt-borne biases the same way.
 
+For chain-of-thought faithfulness, pair answer perturbation with trace disclosure. A suggested option should not change a content-determined answer; if it does, inspect whether the generated rationale names that influence. In 2023 experiments, 84.4%–91.3% of changed predictions moved toward the user's suggestion across tested CoT conditions, while models usually regenerated task-grounded rationales without acknowledging the cue.
+
 ## Limitations
 
 The metric conflates illegitimate deference with legitimate updating — a user's stated belief sometimes *is* evidence, so a nonzero gap is not automatically a defect. Cue phrasing carries its own effects, so several paraphrases per cue are needed before attributing the delta to the stance rather than the wording. And a comparison judge that is also one of the systems under test can share the bias being measured.
@@ -50,3 +52,4 @@ The metric conflates illegitimate deference with legitimate updating — a user'
 
 * [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — SycophancyEval builds four metrics (feedback, "are you sure?", answer, mimicry) on this pattern across five assistants.
 * [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — surveys five measurement families (ground-truth comparison, human evaluation, automated metrics, adversarial probing, comparative evaluation) and imports the FlipFlop CTR/EIR/PIR metrics.
+* [Language Models Don’t Always Say What They Think dossier](/dossiers/unfaithful-chain-of-thought-explanations.md) — applies counterfactual cue tests to answer changes and explanation disclosure.

@@ -1,0 +1,925 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<!-- 2026-06-23 Tue 09:13 -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Say What You Mean: A Response to 'Let Me Speak Freely'</title>
+<meta name="author" content="Will Kurt">
+<meta name="generator" content="Org Mode">
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" type="text/css" href="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/style_hEAr.css"><script data-goatcounter="https://dottxt-blog.goatcounter.com/count" async="" src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/count_hEAr.js"></script>
+</head>
+<body>
+<a href="https://blog.dottxt.ai/index.html">HOME</a> | <a href="http://dottxt.ai/">.TXT WEBSITE</a><div id="preamble" class="status">
+<br><p class="subtitle">BY Will Kurt</p>
+</div>
+<div id="content" class="content">
+<h1 class="title">Say What You Mean: A Response to 'Let Me Speak Freely'</h1>
+<p>
+A recent paper from the research team at Appier, <a href="https://arxiv.org/abs/2408.02442">Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of Large Language Models</a>, made some very serious accusations about the quality of LLM evaluation results when performing structured generation.
+Their (Tam, et al.) ultimate conclusion was:
+</p>
+
+<blockquote>
+<p>
+Our study reveals that structured generation constraints significantly impact LLM performance
+across various tasks.
+</p>
+</blockquote>
+
+<p>
+The source for this claim was three sets of evaluations they ran that purportedly showed worse performance for structured generation
+(”JSON-Mode” in the chart) compared with unstructured (”Natural Language”/NL in the chart).
+This chart (derived and rescaled from the original charts) shows the concerning performance:
+</p>
+
+<div id="orgf716b73" class="figure">
+<p><img src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/tam_et-al_hEAr.png" alt="tam_et-al.png" width="100%">
+</p>
+<p><span class="figure-number">Figure 1: </span>Original findings of <i>Let Me Speak Freely</i></p>
+</div>
+
+<p>
+We here at .txt have always seen <i>structured generation outperform unstructured generation</i>
+in our past experiments. Our past experiments were on problems with clear, LLM-compatible structure, but so were the tasks that Tam, et al focused on (in fact, we had already done <a href="https://blog.dottxt.ai/performance-gsm8k.html">a similar experiment with GSM8K</a> using different models).
+So these results from Tam, et al were as surprising as they were concerning. 
+</p>
+
+<p>
+After revisiting the above tasks with the same model (Llama-3-8B-instruct) we found that our results did not match those found in the paper,
+and reflected what we have previously seen.
+Diving deeper into the data and source code for the paper, we have determined
+there are several critical issues that led the authors to a fundamentally flawed conclusion.
+</p>
+
+<p>
+More than a rebuttal, the goal of this article is to share some of the knowledge we have acquired by working daily with structured generation.
+We'll show where Tam, et al. made mistakes, but also provide insights into prompting for structured generation that should improve the response you get from LLMs even when you <i>aren't</i> using structured generation.
+</p>
+
+
+<div id="outline-container-org82ff751" class="outline-2">
+<h2 id="org82ff751">The Quick Rebuttal: Structured Generation <i>improves</i> performance.</h2>
+<div class="outline-text-2" id="text-org82ff751">
+<p>
+For those needing a quick answer as to whether or not structured generation hurts performance: the answer is a clear no.
+In the figure below you can see the results of a quick implementation of JSON generation for all of the concerning eval runs in the article.
+</p>
+
+<div id="orgb5c9716" class="figure">
+<p><img src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/tasks_revisited_hEAr.png" alt="tasks_revisited.png" width="100%">
+</p>
+<p><span class="figure-number">Figure 2: </span>Results of re-implementing the concerning evals.</p>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-right">
+
+<col class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Task</th>
+<th scope="col" class="org-right">Unstructured</th>
+<th scope="col" class="org-right">Structured</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">GSM8K</td>
+<td class="org-right">0.77</td>
+<td class="org-right">0.78</td>
+</tr>
+
+<tr>
+<td class="org-left">Last Letter</td>
+<td class="org-right">0.73</td>
+<td class="org-right">0.77</td>
+</tr>
+
+<tr>
+<td class="org-left">Shuffle Object</td>
+<td class="org-right">0.41</td>
+<td class="org-right">0.44</td>
+</tr>
+</tbody>
+</table>
+<p>
+While our unstructured results are in line with the paper,
+our structured results directly contradict the findings of the paper by showing that structured generation is an <i>improvement</i> across the board.
+Notebooks to reproduce these results can be <a href="https://github.com/dottxt-ai/demos/tree/main/say-what-you-mean">found on github</a>.
+</p>
+
+<p>
+Here are some of the key issues we found in the paper:
+</p>
+
+<ol class="org-ol">
+<li>The paper <i>itself</i> finds that structured generation has superior performance on a number of classification tasks.</li>
+<li>The prompts used for unstructured (NL) generation are markedly <i>different</i> than the ones used for structured generation, so the comparisons are not apples-to-apples to begin with.</li>
+<li>The structured generation prompts do not provide the model with adequate information to solve the task, this leads to particularly poor performance for the ‘json-mode’ examples.</li>
+<li>The real meat of the paper is actually about parsing the results of one LLM with a second LLM. The authors refer to this as the “Perfect Text Parser”, we will refer to it as the “AI parser” (for reasons we'll clarify soon).</li>
+<li>The paper confuses structured generation with JSON-mode<sup><a id="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>, although independent runs of these evals show that “JSON-mode” yields better results than unstructured generation.</li>
+</ol>
+
+<p>
+An apt analogy would be to programming language benchmarking: it would be easy to write a paper showing that Rust performs worse than Python simply by writting terrible Rust code.
+Any sensible readers of such a paper would quickly realize the results reflected the skills of the author much more than the capability of the tool. But it <i>is</i> genuinely challenging to write optimally performant code,
+just like it is difficult to ensure your evaluations are truly representative of the task you are trying to understand and measure.
+</p>
+
+<p>
+All that said,
+this paper does provide a great opportunity to dive a bit deeper
+into what structured generation is and how to get the best performance out of it.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc35d308" class="outline-2">
+<h2 id="orgc35d308">Task Overview - Last Letter</h2>
+<div class="outline-text-2" id="text-orgc35d308">
+<p>
+Here we’ll be focusing on the task that Speak Freely claimed structured generation did the most poorly on:
+<a href="https://paperswithcode.com/dataset/lastletterconcat">Last Letter</a>.
+</p>
+
+<p>
+In this task the model is presented with a list of 4 names such as:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown">Ian Peter Bernard Stephen
+</pre>
+</div>
+
+<p>
+And then the model must concatenate the <i>last</i> letter of each. The answer for that example would be: <code>NRDN</code>
+</p>
+
+<p>
+The evaluation consists of 150 questions in the “test” set, and 350 in the "train" set.
+The paper uses only the 150 “test” question, so we will as well (though all findings here also hold for the full set).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf111a37" class="outline-2">
+<h2 id="orgf111a37">Why Do We Need Structured Generation? Parsing Results!</h2>
+<div class="outline-text-2" id="text-orgf111a37">
+<p>
+One of the more interesting parts of the approach in the paper,
+that honestly should have been the focus, is the so called “Perfect Text Parser” used to extract the answer from the initial model response.
+Typically most evaluation frameworks use a simple,
+clearly defined regular expression when parsing responses, however Tam, et al use <code>claude-3-haiku-20240307</code> to parse
+the response from the generated output of model.
+This means that two models are actually used for each answer.
+In the paper they refer to this as the “Perfect Text Parser”. It turns out the choice of the word "perfect" is a bit misleading,
+so we’ll be referring to this as the “AI Parser”.
+</p>
+
+<p>
+It’s important to note this non-standard method for transforming the response because the primary reason we use structured generation
+when working with LLMs it to <i>guarantee</i> the format of the response for easy parsing.
+That is, parsing and structured generation go hand-in-hand.
+While there are quite a few issues with this paper, the use of the AI parser is quite interesting and worth exploring in the context of structured generation.
+We’ll take a look at AI parsing vs structured generation,
+which will help us gain a stronger understanding of just how powerful structured generation is.
+</p>
+</div>
+
+<div id="outline-container-orgc269802" class="outline-3">
+<h3 id="orgc269802">Issue #1: The AI Parser</h3>
+<div class="outline-text-3" id="text-orgc269802">
+<p>
+To better understand the impact the AI Parser makes, we’ll take a deep dive into one of their recorded examples.
+Thankfully, Tam, et al. did provide <a href="https://drive.google.com/file/d/1HIh6BydZjxBkqm1oAxR5zSHzMG3M1nPC/view?usp=sharing">extensive data (12GB!)</a> from their experiments.
+These experiments are all sorted by the model and the prompt template used.
+We’ll be taking a deep dive into the <code>lasterletter-t3-f3</code> prompt template using <code>meta-llama/Meta-Llama-3-8B-Instruct</code>
+specifically looking at the 1-shot example.
+</p>
+
+<p>
+Let’s start by looking at what the prompt instructs the model to do in the best performing Natural Language (NL) format:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown">Follow the instruction to complete the task:
+String manipulation task:
+• Given: A sequence of words
+• Required: A new string made from the last letter of each word
+• Process: Think step by step to solve this challenge
+Note: Ensure you've read the question thoroughly before beginning.
+
+
+Instruct : Provide your output in the following text format:
+Answer: &lt;think step by step&gt;. The final answer is &lt;answer&gt;
+</pre>
+</div>
+
+<p>
+Notice that the format of the response is explicitly described: <code>The final answer is &lt;answer&gt;</code>.
+This means, if the model were to adhere to our prompt, we should be able to parse all answers with this simple regex:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #DFAF8F;">answer_regex</span> <span style="color: #DCDCCC;">=</span> r<span style="color: #CC9393;">'answer is ([A-Za-z]{4})'</span>
+</pre>
+</div>
+
+<p>
+To see the impact of using the AI Parser we can iterate through the recorded results of the experiment
+(found in the file <code>text_llama-3-8b-instruct_shots_1.jsonl</code>). To be clear,
+we aren’t running any models right now, just seeing how different parsing methods impact the final score for an existing experiment.
+</p>
+
+<p>
+We can immediately see there is a discrepancy between the strict regex parsing and the AI parsing:
+</p>
+
+<div id="org6f42b59" class="figure">
+<p><img src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/recorded_data_strict_vs_ai_hEAr.png" alt="recorded_data_strict_vs_ai.png" width="100%">
+</p>
+<p><span class="figure-number">Figure 3: </span>Comparing a strict regex parser with the AI parser.</p>
+</div>
+
+<p>
+So what’s happening here? 
+</p>
+
+<p>
+It turns out that AI parser is doing <i>a lot</i> of the heavy lifting for the NL format.
+By going over the results we can see there were many cases where our strict regex failed to capture the (arguably) correct response
+from the model. Here are a few examples that the AI Parser was able to correctly recover that didn't match our regex:
+</p>
+
+<ul class="org-ul">
+<li><code>The answer is e-S-S-E.</code> → ESSE</li>
+<li><code>The answer is AAA R.</code> → AAAR</li>
+<li><code>The answer is "reye".</code> → REYE</li>
+<li><code>The final answer is: YOOI</code> → YOOI</li>
+</ul>
+
+<p>
+Clearly our strict regex was indeed a bit too strict.
+All of these answers seem reasonable to me, there are a few cases in the full data set where one might disagree,
+but overall these seem acceptable responses.
+In lieu of an extra call to a more powerful model,
+a reasonable solution is to simply extend our regular expression so that it covers these cases.
+We’ll add the following alternate regexes to solve the sample cases we’ve found:
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #DFAF8F;">alt_regex_1</span> <span style="color: #DCDCCC;">=</span> r<span style="color: #CC9393;">'answer is ([A-Za-z]-[A-Za-z]-[A-Za-z]-[A-Za-z])'</span>
+<span style="color: #DFAF8F;">alt_regex_2</span> <span style="color: #DCDCCC;">=</span> r<span style="color: #CC9393;">'answer is:? "?([A-Za-z] ?[A-Za-z] ?[A-Za-z] ?[A-Za-z])"?'</span>
+<span style="color: #DFAF8F;">alt_regex_3</span> <span style="color: #DCDCCC;">=</span> r<span style="color: #CC9393;">'Concatenating them is "([A-Za-z]{4})"'</span>
+<span style="color: #DFAF8F;">alt_regex_4</span> <span style="color: #DCDCCC;">=</span> r<span style="color: #CC9393;">"answer is:? ([A-Za-z]'?[A-Za-z]'?[A-Za-z]'?[A-Za-z])"</span>
+</pre>
+</div>
+<p>
+It turns out that these cover the <i>full</i> set of cases we missed,
+no need for a separate model at all! If we use this combination of regexes we get the following results from parsing:
+</p>
+
+<div id="org5465b53" class="figure">
+<p><img src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/strict_vs_ai_vs_flexible_hEAr.png" alt="strict_vs_ai_vs_flexible.png" width="100%">
+</p>
+<p><span class="figure-number">Figure 4: </span>Comparing a strict regex parser, the AI parser and a more flexible regex parser.</p>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Parser</th>
+<th scope="col" class="org-right">Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">strict regex</td>
+<td class="org-right">0.35</td>
+</tr>
+
+<tr>
+<td class="org-left">AI parser</td>
+<td class="org-right">0.57</td>
+</tr>
+
+<tr>
+<td class="org-left">flexible regex</td>
+<td class="org-right">0.61</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Surprisingly, our hand curated list of regexes (which didn’t take too much time to write) outperforms the AI parser for this data set!
+It’s worth mentioning that the main selling point of structured generation is to not have to worry about this parsing.
+However it is a useful exercise that shows us that the AI parser is, in fact, not the “perfect” text parser:
+running our hand crafted flexible regex parser outperforms a call to Claude (and is much faster and cheaper!).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge0e60f7" class="outline-3">
+<h3 id="orge0e60f7">Reproducing These Results - Unstructured</h3>
+<div class="outline-text-3" id="text-orge0e60f7">
+<p>
+Now let’s go ahead and run this using <code>outlines.generate.text</code> with the exact same prompt to see what we get.
+We will make a small modification to the one-shot example used in the prompt.
+Tam, et al’s examples only use two names, but all the questions use four.
+In my experience, even without structured generation, it’s always important that your examples match the format you are looking for.
+So we’ve modified the prompt example to include all four names.
+</p>
+
+<p>
+When running using <code>outlines.generate.text</code> we get the following results compared to the original results reported in the data:
+</p>
+
+
+<div id="org10551c0" class="figure">
+<p><img src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/repro_nl_1_hEAr.png" alt="repro_nl_1.png" width="100%">
+</p>
+<p><span class="figure-number">Figure 5: </span>Reproducing the original NL results.</p>
+</div>
+
+
+<p>
+As you can see our results, while slightly better, are more or less in line with what the recorded results show.
+We’re also not aiming for perfect replication, just making sure our results are on the same page.
+</p>
+
+<p>
+Since cleaning up the bad one-shot example, the gap in the difference between the parsers is also smaller.
+We’ve <a href="https://blog.dottxt.ai/prompt-efficiency.html">seen in the past</a> that it seems what models are learning from the example cases is in fact the structure of the problem,
+so it’s not surprising that giving better examples of structure improves adherence to that structure.
+</p>
+
+<p>
+Now we can really test the impact structured generation has on performance.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge63f04d" class="outline-3">
+<h3 id="orge63f04d">Anything You Can Parse, You Can Generate</h3>
+<div class="outline-text-3" id="text-orge63f04d">
+<p>
+The reason we focus on the AI parser is that understanding how you parse the response from an LLM is the key
+to really understanding structured generation.
+It’s a common misunderstanding (one made by the paper) to think that structured generation is merely another name for JSON-mode
+(or YAML-mode, XML-mode, etc). A better mental model for structured generation is: <i>running our response parser as a generator</i>.
+</p>
+
+<p>
+To make this clear, when running structured generation on the prompt used,
+we are simply going to add structure for the reasoning step, and then append our answer regex to that.
+This allows a unification of the prompt, the parser, and the generator. That’s the secret to why structured generation is so <i>powerful</i>.
+</p>
+
+<p>
+Let’s define our structure and see how it does.
+Here’s a regex that represents the “chain-of-thought” reasoning structure in the answer (which is also found in the prompt itself):
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #DFAF8F;">cot_regex</span> <span style="color: #DCDCCC;">=</span> r<span style="color: #CC9393;">'Answer: T[\w \\",\\.]{30,250}. The '</span>
+</pre>
+</div>
+<p>
+This will allow the model “think” for between 30 and 250 characters, then start it’s answer.
+To complete our structure we just use our existing <code>answer_regex</code> to make our generator:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #DFAF8F;">struct_strict</span> <span style="color: #DCDCCC;">=</span> outlines.generate.regex(
+    model,
+    cot_regex <span style="color: #DCDCCC;">+</span> answer_regex, 
+    sampler<span style="color: #DCDCCC;">=</span>greedy())
+</pre>
+</div>
+
+<p>
+That’s it! We’re going to use our default strict regex because the <i>entire point of structured generation is not to worry about parsing out output!</i>
+There’s no need to use the more flexible regex since the model will only output what we want. Let’s see how it does:
+</p>
+
+<div id="orgb16544d" class="figure">
+<p><img src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/reproducing_nl_results_hEAr.png" alt="reproducing_nl_results.png" width="100%">
+</p>
+<p><span class="figure-number">Figure 6: </span>Reproducing the original NL results with structured generation.</p>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">method</th>
+<th scope="col" class="org-right">Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">original</td>
+<td class="org-right">0.57</td>
+</tr>
+
+<tr>
+<td class="org-left">unstructured (strict)</td>
+<td class="org-right">0.65</td>
+</tr>
+
+<tr>
+<td class="org-left">unstructured (flexible)</td>
+<td class="org-right">0.66</td>
+</tr>
+
+<tr>
+<td class="org-left">structured</td>
+<td class="org-right">0.68</td>
+</tr>
+</tbody>
+</table>
+<p>
+Consistent with all of our past findings, structured generation <i>outperforms</i> unstructured generation.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5e790e1" class="outline-2">
+<h2 id="org5e790e1">What about JSON?</h2>
+<div class="outline-text-2" id="text-org5e790e1">
+<p>
+With some insight into how to properly perform structured generation,
+let’s try to figure out what went wrong with the JSON results. After all, if correct, the results in this chart are concerning:
+</p>
+
+<div id="orgaf27a8c" class="figure">
+<p><img src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/bad_json_hEAr.png" alt="bad_json.png" width="100%">
+</p>
+<p><span class="figure-number">Figure 7: </span>Original chart showing poor JSON-mode performance on Last Letter.</p>
+</div>
+
+<p>
+In the chart above, it looks like the structured generation (JSON-mode) is getting an awful &lt; 10% accuracy compared to the unstructured (NL) result that’s getting ~70% accuracy. The NL result is essentially what we reproduced previously, so that result is in line with what we reproduced,
+but that 10% doesn’t match with what we saw. Maybe it’s an issue with requiring the model to respond in JSON?
+</p>
+</div>
+
+<div id="outline-container-org900fb8f" class="outline-3">
+<h3 id="org900fb8f">Issue #2: Bad Prompting</h3>
+<div class="outline-text-3" id="text-org900fb8f">
+<p>
+As mentioned, a major issue with <i>Speak Freely</i> is that the paper <i>uses different prompts for structured generation and unstructured generation</i>. In our example, to evaluate the performance of structured generation,
+we compared results with the same prompt. This is the <b>only</b> honest way to make any statements about structured vs unstructured performance.
+</p>
+
+<p>
+Because of this the first place we should look for trouble is in the prompt used for the JSON-mode evaluations.
+So let’s take a look at the recorded data that matches closely to these results in the chart
+(found in <code>lastletter-t2-structure/struct_llama-3-8b-instruct_shots_0.jsonl</code>). Here is an example of the prompt used:
+</p>
+<div class="org-src-container">
+<pre class="src src-markdown">Follow the instruction to complete the task:
+Read carefully for each of the last question and think step 
+by step before answering. You are given a string of words 
+and you need to take the last letter of each words and concate them
+
+
+Instruct : You must use the tool
+
+
+
+Question: Take the last letters of each words in 
+"Britt Tamara Elvis Nayeli" and concatenate them.
+</pre>
+</div>
+<p>
+This prompt needs substantial improvement before it can be used to properly evaluate the task at hand!
+One practice I encourage when writing prompts is to always ask yourself
+“does this prompt contain enough information that a reasonably well informed human could answer the question correctly?”
+Reading this prompt is not obvious to me that:
+</p>
+
+<ul class="org-ul">
+<li>The answer must be JSON (JSON isn’t mentioned at all)</li>
+<li>Even if you did guess JSON for the response, what is the schema you should respond in?</li>
+</ul>
+
+<p>
+While tool use is mentioned, the prompt <i>doesn’t mention the tools to use!</i>
+There is no way an LLM could infer what it’s supposed to be doing.
+Structured generation is incredible, but it can’t magically make a model understand what you want any more than throwing
+rail road tracks in your backyard will make your home a convenient train stop.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgde3bb1c" class="outline-3">
+<h3 id="orgde3bb1c">Proper Prompting for JSON</h3>
+<div class="outline-text-3" id="text-orgde3bb1c">
+<p>
+We discussed earlier that structured generation is not the same thing as JSON-mode, but sometimes we do want JSON.
+To understand where Speak Freely went wrong, let’s walk through the way to do structured generation correctly.
+We’ll start by using an instruct prompt such as the following:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-markdown">&lt;|begin_of_text|&gt;&lt;|start_header_id|&gt;system&lt;|end_header_id|&gt;
+
+You are an expert in solving simple word puzzles using reasoning steps. Your specific
+task is going to be to take a list of 4 names and reason about the last letter of each .,
+then you will concatenate those letters into a word. The Question will be plaintest from the user
+and response will be formatted as JSON below:
+
+{"reasoning": &lt;reasoning about the answer&gt;, "answer": &lt;final answer&gt;}&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Question: Take the last letters of each words in 'Ian Peter Bernard Stephen' and concatenate them.&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+
+{"reasoning": "The last letter of 'Ian' is 'N', the last letter of 'Peter' is 'R', the last letter of 'Bernard' is 'D', and the last letter of 'Stephen' is 'N'. Therefore, the answer is 'NRDN'.", "answer": "NRDN"}&lt;|eot_id|&gt;&lt;|start_header_id|&gt;user&lt;|end_header_id|&gt;
+
+Question: Take the last letters of each words in "Britt Tamara Elvis Nayeli" and concatenate them.",&lt;|eot_id|&gt;&lt;|start_header_id|&gt;assistant&lt;|end_header_id|&gt;
+
+&lt;|eot_id|&gt;
+</pre>
+</div>
+<p>
+Here are a few things that make this prompt good.
+</p>
+
+<ol class="org-ol">
+<li>Using the proper instruct format for our model (using <code>apply_chat_template</code>).</li>
+<li>Provide an <i>example</i> that uses the correct structure and matches our problem.</li>
+<li>End with an empty “assistant” prompt so that the response will start with our structure.</li>
+</ol>
+
+<p>
+Structured generation works perfectly well with <i>continuation</i> models,
+but since we’re using an instruct model we should use the instruct prompt format for best results (this is issue 1).
+The most important thing we’ve done is 2 which is to show the model the structure we want it to follow.
+Item 3 is a small but important detail: instruct prompts are trained to alternate between the ‘user’ role and the ‘assistant’ role,
+if we don’t start with the empty assistant response the model will want to start with <code>assistant...</code> rather than our desired structure
+<code>{"reasoning": ...</code>.
+</p>
+
+<p>
+It can be quite helpful when writing your prompt to also generate unstructured samples
+to see how well the model is following the desired formatting behavior.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org001e2e1" class="outline-3">
+<h3 id="org001e2e1">Defining Our Structure</h3>
+<div class="outline-text-3" id="text-org001e2e1">
+<p>
+Next we want to define our structure (though really this should go hand in hand with the prompt).
+For this task we’ll use a simple Pydantic model:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #F0DFAF; font-weight: bold;">class</span> <span style="color: #7CB8BB;">Response</span>(BaseModel):
+    reasoning: constr(max_length<span style="color: #DCDCCC;">=</span>250)
+    <span style="color: #DFAF8F;">answer</span>: <span style="color: #DCDCCC; font-weight: bold;">str</span> <span style="color: #DCDCCC;">=</span> Field(pattern<span style="color: #DCDCCC;">=</span>r<span style="color: #CC9393;">'[A-Z]{4}'</span>)
+</pre>
+</div>
+<p>
+We’re constraining the reasoning step here to 250 characters to make sure it doesn’t take <b>too</b> long to reason,
+and also constraining our answer to only valid possible responses of 4 letters.
+</p>
+
+<p>
+A really important step in the process is to <i>verify the prompt contains our structure</i>.
+The entire point of the prompt is to prime our LLM for success, if we aren’t showing it the <i>exact</i> structure we want,
+the model will have to work harder to get the correct answer. Here’s the code for our ensuring the prompt matches the structure:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #F0DFAF; font-weight: bold;">from</span> outlines.fsm.json_schema <span style="color: #F0DFAF; font-weight: bold;">import</span> build_regex_from_schema
+<span style="color: #DFAF8F;">schema_regex</span> <span style="color: #DCDCCC;">=</span> build_regex_from_schema(Response.schema_json())
+
+<span style="color: #DFAF8F;">example_prompt</span> <span style="color: #DCDCCC;">=</span> create_prompt(all_evals[5][<span style="color: #CC9393;">'question'</span>], tokenizer)
+re.search(schema_regex, example_prompt)
+</pre>
+</div>
+<p>
+After verifying this we’re good to go!
+It’s worth pointing out that doing all these thing will also generally improve your unstructured results.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfcc22b3" class="outline-3">
+<h3 id="orgfcc22b3">JSON Results</h3>
+<div class="outline-text-3" id="text-orgfcc22b3">
+<p>
+Now let’s run a proper apples-to-apples comparison of structured generation to unstructured. Here is the outcome of running this eval:
+</p>
+
+<div id="org2ec5f5a" class="figure">
+<p><img src="Say%20What%20You%20Mean_%20A%20Response%20to%20'Let%20Me%20Speak%20Freely'_files/json_results_hEAr.png" alt="json_results.png" width="100%">
+</p>
+<p><span class="figure-number">Figure 8: </span>Results of comparing structured and unstrutured JSON generation using the same prompt (compared with NL structured prompt).</p>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col class="org-left">
+
+<col class="org-right">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">method</th>
+<th scope="col" class="org-right">Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">NL (struct)</td>
+<td class="org-right">0.68</td>
+</tr>
+
+<tr>
+<td class="org-left">JSON (unstruct)</td>
+<td class="org-right">0.73</td>
+</tr>
+
+<tr>
+<td class="org-left">JSON (struct)</td>
+<td class="org-right">0.77</td>
+</tr>
+</tbody>
+</table>
+<p>
+Once again we see that structured generation outperforms unstructured generation.
+It’s also worth noting that our <i>unstructured</i> JSON result (at 73% accuracy) <i>outperformed</i> our <i>structured</i> natural language (68% accuracy) result,
+but our overall winner is structured JSON with 77% accuracy!
+</p>
+
+<p>
+Here we can see why it’s essential to compare apples to apples when understanding the performance of structured generation.
+If, for example, we compared the JSON prompt for unstructured and the NL for structured,
+we would incorrectly conclude the structured generation is <i>slightly</i> worse, when the issue is really the prompt.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org087c979" class="outline-2">
+<h2 id="org087c979">Conclusion</h2>
+<div class="outline-text-2" id="text-org087c979">
+<p>
+We here at <b>.txt</b> are passionate about structured generation, and truly believe it has the potential to transform the work being done with LLMs in profound ways.
+That’s precisely why we take claims that structure generation has adverse effects on LLM output <i>very</i> seriously.
+As a community we are <i>all</i> still learning how to get the most out of LLMs and working hard to advance this promising area of research.
+Everyone struggles at times to get LLMs to perform. If you are experiencing problems with structured generation, don’t hesitate to reach out.
+We would love to understand more about the areas where structured generation might need improvement, and get those areas fixed.
+</p>
+
+<p>
+That is why it is so disappointing when other researchers take less care and end up spreading misinformation, that we then have to do the work to correct.
+If you’re interested in driving the future of LLMs, we’re more than happy to help you on your journey.
+</p>
+
+<p>
+But, if you <b>are</b> going to publish a damning critique of structured generation, just make sure you put the same effort in to understanding the problem as we would. Or, perhaps better expressed by Omar Little from <i>the Wire</i>:
+</p>
+
+<blockquote>
+<p>
+"Come at the King, you best not miss."
+</p>
+</blockquote>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">
+"JSON-mode" refers to a fine-tuning process rather than strict structured generation. JSON mode has no guarantees about the returned value, highlighted briefly in <a href="https://www.youtube.com/watch?v=vEF-nuf_zRM&amp;t=11s">our video on the topic</a>.
+</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+
+                <div id="mc_embed_shell">
+                <div id="mc_embed_signup">
+                <form action="https://dottxt.us12.list-manage.com/subscribe/post?u=aec344375257ff07dcf9a6ef6&amp;id=922982b042&amp;f_id=00db4ee0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
+                        <div id="mc_embed_signup_scroll"><h3>Keep up with structured generation</h3>
+                        <div class="mc-field-group"><label for="mce-EMAIL">Email Address </label><input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required=""><span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                        <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display: none;"></div>
+                        <div class="response" id="mce-success-response" style="display: none;"></div>
+                        </div><div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_aec344375257ff07dcf9a6ef6_922982b042" tabindex="-1"></div><div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
+                </div>
+                </form>
+                </div>
+                </div>
+</div>
+
+
+<protonpass-root-33c9 data-protonpass-role="root" data-protonpass-theme="os"></protonpass-root-33c9></body></html>

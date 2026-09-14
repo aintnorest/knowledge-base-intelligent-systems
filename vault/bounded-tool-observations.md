@@ -22,6 +22,8 @@ A tool result should be sufficient for the next decision without being a dump of
 
 Start from actual agent traces. If an agent repeatedly scans long results for one field, asks whether a list is complete, or confuses silence with success, add the missing bound or signal. Make expansion opt-in so simple tasks remain cheap, but preserve enough identifiers and continuation hints for the agent to request detail safely.
 
+A model-specific implementation example is OpenAI's Codex recommendation to cap tool output near 10,000 estimated tokens, preserve equal portions from the beginning and end, and mark the omitted middle explicitly. The exact budget is not universal; the durable properties are a declared bound, preserved boundary evidence, an unmistakable truncation marker, and a route to retrieve the missing region.
+
 ## Limitations
 
 Overly aggressive defaults can conceal the one field that matters and force extra calls. Bounds should be chosen and evaluated by task class, with reliable expansion paths and tests for zero results, large records, pagination, and error recovery.
@@ -29,3 +31,4 @@ Overly aggressive defaults can conceal the one field that matters and force extr
 ## Sources
 
 - [AXI: Agent eXperience Interface dossier](/dossiers/axi-agent-experience-interface.md) — groups token-efficient notation, small default schemas, truncation, pre-computed aggregates, definitive empty states, and contextual filtering into an agent-interface framework.
+- [Codex Prompting Guide dossier](/dossiers/openai-codex-prompting-guide.md) — supplies a concrete head-and-tail truncation policy for a coding-agent harness.

@@ -84,6 +84,8 @@ The scoring threshold should be declared with the benchmark result. Otherwise, t
 
 Repeated trials should be numerous enough to estimate the deployment-relevant threshold with useful precision. A 2025 GPQA study found 25 trials per item comparable with 100 for its tested effects, but that is a task-specific empirical result rather than a universal sample-size rule.
 
+`pass^k` asks the complementary reliability question: what fraction of tasks succeed on **every** one of \(k\) trials. Under an independence approximation, a 75% per-trial success rate becomes \(0.75^3 \approx 42\%\) for three consecutive successes. Report pass@k for search workflows and pass^k or direct repeated-trial thresholds for customer-facing consistency; shared state and correlated failures invalidate the simple exponentiation.
+
 ## Multi-Objective Evaluation
 
 Prompt quality is often a tradeoff frontier, not a single score. Production evaluations should track multiple dimensions when they matter:
@@ -98,6 +100,16 @@ Prompt quality is often a tradeoff frontier, not a single score. Production eval
 
 This is especially relevant for prompt optimization, where a candidate prompt can improve accuracy while becoming slower, more expensive, harder to audit, or more brittle.
 
+## Prompt Distribution and Search
+
+A single instruction is not a neutral model interface. In a 6.5M-instance study, 21 of 25 automatically paraphrased tasks had significant prompt-dependent ranking differences and 15 contained a prompt pair with negative Kendall's \(\tau\). Choose the aggregation for the use case: `MaxP` estimates a searched-and-frozen downstream prompt, `AvgP` estimates robustness over a declared prompt distribution, and a combined score can trade peak against sensitivity. Prompt selection and final evaluation need separate data.
+
+Model selection for an application should likewise compare model–prompt configurations under comparable search budgets. Across five anonymized models, per-model optimization produced low mean rank correlation with a shared-prompt baseline and changed task winners, while some tasks barely reordered. A shared prompt answers an interoperability question; independently optimized prompts estimate reachable deployment performance. Both results are useful if they are named correctly.
+
+## Agent Evaluations
+
+Separate capability suites, which should remain difficult enough to reveal progress, from regression suites, whose known-good behavior should stay stable. Grade the resulting environment state where possible—a reservation row or passing artifact is stronger evidence than a transcript claiming success. Inspect trajectories for policy, safety, quality, and diagnosis, but do not require one fixed tool-call sequence when several valid paths exist.
+
 ## Key Insight
 
 There is no single "best" benchmark. The appropriate evaluation depends on the specific application. Moreover, automated metrics like BLEU remain popular despite known limitations because they are convenient, but they should be supplemented with human evaluation and reliability analysis for high-stakes applications.
@@ -109,3 +121,7 @@ There is no single "best" benchmark. The appropriate evaluation depends on the s
 - [Smarter AI Through Prompt Engineering dossier](/dossiers/smarter-ai-through-prompt-engineering.md) - emphasizes multi-objective prompt evaluation across accuracy, efficiency, interpretability, cost, and task-specific deployment constraints.
 - [Exploring Prompt Engineering dossier](/dossiers/exploring-prompt-engineering-swot.md) - maps prompt-engineering techniques to metrics including accuracy, AUC, BLEU, BERTScore, CoLA, F1, HIT@N, NDCG@N, perplexity, ROUGE, and STS-B.
 - [Prompting Science Report 2 dossier](/dossiers/decreasing-value-chain-of-thought-prompting.md) - applies average, 51%, 90%, and 100% correctness thresholds over 25 repeated GPQA trials and measures the latency cost of chain-of-thought prompting.
+- [State of What Art? dossier](/dossiers/multi-prompt-llm-evaluation.md) — quantifies prompt-dependent scores and rankings and proposes purpose-specific multi-prompt aggregates.
+- [Optimization before Evaluation dossier](/dossiers/optimization-before-evaluation.md) — distinguishes shared-prompt capability comparison from equal-budget model–prompt configuration evaluation.
+- [Playing Pretend dossier](/dossiers/expert-personas-factual-accuracy.md) — demonstrates repeated-trial thresholds and the need to report prompt-induced refusals separately from wrong answers.
+- [Demystifying evals for AI agents dossier](/dossiers/demystifying-agent-evals.md) — distinguishes capability and regression suites, pass@k and pass^k, trajectories and outcomes, and task versus grader failures.

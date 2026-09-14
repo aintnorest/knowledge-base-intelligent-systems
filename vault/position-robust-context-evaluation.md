@@ -23,6 +23,8 @@ A large declared context window establishes capacity, not dependable access. Agg
 5. Report accuracy or task quality at each position, the minimum score, the mean score, and the positional spread. Slice results by task type, model revision, prompt layout, and retrieval policy.
 6. Repeat after meaningful changes to model, prompt, reranker, chunking scheme, or context assembly.
 
+Position effects are task-specific. Chroma's semantic needle task showed no notable location effect across 11 positions even while low-similarity pairs decayed with length, whereas a repeated-word task favored early placement at long lengths. GSM-IC found severe distraction with its extra sentence fixed immediately before the question but never moved that sentence. Both results argue for a position sweep rather than assuming either a universal lost-in-the-middle curve or position invariance.
+
 ## Practical Use
 
 Use this for RAG, long-document QA, coding agents reading repositories, memory systems, and any workflow that concatenates multiple candidate sources. Pair it with content-grounding checks: a position-robust answer that is not supported by the supplied evidence is not a reliable result.
@@ -39,3 +41,5 @@ When a weakness appears, compare focused retrieval, reranking, fewer or more coh
 ## Sources
 
 - [Lost in the Middle: How Language Models Use Long Contexts dossier](/dossiers/lost-in-the-middle-long-contexts.md) — controlled multi-document QA and UUID lookup experiments that vary target position, length, architecture, query placement, and retrieval depth.
+- [Context Rot dossier](/dossiers/context-rot-long-context-performance.md) — contrasts position-insensitive semantic retrieval with position-sensitive repeated-word generation across growing contexts.
+- [Large Language Models Can Be Easily Distracted by Irrelevant Context dossier](/dossiers/irrelevant-context-distraction.md) — a strong distractor result whose fixed near-question placement limits positional generalization.

@@ -38,9 +38,9 @@ This decomposition makes a reported improvement reproducible: record the represe
 
 ### TextGrad (Graph-Structured Textual Feedback)
 
-- Generalizes the textual-gradient idea from one prompt to a computation graph of text-valued variables. A backward LLM receives the forward conversation, a variable's role, and downstream critique, then writes feedback for that specific variable; an LLM optimizer turns the feedback into replacement text.
-- For shared-prompt optimization, aggregate feedback from a minibatch, evaluate each candidate on validation, and retain a new instruction only after it beats the incumbent. The paper used GPT-4o as the feedback engine while optimizing an instruction-only GPT-3.5-Turbo prompt.
-- **Use with care**: textual feedback is not a numerical gradient or causal proof. Record the trace, keep independent holdouts and component-level constraints, and compare against equal-cost baselines because backward calls grow with graph size.
+- Generalizes the textual-gradient idea from one prompt to a computation graph of text-valued variables. A backward LLM receives the forward conversation, a variable's role, and downstream critique, then writes feedback for that variable; an LLM optimizer proposes replacement text.
+- For reusable prompts, aggregate feedback from a minibatch, evaluate multiple candidates on validation, and retain a new instruction only after it beats the incumbent.
+- **Use with care**: “gradient” is an interface metaphor, not an explanatory mechanism. Controlled ablations found no consistent chain-rule-like advantage for three-stage over one-step rewriting, no significant degradation from wrong labels in tested variants, and prompt-only `improve` baselines that still beat seeds. Validate candidate discovery and selection directly rather than inferring learning from gradient vocabulary.
 
 ### Rubric-Rationale Prompt Rewriting
 
@@ -87,10 +87,22 @@ This decomposition makes a reported improvement reproducible: record the represe
 
 ### OPRO (Optimization by Prompting)
 
-- Uses an LLM as the optimizer: the prompt includes the task, previous candidate solutions or prompts, and their scores, then asks the model to propose stronger candidates.
-- Applies to both general optimization problems and prompt optimization for benchmark accuracy.
-- **Result**: In the cited survey, OPRO-generated prompts outperform human-designed prompts by up to 8% on GSM8K and up to 50% on challenging Big-Bench tasks.
+- Conditions an optimizer LLM on a scored history of prompt candidates, then externally evaluates new instructions on the target task.
+- Search mechanics materially affect results: visible scores, worse-to-better ordering, three exemplars, eight candidates per step, and optimizer temperature 1.0 outperformed tested alternatives.
+- On PaLM 2-L GSM8K, the selected instruction scored 80.2% test accuracy versus 71.8% for “Let's think step by step.” The result remained contingent: one held-out BBH task scored 19.6% with the selected prompt versus 60.8% for that baseline.
+- **Use with care**: retain independent validation, equal-budget baselines, and the exact optimizer, scorer, history order, examples, and decoding settings.
 
+### MIPRO (Joint Instruction and Demonstration Search)
+
+- Factorizes each module prompt into an instruction choice and a bootstrapped-demonstration-set choice, then uses multivariate TPE with stochastic minibatch scores to search their joint configuration.
+- Candidate construction and evaluation allocation are separate stages: standard MIPRO proposes a fixed pool upfront, searches it on minibatches, and periodically grants the strongest configuration a full-train evaluation.
+- **Use with care**: successful final outputs weakly label every intermediate trace as a usable demonstration, small datasets are adaptively revisited, and the main evidence is tied to particular proposers, teachers, renderers, and 20–50 full-evaluation-equivalent budgets.
+
+### GEPA (Reflective Prompt Evolution)
+
+- Mutates one module from a small trace-bearing minibatch containing the current prompt, execution trace, score, and evaluator text; accepts improvements through an instance-wise Pareto pool rather than one global incumbent.
+- Under matched task-rollout caps, GEPA beat MIPROv2 across six reported tasks and Pareto selection beat greedy and beam parent selection in a four-task ablation.
+- **Use with care**: rollout accounting excludes reflection-model calls and does not normalize tokens, compute, latency, or money. The paper also does not isolate score-only from score-plus-text feedback.
 ### DSPy-Style Pipeline Compilation
 
 - Treats a multi-stage LM application—not one prompt string—as the unit of optimization.
@@ -203,3 +215,8 @@ This decomposition makes a reported improvement reproducible: record the represe
 - [Don't Generate, Classify! Low-Latency Prompt Optimization with Structured Complementary Prompt dossier](/dossiers/low-latency-prompt-optimization-structured-complementary-prompt.md) — evaluates an eight-field classifier plus fixed template against generative prompt optimizers; its task- and field-dependent results qualify the pattern.
 - [PromptBridge dossier](/dossiers/promptbridge-cross-model-prompt-transfer.md) — calibrates paired source/target prompts, distills a reusable model-level transformation, and evaluates unseen-task transfer across coding, agents, and planning.
 - [PEEM dossier](/dossiers/peem-prompt-engineering-evaluation-metrics.md) — closes a zero-shot rewriting loop on a nine-axis prompt/response rubric; isolates the value of rationales over scalars, but compares against baselines cited from PRewrite under a different task model.
+- [Large Language Models as Optimizers dossier](/dossiers/opro-large-language-models-as-optimizers.md) — primary OPRO evidence on score-conditioned proposal, search mechanics, gains, and held-out failures.
+- [Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs dossier](/dossiers/mipro-multistage-prompt-optimization.md) — primary MIPRO evidence for joint module-instruction and demonstration-set search.
+- [GEPA dossier](/dossiers/gepa-reflective-prompt-evolution.md) — reflective mutation and diversity-preserving instance-wise Pareto selection under rollout-matched comparisons.
+- [Textual Gradients are a Flawed Metaphor dossier](/dossiers/textual-gradients-flawed-metaphor.md) — ablations showing that useful prompt search need not exhibit gradient-like learning behavior.
+- [Optimization before Evaluation dossier](/dossiers/optimization-before-evaluation.md) — shows that model rankings can change after equal-budget per-model prompt optimization, making the model–prompt configuration the deployment unit.

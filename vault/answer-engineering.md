@@ -24,6 +24,10 @@ A task can fail even when the model has useful information: the model may write 
 
 Prefer a constrained structured output and deterministic validation when the platform supports it. If a free-form response is necessary, define extraction rules in advance, log unparseable results, and measure extraction failures separately from task errors. A second LLM extractor can handle complicated output, but it adds cost and another source of variance.
 
+The extractor is part of the measured system, not post-processing trivia. On identical or comparable math outputs, changing regex rules or using an LLM extractor moved reported scores by tens of points; a correct boxed answer was even scored wrong when a later number matched the fallback parser. Parser-aware evaluation must therefore preserve raw generations, score extraction failures separately, and validate extraction on held-out outputs.
+
+Constrained decoding and schema prompting are also separate interventions. A 2024 study reported task- and model-dependent losses under format restrictions, while a vendor rebuttal found gains after matching prompts and replacing a brittle parser. The rebuttal diagnoses real prompt/parser confounds but changes several implementation variables and was not independently replicated. Evaluate at least: identical-prompt free generation plus deterministic validation, grammar-constrained generation, and free-form reasoning followed by serialization.
+
 The prompt can also constrain the answer's opening directly rather than describing it: ending the prompt with the first tokens of the target structure leaves the model continuing an already-committed form. This is a strong format control and a weak content control, and it changes what the extractor receives — see [Output Priming](/vault/output-priming.md).
 
 ## Practical Use
@@ -40,3 +44,7 @@ An extractor does not establish that the model's content is correct; it only mak
 ## Sources
 
 - [The Prompt Report dossier](/dossiers/prompt-report.md) — distinguishes answer engineering from prompt engineering and defines answer shape, answer space, and answer extraction.
+- [Let Me Speak Freely? dossier](/dossiers/format-restrictions-llm-performance.md) — evaluates schema instructions, hosted JSON mode, two-stage serialization, and large extractor-dependent score shifts.
+- [Say What You Mean dossier](/dossiers/say-what-you-mean-structured-output.md) — technical rebuttal showing prompt asymmetry and parser sensitivity, with same-prompt constrained-generation results that still need independent replication.
+- [Revisiting Chain-of-Thought Prompting dossier](/dossiers/zero-shot-stronger-than-few-shot-cot.md) — shows a last-number extractor mis-scoring a correct boxed answer and changing the zero-shot/few-shot conclusion.
+- [Optimization before Evaluation dossier](/dossiers/optimization-before-evaluation.md) — supplies parser-facing failures where semantically correct math or JSON outputs fail the application contract.

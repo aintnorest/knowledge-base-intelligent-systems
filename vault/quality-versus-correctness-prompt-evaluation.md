@@ -20,6 +20,8 @@ Reporting a single blended preference score therefore transfers credibility earn
 
 The reverse also occurs. An intervention that improves accuracy — decomposition, worked examples, tool routing — can make responses longer, more mechanical, or less pleasant, and lose on a preference comparison while winning on the metric that matters.
 
+Bare persona labels are a concrete boundary case. A 162-persona system-prompt study found no persona that significantly beat the no-role control in pooled factual multiple-choice accuracy, despite item- and model-specific flips. A later six-model report likewise found expert roles usually indistinguishable from baseline and observed capability-denying refusals under a mismatched role. Neither result tests tone, empathy, perspective, pedagogy, or detailed production personas, so it rejects a correctness claim—not every possible use of role framing.
+
 ## The Protocol
 
 1. **Split the item pool by what varies.** Open-ended items where many answers are acceptable go to the quality track. Items with a verifiable answer — reasoning, arithmetic, extraction, classification, code that runs — go to the correctness track.
@@ -60,3 +62,5 @@ The same split applies to format-control interventions: conformance to a schema 
 
 - [Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4 dossier](/dossiers/principled-instructions-questioning-llms.md) — separates "boosting" (human-judged quality gain, measured on simpler items) from "correctness" (accuracy, measured on complex reasoning items) across 26 prompt principles, and excludes five principles from the correctness track as inapplicable.
 - [Measuring AI “Slop” in Text dossier](/dossiers/measuring-ai-slop-in-text.md) — decomposes low-quality prose into utility, information-quality, and style defects; finds that the predictive dimensions differ between news and factual QA.
+- [When “A Helpful Assistant” Is Not Really Helpful dossier](/dossiers/personas-system-prompts-not-helpful.md) — isolates bare speaker and audience labels on factual accuracy and exposes a non-deployable per-question oracle gap.
+- [Playing Pretend dossier](/dossiers/expert-personas-factual-accuracy.md) — repeated-sampling evidence that expert roles do not reliably raise factual accuracy and can change refusal behavior.

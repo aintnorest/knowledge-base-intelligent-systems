@@ -10,6 +10,30 @@ timestamp: 2026-07-11T16:00:00Z
 
 ## Dossiers
 
+* [Calibrate Before Use: Improving Few-Shot Performance of Language Models](/dossiers/calibrate-before-use.md) — Contextual calibration corrects prompt-induced answer priors and reduces few-shot sensitivity to example choice, order, and format
+* [Rethinking the Role of Demonstrations: What Makes In-Context Learning Work?](/dossiers/rethinking-role-demonstrations-icl.md) — Random-label ablations separating demonstrations' mapping, input-distribution, label-space, and format functions
+* [Large Language Models Can Be Easily Distracted by Irrelevant Context](/dossiers/irrelevant-context-distraction.md) — GSM-IC evidence that a single related distractor destabilizes arithmetic reasoning and survives partial mitigation
+* [Language Models Don’t Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting](/dossiers/unfaithful-chain-of-thought-explanations.md) — Counterfactual tests of rationalized prompt-induced and stereotype-aligned answers
+* [Large Language Models as Optimizers](/dossiers/opro-large-language-models-as-optimizers.md) — OPRO's scored-history candidate generation, search mechanics, gains, and model- and task-specific failures
+* [When “A Helpful Assistant” Is Not Really Helpful](/dossiers/personas-system-prompts-not-helpful.md) — A 162-persona study finding no reliable factual-accuracy gain from bare speaker or audience roles
+* [State of What Art? A Call for Multi-Prompt LLM Evaluation](/dossiers/multi-prompt-llm-evaluation.md) — A 6.5M-instance study of prompt-dependent scores, rankings, and purpose-specific multi-prompt metrics
+* [Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs](/dossiers/mipro-multistage-prompt-optimization.md) — MIPRO's joint search over module instructions and bootstrapped demonstration sets
+* [Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of Large Language Models](/dossiers/format-restrictions-llm-performance.md) — Task-dependent schema and constrained-decoding effects, including the later prompt-and-parser confound dispute
+* [DeepSeek-R1: Reasoning Through Reinforcement Learning](/dossiers/deepseek-r1.md) — Reconciles the Nature article and expanded report on verifier-driven reasoning, distillation, and prompt-format contingencies
+* [Reasoning Models Don’t Always Say What They Think](/dossiers/reasoning-models-unfaithful-chain-of-thought.md) — Causal hint-pair and reward-hacking evidence that reasoning traces often omit answer-changing shortcuts
+* [Revisiting Chain-of-Thought Prompting: Zero-shot Can Be Stronger than Few-shot](/dossiers/zero-shot-stronger-than-few-shot-cot.md) — Capability-dependent few-shot effects and evidence that examples can mainly enforce answer format
+* [GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning](/dossiers/gepa-reflective-prompt-evolution.md) — Trace-grounded prompt mutation and instance-wise Pareto selection under rollout-matched comparisons
+* [Textual Gradients are a Flawed Metaphor for Automatic Prompt Optimization](/dossiers/textual-gradients-flawed-metaphor.md) — Ablations separating useful prompt search from unsupported gradient-like mechanism claims
+* [Optimization before Evaluation: Evaluation with Unoptimized Prompts Can be Misleading](/dossiers/optimization-before-evaluation.md) — Per-model prompt optimization that reorders application-centric model rankings
+* [Prompting Science Report 4: Playing Pretend: Expert Personas Don't Improve Factual Accuracy](/dossiers/expert-personas-factual-accuracy.md) — Repeated-sampling evidence against a general factual-accuracy benefit from expert roles
+* [An update on recent Claude Code quality reports](/dossiers/anthropic-claude-code-quality-postmortem.md) — Postmortem of reasoning-effort, history-deletion, and global-prompt regressions in Claude Code
+* [Context Rot: How Increasing Input Tokens Impacts LLM Performance](/dossiers/context-rot-long-context-performance.md) — Controlled long-context evidence on ambiguity, distractors, structure, retrieval burden, and output length
+* [Demystifying evals for AI agents](/dossiers/demystifying-agent-evals.md) — Production guidance on capability and regression suites, repeated-trial metrics, outcomes, trajectories, and graders
+* [Say What You Mean: A Response to 'Let Me Speak Freely'](/dossiers/say-what-you-mean-structured-output.md) — Vendor rebuttal identifying prompt and parser confounds in constrained-generation evaluation
+* [Prompting best practices](/dossiers/claude-prompting-best-practices.md) — Anthropic's living Claude guide, split between durable mechanics and model-specific claims
+* [Codex Prompting Guide](/dossiers/openai-codex-prompting-guide.md) — OpenAI's model-specific GPT-5.3-Codex harness, tool, phase-metadata, instruction-loading, and compaction guidance
+* [GPT-5 prompting guide](/dossiers/openai-gpt-5-prompting-guide.md) — OpenAI guidance on reasoning effort, verbosity, autonomy, instruction hygiene, and coding harnesses
+* [To CoT or Not to CoT? Chain-of-Thought Helps Mainly on Math and Symbolic Reasoning](/dossiers/to-cot-or-not-to-cot.md) — Meta-analysis and 14-model evidence that prompt-based CoT gains concentrate in mathematical and symbolic execution, where external solvers usually perform better
 * [WikiSkill: Compiling Agent Experience into Persistent Knowledge for Skill Evolution](/dossiers/wikiskill-persistent-knowledge-skill-evolution.md) — Persistent raw/wiki/skill layers for validation-gated, transferable agent skill evolution
 * [Measuring AI “Slop” in Text](/dossiers/measuring-ai-slop-in-text.md) — Human-centered, purpose-sensitive taxonomy of text defects and evidence that generic metrics and prompted LLM judges poorly reproduce expert assessments
 * [ASD-STE100 Simplified Technical English and Artificial Intelligence](/dossiers/asd-ste100-ai-assisted-technical-writing.md) — STEMG position on supervised, accountable AI assistance for controlled technical writing

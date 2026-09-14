@@ -25,6 +25,8 @@ Use the pattern when a system has several text-bearing components—such as an i
 
 Keep the variable role, forward inputs and outputs, feedback source, proposed patch, evaluator result, and model versions in the trace. These records make failures diagnosable and let operators roll back a locally harmful revision.
 
+Validate the feedback channel itself. A controlled critique found a Web-of-Lies evaluator falsely treating an indeterminate item as definitive; propagated feedback converted that error into an “always definitive” instruction that improved aggregate accuracy by exploiting class prevalence. Tested critic variants were also insensitive to wrong labels. A useful rewrite therefore does not certify a correct diagnosis—retain class-conditional metrics and compare against prompt-only rewrites under the same selection budget.
+
 ## Limitations
 
 - Natural-language critiques are not mathematical derivatives and do not establish causal responsibility.
@@ -37,3 +39,4 @@ Keep the variable role, forward inputs and outputs, feedback source, proposed pa
 
 - [TextGrad: Automatic “Differentiation” via Text dossier](/dossiers/textgrad-automatic-differentiation-via-text.md) — introduces graph-based propagation of LLM textual critiques, role-aware variables, and Textual Gradient Descent across prompts, solutions, code, molecules, and planner parameters.
 - [PEEM dossier](/dossiers/peem-prompt-engineering-evaluation-metrics.md) — a single-node, rubric-anchored special case: criterion structure comes from a fixed rubric rather than from graph topology
+- [Textual Gradients are a Flawed Metaphor dossier](/dossiers/textual-gradients-flawed-metaphor.md) — shows false critiques propagating into shortcut rules and questions the causal force of gradient terminology.

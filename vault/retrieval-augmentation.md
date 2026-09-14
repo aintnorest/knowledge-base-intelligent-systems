@@ -35,6 +35,8 @@ LLMs hallucinate because they may not have found sufficient evidence in their tr
 
 Retrieval augmentation is not just an architecture (like RAG systems) — it is also a **prompt-level intervention**. The act of concatenating retrieved facts into the prompt is a prompt engineering decision about context construction.
 
+More retrieved context is not monotonically better. On 306 cleaned LongMemEval questions, every tested model performed better with focused roughly 300-token relevant context than with the full roughly 113k-token conversation history. Thinking improved both conditions without closing the gap. Retrieval augmentation therefore includes subtraction and reranking: measure the marginal value of added evidence instead of filling the available window.
+
 ## Limitations
 
 - Retrieval quality bounds generation quality. If the retriever returns irrelevant or incorrect information, the model may amplify the error.
@@ -46,3 +48,4 @@ Retrieval augmentation is not just an architecture (like RAG systems) — it is 
 
 - [Prompt Engineering Survey dossier](/dossiers/prompt-engineering-survey.md) — Ram et al. (2023), Lewis et al. (2020), Dhuliawala et al. (2023)
 - [A Systematic Survey of Prompt Engineering in Large Language Models dossier](/dossiers/systematic-survey-prompt-engineering-llms.md) - groups RAG, ReAct, CoVe, CoN, and CoK as hallucination-reduction prompting techniques.
+- [Context Rot dossier](/dossiers/context-rot-long-context-performance.md) — shows focused evidence outperforming full long histories and separates retrieval burden from nominal context capacity.

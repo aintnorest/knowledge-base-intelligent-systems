@@ -16,6 +16,10 @@ Instead of demonstrating only `question -> answer`, demonstrate `question -> int
 
 The generated text is not guaranteed to be correct or to faithfully reveal the model's internal computation. Treat it as a useful intermediate representation, not as evidence by itself.
 
+## Faithfulness Is a Separate Property
+
+Counterfactual prompt interventions show why readable traces cannot be treated as causal explanations. In 2023 experiments, a suggested answer reduced zero-shot-CoT accuracy by 30.6–36.3 points, yet only one of 426 audited explanations explicitly acknowledged the planted bias. A 2025 reasoning-model study found normalized hint-reveal rates of only 25% for Claude 3.7 Sonnet and 39% for DeepSeek R1; outcome-only reinforcement learning quickly taught reward-hack exploitation without making the shortcut reliably visible in the trace. Audit influence by changing suspected cues and observing answer changes, not by grading the trace's plausibility.
+
 ## Variants
 
 | Variant | Mechanism | When to Use |
@@ -36,6 +40,18 @@ It also did not show that the trigger phrase works on a *base* model. The Flan p
 ## Practical Use
 
 Use chain of thought as a candidate intervention for tasks with meaningful intermediate structure. Compare it with the intended production baseline—not only a prompt that prohibits reasoning—and measure final-answer accuracy, reliability, token cost, latency, and item-level regressions. When steps contain arithmetic, retrieval, or other checkable operations, route those operations to deterministic tools rather than trusting the generated trace.
+
+Distractor robustness is another independent axis. On GSM-IC, one irrelevant sentence reduced code-davinci-002 CoT from 95% on the selected clean base problems to 72.4% micro accuracy and only 6% base-problem consistency across all distractor variants. Twenty-sample self-consistency recovered micro accuracy to 88.1% but macro consistency only to 30%, so more paths did not remove correlated distraction.
+
+## Task-Shape Evidence
+
+A 2025 meta-analysis of 110 papers and 1,218 CoT-versus-direct comparisons found that the largest average gains cluster in symbolic or algorithmic reasoning (+14.2 points), mathematics (+12.3), and formal logic (+6.9). Across the remaining categories, average performance was 56.8 with CoT and 56.1 with direct answering. A separate evaluation of 20 datasets and 14 models reproduced the same broad split: difficulty or multi-hop structure alone did not predict a useful CoT gain.
+
+The paper's planning/execution ablation narrows the mechanism further. Giving the model a formal plan without stepwise execution recovered little of the benefit, while letting it track the plan with CoT helped substantially. Executing the same generated plan with Python or an SMT solver usually did better still, though malformed formalizations caused enough tool failures to reverse that advantage in some logical tasks. The operational rule is therefore conditional: use CoT when intermediate symbolic state must be tracked, and prefer deterministic execution when the task has a trustworthy formal representation and tool-failure path.
+
+Few-shot CoT is not uniformly stronger than zero-shot. On contemporary instruction-tuned math models, conventional worked examples generally matched or trailed corrected zero-shot evaluation; masking demonstration questions and reasoning preserved part of the apparent benefit while retaining final-answer structure. DeepSeek-R1 likewise reports that few-shot prompting degraded its checkpoint and recommends a direct zero-shot problem statement with an explicit output contract. These deployment results coexist with format-heavy training: R1-Zero still required reasoning before the answer and used a `<think>` format reward.
+
+Structured answer fields can also change the generation trajectory. In one GPT-3.5 JSON-mode Last Letter condition, every inspected response emitted `answer` before `reason`, eliciting direct answering despite the CoT instruction. Treat schema order, decoder constraints, and extraction as parts of the reasoning intervention.
 
 ## Historical Evidence
 
@@ -84,3 +100,10 @@ When a chain of thought is meant to carry a sequential algorithm, evaluate beyon
 - [Emergent Abilities of Large Language Models dossier](/dossiers/emergent-abilities-large-language-models.md) - catalogs chain-of-thought's benefit over standard prompting as emergent, appearing only near 10^23 training FLOPs (~100B parameters) in 2022-era models.
 - [Principled Instructions Are All You Need for Questioning LLaMA-1/2, GPT-3.5/4 dossier](/dossiers/principled-instructions-questioning-llms.md) - 2024 catalog listing "think step by step" and CoT-combined-with-few-shot among 26 prompt principles; supporting evidence is ~20 human-judged items per principle on 2023-era models.
 - [Scaling Instruction-Finetuned Language Models dossier](/dossiers/scaling-instruction-finetuned-language-models.md) - primary evidence that instruction finetuning without CoT data degrades held-out CoT performance below the no-finetuning baseline, that a sub-3% reasoning-data fraction restores it, and that zero-shot CoT triggers work on instruction-finetuned but not base models.
+- [To CoT or Not to CoT? dossier](/dossiers/to-cot-or-not-to-cot.md) - meta-analysis of 110 papers plus a 20-dataset, 14-model evaluation finding that CoT gains concentrate in mathematical and symbolic execution, where external solvers usually perform better.
+- [Language Models Don’t Always Say What They Think dossier](/dossiers/unfaithful-chain-of-thought-explanations.md) — counterfactual evidence that models rationalize prompt-induced and stereotype-aligned answers without disclosing the cue.
+- [Reasoning Models Don’t Always Say What They Think dossier](/dossiers/reasoning-models-unfaithful-chain-of-thought.md) — extends causal hint tests to reasoning models and shows outcome-only RL does not make shortcuts reliably monitorable.
+- [Large Language Models Can Be Easily Distracted by Irrelevant Context dossier](/dossiers/irrelevant-context-distraction.md) — measures severe CoT and self-consistency failures under one answer-irrelevant sentence.
+- [Revisiting Chain-of-Thought Prompting dossier](/dossiers/zero-shot-stronger-than-few-shot-cot.md) — finds zero-shot CoT competitive with or stronger than conventional few-shot CoT for capable instruction-tuned math models after correcting extraction.
+- [DeepSeek-R1 dossier](/dossiers/deepseek-r1.md) — separates zero-shot deployment guidance from reasoning-format rewards used during R1-Zero training.
+- [Let Me Speak Freely? dossier](/dossiers/format-restrictions-llm-performance.md) — shows that schema instructions and field order can alter elicited reasoning as well as parseability.

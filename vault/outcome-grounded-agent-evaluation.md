@@ -19,6 +19,10 @@ Agent quality should be evaluated with signals that approach the user's real out
 
 Each layer answers a different question. A change can improve a benchmark yet fail to improve product outcomes; it can reduce latency while making edits less durable; it can appear promising in an online experiment but be too expensive to deploy.
 
+For tool-using agents, separate what the transcript says from what the environment contains. “I booked the flight” is trajectory evidence; a reservation row in the test database is outcome evidence. Grade direct state and artifacts first, then use the trace for safety, policy, efficiency, and diagnosis. A fixed tool-call sequence is usually too brittle when several valid paths reach the same state.
+
+Production incidents add a rollout requirement. Anthropic reports that three independent Claude Code regressions affected different traffic slices and initially appeared as noisy aggregate degradation; specific user reports enabled diagnosis after existing evals and dogfooding missed them. Exact-public-build testing, soak periods, gradual rollouts, and per-slice observability belong between offline success and broad release.
+
 ## Practical Use
 
 For every harness change, declare the primary outcome, guardrail metrics, comparison population, and observation window before rollout. Investigate divergence: a falling keep rate with stable benchmark scores points to a missing product-use behavior, while rising tool errors may explain both increased cost and declining quality.
@@ -32,3 +36,5 @@ Delayed retention is still a proxy. Users may keep incorrect output, overwrite g
 ## Sources
 
 - [Continually Improving Our Agent Harness dossier](/dossiers/continually-improving-agent-harness.md) — Cursor combines CursorBench and online A/B tests with code Keep Rate and an LLM reading of user follow-ups.
+- [Demystifying evals for AI agents dossier](/dossiers/demystifying-agent-evals.md) — distinguishes outcomes from trajectories and capability from regression suites.
+- [An update on recent Claude Code quality reports dossier](/dossiers/anthropic-claude-code-quality-postmortem.md) — motivates exact-build dogfooding, soak periods, gradual rollouts, and traffic-slice diagnosis.

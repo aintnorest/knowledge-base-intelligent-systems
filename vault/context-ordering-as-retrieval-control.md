@@ -25,6 +25,10 @@ For simple answer extraction, place strongly supported answer-bearing evidence i
 
 The context budget should have a stopping rule. If reader quality saturates while retriever recall keeps rising, use reranking, decomposition, or another retrieval pass instead of appending documents indefinitely.
 
+Discourse coherence is not automatically retrieval-friendly. In Chroma's experiments, shuffling sentences improved model-averaged retrieval accuracy in all four haystack/needle source combinations, including 78.1%→86.6% for arXiv text containing an arXiv needle. This is not a prescription to destroy documents; it shows that narrative structure and order affect reader access independently of evidence presence.
+
+Vendor guidance supplies a practical but weakly evidenced companion rule: for Claude, place long documents before the query, preserve source metadata, and ask for quoted evidence before synthesis. Treat the reported benefit for 20k+ inputs as a model-specific hypothesis because the guide supplies no dataset, uncertainty, or reproducible method.
+
 ## Limitations
 
 - Pushing a known answer passage toward a prompt boundary is an evaluation aid, not a production strategy unless the reranker can predict relevance without answer labels.
@@ -35,3 +39,5 @@ The context budget should have a stopping rule. If reader quality saturates whil
 ## Sources
 
 - [Lost in the Middle: How Language Models Use Long Contexts dossier](/dossiers/lost-in-the-middle-long-contexts.md) — evidence that reader performance can be position-sensitive and may saturate before retriever recall.
+- [Context Rot dossier](/dossiers/context-rot-long-context-performance.md) — controlled evidence that content order and structure change retrieval even when the same evidence remains present.
+- [Prompting best practices dossier](/dossiers/claude-prompting-best-practices.md) — model-specific query-last and quote-first recommendations with explicitly weak evaluation detail.

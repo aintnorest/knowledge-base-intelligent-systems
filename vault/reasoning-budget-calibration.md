@@ -24,6 +24,10 @@ Use this when a model's default rationale is much longer than the task needs, a 
 
 Pair outcome scoring with operational measures: completion tokens, latency, format compliance, parser failures, and strict-repeat reliability where needed. For externally verifiable operations, a structured short step plus a deterministic check is usually more informative than an unbounded natural-language trace.
 
+Reasoning effort and answer verbosity are separate controls. OpenAI's GPT-5 guidance treats them independently and notes that minimal reasoning requires explicit planning, persistence, tool-use, and verification instructions rather than merely requesting longer prose.
+
+DeepSeek-R1 reports adaptive test-time use rather than one fixed budget: across 366 competition problems it averaged 8,793 thinking tokens, using fewer than 7,000 on easier items and more than 18,000 on the hardest. AIME pass@1 of 79.8% rose to 90.0% pass@64 and 86.7% with majority voting, but those gains multiply sampling cost and do not establish that trace length itself caused correctness.
+
 ## Limitations
 
 - There is no model- or task-independent optimal length. A constraint that prevents elaboration on a simple multiple-choice item can suppress necessary evidence integration or planning on another task.
@@ -36,3 +40,5 @@ Pair outcome scoring with operational measures: completion tokens, latency, form
 - [Brevity Constraints Reverse Performance Hierarchies in Language Models dossier](/dossiers/brevity-constraints-reverse-performance-hierarchies.md) — reports that brief prompts improved selected large-model benchmark cases but had task-dependent effects; the preprint's internal reporting inconsistencies mean the mechanism and effect size require independent replication.
 - [Prompting Science Report 2 dossier](/dossiers/decreasing-value-chain-of-thought-prompting.md) — finds that explicit CoT can raise mean accuracy for some models while reducing strict reliability and increasing latency, especially when compared with different baselines.
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models dossier](/dossiers/chain-of-thought-prompting-elicits-reasoning.md) — foundational evidence that intermediate reasoning can help some difficult tasks, with model- and task-dependent effects.
+- [DeepSeek-R1 dossier](/dossiers/deepseek-r1.md) — reports difficulty-dependent thinking-token use and sampling gains for a reasoning model.
+- [GPT-5 prompting guide dossier](/dossiers/openai-gpt-5-prompting-guide.md) — separates reasoning effort from answer verbosity and gives model-specific minimal-effort controls.

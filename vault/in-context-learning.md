@@ -20,9 +20,13 @@ In-context learning is the use of instructions, demonstrations, or both inside a
 
 Demonstrations can communicate more than the abstract task. They can establish output format, label meanings, tone, granularity, and edge-case conventions that are awkward to express as rules.
 
+Demonstrations also locate the task through their input distribution, label space, and pair structure. In 2022 closed-set experiments, uniformly randomizing demonstration labels cost only 2.6 accuracy points on classification and 1.7 on multiple choice on average, while out-of-distribution inputs, removal of the true label space, or broken pair formatting caused larger losses. This does not show that correct mappings are generally dispensable: the result is bounded to base and meta-trained models on classification-like tasks, and some model–dataset combinations were much more sensitive.
+
 ## Practical Use
 
 Use in-context examples when a task lacks training data, when its desired output schema is easier to show than describe, or when behavior must change without maintaining a separately fine-tuned model. Evaluate examples on the target model and task: example selection, ordering, formatting, and available context can all affect results.
+
+Treat ordering and output structure as experimental variables. Four SST-2 demonstrations produced a 54.3%–93.4% accuracy range across permutations for GPT-3 2.7B. A content-free probe such as `N/A` can expose a prompt-induced answer prior; contextual calibration improved mean and worst-case results across prompt sets, but requires label probabilities and assumptions about the content-free distribution. On contemporary instruction-tuned math models, worked traces can primarily teach parser-compatible answer formatting rather than reasoning, while still helping weaker checkpoints.
 
 ## Limits
 
@@ -41,3 +45,7 @@ The 2020 GPT-3 paper established the historical evidence that larger models in t
 - [A Systematic Survey of Prompt Engineering in Large Language Models](/dossiers/systematic-survey-prompt-engineering-llms.md) - later taxonomy retaining zero-shot and few-shot prompting for new tasks without extensive training.
 - [Prompt Engineering is Complicated and Contingent dossier](/dossiers/prompt-engineering-complicated-contingent.md) - 2025 evidence that prompt effects are model-, task-, metric-, and item-dependent.
 - [Emergent Abilities of Large Language Models dossier](/dossiers/emergent-abilities-large-language-models.md) - 2022 catalog showing few-shot task performance is often near-random below a model-scale threshold, so demonstration use can appear absent until scale unlocks it.
+- [Calibrate Before Use dossier](/dossiers/calibrate-before-use.md) — measures example-order and format instability and corrects a prompt-induced answer prior with content-free probes.
+- [Rethinking the Role of Demonstrations dossier](/dossiers/rethinking-role-demonstrations-icl.md) — separates demonstrations' input-distribution, label-space, format, and input–label-mapping functions.
+- [Revisiting Chain-of-Thought Prompting dossier](/dossiers/zero-shot-stronger-than-few-shot-cot.md) — finds capability-dependent few-shot effects and shows that demonstrations can primarily specify the evaluator-facing answer format.
+- [Prompting best practices dossier](/dossiers/claude-prompting-best-practices.md) — vendor guidance recommending relevant, diverse, delimited examples while supplying no evaluation methodology for the stated three-to-five-example rule.

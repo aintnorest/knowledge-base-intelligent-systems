@@ -34,6 +34,12 @@ Model switching is also an infrastructure event. Provider- and model-specific pr
 
 Two transfer results refine that choice. First, evolved skills can cross model sizes and families, but a workaround learned by a small model can constrain a stronger one or consume its interaction budget; discovery quality and execution ability are separate properties. Second, a live coding trajectory can be a better handoff artifact than a detached plan: the receiving model inherits repository observations, a bounded checklist, and one grounded edit instead of paying to reconstruct the planner's context. Neither result supports blind transfer—evaluate the source–target pair and the handoff boundary end to end.
 
+## First-Party Change Evidence
+
+OpenAI's Codex guide makes prompt metadata part of the model interface: `gpt-5.3-codex` is expected to preserve assistant-only `phase` values for preambles, while older Codex guidance discouraged intermediate updates. Its recommended shell, patch, plan, and compaction interfaces are model-harness hypotheses, not portable defaults. The GPT-5 guide similarly separates reasoning effort from output verbosity and notes that inherited coding prompts can over-constrain a newer model.
+
+Anthropic's Claude guide documents the same class of version dependence across thinking configuration, assistant prefill, verbosity, tool triggering, self-checking, and subagent delegation. A production postmortem supplies stronger causal evidence: a global brevity instruction introduced for one model revision produced a reported 3% evaluation drop for multiple Claude models. Keep model scope mechanically explicit and test the exact public build, not an assumed equivalent prompt/model pair.
+
 ## Limitations
 
 Per-model tuning creates configuration and testing overhead, and vendor-specific behavior can change with new releases. Avoid opaque one-off tweaks: retain a common contract, record the observed failure each customization addresses, and evaluate it against quality, latency, and cost guardrails.
@@ -44,3 +50,7 @@ Per-model tuning creates configuration and testing overhead, and vendor-specific
 - [PromptBridge dossier](/dossiers/promptbridge-cross-model-prompt-transfer.md) — measures prompt degradation under model substitution and learns reusable source→target prompt transformations from calibrated task pairs.
 - [WikiSkill dossier](/dossiers/wikiskill-persistent-knowledge-skill-evolution.md) — finds both positive cross-family skill transfer and negative transfer from source-model-specific workarounds.
 - [Prewalk dossier](/dossiers/prewalk-trajectory-preserving-model-handoff.md) — switches models after grounded exploration and one edit, preserving the live trajectory rather than sending only a plan.
+- [Codex Prompting Guide dossier](/dossiers/openai-codex-prompting-guide.md) — model-specific prompt, phase-metadata, tool-interface, instruction-loading, and compaction guidance.
+- [GPT-5 prompting guide dossier](/dossiers/openai-gpt-5-prompting-guide.md) — separates reasoning effort, verbosity, autonomy, tool behavior, and coding-harness migration.
+- [Prompting best practices dossier](/dossiers/claude-prompting-best-practices.md) — records model-version changes that alter prompt and harness behavior.
+- [An update on recent Claude Code quality reports dossier](/dossiers/anthropic-claude-code-quality-postmortem.md) — production evidence that a broadly scoped prompt tweak regressed several model versions.
