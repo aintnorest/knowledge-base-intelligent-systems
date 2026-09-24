@@ -32,6 +32,12 @@ This is a reference-monitor design: its security promise depends on complete med
 - Treat derived data as protected when it may reveal protected inputs. Do not strip a label merely because the value was formatted, summarized, or selected by a model.
 - Design approval prompts as a scarce declassification channel. Generic “continue?” dialogs cause habituation and can silently become the system's weakest policy.
 
+## Test Every Equivalent Authority Route
+
+Agent QA should ask whether each externally reachable route to a sensitive effect is covered by *both* an enforced boundary and a test that can show the boundary failing. Unit tests for ordinary logic, a documented approval prompt or a security folder in the repository are not substitutes. An agent may reach the same authority through its CLI, API, plugin, MCP server, setup hook or headless runner. Enumerate the protected assets and every route to them. Write a replayable negative test (untrusted input, attempted prohibited action, observable denial or no effect), and confirm the test catches a deliberately disabled boundary in a throwaway environment.
+
+A 157-project audit of public agent repositories found gaps at exactly these intersections. 148 projects expose host-process commands, and 30.4% of those lack an identifiable command-isolation practice. 155 have credential-exposure candidates, and 36.1% of those lack matching secret handling or redaction. Only 8 have explicit prompt-injection or adversarial test paths. These are descriptive repository labels, not measured breaches. The SAFE-AI position paper argues for least privilege, risk-differentiated approvals and independently verified effects, but its motivating incident citation is unreliable and its synthetic percentages should not be read as deployed reliability.
+
 ## Limitations
 
 - A label system cannot protect against rights it never models, policies that are over-broad, compromised tool adapters, or a missing enforcement point.
@@ -43,3 +49,5 @@ This is a reference-monitor design: its security promise depends on complete med
 
 - [Defeating Prompt Injections by Design dossier](/dossiers/defeating-prompt-injections-by-design.md) — CaMeL propagates provenance and allowed-reader capabilities through a restricted interpreter, enforcing per-tool policies in AgentDojo.
 - [Parallax: Why AI Agents That Think Must Never Act dossier](/dossiers/parallax-architecturally-safe-autonomous-execution.md) — proposes executor-side sensitivity tags that propagate through agent operations and are checked before writes or network egress; the implementation and results are author-reported.
+- [A Large-Scale Empirical Study of Quality Assurance Practices and Gaps in AI Agents dossier](/dossiers/quality-assurance-gaps-ai-agent-projects.md) — repository-visible QA and isolation gaps across 157 agent projects.
+- [Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering dossier](/dossiers/rethinking-autonomy-ai-driven-software-engineering.md) — argues for least privilege, differentiated approval and independently audited effects.

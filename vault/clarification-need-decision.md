@@ -41,6 +41,14 @@ Once asking is warranted, the question should be scoped to what the ambiguity ac
 
 Implement this as two gated stages, not one prompt instruction: (1) a lightweight ask/proceed classifier or VoI estimate that runs before any question is drafted, conditioned on ambiguity type and the cost of a wrong action in that context; (2) a question generator invoked only after stage 1 fires, constrained to a small, coherent facet set so the user can answer in one short turn. Log which ambiguity type triggered the ask, and audit false-negative "confidently wrong" answers and false-positive over-asks separately — they have different costs and different fixes.
 
+## Coding Agents: Ask at Consequential Uncertainty
+
+A missing requirement may only surface after repository search or a failing test. In Ask or Assume?, a separate intent monitor inspects the trace before each action and requires a user question when a missing requirement blocks progress. On 500 simulated-user SWE-bench tasks this reached 69.4% resolution on both backbones, versus 61.2% and 61.6% for turn-wise reminders. Cost varied sharply: Claude averaged $3.50 per task, and Kimi asked 8.71 questions per queried task. Reject questions that the repository could answer, and calibrate the monitor per model.
+
+Real sessions show the imbalance the monitor targets. In SWE-chat, Claude Code proactively asked for clarification in about 1.1–2.6% of turns, while users gave soft pushback after roughly 39% and hard-interrupted 3.3–6.0%. The data are observational and set no ideal questioning rate. Offer intervention before expensive or irreversible branch choices, then check whether corrections are followed and whether human repair effort falls.
+
+Anthropic's forecast that agents will "learn when to ask for help" sits under the *Predictions* heading of its trends report. It is not a measured deployed capability. Until it is, encode explicit escalation rules for high-stakes changes and missing product intent (e.g. Always / Ask first / Never tiers). Stripe's two-CI-round cap is one such rule, and it is a workflow limit, not the model recognizing its own uncertainty.
+
 ## Limitations
 
 - RLHF-trained LLMs are documented to under-ask by default: single-turn preference annotation cannot see the downstream cost of a wrong guess, so annotators tend to prefer confident (but presumptuous) answers over clarifying questions. Training against simulated future turns ("double-turn preferences") measurably corrects this bias, but it means the base tendency of many deployed assistants is skewed toward proceeding even when they shouldn't (Andukuri et al./"Modeling Future Conversation Turns," ICLR 2025).
@@ -60,3 +68,9 @@ Implement this as two gated stages, not one prompt instruction: (1) a lightweigh
 - "Modeling Future Conversation Turns to Teach LLMs to Ask Clarifying Questions," ICLR 2025 — https://arxiv.org/abs/2410.13788
 - "Clarification Is Not Enough: Post-Clarification Answering Remains the Bottleneck in Multi-Turn QA" — https://arxiv.org/html/2605.25204
 - "Curiosity by Design: An LLM-based Coding Assistant Asking Clarification Questions" — https://arxiv.org/html/2507.21285v1
+- [Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents dossier](/dossiers/ask-or-assume-coding-agent-clarification.md) — intent monitor raises resolution to 69.4% with model-dependent over-asking and cost.
+- [SWE-chat: Coding Agent Interactions From Real Users in the Wild dossier](/dossiers/swe-chat-real-user-coding-agent-interactions.md) — rare agent questions versus frequent user pushback in real sessions.
+- [Position: Humans are Missing from AI Coding Agent Research dossier](/dossiers/humans-missing-ai-coding-agent-research.md) — separates task alignment from steerability; control points at meaningful decisions.
+- [2026 Agentic Coding Trends Report dossier](/dossiers/anthropic-agentic-coding-trends-2026.md) — "agents learn when to ask for help" is a prediction.
+- [How to write a good spec for AI agents dossier](/dossiers/good-spec-ai-agents.md) — Always / Ask first / Never boundaries and read-only planning.
+- [Minions: Stripe’s one-shot, end-to-end coding agents—Part 2 dossier](/dossiers/stripe-minions-blueprints-and-ci.md) — deterministic escalation after the second failed CI run.

@@ -25,6 +25,12 @@ This is useful for safety cases, security evaluations, agent benchmarks, simulat
 
 Standards, hazard analysis, and a domain threat model can help identify which dimensions are necessary. Where no applicable standard exists, record that judgment and the residual ambiguity rather than pretending the scoring rule is objective.
 
+## Automated Review Sign-off and Governance Claims
+
+The claim that AI review can approve routine merges needs support on every dimension: missed-defect recall, false-positive burden, repair correctness, project-specific design, adversarial-input resistance, approval authority and cost. Monperrus argues the crossover has already been reached, but offers no new controlled study. c-CRAB reports only 20.1–32.1% individual coverage of selected human issues. An MSR study finds bot-only review associated with lower merge rates, without causal isolation. The AI-on-AI study measures prevalence, not correctness. State the narrow claim each study supports rather than combining them into one automation score.
+
+The same weakest-link rule applies to governance frameworks. Mapping 17 applicable regulatory requirements to proposed artifacts shows design traceability, not compliance. A heuristic risk sum is not a calibrated failure probability. A simulated 89.6% risk-reduction rating is not a measured reduction in incidents. Precise QA percentages with no identified software dataset, oracle or protocol (e.g. 94.8% coverage and 91.2% detection alongside an unrelated antenna-dataset description) remain unverified author claims. License a release-safety claim only when classifier accuracy, enforcement coverage, oracle quality, reviewer intervention quality and production outcomes are all supported for the target context.
+
 ## Limitations
 
 - The rule is a conservative cap, not a probability model, and it does not represent interactions or compensating controls.
@@ -34,3 +40,11 @@ Standards, hazard analysis, and a domain threat model can help identify which di
 ## Sources
 
 - [AI Sandboxes: A Threat Model, Taxonomy, and Measurement Framework dossier](/dossiers/ai-sandboxes-threat-model-measurement-framework.md) — defines claim-relative measurement dimensions and a conservative minimum rule that caps a deployment claim at its weakest necessary evidence link.
+- [The End of Code Review: Coding Agents Supersede Human Inspection dossier](/dossiers/end-of-code-review-agent-verification.md) — argues agent verification can supersede human review, without a new controlled trial.
+- [Code Review Agent Benchmark dossier](/dossiers/c-crab-code-review-agent-benchmark.md) — low individual coverage of selected human review concerns.
+- [From Industry Claims to Empirical Reality: An Empirical Study of Code Review Agents in Pull Requests dossier](/dossiers/industry-code-review-agent-pr-outcomes.md) — associational merge outcomes by reviewer composition.
+- [AI-to-AI Code Reviews of GitHub Pull Requests dossier](/dossiers/ai-to-ai-code-reviews-github-prs.md) — prevalence of closed-loop AI review without correctness evidence.
+- [Governed AI-Assisted Engineering: Graduated Human Oversight for Agentic Code Generation in Regulated Domains dossier](/dossiers/governed-ai-assisted-engineering.md) — requirement traceability distinguished from compliance; modeled velocity.
+- [Governance Controls for AI-Generated Test Artifacts in Autonomous Software Testing dossier](/dossiers/governance-controls-ai-generated-test-artifacts.md) — simulated governance scores without production validation.
+- [AI agents in software testing: a human-in-the-loop assurance model dossier](/dossiers/ai-agents-software-testing-human-assurance.md) — ordinal risk rubric, not a validated risk model.
+- [AI-Generated Test Automation for Autonomous Software Verification: Enhancing Quality Assurance Through AI-Driven Testing dossier](/dossiers/autonomous-test-automation-natarajan.md) — precise QA figures without an identifiable software dataset or protocol.

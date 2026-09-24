@@ -28,6 +28,10 @@ The reduction also exposes what the fixed hybrid gives up. In a hybrid, every qu
 
 This pattern fits long-context code, agent, and document workloads where many tokens are redundant but a minority of queries require direct access to a distant detail. A fixed schedule is often easier to deploy than mixing attention types within every layer or dynamically routing individual heads.
 
+## Model-Declared Reads Over the Remaining Global Layers
+
+Even when sliding-window or recurrent layers carry most computation, the remaining global layers can dominate long-context KV reads. Declarative Attention leaves the efficient layers untouched and has the model emit global, focused or local scopes, which a serving-engine state machine enforces by masking whole KV blocks in the global layers only. On fixed-context QA it cut total attended positions by 52.0% on Gemma-4-31B and 31.1% on Qwen-3.6-27B, at accuracy losses of 1.27 and 2.75 points. The predicted wall-clock gains (0.71× and 0.77× decode time) come from a roofline model, not measured serving, and segmentation-sensitive tasks can regress sharply.
+
 ## Limitations
 
 - Global layers still retain and read a cache, so the design does not make long-context cost constant.
@@ -38,3 +42,4 @@ This pattern fits long-context code, agent, and document workloads where many to
 
 - [Kimi Linear: An Expressive, Efficient Attention Architecture dossier](/dossiers/kimi-linear-attention-architecture.md) — Kimi Delta Attention with a 3:1 linear-to-global schedule, matched-scale evaluations, and vLLM/kernel implementation evidence.
 - [Memory Caching: RNNs with Growing Memory dossier](/dossiers/memory-caching-rnns-growing-memory.md) — derives the compressor-plus-global-attention hybrid as memory caching with a one-token snapshot interval, and shows tunable intervals with query-conditioned reads beating the fixed form on recall.
+- [Language Models Can Control Their Own Attention dossier](/dossiers/declarative-attention-model-controlled-context.md) — decode-time KV block masking over global layers with measured accuracy cost.

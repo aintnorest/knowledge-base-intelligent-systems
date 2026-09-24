@@ -61,6 +61,14 @@ When outcome rewards are sparse, holding executor policies fixed while learning 
 
 When both role instructions and routing remain unsettled, first establish competent minimal building blocks, then search a bounded workflow grammar using measured block benefit as a sampling prior, and finally adapt the prompts to the chosen graph. This reduces waste on unpromising structures without mistaking local block scores for the final decision: every selected workflow still needs end-to-end holdout evaluation for quality, cost, and safety-relevant handoffs.
 
+## Coding Teams: Contracts, Coupling, and the Smallest Useful Team
+
+Before fanning out coding workers, establish ownership and cross-slice API contracts. Independent workers can proceed in parallel, but a worker that depends on two others must wait for their bounded handoffs. Task lists and direct peer messages reduce lead bottlenecks, but they do not replace final integration and review. Limit work in progress by CI and reviewer throughput ([Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)).
+
+Bilevel Coordinated Reflection gives this a formal shape. Global utility is modeled as local utilities plus pairwise interactions induced by the decomposition. With edge strength bounded by κ and interaction degree by d_max, a unilateral worker update's local-versus-global discrepancy is bounded by 2·d_max·κ. That is conditional theory, not a measured repository coupling score. Its gated two-worker system resolves 72.2% on SWE-bench versus 58.4% for an ungated two-worker control with the same backbone and budget. This isolates the gate, not worker count.
+
+Treat a team as a hypothesis to test against one competent agent. In Westermo's industrial test-failure study, six practitioners' preferences between single-agent and multi-agent reports reversed across scenarios. The team cost roughly 3× the latency (130 s versus 40 s) and 2× the spend per report. Anthropic forecasts broader multi-agent adoption but does not demonstrate a general advantage from agent count.
+
 ## Sources
 
 - [PaperOrchestra dossier](/dossiers/paperorchestra.md) — 5 specialized agents in a fork-join pipeline; ~60–70 LLM calls; 39.6 min mean latency
@@ -68,3 +76,7 @@ When both role instructions and routing remain unsettled, first establish compet
 - [MAS-PromptBench dossier](/dossiers/mas-promptbench.md) — finds that prompt-optimization effects vary by task, topology, communication structure, and team size; its tested optimizers generally benefited more from structured protocols and smaller teams.
 - [Multi-Agent Design: Optimizing Agents with Better Prompts and Topologies dossier](/dossiers/multi-agent-design-prompts-topologies.md) — searches prompt and topology variables in three stages, prioritizing topology blocks by measured validation influence before adapting prompts to the selected workflow.
 - [Kimi K2.5: Visual Agentic Intelligence dossier](/dossiers/kimi-k2-5-visual-agentic-intelligence.md) — technical-report evidence for a frozen-subagent/trainable-orchestrator design, auxiliary parallelism/completion rewards, critical-step latency, and context sharding.
+- [The Code Agent Orchestra - what makes multi-agent coding work dossier](/dossiers/code-agent-orchestra.md) — dependency-sequenced workers, task lists, and verification-limited parallelism.
+- [2026 Agentic Coding Trends Report dossier](/dossiers/anthropic-agentic-coding-trends-2026.md) — forecast of coordinated agent teams with vendor case examples.
+- [Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems dossier](/dossiers/bilevel-coordinated-reflection.md) — coupling bound and matched gated/ungated two-worker comparison.
+- [Supporting Industrial Test-Failure Analysis with LLM-Based Systems: An Experience Report dossier](/dossiers/westermo-llm-test-failure-analysis.md) — single- versus multi-agent RCA reports with scenario-dependent preference and higher team cost.

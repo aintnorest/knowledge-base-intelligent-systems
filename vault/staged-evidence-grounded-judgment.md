@@ -24,6 +24,12 @@ Use this pattern for paper review, code review, diligence, policy assessment, an
 
 This is an execution pattern for producing a judgment. It complements [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md), which describes how to evaluate whether a generated critique is actually reliable.
 
+## Staged Code Review and Diagnosis
+
+**PR review.** Parallel agents can each search for a distinct class of bug. An evidence-verification step should come before severity ranking and publication, and generated critique must never grant approval. Anthropic reports around 20 minutes and $15–25 average cost per review, so extra stages must earn human-adjudicated gains in consequential defect finding. Give the reviewer and the reviser separate contracts: state each negative claim as a falsifiable issue, verify it independently before requesting a change, then check the revised patch. CodeAgent's QA-Checker keeps multi-role conversations on topic, but topical alignment is not correctness. Measure reviewer targeting, executor uptake, actual repair or damage, and added cost, not critique volume.
+
+**Root-cause analysis.** Expose the evidence boundary before the model decides: timestamped anomaly cards, candidate components, topology, traces and selected log windows, followed by a bounded diagnosis and next checks. Audit candidate recall (was the true cause surfaced?) separately from discrimination (was it chosen?). On OpenRCA, EviRCA reaches 40.6–43.9% exact diagnosis but misses the true component in 89.6% of one network-failure subset. Practitioners at Westermo valued inspectable evidence and next steps but warned that a plausible wrong cause anchors investigation. A cited log makes a hypothesis inspectable; it does not prove it.
+
 ## Limitations
 
 - Decomposition can distribute an error across several confident-looking stages rather than remove it.
@@ -34,3 +40,9 @@ This is an execution pattern for producing a judgment. It complements [Verificat
 ## Sources
 
 - [DeepReview dossier](/dossiers/deepreview-structured-llm-paper-review.md) — decomposes paper review into retrieval-grounded novelty verification, multidimensional review reconstruction, evidence-based reliability verification, and final meta-review synthesis.
+- [Bringing Code Review to Claude Code dossier](/dossiers/claude-code-review.md) — parallel bug search, verification, ranking and human-only approval.
+- [CodeAgent: Autonomous Communicative Agents for Code Review dossier](/dossiers/codeagent-communicative-code-review.md) — QA-Checker keeps conversations focused but is not a correctness oracle.
+- [Reviewer Capability Governs Rejection Targeting, Not Repair Skill: Evidence from LLM Execute–Review–Revise Pipelines dossier](/dossiers/reviewer-capability-rejection-targeting.md) — separates reviewer targeting, uptake, repair and damage.
+- [AI-powered Code Review with LLMs: Early Results dossier](/dossiers/ai-powered-code-review-early-results.md) — prompted multi-role review without validated staging.
+- [EviRCA: Decoupling Evidence Extraction from Reasoning for Microservice Root-Cause Analysis dossier](/dossiers/evirca-microservice-root-cause-analysis.md) — deterministic evidence cards with measured candidate-coverage errors.
+- [Supporting Industrial Test-Failure Analysis with LLM-Based Systems: An Experience Report dossier](/dossiers/westermo-llm-test-failure-analysis.md) — practitioner preference for evidence and next checks without verified ground truth.

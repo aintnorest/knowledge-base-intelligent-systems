@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: Codebase-Memory: Tree-Sitter-Based Knowledge Graphs for LLM Code Exploration via MCP
+title: "Codebase-Memory: Tree-Sitter-Based Knowledge Graphs for LLM Code Exploration via MCP"
 description: Personal study notes on a Tree-Sitter code graph exposed through MCP for structural code exploration, with incremental synchronization, hybrid graph-and-source retrieval, and an unusually extensive MCP-server release-verification proposal.
 resource: https://arxiv.org/abs/2603.27277v1
 source: /archive/codebase-memory-tree-sitter-knowledge-graphs.pdf

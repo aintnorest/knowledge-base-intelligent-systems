@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: Latent-GRPO: Group Relative Policy Optimization for Latent Reasoning
+title: "Latent-GRPO: Group Relative Policy Optimization for Latent Reasoning"
 description: Personal study notes on Deng et al.'s latent-reasoning RL method, which constrains off-manifold rollouts, aligns noisy latent updates with advantage signs, and avoids harmful averaging of correct latent paths.
 resource: https://arxiv.org/abs/2604.27998v1
 source: /archive/latent-grpo.pdf

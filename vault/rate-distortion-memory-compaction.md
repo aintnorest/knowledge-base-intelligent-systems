@@ -32,6 +32,10 @@ Empirically this can invert the expected ordering: uniform-granularity segmentat
 
 The representation itself is part of the frontier. Snapcompact renders verbatim text into dense pixel-font images: billed input falls because the vision carrier uses fewer tokens, but the model spends additional reasoning/output compute decoding pixels. This is not semantic summarization, yet it still has distortion from OCR errors, resizing, font density, and patch alignment. Compare total carry-plus-decode cost at matched task quality; an input-token ratio alone can select the wrong operating point.
 
+## Selective Reads Without Eviction
+
+Selective KV *reads* can trade fidelity for memory bandwidth without evicting the KV cache or changing the prompt. Declarative Attention keeps full KV storage while cutting average attended positions by 52.0% and 31.1% on two large models, for average accuracy losses of 1.27 and 2.75 points. Table-splitting and global-count tasks lose much more. Name the physical resource on any budget frontier: attended KV positions are not input tokens, KV allocation, measured serving latency or task success.
+
 ## Limitations
 
 The amount of history information a real task requires is usually unknown before evaluation. A single shared byte or token metric also hides differences in portability, retrieval delay, implementation complexity, and failure severity. This is a decision framework, not a guarantee that a chosen salience score is correct.
@@ -41,3 +45,4 @@ The amount of history information a real task requires is usually unknown before
 - [What to Keep, What to Forget dossier](/dossiers/rate-distortion-memory-compaction.md) — formalizes compaction as a rate–distortion and information-bottleneck problem across KV, prompts, bounded state, and agent memory.
 - [Memory Caching: RNNs with Growing Memory dossier](/dossiers/memory-caching-rnns-growing-memory.md) — segment size as an explicit compression/recall dial for recurrent state, with uniform segmentation outperforming a cheaper logarithmic schedule on recall while perplexity stays flat.
 - [Snapcompact dossier](/dossiers/snapcompact-pixel-context-carriers.md) — adds a cross-modal carrier to the frontier and shows that cheaper image input can impose model-specific visual-decoding cost and fidelity cliffs.
+- [Language Models Can Control Their Own Attention dossier](/dossiers/declarative-attention-model-controlled-context.md) — fidelity versus attended-KV frontier and task-shape sensitivity.

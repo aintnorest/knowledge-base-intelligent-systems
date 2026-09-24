@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: AXI: Agent eXperience Interface
+title: "AXI: Agent eXperience Interface"
 description: Personal study notes on AXI's ten design principles for token-efficient, discoverable command-line interfaces for agents and its browser and GitHub benchmark claims.
 resource: https://axi.md/
 source: https://axi.md/

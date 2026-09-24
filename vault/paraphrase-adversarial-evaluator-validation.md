@@ -36,6 +36,10 @@ Cross-evaluator spread is the finding practitioners most need. An evaluator can 
 - Use the sensitivity margins to set alerting thresholds: a corruption that moves the score less than paraphrase noise is undetectable in production regardless of what the study reports.
 - Keep the paraphrase and corruption sets versioned alongside the rubric. Both are part of the evaluator's specification.
 
+## Adjacent Application: Metamorphic Generation Tests
+
+When evaluating a generator rather than a judge, keep task semantics fixed and pair each input with a verified meaning-preserving rewrite. Report the accuracy change *and* the conditional invariance failure: the fraction of originally correct outputs that become wrong, plus wrong-to-correct flips. In SystemVerilog assertion generation, deterministic RTL renaming raised one model's accuracy from 53.9% to 63.7%, yet turned 31 of 159 initially correct behaviors wrong (19.5%). An invariant wrong answer is still wrong, and each rewrite must itself be validated against the domain semantics.
+
 ## Limitations
 
 - LLM-generated paraphrases are not guaranteed meaning-preserving, and LLM-generated corruptions are not guaranteed meaning-breaking. Spot-check both sets by hand; errors here contaminate both metrics.
@@ -46,3 +50,4 @@ Cross-evaluator spread is the finding practitioners most need. An evaluator can 
 ## Sources
 
 - [PEEM dossier](/dossiers/peem-prompt-engineering-evaluation-metrics.md) — reports paraphrase robustness rates of 76.7–80.6% alongside per-type adversarial score deltas across three evaluator models, exposing both the jailbreak inversion and the sensitivity gap between small and frontier evaluators.
+- [Robustness of LLM-Generated SystemVerilog Assertions to Semantics-Preserving RTL Transformations dossier](/dossiers/sva-robustness-rtl-transformations.md) — conditional invariance failures of 9.7–27.0% under semantics-preserving RTL rewrites.

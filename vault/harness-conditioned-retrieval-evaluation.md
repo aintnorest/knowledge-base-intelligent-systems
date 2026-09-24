@@ -22,6 +22,10 @@ Retrieval quality in an agent system is an interaction outcome, not a property o
 
 Use lexical search as a serious baseline when a workload depends on exact identifiers, dates, literals, or rare terms, and use dense or hybrid retrieval where paraphrase and conceptual similarity matter. Do not promote either result across models or agent frameworks until it survives the target harness and tool transcript. If a file-based result path lowers quality, inspect whether the failure is retrieval, artifact discovery, reading, integration, or stopping rather than changing the index first.
 
+## Dedicated Index Versus Agentic Retrieval Loop
+
+In a 100-question study of one scientific codebase, a dedicated prepared-index RAG pipeline scored Qwen2.5 7B at 0.720, versus 0.520 inside a Claude Code retrieval loop. The 32B pair scored 0.665 versus 0.560, and Gemma4 12B scored 0.675 versus 0.665. These LLM-judged differences mix together retriever, prompts, tool autonomy, response limits and model–harness fit, and the near-equal Gemma scores warn against blanket claims. Hold the repository, evidence, latency budget and protocol fixed, add human or executable calibration, and do not generalize from explanation QA to code repair.
+
 ## Limitations
 
 An end-to-end score can show that a configuration works without identifying the causal mechanism. Harnesses and provider CLIs can be opaque and change over time, while repeated agent runs and multiple graders may be needed to separate a real interaction from sampling variance. A benchmark's evidence distribution also limits transfer: literal conversational recall does not represent every retrieval workload.
@@ -29,3 +33,4 @@ An end-to-end score can show that a configuration works without identifying the 
 ## Sources
 
 - [Is Grep All You Need? How Agent Harnesses Reshape Agentic Search dossier](/dossiers/grep-agent-harnesses-agentic-search.md) — compares grep and vector retrieval over LongMemEval across custom and provider-native harnesses, inline and file-based delivery, and distractor-history limits; observed rankings vary with the stack.
+- [Retrieval-Augmented Generation for Scientific Code Understanding dossier](/dossiers/scientific-code-understanding-local-rag.md) — same-model comparison of a dedicated RAG pipeline and a Claude Code loop, without a retriever-isolating ablation.

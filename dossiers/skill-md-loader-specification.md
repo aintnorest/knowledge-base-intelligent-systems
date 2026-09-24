@@ -1,7 +1,7 @@
 ---
 type: Study Note
 title: What You're Actually Writing When You Write a SKILL.md
-description: Personal study notes on treating SKILL.md as a loader specification: progressive disclosure, runtime failure modes, portable environment guidance, and model-specific evaluation.
+description: "Personal study notes on treating SKILL.md as a loader specification: progressive disclosure, runtime failure modes, portable environment guidance, and model-specific evaluation."
 resource: https://internals.laxmena.com/p/what-youre-actually-writing-when
 source: https://internals.laxmena.com/p/what-youre-actually-writing-when
 tags: [agent-skills, context-engineering, token-efficiency, agents]

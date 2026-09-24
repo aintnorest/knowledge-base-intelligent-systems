@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: Tree of Thoughts: Deliberate Problem Solving with Large Language Models
+title: "Tree of Thoughts: Deliberate Problem Solving with Large Language Models"
 description: Personal study notes on Tree of Thoughts, an inference-time framework that combines language-model generation and self-evaluation with tree search.
 resource: https://arxiv.org/abs/2305.10601v2
 source: /archive/tree-of-thoughts-deliberate-problem-solving.pdf

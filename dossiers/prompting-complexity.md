@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: Prompting Complexity: Shortest Prompts for Texts and Behaviors in LLMs
+title: "Prompting Complexity: Shortest Prompts for Texts and Behaviors in LLMs"
 description: Personal study notes on a theoretical framework that treats prompts as model-relative compressed descriptions of target texts and acceptable behaviors.
 resource: https://arxiv.org/abs/2607.06145v1
 source: /archive/prompting-complexity.pdf

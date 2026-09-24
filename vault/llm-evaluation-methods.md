@@ -110,6 +110,10 @@ Model selection for an application should likewise compare model–prompt config
 
 Separate capability suites, which should remain difficult enough to reveal progress, from regression suites, whose known-good behavior should stay stable. Grade the resulting environment state where possible—a reservation row or passing artifact is stronger evidence than a transcript claiming success. Inspect trajectories for policy, safety, quality, and diagnosis, but do not require one fixed tool-call sequence when several valid paths exist.
 
+## Result Equivalence and Empty References
+
+Execution alone does not define answer correctness. In LAST-CQ, 230 of 1,917 corrected query pairs have an empty reference result, and a benchmark Google-BLEU convention can score an erroneous non-empty answer 1.0. Serialized overlap penalizes equivalent row orderings and inflates partially overlapping wrong rows. Compare canonical result-set equality or F1 alongside the metric, test how empty versus non-empty results are handled, and audit judges against humans. On 122 corrected outputs, an LLM judge labeled 74.6% at least partially correct, versus 65.6% for one blinded human.
+
 ## Key Insight
 
 There is no single "best" benchmark. The appropriate evaluation depends on the specific application. Moreover, automated metrics like BLEU remain popular despite known limitations because they are convenient, but they should be supplemented with human evaluation and reliability analysis for high-stakes applications.
@@ -125,3 +129,4 @@ There is no single "best" benchmark. The appropriate evaluation depends on the s
 - [Optimization before Evaluation dossier](/dossiers/optimization-before-evaluation.md) — distinguishes shared-prompt capability comparison from equal-budget model–prompt configuration evaluation.
 - [Playing Pretend dossier](/dossiers/expert-personas-factual-accuracy.md) — demonstrates repeated-trial thresholds and the need to report prompt-induced refusals separately from wrong answers.
 - [Demystifying evals for AI agents dossier](/dossiers/demystifying-agent-evals.md) — distinguishes capability and regression suites, pass@k and pass^k, trajectories and outcomes, and task versus grader failures.
+- [What Drives Recovery in Agentic Text-to-Cypher? LAST-CQ: An LLM Agent Self-Refinement Framework dossier](/dossiers/last-cq-what-drives-agentic-recovery.md) — empty-reference metric artifacts and judge optimism versus a blinded human.

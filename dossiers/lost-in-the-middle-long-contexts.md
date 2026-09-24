@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: Lost in the Middle: How Language Models Use Long Contexts
+title: "Lost in the Middle: How Language Models Use Long Contexts"
 description: Personal study notes on controlled evidence-position tests showing that long-context language models often underuse relevant information placed in the middle of their input.
 resource: https://arxiv.org/abs/2307.03172v3
 source: /archive/lost-in-the-middle-long-contexts.pdf

@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts
+title: "LatentMoE: Toward Optimal Accuracy per FLOP and Parameter in Mixture of Experts"
 description: Personal study notes on NVIDIA's LatentMoE architecture, which projects routed expert computation into a smaller latent space and reinvests the saved bandwidth and communication budget in more expert diversity.
 resource: https://arxiv.org/abs/2601.18089v1
 source: /archive/latentmoe.pdf

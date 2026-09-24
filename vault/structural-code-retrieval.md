@@ -30,6 +30,12 @@ File search makes an agent rediscover a graph serially: find a symbol, read cont
 - Evaluate end-to-end task quality, graph coverage, stale-index failures, build and refresh time, tokens, tool calls, and latency across the deployed languages and repositories.
 - Preserve direct source retrieval. A graph can identify where to look even when it cannot answer the final question.
 
+## In-Band Anchors and Offline Explanations
+
+A code graph does not require a new API. CodeAnchor serializes narrow call, import, containment and inheritance facts as removable, searchable comments at definitions, so a grep-first agent sees them through ordinary search. On SWE-bench Lite, the topology anchors raised function-level recall@5 from 0.8321 to 0.8540 and shortened navigation by 1.6 rounds, at about 9.9% extra input tokens. Inverse-only links helped on large, hub-heavy Verified repositories but hurt on Lite. These are soft hints, not a complete impact graph, and generated comments need freshness control.
+
+A local scientific-code assistant takes a different route. It parses C++ symbols and call neighborhoods once, generates file, module and call-chain explanations with local models, and embeds them beside path and symbol metadata (8,013 vectors). Queries combine exact identifier hits, dense candidates, bounded structural expansion and source excerpts. Lookup questions do well, but build/install questions averaged only 0.371. Cached explanations are not the authoritative source: record the source version and the cost of rebuilding after edits.
+
 ## Limitations
 
 - Static graphs omit or approximate macros, reflection, dynamic dispatch, generated code, runtime configuration, and behavior across process boundaries.
@@ -40,3 +46,5 @@ File search makes an agent rediscover a graph serially: find a symbol, read cont
 ## Sources
 
 - [Codebase-Memory dossier](/dossiers/codebase-memory-tree-sitter-knowledge-graphs.md) — evaluates a Tree-Sitter/SQLite graph exposed through MCP; reports lower token and tool use for structural questions, alongside source-level and macro-related limitations.
+- [How Much Static Structure Do Code Agents Need? A Study of Deterministic Anchoring dossier](/dossiers/deterministic-anchoring-code-agents.md) — searchable structural comments, localization gains and token cost.
+- [Retrieval-Augmented Generation for Scientific Code Understanding dossier](/dossiers/scientific-code-understanding-local-rag.md) — offline graph plus generated-explanation index for a scientific codebase.

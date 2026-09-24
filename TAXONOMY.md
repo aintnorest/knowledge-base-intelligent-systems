@@ -93,6 +93,13 @@ pages, not tags.
 | `verification` | Checking that outputs or behavior are correct: validation gates, formal or procedural checks. |
 | `peer-review` | Scholarly review as a task or evaluation target: generated reviews, review quality. |
 
+## Software Quality
+
+| Tag | Definition |
+|---|---|
+| `code-review` | Reviewing code changes (PRs/CLs) by humans or AI: review agents, comment quality and calibration, review policy, approval authority, reviewability. Contrast `peer-review`, which is scholarly review. |
+| `code-quality` | Properties of produced software beyond task success: maintainability, duplication and reuse, technical debt, static-analysis findings, architectural drift, post-merge repair, and the gates that protect them. |
+
 ## Models & Architecture
 
 | Tag | Definition |
@@ -161,6 +168,9 @@ stop accumulating evidence.
 | `bias-and-fairness` | Harmful social bias, stereotyping, and normativity as a subject: [llms-are-biased-because-they-are-llms](/dossiers/llms-are-biased-because-they-are-llms.md), [distributional-normativity-blindness](/vault/distributional-normativity-blindness.md), [overt-covert-bias-divergence](/vault/overt-covert-bias-divergence.md), [bias-as-prior-dominance](/vault/bias-as-prior-dominance.md). |
 | `controllable-generation` | Attribute-conditioned rewriting and generation as a task family (style transfer, formality, simplification, obfuscation): [register-analysis-arbitrary-style-transfer](/dossiers/register-analysis-arbitrary-style-transfer.md), [contrastive-exemplar-characterization](/vault/contrastive-exemplar-characterization.md). |
 | `decoding` | Logit- and activation-level inference-time interventions without weight updates (contrastive/constrained decoding, gated steering), misdescribed by `test-time-scaling`: [leading-query-contrastive-decoding](/vault/leading-query-contrastive-decoding.md), [side-effect-bounded-activation-steering](/vault/side-effect-bounded-activation-steering.md). |
+| `skill-quality` | Quality of reusable SKILL.md artifacts (routing, applicability, portability, verification, maintenance), currently split across `agent-skills`/`evaluation`: [skill-artifact-quality-gates](/vault/skill-artifact-quality-gates.md), [skill-md-anatomy-and-smells](/dossiers/skill-md-anatomy-and-smells.md), [agent-skills-reusability-defects](/dossiers/agent-skills-reusability-defects.md), [skillsbench-agent-skills-efficacy](/dossiers/skillsbench-agent-skills-efficacy.md). Flagged by the 2026-09-24 batch. |
+| `software-testing` | Test design and oracles as a first-class activity (generated-test admissibility, protected negative intent, mutation sensitivity, cross-version oracles, test selection), currently absorbed by `verification`: [expectation-first-coding-contract](/vault/expectation-first-coding-contract.md), [cross-version-differential-oracles](/vault/cross-version-differential-oracles.md), [safety-constrained-regression-test-selection](/vault/safety-constrained-regression-test-selection.md), [tdflow-test-driven-development](/dossiers/tdflow-test-driven-development.md), [agent-generated-tests-software-engineering-value](/dossiers/agent-generated-tests-software-engineering-value.md), [ngqa-software-quality-accelerator](/dossiers/ngqa-software-quality-accelerator.md). Flagged independently twice (as `test-design` and `software-testing`) by the 2026-09-24 batch; near the promotion bar. |
+| `ai-content-detection` | Human-vs-AI origin attribution as a task, distinct from `provenance` lineage: [slopshape-structural-ai-commercial-content](/dossiers/slopshape-structural-ai-commercial-content.md), [structural-origin-signals-versus-content-quality](/vault/structural-origin-signals-versus-content-quality.md). |
 
 ## Alias Map
 

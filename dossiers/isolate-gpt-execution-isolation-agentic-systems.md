@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: ISOLATE GPT: An Execution Isolation Architecture for LLM-Based Agentic Systems
+title: "ISOLATE GPT: An Execution Isolation Architecture for LLM-Based Agentic Systems"
 description: Study notes on a hub-and-spoke, process-isolated architecture for third-party LLM apps that mediates cross-app data flow through structured messages, user consent, and a trusted hub.
 resource: https://arxiv.org/abs/2403.04960v2
 source: /archive/isolate-gpt-execution-isolation-agentic-systems.pdf

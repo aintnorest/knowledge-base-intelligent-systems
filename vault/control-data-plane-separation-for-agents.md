@@ -31,6 +31,10 @@ It does not make extracted data trustworthy. A malicious source can still supply
 - Treat retries and exception messages as cross-plane channels. A parser-controlled failure that changes whether an observable action occurs can leak a protected bit or steer the planner.
 - Measure the price of separation: some tasks become impossible without user clarification, complete API schemas, or a richer mediated operation. Those failures identify an interface contract gap, not just a model weakness.
 
+## The Skill File Is Untrusted Control Input
+
+A behaviorally verified registry study identifies an "Agent Hijacker" archetype: skills that issue instruction overrides, suppress user permission prompts, or silently BCC an attacker, all behind plausible public descriptions. A separate code-first archetype hides credential theft in bundled scripts. Treat even the root SKILL.md of a third-party skill as data, not as authority to relax the planner's tool or approval policy. A quarantined parser may extract typed data or propose a bounded procedure, but a trusted controller must independently authorize tool effects and their arguments. Text isolation does not stop a malicious executable payload, so pair it with sandboxing and scoped network and file authority.
+
 ## Limitations
 
 - The boundary relies on correct isolation, restricted schemas, runtime enforcement, and tools that do not themselves smuggle untrusted instructions into the control plane.
@@ -41,3 +45,4 @@ It does not make extracted data trustworthy. A malicious source can still supply
 ## Sources
 
 - [Defeating Prompt Injections by Design dossier](/dossiers/defeating-prompt-injections-by-design.md) — CaMeL implements privileged planning, quarantined structured parsing, restricted code execution, and documents data-to-control and side-channel limitations.
+- [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — instruction-hijack and covert-script archetypes among 157 confirmed malicious skills.

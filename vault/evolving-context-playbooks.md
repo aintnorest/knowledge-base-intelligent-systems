@@ -38,6 +38,11 @@ This differs from prompt optimization approaches that search for a compact instr
 - Domains without trustworthy feedback signals
 - Situations where extra context creates distraction but no useful new guidance
 
+## Preserve Outcomes, Distill Procedures
+
+When the same experience pool is given to an agent either as direct workflow memory or as a reusable SKILL.md, the skill version improves task success by +6.06 points (95% bootstrap CI [+0.76, +11.36]) across matched comparisons. Coders labeled procedural anchoring in 65.7% of skill cases and explicit knowledge injection in 4.5%. Outcome labels matter. When failed source traces lose their success/failure labels, skill construction can teach the wrong procedure (0.7462 with labels versus 0.4000 without, in one Terminal-Bench-2 setting). Distill the successful decision path, keep failures as marked counterexamples, and validate the result against direct-memory and no-memory baselines.
+
 ## Sources
 
 - [Agentic Context Engineering dossier](/dossiers/agentic-context-engineering.md) - ACE frames context as an evolving playbook and reports gains on AppWorld and financial reasoning.
+- [Demystifying Agent Skills: Why They Work—Until They Don’t dossier](/dossiers/demystifying-agent-skills-why-they-work.md) — matched workflow-memory versus skill comparison and an outcome-label ablation.

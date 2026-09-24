@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: Kimi K2.5: Visual Agentic Intelligence
+title: "Kimi K2.5: Visual Agentic Intelligence"
 description: Personal study notes on Kimi Team's multimodal technical report, covering early vision-text fusion, zero-vision supervised fine-tuning, joint multimodal RL, and learned parallel-agent orchestration.
 resource: https://arxiv.org/abs/2602.02276v1
 source: /archive/kimi-k2-5-visual-agentic-intelligence.pdf

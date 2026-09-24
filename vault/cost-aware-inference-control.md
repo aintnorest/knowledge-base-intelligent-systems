@@ -22,6 +22,10 @@ AI inference should be managed as a request-level control problem, not merely a 
 
 Start with a segmented cost dashboard rather than an undifferentiated cost-per-token average. Then prioritize the dominant term: prompt reuse suggests caching; heterogeneous difficulty suggests routing; memory pressure suggests quantization; decode-heavy traffic may justify speculative decoding. Maintain a high-quality fallback and monitor each route for regressions and distribution drift.
 
+## Review Effort as Request-Level Routing
+
+Code review makes request-level routing concrete. GitHub Copilot's **Lite** level favors fast feedback on common issues, and **Balanced** uses a higher-reasoning path for sensitive, complex or cross-service changes. GitHub estimates $0.05–$1 in AI credits per Lite review and $0.25–$5 per Balanced review, excluding Actions minutes. These are vendor estimates, not controlled quality/cost measurements. Record the effective level per PR revision and compare severity-specific detection, noise, latency, review effort and spend on risk-matched changes ([Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)).
+
 ## Limitations
 
 Classification and routing add operational complexity and can make product quality inconsistent. Optimizations also interact: aggressive quantization may change speculative-decoding acceptance, while cache savings disappear when prompt reuse is low. Results must be validated on representative traffic, hardware, and pricing rather than copied from vendor case studies.
@@ -29,3 +33,5 @@ Classification and routing add operational complexity and can make product quali
 ## Sources
 
 - [Guest post: AI Inference Is Breaking Unit Economics dossier](/dossiers/ai-inference-unit-economics.md) — connects request economics to caching, routing, quantization, speculative decoding, and serving infrastructure.
+- [About GitHub Copilot code review dossier](/dossiers/github-copilot-code-review-concepts.md) — estimated per-review AI-credit ranges and effort modes.
+- [Copilot code review effort levels are generally available dossier](/dossiers/github-copilot-review-effort-levels.md) — inherited defaults and per-run override with a visible label.

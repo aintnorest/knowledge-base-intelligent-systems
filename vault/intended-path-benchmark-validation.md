@@ -23,6 +23,10 @@ An agent benchmark can have a correct final score but measure the wrong thing. I
 
 Apply this to security, computer-use, coding, and tool-use benchmarks where agents can exploit broad environment access or idiosyncratic harness behavior. It is particularly valuable when a benchmark is reused across models: a newly capable agent may discover a route that earlier systems did not, silently changing what the score means.
 
+## Keep Exploration and Final Scoring Separable
+
+Access to the benchmark can change the behavior being measured. A browser explorer that sees the acceptance checklist can aim straight at checked paths instead of characterizing the app. WebCraftBench withholds its 5,088 criteria, collects runtime evidence, and scores afterward. TicTacBench lets an RTL agent use limited pre-layout diagnostics during repair but holds back the full post-place-and-route closure gate until submission. Both separations reduce direct optimization against a hidden answer, but residual risks remain: exploration can miss valid behavior, and a cheap proxy can reward changes that fail the final gate.
+
 ## Limitations
 
 Trace inspection can miss a subtle alternate cause, and hardening every shortcut may narrow the task into an unrealistic puzzle. Reference solutions prove existence, not representative human or agent effort. Maintain a clear distinction between removing an invalid bypass and suppressing a legitimate alternative solution that truly demonstrates the target capability.
@@ -30,3 +34,5 @@ Trace inspection can miss a subtle alternate cause, and hardening every shortcut
 ## Sources
 
 - [Quantifying Frontier LLM Capabilities for Container Sandbox Escape dossier](/dossiers/sandbox-escape-benchmark.md) — validates each task with a reference solution and reports hardening four unintended shortcut paths discovered from model transcripts.
+- [WebCraftBench: Evaluating Web Application Generation from a Software Testing Perspective dossier](/dossiers/webcraftbench-web-app-testing.md) — criteria withheld during coverage-guided browser exploration.
+- [TicTacBench: Benchmarking Timing Closure Capabilities of Coding Agents dossier](/dossiers/tictacbench-timing-closure-coding-agents.md) — pre-layout feedback during editing; post-PnR assessment held out.

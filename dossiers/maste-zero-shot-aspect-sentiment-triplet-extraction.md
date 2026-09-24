@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: MASTE: A Multi-Agent Pipeline for Zero-Shot Aspect Sentiment Triplet Extraction
+title: "MASTE: A Multi-Agent Pipeline for Zero-Shot Aspect Sentiment Triplet Extraction"
 description: Personal study notes on MASTE, a training-free four-stage LLM pipeline for exact-match aspect–opinion–sentiment triplet extraction.
 resource: https://arxiv.org/abs/2607.08080v1
 source: /archive/maste-zero-shot-aspect-sentiment-triplet-extraction.pdf

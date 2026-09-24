@@ -31,6 +31,10 @@ The consistent finding is that soft weighting wins on quality and sparse selecti
 
 The pattern generalizes: MoE-style routing over sequence chunks, document-level embeddings consulted before passage-level reads, shard selection in a vector index, choosing which memory files an agent opens. Anywhere the expensive object can be given a cheap, stable, content-derived key, routing becomes nearly free.
 
+## Contrast: Model-Declared Scope
+
+Instead of scoring blocks by content keys, a model can declare an addressable chunk in its generated text, and the inference engine enforces that scope. This avoids a proxy scan at every decode step, but it needs reliable tag syntax and a brief full-context navigation phase, and a wrong focus hides needed evidence until the scope is reopened. The largest tested models resolved about 99% of focus references, while Gemma-4-E4B resolved only 58%, with severe accuracy loss. Compare selector overhead, end-to-end quality, model capability and actual serving latency before declaring either routing method cheaper.
+
 ## Limitations
 
 - A single pooled key is a lossy description. A block containing one crucial rare detail among mostly irrelevant content will score poorly and be skipped.
@@ -41,3 +45,4 @@ The pattern generalizes: MoE-style routing over sequence chunks, document-level 
 ## Sources
 
 - [Memory Caching: RNNs with Growing Memory dossier](/dossiers/memory-caching-rnns-growing-memory.md) — gating and Sparse Selective Caching score a token projection against segment mean-poolings; ablations isolate content-dependence (40.5 to 33.0 retrieval) and the quality/cost ordering of soft gating versus Top-k.
+- [Language Models Can Control Their Own Attention dossier](/dossiers/declarative-attention-model-controlled-context.md) — intrinsic scope declarations versus token-wise proxy scoring.

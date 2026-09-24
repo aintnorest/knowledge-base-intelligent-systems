@@ -27,6 +27,10 @@ Query-agnostic scoring must guess which details will matter across many possible
 
 Use multi-fidelity storage for long-running work: a small active context, an indexed evidence archive, and a retrieval budget for expansion. Record provenance and version boundaries so recovery does not resurrect stale, inaccessible, or superseded material. Test with late questions whose evidence was intentionally kept out of the compact tier.
 
+## First-Party Coding-Harness Policy
+
+Anthropic describes Claude Code's compaction: it summarizes architectural decisions, unresolved bugs and implementation details, then resumes with the five most recently accessed files. It recommends maximizing recall over real agent traces before pruning for precision, and clearing obsolete tool results as a lighter first step than compressing the whole history. The five-file rule is a vendor policy, not an established optimum. Test for loss of late-needed requirements, paths and verification evidence, and keep source access for recovery.
+
 ## Limitations
 
 Reversibility is not free. It needs storage, indexing, retrieval latency, policy enforcement, and a selector capable of finding the needed material. An archive also does not prevent a system from retrieving poisoned or obsolete content; governance and confidence handling remain necessary.
@@ -34,3 +38,4 @@ Reversibility is not free. It needs storage, indexing, retrieval latency, policy
 ## Sources
 
 - [What to Keep, What to Forget dossier](/dossiers/rate-distortion-memory-compaction.md) — contrasts irreversible eviction and summary replacement with query-time retrieval and archival designs across the inference-to-agent-memory hierarchy.
+- [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — recall-first compaction and recent-file reattachment in Claude Code.

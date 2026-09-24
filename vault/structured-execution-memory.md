@@ -28,6 +28,10 @@ Structured memory also makes update operations more explicit. Entries can have i
 
 Use structured execution memory when an agent works over many tool calls, partial observations, and debugging loops. It is most useful when the task has requirements that must persist, environment facts discovered during execution, and many possible retries or branches.
 
+## Notes, Compaction, and Delegation Are Different Boundaries
+
+For long coding tasks, a compacted conversation, external structured notes, and a subagent's isolated research window are different things. Anthropic describes to-do and NOTES.md-style records that are reloaded after resets, and specialized workers that explore tens of thousands of tokens and return a roughly 1,000–2,000-token synthesis. The lead agent should keep task contracts, unresolved constraints, evidence locators and verification state explicitly, rather than trusting a fluent summary to carry every detail. The post gives examples, not a controlled comparison.
+
 ## Limitations
 
 The bank still needs a policy for what to write, when to update, and when to expose records. A structured store alone can become passive clutter if it is not paired with retrieval or intervention discipline.
@@ -35,3 +39,4 @@ The bank still needs a policy for what to write, when to update, and when to exp
 ## Sources
 
 - [Remember When It Matters dossier](/dossiers/proactive-memory-agent.md) - describes a memory bank with private status, knowledge entries, and procedural entries managed through explicit update/delete calls.
+- [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — compaction, persistent notes, and subagent contexts contrasted for long-horizon work.

@@ -33,6 +33,10 @@ Shared testing also makes policy quality visible. A complete reference monitor f
 - Include explicit-scope and implicit-scope task variants. Compare whether the agent takes extra authorized actions when a task's boundaries must be inferred.
 - Treat a policy review or bounded user escalation as part of the measured system; count its accuracy, friction, expiry behavior, and failure modes rather than assuming an approval resolves ambiguity.
 
+## Skill Supply-Chain Measurement
+
+Two skill-security studies measure different endpoints. One scanner flags 8,126 of 31,132 community skills (26.1%) for potentially dangerous patterns, with 86.7% precision and 82.5% recall on a 200-skill holdout. Only 23 of 87 intensively reviewed highest-risk cases showed clear malicious intent. A separate study behaviorally confirms 157 malicious skills among 98,380 and 632 labeled vulnerability instances, using a 60-second sandbox that can miss dormant triggers. A local evaluation suite should report detector flags, confirmed unauthorized effects, false blocks of dual-use security tools, recall limits and trigger-dependent behavior separately ([Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)).
+
 ## Limitations
 
 - No finite corpus proves resilience to adaptive attackers, new tools, compromised trusted components, semantic ambiguity, or unknown side channels.
@@ -44,3 +48,5 @@ Shared testing also makes policy quality visible. A complete reference monitor f
 
 - [The Balkanization of Execution-Security Research for AI Coding Agents dossier](/dossiers/execution-security-research-ai-coding-agents.md) — synthesizes 39 papers into execution-security mechanisms and argues that isolation, authorization, TOCTOU, policy fragility, and scope creep are rarely evaluated across their shared failure patterns.
 - [Assume-Compromise Boundary Testing](/vault/assume-compromise-boundary-testing.md) — supplies the complementary boundary-level test pattern for testing a control after assuming the planner is compromised.
+- [Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale dossier](/dossiers/agent-skills-security-vulnerabilities-wild.md) — scanner prevalence, validation error, and severity stratification.
+- [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — behaviorally confirmed malicious skills and detection limits.

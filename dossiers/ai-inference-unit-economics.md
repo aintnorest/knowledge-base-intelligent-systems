@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: Guest post: AI Inference Is Breaking Unit Economics
+title: "Guest post: AI Inference Is Breaking Unit Economics"
 description: Personal study notes on John Greenberg's practitioner overview of inference cost as an AI product unit-economics constraint and the production techniques used to reduce it.
 resource: https://www.turingpost.com/p/guest-post-ai-inference-is-breaking-unit-economics
 source: https://www.turingpost.com/p/guest-post-ai-inference-is-breaking-unit-economics

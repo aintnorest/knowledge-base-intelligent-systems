@@ -29,6 +29,10 @@ A graph can answer a dependency chain without loading many files, while raw sour
 - Require source confirmation for changes, security-sensitive claims, or decisions whose evidence must include implementation details.
 - Test counterexamples: macros and generated code for graphs, synonym-heavy requests for sparse search, and cross-file relations for file-only navigation.
 
+## Example: Scientific-Code Intent Router
+
+One scientific-code retrieval pipeline classifies each query as API usage, location, data flow, comparison, module overview or workflow. The class then decides between exact filename, symbol or API injection, semantic neighbors, and 2–4 graph-related expansion chunks. The pipeline balances both subjects of a comparison and suppresses build and test files except for build or test queries. It is an inspectable example, not a proven optimum: build/install questions averaged only 0.371. Test routing recall per category before relying on precomputed summaries alone.
+
 ## Limitations
 
 - Natural-language requests often mix classes; routing is a hypothesis, not an oracle.
@@ -40,3 +44,4 @@ A graph can answer a dependency chain without loading many files, while raw sour
 - [Codebase-Memory dossier](/dossiers/codebase-memory-tree-sitter-knowledge-graphs.md) — contrasts graph advantages for caller ranking and hubs with explorer advantages for source context and exhaustive grep.
 - [File-Native Context Retrieval](/vault/file-native-context-retrieval.md) — establishes tool-mediated, task-relevant retrieval as a model- and interface-dependent choice.
 - [Hybrid Memory Retrieval Pipeline](/vault/hybrid-memory-retrieval-pipeline.md) — describes sparse, dense, and graph retrieval as complementary stages with explicit filtering and provenance.
+- [Retrieval-Augmented Generation for Scientific Code Understanding dossier](/dossiers/scientific-code-understanding-local-rag.md) — finite intent router with capped graph expansion and category-level scores.

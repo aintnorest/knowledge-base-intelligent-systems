@@ -30,6 +30,10 @@ An agent can call a tool repeatedly and autonomously, so a malicious or compromi
 - Separate a release's claimed verification evidence from independent validation performed by the deploying organization.
 - Review the complete deployment chain: installer, update mechanism, bundled binaries, configuration, and the environment's credentials—not only the MCP protocol handler.
 
+## Skill-Triggered MCP Authority
+
+Agent Skills supply procedural guidance, while MCP servers supply callable connectivity. A skill may reference or bundle a server configuration without thereby earning permission to install it. A confirmed malicious skill shipped a `.mcp.json` with hardcoded attacker credentials. When a skill names a new server, reapply independent server provenance, secret-handling, egress and tool-authorization checks before invoking it, and do not let the server inherit the skill's trust tier ([Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)).
+
 ## Limitations
 
 - Antivirus scans, static analysis, signatures, and provenance reduce risk but cannot prove absence of a backdoor or future vulnerability.
@@ -39,3 +43,5 @@ An agent can call a tool repeatedly and autonomously, so a malicious or compromi
 ## Sources
 
 - [Codebase-Memory dossier](/dossiers/codebase-memory-tree-sitter-knowledge-graphs.md) — describes an MCP-server proposal with dangerous-call audits, egress and installer checks, adversarial JSON-RPC testing, vendored-dependency checksums, signing/provenance, and release scanning; its security claims remain author-reported.
+- [Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward dossier](/dossiers/agent-skills-architecture-acquisition-security-survey.md) — separates skill guidance from MCP connectivity; proposes capability gates.
+- [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — a behaviorally confirmed skill bundling a malicious .mcp.json.

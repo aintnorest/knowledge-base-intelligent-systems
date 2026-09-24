@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: AI Sandboxes: A Threat Model, Taxonomy, and Measurement Framework
+title: "AI Sandboxes: A Threat Model, Taxonomy, and Measurement Framework"
 description: Study notes on an assurance-oriented framework for AI sandboxes that bounds deployment claims by explicit assumptions, evidence artifacts, and their weakest claim-relevant measurement dimension.
 resource: https://arxiv.org/abs/2606.18532v1
 source: /archive/ai-sandboxes-threat-model-measurement-framework.pdf

@@ -1,7 +1,7 @@
 ---
 type: Synthesis
 title: Hybrid Discovery + Verification
-description: A two-phase pipeline for finding and validating external references: high-throughput LLM search followed by rigorous API verification with deduplication.
+description: "A two-phase pipeline for finding and validating external references: high-throughput LLM search followed by rigorous API verification with deduplication."
 tags: [retrieval, verification, tool-use, agents]
 timestamp: 2026-07-11T16:00:00Z
 ---

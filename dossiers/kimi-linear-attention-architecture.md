@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: Kimi Linear: An Expressive, Efficient Attention Architecture
+title: "Kimi Linear: An Expressive, Efficient Attention Architecture"
 description: Personal study notes on Kimi Team's hybrid Kimi Delta Attention architecture, which interleaves channel-gated linear attention and periodic global attention to improve long-context efficiency without giving up retrieval quality.
 resource: https://arxiv.org/abs/2510.26692v2
 source: /archive/kimi-linear-attention-architecture.pdf

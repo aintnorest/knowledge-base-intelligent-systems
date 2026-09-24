@@ -54,6 +54,10 @@ Leniency is measurable and reproducible across evaluators. In PEEM, judge means 
 
 Inflation is not the only direction of failure. On a human-authored “slop” taxonomy, GPT-5, DeepSeek-V3, and o3-mini severely *under*-called the positive class and reached approximately zero agreement with human binary labels. Their rationales also narrowed the construct, over-emphasizing density while missing relevance, coherence, tone, bias, and factuality. A conservative rubric therefore needs construct-validity checks, not merely lower score priors: compare category prevalence, span evidence, abstention, and domain slices against expert annotations before trusting a judge's apparent strictness.
 
+## Agreement Must Match the Construct
+
+A judge can agree strongly with humans on the wrong construct. SlopShape reports five-run feature-score α = 0.891, and a 12-post human audit with κ = 0.928 between annotators and a mean human–model κ = 0.946 across 20 structural features. That supports reproducible feature labeling within the instrument. It does not validate AI-provenance claims beyond the holdout, or show that posts are useful to readers. Calibrate a judge on the *decision it will replace*, not on an adjacent proxy.
+
 ## Related
 
 - [Verbosity Bias in Preference Evaluation](/vault/verbosity-bias-in-preference-evaluation.md) — the other systematic judge pathology: length-favoring preference rather than upward score drift.
@@ -63,3 +67,4 @@ Inflation is not the only direction of failure. On a human-authored “slop” t
 - [PaperOrchestra dossier](/dossiers/paperorchestra.md) — Literature Review Quality autorater with anti-inflation rules
 - [PEEM dossier](/dossiers/peem-prompt-engineering-evaluation-metrics.md) — nine-axis rubric with per-axis rationales; documents judge leniency, ceiling compression, and cross-evaluator level shifts under preserved rankings
 - [Measuring AI “Slop” in Text dossier](/dossiers/measuring-ai-slop-in-text.md) — shows near-zero judge–human agreement, strong positive-class underprediction, and category narrowing when capable LLMs apply an expert text-quality guide.
+- [SlopShape: Identifying AI-Generated Commercial Web Content dossier](/dossiers/slopshape-structural-ai-commercial-content.md) — high feature-score agreement that does not validate editorial quality.

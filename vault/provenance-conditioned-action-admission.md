@@ -32,6 +32,10 @@ The pattern also bounds LLM-based security checks. A semantic judge is useful fo
 - Evaluate by task-grouped holdouts and future-distribution tests, not random individual actions alone. Report utility, unauthorized-effect block rate, false blocks, escalation rate, latency, drift, and the coverage of action arguments with verified provenance.
 - Couple learned normality with non-negotiable policies. Spending limits, recipient authorization, tenancy boundaries, and legal requirements should not disappear merely because a trace resembles historic benign traffic.
 
+## Skill-Package Origin Is Not Action Authorization
+
+In a verified-malware corpus, 115 of 157 malicious skills had undocumented "shadow features", most often unlisted network endpoints. One three-line near-clone of a benign skill added a hidden upload. A package signature or a recognizable upstream name cannot authorize the destination, credential read, hook or email recipient its content introduces. At each consequential sink, compare the requested tool, the origins of its arguments and the actual effect with the current user task and a separately approved capability manifest. Repository provenance establishes where the bytes came from, not whether the operation was requested.
+
 ## Limitations
 
 - A learned envelope describes observed behavior rather than authorizing behavior. Sparse, stale, contaminated, or unrepresentative traces can block legitimate work or normalize unsafe practice.
@@ -42,3 +46,4 @@ The pattern also bounds LLM-based security checks. A semantic judge is useful fo
 ## Sources
 
 - [Agent-Sentry dossier](/dossiers/agent-sentry-execution-provenance.md) — learns structural/provenance bounds from benign agent traces, uses an allowlist only for trusted groundable values, and routes a small residual to a bounded LLM judge.
+- [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — shadow-feature rate and hidden upload, hook and egress patterns.

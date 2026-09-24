@@ -22,6 +22,10 @@ File-native context retrieval gives an agent an index and structured files to se
 
 Partition large schemas, repositories, policies, or runbooks along boundaries that match real tasks; an index should route the agent to a small domain file before detailed search begins. Use stable names and search-friendly patterns, and log tool traces, retrieved bytes or tokens, retries, task success, and model version. Test the deployed model specifically: tool navigation can be a capability rather than a universally beneficial abstraction.
 
+## First-Party Repository Patterns
+
+OpenAI's agent-first repository replaced a monolithic instruction file with a roughly 100-line `AGENTS.md` that indexes versioned architecture, design, plan, product-spec and reference documents. CI checks link integrity and freshness, and a recurring doc-gardening job proposes corrections where documentation has drifted from code. Anthropic describes Claude Code's hybrid: load durable `CLAUDE.md` guidance up front, keep lightweight paths or stored queries for contingent evidence, and use glob/grep navigation for just-in-time reads, with names, directories, timestamps and sizes as navigation cues. Both are vendor operational accounts, not measured comparisons against up-front retrieval. Test total tool calls, missed evidence, latency and task outcome on your own repository.
+
 ## Limitations
 
 - Retrieval adds planning and tool-use failure modes; a model that searches poorly can do worse than receiving a bounded prompt directly.
@@ -32,3 +36,5 @@ Partition large schemas, repositories, policies, or runbooks along boundaries th
 ## Sources
 
 - [Structured Context Engineering for File-Native Agentic Systems dossier](/dossiers/structured-context-engineering-file-native-agents.md) — reports model-dependent file-agent versus prompt results and domain-partitioned schema navigation at 10,000 tables.
+- [Harness engineering: leveraging Codex in an agent-first world dossier](/dossiers/openai-harness-engineering-agent-first.md) — 100-line AGENTS.md index, CI doc checks, and doc gardening.
+- [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — hybrid up-front plus just-in-time file navigation in Claude Code.

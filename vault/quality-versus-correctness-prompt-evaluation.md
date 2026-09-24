@@ -48,6 +48,10 @@ When adopting a prompt technique, name which track it is supposed to move before
 
 The same split applies to format-control interventions: conformance to a schema is a third thing again, easy to measure and easy to mistake for either of the other two. See [Answer Engineering](/vault/answer-engineering.md).
 
+## A Third Axis: Origin
+
+A classifier for AI origin is neither a quality grader nor a correctness grader. SlopShape's 187 structural features reach 98.0 macro-F1 for human versus first-pass AI blog mirrors, and 98.1 after same-model rewriting, yet those labels say nothing about factuality, usefulness or coherence. Report provenance, factual and utility defects, and reader-quality judgments separately ([Structural Origin Signals Versus Content Quality](/vault/structural-origin-signals-versus-content-quality.md)).
+
 ## Limitations
 
 - The split is cleaner in benchmarks than in products, where "good answer" often genuinely means both correct and well-presented. In that case, report both and set a policy for trade-offs rather than averaging them.
@@ -64,3 +68,4 @@ The same split applies to format-control interventions: conformance to a schema 
 - [Measuring AI “Slop” in Text dossier](/dossiers/measuring-ai-slop-in-text.md) — decomposes low-quality prose into utility, information-quality, and style defects; finds that the predictive dimensions differ between news and factual QA.
 - [When “A Helpful Assistant” Is Not Really Helpful dossier](/dossiers/personas-system-prompts-not-helpful.md) — isolates bare speaker and audience labels on factual accuracy and exposes a non-deployable per-question oracle gap.
 - [Playing Pretend dossier](/dossiers/expert-personas-factual-accuracy.md) — repeated-sampling evidence that expert roles do not reliably raise factual accuracy and can change refusal behavior.
+- [SlopShape: Identifying AI-Generated Commercial Web Content dossier](/dossiers/slopshape-structural-ai-commercial-content.md) — origin detection that does not measure reader-assessed quality.

@@ -1,6 +1,6 @@
 ---
 type: Study Note
-title: What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents
+title: "What to Keep, What to Forget: A Rate–Distortion View of Memory Compaction in LLMs and Agents"
 description: Personal study notes on Colaco and Lahjouji's survey that frames KV, prompt, architectural, and agent-memory compaction as a shared rate–distortion problem.
 resource: https://arxiv.org/abs/2607.08032v1
 source: /archive/rate-distortion-memory-compaction.pdf

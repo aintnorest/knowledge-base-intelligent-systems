@@ -34,6 +34,15 @@ Context adaptation creates a control loop. The model acts, receives feedback, re
 
 Treat the Reflector as part of the evaluation system. If the Reflector cannot reliably diagnose why an attempt succeeded or failed, the Curator may add bad lessons and poison the playbook.
 
+## Promoting Discoveries Into Deterministic Skills
+
+When a testing agent solves a repeated setup step by exploration, extract the stable sequence into a deterministic repository skill, propose it as a PR, and validate it on later sessions. Cognition reports replacing fragile computer-use login loops with a script that returns an authenticated session, and it lets Devin propose newly discovered setup skills as one-click PRs. Playbooks for repeated tasks specify the outcome, postconditions, forbidden actions and required inputs. Session insights can nominate changes, but a self-diagnosis from one run should not be promoted without tests or reviewer evidence. Cognition reports no measured generalization rate.
+
+A verifier gate guarantees less than it appears to. Compare incumbent and candidate under the *same current* task and protocol, and accept only a lower measured risk. Bilevel Coordinated Reflection proves conditional convergence of *verifier* risk; claims about true utility also require a calibrated verifier. In its toy domain, independently measured harmful updates still passed the grounded gate 6.2% of the time. Re-run the incumbent when repository or policy state changes. An incomplete CI suite is evidence, not an oracle.
+
 ## Sources
 
 - [Agentic Context Engineering dossier](/dossiers/agentic-context-engineering.md) - ACE works without labels on AppWorld because execution feedback is meaningful, but can degrade on finance tasks when reliable labels or execution signals are absent.
+- [Verifying Agentic Development at Scale dossier](/dossiers/cognition-verifying-agentic-development.md) — deterministic login skill and one-click PRs for discovered setup skills.
+- [How Cognition Uses Devin to Build Devin dossier](/dossiers/cognition-devin-builds-devin.md) — Playbooks with postconditions and forbidden actions; Session Insights.
+- [Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems dossier](/dossiers/bilevel-coordinated-reflection.md) — verifier-risk gate guarantees versus true utility; harmful-update residual.
