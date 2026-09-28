@@ -24,7 +24,11 @@ Partition large schemas, repositories, policies, or runbooks along boundaries th
 
 ## First-Party Repository Patterns
 
-OpenAI's agent-first repository replaced a monolithic instruction file with a roughly 100-line `AGENTS.md` that indexes versioned architecture, design, plan, product-spec and reference documents. CI checks link integrity and freshness, and a recurring doc-gardening job proposes corrections where documentation has drifted from code. Anthropic describes Claude Code's hybrid: load durable `CLAUDE.md` guidance up front, keep lightweight paths or stored queries for contingent evidence, and use glob/grep navigation for just-in-time reads, with names, directories, timestamps and sizes as navigation cues. Both are vendor operational accounts, not measured comparisons against up-front retrieval. Test total tool calls, missed evidence, latency and task outcome on your own repository.
+One repository pattern replaces a monolithic initial instruction with a short index into versioned domain documents, backed by link and freshness checks that catch drift. Another loads durable guidance up front while keeping contingent evidence behind file navigation and bounded reads. Neither operational account proves superiority to up-front retrieval; measure total tool calls, missed evidence, latency and task outcome on the deployed model.
+
+For work spanning fresh sessions, keep specifications, current priorities, and the reasons behind important checks in durable files. A new context can reread the relevant artifacts instead of inheriting an opaque transcript; a visible research artifact lets the operator inspect and correct what was gathered before implementation. This spends retrieval time and depends on keeping the files current: repeated reads cannot repair a contradictory specification.
+
+The navigable surface need not stop at repository content. Tool interface definitions can also be indexed as files and loaded only for the operations a task needs. In source-inspected coding runtimes, path and lexical search, structural parsing, and deferred local guidance provide common navigation mechanisms; the observed absence of vector retrieval over their source trees does not establish that embeddings are unhelpful for other stores or workloads.
 
 ## Limitations
 
@@ -36,5 +40,9 @@ OpenAI's agent-first repository replaced a monolithic instruction file with a ro
 ## Sources
 
 - [Structured Context Engineering for File-Native Agentic Systems dossier](/dossiers/structured-context-engineering-file-native-agents.md) — reports model-dependent file-agent versus prompt results and domain-partitioned schema navigation at 10,000 tables.
-- [Harness engineering: leveraging Codex in an agent-first world dossier](/dossiers/openai-harness-engineering-agent-first.md) — 100-line AGENTS.md index, CI doc checks, and doc gardening.
-- [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — hybrid up-front plus just-in-time file navigation in Claude Code.
+- [Harness engineering: leveraging Codex in an agent-first world dossier](/dossiers/openai-harness-engineering-agent-first.md) — OpenAI's roughly 100-line `AGENTS.md` index of architecture, design, plans and specs, with CI link/freshness checks and documentation gardening.
+- [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — Claude Code loads `CLAUDE.md` guidance up front and navigates contingent files with glob/grep and file metadata.
+- [Ralph Wiggum as a "software engineer" dossier](/dossiers/ralph-wiggum-loop.md) — fresh coding loops reread durable specifications and a current plan, exposing the cost of stale specifications and lost test rationale.
+- [What I learned building an opinionated and minimal coding agent dossier](/dossiers/pi-minimal-coding-agent.md) — favors visible planning files and separately observed research artifacts over opaque in-session context gathering.
+- [Harness Engineering: Anatomy, Architecture, and Evolution of Coding Agents dossier](/dossiers/coding-agent-harness-source-study.md) — finds file and lexical navigation across eleven source-inspected runtimes but no vector-based source-tree retrieval, with a conversation-search caveat.
+- [Code execution with MCP: Building more efficient agents dossier](/dossiers/anthropic-code-execution-mcp.md) — illustrates discoverable tool API files as a way to load only selected interface definitions.

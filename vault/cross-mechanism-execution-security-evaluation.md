@@ -33,6 +33,12 @@ Shared testing also makes policy quality visible. A complete reference monitor f
 - Include explicit-scope and implicit-scope task variants. Compare whether the agent takes extra authorized actions when a task's boundaries must be inferred.
 - Treat a policy review or bounded user escalation as part of the measured system; count its accuracy, friction, expiry behavior, and failure modes rather than assuming an approval resolves ambiguity.
 
+## Trace Boundary Coverage
+
+Inventory every agent-accessible route to the same effect, including non-shell tools, browser and connector integrations, startup helpers, deferred configuration consumers, network exceptions, and approval-based escalation. For each route, identify the **first** boundary whose trust or authority contract fails; report later tool calls or writes as propagation, not as the origin. An approval gate that sees only actions already eligible for approval cannot be credited with stopping bypasses on other routes, and an approved process may still exercise ambient authority beyond the reviewed command.
+
+Test negative cases both in isolation and with defenses enabled together. A filter may prevent another scanner from seeing input; two network intermediaries may conflict; a hook may cover one executor but miss an equivalent effect through another. Report those interactions and excluded or untested cases alongside the results, rather than describing the union of individually successful controls as end-to-end protection.
+
 ## Skill Supply-Chain Measurement
 
 Two skill-security studies measure different endpoints. One scanner flags 8,126 of 31,132 community skills (26.1%) for potentially dangerous patterns, with 86.7% precision and 82.5% recall on a 200-skill holdout. Only 23 of 87 intensively reviewed highest-risk cases showed clear malicious intent. A separate study behaviorally confirms 157 malicious skills among 98,380 and 632 labeled vulnerability instances, using a 60-second sandbox that can miss dormant triggers. A local evaluation suite should report detector flags, confirmed unauthorized effects, false blocks of dual-use security tools, recall limits and trigger-dependent behavior separately ([Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)).
@@ -50,3 +56,9 @@ Two skill-security studies measure different endpoints. One scanner flags 8,126 
 - [Assume-Compromise Boundary Testing](/vault/assume-compromise-boundary-testing.md) — supplies the complementary boundary-level test pattern for testing a control after assuming the planner is compromised.
 - [Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale dossier](/dossiers/agent-skills-security-vulnerabilities-wild.md) — scanner prevalence, validation error, and severity stratification.
 - [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — behaviorally confirmed malicious skills and detection limits.
+- [Isolation as a First-Class Principle for LLM-Agent System Safety dossier](/dossiers/agent-isolation-boundary-taxonomy.md) — locates the first violated interface contract separately from downstream propagation.
+- [Agent approvals & security — Codex dossier](/dossiers/openai-codex-approvals-security.md) — distinguishes shell command proxy coverage from browser, connectors and other network paths, and pre-action approval from monitoring.
+- [OpenAI Codex CLI — Sandbox Analysis Report dossier](/dossiers/agent-safehouse-codex-sandbox-audit.md) — source-level inventory separates sandboxed child commands from unsandboxed main-process and integration routes.
+- [An Introduction to AI Coding Agent Security dossier](/dossiers/ncc-group-coding-agent-security-boundaries.md) — surveys startup, tool, escalation and deferred configuration surfaces across coding agents.
+- [Oh My Pi Tool Approval Model dossier](/dossiers/omp-tool-approval-model.md) — demonstrates that one tool's command rule does not cover an equivalent effect through another tool.
+- [Distributing Security Controls Through Harness Engineering dossier](/dossiers/shard-distributed-harness-security.md) — documents filter/scanner interference, colliding proxies, and incomplete interception coverage in composed defenses.

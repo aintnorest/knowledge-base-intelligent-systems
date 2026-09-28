@@ -32,8 +32,8 @@ This is useful only if the inferred task schema and metric are trustworthy. Auto
 
 The paper divides the package into four components.
 
-1. **Configuration** parses a task description into task type, instructions, rules, examples, input/output fields, synthetic-data size and split, backend/model settings, and an intended prompting strategy. It recognizes optional marked sections such as `[TASK]`, `[RULES]`, and `[OUTPUT_FORMAT]`; otherwise a teacher model performs the inference. For DSPy, it selects among `Predict`, chain of thought, program of thought, and ReAct.
-2. **Optimization Engine** generates task-specific synthetic data, splits it into training and validation partitions, selects a task metric, and either runs MIPROv2 or a single meta-prompt optimization pass. The reported search presets are quick (30 examples, 10 trials), moderate (100, 15), and heavy (300, 30).
+1. **Configuration** infers task structure, output expectations, examples, data needs, and strategy from the objective; optional explicit structure can reduce ambiguity. A teacher model fills remaining gaps, and the inferred choices become part of the optimization contract.
+2. **Optimization Engine** generates task-specific synthetic data, separates optimization from validation, selects a task metric, and chooses between a structured search and a single meta-prompt improvement. Search intensity trades more examples and trials for higher cost rather than guaranteeing better performance.
 3. **Yield** returns the optimized prompt, synthetic data, score, configuration, and a stateful session with optimization history.
 4. **Feedback** lets a user annotate either synthetic examples or spans of the optimized prompt. It also proposes automatic judge-model feedback from the prompt, data, and error logs; feedback that requires re-optimization is folded into a revised task objective.
 

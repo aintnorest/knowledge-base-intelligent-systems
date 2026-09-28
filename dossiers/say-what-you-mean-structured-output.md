@@ -28,7 +28,7 @@ This is also an adversarial response from an interested party. .txt markets stru
 
 ## The Reproduction
 
-The linked repository exposes four notebooks — `GSM8K_JSON.ipynb`, `JSON_section.ipynb`, `Last_Letter_NL_best.ipynb`, and `Shuffle_Objects.ipynb` — plus `data/` and `templates/` directories. The preserved article itself contains the essential Last Letter code and reported results, but not the notebooks or the 12 GB experimental corpus it references.
+The linked reproduction materials include notebooks and a large experimental corpus absent from the preserved article. The article itself includes enough of the Last Letter method and reported results to inspect its main comparison, but the runs cannot be independently reconstructed from this capture alone.
 
 The headline reimplementation uses Llama-3-8B-Instruct and reports exact-match accuracy as follows:
 
@@ -38,29 +38,11 @@ The headline reimplementation uses Llama-3-8B-Instruct and reports exact-match a
 | Last Letter | 0.73 | 0.77 | +0.04 |
 | Shuffle Objects | 0.41 | 0.44 | +0.03 |
 
-The detailed case study is Last Letter: concatenate the final letters of four names. It uses the same 150-item test split as Tam et al. For the free-form reproduction, Kurt calls `outlines.generate.text` with the paper's natural-language prompt, except that he changes the one-shot example from two names to four so it matches the evaluation inputs. For the constrained natural-language arm, he combines:
+The detailed case study is Last Letter: concatenate the final letters of four names. It uses the same 150-item test split as Tam et al. The free-form reproduction uses the paper's natural-language prompt but changes its one-shot demonstration from two names to four, matching the evaluation inputs. The constrained natural-language arm enforces a bounded reasoning region followed by a four-letter answer.
 
-```python
-answer_regex = r'answer is ([A-Za-z]{4})'
-cot_regex = r'Answer: T[\w \",\\.]{30,250}. The '
+The reported detailed Last Letter scores are 0.57 for the paper's recorded output as parsed by its AI parser, 0.65 for the reproduced unconstrained output under the strict regex, 0.66 for the same output under a flexible regex set, and 0.68 for constrained regex generation.
 
-struct_strict = outlines.generate.regex(
-    model,
-    cot_regex + answer_regex,
-    sampler=greedy())
-```
-
-The regex forces a bounded 30–250-character reasoning region followed by a four-letter answer. The reported detailed Last Letter scores are 0.57 for the paper's recorded output as parsed by its AI parser, 0.65 for the reproduced unconstrained output under the strict regex, 0.66 for the same output under a flexible regex set, and 0.68 for constrained regex generation.
-
-For JSON, the replacement prompt uses Llama's chat template, names the task and response format explicitly, provides a four-name worked example in the desired JSON shape, and terminates with an empty assistant turn so generation starts in the response role. A Pydantic model defines the constraint:
-
-```python
-class Response(BaseModel):
-    reasoning: constr(max_length=250)
-    answer: str = Field(pattern=r'[A-Z]{4}')
-```
-
-The article then builds a regex from that JSON Schema and checks that the demonstration embedded in the prompt matches it before generation. Under the revised JSON prompt, the reported Last Letter results are:
+For JSON, the replacement prompt uses Llama's chat template, names the task and response format explicitly, provides a four-name worked example in the desired JSON shape, and terminates with an empty assistant turn so generation starts in the response role. The output constraint limits the reasoning length and requires a four-letter uppercase answer. The authors derive a constraint from that schema and check that the prompt's demonstration satisfies it before generation. Under the revised JSON prompt, the reported Last Letter results are:
 
 | Method | Accuracy |
 |---|---:|
@@ -84,7 +66,7 @@ The article also claims that Tam et al.'s own classification experiments sometim
 
 Tam et al. use `claude-3-haiku-20240307` as a “Perfect Text Parser” to extract the task answer from free-form output. Kurt's central objection is that this gives the unconstrained arm a second model call while structured generation is designed to make extraction deterministic.
 
-He first re-parses one recorded Llama-3-8B-Instruct, one-shot Last Letter run (`lasterletter-t3-f3`, file `text_llama-3-8b-instruct_shots_1.jsonl`) with the prompt's literal regex. Some semantically plausible answers fail that strict surface form:
+He first re-parses a recorded one-shot Last Letter run from Llama-3-8B-Instruct with the prompt's literal regex. Some semantically plausible answers fail that strict surface form:
 
 - `The answer is e-S-S-E.` → `ESSE`
 - `The answer is AAA R.` → `AAAR`

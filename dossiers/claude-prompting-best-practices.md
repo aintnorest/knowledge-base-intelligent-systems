@@ -19,7 +19,7 @@ timestamp: 2026-09-14T17:11:29Z
 
 This is Anthropic's broad operational guide to prompting Claude. It combines relatively durable advice about instruction design, examples, context layout, output contracts, and tool-enabled workflows with rapidly changing claims about named models and API behavior. The distinction is essential: the first category supplies hypotheses worth testing across systems, while the second is configuration data that must be versioned with the exact model and rechecked against current documentation.
 
-The archived capture names Claude Fable 5.1, Mythos 5.1, Fable 5, Mythos 5, Opus 5, Opus 4.8, Opus 4.7, Opus 4.6, Sonnet 5, Sonnet 4.6, and Haiku 4.5. Its model-specific table delegates to separate pages for Fable/Mythos 5.1, Fable/Mythos 5, Sonnet 5, Opus 5, and Opus 4.8. The canonical endpoint was reachable when this dossier was written on September 14, 2026, but the page is explicitly a moving reference rather than a frozen specification.
+The canonical page was reachable when this dossier was written on September 14, 2026, but its model guidance is a moving reference rather than a frozen specification. Named-generation observations require requalification against the deployed model.
 
 ## Durable Mechanics
 
@@ -47,13 +47,13 @@ Explicit prompt chaining remains useful when an application needs observable int
 
 | Captured claim | Operational consequence |
 |---|---|
-| Claude 4.6 and later use adaptive thinking; `budget_tokens` is deprecated on Opus/Sonnet 4.6 and returns HTTP 400 on Claude 4.7 and later. | Bind thinking configuration to the exact API model; do not copy older request bodies forward. |
-| Omitting `thinking` leaves it off on Opus 4.6–4.8 and Sonnet 4.6, enables it by default on Opus 5 and Sonnet 5, and cannot turn it off on the captured Fable/Mythos 5 and 5.1 families. | An absent field does not have stable semantics across generations. Record the resolved thinking mode, effort, and model together. |
-| Prefilling the final assistant turn is unsupported from Claude 4.6 and Mythos Preview and returns HTTP 400. | Replace prefill-based formatting with direct instructions, structured outputs, tools, or post-processing; do not infer support from earlier models. |
+| From Claude 4.6 onward, adaptive thinking replaces older fixed-budget practice; older controls cease to be supported on later generations. | Bind thinking behavior to the exact model rather than carrying an older request policy forward. |
+| Across captured 4.6, 4.8, and 5-family generations, omitting a thinking choice can leave it off, enable it by default, or be unable to disable it. | Absence does not have stable semantics across generations. Record the resolved thinking mode, effort, and model together. |
+| Prefilling the final assistant turn became unsupported on the captured later generations. | Formatting based on prefill cannot be assumed to survive a model upgrade; use an explicit output contract instead. |
 | Opus 5 is described as more verbose, while Fable 5.1 provides fewer progress updates in agentic work. | Avoid one global verbosity prompt; qualify visible reporting separately for each route. |
 | Opus 4.5/4.6 can overtrigger tools, overexplore, overengineer, or take irreversible actions; Opus 4.6 and Opus 5 can overuse subagents. | Remove inherited “always use tools” pressure and state scope, delegation, cleanup, and confirmation policy only where observed behavior warrants it. |
 | Explicit self-check instructions are recommended generally but discouraged for Opus 5 because they may cause costly over-verification. | Verification prompts are model- and task-contingent; measure both errors and latency rather than retaining a ritual closing instruction. |
-| Fable 5.1 thinking blocks must be returned unchanged with append-only history; mutating preceding messages, system text, or tools can invalidate later blocks. | Treat returned thinking blocks and conversation history as protocol state, not editable prose; consult current API rules before compaction or hydration. |
+| The captured Fable 5.1 generation requires returned thinking blocks to remain unchanged in append-only history; edits to earlier messages or tools can invalidate later blocks. | Treat thinking blocks and conversation history as protocol state, not editable prose; reassess compaction against current rules. |
 
 The guide also warns that wording as small as “think” can behave differently on Opus 4.5 without extended thinking. This is a good illustration of prompt–model drift: prompt text, model revision, thinking mode, effort, tool schema, and output contract form one deployable unit.
 

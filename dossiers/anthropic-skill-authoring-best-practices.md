@@ -19,19 +19,19 @@ The detailed writing manual of this set. The `agent-skills-format-specification`
 
 ## Write the Smallest Useful Instruction
 
-Only metadata is indexed at startup, but the entire `SKILL.md` enters context on activation. Anthropic recommends a body **under 500 lines**, moving optional detail into references. It contrasts an approximately **50-token** concise PDF-extraction instruction with an approximately **150-token** explanation of elementary PDF concepts. These are illustrative writing examples, not measured gains. Ask whether each statement supplies information the model would otherwise lack. One `description` field must convey both capability and request-language triggers; the guide considers selection among potentially **100+** Skills. Use consistent terminology and specific names (often gerunds such as `processing-pdfs`) rather than `helper` or `utils`.
+Only metadata is indexed at startup, but the entire root instruction enters context on activation. Keep it concise and move conditional detail to references; the guide's contrasting short and long PDF examples illustrate context cost, not measured gains. Ask whether each statement supplies information the model would otherwise lack. The description must communicate both capability and request-language triggers because it is the routing interface amid competing skills.
 
 Choose high freedom for contextual work such as reviewing code, medium freedom for parameterized templates, and low freedom for fragile database migrations or exact deterministic operations. This is a risk-sensitive policy, not a command to script every step. A workflow can include explicit analyze → plan → validate → execute → verify phases, especially where a bad intermediate update would be costly. Human-readable checklists help complex research tasks; a validator and corrective loop fit machine-checkable documents and data. A script should solve anticipated errors and produce helpful messages, not simply fail and delegate diagnosis back to the agent.
 
 ## Organize Conditional Knowledge
 
-The root should point directly to domain files, usage examples, and executable helpers with clear triggers: finance reference for revenue, sales reference for pipeline, redlining documentation for tracked changes. Do not chain references through several documents: the guide notes that agents sometimes preview intermediate references and never reach the final content. For a reference longer than **100 lines**, add a table of contents. Use forward-slash paths, label whether a `.py` file should be *run* or *read*, state dependencies, and avoid hardcoded availability assumptions. Only fetched reference text and script outputs—not all bundled file bytes—enter working context. The `anthropic-agent-skills-platform-overview` qualifies this against product-specific network and package limits.
+The root should point directly to conditional domain knowledge and executable helpers, with clear reasons to follow each reference. Do not chain references through several documents: agents may preview intermediate references and never reach the needed content. Distinguish executable helpers from material to read, state dependencies, and avoid assuming availability across environments. Only fetched reference text and script outputs—not all bundled file bytes—enter working context. The `anthropic-agent-skills-platform-overview` qualifies this against product-specific network and package limits.
 
 ## Evaluation and Revision
 
-Before extensive authoring, run representative no-skill tasks, identify observed failures, create **three scenarios** that probe them, then add minimum guidance and compare with the baseline. Have an authoring agent turn successful work into a skill, then use a fresh executing agent for related tasks and feed specific observed errors back to the author. Test on every intended model: the guide distinguishes Haiku's need for sufficient scaffolding from Opus's susceptibility to over-explanation, with Sonnet as another target. Watch for unused files, unexpected file paths, and ignored instructions. Avoid stale date-sensitive claims; make examples concrete; use a default rather than an unbounded menu of tools.
+Before extensive authoring, run representative no-skill tasks, identify observed failures, then evaluate varied prompts and edge conditions against that baseline. Have an authoring agent distill successful work into a skill, then use a fresh executing agent on related tasks and return specific errors to the author. Test each intended model: the guide observes that smaller models may need more scaffolding while stronger ones can be harmed by over-explanation. Watch for irrelevant file reads and ignored instructions. Avoid stale claims and unbounded tool choices.
 
-For scripts, the guide suggests typed intermediate outputs and validation before mutating 50 PDF form fields, and an explicit verifier after writing. Its checklist includes descriptions, concise root, direct references, executable error handling, at least three evaluations, cross-model tests, and team feedback. These are vendor recommendations, not proof that a checklist itself raises quality.
+For consequential document mutations, the guide recommends validated intermediate outputs and a separate verification pass. Its broader recommendations cover routing, concise guidance, shallow references, error-handling helpers, comparative evaluations, cross-model checks, and team feedback; these are prescriptions, not proof of quality gains.
 
 ## Analyst Takeaways
 
@@ -43,7 +43,7 @@ For scripts, the guide suggests typed intermediate outputs and validation before
 
 ## Questions and Limitations
 
-- This is prescriptive vendor guidance without controlled experiments or reported confidence intervals; the token and line figures are examples/recommendations.
+- This is prescriptive vendor guidance without controlled experiments or reported confidence intervals; its brevity recommendations are not measured performance thresholds.
 - Blindly treating “never defer” script examples as permission to silently substitute defaults could hide a failure; fail explicitly where correctness or data integrity is at stake.
 - Multi-model testing is urged but no model-stratified sample size, acceptance threshold, or regression-selection method is given.
 - The guide's dependency advice does not override API execution's no-network/no-runtime-install constraint; packages must be available in the deployment environment.

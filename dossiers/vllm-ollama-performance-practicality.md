@@ -23,16 +23,16 @@ The author demonstrates both systems through OpenAI-compatible HTTP APIs. That c
 
 ## Serving Models and Operational Differences
 
-vLLM is presented as an accelerator-oriented serving runtime. Its relevant mechanisms include PagedAttention for KV-cache management, continuous batching, chunked prefill, speculative decoding, prefix caching, and tensor/pipeline parallelism. The article starts a Qwen3 model with `vllm serve`, exposes it on port 8000, and shows the standard OpenAI-style `/v1/models` and `/v1/chat/completions` endpoints.
+vLLM is presented as an accelerator-oriented serving runtime. Its relevant mechanisms include paged KV-cache management, continuous batching, chunked prefill, speculative decoding, prefix caching, and tensor/pipeline parallelism. The article evaluates it with a Qwen3 model through an OpenAI-compatible API.
 
 Ollama is positioned as the general-purpose local runtime: its Docker-like CLI, curated model library, model switching after server start, CPU or hybrid execution, quantized GGUF support, and Windows/macOS/Linux support reduce adoption friction. The comparison is not that one endpoint is usable and the other is not; both are API-compatible. It is a trade-off between a scheduler optimized for loaded accelerator service and a portable, low-ceremony local tool.
 
 The tutorial also surfaces deployment details that can otherwise be surprising:
 
-1. vLLM may reserve a large fraction of available VRAM by default; `--gpu-memory-utilization` constrains that reservation when other GPU workloads must coexist.
+1. vLLM may reserve a large fraction of available VRAM by default, creating contention when other GPU workloads must coexist.
 2. Changing a vLLM-served model requires restarting the server, whereas Ollama supports on-demand model selection and switching.
 3. Binding a server to localhost is not a security substitute for a remotely exposed endpoint. Remote API use needs authentication and TLS.
-4. Qwen3 thinking output can substantially change token generation and latency; the benchmark uses `/no_think` to suppress it.
+4. Qwen3 thinking output can substantially change token generation and latency; the benchmark disabled thinking.
 
 ## Benchmark Design
 

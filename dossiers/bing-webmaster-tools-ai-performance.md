@@ -14,8 +14,6 @@ timestamp: 2026-08-11T14:20:00Z
 - **Publisher**: Bing Blogs — Webmaster Blog
 - **Date**: February 10, 2026
 - **Format**: Vendor product announcement (public preview)
-- **Product surface**: Bing Webmaster Tools → AI Performance (`aka.ms/BWTAIpref` resolves to the Bing Webmaster Tools entry point)
-- **Post tags**: `AIsearch`, `GEO`
 
 ## What It Is
 
@@ -110,25 +108,14 @@ The recommended content interventions are:
 5. **Reduce ambiguity across formats** — align text, images, and video so they
    represent the same entities, products, and concepts consistently.
 
-Two adjacent levers are pitched as part of the same workflow:
-
-- **IndexNow** (`indexnow.org`) for change notification, on the argument that
-  freshness gates *which version* of a page an AI system grounds on. Latency to
-  re-crawl becomes latency to correct a wrong answer about you.
-- **Bing Places for Business** for local entity facts (address, hours, contact), which
-  are "eligible for inclusion in AI-generated responses" for location-based queries.
+The adjacent discussion connects source freshness to answer correctness: if a retriever has not refreshed a changed page, it may continue grounding answers on stale facts. Local entity facts are another possible input to location-based answers, but the announcement provides no measured effect from changing either source.
 
 The post defers deeper tactics to Microsoft Advertising's October 2025 guidance,
 [*Optimizing Your Content for Inclusion in AI Search Answers*](https://about.ads.microsoft.com/en/blog/post/october-2025/optimizing-your-content-for-inclusion-in-ai-search-answers).
 That piece is the mechanistic companion and states the retrieval model plainly:
 assistants **parse pages into smaller pieces** rather than reading them linearly, and
 those pieces are "ranked and assembled into answers, often drawing from multiple
-sources." Its concrete recommendations follow from that: H2/H3 headings as "chapter
-titles that define clear content slices," Q&A pairs that an assistant "can often lift
-word for word," comparison tables and numbered steps, JSON-LD schema markup, claims
-anchored in measurable facts, and avoidance of walls of text, tabbed/accordion-hidden
-answers, and critical facts trapped in PDFs or images. The unifying requirement is
-that each excerpt remain **self-contained when snipped out of its page**.
+sources." Its central content principle is that a retrieved excerpt must remain **self-contained when snipped out of its page**: explicit subject, claim, and evidence survive retrieval better than context-dependent fragments. The piece proposes several presentation tactics but gives no controlled comparison of their effects.
 
 ## Third-Party Observations
 
@@ -175,10 +162,7 @@ commitments:
 5. **Freshness has been promoted from an SEO nicety to a correctness control.** If
    generated answers are grounded on whatever version was last fetched, stale content
    is not merely underranked — it is actively asserted on your behalf.
-6. **Content guidance is converging on retrieval legibility.** Headings as slice
-   boundaries, self-contained Q&A pairs, tables, explicit entities, and structured
-   data are all instructions for a chunker and a re-ranker. This is the same
-   discipline as writing documents an internal RAG system can use, aimed outward.
+6. **Content guidance is converging on retrieval legibility.** Self-contained excerpts with explicit entities and evidence can be interpreted outside their original page. This is the same discipline as writing documents an internal RAG system can use, aimed outward; the source does not measure the effect of individual formatting tactics.
 7. **Publisher-facing attribution telemetry is a governance signal too.** The post
    pairs the metric with a robots.txt-preferences statement, tying "we counted your
    citations" to "we honored your controls." Attribution reporting is becoming part of

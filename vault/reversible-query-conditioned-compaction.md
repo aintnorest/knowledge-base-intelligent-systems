@@ -29,7 +29,7 @@ Use multi-fidelity storage for long-running work: a small active context, an ind
 
 ## First-Party Coding-Harness Policy
 
-Anthropic describes Claude Code's compaction: it summarizes architectural decisions, unresolved bugs and implementation details, then resumes with the five most recently accessed files. It recommends maximizing recall over real agent traces before pruning for precision, and clearing obsolete tool results as a lighter first step than compressing the whole history. The five-file rule is a vendor policy, not an established optimum. Test for loss of late-needed requirements, paths and verification evidence, and keep source access for recovery.
+In coding-agent histories, a useful compaction retains architectural decisions, unresolved bugs and implementation details while preserving access to the underlying files. Recent-file reattachment can help recovery but cannot guarantee that a late-needed older requirement survives; clearing obsolete tool results may be less lossy than compressing the whole history. Test recall over real agent traces before pruning for precision, including late-needed paths and verification evidence.
 
 ## Limitations
 
@@ -38,4 +38,4 @@ Reversibility is not free. It needs storage, indexing, retrieval latency, policy
 ## Sources
 
 - [What to Keep, What to Forget dossier](/dossiers/rate-distortion-memory-compaction.md) — contrasts irreversible eviction and summary replacement with query-time retrieval and archival designs across the inference-to-agent-memory hierarchy.
-- [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — recall-first compaction and recent-file reattachment in Claude Code.
+- [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — Claude Code summarizes task state and reattaches the five most recently accessed files after compaction; recommends recall-first evaluation and clearing obsolete tool results.

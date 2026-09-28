@@ -12,6 +12,8 @@ When an agent must both act on the world and inspect attacker-influenced text, a
 
 The boundary is only useful if the return path is also controlled. A free-form answer from the quarantined processor can itself carry a prompt injection into the planner. Return a small validated type—such as a Boolean, category, score, or schema-constrained record—or return an opaque symbolic handle. The privileged model can pass handles to subsequent calls without dereferencing them; a deterministic orchestrator resolves the actual value only at the final allowed operation.
 
+Recursive delegation can keep successive untrusted observations in short-lived worker contexts while a parent defines the expected extraction before seeing each result. This limits persistent contamination without forcing a fixed workflow. But a parseable structured response is not necessarily schema-conformant or safe: broad string fields can carry instructions, and a model-based gate over worker-proposed actions does not cover the parent's own tool calls. Independently validate the return domain and mediate effects; see [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md).
+
 ## Practical Use
 
 - Use a quarantined processor to classify individual files, reviews, emails, résumés, or documentation fragments, while keeping the controller's tool set and planning context free of raw source text.
@@ -26,3 +28,4 @@ A constrained value can still be false or strategically biased. For example, a m
 ## Sources
 
 - [Design Patterns for Securing LLM Agents against Prompt Injections dossier](/dossiers/design-patterns-securing-llm-agents-prompt-injections.md) — describes dual-LLM and map-reduce designs, including constrained map outputs and opaque variables resolved by a non-LLM orchestrator.
+- [AgentSys: Secure and Dynamic LLM Agents through Explicit Hierarchical Memory Management dossier](/dossiers/agentsys-hierarchical-memory.md) — evaluates short-lived observation processors with structured parent returns and selective worker-action checks; documents schema, parent-action, utility, and token-cost limits.

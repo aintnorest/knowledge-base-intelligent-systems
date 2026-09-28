@@ -16,34 +16,33 @@ timestamp: 2026-09-24T03:44:42Z
 
 ## What It Is
 
-This page defines the common filesystem and metadata contract for an Agent Skill. It is the normative format reference among this batch, unlike the test procedure in `evaluating-agent-skills-output-quality`, Claude's product-specific behavior in `claude-code-skills-reference`, or Codex's deployment choices in `openai-build-agent-skills`. A skill is a directory containing a required `SKILL.md`; its YAML frontmatter describes discovery and its Markdown body gives execution instructions. Other directories and files are permitted, not prerequisites.
+This page defines the common packaging and metadata contract for an Agent Skill. It is the normative format reference among this batch, unlike the evaluation procedure in `evaluating-agent-skills-output-quality`, Claude's runtime behavior in `claude-code-skills-reference`, or Codex's deployment choices in `openai-build-agent-skills`. A skill pairs discovery metadata with instructions and optional supporting material; the portability contract does not prescribe how every host selects or executes it.
 
 ## Directory and Frontmatter Contract
 
-- The root `SKILL.md` must have YAML frontmatter followed by Markdown. `name` and `description` are required. The body has no prescribed section format; steps, examples, and edge cases are recommended.
-- `name` is 1–64 characters, lowercase letters/digits/hyphens; no initial or terminal hyphen, no consecutive hyphens, and it must match the containing directory. The spec's prose says “unicode lowercase alphanumeric” but immediately exemplifies ASCII `a-z` and `0-9`; validate with the reference tool rather than inferring Unicode acceptance from that wording.
-- `description` is 1–1,024 characters. It should state both capability and when to invoke it, including recognizable task keywords. This is the decision surface for selection, not a substitute for the body.
-- Optional `license` names or locates license terms; `compatibility` describes product, package, network, or environment requirements and is limited to 1–500 characters when present; `metadata` maps arbitrary string keys to string values.
-- Optional `allowed-tools` is a space-separated list of pre-approved tools and is **experimental**: support varies across agents. It is not a portable security boundary. A skill can include `scripts/` for executable helpers, `references/` for documentation, and `assets/` for templates/data; these are conventions, not exhaustive allowable directories.
+- The portable format requires a root instruction file with YAML frontmatter and Markdown guidance. Identification and description are required; the body may express steps, examples, and edge cases without a prescribed section structure.
+- The identifier follows restricted naming and package-alignment rules. The spec's prose and examples differ on Unicode acceptance; that ambiguity warrants checking the current validator rather than inferring acceptance from either alone.
+- The description states both capability and when to invoke it in recognizable task language. It is the selection interface, not a substitute for the detailed body.
+- Optional metadata can convey licensing, environmental compatibility, and other client information. Tool preapproval is experimental and varies by host; it is not a portable security boundary. Supporting executables, references, and assets are conventions, not required package components.
 
 ## Progressive Disclosure and File Navigation
 
-The spec describes three stages: approximately 100 tokens of name and description per skill at startup; the invoked `SKILL.md` body, recommended below 5,000 tokens and under 500 lines; and supporting files loaded only as needed. A script can run without the agent putting its source into working context, whereas a reference file contributes tokens when read. Keep paths relative to the skill root, make needed files directly discoverable from `SKILL.md`, and avoid deeper-than-one-level reference chains. `skills-ref validate ./my-skill` checks frontmatter and naming conventions.
+The spec describes three stages: brief discovery metadata available before selection; the root instructions loaded on invocation; and supporting files fetched only when needed. As of the ingest date it recommended keeping invoked instructions within a bounded context budget, but this is guidance rather than a guaranteed host limit. A helper can execute without its source entering working context, whereas read references contribute tokens. Make conditional detail directly reachable from the root rather than burying it behind several navigation hops.
 
-These numbers and staging are authoring recommendations and a conceptual loader model, not a promise that every host uses identical routing, token accounting, or execution. `anthropic-agent-skills-platform-overview` explains Claude API/Code/claude.ai differences; `anthropic-skill-authoring-best-practices` supplies much richer examples and design advice.
+The staging is a conceptual loader model, not a promise that every host uses identical routing, token accounting, or execution. `anthropic-agent-skills-platform-overview` explains Claude API/Code/claude.ai differences; `anthropic-skill-authoring-best-practices` supplies design advice.
 
 ## Analyst Takeaways
 
-1. **Use the spec as a portability baseline, not the entire deployment contract.** Require a matching directory/name, valid YAML, scoped description, and directly reachable files; document extensions separately.
+1. **Use the spec as a portability baseline, not the entire deployment contract.** Validate package metadata and directly reachable content; document host-specific extensions separately.
 2. **Treat the description as an interface.** It determines whether expensive task guidance reaches an agent; test false activations and missed activations, not just schema validity.
 3. **Place decision guidance in the root and conditional detail beside it.** The context savings materialize only if the target runtime actually delays loading ancillary files.
-4. **Do not interpret `allowed-tools` as a universal approval guarantee.** Tool grants are implementation-specific, and executing bundled scripts is a trust and permission decision.
+4. **Do not interpret tool preapproval as a universal security guarantee.** Grants are implementation-specific, and bundled execution remains a trust and permission decision.
 
 ## Questions and Limitations
 
 - This is a format specification, not an experimental demonstration of better task quality or universal behavior across clients. There are no benchmark outcome numbers.
 - The document recommends sizes but does not prescribe how clients resolve conflicts, rank skills, clip discovery listings, isolate execution, or enforce access controls.
-- Claude Code deliberately accepts extension fields and, for local skills, can omit `name`; see `claude-code-skills-reference`. Such a package is not necessarily portable to a strict spec validator.
+- Claude Code accepts local metadata extensions and omitted identifiers that strict validators may reject; see `claude-code-skills-reference`.
 - The page does not give version pinning or artifact provenance rules; organizations must separately review skill code, dependencies, and delegated authority.
 
 ## Vault Ideas Extracted

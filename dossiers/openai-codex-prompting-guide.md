@@ -13,13 +13,13 @@ timestamp: 2026-09-14T17:12:04Z
 **Publisher**: OpenAI  
 **Canonical URL**: https://developers.openai.com/cookbook/examples/gpt-5/codex_prompting_guide  
 **Target model**: `gpt-5.3-codex`  
-**Artifact**: Jupyter notebook containing one 687-line Markdown cell; it has no code cells, execution counts, or captured outputs
+**Artifact**: Archived prose notebook without executable results
 
 ## What It Is
 
 This is an implementation guide for people building a coding-agent harness directly on the Responses API rather than using the Codex SDK. Its useful object is not generic prompt-writing advice. It is a coupled configuration for a particular model family: a supplied system prompt, model-familiar tool shapes, conversation-history rules, repository-instruction loading, compaction, and a protocol for distinguishing working updates from the final answer.
 
-The guide's central claim is that harness details are part of model performance. It recommends starting from the Codex CLI rather than transplanting a prompt and tools tuned for another GPT-5 model or another provider. The current page names `gpt-5.3-codex` as the API target and recommends medium reasoning effort for interactive work, with high or xhigh reserved for difficult tasks.
+The guide's central claim is that harness details are part of model performance. It recommends starting from the Codex CLI rather than transplanting a prompt and tools tuned for another model or provider. Its recommendations are scoped to the named model generation, not portable defaults.
 
 ## The Supplied Prompt Artifact
 
@@ -44,9 +44,9 @@ The guide preserves two generations of advice that must be keyed to model versio
 
 Early migration guidance says to remove requests for upfront plans, preambles, and rollout status updates because they can make Codex stop after talking instead of completing the task. The mid-rollout section narrows this: before `gpt-5.3-codex`, updates are system-generated, so prompt instructions about intermediate messages should be omitted.
 
-For `gpt-5.3-codex`, the recommendation reverses. The model can be prompted for concise preambles and the Responses API supplies an assistant-only `phase` field with `null`, `commentary`, or `final_answer`. A correct harness must persist assistant output items with their phase and send them back in later requests. Dropping that metadata during history reconstruction is said to cause significant performance degradation.
+For `gpt-5.3-codex`, the recommendation reverses: concise working updates can be prompted, provided the harness preserves the protocol distinction between intermediate assistant messages and final answers across later requests. Losing that distinction during history reconstruction is said to significantly degrade performance.
 
-The 5.3 preamble recipe is specific: acknowledge and sketch the plan before tools, keep most updates to one or two sentences, update every one to three execution steps and at least every six steps or ten tool calls, report outcomes and the next few actions, and avoid log-like status prose. Friendly and pragmatic personalities then tune the collaboration style separately from cadence.
+The later-generation guidance treats updates as short, purposeful progress reports rather than a stream of tool logs. The collaboration style can vary independently of whether the harness preserves the working/final boundary.
 
 The practical lesson is not "always narrate" or "never narrate." Preamble behavior is a model-and-protocol feature. On older Codex versions, prompt-driven updates are a stopping hazard; on 5.3, phase-aware updates are supported, but only when the harness preserves the classification that separates commentary from final closure. The broad migration paragraph still says to remove preambles without explicitly scoping that instruction to older models, so implementers must resolve the editorial tension using the later, version-specific section.
 
@@ -54,34 +54,31 @@ The practical lesson is not "always narrate" or "never narrate." Preamble behavi
 
 The guide strongly prefers interfaces close to Codex's training distribution:
 
-1. Use the Responses API's built-in `apply_patch` tool when possible. A custom freeform patch tool with a context-free grammar is the alternative, and the notebook supplies both a Python request example and the patch grammar.
-2. Expose a `shell_command` whose command is a string and whose description requires a working directory instead of `cd`. For PowerShell, describe the actual invocation shape explicitly; long-lived PTY execution and stdin are separate capabilities.
-3. Give plans a structured `update_plan` tool with bounded statuses and at most one active step. Provide image inspection as an explicit path-taking tool.
-4. Dedicated terminal-wrapping tools can work well when names, arguments, and outputs resemble the underlying command. A prompt directive can reserve operations such as Git for the dedicated tool.
-5. Less familiar tools such as semantic search and MCP require tuning: use semantically exact names and arguments, explain when and why to call them, include good and bad examples, and make their result format distinguishable from other search channels.
-6. Enable parallel tool calls in the request, prompt the model to batch independent exploration, and order the conversation items as calls followed by their corresponding outputs.
+1. Familiar editing, shell, planning, and image-inspection interfaces can reduce friction relative to novel tool shapes; capabilities and invocation contracts should match the actual host.
+2. Custom search and external tools need semantically distinct names and observable result formats so the model can distinguish their evidence from other channels.
+3. Independent tool calls can run together, but the conversation history must preserve each call's association with its output.
 
-Tool results are also a context-design surface. The guide recommends an approximate 10,000-token cap, estimated from bytes, retaining half the budget from the beginning and half from the end while marking the omitted middle. That is a useful model-specific default, not evidence that the same cutoff is optimal for every task or tool.
+Tool results are also a context-design surface. As of the ingest date, the guide recommended a fixed-size output budget and retained the beginning and end while marking an omitted middle. This protects context at the cost of potentially hiding task-critical evidence; no universal cutoff is established.
 
-The code example itself is a freshness warning: although the guide currently targets `gpt-5.3-codex`, its `apply_patch` demonstration still calls `gpt-5.1-Codex-Max`. Copying examples mechanically can therefore select a different model from the one the prose recommends.
+The example itself is a freshness warning: its editing demonstration invokes an older model than the one targeted by the surrounding prose. Copying examples mechanically can select a different model from the intended deployment.
 
 ## How AGENTS.md Becomes Context
 
-Codex CLI does more than read one repository prompt. It discovers instruction files from `~/.codex`, then from the repository root through each directory on the path to the current working directory, subject to fallback names and a size cap. Later, deeper directories override earlier guidance.
+Codex CLI assembles repository instructions from broader to more local scopes along the working-directory path. Later, deeper instructions take precedence, subject to discovery rules and a size limit.
 
-Each discovered file is injected near the top of history as a separate user-role message, in root-to-leaf order, with a header naming the directory that supplied it. An `AGENTS.override.md` capture still uses the ordinary `AGENTS.md instructions for <directory>` header. This makes instruction precedence a context-assembly behavior, not merely a filesystem convention: changing the working directory can change the effective prompt, and any third-party harness that wants Codex CLI parity must reproduce discovery, order, message role, headers, overrides, and limits rather than simply concatenating files.
+Each discovered instruction is injected as a separate user-role message rather than merely concatenated with its neighbors. This makes precedence a context-assembly behavior: changing working directory can change the effective prompt, and a compatible harness must preserve scope, order, role, override behavior, and limits.
 
 ## Compaction and Long Runs
 
-The Responses API compaction flow accepts the accumulated conversation, including user messages, assistant messages, and tool items, and returns an `encrypted_content` compaction item to carry into later requests. The input to `/responses/compact` must still fit the model's context window. The feature extends a trajectory; it does not make context limits disappear.
+Compaction carries a compressed representation of accumulated conversation into later requests, but the conversation submitted for compaction must itself fit within the context window. The feature extends a trajectory; it does not make context limits disappear.
 
 The guide presents compaction as first-class support for multi-hour runs, but supplies no retention benchmark or failure analysis. A production harness should test repeated compaction on exact repository facts, pending obligations, tool state, and decisions that become relevant much later.
 
 ## Analyst Takeaways
 
-1. **Version the model, prompt, tools, and history protocol together.** `gpt-5.3-codex` preambles depend on preserved `phase` metadata; a prompt-only migration is incomplete.
+1. **Version the model, prompt, tools, and history protocol together.** Later-generation preambles depend on preserving the distinction between working updates and final answers; a prompt-only migration is incomplete.
 2. **Treat the starter prompt as executable configuration.** It contains real policy choices about autonomy, stopping, concurrency, edits, reviews, frontend quality, and final delivery. Adapt each choice intentionally and evaluate the resulting system rather than collecting isolated slogans.
-3. **Match learned interfaces before inventing abstractions.** The recommendations for `apply_patch`, command strings, familiar terminal-like schemas, call/output ordering, and distinctive custom-tool outputs all assume that interface shape changes model behavior.
+3. **Match learned interfaces before inventing abstractions.** Familiar editing and terminal tools, call/output ordering, and distinctive custom-tool results all assume interface shape changes model behavior.
 4. **Repository instruction files are scoped prompt layers.** Root-to-leaf loading gives local directories a deliberate override channel, but correctness depends on faithfully reproducing discovery and injection semantics.
 5. **Resolve contradictory instructions before deployment.** Dirty-tree tolerance versus "stop immediately," and global preamble removal versus 5.3 preamble prompting, can produce unstable behavior if both branches remain unconditional.
 6. **Tune with behavioral evaluations, not prompt aesthetics.** The guide recommends repeated metaprompting for recurring slow-start or awkward-update failures, then measuring candidate instruction changes on an evaluation rather than accepting one self-diagnosis.
@@ -89,10 +86,10 @@ The guide presents compaction as first-class support for multi-hour runs, but su
 ## Questions and Limitations
 
 - This is a living vendor cookbook page with no visible publication date, revision identifier, changelog, or frozen target. The archived notebook is a point-in-time capture; model names, APIs, prompt text, and recommendations can change at the canonical URL.
-- The guide says the prompt was optimized on internal evaluations but provides no tasks, baselines, scores, variance, safety slices, or ablations. Claims of significant degradation from missing `phase` metadata are operationally important but not independently quantifiable from this artifact.
-- The target prose is `gpt-5.3-codex`, while the starter prompt originated with GPT-5.1-Codex-Max and the patch example still invokes that older model. Advice should not be assumed to transfer backward, forward, or to general GPT-5 models.
+- The guide says the prompt was optimized on internal evaluations but provides no tasks, baselines, scores, variance, safety slices, or ablations. Claims of significant degradation from lost message classification are operationally important but not independently quantifiable from this artifact.
+- The target prose addresses a later Codex generation than the starter prompt's origin and the editing example's invocation. Advice should not be assumed to transfer backward, forward, or to general GPT-5 models.
 - The prompt contains environment- and tool-name-specific instructions. Copying it into a harness without the named tools, message roles, concurrency support, or file-reference behavior creates instructions the model cannot faithfully follow.
-- The 10,000-token truncation rule and middle-elision strategy are presented as recommendations, not evaluated universal bounds; exact outputs, errors, or evidence near the omitted middle may be task-critical.
+- The captured truncation budget and middle-elision strategy are recommendations, not evaluated universal bounds; exact outputs, errors, or evidence near the omitted middle may be task-critical.
 - Compaction is described functionally but not evaluated across repeated cycles, delayed recall, or recovery of details discarded from the active history.
 - The metaprompting advice acknowledges that model-proposed fixes can overfit one conversation. Multiple generations and a representative evaluation are required before turning a diagnosis into durable policy.
 

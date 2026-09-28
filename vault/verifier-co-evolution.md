@@ -22,6 +22,8 @@ A verifier approximates the user's intent; it is not the intent. Tests, rubrics,
 
 SpecBench shows that continued search can keep or widen the gap between visible tests and held-out composition behavior. One SQL system passes 100% of visible tests but only 35% of held-out composition cases, and a lookup-table "compiler" reaches 97% visible and 0% held-out. Qwen's Verification Horizon study reports that trajectory monitoring moved hacked-resolved from 28.57% to 0.56% and clean-resolved from 40.22% to 60.53% across three SWE-bench variants, using its own monitor definition and a proprietary training setup. SWE-Proof shows that even machine-checked artifacts need independent audits of the specification they prove against.
 
+Long-running loops make faulty feedback costly as well as incomplete: a contradictory specification can direct repeated work toward the wrong target, and compilation alone can reward placeholders. Broaden regression suites as newly added features expose breakage, retaining prior invariants rather than replacing them. Scope judges need their own labeled evaluation: veto frequency and later agent correction do not establish a judge's precision or recall.
+
 ## Practical Use in a Light Factory
 
 Treat acceptance infrastructure as maintained software. Keep a human-owned behavior contract (see [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)), a regression suite, independent end-to-end checks, and a review queue for newly discovered bypasses. Stop the implementing agent from editing trusted tests or verifier files.
@@ -36,3 +38,6 @@ None of these sources establishes a universal update interval or an ungameable j
 - [SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents dossier](/dossiers/specbench-long-horizon-reward-hacking.md) — visible-score saturation and persistent held-out composition gaps under search.
 - [SWE-Proof: Can Language Models Resolve Real-World Issues with Machine-Checked Proofs? dossier](/dossiers/swe-proof-machine-checked-repair.md) — adversarial audits of formal specifications and proofs.
 - [LLM-as-an-Improver: Turning Verification into Better Candidates dossier](/dossiers/llm-as-an-improver-verify-repair-reselect.md) — reselecting on visible checks alone can amplify gaming; a held-out gate is needed.
+- [Ralph Wiggum as a "software engineer" dossier](/dossiers/ralph-wiggum-loop.md) — contradictory lexer specification and compiling placeholders illustrate repeated optimization of faulty feedback.
+- [Predictable Results Through Strong Feedback Loops dossier](/dossiers/spotify-honk-feedback-loops.md) — scope-veto and correction frequencies were reported without evaluating the judge's accuracy.
+- [Building a C compiler with a team of parallel Claudes dossier](/dossiers/parallel-claudes-c-compiler.md) — expanded compiler suites and later CI exposed regressions from new features.

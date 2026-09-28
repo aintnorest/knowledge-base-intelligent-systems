@@ -34,18 +34,18 @@ AXI treats these as interface-design problems. The tool should return just enoug
 
 | Area | Principles | Practical interpretation |
 | --- | --- | --- |
-| Efficiency | token-efficient output; minimal default schemas; content truncation | Use a compact unambiguous representation; return roughly the few fields needed for a list; state when content is truncated and expose `--full` or explicit field selection. |
+| Efficiency | token-efficient output; minimal default schemas; content truncation | Use a compact unambiguous representation; return only the fields needed for a decision; state when content is truncated and allow targeted expansion. |
 | Robustness | pre-computed aggregates; definitive empty states; structured errors and exit codes | Return counts and derived status inline, say explicitly when there are zero results, and make mutations idempotent and failures machine-distinguishable. |
 | Discoverability | ambient context; content first | Offer a small opt-in session integration or loadable Skill, and make a no-argument invocation show useful current state rather than only a command reference. |
-| Guidance | contextual disclosure; consistent help | End results with concrete command templates for logical next steps, while retaining concise `--help` at every level. |
+| Guidance | contextual disclosure; consistent help | Suggest logical next steps in the context of a result while keeping reference material concise and discoverable. |
 
 The output examples use TOON, a compact tabular notation. Its value is not the particular notation so much as a stable, low-noise contract: default results are bounded; optional detail is explicitly requested; and the output contains counts, state, and recovery information that prevent needless round trips.
 
 ## Fused Operations and Filtered Observations
 
-The most consequential AXI pattern is an **action-observation fusion**. A command such as `open` navigates and returns a snapshot; `fill --submit` fills, submits, waits, and returns the result; `click --query` both follows a link and filters the resulting snapshot for the requested terms. Specialized commands such as `tables --url` can navigate and return structured table data in one operation.
+The most consequential AXI pattern is **action-observation fusion**: navigation returns the resulting page state; filling and submitting returns the outcome after the transition; following a link can filter the resulting observation for relevant evidence. A specialized table operation likewise combines navigation with structured extraction.
 
-This differs from merely exposing lower-level capabilities. The command boundary is shaped around an agent's next decision, so a successful action provides immediate evidence of the resulting state. A `--query` option can further constrain the observation to the evidence relevant to that decision rather than emit a full accessibility tree.
+This differs from merely exposing lower-level capabilities. The operation boundary is shaped around an agent's next decision, so a successful action provides immediate evidence of the resulting state. Filtering constrains the observation to that decision rather than emitting a full accessibility tree.
 
 ## Reported Evaluation
 

@@ -23,12 +23,12 @@ The motivating loop is plan → implement → **verify**. The developer remains 
 ## Claimed Review Scope
 
 1. **Code review** inspects newly generated files for static and logic problems, with examples including async races, null-pointer risk, and logic errors that might cause runtime exceptions.
-2. **Plan compliance** compares implementation against `plan.md` and `spec.md` to look for missing phases and requirements. This tests consistency with the written plan; an incorrect or incomplete plan remains a separate risk.
+2. **Plan compliance** compares implementation against the written plan and specification to look for missing phases and requirements. This tests consistency with the plan; an incorrect or incomplete plan remains a separate risk.
 3. **Guideline enforcement** compares contributions with project style guidance and custom guideline files generated during planning.
 4. **Test-suite validation** runs relevant unit and integration tests and includes execution results and coverage in the report. A test result is stronger evidence than a model's claim to have run a test, though relevance and coverage still need scrutiny.
 5. **Basic security review** flags examples such as hardcoded API keys, possible PII leaks, and unsafe input handling that could permit injection. The source does not specify detectors, tested vulnerability classes, or false-positive rates.
 
-Findings are labeled **High, Medium, or Low**, with a file path and a route to start a Conductor track for remediation. The post supplies the installation command `gemini extensions install https://github.com/gemini-cli-extensions/conductor`. It does not state that this feature automatically reviews every GitHub pull request or that findings become enforced merge gates.
+Findings are labeled **High, Medium, or Low**, with a file path and a route to start a remediation track. The post does not state that this feature automatically reviews every GitHub pull request or that findings become enforced merge gates.
 
 ## What Is Claimed Versus Measured
 

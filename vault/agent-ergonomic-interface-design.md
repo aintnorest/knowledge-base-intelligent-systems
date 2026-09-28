@@ -18,6 +18,8 @@ An agent interface is more than a transport or a collection of operations. It is
 4. Make errors and partial failures structured; retain idempotent mutations, non-interactive execution, and meaningful exit status.
 5. Offer concrete next-step command templates after a result, with concise per-command help as a fallback.
 
+For policy denials, identify the boundary that rejected the attempt and whether authorized escalation is available. A generic failure invites the agent to retry the same blocked action; actionable denial feedback lets it change course or request approval without treating a tool-result message as permission to override policy.
+
 ## Practical Use
 
 Apply this contract whether the implementation is a CLI, native tool schema, HTTP API, or wrapper over another protocol. First inspect real trajectories for repeated discovery calls, full-result scans, and acknowledgement-then-status pairs. Add compact defaults, targeted projections, or derived fields where those patterns recur. Evaluate task success together with input tokens, output tokens, turns, latency, and recovery quality.
@@ -29,3 +31,4 @@ More guidance and derived state can become stale, overly prescriptive, or costly
 ## Sources
 
 - [AXI: Agent eXperience Interface dossier](/dossiers/axi-agent-experience-interface.md) — proposes ten interface principles covering output bounds, aggregates, structured errors, live home views, and contextual next-step guidance.
+- [Implementing a Secure Sandbox for Local Agents dossier](/dossiers/cursor-local-agent-sandboxing.md) — Cursor observed repeated blocked-command retries and reports better offline recovery after sandbox-specific denial and escalation feedback.

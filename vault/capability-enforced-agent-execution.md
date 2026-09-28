@@ -19,6 +19,8 @@ Capability-enforced agent execution makes tool use conditional on machine-checka
 5. **Fail closed or request meaningful approval.** Block a denied action by default. If declassification is allowed, present the actual data source, destination, and consequence to a user who can make an informed decision.
 6. **Audit and test the enforcement surface.** Log capability decisions and adversarially test parser output, exception paths, multi-step transformations, tool adapters, and policy changes.
 
+Capabilities for delegated work should be intersected with parent, task, and resource authority, bound to a verified actor, and checked at the receiving tool rather than trusted as claims in a child agent's prompt. A sandbox constrains where code runs; it does not decide whether a permitted operation matches user intent. A broker may withhold transferable credentials and expose only mediated operations, but an authorized operation can still transmit data the workload can read. See [attenuated delegation authority](/vault/attenuated-delegation-authority.md) and [egress-broker credential injection](/vault/egress-broker-credential-injection.md).
+
 ## Why It Matters
 
 An isolated planning model can prevent untrusted text from selecting a new tool sequence, yet still pass attacker-controlled values into a planned `send`, `share`, or `transfer` operation. Capabilities preserve enough provenance at the action boundary to distinguish “the user asked to share this with this recipient” from “an untrusted document supplied both the recipient and the secret.”
@@ -31,6 +33,8 @@ This is a reference-monitor design: its security promise depends on complete med
 - Make rights concrete. An email policy can check recipient authorization for each attachment and text field; a file-sharing policy can require the target address to be user-originated.
 - Treat derived data as protected when it may reveal protected inputs. Do not strip a label merely because the value was formatted, summarized, or selected by a model.
 - Design approval prompts as a scarce declassification channel. Generic “continue?” dialogs cause habituation and can silently become the system's weakest policy.
+- Treat every outbound channel, including name resolution and general-purpose utilities, as a possible recipient of protected data. A destination allowlist grants reachability, not permission for every operation or payload at that destination; see [destination allowlist as capability grant](/vault/destination-allowlist-as-capability-grant.md).
+- Recompute effective authority after policy changes, and bind a consequential approval to the actor, tool contract, and actual arguments presented for review; see [approval bound to canonical effect](/vault/approval-bound-to-canonical-effect.md). Visibility of a tool or possession of a service identity is not itself approval to invoke it.
 
 ## Test Every Equivalent Authority Route
 
@@ -41,6 +45,7 @@ A 157-project audit of public agent repositories found gaps at exactly these int
 ## Limitations
 
 - A label system cannot protect against rights it never models, policies that are over-broad, compromised tool adapters, or a missing enforcement point.
+- Brokered credential custody prevents direct theft of a withheld key, not misuse of an authorized request or leakage of other workload-readable data. Inspecting encrypted requests may require a trusted intermediary that handles plaintext; uninspected routes have weaker guarantees.
 - Correct propagation through exceptions, branches, loops, timing, and shared resources is difficult; direct-flow checks alone can miss side channels.
 - Authority metadata and user identity are often incomplete for web, SaaS, and third-party tools, increasing either false blocks or unsafe assumptions.
 - This pattern limits unauthorized effects, not necessarily deceptive text displayed to a user or benign-looking sequences that are individually authorized but harmful in aggregate.
@@ -51,3 +56,9 @@ A 157-project audit of public agent repositories found gaps at exactly these int
 - [Parallax: Why AI Agents That Think Must Never Act dossier](/dossiers/parallax-architecturally-safe-autonomous-execution.md) — proposes executor-side sensitivity tags that propagate through agent operations and are checked before writes or network egress; the implementation and results are author-reported.
 - [A Large-Scale Empirical Study of Quality Assurance Practices and Gaps in AI Agents dossier](/dossiers/quality-assurance-gaps-ai-agent-projects.md) — repository-visible QA and isolation gaps across 157 agent projects.
 - [Rethinking Autonomy: Preventing Failures in AI-Driven Software Engineering dossier](/dossiers/rethinking-autonomy-ai-driven-software-engineering.md) — argues for least privilege, differentiated approval and independently audited effects.
+- [Delegation Without Trust dossier](/dossiers/delegation-without-trust-authorization-broker.md) — reference broker demonstrates identity-bound attenuation and revocation; synthetic microbenchmarks do not establish deployed mediation.
+- [OpenShell Security Policy Architecture dossier](/dossiers/nvidia-openshell-security-policy.md) — complete effective policy generations rederive credential provenance; local overrides and uninspected traffic weaken the gateway guarantee.
+- [Code Mode: the better way to use MCP dossier](/dossiers/cloudflare-code-mode-mcp.md) — host-mediated RPC capabilities expose operations to generated code without granting generic network access or credentials.
+- [Claude Code: Data Exfiltration with DNS dossier](/dossiers/claude-code-dns-exfiltration-cve-2025-55284.md) — a dated exploit composes a permitted read and diagnostic DNS call into unauthorized disclosure.
+- [Two questions every security review asks us dossier](/dossiers/composio-security-review.md) — session-bound user and project identity, organizational ceilings, and mediated credentials limit but do not eliminate misuse of allowed actions.
+- [Paperclip MCP Access Governance dossier](/dossiers/paperclip-mcp-gateway-governance.md) — separates tool visibility from call authorization and exact-effect approval while identifying unmanaged-client bypass routes.

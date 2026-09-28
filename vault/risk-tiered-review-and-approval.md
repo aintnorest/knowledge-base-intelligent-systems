@@ -17,9 +17,15 @@ Scrutiny should follow consequences. Routine, reversible, low-blast-radius chang
 3. **Present decision-ready evidence at every gate**: the intended requirement, the actual changed artifact and impact paths, independently produced test and scan evidence, uncertainties, and the proposed action. Record the effective tier, reviewer model or effort level, the exact commit, the policy and classifier version, and the decision and its reason. Re-review after new commits.
 4. **Evaluate** classification errors, escalation and false-approval rates, reviewer detection and time, bypasses, escaped defects, and post-release recovery on a real task mix before claiming better safety or productivity.
 
+## Approval Across the Action Lifecycle
+
+Apply the tier at the effect boundary, not just at final merge. A trusted runtime can deny, allow, or ask before a tool call; a plan-level consent decision does not preapprove consequential deviations, and live intervention remains useful after execution starts. Pre-action screening can stop an eligible action, whereas asynchronous monitoring that pauses a run afterward cannot undo the triggering effect. When no human can answer an escalation, reject it rather than treating unattended execution as consent. Record which exact action was approved, by whom, for how long, and whether the approval persists across a resumed session.
+
+For collaborative work, preserve the initiating human's identity in change authorship and approval eligibility: a shared automation identity can make self-approval appear independent. Organizational pause, reassignment, budget override, and release decisions belong to an authority separate from the executing agent. Tool-level permission and code-review approval address different moments; neither substitutes for the other.
+
 ## Product Settings Are Not Policy
 
-GitHub Copilot code review exposes a cheaper **Lite** level and a higher-reasoning **Balanced** level, set by organization default and overridable per review. GitHub estimates $0.05–$1 in AI credits per Lite review versus $0.25–$5 per Balanced review, excluding Actions minutes, and publishes no head-to-head detection data. Copilot's approval assessment normally does not count toward required approvals. **If administrators enable Copilot approvals, though, an approving Copilot review can satisfy a required-approval branch rule**, and new commits dismiss it. A team whose policy requires independent human approval must audit that setting rather than assume a numeric approval count means humans only. Anthropic's Code Review, by contrast, never approves PRs.
+Review depth and approval authority are independent controls. A cheaper review mode can provide faster feedback, while deeper reasoning may be reserved for consequential changes; neither mode establishes an independent human sign-off. Some automated reviewers can conditionally satisfy a required-approval rule, even when their recommendations do not normally count. A team requiring human approval must enforce that boundary explicitly rather than infer it from a numeric approval count. Vendor effort and cost estimates are not head-to-head detection evidence.
 
 ## Limitations
 
@@ -27,11 +33,16 @@ A risk score can hide a single disqualifying hazard, and risk classifiers miss h
 
 ## Sources
 
-- [About GitHub Copilot code review dossier](/dossiers/github-copilot-code-review-concepts.md) — Lite/Balanced effort, estimated credit ranges, and conditional approvals that can satisfy required-approval rules.
-- [Copilot code review effort levels are generally available dossier](/dossiers/github-copilot-review-effort-levels.md) — organization defaults, per-review overrides, and a visible effective tier; no quality comparison.
+- [About GitHub Copilot code review dossier](/dossiers/github-copilot-code-review-concepts.md) — Lite/Balanced modes and estimated AI-credit ranges ($0.05–$1/$0.25–$5, excluding Actions minutes); organization default, per-review override and visible effective level; admin-enabled Copilot approvals can satisfy required-approval rules and new commits dismiss them.
 - [Bringing Code Review to Claude Code dossier](/dossiers/claude-code-review.md) — parallel AI review sized to the PR; approval stays with a human.
 - [Governed AI-Assisted Engineering: Graduated Human Oversight for Agentic Code Generation in Regulated Domains dossier](/dossiers/governed-ai-assisted-engineering.md) — three impact tiers with separate design and release gates; velocity figures are analytical.
 - [Human oversight of agentic systems in practice: Examining the oversight work, challenges, and heuristics of developers using software agents dossier](/dossiers/human-oversight-agentic-systems-in-practice.md) — interviews show pre-configuration and co-planning oversight, and unsafe reliance on plans and green tests.
 - [Designing meaningful human oversight in AI dossier](/dossiers/designing-meaningful-human-oversight-ai.md) — human evaluative agency requires reviewable evidence and real intervention rights.
 - [Humans in Control: A Methodological Framework for Quality Assurance in Agentic Software Engineering dossier](/dossiers/humans-in-control-agentic-qa.md) — proposed human decisions at issue, approach, plan and diff gates; study still planned.
 - [AI agents in software testing: a human-in-the-loop assurance model dossier](/dossiers/ai-agents-software-testing-human-assurance.md) — non-empirical approval matrix for release-affecting test artifacts.
+- [Agent approvals & security — Codex dossier](/dossiers/openai-codex-approvals-security.md) — distinguishes pre-action automatic review from asynchronous safety monitoring that may pause after an effect.
+- [Oh My Pi Tool Approval Model dossier](/dossiers/omp-tool-approval-model.md) — documents risk-tiered tool decisions, rule precedence, headless escalation behavior, and separate action confirmation.
+- [Dive into Claude Code dossier](/dossiers/dive-into-claude-code.md) — illustrates runtime permission precedence and session-scoped approvals distinct from model restraint.
+- [Why we built our background agent: Inspect dossier](/dossiers/ramp-inspect-background-agent.md) — identifies shared bot PR authorship as a potential self-approval loophole and retains the requesting person's identity.
+- [Paperclip Specification — Board-Governed Agent Control Plane dossier](/dossiers/paperclip-control-plane-spec.md) — separates board-level override and budget authority from worker execution.
+- [Magentic-UI — Human-Centered Web Agent Control dossier](/dossiers/magentic-ui-human-centered-control.md) — distinguishes plan consent, live takeover, and per-action approval for consequential effects.

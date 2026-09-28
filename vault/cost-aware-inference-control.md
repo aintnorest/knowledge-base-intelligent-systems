@@ -24,7 +24,7 @@ Start with a segmented cost dashboard rather than an undifferentiated cost-per-t
 
 ## Review Effort as Request-Level Routing
 
-Code review makes request-level routing concrete. GitHub Copilot's **Lite** level favors fast feedback on common issues, and **Balanced** uses a higher-reasoning path for sensitive, complex or cross-service changes. GitHub estimates $0.05–$1 in AI credits per Lite review and $0.25–$5 per Balanced review, excluding Actions minutes. These are vendor estimates, not controlled quality/cost measurements. Record the effective level per PR revision and compare severity-specific detection, noise, latency, review effort and spend on risk-matched changes ([Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)).
+Code review makes request-level routing concrete: reserve deeper reasoning for sensitive, complex or cross-service changes, and use a faster path for routine issues. Vendor cost estimates are not controlled quality/cost measurements. Record the effective review effort per revision and compare severity-specific detection, noise, latency and spend on risk-matched changes ([Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)).
 
 ## Limitations
 
@@ -33,5 +33,4 @@ Classification and routing add operational complexity and can make product quali
 ## Sources
 
 - [Guest post: AI Inference Is Breaking Unit Economics dossier](/dossiers/ai-inference-unit-economics.md) — connects request economics to caching, routing, quantization, speculative decoding, and serving infrastructure.
-- [About GitHub Copilot code review dossier](/dossiers/github-copilot-code-review-concepts.md) — estimated per-review AI-credit ranges and effort modes.
-- [Copilot code review effort levels are generally available dossier](/dossiers/github-copilot-review-effort-levels.md) — inherited defaults and per-run override with a visible label.
+- [About GitHub Copilot code review dossier](/dossiers/github-copilot-code-review-concepts.md) — Lite/Balanced effort modes; estimated AI-credit ranges of $0.05–$1 and $0.25–$5 per review, excluding Actions minutes; inherited defaults and per-review overrides with an effective level visible on each review.

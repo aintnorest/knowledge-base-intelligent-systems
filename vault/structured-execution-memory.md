@@ -32,6 +32,10 @@ Use structured execution memory when an agent works over many tool calls, partia
 
 For long coding tasks, a compacted conversation, external structured notes, and a subagent's isolated research window are different things. Anthropic describes to-do and NOTES.md-style records that are reloaded after resets, and specialized workers that explore tens of thousands of tokens and return a roughly 1,000–2,000-token synthesis. The lead agent should keep task contracts, unresolved constraints, evidence locators and verification state explicitly, rather than trusting a fluent summary to carry every detail. The post gives examples, not a controlled comparison.
 
+## Replayable History and Progress
+
+Keep an append-only record of typed actions and observations beneath the compact context shown to the model. Reconstruct live state from the log after an interruption, and record condensation as a transformation rather than erasing the original events. Distinguish a task-level ledger of assumptions, facts, and plan from a per-step progress record of assignments, observations, and replanning decisions: a failed step can revise the plan without overwriting why it was adopted. This is execution memory, not the scheduling authority of a [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md).
+
 ## Limitations
 
 The bank still needs a policy for what to write, when to update, and when to expose records. A structured store alone can become passive clutter if it is not paired with retrieval or intervention discipline.
@@ -40,3 +44,5 @@ The bank still needs a policy for what to write, when to update, and when to exp
 
 - [Remember When It Matters dossier](/dossiers/proactive-memory-agent.md) - describes a memory bank with private status, knowledge entries, and procedural entries managed through explicit update/delete calls.
 - [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — compaction, persistent notes, and subagent contexts contrasted for long-horizon work.
+- [The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents dossier](/dossiers/openhands-software-agent-sdk.md) — describes typed append-only events, replayable conversation state, and condensation that retains the raw audit history.
+- [Magentic-One — Ledger-Based Generalist Orchestration dossier](/dossiers/magentic-one-orchestration.md) — separates task facts, guesses, and plan from step-wise progress, assignments, and replanning; it does not establish a durable distributed queue.

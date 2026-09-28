@@ -14,30 +14,30 @@ A site owner has several mechanisms for governing what an AI system may do with 
 
 | Layer | Typical mechanism | What it governs | What it does *not* govern |
 |---|---|---|---|
-| Fetch | `robots.txt` disallow for a crawler token | Whether the crawler retrieves the bytes | URL discovery; a blocked URL can still be listed from external links |
-| Index | `noindex` (requires crawling to be *allowed* to be seen) | Whether the page enters the index | Whether already-indexed copies expire immediately |
-| Snippet / preview | `nosnippet`, `max-snippet:[n]`, `max-image-preview`, `data-nosnippet` | How much text may be displayed *and*, on some platforms, how much may be used as direct input to a generated answer | Indexing; the page stays indexed and rankable |
-| Generative inclusion | A console-level site setting | Whether the site appears in the vendor's generative answer surfaces | Indexing, classic ranking, or training |
-| Training / external grounding | A separate crawler token (e.g. an "extended" token) | Use of content to train models, and grounding in the vendor's *non-Search* assistant products | Inclusion or ranking in the vendor's search product |
+| Fetch | `robots.txt` crawler restrictions | Whether a cooperating crawler retrieves bytes | URL discovery; a blocked URL may still be listed from external links |
+| Index | `noindex` on a crawlable page | Whether an honoring index retains the page | Immediate expiry of cached copies |
+| Snippet / preview | `nosnippet`, `max-snippet`, `data-nosnippet` | The text eligible for display; some platforms also tie this to generated-answer input | Indexing, which is a separate decision |
+| Generative inclusion | A separate answer-surface control, where offered | Eligibility for a generated answer | Indexing, ranking, or training |
+| Training / external grounding | A separate training-access policy, where offered | Model training or assistant grounding under that policy | Inclusion in other search or answer surfaces |
 
 ## The Three Confusions Worth Naming
 
-1. **Training tokens are not answer-surface controls.** A vendor's AI-training crawler token typically governs model training and grounding in that vendor's standalone assistant — explicitly *not* inclusion or ranking in its search product, and therefore not its in-search generated answers. Disallowing it does nothing about AI Overviews-class surfaces.
-2. **Snippet controls have become AI-input controls.** Directives originally defined for display length now carry a second clause: suppressing snippets can also prevent content from being used as direct input to generated answers, and a character cap can also cap how much may be used. This repurposing means a legacy `max-snippet` set years ago for display reasons is now throttling generative grounding. It also implies the converse: *snippet eligibility is a precondition for generative eligibility*, so a blanket `nosnippet` is a full opt-out of generated answers.
+1. **Training access is not answer-surface control.** Training permissions and generated-answer eligibility are distinct decisions. Withholding training access does not, by itself, exclude content from a search-generated answer.
+2. **Snippet controls can become AI-input controls.** A display-oriented cap may also limit direct input to generated answers on platforms that tie these uses together. An old cap can therefore suppress grounding unexpectedly; do not infer that all platforms treat snippet ineligibility as a complete generated-answer opt-out.
 3. **`robots.txt` is not `noindex`.** Blocking the crawler prevents fetching but not listing, and it also prevents the crawler from ever seeing a `noindex` directive on the page. To remove a page, allow crawling and serve `noindex`.
 
 ## Carve-Outs and Precedence
 
-Controls are not absolute. Separately granted permissions can override them: in-page structured data supplied by the publisher, product feeds, licensing agreements, and participation in commerce or advertising programs are typically treated as independent grants that a snippet cap or a generative-inclusion opt-out does not retract. Read every control as "governs the default path," not "governs all uses."
+Controls are not absolute. Separately granted permissions, such as structured data, feeds or licensing agreements, may permit uses outside the default crawling or snippet path. A restriction on one path should not be assumed to revoke independent grants.
 
-Propagation is also asynchronous. Console-level exclusions take days, caches and derived artifacts lag, and content already used to train a model is not recalled by a later opt-out. These controls are prospective, not retroactive.
+Changes also propagate asynchronously: caches and derived artifacts may lag, and a later opt-out cannot recall training already completed. Treat these controls as prospective, not retroactive.
 
 ## Practical Use
 
 1. Write down the intended outcome first — not indexed, not previewed, not used in generated answers, not used for training — then map each to its own mechanism. There is rarely one switch.
-2. Audit inherited settings. Legacy `max-snippet` values and template-level robots meta tags are the most common source of unintended generative suppression.
+2. Audit inherited snippet caps and page-level robots directives for unintended suppression; confirm the effect on each relevant platform.
 3. Enumerate vendors separately. Token names, directive semantics, and console controls differ per platform, and a policy written for one search engine says nothing about another assistant's fetcher.
-4. Use element-level exclusion (`data-nosnippet`-style attributes) when only part of a page is sensitive, rather than suppressing the whole page.
+4. Use element-level exclusion such as `data-nosnippet` when only part of a page is sensitive, rather than suppressing the whole page.
 5. Log crawler traffic by user agent. Declared policy and observed fetching diverge, and the access layer is the only one you can independently verify.
 
 ## Limitations
@@ -46,4 +46,4 @@ These are cooperative controls: they bind crawlers that choose to honor them, an
 
 ## Sources
 
-- [Optimizing Your Website for Generative AI Features on Google Search](/dossiers/google-search-generative-ai-optimization-guide.md) — makes snippet eligibility an explicit precondition for generative-feature eligibility, and its linked specifications supply the `nosnippet`/`max-snippet` AI-input clauses, the console-level inclusion control, and the statement that the training token does not affect Search inclusion or ranking.
+- [Optimizing Your Website for Generative AI Features on Google Search](/dossiers/google-search-generative-ai-optimization-guide.md) — Google ties snippet eligibility to generative-feature eligibility, extends `nosnippet`/`max-snippet` to direct AI input, supports `max-image-preview` and a console-level inclusion control, and states its training crawler token does not affect Search inclusion or ranking; these are platform-specific behaviors.

@@ -27,6 +27,8 @@ For trusted local parallel work, start one task branch and worktree per agent, a
 
 Keep a control plane with task claims or leases, ownership/dependency metadata, environment identity, artifact evidence, rebase status, cleanup, and failure reports. Protect high-conflict shared artifacts—migrations, lockfiles, generated schemas, releases—with explicit sequencing or expiring leases. A worktree prevents edit clobbering; it cannot establish semantic compatibility.
 
+Context inheritance is a choice within the context layer, not a permission grant. A continuing implementer may need prior investigation, whereas an independent reviewer benefits from a fresh delegated question; either worker may independently receive read-only or write-scoped tools. A separate conversation and inspectable side transcript do not create a separate filesystem or process: assign worktrees to isolate edits and enforce tool approvals and runtime confinement where the threat model requires them. Conversely, forking an existing conversation does not transfer its previous approvals automatically; restore authority only under the current session's policy. See [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md) for the epistemic tradeoff.
+
 ## Limitations
 
 - The appropriate runtime boundary is threat-model-specific; containers and VMs have distinct kernel, mount, and compatibility assumptions.
@@ -38,3 +40,5 @@ Keep a control plane with task claims or leases, ownership/dependency metadata, 
 - [Isolation Approaches for Concurrent AI Coding Agents: A Synthesis dossier](/dossiers/isolation-approaches-concurrent-ai-coding-agents-synthesis.md) — source synthesis across workspace, runtime, service, credentials, and integration layers.
 - [Parallel AI Coding Agents deep-research dossier](/dossiers/multi-agent-isolation-deep-research.md) — generated landscape report distinguishing file/Git, runtime, security, and merge-coherence isolation.
 - [Multi-Agent Coding Isolation dossier](/dossiers/multi-agent-coding-isolation-report.md) — reference architecture and use-case-oriented control-plane pattern.
+- [Organizing Context in a Multi-Agent Harness dossier](/dossiers/langchain-subagent-context-modes.md) — distinguishes isolated and inherited worker histories from independently scoped tool permissions; offers design examples, not comparative measurements.
+- [Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems dossier](/dossiers/dive-into-claude-code.md) — source-level account of separate child contexts, optional worktrees, runtime sandboxing, action approvals, and non-persistent session grants.

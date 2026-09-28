@@ -56,7 +56,7 @@ Its security discussion distinguishes **prompt injection** (untrusted input over
 
 - On a 2,800-question MMLU subset with `gpt-3.5-turbo`, the authors found that more elaborate techniques did not improve monotonically: zero-shot CoT was worse than zero-shot across tested variants, while few-shot CoT was best in their setup. Self-consistency helped only the zero-shot prompts. This is a useful reminder that technique choice is hyperparameter search, not a capability ladder.
 - Their real-world case study iterated on classifying crisis-related "entrapment" language. Manual prompt development took 47 recorded steps and reached development-set F1 0.53 (precision 0.38, recall 0.86), with surprising sensitivity to example order and duplicated contextual text.
-- A DSPy-based automated search produced test F1 0.548 (precision 0.385, recall 0.952) using 15 examples and one bootstrapped reasoning demonstration. It outperformed the hand-engineered variants in that study, but this is a narrow, high-stakes classification case—not evidence that a prompt system can replace clinical judgment.
+- Automated prompt-optimization search produced test F1 0.548 (precision 0.385, recall 0.952) using 15 examples and one bootstrapped reasoning demonstration. It outperformed the hand-engineered variants in that study, but this is a narrow, high-stakes classification case—not evidence that a prompt system can replace clinical judgment.
 
 ## My Takeaways
 

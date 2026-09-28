@@ -8,13 +8,14 @@ timestamp: 2026-09-24T03:56:19Z
 
 # Skill Supply-Chain Admission
 
-An agent skill is a third-party package of instructions and possibly executable resources. Its advertised purpose, `SKILL.md` body, scripts, dependencies, hooks and connector configuration must be reviewed as one artifact, and each consequential effect stays subject to a host-controlled authorization boundary. Source reputation and a clean static scan are evidence, never a grant of authority. The skill file itself is untrusted control input (see [Control/Data-Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)).
+An agent skill is a third-party package of instructions and possibly executable resources. Its advertised purpose, instructions, scripts, dependencies, hooks and connector configuration must be reviewed as one artifact, and each consequential effect stays subject to a host-controlled authorization boundary. Source reputation and a clean static scan are evidence, never a grant of authority. The skill itself is untrusted control input (see [Control/Data-Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)).
 
 ## Practical Use
 
 1. **Pin and inventory.** Record the source repository, pinned revision and hashes of every installed file. Check ownership, updates and dependency resolution. Reject hidden downloads, credential literals and unexplained egress before activation.
+   Scan the complete candidate before its instruction text enters agent context, not only before installing its scripts: instruction exposure itself can redirect the agent. Treat scanning as an admission filter, not proof that a skill is benign; measure the time it adds and whether its controls interfere with the surrounding harness.
 2. **Compare declared and actual capability.** Check the user-facing description against the full instruction tree and its executable effects. Sandbox candidate scripts with synthetic data and no live credentials, and observe filesystem reads, hook installation, subprocesses and outbound destinations. Exercise delayed and conditional branches where feasible.
-3. **Separate instruction trust from system authority.** An unreviewed skill may supply task data or draft a procedure. It must not change standing permissions, silence user approvals, enable new MCP servers, or authorize network and secret access. A bundled `.mcp.json` gets the full server-admission review (see [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)).
+3. **Separate instruction trust from system authority.** An unreviewed skill may supply task data or draft a procedure. It must not change standing permissions, silence user approvals, enable new connector servers, or authorize network and secret access. Bundled connector configuration gets the full server-admission review (see [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)).
 4. **Mediate at the sink.** For every send, publish, delete, grant or execute action, check the tool and its security-relevant parameters against the current user request and an independently approved capability scope. Escalate unexpected destinations or effects, revoke compromised versions, and rotate exposed secrets.
 5. **Track triage and confirmed abuse separately, and retest on updates.** A detector hit is not proof of malice, and a short clean sandbox run is not proof of safety.
 
@@ -25,9 +26,11 @@ One community scan flagged 8,126 of 31,132 skills (26.1%) for potentially danger
 ## Limitations
 
 Dynamic analysis cannot exhaust rare triggers, real-user states or external infrastructure, and a 60-second sandbox can miss dormant behavior. Signatures attest to bytes, not intent. Semantic instruction attacks and executable payloads need different controls. Approval prompts cause user fatigue, so defaults should minimize available authority. Graduated trust tiers proposed in the survey literature are design sketches, not evaluated guarantees.
+Pre-exposure scanning can delay otherwise short tasks substantially, and narrow functional probes cannot establish resistance to adaptive or dormant payloads. Layered controls also need compatibility checks: an independent content filter or network proxy may disrupt a scanner or another proxy.
 
 ## Sources
 
 - [Agent Skills in the Wild: An Empirical Study of Security Vulnerabilities at Scale dossier](/dossiers/agent-skills-security-vulnerabilities-wild.md) — scanner-based prevalence and severity, with flags rather than confirmed malware.
-- [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — 157 behaviorally confirmed malicious skills, shadow features, and a bundled malicious MCP configuration.
+- [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — 157 behaviorally confirmed malicious skills, shadow features and a bundled malicious `.mcp.json` connector configuration.
 - [Agent Skills for Large Language Models: Architecture, Acquisition, Security, and the Path Forward dossier](/dossiers/agent-skills-architecture-acquisition-security-survey.md) — proposed staged review, permission manifests, and revocable trust tiers.
+- [Distributing Security Controls Through Harness Engineering dossier](/dossiers/shard-distributed-harness-security.md) — places third-party skill scanning before instruction exposure, reports full coverage only on a limited functional category, and observes material latency and inter-control conflicts.

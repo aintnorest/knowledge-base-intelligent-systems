@@ -23,9 +23,9 @@ The central design claim is that Skills must be optimized for routing, context c
 ## The Four Properties of a Skill
 
 1. **Directory** — The Skill is a hub-and-spoke folder. The root file gives focused guidance; scripts, references, assets, and nested topic folders carry deterministic logic or heavy conditional material. Perplexity reports that giving a model all 1,945 sections of the U.S. Internal Revenue Code at once performed worse than no Skill, while curated multilevel organization made the tax capability viable.
-2. **Format** — The root file has a lowercase, hyphenated name matching its directory and a description. The description is a routing instruction for the model, not documentation for an engineer. Dependencies and runtime metadata can be held in frontmatter or auxiliary configuration.
+2. **Format** — Discovery metadata identifies the skill and describes the requests for which it helps. That description is a routing instruction for the model, not documentation for an engineer. Runtime dependencies can be declared separately from the task guidance.
 3. **Invocable** — The runtime loads a Skill when needed, copies its directory into an isolated environment, recursively loads declared dependencies, and exposes the relevant instructions and files. Implementations can differ in whether they reveal the full file tree.
-4. **Progressive** — Perplexity distinguishes a small always-on Skill index, the loaded `SKILL.md` body, and runtime reads of accessory material. Its reported budgets are roughly 100 tokens per indexed Skill, ideally no more than 5,000 tokens for a loaded root body, and an unbounded but on-demand runtime tier.
+4. **Progressive** — Perplexity distinguishes a small always-on Skill index, the loaded root instructions, and on-demand reads of supporting material. Its reported context budgets are implementation observations, not universal limits; the core mechanism is that conditional material incurs context cost only when retrieved.
 
 ## Deciding Whether a Skill Is Worth Its Tax
 
@@ -36,9 +36,9 @@ The guide argues against Skills that merely restate system-prompt guidance, docu
 ## How Perplexity Builds Skills
 
 1. **Write evaluations first.** Seed cases from production requests, known failures, and neighboring domains that must *not* activate the Skill. Routing tests need both positive and negative examples; forbidden loads can be more informative than ordinary successes.
-2. **Treat the description as the hard part.** It should describe the user's expressed intent—often beginning with “Load when...” —rather than summarize the workflow. Perplexity targets 50 words or fewer, uses real user phrasing, and tests descriptions for unintended effects on neighboring Skills.
+2. **Treat the description as the hard part.** It should describe the user's expressed intent rather than summarize the workflow. Perplexity favors concise descriptions in real user language and tests them for unintended effects on neighboring Skills.
 3. **Write only high-signal guidance.** Omit obvious procedures a capable model already knows. Prefer concise intent and exception handling over brittle command-by-command rails. Explicit gotchas and negative examples are especially valuable because they capture what the agent actually gets wrong.
-4. **Move branching material out of the root.** Put logic the model would otherwise reconstruct in `scripts/`; put large, conditional documentation in `references/`; put fill-in templates and schemas in `assets/`; use configuration for one-time setup. Hierarchy reduces a large, ambiguous selection problem into smaller routing decisions, but it also requires navigation aids and careful curation.
+4. **Move branching material out of the root.** Keep deterministic logic, large conditional knowledge, reusable templates, and one-time environment concerns separate from core decision guidance. Hierarchy reduces a large, ambiguous selection problem into smaller retrieval decisions, but it also requires navigation aids and careful curation.
 5. **Iterate before shipping.** The guide recommends many small, evaluated revisions on a branch, then shipping one coherent change set with its evaluation evidence.
 
 ## Maintenance: the Gotchas Flywheel

@@ -25,7 +25,7 @@ The practical decision is therefore workload-aligned. vLLM is presented as the p
 
 The comparison used OpenShift 4.18.9, CUDA 12.8, NVIDIA driver 570.148.08, and a single H200-PCIe GPU with 141 GB memory. It compared vLLM 0.10.0 serving Llama-3.1-8B-Instruct in bfloat16 with llama.cpp b6100 serving the same model as an F16 GGUF. GuideLLM 0.2.1 ran in the same cluster, using fixed prompt-response pairs and concurrent loads from 1 to 64; each concurrency point ran for 300 seconds.
 
-The authors measured requests per second (RPS), total output tokens per second (TPS), P99 time to first token (TTFT), and P99 inter-token latency (ITL). For llama.cpp, they explicitly tuned GPU offload (`-ngl 99`) and set both prompt and batch-processing thread counts to 64 after empirically finding that setting stable in their deployment.
+The authors measured requests per second (RPS), total output tokens per second (TPS), P99 time to first token (TTFT), and P99 inter-token latency (ITL). They tuned llama.cpp's GPU offload and CPU processing empirically for a stable deployment; the resulting comparison reflects those chosen conditions rather than untouched defaults.
 
 ## What the Results Say
 

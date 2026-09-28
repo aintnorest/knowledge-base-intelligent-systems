@@ -14,6 +14,8 @@ An executable-code action gives an agent a small program as its action surface i
 
 Code makes control flow and data flow explicit. A workflow that otherwise needs several model turns and custom orchestration can be expressed as one bounded computation: query data, inspect a condition, apply a transformation, call another tool, and render a result. Code-pretrained models may also already know package idioms better than a bespoke action grammar.
 
+Executing a short program can also keep intermediate tool results outside the model context: discover only the needed tool interfaces, pass a large result between tools inside the runtime, and return a filtered observation. Branches and loops then avoid separate model round trips. This is a context and interaction-cost advantage, not permission to bypass the authorization checks on the underlying effects.
+
 ## Operating Contract
 
 1. Expose a narrow runtime with explicit tool bindings and package allowlists.
@@ -25,6 +27,8 @@ Code makes control flow and data flow explicit. A workflow that otherwise needs 
 ## When Not to Use It
 
 A single narrowly typed API call is preferable when no composition is needed, the effect must be easy to authorize, or arbitrary expression evaluation would expand risk. Code as an action language changes how work is expressed; it does not grant permission to do more work.
+
+Where generated code runs defines the trust boundary. Restricting the language or its imports can limit some mistakes but does not reliably bound resource consumption or the capabilities reachable through an allowed package. Isolating only snippets keeps parent-agent calls and credentials outside the snippet environment but leaves other local execution paths uncovered; isolating the whole agent covers more paths while potentially placing credentials inside the execution boundary. Choose placement against the threat model, then enforce limits and tool-effect policy independently.
 
 ## From Exploratory Code to Reusable Skill
 
@@ -41,3 +45,5 @@ An executable action becomes a reusable skill only after the exploratory path ha
 - [Executable Code Actions Elicit Better LLM Agents dossier](/dossiers/executable-code-actions-llm-agents.md) — CodeAct’s Python action interface, API-Bank/M3 ToolEval comparisons, and selected multi-turn instruction data.
 - [VOYAGER: An Open-Ended Embodied Agent with Large Language Models dossier](/dossiers/voyager-lifelong-learning-agent.md) — verified executable skill library composed through an automatic curriculum.
 - [SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skills dossier](/dossiers/skillweaver-web-agent-skill-learning.md) — tested, parameterized Playwright APIs synthesized from exploration.
+- [Secure code execution dossier](/dossiers/smolagents-secure-code-execution.md) — smolagents documents code-action composability, restricted interpretation, resource and package risks, and the snippet-versus-whole-agent isolation tradeoff.
+- [Code execution with MCP: Building more efficient agents dossier](/dossiers/anthropic-code-execution-mcp.md) — illustrates on-demand tool definitions and local data forwarding while warning that code execution expands the security boundary.

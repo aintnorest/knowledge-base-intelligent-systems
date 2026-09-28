@@ -27,7 +27,7 @@ Industrial deployments show why the axes must stay separate. Google AutoCommente
 
 ## Context Coverage Receipts
 
-A reviewer that saw only the diff cannot vouch for consequences in callers, contracts or configuration. Give each review dimension a bounded, inspectable context package: changed lines, enclosing code, dependent callers, relevant tests and documents. Record what was *not* retrieved: excluded file classes, unavailable runners or tools, stale graph edges. Never present a context-limited pass as repository-wide assurance. GitHub Copilot's agentic context gathering depends on runner capabilities and excludes some file types. The Ericsson system routed code-graph context to four specialist reviewers, but no ablation isolated what the graph or the specialization contributed.
+A reviewer that saw only the diff cannot vouch for consequences in callers, contracts or configuration. Give each review dimension a bounded, inspectable context package: changed lines, enclosing code, dependent callers, relevant tests and documents. Record what was *not* retrieved: excluded file classes, unavailable execution tools or stale graph edges. Never present a context-limited pass as repository-wide assurance. A specialist-review study used code-graph context, but no ablation isolated what the graph or specialization contributed.
 
 ## Limitations
 
@@ -39,5 +39,5 @@ High precision can be bought by dropping severe but hard-to-detect issues. Human
 - [AI-Assisted Assessment of Coding Practices in Modern Code Review dossier](/dossiers/google-autocommenter-coding-practices.md) — per-rule thresholds, sparse-feedback bias, stale-guideline suppression, and a null review-time A/B result.
 - [BitsAI-CR: Automated Code Review via LLM in Practice dossier](/dossiers/bytedance-bitsai-cr-code-review.md) — rule-scoped review with a second precision filter, 75.0% online precision, and an outdated-rate proxy.
 - [Using Agentic AI for contextualized and multifaceted code review at Ericsson dossier](/dossiers/ericsson-contextual-multifaceted-code-review.md) — four context-fed specialist reviewers; correctness versus importance without recall.
-- [About GitHub Copilot code review dossier](/dossiers/github-copilot-code-review-concepts.md) — context gathering depends on runner capabilities; some file classes are excluded.
+- [About GitHub Copilot code review dossier](/dossiers/github-copilot-code-review-concepts.md) — Copilot's context gathering depends on runner capabilities and excludes some file classes.
 - [AI in software engineering at Google: Progress and the path ahead dossier](/dossiers/google-ai-software-engineering-progress.md) — review-comment resolution usage as an opportunity-to-impact metric, not fix correctness.

@@ -15,6 +15,8 @@ The same idea works at two granularities:
 - **Task level**: acceptance criteria and oracles are fixed before the patch exists.
 - **Action level**: an agent predicts the observation it expects immediately before each consequential action, so an unexpected result is hard to rationalize as a pass.
 
+For a long-horizon feature, write a finite contract of user-observable behavior **before** splitting the work into implementation milestones. Fresh validators can then exercise the running system against the prior contract as black-box users, instead of deriving acceptance from the worker's own implementation. This reduces anchoring but does not make an incomplete contract complete.
+
 ## Practical Use
 
 1. From the issue and a human review, state observable acceptance criteria and non-negotiable invariants. Cover a normal path, a boundary or error path, and a cross-feature path where interacting components can fail even though each passes locally.
@@ -48,4 +50,5 @@ A human-written test can be wrong, incomplete or tied too closely to one impleme
 - [Preventing Premature Commitment in Coding Agents with an Evidence-Conditioned Execution Layer dossier](/dossiers/ecloop-evidence-conditioned-execution.md) — evidence prerequisites before edits or submission.
 - [Verifying Agentic Development at Scale dossier](/dossiers/cognition-verifying-agentic-development.md) — expectation-before-action annotations, labeled artifacts, and explicit untested status.
 - [AI-Driven Tools in Modern Software Quality Assurance: An Assessment of Benefits, Challenges, and Future Directions dossier](/dossiers/ai-driven-software-quality-assurance-pysmennyi.md) — browser agents repaired deliberately mutated negative flows into positive passes.
+- [How Missions Work dossier](/dossiers/factory-missions-architecture.md) — defines observable acceptance assertions before decomposition and uses fresh black-box validators at milestones.
 - [The Future of Software Testing: AI-Powered Test Case Generation and Validation dossier](/dossiers/ai-test-generation-validation-baqar-khanda.md) — narrative case for human approval of behavior-changing self-healing.

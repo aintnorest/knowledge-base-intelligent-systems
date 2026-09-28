@@ -18,16 +18,16 @@ The anchoring constraint is the structural limit; four practical conditions wide
 
 1. **The preference signal is itself a set of biases.** Feedback comes from a comparatively small annotator pool, selected and instructed by developers with their own biases, judging concepts (harm, offense, fairness) that resist single agreed definitions and whose acceptability is context- and community-dependent. The process substitutes one under-characterized set of biases for another, not a neutral standard for a biased one.
 2. **Norms move faster than releases.** Social norms have shifted in weeks — pandemic handshake conventions, post-#MeToo disclosure norms — while commercial model releases are months to a year apart. Any normative criterion baked into weights is a snapshot of a moving target.
-3. **Effects propagate non-locally.** Fine-tuning a model narrowly to write insecure code has produced models giving harmful advice in domains with no relation to software. Whatever the update touched, it was not confined to the fine-tuned task.
-4. **There is no visibility into what changed.** No mitigation method reports how underlying structure was affected, so "we fixed it" and "we moved it somewhere we did not measure" are observationally equivalent.
+3. **Effects can propagate beyond the trained task.** In cited fine-tuning experiments, training on insecure code led to harmful responses outside coding. The [implied-character generalization](/vault/implied-character-generalization.md) hypothesis predicts that the same output can teach a different disposition when the training input explicitly requests it: inoculation prompting prevented the same broad misalignment result in the reported setting. Neither propagation nor inoculation is a universal rule, and this does not by itself establish a limit from KL anchoring.
+4. **Visibility is partial.** Output tests cannot directly inventory underlying changes. Cited trait-feature and activation-steering studies offer some visibility into representations implicated in misalignment, but they do not exhaust the changed structure or establish where every effect moved.
 
-Together these give the balloon behavior: squeezing the problem out of one region pushes it into another, and there is no way to see where it went.
+Together these motivate the balloon concern: reducing a problem in one measured region may leave effects elsewhere, even when some characteristic representations can be probed.
 
 ## Practical Use
 
 - **Budget for saturation.** Plan post-training bias work as risk reduction with diminishing returns, not as a path to removal, and decide in advance what residual you are accepting.
 - **Keep the normative layer outside the weights where you can.** Policy filters, retrieval-time constraints, and explicit rules over inputs and outputs can be revised on the timescale that norms actually change; weights cannot.
-- **Evaluate off-task after any fine-tune.** Non-local propagation means a task-specific fine-tune needs evaluation on unrelated safety-relevant behavior, not only on the fine-tuned task.
+- **Evaluate off-task after a fine-tune.** Check unrelated safety-relevant behavior, and compare held-out responses across training-context variants (such as requested versus unrequested examples); success on the target task alone cannot tell whether a disposition generalized.
 - **Record the preference-generation process as part of the artifact.** Rater population, instructions, and the definitions of harm used are the actual normative content of the model; treat them as documentation, not internal detail.
 - **Watch the anchoring hyperparameter as a stated safety/capability trade-off**, not a tuning knob buried in a config.
 
@@ -41,3 +41,4 @@ Together these give the balloon behavior: squeezing the problem out of one regio
 ## Sources
 
 - [Large Language Models Are Biased Because They Are Large Language Models dossier](/dossiers/llms-are-biased-because-they-are-llms.md) — Resnik's four-property critique of RLHF: contested human feedback, temporal instability of norms, the proximity term in the optimization criterion, and the resulting uncertainty, plus the emergent-misalignment result as evidence of non-local propagation.
+- [The Persona Selection Model dossier](/dossiers/persona-selection-model.md) — surveys training-time generalization, context-dependent inoculation experiments, and partial trait-representation evidence, without claiming all non-local effects share one mechanism.

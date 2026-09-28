@@ -15,38 +15,38 @@ timestamp: 2026-09-24T03:44:42Z
 
 ## What It Is
 
-The Claude Code implementation manual, not the portable Agent Skills spec. It documents placement, discovery, command naming, invocation permissions, injected shell commands, subagents, skill-content persistence, and testing. `agent-skills-format-specification` is the interoperable format baseline; `anthropic-agent-skills-platform-overview` contrasts product surfaces; `anthropic-skill-authoring-best-practices` gives model-facing prose advice. This source matters especially for coding workflows where a skill can run commands or confer temporary tool grants.
+The Claude Code runtime reference, not the portable Agent Skills spec. It describes discovery scope, invocation authority, dynamic context, subagents, persistence, and testing. `agent-skills-format-specification` is the interoperable baseline; `anthropic-agent-skills-platform-overview` contrasts product surfaces; `anthropic-skill-authoring-best-practices` covers model-facing prose. This source matters where a skill can execute commands or temporarily grant tools.
 
 ## Discovery and Scoping
 
-A personal skill goes under `~/.claude/skills/`, a shared repo skill under `.claude/skills/`, a nested skill under a subdirectory's `.claude/skills/`, and managed or plugin skills have separate scopes. Nested skills below the starting directory enter availability only after Claude touches that subtree; parent skills up to the repo root load at launch. Additional directories must be explicitly added through `--add-dir` or `/add-dir`; merely granting file access through `permissions.additionalDirectories` does not load configuration. `claude.ai`-synced skills behave differently again, and local edits to synced copies can be overwritten. Same-name precedence is enterprise > personal > project, with nested variants and plugin namespaces separately addressable; a name collision is a behavioral change, not just a filename clash.
+Skills enter discovery through personal, project, managed, or plugin scopes. Nested project skills may become available only after the agent touches their subtree; access to a directory alone does not imply its skills are discovered. Synced copies can overwrite local changes. Same-name collisions have scope-dependent precedence, while separately namespaced variants remain addressable; availability is thus a property of the loader and working location, not only the package.
 
-`name` is optional for a *local Claude Code* skill and the directory decides its `/command` name; `description` is recommended. This is more permissive than the open specification and uploaded package validation, which require `name` and `description`. Claude Code accepts extension fields such as `when_to_use`, `disable-model-invocation`, `user-invocable`, `paths`, `context: fork`, `agent`, `model`, `effort`, `hooks`, and `disallowed-tools`; uploads/API packaging reject non-standard keys. Legacy `.claude/commands/*.md` still work, but new capabilities belong in a skill folder.
+The local loader permits missing names and uses the containing directory for identification, unlike stricter portable or upload validation. It also accepts runtime-specific metadata extensions that uploaded packages may reject. Legacy command files remain supported, but richer skill behavior uses the skill package.
 
 ## Invocation and Context Lifecycle
 
-Default skills can be user-invoked with `/name` or selected automatically from descriptions. `disable-model-invocation: true` is appropriate for a side-effectful `/deploy` or `/commit`; its description is withheld from automatic selection. `user-invocable: false` does the converse for passive background knowledge. Descriptions are limited to a combined **1,536-character** listing entry before the global listing budget cuts them further. The guide says the skill-listing budget is **1% of model context**; least-invoked descriptions lose visibility first. `skillOverrides` can leave a name visible without description, make it user-only, or disable it. A badly formed YAML file can still load as body text with empty metadata, leaving manual invocation possible while automatic selection silently fails.
+Skills can be selected by the user or automatically from their descriptions. Side-effectful skills can exclude automatic selection, and background guidance can be excluded from user-facing invocation. As of the ingest date, descriptions had a fixed per-entry character cap and shared listing budget proportional to model context; rarely invoked entries lost visibility first. Overrides could suppress a description or disable a skill. Malformed metadata could leave manual access possible while defeating automatic routing.
 
 An invoked body enters the conversation as one message and persists across later turns, unlike a permission grant. Re-invoking unchanged rendered content does not duplicate it, but changed arguments or dynamic output append a fresh body. After compaction Claude Code reattaches at most **5,000 tokens per skill**, across a **25,000-token** shared budget, most-recent first; older or long content may disappear. Model behavior may still drift even if text remains. This is product behavior, not a portable format requirement.
 
 ## Execution, Authority, and Isolation
 
-- `allowed-tools` grants tools without another prompt **only for the turn of invocation**; it does not restrict unlisted tools, is not gated by workspace trust, and project skills can self-grant broad actions. For restrictions use `disallowed-tools` and independent permission policy. Review repository-provided skills before running them.
-- `!`-backtick commands or fenced `!` code blocks execute before Claude receives a skill message, injecting live output. A failure or denied permission can abort invocation; managed `disableSkillShellExecution` replaces those injections with a placeholder for supported sources. These commands are not executed from synced skills in ordinary local sessions.
-- `$ARGUMENTS`, numbered or named arguments, and `${CLAUDE_SKILL_DIR}`/`${CLAUDE_PROJECT_DIR}` expand at invocation. Bound paths to the skill directory instead of trusting the current shell directory; dynamic outputs are data that still require source-aware handling.
-- `context: fork` starts a subagent with the skill as its task, **not a copy of the conversation history**. It can run in background and may have narrower tools; independent edits may sit outside the parent session's rewind checkpoints. Only use it for standalone tasks with explicit inputs, not passive guidelines.
+- Tool declarations grant listed tools without another prompt **only for the invocation turn**; they do not restrict unlisted tools, and project skills can grant broad actions. Restrictions require independent policy. Review repository-provided skills before running them.
+- Dynamic shell content executes before the model receives the skill message and injects live output. Failed or denied execution can abort invocation; managed policy can suppress execution for supported sources. Treat injected output as untrusted data and audit the authority of the command.
+- Invocation-time arguments and directory references can alter rendered content. Resolve files relative to the skill package rather than assuming the current shell directory, and treat expanded content according to its source.
+- A forked skill starts a subagent with the skill as its task, **not a copy of conversation history**. Background edits may sit outside the parent session's rewind checkpoints. Use forks for standalone tasks with explicit inputs, not passive guidelines.
 
 ## Evaluate and Operate
 
-The reference distinguishes discovery success from task success. Compare realistic prompts in fresh sessions with the skill enabled and disabled. A plugin can use `claude plugin eval`; the `skill-creator` plugin has its own `evals/evals.json`, isolated runs, assertion evidence, token/time statistics, blind version comparisons, and description-trigger tuning. Their formats are not interchangeable. For repeated launch workflows, bundled `/run`, `/verify`, and `/run-skill-generator` skills record or use project-specific recipes; they are examples of deploying procedural knowledge, not quality data.
+The reference distinguishes discovery success from task success. Compare realistic prompts in fresh sessions with and without the skill. Its evaluation approaches include isolated runs, artifact assertions, resource costs, blind comparisons, and routing checks, but their formats are not interchangeable. Bundled procedural workflows illustrate reuse, not evidence of quality improvement.
 
 ## Analyst Takeaways
 
-1. **Scope side effects at both selection and permission layers.** A manually invoked deployment skill and narrow external permission policy are stronger than a broad `allowed-tools` declaration.
-2. **Test the actual loader and model after install.** Collision, nested-directory timing, listing truncation, and compaction can make a valid `SKILL.md` ineffective or differently effective.
-3. **Treat shell injection as execution, not templating.** Audit the command, expansion variables, dependency content, and authority before accepting a project or plugin skill.
-4. **Use isolated forks only for fully specified work.** They do not inherit a human's earlier conversation and background changes can complicate undo and oversight.
-5. **Separate universal authoring advice from Claude-specific switches.** Do not ship `context: fork` or `disable-model-invocation` in a package expected to pass strict cross-platform upload validation.
+1. **Scope side effects at both selection and permission layers.** User-controlled invocation and narrow independent policy are stronger than a broad temporary grant.
+2. **Test the actual loader and model after install.** Collision, nested-directory timing, listing truncation, and compaction can make a valid skill ineffective or differently effective.
+3. **Treat shell injection as execution, not templating.** Audit the command, expanded inputs, dependency content, and authority before accepting a project or plugin skill.
+4. **Use isolated forks only for fully specified work.** They do not inherit earlier conversation, and background changes can complicate undo and oversight.
+5. **Separate universal authoring advice from runtime-specific extensions.** Locally valid metadata may fail strict cross-platform validation.
 
 ## Questions and Limitations
 

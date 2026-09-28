@@ -25,13 +25,13 @@ The post is unusually useful because it separates model capability from the harn
 
 ### March 4–April 7: default reasoning effort reduced
 
-When Opus 4.6 launched in Claude Code in February, Anthropic defaulted its reasoning effort to `high`. Some users then encountered very long-tail thinking latency, enough to make the UI appear frozen, alongside disproportionate token use and usage-limit consumption. Internal evaluations found that `medium` gave slightly lower intelligence but substantially lower latency on most tasks, so on March 4 Anthropic made `medium` the default for Sonnet 4.6 and Opus 4.6.
+When Opus 4.6 launched in Claude Code in February, Anthropic initially chose a high reasoning-effort default. Some users then encountered very long-tail thinking latency, enough to make the UI appear frozen, alongside disproportionate token use and usage-limit consumption. Internal evaluations found that reducing effort gave slightly lower intelligence but substantially lower latency on most tasks, so on March 4 Anthropic lowered the default for Sonnet 4.6 and Opus 4.6.
 
-This was a deliberate product tradeoff, not a software defect. It optimized the default for latency and quota efficiency at the cost of some task quality. Startup notices, an inline effort selector, and the return of `ultrathink` made the setting more visible, but most users kept the default and continued reporting that Claude Code felt less intelligent. Anthropic reverted the decision on April 7. The post says Opus 4.7 now defaults to `xhigh`, while all other models default to `high`; lower settings remain available through `/effort`.
+This was a deliberate product tradeoff, not a software defect. It optimized the default for latency and quota efficiency at the cost of some task quality. Most users kept the default and continued reporting that Claude Code felt less intelligent despite efforts to make the tradeoff visible. Anthropic reverted the decision on April 7.
 
 ### March 26–April 10: stale-session pruning repeated every turn
 
-Claude Code normally carries prior reasoning blocks forward so the model can retain why it made earlier edits and tool calls. To make an idle session cheaper to resume after its prompt cache had expired, Anthropic intended to clear older thinking once after more than an hour of inactivity, using the `clear_thinking_20251015` API header with `keep:1`, and then resume sending full reasoning history.
+Claude Code normally carries prior reasoning blocks forward so the model can retain why it made earlier edits and tool calls. To make an idle session cheaper to resume after its prompt cache had expired, Anthropic intended to clear older thinking once after more than an hour of inactivity and then resume sending full reasoning history.
 
 A state-management bug left that clearing behavior active for every subsequent turn in the process. Each request retained only the newest reasoning block and discarded earlier ones. A user message arriving during tool use could begin another turn under the broken flag and remove reasoning from the current turn too. The resulting progressive loss of rationale explains the reported forgetfulness, repetition, and odd tool choices. It also forced continuing cache misses; Anthropic says it believes those misses caused separate reports of unexpectedly fast usage-limit depletion.
 
@@ -57,10 +57,10 @@ Anthropic commits to several changes aimed at the blind spots exposed by the inc
 
 1. **Test the public artifact.** A larger share of internal staff will use the exact public Claude Code build rather than only a feature-testing build, reducing divergence between dogfooding and customer conditions.
 2. **Broaden code-review context.** In a back-test, Opus 4.7 found the stale-session bug when given all required repositories, whereas Opus 4.6 did not. Anthropic is adding multi-repository context to its Code Review tool, improving the internal version, and plans to ship the improvement to customers.
-3. **Gate every prompt change per model.** Every Claude Code system-prompt change will run against a broad per-model evaluation suite. Model-specific changes should be scoped to their intended model, reinforced by guidance added to Anthropic's `CLAUDE.md`.
+3. **Gate every prompt change per model.** Every Claude Code system-prompt change will run against a broad per-model evaluation suite. Model-specific changes should be scoped to their intended model rather than affecting other versions.
 4. **Keep line-level ablation and auditability.** Prompt lines will continue to be removed individually to localize effects, while new tooling makes prompt changes easier to review and audit.
 5. **Escalate intelligence tradeoffs.** Changes that might exchange intelligence for another objective will receive soak periods, broader evaluation, and gradual rollout rather than immediate broad release.
-6. **Preserve high-signal user reports.** Reproducible examples submitted through `/feedback` or public reports were ultimately necessary to isolate the failures. Anthropic created `@ClaudeDevs` on X and says it will mirror detailed updates in centralized GitHub threads.
+6. **Preserve high-signal user reports.** Reproducible user examples and public reports were ultimately necessary to isolate the failures. Anthropic says it will mirror detailed updates in centralized GitHub threads.
 
 ## Analyst Takeaways
 
@@ -75,7 +75,7 @@ Anthropic commits to several changes aimed at the blind spots exposed by the inc
 
 - This is a vendor-authored retrospective, not an independent audit. It provides no raw logs, evaluation artifacts, traffic allocation, incident counts, or user-impact rates.
 - The reported 3% prompt-related drop lacks the evaluation name, metric definition, baseline, sample size, variance, and whether “3%” is relative or percentage-point change. It localizes a regression but does not establish its magnitude rigorously.
-- Anthropic does not quantify the intelligence difference between `medium`, `high`, and `xhigh`, the latency or token savings that motivated the default change, or the share of users affected.
+- Anthropic does not quantify the intelligence difference across reasoning-effort levels, the latency or token savings that motivated the default change, or the share of users affected.
 - The post does not map each of the three changes separately across Claude Code, Agent SDK, and Cowork, nor explain why the affected model lists differ.
 - The claim that repeated cache misses drove usage-limit reports is explicitly stated as Anthropic's belief rather than a demonstrated causal estimate.
 - The post names two experiments that masked the context bug but does not explain their assignment, interaction, or why production-equivalent end-to-end coverage did not expose the mismatch.

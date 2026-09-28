@@ -8,3 +8,6 @@
 
 # Temporary Git worktrees used for source ingestion
 .worktrees/
+
+# Obsidian vault settings (local only)
+.obsidian/

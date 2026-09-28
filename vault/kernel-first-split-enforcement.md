@@ -21,6 +21,8 @@ The point is not merely performance. Every operation routed to a supervisor beco
 5. **Constrain the supervisor's authority and outcomes.** Give it a short set of terminal actions—allow, deny, audit, virtualize, commit, or abort—and retain an auditable record of event, evidence, policy version, and result.
 6. **Use live updates to reduce authority.** A runtime hook can revoke network access after setup, deny a newly discovered destination, or close a workspace after review. Do not treat executable names, model intent, or a callback's heuristic classification as the primary containment boundary.
 
+An invariant outbound restriction must attach to an identity the entire process tree actually shares and the OS can match. Cooperative environment settings or executable-path wrappers are not substitutes when arbitrary child programs can open sockets directly. Likewise, blocking an executable's identity at process launch does not block the same code if an allowed loader maps it through another executable-memory path. Identify every equivalent code-loading operation and constrain the resulting file, socket, and network effects rather than claiming an execution gate covers them all.
+
 ## Practical Use
 
 Use this pattern for agent shells, code-execution tools, plugin runtimes, build runners, local data processors, and controlled automation that needs frequent short-lived execution. Pair it with per-stage privileges: an untrusted-content stage might have no external network, while a later delivery stage cannot read private source directories. If work is speculative, virtualize local effects into a COW workspace and make commit an explicit, reviewed transition.
@@ -32,8 +34,11 @@ Measure startup cost, direct-path overhead, mediated-path latency, policy-denial
 - The available kernel primitives define what can be static. Platform/version differences may force a reduced feature set; rejecting unsupported policy is safer than pretending equivalent enforcement exists.
 - A supervisor remains privileged relative to the sandbox and can introduce denial-of-service, correctness, and escape risks. It needs careful lifecycle management, bounded queues, robust cleanup, and independent security review.
 - Kernel enforcement cannot decide application-level authorization on its own. It should complement user intent, data provenance, credential controls, and semantic policy at consequential sinks.
+- A content-based execution gate may correctly reject renamed binaries yet miss executable memory loaded without the guarded launch operation. Each broader claim requires independently enforced coverage of alternate loaders and effects.
 - Filesystem rollback is not general transactionality. Network requests, external API effects, and data already emitted through an allowed channel require their own output-gating or compensation design.
 
 ## Sources
 
 - [Sandlock dossier](/dossiers/sandlock-unprivileged-linux-agent-sandbox.md) — compiles static filesystem, TCP/IPC, and syscall policy into Landlock and seccomp-bpf, while a seccomp-notification supervisor handles runtime endpoint checks, safe `execve` observation, COW effects, and per-stage pipelines.
+- [Building a safe, effective sandbox to enable Codex on Windows dossier](/dossiers/openai-windows-codex-sandbox-design.md) — explains why a restricted-token identity could not match firewall rules and why a dedicated process-tree principal replaced cooperative network suppression.
+- [How Claude Code escapes its own denylist and sandbox dossier](/dossiers/ona-claude-code-denylist-sandbox-bypasses.md) — demonstrates an executable-content gate bypassed by an allowed dynamic linker mapping denied code outside the guarded execution operation.

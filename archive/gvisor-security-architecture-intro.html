@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="https://schema.org/WebPage">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title> Introduction to gVisor security - gVisor</title>
+    
+    <link rel="canonical" href="/docs/architecture_guide/intro/">
+
+    <!-- Dependencies. -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.1/css/all.min.css" integrity="sha256-fdcFNFiBMrNfWL6OcAGQz6jDgNTRxnrLEd4vJYFWScE=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.1/js/all.min.js" integrity="sha256-Z1Nvg/+y2+vRFhFgFij7Lv0r77yG3hOvWz2wI0SfTa0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js" integrity="sha256-hYXbQJK4qdJiAeDVjjQ9G0D6A0xLnDQ4eJI9dkm7Fpk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.0/mermaid.min.js" integrity="sha512-gx05X612uoaolzJ5Ee/786b3th+qzAm90TOvRwZJwnE8yr0sHQG8eLxdR0/Hbqc2IFh2mWHzzXk79g3atNSwsQ==" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function() {
+    $('.language-mermaid').each(function() {
+      $(this).parent().replaceWith('<div class="mermaid">' + $(this).text() + '</div>');
+    });
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+    });
+  });
+</script>
+
+
+    <!-- Our own style sheet. -->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/favicons/favicon-16x16.png" sizes="16x16">
+
+    
+    <meta name="og:title" content=" Introduction to gVisor security">
+    
+    
+    <meta name="og:image" content="https://gvisor.dev/assets/logos/logo_solo_on_white_bordered.svg">
+  </head>
+
+  <body class="">
+    <nav class="navbar navbar-expand-sm navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-brand">
+      <a href="/">
+        <img src="/assets/logos/logo_solo_on_dark.svg" height="25" class="d-inline-block align-top" style="margin-right: 10px;" alt="logo" />
+        gVisor
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/docs">Documentation</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/users">Users</a></li>
+        <li><a href="/application-compatibility">Compatibility</a></li>
+        <li><a href="/security-track-record">Security</a></li>
+        <li><a href="/community/">Community</a></li>
+        <li><a href="https://github.com/google/gvisor">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+  <script>
+    const navBar = document.querySelector('.navbar');
+    const observer = new ResizeObserver(entries => {
+      for (let entry of entries) {
+        const newHeight = entry.contentRect.height;
+        document.documentElement.style.setProperty('--nav-height', `${newHeight}px`);
+      }
+    });
+    if (navBar) {
+      observer.observe(navBar);
+    }
+  </script>
+</nav>
+
+    <div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <nav class="sidebar" id="sidebar-nav">
+        
+          <h3>Project</h3>
+          <ul class="sidebar-nav">
+          
+          
+            
+            
+            
+              
+              
+                <li><a href="/docs/"> What is gVisor?</a></li>
+              
+                <li><a href="/roadmap/"> Roadmap</a></li>
+              
+                <li><a href="/contributing/"> Contributing</a></li>
+              
+                <li><a href="/security/"> Security and Vulnerability Reporting</a></li>
+              
+              
+            
+          
+            
+            
+            
+              
+                
+                
+                <li>
+                  
+                  
+                  
+                  <a class="sidebar-nav-heading" data-toggle="collapse" href="#project-community" aria-expanded="false" aria-controls="project-community">Community<span class="caret"></span></a>
+                  <ul class="collapse sidebar-nav sidebar-submenu" id="project-community">
+              
+              
+                <li><a href="/community/"> Participation</a></li>
+              
+                <li><a href="/community/governance/"> gVisor Project Governance</a></li>
+              
+                <li><a href="/users/"> Who's Using gVisor</a></li>
+              
+                <li><a href="/community/code_of_conduct/"> Code of Conduct</a></li>
+              
+                <li><a href="/community/style_guide/"> Provisional style guide</a></li>
+              
+              
+                </li>
+              </ul>
+              
+            
+          
+          </ul>
+        
+          <h3>User Guide</h3>
+          <ul class="sidebar-nav">
+          
+          
+            
+            
+            
+              
+              
+                <li><a href="/docs/user_guide/install/"> Installation</a></li>
+              
+                <li><a href="/docs/user_guide/production/"> Production guide</a></li>
+              
+                <li><a href="/docs/user_guide/platforms/"> Changing Platforms</a></li>
+              
+                <li><a href="/docs/user_guide/filesystem/"> Filesystem</a></li>
+              
+                <li><a href="/docs/user_guide/fuse/"> FUSE</a></li>
+              
+                <li><a href="/docs/user_guide/networking/"> Networking</a></li>
+              
+                <li><a href="/docs/user_guide/gpu/"> GPU Support</a></li>
+              
+                <li><a href="/docs/user_guide/tpu/"> TPU Support</a></li>
+              
+                <li><a href="/docs/user_guide/rdma/"> RDMA Support</a></li>
+              
+                <li><a href="/docs/user_guide/runtimemonitor/"> Runtime Monitoring</a></li>
+              
+                <li><a href="/docs/user_guide/observability/"> Observability</a></li>
+              
+                <li><a href="/docs/user_guide/checkpoint_restore/"> Checkpoint/Restore</a></li>
+              
+                <li><a href="/docs/user_guide/debugging/"> Debugging</a></li>
+              
+                <li><a href="/docs/user_guide/faq/"> FAQ</a></li>
+              
+                <li><a href="/docs/user_guide/systemd/"> Systemd cgroup driver</a></li>
+              
+                <li><a href="/docs/user_guide/rootfs_snapshot/"> Rootfs Tar Snapshots</a></li>
+              
+                <li><a href="/docs/user_guide/fs_snapshot/"> Filesystem Snapshots</a></li>
+              
+                <li><a href="/docs/user_guide/rootless/"> Rootless</a></li>
+              
+              
+            
+          
+            
+            
+            
+              
+                
+                
+                <li>
+                  
+                  
+                  
+                  <a class="sidebar-nav-heading" data-toggle="collapse" href="#userguide-containerd" aria-expanded="false" aria-controls="userguide-containerd">Containerd<span class="caret"></span></a>
+                  <ul class="collapse sidebar-nav sidebar-submenu" id="userguide-containerd">
+              
+              
+                <li><a href="/docs/user_guide/containerd/quick_start/"> Containerd Quick Start</a></li>
+              
+                <li><a href="/docs/user_guide/containerd/crio/"> CRI-O Quick Start</a></li>
+              
+                <li><a href="/docs/user_guide/containerd/configuration/"> Containerd Advanced Configuration</a></li>
+              
+              
+                </li>
+              </ul>
+              
+            
+          
+            
+            
+            
+              
+                
+                
+                <li>
+                  
+                  
+                  
+                  <a class="sidebar-nav-heading" data-toggle="collapse" href="#userguide-personalities" aria-expanded="false" aria-controls="userguide-personalities">Personalities<span class="caret"></span></a>
+                  <ul class="collapse sidebar-nav sidebar-submenu" id="userguide-personalities">
+              
+              
+                <li><a href="/docs/user_guide/personalities/bwrap/"> Bubblewrap (bwrap) Personality</a></li>
+              
+              
+                </li>
+              </ul>
+              
+            
+          
+            
+            
+            
+              
+                
+                
+                <li>
+                  
+                  
+                  
+                  <a class="sidebar-nav-heading" data-toggle="collapse" href="#userguide-quickstart" aria-expanded="false" aria-controls="userguide-quickstart">Quick Start<span class="caret"></span></a>
+                  <ul class="collapse sidebar-nav sidebar-submenu" id="userguide-quickstart">
+              
+              
+                <li><a href="/docs/user_guide/quick_start/docker/"> Docker Quick Start</a></li>
+              
+                <li><a href="/docs/user_guide/quick_start/kubernetes/"> Kubernetes Quick Start</a></li>
+              
+                <li><a href="/docs/user_guide/quick_start/oci/"> OCI Quick Start</a></li>
+              
+              
+                </li>
+              </ul>
+              
+            
+          
+            
+            
+            
+              
+                
+                
+                <li>
+                  
+                  
+                  
+                  <a class="sidebar-nav-heading" data-toggle="collapse" href="#userguide-tutorials" aria-expanded="false" aria-controls="userguide-tutorials">Tutorials<span class="caret"></span></a>
+                  <ul class="collapse sidebar-nav sidebar-submenu" id="userguide-tutorials">
+              
+              
+                <li><a href="/docs/tutorials/docker/"> WordPress with Docker</a></li>
+              
+                <li><a href="/docs/tutorials/docker-compose/"> Wordpress with Docker Compose</a></li>
+              
+                <li><a href="/docs/tutorials/kubernetes/"> WordPress with Kubernetes</a></li>
+              
+                <li><a href="/docs/tutorials/falco/"> Configuring Falco with gVisor</a></li>
+              
+                <li><a href="/docs/tutorials/knative/"> Knative Services</a></li>
+              
+                <li><a href="/docs/tutorials/docker-in-gvisor/"> Docker in gVisor</a></li>
+              
+                <li><a href="/docs/tutorials/docker-in-gke-sandbox/"> Docker in a GKE sandbox</a></li>
+              
+                <li><a href="/docs/tutorials/cni/"> Using CNI</a></li>
+              
+              
+                </li>
+              </ul>
+              
+            
+          
+          </ul>
+        
+          <h3>SDK/API Reference</h3>
+          <ul class="sidebar-nav">
+          
+          
+            
+            
+            
+              
+                
+                
+                <li>
+                  
+                  
+                  
+                  <a class="sidebar-nav-heading" data-toggle="collapse" href="#sdk-apireference-go" aria-expanded="false" aria-controls="sdk-apireference-go">Go<span class="caret"></span></a>
+                  <ul class="collapse sidebar-nav sidebar-submenu" id="sdk-apireference-go">
+              
+              
+                <li><a href="/docs/sdk/go/"> API Reference</a></li>
+              
+                <li><a href="/docs/sdk/go/quickstart/"> Quickstart</a></li>
+              
+              
+                </li>
+              </ul>
+              
+            
+          
+            
+            
+            
+              
+                
+                
+                <li>
+                  
+                  
+                  
+                  <a class="sidebar-nav-heading" data-toggle="collapse" href="#sdk-apireference-python" aria-expanded="false" aria-controls="sdk-apireference-python">Python<span class="caret"></span></a>
+                  <ul class="collapse sidebar-nav sidebar-submenu" id="sdk-apireference-python">
+              
+              
+                <li><a href="/docs/sdk/python/"> API Reference</a></li>
+              
+                <li><a href="/docs/sdk/python/quickstart/"> Quickstart</a></li>
+              
+              
+                </li>
+              </ul>
+              
+            
+          
+          </ul>
+        
+          <h3>Architecture Guide</h3>
+          <ul class="sidebar-nav">
+          
+          
+            
+            
+            
+              
+              
+                <li class="active"><a href="/docs/architecture_guide/intro/"> Introduction to gVisor security</a></li>
+              
+                <li><a href="/docs/architecture_guide/security/"> Security Model</a></li>
+              
+                <li><a href="/docs/architecture_guide/resources/"> Resource Model</a></li>
+              
+                <li><a href="/docs/architecture_guide/platforms/"> Platform Guide</a></li>
+              
+                <li><a href="/docs/architecture_guide/performance/"> Performance Guide</a></li>
+              
+                <li><a href="/docs/architecture_guide/networking/"> Networking Guide</a></li>
+              
+              
+            
+          
+          </ul>
+        
+          <h3>Compatibility</h3>
+          <ul class="sidebar-nav">
+          
+          
+            
+            
+            
+              
+              
+                <li><a href="/docs/user_guide/compatibility/"> Applications</a></li>
+              
+                <li><a href="/docs/user_guide/compatibility/linux/arm64/">Linux/arm64</a></li>
+              
+                <li><a href="/docs/user_guide/compatibility/linux/amd64/">Linux/amd64</a></li>
+              
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <div class="col-md-9">
+      <h1> Introduction to gVisor security</h1>
+      
+        <p>
+        <a href="https://github.com/google/gvisor/edit/master/g3doc/architecture_guide/intro_to_gvisor.md" target="_blank" rel="noopener"><i class="fa fa-edit fa-fw"></i> Edit this page</a>
+        <a href="https://github.com/google/gvisor/issues/new?title=+Introduction+to+gVisor+security" target="_blank" rel="noopener"><i class="fab fa-github fa-fw"></i> Create issue</a>
+        </p>
+      
+      <div class="docs-content">
+      <p>This document is meant to be a high-level introduction to gVisor for security
+researchers. It explains how gVisor differs from the way other security products
+provide isolation. It assumes a solid understanding of how kernels and operating
+systems work.</p>
+
+<p>A look at the <a href="/docs/architecture_guide/security">Security Model page</a> is also
+recommended.</p>
+
+<ul id="markdown-toc">
+  <li><a href="#what-is-gvisor" id="markdown-toc-what-is-gvisor">What is gVisor?</a></li>
+  <li><a href="#how-does-gvisor-work" id="markdown-toc-how-does-gvisor-work">How does gVisor work?</a>    <ul>
+      <li><a href="#how-do-linux-kernel-security-primitives-work" id="markdown-toc-how-do-linux-kernel-security-primitives-work">How do Linux kernel security primitives work?</a></li>
+      <li><a href="#how-does-virtualization-work" id="markdown-toc-how-does-virtualization-work">How does virtualization work?</a></li>
+      <li><a href="#how-does-gvisor-provide-isolation" id="markdown-toc-how-does-gvisor-provide-isolation">How does gVisor provide isolation?</a></li>
+    </ul>
+  </li>
+  <li><a href="#what-does-gvisor-not-protect-against" id="markdown-toc-what-does-gvisor-not-protect-against">What does gVisor <em>not</em> protect against?</a></li>
+  <li><a href="#how-can-i-test-gvisor" id="markdown-toc-how-can-i-test-gvisor">How can I test gVisor?</a></li>
+  <li><a href="#further-reading" id="markdown-toc-further-reading">Further reading</a></li>
+</ul>
+
+<h2 id="what-is-gvisor">What is gVisor?</h2>
+
+<p><a href="https://gvisor.dev/">gVisor</a> is an open-source workload isolation solution to
+safely run untrusted code, containers and applications. It
+<a href="#how-does-gvisor-work">fundamentally differs</a> from other isolation solutions in
+that it is an application kernel, not a virtual machine hypervisor or a system
+call filter.</p>
+
+<h2 id="how-does-gvisor-work">How does gVisor work?</h2>
+
+<p>The two most common approaches to sandboxing workloads are to use virtualization
+(virtual machines or VMs), and/or Linux kernel security primitives such as
+<code class="highlighter-rouge">seccomp-bpf</code>, Linux namespaces, AppArmor, Landlock, etc. <strong>gVisor uses these
+technologies, but not in the standalone way they are typically used</strong>. They are
+used for defense-in-depth rather than as a primary layer of defense.</p>
+
+<p>To explain the difference, it is useful to contrast it against these other
+approaches first.</p>
+
+<h3 id="how-do-linux-kernel-security-primitives-work">How do Linux kernel security primitives work?</h3>
+
+<p><img src="isolation_with_linux_security_primitives.svg" alt="Isolation with Linux kernel security primitives" title="Isolation with Linux kernel security primitives" /></p>
+
+<p>When using Linux kernel security primitives like <code class="highlighter-rouge">seccomp-bpf</code>, AppArmor,
+Landlock, namespaces, and such, the attack surface of the sandboxed applications
+is reduced, but that enforcement is still done by the single monolithic Linux
+kernel that the sandboxed application can still talk to.</p>
+
+<p>This means the workload is only one system call away from host compromise. The
+Linux kernel security primitives help in reducing the surface, but any attack
+within that surface (or that undoes the Linux kernel security mechanism itself)
+can still be executed. Additionally, these security primitives need to be
+carefully configured for the particular workload being sandboxed in order to be
+meaningful. For example, system call filters need to be whittled down to the
+very set of system calls the workload needs and no others. This also means that
+if an application depends on an “unsafe” or broad system call (like <code class="highlighter-rouge">ioctl(2)</code>
+or <code class="highlighter-rouge">io_uring(2)</code>), it can be very difficult or even impossible to create a
+secure set of filters for that application. Additionally, creating a generic
+configuration that works for all or most workloads will result in needing to
+allow all or most of the kernel surface to be exposed.</p>
+
+<p>While gVisor leverages <code class="highlighter-rouge">seccomp-bpf</code> and namespaces to minimize its own surface
+to the host kernel, it does so only as a second layer of defense, and not in a
+way that requires workload-specific tailoring in order to be meaningful.</p>
+
+<h3 id="how-does-virtualization-work">How does virtualization work?</h3>
+
+<p><img src="isolation_with_virtualization.svg" alt="Isolation with virtualization" title="Isolation with virtualization" /></p>
+
+<p>When using virtual machines, a hypervisor (which can run in userspace or
+kernelspace or both; in the diagram below, it is shown in kernelspace but the
+principle applies without loss of generality) manages the coordination between
+two kernels: one running on the host as normal, and another running inside a
+hardware-enforced virtual machine where the sandboxed workload’s activity is
+contained.</p>
+
+<p>The virtual machine acts as a strong security boundary that restricts the
+application from accessing any host resource. The only way out of the virtual
+machine is through a “VM exit”, an event triggered only in certain circumstances
+and handled by the hypervisor. While virtual machines are the gold standard of
+workload isolation, they come at a steep cost in terms of resource overhead and
+efficiency, due to the need to pre-allocate machine resources to each virtual
+machine on each host and to boot a full, separate Linux kernel.</p>
+
+<p>While gVisor can use virtualization (specifically: KVM), it can also work
+without virtualization while maintaining a high level of security.</p>
+
+<h3 id="how-does-gvisor-provide-isolation">How does gVisor provide isolation?</h3>
+
+<p><img src="isolation_with_gvisor.svg" alt="Isolation with gVisor" title="Isolation with gVisor" /></p>
+
+<p>Now that we’ve seen how Linux kernel security primitives and virtual machines
+work, let’s turn to gVisor.</p>
+
+<p><strong>gVisor acts as an application kernel</strong>, but <strong>runs in userspace</strong>. This means
+it takes the role that a kernel would from the perspective of a sandboxed
+workload, while gVisor itself otherwise acts as a regular user application from
+the host kernel’s perspective. Like a kernel, gVisor intercepts and handles
+system calls and page faults from the sandboxed workload. This handling logic
+happens entirely within gVisor code, written in memory-safe Go. This kernel-like
+component is called the “gVisor Sentry”.</p>
+
+<p>Like a user application, the gVisor Sentry <em>may</em> make limited system calls to
+the host Linux kernel. It does so when it determines that servicing the
+sandboxed workload’s request requires information from the host machine and that
+the sandboxed workload was initially configured to allow such access.</p>
+
+<p>This means <strong>the gVisor Sentry needs to re-implement Linux in Go</strong>. The gVisor
+Sentry contains a Go-based, from-scratch reimplementation of the Linux system
+call interface, memory management, filesystems, a network stack, process
+management, signal handling, namespaces, etc. <strong>gVisor never passes through any
+system call to the host</strong>. Therefore, if a kernel feature isn’t reimplemented in
+gVisor, then the sandboxed workload cannot use it.</p>
+
+<p>Let’s walk through an example. Say a sandboxed process calls <code class="highlighter-rouge">getpid(2)</code>. gVisor
+intercepts this system call. gVisor keeps track of its own PID table
+representing the processes in the sandbox. These are not real host processes!
+Running <code class="highlighter-rouge">top(1)</code> on the host will not show them. gVisor uses its own PID table
+to find the PID of the sandboxed process, and returns that. From its
+perspective, the sandboxed process just ran <code class="highlighter-rouge">getpid(2)</code>, yet no host system call
+was made.</p>
+
+<p>Some system calls made by a sandboxed process may result in one or more host
+system calls being made. As a second example, if a sandboxed process wishes to
+<code class="highlighter-rouge">read(2)</code> from a unix <code class="highlighter-rouge">pipe(2)</code> that another process in the sandbox is
+<code class="highlighter-rouge">write(2)</code>‘ing to, the gVisor Sentry (and more specifically, the Go runtime it
+relies on) may call the host <code class="highlighter-rouge">futex(2)</code> system call to perform blocking and
+synchronization between these operations. Therefore, the Sentry does need to be
+able to perform real system calls, but they do not map 1-to-1 to the system
+calls made by the sandboxed processes.</p>
+
+<p>The gVisor Sentry runs in a very restricted environment, leveraging all of the
+Linux kernel security primitives available (system call filtering, namespacing,
+cgroups, <code class="highlighter-rouge">pivot_root(2)</code>, etc.). Its system call filter prohibits system calls
+like <code class="highlighter-rouge">exec(2)</code>, <code class="highlighter-rouge">connect(2)</code>, and their respective variants (with caveats
+depending on sandbox configurations). It has an isolated view of the host
+filesystem using mount namespaces, and runs as in an isolated user namespace
+with minimal capabilities. <strong>This does <em>not</em> mean that the sandboxed workload
+can’t use these system calls; it actually can!</strong> But their logic and
+implementation is entirely handled within the gVisor Sentry’s kernel logic,
+rather than delegating any of it to the host kernel.</p>
+
+<p>For requests that cannot be serviced from within this restricted environment,
+there is a sidecar process called the Gofer which is a slightly-more-trusted
+companion process running in a slightly-more-privileged context.</p>
+
+<p>This security architecture is similar to virtual machines in that there are two
+separate kernels, with the innermost one being exclusive to the sandboxed
+workload, and with very restricted access to the host kernel. However, unlike
+virtual machines, gVisor sandboxes have the flexibility to allocate and release
+host resources (CPU, memory) at runtime, providing better efficiency and
+utilization without compromising on the security benefits of the VM-like
+dual-kernel security architecture.</p>
+
+<p>Additionally, the gVisor components are all written in memory-safe Go,
+eliminating the largest class of security vulnerabilities that would otherwise
+be present in a typical VM setup (Linux as guest kernel). In order to break out
+of a gVisor sandbox, an attacker would need to simultaneously exploit the gVisor
+Sentry kernel <em>and</em> the host Linux kernel, which do not share any code.</p>
+
+<p>gVisor contains multiple mechanisms by which it can intercept system calls and
+page faults from the sandboxed workload. These are called
+“<a href="https://gvisor.dev/docs/architecture_guide/platforms/">gVisor platforms</a>”.
+There are currently two supported platforms:</p>
+
+<ul>
+  <li>“Systrap” (the default). This platform is based on the use of Linux’s
+<code class="highlighter-rouge">seccomp-bpf</code> subsystem for system call <strong><em>interception</em></strong> (as opposed to
+the typical use-case of <code class="highlighter-rouge">seccomp-bpf</code> being for system call
+<strong><em>filtering</em></strong>). It does not require virtualization support from the host
+and is therefore well-suited to run <em>inside</em> a virtual machine. Read our
+<a href="https://gvisor.dev/blog/2023/04/28/systrap-release/">announcement post for more details on Systrap</a>.</li>
+  <li>“KVM”. This platform is based on the use of Linux’s KVM subsystem and uses
+virtualization as a means to provide address space isolation and
+interception of page faults. Sandboxed workload code runs in guest ring 3.
+This platform requires virtualization support. It can also work with nested
+virtualization, but is generally slower than Systrap in such a mode.</li>
+</ul>
+
+<p>Platforms are meant to be transparently interchangeable from the system
+administrator’s perspective. However, they are still different from a security
+perspective, as the Linux kernel functionality they rely on to provide system
+call and page fault interception differs.</p>
+
+<p>For more information on gVisor security, please see the
+<a href="https://gvisor.dev/docs/architecture_guide/security/">Security Model page</a>.</p>
+
+<h2 id="what-does-gvisor-not-protect-against">What does gVisor <em>not</em> protect against?</h2>
+
+<p>Generally speaking, gVisor protects against Linux kernel exploits by separating
+the sandboxed workload from accessing the host kernel directly.</p>
+
+<p>Where gVisor does <strong><em>not</em></strong> help:</p>
+
+<ul>
+  <li>Attacks in higher-level components of the stack before the sandbox or
+container runtime even enters the picture, e.g. an exploit in containerd
+that would cause it to start a container without gVisor.</li>
+  <li>Side-channel Spectre-style CPU attacks. gVisor only intercepts system calls
+and page faults, so the application is free to use the CPU as it wants
+(within host cgroup limits), similar to the VM case. Side-channel attacks
+need to be mitigated at the host kernel or hardware level.</li>
+  <li>Exploits <em>within</em> the sandboxed workload itself, e.g. a gVisor sandbox
+running nginx and PHP being exploited via an exploit in the PHP code. While
+gVisor <em>does</em> help in preventing the attacker from escalating the attack
+further out to the host, the attacker will still have access to whatever the
+sandbox is configured to have access to. In general, this means that
+different customer workloads should be run in different sandboxes to prevent
+a malicious customer from leaking data or exploiting another customer
+workload. Additionally, note that gVisor has a
+<a href="https://gvisor.dev/docs/user_guide/runtimemonitor/">runtime monitoring feature</a>
+that can be used as an intrusion detection mechanism to detect compromise of
+the sandboxed workload itself.</li>
+</ul>
+
+<h2 id="how-can-i-test-gvisor">How can I test gVisor?</h2>
+
+<p>gVisor is available as an <a href="https://opencontainers.org/">OCI-compliant</a> container
+runtime named <a href="https://gvisor.dev/docs/user_guide/install/">runsc</a>. It can be
+used with container ecosystem tools like Docker
+(<a href="https://gvisor.dev/docs/user_guide/quick_start/docker/">gVisor guide</a>) or
+Kubernetes
+(<a href="https://gvisor.dev/docs/user_guide/quick_start/kubernetes/">gVisor guide</a>). It
+can also be used directly for one-off testing, like this:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>runsc <span class="k">do </span><span class="nb">echo </span>Hello world
+Hello world
+</code></pre></div></div>
+
+<p>Note the use of <code class="highlighter-rouge">sudo</code>, which may give you pause. It’s a sandboxing tool, after
+all, shouldn’t it run as an unprivileged user? gVisor-sandboxed workloads <em>do</em>
+run with minimal capabilities in an isolated user namespace from the perspective
+of the host kernel. However, the sandbox setup process requires privileges,
+specifically for setting up the userspace network stack. Once the sandbox setup
+is complete, gVisor re-executes itself and drops all privileges in the process.
+This takes place before any untrusted code runs. For sandboxes that don’t
+require networking, it is possible to run in rootless mode without sudo:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>runsc <span class="nt">--rootless</span> <span class="nt">--network</span><span class="o">=</span>none <span class="k">do </span><span class="nb">echo </span>Hello world
+Hello world
+</code></pre></div></div>
+
+<p>How can you tell that gVisor is working? Well, try to do something that involves
+the host kernel. For example, you can call <code class="highlighter-rouge">dmesg(1)</code>, which reads the kernel
+logs:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>＃ Without gVisor <span class="o">(</span>unsandboxed<span class="o">)</span>:
+<span class="nv">$ </span>dmesg
+dmesg: <span class="nb">read </span>kernel buffer failed: Operation not permitted
+
+＃ With gVisor <span class="o">(</span>sandboxed<span class="o">)</span>:
+<span class="nv">$ </span>runsc <span class="nt">--rootless</span> <span class="nt">--network</span><span class="o">=</span>none <span class="k">do </span>dmesg
+<span class="o">[</span> 0.000000] Starting gVisor...
+<span class="o">[</span> 0.498943] Waiting <span class="k">for </span>children...
+<span class="o">[</span> 0.972223] Committing treasure map to memory...
+<span class="o">[</span> 1.192981] Segmenting fault lines...
+<span class="o">[</span> 1.591823] Verifying that no non-zero bytes made their way into /dev/zero...
+<span class="o">[</span> 1.787191] Consulting <span class="nb">tar </span>man page...
+<span class="o">[</span> 2.083245] Searching <span class="k">for </span>needles <span class="k">in </span>stacks...
+<span class="o">[</span> 2.534575] Forking spaghetti code...
+<span class="o">[</span> 2.742140] Digging up root...
+<span class="o">[</span> 2.921313] Gathering forks...
+<span class="o">[</span> 3.342436] Creating cloned children...
+<span class="o">[</span> 3.511124] Setting up VFS...
+<span class="o">[</span> 3.812459] Setting up FUSE...
+<span class="o">[</span> 4.233037] Ready!
+</code></pre></div></div>
+
+<p>This demonstrates that the <code class="highlighter-rouge">dmesg(1)</code> binary is talking to the gVisor kernel
+instead of the host Linux kernel. The humorous messages displayed are part of
+gVisor’s kernel code when a sandboxed workload asks for kernel logs. These logs
+are fictitious and are generated by gVisor’s system call handler on demand,
+which is why re-running this command will yield different messages. Try to catch
+them all!</p>
+
+<p>Note: <code class="highlighter-rouge">runsc do</code> gives the sandbox read-only access to the host’s entire
+filesystem by default, as <code class="highlighter-rouge">runsc do</code> is just a convenience feature to test out
+gVisor quickly. In real-world usage, when runsc is used as an OCI container
+runtime, host filesystem mappings are strictly defined by the OCI runtime
+configuration and gVisor will only expose the paths that the OCI configuration
+dictates should be exposed (and will <code class="highlighter-rouge">pivot_root(2)</code> away from being able to
+access any other host directory, for defense in depth). For this reason, when
+testing gVisor from a security standpoint, it’s better to
+<a href="https://gvisor.dev/docs/user_guide/quick_start/docker/">install it as a Docker runtime</a>,
+and then use it as follows:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>docker run <span class="nt">--rm</span> <span class="nt">--runtime</span><span class="o">=</span>runsc <span class="nt">-it</span> <span class="nt">-v</span> /tmp/vol:/vol ubuntu /bin/bash
+</code></pre></div></div>
+
+<p>This will spawn a Bash shell inside a gVisor sandbox, with access to the host
+directory <code class="highlighter-rouge">/tmp/vol</code> mapped to <code class="highlighter-rouge">/vol</code> inside the sandbox. You can then poke
+around within the sandbox and see if you can escape out to the host or glean
+information from it (other than the contents of <code class="highlighter-rouge">/tmp/vol</code>).</p>
+
+<h2 id="further-reading">Further reading</h2>
+
+<ul>
+  <li>For more in-depth details on gVisor’s security model and architecture, see
+<a href="/docs/architecture_guide/security">gVisor Security Model</a>.</li>
+  <li>For more details on how system call interception works, see
+<a href="/docs/architecture_guide/platforms">gVisor platforms</a>.</li>
+  <li>For guides on how to get started, see
+<a href="/docs/user_guide/quick_start/docker">Docker Quick Start</a>.</li>
+</ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <footer class="footer">
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-3 col-md-2">
+      <p>About</p>
+      <ul class="list-unstyled">
+        <li><a href="/roadmap/">Roadmap</a></li>
+        <li><a href="/contributing/">Contributing</a></li>
+        <li><a href="/security/">Security</a></li>
+        <li><a href="/security-track-record">Security Track Record</a></li>
+        <li><a href="/community/governance/">Governance</a></li>
+        <li><a href="https://policies.google.com/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 col-md-2">
+      <p>Support</p>
+      <ul class="list-unstyled">
+        <li><a href="https://github.com/google/gvisor/issues">Issues</a></li>
+        <li><a href="/docs">Documentation</a></li>
+        <li><a href="/application-compatibility">Application Compatibility</a></li>
+        <li><a href="/docs/user_guide/faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 col-md-2">
+      <p>Connect</p>
+      <ul class="list-unstyled">
+        <li><a href="https://github.com/google/gvisor">GitHub</a></li>
+        <li>
+          <a href="https://groups.google.com/forum/#!forum/gvisor-users">User Mailing List</a>
+        </li>
+        <li>
+          <a href="https://groups.google.com/forum/#!forum/gvisor-dev">Developer Mailing List</a>
+        </li>
+        <li><a href="https://gitter.im/gvisor/community">Gitter Chat</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3 col-md-3"></div>
+    <div class="hidden-xs hidden-sm col-md-3">
+      <a href="https://cloud.google.com/run">
+        <img
+          style="float: right; max-width: 93px; height: auto"
+          src="/assets/logos/logo_powered_by_with_text_on_dark.svg"
+          alt="Powered by gVisor"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <p>&copy; 2026 The gVisor Authors</p>
+    </div>
+  </div>
+</div>
+
+</footer>
+
+
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-150193582-1', 'auto');
+  ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<script>
+  var shiftWindow = function() {
+    if (location.hash.length !== 0) {
+      window.scrollBy(0, -50);
+    }
+  };
+  window.addEventListener("hashchange", shiftWindow);
+
+  $(document).ready(function() {
+    // Scroll to anchor of location hash, adjusted for fixed navbar.
+    window.setTimeout(function() {
+      shiftWindow();
+    }, 1);
+
+    // Flip the caret when submenu toggles are clicked.
+    $(".sidebar-submenu").on("show.bs.collapse", function() {
+      var toggle = $('[href$="#' + $(this).attr('id') + '"]');
+      if (toggle) {
+        toggle.addClass("dropup");
+      }
+    });
+    $(".sidebar-submenu").on("hide.bs.collapse", function() {
+      var toggle = $('[href$="#' + $(this).attr('id') + '"]');
+      if (toggle) {
+        toggle.removeClass("dropup");
+      }
+    });
+  });
+</script>
+
+  </body>
+</html>

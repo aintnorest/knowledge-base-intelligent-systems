@@ -18,7 +18,9 @@ When source access is fragmented across hosts, licenses, and crawler policies, a
 4. Hand the model bounded evidence; select the planner/reranker/synthesizer model independently of source backends.
 5. Evaluate retrieval recall separately from answer quality.
 
-The `last30days` skill is a working example: per-source chains (yt-dlp before scraper fallback for YouTube; native X search before authenticated clients; outcome-dependent conditional routing for Reddit; Brave→Exa→Serper→keyless for general web) with planning models swappable across vendors.
+A source-specific retrieval chain can try a high-fidelity backend first and fall back according to the observed result, while the planning model remains independently replaceable. This distinguishes an empty source from a failed adapter and makes coverage measurable rather than assumed.
+
+Adapter choice is also a decision the planner must make well: overlapping search tools can yield very different source quality, and vague descriptions invite the wrong route or repeated queries. Describe each adapter's coverage, authority, and failure signals in terms the agent can act on; inspect traces for wrong-tool selection and validate retrieved source quality, not just answer fluency. Better tool descriptions can improve recovery, but cannot make a low-quality source authoritative.
 
 ## Why It Matters
 
@@ -37,4 +39,5 @@ Adapters inherit each source's permission regime (API terms, robots policy, logi
 
 ## Sources
 
-- [Source Access Is a Systems Property](/dossiers/ai-assistant-source-access-and-retrieval-partnerships.md) — `last30days-skill` case study at a pinned commit
+- [Source Access Is a Systems Property](/dossiers/ai-assistant-source-access-and-retrieval-partnerships.md) — `last30days-skill` case study at a pinned commit: yt-dlp then scraper for YouTube, native X search then authenticated clients, conditional Reddit routing, and Brave→Exa→Serper→keyless web fallback.
+- [How we built our multi-agent research system dossier](/dossiers/anthropic-multi-agent-research.md) — reports wrong-tool selection and preference for low-quality search results, with first-party improvement after rewriting confusing tool descriptions.

@@ -13,8 +13,8 @@ Progressive Skill disclosure separates the information an agent needs to decide 
 ## The Layers
 
 1. **Index** — a terse name and activation signal available for routing.
-2. **Root guidance** — the compact `SKILL.md` instructions needed for the common path and for choosing the next resource.
-3. **Conditional resources** — scripts for deterministic work, references for exceptional or heavy documentation, assets for templates and schemas, configuration for setup, and nested folders for large domains.
+2. **Root guidance** — compact instructions needed for the common path and for choosing the next resource.
+3. **Conditional resources** — deterministic transformations, exceptional references and reusable assets, loaded only for the relevant branch.
 
 ## Practical Use
 
@@ -22,7 +22,7 @@ Keep the root focused on decisions, invariants, and high-frequency failure modes
 
 ## Format Budgets and Host Behavior
 
-The Agent Skills specification makes the portable boundary concrete. `SKILL.md` carries YAML `name` (1–64 characters) and `description` (1–1,024), with optional `scripts/`, `references/` and `assets/`, and the root links directly to conditional resources. It *recommends* ~100 tokens of discovery metadata, an invoked body under 5,000 tokens and 500 lines, and on-demand resources. These are design recommendations, not guaranteed client budgets. Claude Code may truncate descriptions under a listing budget of 1% of context and, after compaction, reattaches only the first 5,000 tokens of each recent skill (25,000 shared). Codex caps its initial listing at 2% of context or 8,000 characters, sometimes omitting skills. Test selection and reference navigation in the deployed host, including after compaction.
+The portable boundary separates a small discovery signal from focused root guidance and on-demand resources. Recommended document sizes are authoring heuristics, not guaranteed host budgets. A host may truncate descriptions or drop skills from a crowded discovery list; after compaction, it may restore only part of a recently used skill. Test selection and reference navigation in the actual host, especially when a required detail lies beyond a truncation boundary.
 
 ## Evidence on Focus and Sufficiency
 
@@ -35,12 +35,12 @@ Indirection is not free. Excessive nesting can make required information hard to
 ## Sources
 
 - [Designing, Refining, and Maintaining Agent Skills at Perplexity dossier](/dossiers/designing-refining-maintaining-agent-skills-perplexity.md) — describes an indexed, loaded, and runtime context-cost model plus directory structures for scripts, references, assets, configuration, and domain hierarchy.
-- [Specification dossier](/dossiers/agent-skills-format-specification.md) — required metadata, optional folders, and recommended staged budgets.
+- [Specification dossier](/dossiers/agent-skills-format-specification.md) — `SKILL.md` YAML `name` (1–64 characters), `description` (1–1,024), optional `scripts/`, `references/`, `assets/`; recommends ~100 discovery tokens, under 5,000 body tokens and 500 lines.
 - [Agent Skills dossier](/dossiers/anthropic-agent-skills-platform-overview.md) — Claude metadata/body/resource staging across runtimes.
 - [Equipping agents for the real world with Agent Skills dossier](/dossiers/anthropic-equipping-agents-with-skills.md) — root, reference and script loads as separate context decisions.
 - [Skill authoring best practices dossier](/dossiers/anthropic-skill-authoring-best-practices.md) — one-level references and navigation cues for long references.
-- [Extend Claude with skills dossier](/dossiers/claude-code-skills-reference.md) — listing truncation and post-compaction reattachment.
-- [Build skills dossier](/dossiers/openai-build-agent-skills.md) — Codex discovery-list cap and trimming.
+- [Extend Claude with skills dossier](/dossiers/claude-code-skills-reference.md) — Claude Code listing budget of 1% of context, description truncation and post-compaction reattachment of the first 5,000 tokens per recent skill (25,000 shared).
+- [Build skills dossier](/dossiers/openai-build-agent-skills.md) — Codex initial listing capped at 2% of context or 8,000 characters, with trimming.
 - [SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks dossier](/dossiers/skillsbench-agent-skills-efficacy.md) — focused versus comprehensive skill bundles and paired lifts.
 - [From Anatomy to Smells: An Empirical Study of SKILL.md in Agent Skills dossier](/dossiers/skill-md-anatomy-and-smells.md) — under- and over-specification smells.
 - [What Keeps Agent Skills from Being Reusable? Evidence from 138K SKILL.md Files dossier](/dossiers/agent-skills-reusability-defects.md) — resource-organization defect prevalence.

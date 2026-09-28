@@ -18,6 +18,12 @@ Control-data plane separation keeps untrusted content from changing an agent's a
 4. **Mediated execution.** Execute the planner's restricted program in a runtime that validates types, records dependencies, and authorizes every consequential call under policy.
 5. **Safe recovery.** Redact error content influenced by untrusted data, avoid treating it as planner feedback, and preserve state/retry semantics so repairs cannot duplicate side effects.
 
+## Separate Decisions, Compute, and Credential Custody
+
+Logical separation between planner and parser is insufficient when lower-trust execution can reach privileged state through a shared process or credential. Keep the durable task loop and conversation record independent of replaceable execution machines; route tool effects through a mediator that acts under the user's scoped authority. Keep provider credentials in a trusted adapter rather than the worker environment. A credential broker may centralize refresh and a gateway may perform calls without disclosing tokens to a worker, but any client holding a broker bearer or a credential-bearing snapshot is still privileged: filtering a local view is not server-side authorization.
+
+Treat outputs as another boundary. Constrain network reach while work runs, and admit proposed external writes through independent policy checks before publication. Durable orchestration, secret custody, runtime confinement, and effect admission protect different paths; separating their lifecycles does not prove that any one is safe. In particular, a tool result or peer status that describes an alleged access failure must not turn source-authored recovery steps into a new privileged plan. Carry its provenance forward and authorize any changed action against the original trusted request.
+
 ## What It Prevents—and What It Does Not
 
 The separation stops a retrieved page from directly convincing a tool-capable model to call a different tool or follow a different sequence. It is stronger than surrounding a tool result with delimiters because the privileged planner does not receive the hostile text at all.
@@ -46,3 +52,8 @@ A behaviorally verified registry study identifies an "Agent Hijacker" archetype:
 
 - [Defeating Prompt Injections by Design dossier](/dossiers/defeating-prompt-injections-by-design.md) — CaMeL implements privileged planning, quarantined structured parsing, restricted code execution, and documents data-to-control and side-channel limitations.
 - [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — instruction-hijack and covert-script archetypes among 157 confirmed malicious skills.
+- [Multi-Agent Systems Execute Arbitrary Malicious Code dossier](/dossiers/multi-agent-control-flow-hijacking.md) — laboratory access-error payloads became peer status and redirected otherwise legitimate workflows into code execution.
+- [Oh My Pi Credential Broker and Gateway Boundary dossier](/dossiers/omp-credential-broker-boundary.md) — distinguishes central refresh custody and gateway execution from credential-bearing client snapshots and non-authoritative client-side filtering.
+- [Coder Agents: Architecture dossier](/dossiers/coder-agents-architecture.md) — illustrates a centrally persisted agent loop and model credentials mediating actions in replaceable, user-authorized workspaces.
+- [Under the hood: Security architecture of GitHub Agentic Workflows dossier](/dossiers/github-agentic-workflows-security.md) — separates an untrusted worker from secret-bearing proxies, network controls, and post-execution admission of proposed writes.
+- [What we’ve learned building cloud agents dossier](/dossiers/cursor-cloud-agent-lessons.md) — operational account of durable orchestration, replaceable execution machines, and independently persisted conversation streams.

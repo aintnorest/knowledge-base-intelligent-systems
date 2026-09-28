@@ -10,6 +10,109 @@ timestamp: 2026-07-11T16:00:00Z
 
 ## Dossiers
 
+* [Isolation as a First-Class Principle for LLM-Agent System Safety: Concepts, Taxonomy, Challenges and Future Directions](/dossiers/agent-isolation-boundary-taxonomy.md) — Classifies the first breached agent isolation boundary and traces subsequent cross-interface propagation
+* [Spawn Freely, Act Sparingly: Progressive Risk Vesting for Recursive LLM-Agent Trees](/dossiers/progressive-risk-vesting-agent-trees.md) — Charges recursive-agent risk on authority activation rather than sandboxed candidate creation, with conditional safety bounds
+* [Bounded Agents: Delegation Security for Multi-Agent AI Systems](/dossiers/bounded-agents-delegation-security.md) — Combines attenuated signed principal chains with session-history policies that block harmful action combinations
+* [Delegation Without Trust: An Empirical Gap Analysis of Identity, Authorization, and Runtime Governance in Multi-Agent LLM Systems](/dossiers/delegation-without-trust-authorization-broker.md) — Contrasts framework coordination with enforceable workload-bound, per-hop attenuated delegation through an external broker
+* [Taming Various Privilege Escalation in LLM-Based Agent Systems: A Mandatory Access Control Framework](/dossiers/seagent-mandatory-access-control.md) — Uses provenance-aware policy graphs and source-tagged memory reconstruction to constrain model-driven actions
+* [OMNI-LEAK: Orchestrator Multi-Agent Network Induced Data Leakage](/dossiers/omni-leak-orchestrator-data-leakage.md) — Traces public-SQL-content injection through a privileged query worker and notification agent to unauthorized private-data egress
+* [Multi-Agent Systems Execute Arbitrary Malicious Code](/dossiers/multi-agent-control-flow-hijacking.md) — Shows attacker-authored access-error metadata redirecting multi-agent workflows into code execution despite local refusals
+* [Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems](/dossiers/prompt-infection-multi-agent-systems.md) — Demonstrates self-replicating adversarial instructions moving between agents and exploiting memory-importance scoring for persistence
+* [Sandbox — Codex](/dossiers/openai-codex-sandbox-boundaries.md) — Codex — OpenAI's separation of OS-enforced command boundaries and approval decisions across local agent surfaces
+* [Agent approvals & security — Codex](/dossiers/openai-codex-approvals-security.md) — Codex — Shell, proxy, connector, approval-review, and asynchronous monitoring boundaries with explicit exclusions
+* [Cloud environment — Codex](/dossiers/openai-codex-cloud-execution-phases.md) — Codex — Networked setup, default-offline agent execution, setup-only secrets, and shared cache-coherency tradeoffs
+* [Building a safe, effective sandbox to enable Codex on Windows](/dossiers/openai-windows-codex-sandbox-design.md) — Why write-restricted tokens and dedicated firewall-scoped user principals replaced advisory network suppression
+* [An open-source spec for Codex orchestration: Symphony](/dossiers/openai-symphony-orchestration.md) — First-hand shift from supervising agent sessions to tracker-owned deliverables and review handoffs
+* [Symphony Service Specification](/dossiers/openai-symphony-service-specification.md) — Draft tracker-driven scheduler contract for claims, workspace isolation, reconciliation, retries, and provider-native tool authority
+* [OpenAI Codex CLI — Sandbox Analysis Report](/dossiers/agent-safehouse-codex-sandbox-audit.md) — Sandbox Analysis Report — Third-party source audit distinguishing sandboxed tool subprocesses from the privileged harness and auxiliary integrations
+* [OpenShell Sandbox Architecture](/dossiers/nvidia-openshell-sandbox-architecture.md) — workload/supervisor trust split, layered mediation, authenticated recovery, and credential-bound egress
+* [OpenShell Security Policy Architecture](/dossiers/nvidia-openshell-security-policy.md) — strict policy composition, credential provenance, generation-bound reloads, and reviewed permission growth
+* [OpenShell Sandbox Limits](/dossiers/nvidia-openshell-sandbox-limits.md) — process-wide admission budgets, bound ownership, timeout behavior, and remaining aggregate-resource gaps
+* [NVIDIA NemoClaw Architecture](/dossiers/nvidia-nemoclaw-architecture.md) — agent-specific integration and verified blueprint layered over OpenShell's host gateway and sandbox boundary
+* [Add Runtime Controls to AI Agents with NVIDIA OpenShell](/dossiers/nvidia-openshell-runtime-controls.md) — external effect-path enforcement, credential binding, live access review, and bounded formal evidence
+* [Thinking Outside The Box — Exfiltrating OpenClaw Data from NVIDIA's Sandbox](/dossiers/lasso-nemoclaw-authorized-egress-exfiltration.md) — third-party alpha-era attacks using authorized GitHub and Discord egress for file exfiltration and persistent agent-state poisoning
+* [E2B Infrastructure Architecture](/dossiers/e2b-runtime-architecture.md) — snapshot-resumed per-sandbox VMs, control/data-plane separation, and guest-control exposure boundaries
+* [Firecracker Design](/dossiers/firecracker-design.md) — nested microVM trust zones, default VMM seccomp, recommended jailer, and host-owned network filtering
+* [Kata Containers Architecture](/dossiers/kata-containers-architecture.md) — host/guest/container trust zones and the pod-shared VM versus guest-container isolation distinction
+* [Introduction to gVisor Security](/dossiers/gvisor-security-architecture-intro.md) — userspace application-kernel interception and its explicit side-channel, pre-runtime, and in-sandbox limitations
+* [Multi-Agent gVisor Isolation (MAGI)](/dossiers/gvisor-magi-multi-agent-isolation.md) — compartmentalized agent cores and tools, and the gap between execution containment and action authorization
+* [Why MicroVMs: The Architecture Behind Docker Sandboxes](/dossiers/docker-why-microvms-architecture.md) — per-session guest kernels and guest-private Docker daemon without host-socket privilege
+* [Under the hood with Apple's new Containerization framework](/dossiers/anil-apple-containerization-under-the-hood.md) — first-hand per-container VM investigation and image-unpacking, GPU, and platform limits
+* [Sandboxing AI agents, 100x faster](/dossiers/cloudflare-dynamic-workers-sandboxing.md) — disposable V8 isolates, typed capabilities, mediated egress, and the isolate-versus-VM hardening tradeoff
+* [Code Mode: the better way to use MCP](/dossiers/cloudflare-code-mode-mcp.md) — typed MCP calls executed in a disposable offline isolate with credential-holding RPC mediation
+* [Dynamic, identity-aware, and secure Sandbox auth](/dossiers/cloudflare-sandbox-auth-outbound-workers.md) — identity-scoped same-host outbound proxy with per-sandbox TLS interception and mutable egress policy
+* [Mitigating Spectre and Other Security Threats: The Cloudflare Workers Security Model](/dossiers/cloudflare-workers-security-model-spectre.md) — shared-process isolate defense in depth, mediated APIs, patch gaps, and staged side-channel mitigations
+* [A sandbox without a network boundary is only half a sandbox](/dossiers/vercel-sandbox-network-boundary.md) — host-side TCP/DNS policy, selective TLS interception, and credentials brokered outside the microVM
+* [$1 million hacker challenge for Vercel Sandbox](/dossiers/vercel-sandbox-hacker-challenge-threat-model.md) — explicit hostile-guest threat model counting both microVM escapes and egress-policy bypasses
+* [How Auth Proxy secures network access for LangSmith agent sandboxes](/dossiers/langchain-langsmith-sandbox-auth-proxy.md) — enforced egress mediation and fail-closed callback-supplied credentials
+* [Fine-grained HTTP filtering for Claude Code](/dossiers/ammar-httpjail-claude-code.md) — request-aware TLS interception with candid macOS proxy, DNS, and Docker-socket bypass limitations
+* [The Week of Sandbox Escapes](/dossiers/pillar-week-of-sandbox-escapes.md) — Pillar's cross-product taxonomy of host trust, writable workspace artifacts, command side effects, and privileged local daemons
+* [One Docker socket to rule them all: escaping Codex, Cursor, and Gemini CLI's sandboxes](/dossiers/pillar-docker-socket-sandbox-escape.md) — privileged Docker Desktop socket access delegates host writes outside process-scoped coding-agent sandboxes
+* [Beltdown: Escaping the Claude Code sandbox](/dossiers/accomplish-beltdown-claude-code-sandbox-escape.md) — nested Git metadata and a skill-triggered unhardened harness Git call execute repository code beyond Claude Code's shell sandbox
+* [Beltdown2: Escaping the Cursor CLI sandbox](/dossiers/accomplish-beltdown2-cursor-cli-sandbox-escape.md) — Cursor's unsandboxed background Git honored workspace fsmonitor configuration until centralized Git-spawn hardening
+* [SharedRoot: Escaping the Claude Cowork sandbox](/dossiers/accomplish-sharedroot-claude-cowork-escape.md) — guest-root escalation reached a writable whole-host VM share, exposing why host mounts govern post-compromise blast radius
+* [Claude Code: unsandboxed code execution from prompt injection via .git worktree confusion](/dossiers/metnew-claude-code-worktree-sandbox-escape.md) — malicious worktree naming and metadata redirected a write into shell initialization before Seatbelt activation
+* [Claude Code macOS Sandbox Escape via Literal Path and Glob Confusion](/dossiers/codeant-claude-code-macos-glob-sandbox-escape.md) — literal workspace names became glob policies, opening sibling protected settings for deferred hook execution
+* [Second Time, Same Sandbox: Another Anthropic Claude Code Network Sandbox Bypass Enables Data Exfiltration](/dossiers/oddguan-claude-code-network-allowlist-bypass.md) — SOCKS5 null-byte hostname interpretation diverged between JavaScript allowlist checks and libc resolution
+* [Cross-Agent Privilege Escalation: When Agents Free Each Other](/dossiers/cross-agent-configuration-privilege-escalation.md) — third-party demonstration of one compromised coding agent rewriting another agent's executable configuration
+* [Claude Code: Data Exfiltration with DNS (CVE-2025-55284)](/dossiers/claude-code-dns-exfiltration-cve-2025-55284.md) — third-party exploit of preapproved DNS utilities to leak locally read secrets without approval
+* [How Claude Code escapes its own denylist and sandbox](/dossiers/ona-claude-code-denylist-sandbox-bypasses.md) — Ona's vendor experiment exposes path-based policy evasion, approval-mediated sandbox removal, and Veto's exec-only blind spot
+* [VMs won't contain cyber-capable agents](/dossiers/trail-of-bits-vm-escape-cyber-agent.md) — Trail of Bits' field report of host-facing virtualization seams, chained vulnerabilities, and distribution patch lag under long-horizon agent search
+* [Prompt injection to RCE in AI agents](/dossiers/trail-of-bits-argument-injection-rce.md) — Trail of Bits' three one-shot exploit patterns smuggle execution through argument semantics of preapproved native tools
+* [Introducing nono: A Secure Sandbox for AI Agents](/dossiers/nono-kernel-enforced-agent-sandbox.md) — creator account of inherited kernel restrictions and the distinction between overridable command screening and sandboxed effects
+* [An Introduction to AI Coding Agent Security](/dossiers/ncc-group-coding-agent-security-boundaries.md) — NCC Group's comparative map of local agent trust, tool permissions, sandbox scope, and delayed control-file execution
+* [Ralph Wiggum as a "software engineer"](/dossiers/ralph-wiggum-loop.md) — a reset-each-iteration coding loop grounded in durable specifications, delegated exploration, and fast verification backpressure
+* [What I learned building an opinionated and minimal coding agent](/dossiers/pi-minimal-coding-agent.md) — the case for inspectable context, a small tool surface, file-native planning, and explicit harness omissions
+* [Run Pi safely](/dossiers/pi-coding-agent-security.md) — separates project startup trust from tool authority and whole-process containment from built-in-tool-only isolation
+* [Sandbox vs tool policy vs elevated](/dossiers/openclaw-sandbox-tool-policy-elevated.md) — separates where tools execute, which tools exist, and when execution may leave ordinary confinement
+* [Organizing Context in a Multi-Agent Harness](/dossiers/langchain-subagent-context-modes.md) — choosing inherited or isolated subagent history according to work continuation versus independent judgment
+* [Secure code execution](/dossiers/smolagents-secure-code-execution.md) — threat model and coverage tradeoffs of restricted local interpretation, isolated code snippets, and whole-agent confinement
+* [MCP Security Best Practices](/dossiers/mcp-security-best-practices.md) — OAuth consent and audience boundaries, metadata SSRF, state-handle ownership, and local-server execution risks
+* [Two questions every security review asks us](/dossiers/composio-security-review.md) — credential custody, tenant and user binding, execution policy, and residual prompt-injection and logging risks
+* [Safety and Security for AI Agents](/dossiers/google-adk-agent-safety.md) — agent versus user identity, trusted tool context, screening layers, sandboxing, and network-perimeter limits
+* [Oh My Pi Tool Approval Model](/dossiers/omp-tool-approval-model.md) — read/write/exec tiers, policy precedence, headless delegation, and approval's lack of process containment
+* [Oh My Pi Credential Broker and Gateway Boundary](/dossiers/omp-credential-broker-boundary.md) — central refresh-token custody, gateway execution, cached snapshots, and client filtering that is not authorization
+* [Oh My Pi Secret Obfuscation Model](/dossiers/omp-secret-obfuscation.md) — keyed reversible placeholders for provider-visible text, execution-time restoration, and explicit coverage gaps
+* [AgentSys: Secure and Dynamic LLM Agents through Explicit Hierarchical Memory Management](/dossiers/agentsys-hierarchical-memory.md) — isolates untrusted observations in short-lived worker contexts and gates privileged actions and structured returns
+* [Architecture Matters for Multi-Agent Security](/dossiers/multi-agent-architecture-security.md) — compares how agent roles, topology, and shared memory change harmful completion independently of benign task success
+* [AIP: Agent Identity Protocol for Verifiable Delegation Across MCP and A2A](/dossiers/agent-identity-protocol-aip.md) — proposes signed, attenuated delegation and attributable completions across agent/tool protocols
+* [Harness Engineering: Anatomy, Architecture, and Evolution of Coding Agents](/dossiers/coding-agent-harness-source-study.md) — maps seven subsystems and recurring design patterns across eleven agent runtimes using pinned source snapshots
+* [Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems](/dossiers/dive-into-claude-code.md) — reconstructs an agent loop, permission gates, graduated context management, and isolated delegation from a source snapshot
+* [The OpenHands Software Agent SDK: A Composable and Extensible Foundation for Production Agents](/dossiers/openhands-software-agent-sdk.md) — reports a production redesign around replayable event-sourced conversations, portable workspaces, and separated risk assessment
+* [Distributing Security Controls Through Harness Engineering](/dossiers/shard-distributed-harness-security.md) — combines OS sandboxing, skill scans, and tool restrictions, and tests where enforcement coverage or control compatibility breaks
+* [How we contain Claude across products](/dossiers/anthropic-agent-containment.md) — three deployment-specific boundaries and incidents showing trust-timing, credential, and permitted-egress failures
+* [Beyond permission prompts: making Claude Code more secure and autonomous](/dossiers/claude-code-sandboxing-announcement.md) — coupled command-file and network boundaries reduce repetitive approvals
+* [How we built our multi-agent research system](/dossiers/anthropic-multi-agent-research.md) — parallel evidence exploration, delegated context compression, effort allocation, and production bottlenecks
+* [Configure the sandboxed Bash tool](/dossiers/claude-code-bash-sandbox-model.md) — documented command-only OS boundary, broad default reads, unsandboxed retries, and proxy limitations
+* [Sandbox environments](/dossiers/claude-code-isolation-environments.md) — command-only versus whole-agent isolation and limitations of permissions, mounts, startup-time denies, and hosted boundaries
+* [Cloud environments](/dossiers/claude-code-cloud-environment-model.md) — fresh hosted VMs with distinct GitHub, connector, model, and internet channels and unequal credential placement
+* [Orchestrate teams of Claude Code sessions](/dossiers/claude-code-agent-teams-model.md) — independent agent contexts with shared claims, peer messaging, inherited permissions, and lifecycle limits
+* [Anthropic Sandbox Runtime](/dossiers/anthropic-sandbox-runtime.md) — process-tree OS sandbox with asymmetric file policies, mediated network, startup-time limitations, and dangerous escape paths
+* [Inside Replit’s Snapshot Engine: The Tech Making AI Agents Safe](/dossiers/replit-snapshot-engine.md) — immutable-chunk snapshots coordinate recoverable code and development database state
+* [Defense in Depth: How Replit Secures Every Layer of the Vibe Coding Stack](/dossiers/replit-defense-in-depth-vibe-coding-stack.md) — tenant isolation, credential proxies, recoverability, and generated-app security are distinct defensive layers
+* [We’re leaving Kubernetes](/dossiers/ona-leaving-kubernetes.md) — six years of state, latency, scheduling, and isolation tradeoffs in interactive cloud development environments
+* [Coder Agents: Architecture](/dossiers/coder-agents-architecture.md) — control-plane orchestration and credentials remain separate from user-authorized workspace execution
+* [Why we built our background agent: Inspect](/dossiers/ramp-inspect-background-agent.md) — prebuilt VM snapshots, synchronized collaborative sessions, verification access, and per-user PR attribution
+* [How Missions Work](/dossiers/factory-missions-architecture.md) — behavioral contracts precede feature decomposition, with fresh milestone validators controlling completion
+* [Solving the Identity Crisis for AI Agents](/dossiers/uber-agent-identity.md) — workload-attested, audience-scoped token exchanges retain human-to-agent delegation lineage
+* [Gas Town — Multi-Agent Workspace Coordination](/dossiers/gastown-coordination-model.md) — Multi-Agent Workspace Coordination — Persistent work identity, role-separated supervision, and merge admission for concurrent coding agents
+* [Gas Town Architecture — Two-Level Work Ledger and Merge Admission](/dossiers/gastown-two-level-architecture.md) — Two-Level Work Ledger and Merge Admission — Town-versus-project ledgers, canonical transactional state, worker worktrees, and planned batch verification
+* [Paperclip Execution Semantics — Ownership and Durable Liveness](/dossiers/paperclip-execution-liveness.md) — Ownership and Durable Liveness — Separates structure, dependency, assignee, and run state with durable next-action and bounded recovery invariants
+* [Paperclip Specification — Board-Governed Agent Control Plane](/dossiers/paperclip-control-plane-spec.md) — Board-Governed Agent Control Plane — Company-scoped task delegation, adapter-independent heartbeats, atomic checkout, budgets, and human oversight
+* [Paperclip Low-Trust Presets — Containing Review Work](/dossiers/paperclip-low-trust-review.md) — Containing Review Work — Intersected scopes, sandboxed execution, and mediated child reports that avoid promoting hostile text into parent context
+* [Paperclip MCP Access Governance — Discovery Versus Call Authorization](/dossiers/paperclip-mcp-gateway-governance.md) — Discovery Versus Call Authorization — Profiles, call-time policy, exact-request approvals, catalog drift quarantine, and gateway bypass limits
+* [Hermes Agent — Subagent Delegation and Ownership Boundaries](/dossiers/hermes-subagent-delegation.md) — Subagent Delegation and Ownership Boundaries — Fresh contexts, limited inherited authority, durable results versus unknown execution, process handoff, and optional worktrees
+* [Code execution with MCP: Building more efficient agents](/dossiers/anthropic-code-execution-mcp.md) — on-demand tool discovery and local intermediate processing reduce context at an execution-security cost
+* [Background Coding Agents: Predictable Results Through Strong Feedback Loops (Honk, Part 3)](/dossiers/spotify-honk-feedback-loops.md) — task-matched verifiers and a diff-scope judge gate automated PR creation
+* [SandBlaster: Reversing the Apple Sandbox](/dossiers/sandblaster-apple-sandbox-reversing.md) — reconstructs historical iOS compiled sandbox decision graphs into auditable policies while separating syntactic recompilation from semantic assurance
+* [Building a C compiler with a team of parallel Claudes](/dossiers/parallel-claudes-c-compiler.md) — autonomous compiler experiment where strong verifiers and GCC-based fault localization unlock parallel work
+* [Implementing a secure sandbox for local agents](/dossiers/cursor-local-agent-sandboxing.md) — OS-specific confinement and explicit denial feedback reduce approval interruptions and retry loops
+* [Under the hood: Security architecture of GitHub Agentic Workflows](/dossiers/github-agentic-workflows-security.md) — secretless agent execution and staged, policy-vetted repository effects inside CI
+* [What we’ve learned building cloud agents](/dossiers/cursor-cloud-agent-lessons.md) — durable loops, replaceable VMs, and retry-aware conversation streams sustain unattended work
+* [Magentic-One — Ledger-Based Generalist Orchestration](/dossiers/magentic-one-orchestration.md) — Ledger-Based Generalist Orchestration — Task and progress ledgers drive specialist delegation and replanning, with benchmark and real-world action-risk caveats
+* [Magentic-UI — Human-Centered Web Agent Control](/dossiers/magentic-ui-human-centered-control.md) — Human-Centered Web Agent Control — Editable plans, live takeover, consequential-action guards, sandboxed tools, and simulated-user GAIA gains
+* [SoL-Pi: Recursively Scaling Auto-Research Loops for Efficient Agent Harness](/dossiers/sol-pi-efficient-agent-harness.md) — Four automatically discovered Pi harness mechanisms cut EdgeBench token traffic 44.7–49.0% and API cost about a third versus Pi, with lower full-stack scores and disjoint search and evaluation
+* [The Persona Selection Model: Why AI Assistants might Behave like Humans](/dossiers/persona-selection-model.md) — Anthropic's theory of a post-trained Assistant persona surveys behavioral and interpretability evidence while leaving the locus of agency unresolved
 * [Specification](/dossiers/agent-skills-format-specification.md) — Portable Agent Skills SKILL.md and directory specification: required metadata, optional resources, progressive disclosure, and validation rules
 * [Evaluating skill output quality](/dossiers/evaluating-agent-skills-output-quality.md) — Hands-on Agent Skills evaluation loop with fresh with-skill/baseline runs, graded deliverables, timing costs, and human feedback
 * [Agent Skills](/dossiers/anthropic-agent-skills-platform-overview.md) — Claude Skills across API, Code, and claude.ai: staged loading, separate deployment scopes, container limits, and security considerations
@@ -47,7 +150,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Bringing Code Review to Claude Code](/dossiers/claude-code-review.md) — Anthropic multi-agent PR bug review with verification and severity ranking, human-only approval, deployment figures, and usage-based pricing
 * [2026 Agentic Coding Trends Report](/dossiers/anthropic-agentic-coding-trends-2026.md) — Anthropic forecasts eight shifts in coding agents while distinguishing measured collaborative use and customer anecdotes from future capabilities
 * [About GitHub Copilot code review](/dossiers/github-copilot-code-review-concepts.md) — GitHub's agentic code-review feature contract: repository context, risk-tiered effort, costs, excluded files, and the policy setting that lets Copilot approvals count toward required approvals
-* [Copilot code review effort levels are generally available](/dossiers/github-copilot-review-effort-levels.md) — GitHub's Lite/Balanced code-review effort levels route routine and higher-risk changes to different analysis depths with inherited defaults and visible per-run labels
 * [Application card: GitHub Copilot inline suggestions](/dossiers/github-copilot-inline-suggestions-responsible-use.md) — GitHub's responsible-use card separates inline code and PR-text suggestions from code review, documenting evaluation, filters, security limitations, and explicit human acceptance
 * [AI in software engineering at Google: Progress and the path ahead](/dossiers/google-ai-software-engineering-progress.md) — Google's industrial account of 37% completion-suggestion acceptance, 50% AI-assisted typed characters, >8% review-comment resolution assistance, and workflow-centered evaluation
 * [AI-Assisted Assessment of Coding Practices in Modern Code Review](/dossiers/google-autocommenter-coding-practices.md) — Google AutoCommenter's industrial rollout calibrates best-practice review feedback by guideline and measures useful-comment ratios, estimated fixes, and A/B review-workflow effects
@@ -159,6 +261,9 @@ timestamp: 2026-07-11T16:00:00Z
 * [Isolation Approaches for Concurrent AI Coding Agents: A Synthesis](/dossiers/isolation-approaches-concurrent-ai-coding-agents-synthesis.md) — Local synthesis distinguishing context, workspace, runtime, service, credential, and integration boundaries for parallel coding agents
 * [Isolation Approaches for Parallel AI Coding Agents — A Deep Research Report](/dossiers/multi-agent-isolation-deep-research.md) — Time-sensitive generated landscape report on worktrees, sandboxes, external state, and merge coherence
 * [Multi-Agent Coding Isolation: Architectures, Implementations, and Trade-offs](/dossiers/multi-agent-coding-isolation-report.md) — Layered control-plane reference architecture for parallel agent workspaces, services, credentials, and integration
+* [CLI Agent Hook Event Surfaces — research record](/dossiers/cli-agent-hook-event-surfaces-research.md) — Local source-level verification (2026-07-15) of what an external controller can observe and resolve through two coding-agent CLIs' hook systems, with a same-day correction and verified/unverified split
+* [Hook-Driven tmux Agent Transport](/dossiers/hook-driven-tmux-agent-transport.md) — Local research record on hosting interactive agent CLIs in tmux and taking turn and tool events from native hooks; documents input-delivery and cancellation failure modes
+* [Subscription-Billed Programmatic CLI Agent Access](/dossiers/subscription-billed-programmatic-cli-agent-access.md) — Local research record showing non-interactive and SDK-class CLI interfaces billed against the same subscription login, and the fair-weather risk of depending on it
 * [Locking Down Science Gateways with Landlock and Seccomp](/dossiers/locking-down-science-gateways-landlock-seccomp.md) — Runtime Landlock/Seccomp confinement for MPI science codes and a public gateway shim, with explicit limits around UDP, resources, kernel bugs, and policy design
 * [AI Sandboxes: A Threat Model, Taxonomy, and Measurement Framework](/dossiers/ai-sandboxes-threat-model-measurement-framework.md) — Assurance-oriented framework that bounds AI sandbox claims by explicit assumptions, evidence artifacts, and the weakest claim-relevant dimension
 * [Agents’ Last Exam](/dossiers/agents-last-exam.md) — Benchmark of long-horizon, deliverable-verified professional workflows for generalist computer-use agents across 55 industry subdomains
@@ -285,6 +390,29 @@ timestamp: 2026-07-11T16:00:00Z
 
 ## Vault
 
+* [Activation-Vested Risk Budget](/vault/activation-vested-risk-budget.md)
+* [Partial-Scope Tool Sandboxing](/vault/partial-scope-tool-sandboxing.md)
+* [Writable-Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md)
+* [Privileged Local Daemon Sandbox Bypass](/vault/privileged-local-daemon-sandbox-bypass.md)
+* [Destination Allowlist as Capability Grant](/vault/destination-allowlist-as-capability-grant.md)
+* [Policy Compilation Fidelity](/vault/policy-compilation-fidelity.md)
+* [Tool Identity Versus Effect Authority](/vault/tool-identity-versus-effect-authority.md)
+* [Assume Guest Compromise: Host Exposure Budget](/vault/assume-guest-compromise-host-exposure.md)
+* [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
+* [Provider-Boundary Secret Substitution](/vault/provider-boundary-secret-substitution.md)
+* [Approval Bound to Canonical Effect](/vault/approval-bound-to-canonical-effect.md)
+* [Session-Composition Authorization](/vault/session-composition-authorization.md)
+* [Attenuated Delegation Authority](/vault/attenuated-delegation-authority.md)
+* [Delegated OAuth Proxy Hazards](/vault/delegated-oauth-proxy-hazards.md)
+* [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)
+* [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
+* [Agent Work Liveness Invariants](/vault/agent-work-liveness-invariants.md)
+* [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
+* [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)
+* [Oracle-Guided Failure Decomposition](/vault/oracle-guided-failure-decomposition.md)
+* [Staged Effect Admission](/vault/staged-effect-admission.md)
+* [Implied-Character Training Generalization](/vault/implied-character-generalization.md)
+* [Verified Log Evidence Receipts](/vault/verified-log-evidence-receipts.md)
 * [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
 * [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
 * [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
@@ -315,7 +443,6 @@ timestamp: 2026-07-11T16:00:00Z
 * [Tool-Availability Abstention](/vault/tool-availability-abstention.md)
 * [Tool-Use Protocol Tax](/vault/tool-use-protocol-tax.md)
 * [Latent Tool-Necessity Routing](/vault/latent-tool-necessity-routing.md)
-* [Hook-Driven tmux Agent Transport](/vault/hook-driven-tmux-agent-transport.md)
 * [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)
 * [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)
 * [Experience-Conditioned Harness Adaptation](/vault/experience-conditioned-harness-adaptation.md)
@@ -511,6 +638,5 @@ timestamp: 2026-07-11T16:00:00Z
 * [Anchor-Constrained Bias Mitigation](/vault/anchor-constrained-bias-mitigation.md)
 * [Bias as Prior Dominance](/vault/bias-as-prior-dominance.md)
 * [Clarification Need Decision](/vault/clarification-need-decision.md)
-* [Subscription-Billed Programmatic CLI Agent Access](/vault/subscription-billed-programmatic-cli-agent-access.md)
-* [CLI Agent Hook Event Surfaces](/vault/cli-agent-hook-event-surfaces.md)
+* [Controller Observability and Control Gaps in Interactive Agent CLIs](/vault/cli-agent-hook-event-surfaces.md)
 * [Instruction Tuning](/vault/instruction-tuning.md)

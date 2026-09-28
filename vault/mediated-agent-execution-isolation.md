@@ -19,6 +19,8 @@ Mediated agent execution isolation treats each third-party tool or agent integra
 5. Require authorization for selected integrations, data sharing, egress, and consequential actions. Bind approvals to caller, recipient, capability, data scope, purpose, duration, and revocation path; do not turn irreversible actions into standing approvals.
 6. Log the plan, contract, validation result, data categories, approval, effect, and recipient so unexpected flows can be inspected and stopped.
 
+Bind the mediator's advertised tools and their execution adapter to one immutable session configuration. A live policy reload must not change the provider or permissions behind an already-advertised capability mid-session. Keep provider credentials in the trusted host adapter, strip them from worker environments, and execute credential-bearing external operations host-side rather than distributing their bearer tokens to children. This separates the worker from the credential without proving its workspace is an OS sandbox; trusted lifecycle hooks and policy files still require explicit provenance and authority review.
+
 ## Why It Matters
 
 Putting app instructions, tool results, and user context into one model session creates implicit authority: hostile text from one integration can influence calls to another, and broad shared memory makes accidental disclosure easy. Isolation reduces blast radius. Mediation gives the system a deterministic place to reject a request, seek consent, or record a policy decision before data reaches another principal.
@@ -42,3 +44,4 @@ Measure latency by planning, routing, and memory transfer; prompt rate and user 
 
 - [ISOLATE GPT dossier](/dossiers/isolate-gpt-execution-isolation-agentic-systems.md) — proposes process-isolated app spokes, deterministic operators, a hub-mediated inter-spoke protocol with typed messages and ephemeral identifiers, and permission-gated cross-spoke data flow; its protection and performance results are prototype-specific.
 - [Parallax: Why AI Agents That Think Must Never Act dossier](/dossiers/parallax-architecturally-safe-autonomous-execution.md) — applies process separation inside one agent: an untrusted reasoner can propose actions but an engine mediates and executes them; its architecture and reported evaluation remain author-reported prototype evidence.
+- [Symphony Service Specification dossier](/dossiers/openai-symphony-service-specification.md) — draft runner contract for host-mediated provider tools, secret-free child environments, and session-bound tool configuration across reloads; sandbox defaults remain implementation-defined.

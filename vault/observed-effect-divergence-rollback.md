@@ -32,6 +32,8 @@ It also converts silent trust into an observable. Most memory and context pipeli
 - Make quarantine a real state with an owner and a review path, not a synonym for deletion — quarantined items are the highest-information sample for recalibrating the predictor.
 - Track rollback precision and post-rollback recovery quality, not just detection rate. A rollback that leaves the task unrecoverable is not a save.
 
+For a coding-agent intervention that mutates both source and development data, checkpoint the coupled states together; restoring code alone may leave an incompatible database. Store the recovery record outside the agent's writable reach. This supplies a withdrawal mechanism for the **reversible local state** in step 2, not evidence that a snapshot engine itself predicts or measures effect divergence. Separate production data and external writes still require their own authority boundary.
+
 ## Limitations
 
 - **Rollback is partial once effects escape the model boundary.** Generated text sent to a user, a tool call already executed, or a decision a person acted on cannot be withdrawn; suppression of future selection is the residual remedy.
@@ -39,7 +41,9 @@ It also converts silent trust into an observable. Most memory and context pipeli
 - Thresholds are a tuning surface with real cost on both sides: too tight and legitimate novel behavior is quarantined, too loose and the loop adds latency without safety.
 - Observation costs scale with probe count and output horizon, and may be unavailable entirely when the system can see only scored responses rather than distributions.
 - The pattern presumes an expected effect exists. For open-ended exploratory work there may be no meaningful prediction to diverge from.
+- A coordinated code/database checkpoint cannot retract a published artifact, leaked secret, or third-party write; an external effect must be mediated before release (see [Staged Effect Admission](/vault/staged-effect-admission.md)).
 
 ## Sources
 
 - [Causal Influence Control for Persistent Memory dossier](/dossiers/causal-influence-control-persistent-memory.md) — specifies the predict/apply/observe/diverge/roll-back loop for persistent memory recall, the normalized divergence score, per-target rollback responses, and lineage as calibration data. Proposal only; the separating power of the divergence signal is untested.
+- [Inside Replit’s Snapshot Engine dossier](/dossiers/replit-snapshot-engine.md) — coordinated git and forkable development-database checkpoints with recovery history outside the agent's writable state support local rollback, not external-effect reversal.

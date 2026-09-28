@@ -18,6 +18,8 @@ The agent does not need to spend a separate turn asking whether the action took 
 
 Fuse operations that are routinely consecutive and have a clear success condition: create-and-return, navigate-and-inspect, mutate-and-read-back, or query-and-project. Provide a query or field projection so the observation is decision-relevant. Return structured postconditions and clear failures, and keep lower-level operations available when a workflow genuinely needs intermediate control.
 
+For interactive tasks, the action and observation pair also serves human supervision. Show the intended next action before execution and the resulting state afterward, so an operator can interrupt, take over, or hand control back using current evidence. Visibility is not authorization: a preview does not replace approval at a consequential action boundary, and post-action evidence cannot undo an irreversible effect.
+
 ## Limitations
 
 Compound commands can obscure partial failure, impose unnecessary work on simple tasks, or make retries unsafe. Define idempotency and per-stage error reporting, cap default observation size, and do not combine steps whose independent inspection is a meaningful safety or approval boundary.
@@ -25,3 +27,4 @@ Compound commands can obscure partial failure, impose unnecessary work on simple
 ## Sources
 
 - [AXI: Agent eXperience Interface dossier](/dossiers/axi-agent-experience-interface.md) — documents combined browser commands such as navigate-plus-snapshot and fill-submit-wait-snapshot, with trajectory-level comparisons.
+- [Magentic-UI — Human-Centered Web Agent Control dossier](/dossiers/magentic-ui-human-centered-control.md) — displays imminent browser actions and live page observations with pause, takeover, and handback controls.

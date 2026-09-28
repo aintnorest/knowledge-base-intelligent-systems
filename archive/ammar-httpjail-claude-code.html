@@ -1,0 +1,636 @@
+<head>
+    
+    <meta name="description" content="Default‑deny HTTP(S) for dev tools and AI agents. Script rules in JS or shell, log every request, and keep egress within your policy.">
+    <meta property="og:description" content="Default‑deny HTTP(S) for dev tools and AI agents. Script rules in JS or shell, log every request, and keep egress within your policy.">
+    <meta name="twitter:description" content="Default‑deny HTTP(S) for dev tools and AI agents. Script rules in JS or shell, log every request, and keep egress within your policy.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+    <link rel="stylesheet" href="/styles/blog.css">
+
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/blog/rss" />
+</head>
+<html>
+    <head>
+        <title> Fine-grained HTTP filtering for Claude Code  </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @font-face {
+  font-family: BerkeleyMono;
+  src: url(/fonts/BerkeleyMono-Regular.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: BerkeleyMono;
+  src: url(/fonts/BerkeleyMono-Bold.woff2);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url(/fonts/Merriweather-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url(/fonts/Merriweather-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url(/fonts/Merriweather-Light.ttf);
+  font-weight: lighter;
+  font-style: normal;
+}
+
+/* Primary colors */
+:root {
+  --bg-color: #0a0a0a;
+  --accent-color: #00d4ff;
+  --text-color: #e8e8e8;
+  --text-color-light: #a0a0a0;
+  --highlight-color: #00d4ff15;
+  --tbl-grey: #808080;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Merriweather;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+#my-links {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "BerkeleyMono", monospace;
+  white-space: nowrap;
+  gap: 15px;
+  min-width: 0;
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+  padding: 8px 0;
+}
+
+#my-links:hover {
+  opacity: 0.85;
+}
+
+#my-links a {
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+#my-links a:hover {
+  text-decoration: underline;
+}
+
+#my-links .icon-link {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+#my-links .icon-link svg {
+  width: 16px;
+  height: 16px;
+  transition: opacity 0.2s;
+}
+
+#my-links .icon-link:hover svg {
+  opacity: 0.8;
+}
+
+.copyright {
+  margin-top: 60px;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "BerkeleyMono", monospace;
+  font-size: 11px;
+  color: #606060;
+}
+
+@media screen and (max-width: 480px) {
+  #my-links {
+    font-size: 10px;
+    gap: 10px;
+  }
+}
+
+body {
+  font-family: Merriweather;
+  padding: 0px 20px 0px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+
+  max-width: 800px;
+  margin: 0 auto 5px auto;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 80%;
+    padding: 0px 10px 0px 10px;
+  }
+}
+
+@media screen and (min-height: 512px) {
+  body {
+    margin-top: 5px;
+  }
+}
+
+td {
+  padding: 1px;
+  padding-right: 15px;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+i {
+  font-size: 24;
+  padding: 10;
+}
+
+a {
+  color: var(--accent-color);
+  text-underline-offset: 2px;
+}
+
+a.minor {
+  font-size: 12;
+  color: var(--tbl-grey);
+}
+
+hr.heavy {
+  height: 2px;
+  background-color: #404040;
+  border: none;
+}
+
+hr {
+  height: 2px;
+  background-color: #303030;
+  border: none;
+}
+
+.visitor-log {
+  font-family: "BerkeleyMono", monospace;
+  font-size: 14;
+  border-collapse: collapse;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  .you {
+    /* border: 0.5px solid var(--fg-color); */
+    background: var(--highlight-color);
+  }
+
+  .message-meta {
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    color: var(--tbl-grey);
+    gap: 6px;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 6px;
+}
+input[type="text"] {
+  font-family: BerkeleyMono, monospace;
+  font-size: 12;
+  color: var(--text-color);
+  background-color: #1a1a1a;
+  border: 1px solid #404040;
+}
+
+input[type="submit"] {
+  font-family: BerkeleyMono, monospace;
+  font-size: 12;
+  color: var(--accent-color);
+  background-color: #1a1a1a;
+  border: 1px solid var(--accent-color);
+  resize: none;
+}
+
+textarea {
+  font-family: BerkeleyMono, monospace;
+  font-size: 12;
+  color: var(--text-color);
+  background-color: #1a1a1a;
+  border: 1px solid #404040;
+  padding: 8px;
+  resize: vertical;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+.error {
+  background-color: #ff4b4b;
+  color: white;
+  padding: 2px;
+  font-size: 11;
+}
+
+        </style>
+        <script src="/index.js"></script>
+        
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHKWMERGXW"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BHKWMERGXW');
+        </script>
+        
+    </head>
+        <body>
+        
+<div id="my-links">
+    
+    <div>
+     <a href="/">home</a> 
+    </div>
+    
+    <div>
+        <a href="/passages">passages</a>
+    </div>
+    <a href="/blog">blog</a> 
+    <a href="mailto:ammar@ammar.io" class="icon-link" title="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+            <path d="m22 7-10 5L2 7"></path>
+        </svg>
+    </a>  
+    <a href="//keybase.io/ammar" class="icon-link" title="Keybase">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10.445 21.372a.953.953 0 1 1-.955-.954c.524 0 .951.43.951.955m5.923-.001a.953.953 0 1 1-.958-.954c.526 0 .954.43.954.955m4.544-9.16l-.156-.204c-.046-.06-.096-.116-.143-.175-.045-.06-.094-.113-.141-.169-.104-.12-.21-.239-.32-.359l-.075-.08-.091-.099-.135-.13c-.015-.019-.032-.035-.05-.054a10.87 10.87 0 0 0-3.955-2.504l-.23-.078.035-.083a4.109 4.109 0 0 0-.12-3.255 4.11 4.11 0 0 0-2.438-2.16c-.656-.216-1.23-.319-1.712-.305-.033-.105-.1-.577.496-1.848L10.662 0l-.287.399c-.33.455-.648.895-.945 1.328a1.857 1.857 0 0 0-1.245-.58L6.79 1.061h-.012c-.033-.003-.07-.003-.104-.003-.99 0-1.81.771-1.87 1.755l-.088 1.402v.003a1.876 1.876 0 0 0 1.755 1.98l1.002.06c-.065.84.073 1.62.405 2.306a11.28 11.28 0 0 0-3.66 2.484C.912 14.392.912 18.052.912 20.995v1.775l1.305-1.387c.266.93.652 1.807 1.145 2.615H5.06a9.197 9.197 0 0 1-1.68-3.848l1.913-2.03-.985 3.09 1.74-1.267c3.075-2.234 6.745-2.75 10.91-1.53 1.806.533 3.56.04 4.474-1.256l.104-.165c.09.498.14.998.14 1.496 0 1.563-.254 3.687-1.38 5.512h1.612c.776-1.563 1.181-3.432 1.181-5.512-.001-2.2-.786-4.421-2.184-6.274zM8.894 6.192c.122-1.002.577-1.949 1.23-2.97a1.36 1.36 0 0 0 1.283.749c.216-.008.604.025 1.233.232a2.706 2.706 0 0 1 1.608 1.425c.322.681.349 1.442.079 2.15a2.69 2.69 0 0 1-.806 1.108l-.408-.502-.002-.003a1.468 1.468 0 0 0-2.06-.205c-.334.27-.514.66-.534 1.058-1.2-.54-1.8-1.643-1.628-3.04zm4.304 5.11l-.52.425a.228.228 0 0 1-.323-.032l-.11-.135a.238.238 0 0 1 .034-.334l.51-.42-1.056-1.299a.307.307 0 0 1 .044-.436.303.303 0 0 1 .435.041l2.963 3.646a.309.309 0 0 1-.168.499.315.315 0 0 1-.31-.104l-.295-.365-1.045.854a.244.244 0 0 1-.154.055.237.237 0 0 1-.186-.09l-.477-.58a.24.24 0 0 1 .035-.335l1.05-.858-.425-.533zM7.752 4.866l-1.196-.075a.463.463 0 0 1-.435-.488l.09-1.4a.462.462 0 0 1 .461-.437h.024l1.401.091a.459.459 0 0 1 .433.488l-.007.101a9.27 9.27 0 0 0-.773 1.72zm12.525 11.482c-.565.805-1.687 1.08-2.924.718-3.886-1.141-7.397-.903-10.469.7l1.636-5.122-5.29 5.609c.098-3.762 2.452-6.967 5.757-8.312.471.373 1.034.66 1.673.841.16.044.322.074.48.102a1.41 1.41 0 0 0 .21 1.408l.075.09c-.172.45-.105.975.221 1.374l.476.582a1.39 1.39 0 0 0 1.079.513c.32 0 .635-.111.886-.314l.285-.232c.174.074.367.113.566.113a1.45 1.45 0 0 0 .928-.326c.623-.51.72-1.435.209-2.06l-1.67-2.057a4.07 4.07 0 0 0 .408-.38c.135.036.27.077.4.12.266.096.533.197.795.314a9.55 9.55 0 0 1 2.77 1.897c.03.03.06.055.086.083l.17.176c.038.039.076.079.11.12.08.085.16.175.24.267l.126.15c.045.053.086.104.13.16l.114.15c.04.05.079.102.117.154.838 1.149.987 2.329.404 3.157v.005zM7.718 4.115l-.835-.05.053-.836.834.051z"/>
+        </svg>
+    </a>  
+    <a href="//github.com/ammario" class="icon-link" title="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+    </a>  
+    <a href="https://www.linkedin.com/in/ammar-bandukwala-439512140/" class="icon-link" title="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+        </svg>
+    </a> 
+</div>
+
+
+
+
+<div class="content">
+<div class="frontmatter">Posted on September 12, 2025</div>
+<h1>Fine-grained HTTP filtering for Claude Code</h1>
+<div class="subtitle">Default‑deny HTTP(S) for dev tools and AI agents. Script rules in JS or shell, log every request, and keep egress within your policy.</div>
+<p>Coding agents are becoming more powerful every day without commensurate security
+and governance tooling. The result is a world where solo developers happily run <code>claude --dangerously-skip-permissions</code> for hours unmoderated while many of <span class="tooltip">the world's most important organizations have barely tried agentic development<span class="tooltip-text">Learned from our experience at <a href="https://coder.com" target="_blank" rel="noopener noreferrer">Coder</a></span></span> . I've been working on a tool called <a href="https://github.com/coder/httpjail" target="_blank" rel="noopener noreferrer"><code>httpjail</code></a> in an effort to make agents available everywhere.</p>
+
+<p>The tool is focused on mitigating these classes of risks:</p>
+
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Example</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Agents performing destructive actions</td>
+<td>Deleting your database</td>
+</tr>
+
+<tr>
+<td>Agents leaking sensitive information</td>
+<td>Exposing API keys or credentials</td>
+</tr>
+
+<tr>
+<td>Agents operating with more authority than desired</td>
+<td>Pushing straight to main instead of opening a PR</td>
+</tr>
+</tbody>
+</table>
+<p>Agents may transgress accidentally (user misinterpretation) or intentionally (prompt injection).</p>
+
+<p>There is a class of risks at the file-system interface too, but, I believe existing tooling
+(containers) is sufficient here. Existing network isolation tools rely on IP-based rules. In our case, they're <span class="tooltip">imprecise<span class="tooltip-text">centralized, anycast load balancers power much of the internet</span></span> and require <span class="tooltip">constant maintenance<span class="tooltip-text">IPs change randomly and they're not a part of a service's implicit &quot;contract&quot;</span></span>.</p>
+<a href="#httpjail" name="httpjail">
+<h2>httpjail</a>
+</h2>
+
+<p><code>httpjail</code> implements an HTTP(S) interceptor alongside process-level network isolation. Under default configuration, all DNS (udp:53) is permitted and
+all other non-HTTP(S) traffic is blocked.</p>
+
+<p><code>httpjail</code> rules are either JavaScript expressions or custom programs. This approach makes
+them far more flexible than traditional rule-oriented firewalls and avoids the learning curve of a DSL.</p>
+
+<p>Block all HTTP requests other than the LLM API traffic
+itself:</p>
+
+<pre><code class="language-bash">$ httpjail --js &quot;r.host === 'api.anthropic.com'&quot; -- claude &quot;build something great&quot;
+</code></pre>
+
+<aside>
+  <p>
+  Privacy minded folks may appreciate this blocks telemetry export to statsig.anthropic.com,
+  which claude pings by default.
+  </p>
+</aside>
+
+<p>Allow only <code>GET</code> requests i.e. make the internet read-only:</p>
+
+<pre><code class="language-bash">$ httpjail --js &quot;r.method === 'GET'&quot; -- claude &quot;build something great&quot;
+</code></pre>
+
+<p>Only allow hosts in a <code>whitelist.txt</code> file:</p>
+
+<pre><code class="language-bash">$ httpjail --sh &quot;grep -qx \&quot;$HTTPJAIL_HOST\&quot; whitelist.txt&quot; -- claude &quot;research these APIs&quot;
+</code></pre>
+<a href="#how-it-works" name="how-it-works">
+<h2>How it works</a>
+</h2>
+
+<p>In a nutshell:</p>
+
+<div class="mermaid">
+%%{init: {'theme':'dark', 'themeVariables': {'fontSize': '24px'}}}%%
+graph LR
+    subgraph "1. Setup"
+        direction TB
+        Start{Mode?}
+        Start -->|Linux<br/>Strong| NS[Create namespace<br/>+ nftables redirect<br/>+ setuid $SUDO_USER]
+        Start -->|macOS/--weak<br/>Weak| Env[Set $HTTP_PROXY<br/>env vars]
+    end
+    
+    subgraph "2. Target Process"
+        direction TB
+        Target[Target Process<br/>e.g., claude]
+        Target --> Request[HTTP/HTTPS<br/>Request]
+        Request --> Route{Route<br/>Request}
+    end
+    
+    subgraph "3. Interception"
+        direction TB
+        Proxy[Proxy :8080/:8443]
+        Proxy --> Rules{Evaluate<br/>JS/Script Rules}
+    end
+    
+    subgraph "4. Result"
+        direction TB
+        Internet[✓ Internet Access]
+        Blocked[✗ 403 Blocked]
+        Bypass[⚠️ BYPASSED!<br/>weak mode only]
+    end
+    
+    NS --> Target
+    Env --> Target
+    
+    Route -->|Strong: forced<br/>via nftables| Proxy
+    Route -->|Weak: respects<br/>$HTTP_PROXY| Proxy
+    Route -->|Weak: ignores<br/>$HTTP_PROXY| Bypass
+    
+    Rules -->|Allow| Internet
+    Rules -->|Deny| Blocked
+    
+    style NS fill:#00d4ff,color:#0a0a0a
+    style Env fill:#00d4ff,color:#0a0a0a
+    style Proxy fill:#404040
+    style Blocked fill:#8b2635
+    style Internet fill:#2a7f62
+    style Bypass fill:#8b2635
+</div>
+<a href="#macos-(weak-mode)" name="macos-(weak-mode)">
+<h3>macOS (Weak Mode)</a>
+</h3>
+
+<p>macOS uses <code>--weak/-w</code> mode by default (see <a href="https://github.com/coder/httpjail/issues/7" target="_blank" rel="noopener noreferrer">#7</a>).</p>
+
+<p>In weak mode, we rely on process cooperation via the standard <code>HTTP_PROXY</code>/<code>HTTPS_PROXY</code> environment variables. This mode is less of a jail and more of a suggestion that the majority of
+well-meaning applications happen to comply with.</p>
+<a href="#tls-interception" name="tls-interception">
+<h3>TLS Interception</a>
+</h3>
+
+<p><code>httpjail</code> implements full TLS interception to inspect and filter HTTPS traffic. Without interception, rules would only have access to the hostname via <a href="https://en.wikipedia.org/wiki/Server_Name_Indication" target="_blank" rel="noopener noreferrer">SNI</a>, and most of the power of this tool would be lost.</p>
+<a href="#how-tls-interception-works" name="how-tls-interception-works">
+<h4>How TLS Interception Works</a>
+</h4>
+
+<ol>
+<li><p><strong>Certificate Authority Generation</strong>: On first run, <code>httpjail</code> generates a self-signed Certificate Authority (CA) that's stored in <code>~/.config/httpjail/</code>. This CA is used to sign certificates for intercepted connections.</p></li>
+
+<li><p><strong>Dynamic Certificate Generation</strong>: When a client connects, <code>httpjail</code>:</p>
+
+<ul>
+<li>Extracts the Server Name Indication (SNI) from the TLS ClientHello</li>
+<li>Generates a certificate on-the-fly for that specific hostname
+
+<ul>
+<li>Uses a shared ECDSA P-256 key pair for all server certificates for O(1) keygen overhead</li>
+</ul></li>
+<li>Signs it with the CA certificate</li>
+<li>Caches certificate in memory for performance</li>
+</ul></li>
+
+<li><p><strong>Dual Mode Operation</strong>:</p>
+
+<ul>
+<li><strong>Transparent Proxy Mode</strong>: Directly accepts TLS connections by detecting the TLS ClientHello packet (starts with <code>0x16</code>)</li>
+<li><strong>Explicit Proxy Mode</strong>: Handles HTTP CONNECT tunnels, responds with &quot;200 Connection Established&quot;, then transitions to Transparent Proxy Mode</li>
+</ul></li>
+
+<li><p><strong>Trust Injection</strong>: The CA certificate must be trusted by client applications. <code>httpjail</code> automatically sets environment variables for common tools:</p>
+
+<ul>
+<li><code>SSL_CERT_FILE</code> / <code>SSL_CERT_DIR</code> for OpenSSL-based tools</li>
+<li><code>CURL_CA_BUNDLE</code> for curl</li>
+<li><code>NODE_EXTRA_CA_CERTS</code> for Node.js</li>
+<li><code>REQUESTS_CA_BUNDLE</code> for Python requests</li>
+<li><code>GIT_SSL_CAINFO</code> for Git</li>
+</ul></li>
+</ol>
+<a href="#jail-escapes" name="jail-escapes">
+<h2>Jail Escapes</a>
+</h2>
+
+<p>In the weak jail, it's trivial for the agent to escape the jail by funnelling requests through a
+shim program that disregards the <code>HTTP_PROXY</code> environment variable.</p>
+
+<p>Even the strong jail is not perfect. There are potential escape hatches in the filesystem. For
+example, the agent could create a container via a Docker socket which would spawn outside the
+network namespace.</p>
+
+<p>To combine filesystem and network isolation into one, <code>httpjail</code> has a <code>--docker-run</code> flag that works like this:</p>
+
+<pre><code>httpjail --js &quot;r.host === 'api.github.com'&quot; --docker-run -- \
+    --rm alpine:latest wget -qO- https://api.github.com
+</code></pre>
+
+<p>I believe there's still much value in this approach even with imperfect isolation. In my experience, models seldom try
+to escape restrictions intentionally placed by the user. And, if the jail is rendered ineffective by prompt
+injection, it wasn't doing its job in the first place.</p>
+<a href="#server-mode" name="server-mode">
+<h2>Server Mode</a>
+</h2>
+
+<p>For the strongest level of isolation, you can:</p>
+
+<ul>
+<li>Run <code>httpjail --server</code> on a standalone server.</li>
+<li>Configure the network firewall to only permit 80/443 traffic to the proxy server.
+
+<ul>
+<li>Optionally, you may redirect all traffic to the proxy server, otherwise you will need to take
+care in ensuring HTTP_PROXY is set in your environments and all of your web-faring applications respect it.</li>
+</ul></li>
+<li>Run processes as usual in the development environment.</li>
+</ul>
+
+<div class="mermaid">
+%%{init: {'theme':'dark', 'themeVariables': {'fontSize': '24px'}}}%%
+graph LR
+    subgraph "Dev Environment"
+        Request[HTTP/HTTPS<br/>Request]
+        Check{Respects<br/>$HTTP_PROXY?}
+    end
+    
+    subgraph "Network Layer"
+        FW[Network Firewall]
+        Config{Config<br/>Mode?}
+        FW --> Config
+        Config -->|Redirect All<br/>80/443 Traffic| Force[Forced to Proxy]
+        Config -->|Allow Only<br/>Proxy IP| Check
+        Check -->|Yes| Voluntary[To Proxy]
+        Check -->|No| Drop[✗ Dropped]
+    end
+    
+    subgraph "httpjail --server" 
+        Decision{Evaluate<br/>Rules}
+    end
+    
+    subgraph Result
+        direction TB
+        API[✓ Allowed APIs]
+        Blocked[✗ Blocked]
+    end
+    
+    Request --> FW
+    Force --> Decision
+    Voluntary --> Decision
+    Decision -->|Allow| API
+    Decision -->|Deny| Blocked
+    
+    style Request fill:#404040
+    style Decision fill:#00d4ff,color:#0a0a0a
+    style FW fill:#404040
+    style Blocked fill:#8b2635
+    style Drop fill:#8b2635
+    style API fill:#2a7f62
+    style Force fill:#2a7f62
+    style Voluntary fill:#4a7c59
+</div>
+<a href="#try-it-out" name="try-it-out">
+<h2>Try it out</a>
+</h2>
+
+<pre><code class="language-bash">cargo install httpjail
+</code></pre>
+
+<p>And, check out the <a href="https://github.com/coder/httpjail" target="_blank" rel="noopener noreferrer">GitHub repository</a> for more details.</p>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/c.min.js"></script>
+
+<script>hljs.highlightAll();</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  
+  const rootStyles = getComputedStyle(document.documentElement);
+  const bgColor = rootStyles.getPropertyValue('--bg-color').trim();
+  const accentColor = rootStyles.getPropertyValue('--accent-color').trim();
+  const textColor = rootStyles.getPropertyValue('--text-color').trim();
+  const textColorLight = rootStyles.getPropertyValue('--text-color-light').trim();
+  
+  mermaid.initialize({ 
+    startOnLoad: true,
+    theme: 'dark',
+    flowchart: {
+      nodeSpacing: 50,
+      rankSpacing: 50,
+      htmlLabels: true
+    },
+    themeVariables: {
+      primaryColor: accentColor,
+      primaryTextColor: textColor,
+      primaryBorderColor: accentColor,
+      lineColor: accentColor,
+      secondaryColor: '#1a1a1a',
+      tertiaryColor: '#0f0f0f',
+      background: bgColor,
+      mainBkg: bgColor,
+      secondBkg: '#1a1a1a',
+      tertiaryBkg: '#0f0f0f',
+      primaryFontFamily: 'Merriweather',
+      fontSize: '14px'
+    }
+  });
+</script>
+
+
+    <footer class="copyright">© 2026 Ammar Bandukwala</footer>
+    
+    </body>
+</html>
+

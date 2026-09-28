@@ -138,18 +138,6 @@ Yet classifier scores do not translate into useful accuracy routing. The per-que
 
 This is the paper's most important result. A large oracle gain does not establish a deployable optimization opportunity. It may instead measure a huge, noisy intervention space in which at least one of 162 perturbations happens to flip each item correctly. Calling the effect “largely random” is stronger than the experiment can prove—the study shows unpredictability under these selectors, not mathematical randomness—but it correctly rejects retrospective best-case selection as an operational prompt strategy.
 
-## Released Artifacts
-
-The linked repository makes the study substantially more inspectable. It releases:
-
-- `data/mmlu_sample_ques.csv` — sampled MMLU items;
-- `data/question_split.csv` — classifier train/validation/test split metadata;
-- `data/role_info.csv` — persona labels and attributes such as category, gender, and frequency;
-- inference and analysis scripts for vLLM generation, RoBERTa classifiers, perplexity, n-gram frequency, semantic similarity, and utilities;
-- notebooks for dataset/role preparation, classifier-data processing, and paper plots.
-
-The repository README points to a separate Google Drive folder for full experiment outputs. The paper's phrase “all data, results, and experiment code” should therefore be read as a GitHub repository plus an external Drive dependency, not a single self-contained archival package.
-
 ## The Boundary: Accuracy Versus Tone and Perspective
 
 The design earns clarity by measuring only whether the selected option is correct. That creates an equally clear boundary around the result:

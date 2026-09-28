@@ -9,6 +9,22 @@ This is a **zettelkasten-style** knowledge base with two layers:
 - **Dossiers** are your personal study notes — one readable summation per source. You read these to *understand* what a paper or document actually says. They are opinionated, concise, and written for human consumption.
 - **Vault** pages are atomic, reusable ideas extracted from across sources. You write these when you notice a pattern, technique, or concept that might appear in multiple places. A vault page grows richer every time you encounter the same idea in a new dossier.
 
+### What belongs here
+
+This knowledge base holds **ideas, approaches, architectures, first-hand
+experience, and research findings** — knowledge that stays true after the
+tools it came from change. It is not a documentation mirror.
+
+- A source earns a place by what it teaches: a mechanism and its failure
+  modes, a design decision and its tradeoffs, an experiment and its result,
+  an operator's account of what happened in production.
+- A source does not earn a place by describing how to configure or operate a
+  product. Setup steps, command syntax, option inventories, and troubleshooting
+  guides are invalidated by the next release; link them, never restate them.
+- Product documentation is admissible only for the *model* it exposes: the
+  boundary the product claims, its defaults and escape hatches, the
+  limitations its makers admit, and version-gated behavior worth dating.
+
 ## Directory Layout
 
 ```
@@ -117,3 +133,16 @@ scheme), or `sha256:…` when no stronger identifier exists.
   `archive/index.md` remains appendable
 - **Inbox handling**: do not modify source contents in `inbox/`; remove a source
   only by moving it to `archive/` after a successful ingest
+
+## Viewing in Obsidian
+
+The repo can be opened as an Obsidian vault for the graph view. The hub files
+(`index.md`, `archive/index.md`, `log.md`, `TAXONOMY.md`) link to nearly every
+note and pull the graph into star clusters around them. To hide them, paste
+this into Graph view → Filters → search:
+
+```
+-path:index.md -path:log.md -path:TAXONOMY.md -path:README.md -path:INGEST.md
+```
+
+`.obsidian/` is gitignored; vault settings stay local.

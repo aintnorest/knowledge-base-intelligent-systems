@@ -24,7 +24,7 @@ Start from real production queries and failures, then add concise examples of ho
 
 ## Routing Evidence Beyond Trigger Tests
 
-Discovery must be tested against the real inventory and host budget. A valid skill can drop out of Codex's initial list when its discovery budget overflows. Claude Code abbreviates descriptions and caps description plus `when_to_use` at 1,536 characters. Front-load the positive trigger and the most important exclusion, and rerun positive, near-neighbor negative and false-trigger probes after adding or renaming skills. Manual-only invocation is a separate setting (`disable-model-invocation: true` in Claude Code; `policy.allow_implicit_invocation: false` in Codex's `agents/openai.yaml`), and neither restricts which tools a manually invoked skill may run.
+Discovery must be tested against the real inventory and host's finite listing budget: a valid skill may disappear from a truncated list or lose its distinguishing description. Front-load the positive trigger and the most important exclusion, then rerun positive, near-neighbor negative and false-trigger probes after adding or renaming skills. Manual-only invocation is a separate routing policy; it does not restrict which tools a manually invoked skill may run.
 
 Evaluate three transitions separately: **description → load**, **load → appropriate use**, and **use → task outcome**.
 
@@ -42,8 +42,8 @@ Routing evaluation is only as representative as its queries. Natural-language tr
 - [Designing, Refining, and Maintaining Agent Skills at Perplexity dossier](/dossiers/designing-refining-maintaining-agent-skills-perplexity.md) — presents Skill descriptions as routing triggers and recommends positive, negative, forbidden-load, and cross-model evaluations.
 - [Specification dossier](/dossiers/agent-skills-format-specification.md) — description semantics; schema validity does not measure selection.
 - [Evaluating skill output quality dossier](/dossiers/evaluating-agent-skills-output-quality.md) — fresh with-skill versus baseline runs graded on outputs.
-- [Extend Claude with skills dossier](/dossiers/claude-code-skills-reference.md) — listing budget, description clipping, and manual-only invocation.
-- [Build skills dossier](/dossiers/openai-build-agent-skills.md) — discovery-list truncation and implicit-invocation policy.
+- [Extend Claude with skills dossier](/dossiers/claude-code-skills-reference.md) — listing budget, description clipping at a combined 1,536 characters including `when_to_use`, and manual-only `disable-model-invocation: true`.
+- [Build skills dossier](/dossiers/openai-build-agent-skills.md) — discovery-list truncation under the 2% context or 8,000-character cap and implicit-invocation policy `policy.allow_implicit_invocation: false` in `agents/openai.yaml`.
 - [What Keeps Agent Skills from Being Reusable? Evidence from 138K SKILL.md Files dossier](/dossiers/agent-skills-reusability-defects.md) — BM25 routing-clean versus defective Hit@1.
 - [Demystifying Agent Skills: Why They Work—Until They Don’t dossier](/dossiers/demystifying-agent-skills-why-they-work.md) — pool-size experiment separating ranking, selection, use and success.
 - [SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks dossier](/dossiers/skillsbench-agent-skills-efficacy.md) — reading a skill is not sufficient for verifier success.

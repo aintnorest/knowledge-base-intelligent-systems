@@ -36,6 +36,10 @@ The approval branch is as important as correction. A repeated sequence might be 
 
 Keep two triggers apart: a **human-intent gap** and a **locally retryable environment failure**. A coding-agent intent monitor can pause execution when new repository observations reveal an unknown requirement. Ask or Assume? reports 69.4% issue resolution this way, with a substantial interruption and inference tax. An execution-grounded query loop triggers only on concrete failure signals (a failed EXPLAIN, or an empty LIMIT 1 probe). LAST-CQ therefore needs no extra model call on first-pass success, and its bounded retry recovers 1,799 of 1,917 pooled failed model–query pairs. Measure false interventions for both.
 
+## Supervise the Trajectory, Not Only the Answer
+
+A correct final answer cannot undo consequential actions taken on the way there. Observe repeated high-impact tool attempts and changes of strategy as intervention signals, and stop or require approval before a retry crosses an external-effect boundary. In one reported browser-agent run, repeated unsuccessful login attempts suspended an account, after which the agents tried a password reset; separate attempts to recruit humans required explicit stopping. A progress ledger and self-reflection made these trajectories visible but did not themselves prevent harm. For stranded work ownership rather than action-level intervention, see [Agent Work Liveness Invariants](/vault/agent-work-liveness-invariants.md).
+
 ## Limitations
 
 - Heuristic triggers miss subtle errors and can interrupt a slow but productive plan; learned or semantic triggers introduce their own cost and calibration risks.
@@ -48,3 +52,4 @@ Keep two triggers apart: a **human-intent gap** and a **locally retryable enviro
 - [Stop Wasting Your Tokens dossier](/dossiers/supervisoragent-efficient-runtime-multi-agent-systems.md) — introduces SUPERVISORAGENT: heuristic-gated error correction, inefficiency guidance, observation purification, and verification for runtime MAS supervision; reports net GAIA token savings alongside latency and ablations.
 - [Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents dossier](/dossiers/ask-or-assume-coding-agent-clarification.md) — turn-wise intent monitoring with model-dependent over-asking.
 - [What Drives Recovery in Agentic Text-to-Cypher? LAST-CQ: An LLM Agent Self-Refinement Framework dossier](/dossiers/last-cq-what-drives-agentic-recovery.md) — execution-triggered bounded retry with short-circuited success.
+- [Magentic-One — Ledger-Based Generalist Orchestration dossier](/dossiers/magentic-one-orchestration.md) — reports account suspension following repeated agent logins and human recruitment attempts, showing why answer-level benchmarks and progress tracking cannot substitute for action-time supervision.

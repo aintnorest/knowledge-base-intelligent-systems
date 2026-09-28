@@ -24,6 +24,8 @@ Naively appending turns preserves contradictory facts and can retain PII. Naivel
 
 It also makes multi-agent sharing safer. Private memory can remain private by default, while a write to project or organization scope is deliberate, attributable, and filtered on subsequent reads.
 
+The retrieval selector is part of this lifecycle, not just a relevance utility. If an untrusted record can assign itself importance, being retrieved may refresh its recency and make it more likely to be retrieved again; injected instructions can persist and reach other agents even when the original source is no longer in view. Compute ranking metadata outside the record's instruction channel, keep source provenance through summarization and peer handoffs, and quarantine suspect records before they can influence later selection. Simulated multi-agent infection demonstrates this feedback loop, not its prevalence in production.
+
 ## Practical Use
 
 Use explicit record metadata such as source, writer, created time, effective time range, state (`active`, `superseded`, `redacted`, `deleted`), scope, and access policy. Keep raw events separate from mutable derived memories so corrections and deletion requests have a traceable lineage.
@@ -48,9 +50,13 @@ Practically this means adding suppressed and quarantined to the record state mac
 
 Lifecycle policy should also follow the artifact's role. Raw execution evidence can be immutable; derived patterns can compound and be corrected with provenance; deployed procedures can be validation-gated and rolled back. WikiSkill operationalizes this split as `raw/`, `wiki/`, and `skills/`: rejected skill edits revert, but the wiki retains the attempted intervention and outcome so later optimization does not rediscover the same failure. This is compatible with governed deletion only when “immutable” means protected from optimizer rewrites, not exempt from privacy or legal erasure obligations.
 
+Not every durable instruction is an ordinary memory record. Agent instruction files and scheduled jobs can be written by code encountered during one task and then influence later sessions without passing through the memory index or its deletion policy. Inventory these writable artifacts as a distinct authority handoff and restrict which principals may modify or activate them; see [Writable Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md). Memory governance cannot substitute for execution and configuration integrity.
+
 ## Sources
 
 - [How AI Agent Memory Works dossier](/dossiers/how-ai-agent-memory-works.md) — presents write, age, supersede, redact, forget, and audit as the memory lifecycle, with temporal updates, PII filtering, scoped sharing, and deletion propagation.
 - [Causal Influence Control for Persistent Memory dossier](/dossiers/causal-influence-control-persistent-memory.md) — argues that access control and reversibility are separate memory-safety controls, and proposes suppression, quarantine, and rollback with recorded lineage for authorized memories whose realized effect diverges from what was predicted.
 - [Are We Ready For An Agent-Native Memory System? dossier](/dossiers/agent-native-memory-system-readiness.md) — evaluates timestamped versioning, eviction, and consolidation designs; its controlled maintenance results favor conservative, localized integration over delayed flushing and overly coarse summaries.
 - [WikiSkill dossier](/dossiers/wikiskill-persistent-knowledge-skill-evolution.md) — separates immutable rollout evidence, compounding pattern knowledge, and reversible validation-gated skills, while recording rejected interventions for future iterations.
+- [Prompt Infection: LLM-to-LLM Prompt Injection within Multi-Agent Systems dossier](/dossiers/prompt-infection-multi-agent-systems.md) — simulated injected memories inflated their model-scored importance and gained recency through repeated retrieval, prolonging propagation.
+- [Thinking Outside The Box — Exfiltrating OpenClaw Data from NVIDIA's Sandbox dossier](/dossiers/lasso-nemoclaw-authorized-egress-exfiltration.md) — alpha-era dependency-code attack persisted scheduled execution and changed a durable agent instruction file outside ordinary memory-record controls.

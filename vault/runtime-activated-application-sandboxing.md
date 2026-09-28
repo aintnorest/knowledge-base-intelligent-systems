@@ -19,11 +19,15 @@ Runtime-activated application sandboxing narrows a process's authority at the la
 5. Parse user files and perform the untrusted workload only after the policy is active; give each job a separate writable directory where practical.
 6. Test the real deployment matrix—runtime, kernel, libraries, parallel stack, and representative workload—for both allowed behavior and denied access.
 
+For a hosted agent, treat preparation and autonomous execution as separate authority phases: provision dependencies with narrowly temporary network and credentials, then remove those capabilities before the agent consumes untrusted input. Removing a setup secret from the environment does not erase copies left in files, logs, installed artifacts, or reusable snapshots. If execution resumes from a prebuilt snapshot, synchronize the current repository and dependencies before writes; fast launch does not prove fresh state.
+
 ## Practical Use
 
 This pattern fits services that must initialize a complex runtime before they can safely handle untrusted plugins, documents, jobs, models, or scientific inputs. A public-facing shim can often be constrained more aggressively than a local scheduler or worker; separating those roles reduces the amount of code and authority exposed to the Internet.
 
 Use complementary controls for gaps in the sandbox mechanism. A path policy may need a syscall or egress filter; CPU, memory, process, and file-descriptor exhaustion need resource quotas; kernel vulnerabilities require patching. Record the exact policy and its allowed resources as part of the deployment artifact rather than treating the sandbox as a one-time code call.
+
+Install kernel-enforced process restrictions at the trust transition, not as a command blocklist the workload can override. Some runtimes must complete trusted startup before applying inherited, irreversible process restrictions; others can launch an agent beneath restrictions already installed by a wrapper. In either case the critical invariant is that untrusted code and its children never run with the earlier authority. This process boundary complements, but cannot replace, isolation against in-process side channels or access through permitted mediator APIs.
 
 ## Limitations
 
@@ -35,3 +39,8 @@ Use complementary controls for gaps in the sandbox mechanism. A path policy may 
 ## Sources
 
 - [Locking Down Science Gateways with Landlock and Seccomp dossier](/dossiers/locking-down-science-gateways-landlock-seccomp.md) — applies Landlock/Seccomp after MPI startup and before input parsing in three scientific codes, with a constrained public gateway shim and explicit residual-risk analysis.
+- [Cloud environment — Codex dossier](/dossiers/openai-codex-cloud-execution-phases.md) — separates credentialed, networked setup from a default-offline agent phase and documents cached preparation freshness limits.
+- [Dynamic, identity-aware, and secure Sandbox auth dossier](/dossiers/cloudflare-sandbox-auth-outbound-workers.md) — demonstrates contracting dependency-preparation egress before less-trusted workload execution.
+- [Mitigating Spectre and Other Security Threats dossier](/dossiers/cloudflare-workers-security-model-spectre.md) — describes namespace/seccomp activation after runtime startup but before guest isolate loading, with separate in-process side-channel mitigations.
+- [Introducing nono: A Secure Sandbox for AI Agents dossier](/dossiers/nono-kernel-enforced-agent-sandbox.md) — describes inherited kernel restrictions applied before agent launch rather than relying on overridable command screening.
+- [Why we built our background agent: Inspect dossier](/dossiers/ramp-inspect-background-agent.md) — illustrates the freshness barrier that permits snapshot-backed reads while blocking writes until branch synchronization.

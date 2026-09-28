@@ -51,11 +51,15 @@ Agent count, routing topology, message protocol, and aggregation rule determine 
 
 Use structured handoff contracts when downstream decisions repeatedly depend on status, evidence, confidence, or the next action. These contracts make the information flow inspectable and give local prompt changes a stable interface, but they should be validated for semantic usefulness rather than treated as formatting alone.
 
+Topology also distributes the information needed to recognize an unsafe end-to-end request. A specialist can receive only a harmless-looking step while the coordinator alone knows the overall purpose; adding shared history can restore intent or widen the spread of adversarial content. Evaluate completed harmful actions and benign utility for the actual role, memory, and topology configuration, not just isolated model refusals. Controlled comparisons find no universally safest communication graph or memory arrangement. For injected peer messages, see [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md).
+
 ## Learn Parallelism Against the Critical Path
 
 For broad search or naturally separable work, let an orchestrator decide whether, when, and how to create specialists rather than hard-coding a large fan-out. Evaluate a parallel stage by its longest branch plus coordination work, not by total workers or total actions. This critical-path view rewards balanced decomposition and prevents a policy from receiving credit merely for spawning many irrelevant subagents.
 
 When outcome rewards are sparse, holding executor policies fixed while learning the orchestrator can stabilize credit assignment. Return bounded findings, evidence references, confidence, and necessary artifacts from each subagent; keep raw local traces out of the coordinator’s context unless they are required to resolve a conflict. This makes parallelism an explicit context-sharding strategy as well as a latency strategy.
+
+Match [subagent context inheritance](/vault/subagent-context-inheritance-modes.md) to the job: distinct searches benefit from fresh, bounded questions, while continuation may benefit from established evidence. Specify branch objectives, source boundaries, effort budgets, and result shapes before launch. At a join point, budget for the slowest branch and preserve artifact references so summary compression need not erase evidence.
 
 ## Search the Workflow in Stages
 
@@ -69,6 +73,8 @@ Bilevel Coordinated Reflection gives this a formal shape. Global utility is mode
 
 Treat a team as a hypothesis to test against one competent agent. In Westermo's industrial test-failure study, six practitioners' preferences between single-agent and multi-agent reports reversed across scenarios. The team cost roughly 3× the latency (130 s versus 40 s) and 2× the spend per report. Anthropic forecasts broader multi-agent adoption but does not demonstrate a general advantage from agent count.
 
+A shared task claim is not a proof of completion or worker liveness. Before unblocking dependent work, reconcile the task marker against artifacts and the active worker; an interrupted team can leave stale in-progress status or apparently finished work without a matching completion marker.
+
 ## Sources
 
 - [PaperOrchestra dossier](/dossiers/paperorchestra.md) — 5 specialized agents in a fork-join pipeline; ~60–70 LLM calls; 39.6 min mean latency
@@ -80,3 +86,6 @@ Treat a team as a hypothesis to test against one competent agent. In Westermo's 
 - [2026 Agentic Coding Trends Report dossier](/dossiers/anthropic-agentic-coding-trends-2026.md) — forecast of coordinated agent teams with vendor case examples.
 - [Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems dossier](/dossiers/bilevel-coordinated-reflection.md) — coupling bound and matched gated/ungated two-worker comparison.
 - [Supporting Industrial Test-Failure Analysis with LLM-Based Systems: An Experience Report dossier](/dossiers/westermo-llm-test-failure-analysis.md) — single- versus multi-agent RCA reports with scenario-dependent preference and higher team cost.
+- [Architecture Matters for Multi-Agent Security dossier](/dossiers/multi-agent-architecture-security.md) — controlled role, topology, and memory comparisons show nonuniform harmful-completion changes alongside benign utility; its threat is direct malicious user requests, not prompt injection.
+- [How we built our multi-agent research system dossier](/dossiers/anthropic-multi-agent-research.md) — first-party parallel research account with scoped delegations, compressed source handoffs, high token consumption, and synchronous laggard waits.
+- [Orchestrate teams of Claude Code sessions dossier](/dossiers/claude-code-agent-teams-model.md) — experimental shared tasks and independent teammates; resumed sessions can lose teammates and stale task statuses can block dependencies.

@@ -19,6 +19,8 @@ A coding-agent workflow is safer and cheaper when known operations are ordinary 
 5. **Hand off for acceptance.** Keeping merge approval separate from unattended code production preserves the light-factory boundary. Track started, abandoned, reviewed, merged, reverted and post-merge-fixed attempts, plus cost and latency.
 6. **Promote understood steps.** When an agent step becomes predictable, replace it with deterministic code. Shopify Roast treats this as the normal lifecycle of a workflow step.
 
+At the publication boundary, choose deterministic verifiers from the changed component and run every applicable check even if the agent skipped an optional local run. Block publication on failures; check the diff separately against the original request for unwanted scope expansion. A model-based scope veto remains an uncalibrated signal until labeled false positives and misses are measured, so it must not replace deterministic acceptance or human authority. The publisher, not the coding agent, should own push and external writeback (see [Staged Effect Admission](/vault/staged-effect-admission.md)).
+
 ## Verification Capacity Is the Real Throughput Limit
 
 A factory has two throughput limits: how fast workers propose changes, and how fast tests, security checks, reviewers and integrators can authorize them. If proposals outrun checking capacity, unverified work piles up even while generation improves. Make the back-pressure visible. Track proposed, locally verified, review-ready and deployable as separate states, each with defined checks and an owner. Monitor unreviewed queue depth, check latency, false failures and escaped defects together. When verification saturates, add useful check capacity, reduce concurrent proposals, or change a negotiable bar with accountable approval. Never quietly lower a non-negotiable one.
@@ -34,3 +36,4 @@ A deterministic node guarantees that a step runs, not that its check is complete
 - [Introducing Roast: Structured AI workflows made easy dossier](/dossiers/shopify-roast-structured-ai-workflows.md) — declarative workflows mixing AI, shell, Ruby and coding-agent steps; understood AI steps become deterministic code.
 - [Agentic Code Quality dossier](/dossiers/agentic-code-quality.md) — verification queues and the choice among scaling checks, throttling generation, or relaxing a bar.
 - [The Code Agent Orchestra - what makes multi-agent coding work dossier](/dossiers/code-agent-orchestra.md) — integration and verification remain the bottleneck despite parallel coding agents.
+- [Predictable Results Through Strong Feedback Loops dossier](/dossiers/spotify-honk-feedback-loops.md) — task-matched verifiers gate PR creation and a separate, not-yet-evaluated judge checks diff scope.

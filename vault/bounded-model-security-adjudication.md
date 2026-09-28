@@ -25,6 +25,10 @@ Prompt-injection defenses fail when an authority-bearing model consumes arbitrar
 
 This is not a claim of formal safety. A structured artifact can still be maliciously shaped, incomplete, or misleading; the gain comes from reducing and exposing that interface so that deterministic checks, model robustness work, human review, and adversarial tests can target a concrete boundary.
 
+## Keep Screening Subordinate to Enforcement
+
+A screening model can flag suspicious user input, retrieved content, or generated output, but a favorable verdict must not bypass a tool's deterministic authorization checks. Check the actual proposed call against trusted identity and task context at the execution boundary, even when screening occurs elsewhere in the runner. Where a worker may propose recursive side effects, a parent-side semantic action check can narrow that worker's authority; this is not an end-to-end guarantee when read-like actions, the parent's own calls, or malicious values returned in structured fields remain outside that check. State the protected action classes and the unprotected paths rather than calling every model-mediated decision an authorization gate.
+
 ## Practical Use
 
 - State the decision contract before selecting a model: inputs, permitted evidence, response schema, failure behavior, and maximum authority granted by each outcome.
@@ -43,3 +47,5 @@ This is not a claim of formal safety. A structured artifact can still be malicio
 ## Sources
 
 - [Architecting Secure AI Agents dossier](/dossiers/architecting-secure-ai-agents.md) — proposes restricting learned security decisions to structured plan/policy or instruction-state artifacts and using models to synthesize step-specific validators; these are design proposals, not verified guarantees.
+- [Safety and Security for AI Agents dossier](/dossiers/google-adk-agent-safety.md) — presents optional model screening alongside runner policy and deterministic tool checks, without measured bypass rates.
+- [AgentSys: Secure and Dynamic LLM Agents through Explicit Hierarchical Memory Management dossier](/dossiers/agentsys-hierarchical-memory.md) — bounds worker-proposed commands with a fallible parent-side model judgment while leaving parent actions and read-like tools outside that validator.

@@ -19,6 +19,8 @@ Provenance-conditioned action admission is a reference-monitor pattern for tool-
 5. Escalate the residual to narrowly scoped review. Provide the original user request, pending effect, provenance evidence, and bounded untrusted excerpts; return a decision with a reason, or request user confirmation for policy-relevant ambiguity.
 6. Log the decision, evidence, model/rule version, escalation path, and observed effect. Review new benign workflows and attacks before incorporating them into the normality model; retain rollback and contamination controls.
 
+If model context is reset or compacted, keep immutable, source-tagged memory entries and reconstruct only the lineage relevant to a retrieved item before its value can authorize an action. For delegated work, carry authenticated upstream actor and grant lineage as well as data origin; the final caller's identity alone does not establish permission. Neither a valid identity chain nor a permitted executable and destination proves that the payload and purpose correspond to the current request.
+
 ## Why It Helps
 
 Indirect prompt injection can change the content of a retrieved document but cannot inherently make an externally supplied value originate in the user's request. Provenance makes that distinction available at the sink: a new transfer recipient copied from untrusted text, a payload synthesized after a suspicious retrieval, or a missing expected precondition can be treated differently from a value explicitly supplied by the user or a trusted system record.
@@ -42,8 +44,13 @@ In a verified-malware corpus, 115 of 157 malicious skills had undocumented "shad
 - Semantic mimicry remains difficult: attacker-controlled content can look like a legitimate invoice, ticket, review, or request, and a user prompt can genuinely leave authority ambiguous.
 - Provenance can be incomplete or forged when the agent, tool adapter, or tracing system self-reports it. Robust deployment needs trusted instrumentation and complete mediation at every consequential sink.
 - This pattern does not by itself prevent text-only deception, direct jailbreaks, compromised trusted services, or harmful multi-action strategies whose individual calls look authorized.
+- Reconstructed lineage can miss a relevant memory or inherit an incorrect source label. Signed delegation authenticates a chain of claims but does not verify that the agent performed the work or used its grant for the intended purpose.
 
 ## Sources
 
 - [Agent-Sentry dossier](/dossiers/agent-sentry-execution-provenance.md) — learns structural/provenance bounds from benign agent traces, uses an allowlist only for trusted groundable values, and routes a small residual to a bounded LLM judge.
 - [“Do Not Mention This to the User”: Detecting and Understanding Malicious Agent Skills in the Wild dossier](/dossiers/malicious-agent-skills-wild.md) — shadow-feature rate and hidden upload, hook and egress patterns.
+- [Taming Various Privilege Escalation in LLM-Based Agent Systems dossier](/dossiers/seagent-mandatory-access-control.md) — immutable source-tagged memory supports retrieval-time lineage reconstruction; reported security results require complete policy and accurate labels.
+- [Thinking Outside The Box dossier](/dossiers/lasso-nemoclaw-authorized-egress-exfiltration.md) — alpha-era attacks moved workload-readable data over permitted routes, showing that endpoint approval alone does not authorize payload or purpose.
+- [AIP: Agent Identity Protocol for Verifiable Delegation Across MCP and A2A dossier](/dossiers/agent-identity-protocol-aip.md) — signed, narrowing capability chains let verifiers recover delegated authority but do not prove completion or meter aggregate use.
+- [Solving the Identity Crisis for AI Agents dossier](/dossiers/uber-agent-identity.md) — attested per-hop identity preserves originating human and agent lineage at tool authorization, while intent claims remain prospective.

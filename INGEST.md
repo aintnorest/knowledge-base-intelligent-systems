@@ -59,6 +59,12 @@ explicitly asks for repository repair.
 
 If no eligible source exists, make no changes and report that result.
 
+A source is also ineligible when its substance is operational instruction —
+installation, configuration, command reference, troubleshooting — with no
+stated design, threat model, limitation, measured result, or first-hand
+experience. Report it as "not eligible: operational content" and leave it in
+`inbox/`.
+
 If several sources are eligible, select the one with the highest expected
 long-term knowledge value. Consider technical substance, completeness,
 relevance to existing topics, and potential for reusable synthesis. State the
@@ -84,9 +90,17 @@ selection rationale in the final report.
    - `tags`
    - an ISO-8601 UTC `timestamp`
 5. Write an evidence-grounded dossier matching the existing style. Adapt the
-   headings to the source, but normally cover What It Is, the problem or
-   motivation, structure or operation, important results or takeaways,
-   analyst takeaways, questions or limitations, and Vault Ideas Extracted.
+   headings to the source, but normally cover: what it is; the problem or
+   motivation; the design or mechanism *as an idea* (how it works and why,
+   not how to invoke it); important results, admissions, or experiences;
+   analyst takeaways; questions or limitations; and Vault Ideas Extracted.
+
+   Record the model, not the manual. Do not reproduce setup steps, command
+   syntax, configuration keys, flag inventories, or troubleshooting lists;
+   link the canonical page instead. Product-specific names may appear only
+   where they identify a design choice or a limitation (for example, "the
+   sandbox wraps one tool; sibling tools run under a different boundary").
+   Note the version or date when a behavior is likely to change.
 6. Create or update zero to four genuinely reusable vault notes. Prefer
    updating an existing matching concept over creating a near-duplicate. Each
    vault note must be understandable independently and contain:
@@ -95,6 +109,11 @@ selection rationale in the final report.
    - a concise explanation
    - practical use and limitations where applicable
    - a Sources section linking to the new dossier
+   - product-independent wording: name the mechanism, the tradeoff, and the
+     failure mode; never a vendor's setting, flag, or command in the body.
+     Product specifics belong in the Sources bullet as evidence.
+   - the note must remain correct if every product cited in Sources changed
+     its implementation tomorrow.
 7. Add the dossier and any newly created vault pages to `index.md`. Do not add
    a link already present.
 8. Append a dated ingest entry to `log.md`. Do not rewrite prior entries. Its
@@ -129,6 +148,8 @@ Before finishing, verify that:
   matches the selected source
 - no duplicate index or manifest entry was introduced
 - the diff contains only files required for the ingest
+- the dossier and any vault notes contain no setup steps, command syntax,
+  configuration keys, or troubleshooting content copied from the source
 
 Report the selected source, why it was eligible, files created or updated,
 pre-existing inconsistencies left untouched, and whether every verification

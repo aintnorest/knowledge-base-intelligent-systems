@@ -16,7 +16,7 @@ timestamp: 2026-09-24T03:45:40Z
 
 ## What It Is
 
-Cognition describes how its own staff use Devin through web, Slack, Linear, CLI, and API surfaces to build Devin. It reports **659 Devin PRs merged in the previous week**, versus **154 in its best week in 2025**. These are first-party output counts from different weeks, not a controlled comparison of quality, human effort, or task difficulty. The article is part product walkthrough and part account of workflow automation; it should not be mistaken for an independent assessment of Devin.
+Cognition describes how its own staff use Devin to build Devin. It reports **659 Devin PRs merged in the previous week**, versus **154 in its best week in 2025**. These are first-party output counts from different weeks, not a controlled comparison of quality, human effort, or task difficulty. The article is part product walkthrough and part account of workflow automation; it should not be mistaken for an independent assessment of Devin.
 
 The core idea is a factory in which work may begin as chat, ticket, incident, scheduled audit, or API event, but each task should have enough repository context and a review/verification path to become a usable PR. Non-engineers can start a request without local Git setup, while engineers still review and test material changes.
 
@@ -28,19 +28,19 @@ Reusable **Playbooks** capture outcome, required steps, postconditions, correcti
 
 ## Reviewing and Repairing PRs
 
-Cognition says it uses **Devin Review for every PR**. A link accompanies Devin-authored PRs in Slack. The review interface groups changes logically, detects copied or moved code, offers codebase-aware questions, and labels potential bugs by confidence and severity. Severe bugs demand attention; non-severe findings warrant review; annotations are informational. Auto-Review can trigger when PRs open, commits arrive, or reviewers are assigned.
+Cognition says it uses **Devin Review for every PR**. The review groups changes logically, detects copied or moved code, offers codebase-aware questions, and labels potential bugs by confidence and severity. Severe bugs demand attention; non-severe findings warrant review; annotations are informational. Reviews may recur as a PR changes, so the commit inspected matters.
 
 The repair loop matters more than the review label: when Devin Review or a GitHub bot flags issues, Devin can update the PR, including CI and lint fixes, until checks pass. The article does not report review precision, recall, human agreement, or whether repeated repair introduces new defects. “Review every PR” does not mean a human independently validates every generated review finding.
 
 ## Recurring and Event-Triggered Workflows
 
 - **Design-system drift**: a daily audit scans PRs merged in the last **24 hours**, flags hardcoded colors, spacing, and off-library components, creates Linear tickets, and optionally proposes fix PRs. Individuals can also tag Devin with a screenshot to request a correction.
-- **Bug-label triage**: a `!triage-bug` playbook fires when a Linear ticket gets the Bug label; it reads the report, searches code and git history, checks Datadog via MCP, and posts suspected cause, affected files, and proposed fix. This is a starting analysis, not a verified root-cause guarantee.
+- **Bug-label triage**: a labeled bug ticket initiates a reusable investigation that reads the report, searches code and history, checks observability data, and posts a suspected cause, affected files, and proposed fix. This is a starting analysis, not a verified root-cause guarantee.
 - **End-to-end bug investigation**: Datadog and a **read-only database replica** help inspect logs and data; Devin traces code, writes a regression test and fix, then opens a PR for review. This example is a claimed workflow, not measured elapsed-time savings.
 - **Session Insights**: after a run, the tool summarizes challenges, milestones, inefficiencies, next actions, and candidate improved prompts; those suggestions can seed a new session. Treat analysis of one run as a hypothesis until tested on subsequent tasks.
-- **API triggers**: Sentry crash, bug report, failed deployment, or code-review request may initiate investigation or review without a person manually opening a chat.
+- **Event-triggered investigation**: a crash, bug report, failed deployment, or code-review request may initiate investigation or review without a person manually opening a chat.
 
-Cognition also describes DeepWiki auto-indexed documentation and DANA, a separate data-analysis-oriented Devin with warehouse MCP access and SQL visible for checking. Those are adjacent context/analytics interfaces, not evidence that the coding PR loop works on their own.
+Cognition also describes auto-indexed documentation and a separate data-analysis agent with warehouse access and SQL visible for checking. Those are adjacent context/analytics interfaces, not evidence that the coding PR loop works on their own.
 
 ## What Is Claimed Versus Measured
 

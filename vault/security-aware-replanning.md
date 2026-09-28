@@ -19,6 +19,8 @@ General-purpose agents need runtime adaptation: APIs change, tests reveal new fa
 5. Review remaining semantic questions through a narrowly scoped adjudication process, then grant only the minimum additional authority necessary for the revised step. Escalate genuinely ambiguous or high-impact cases to a human.
 6. Apply, log, and later revoke or narrow temporary grants. Tie subsequent actions to the approved revision rather than allowing a general expansion of capability.
 
+Before a proposed permission change becomes effective, compare it with the complete current policy and revalidate the candidate if any live input changed since review. A proof of no expansion in modeled dimensions is not proof that a newly allowed request is appropriate for the user's task; unsupported dimensions and warnings still require judgment. Renew user consent when a failed plan requires a different trajectory, while keeping approval of an irreversible effect separate from approval of the replacement plan.
+
 ## Why It Helps
 
 Fixed plan-execution isolation can protect control flow but may turn ordinary runtime change into a hard failure. Conversely, unrestricted feedback-driven planning lets attacker-controlled content request new actions or policy exceptions. An explicit change boundary preserves adaptation while creating places to check provenance, scope, necessity, and impact before the agent gains new authority.
@@ -38,8 +40,12 @@ The policy should change with a justified plan change, but the two changes need 
 - Structured change requests can themselves omit or distort context. Their security depends on complete mediation, trustworthy provenance, and a sufficiently expressive but enforceable policy language.
 - A strict approval path can cause false blocks, latency, and user fatigue; a permissive path can merely formalize unsafe privilege escalation.
 - Some tasks require broad exploration before the system can state the minimum next permission. The right response may be a redesigned tool contract or human clarification, not an ever-broader dynamic policy.
+- Automated permission admission depends on a stable candidate and a precisely bounded policy model; it cannot infer user intent from the absence of a formal policy delta.
 - This pattern limits unauthorized adaptation; it does not establish the truth of environment data, the correctness of a patch, or safety of individually authorized action sequences.
 
 ## Sources
 
 - [Architecting Secure AI Agents dossier](/dossiers/architecting-secure-ai-agents.md) — argues that dynamic tasks need replanning and policy updates, while environment-influenced updates require explicit security design; it is a position paper rather than an implementation evaluation.
+- [OpenShell Security Policy Architecture dossier](/dossiers/nvidia-openshell-security-policy.md) — default manual review, complete candidate revalidation, and modeled permission-delta checks govern live network-policy proposals.
+- [Add Runtime Controls to AI Agents with NVIDIA OpenShell dossier](/dossiers/nvidia-openshell-runtime-controls.md) — denied operations produce reviewable proposals and approved policy changes load during long tasks; reported adversarial experiments have no published sample counts.
+- [Magentic-UI — Human-Centered Web Agent Control dossier](/dossiers/magentic-ui-human-centered-control.md) — a failed approved plan requires user permission to replan, distinct from approval at consequential action boundaries.

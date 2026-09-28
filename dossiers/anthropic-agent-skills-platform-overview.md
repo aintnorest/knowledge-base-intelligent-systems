@@ -23,12 +23,12 @@ Claude sees a skill's `name` and `description` at startup, then reads the full `
 
 ## Where a Skill Actually Runs
 
-- **Claude API**: specify a `skill_id` under `container` alongside the code execution tool. Prebuilt identifiers include `pptx`, `xlsx`, `docx`, and `pdf`; custom skills are uploaded via `/v1/skills` and shared workspace-wide. The API sandbox has no network access or runtime package installation.
-- **Claude Code**: custom skills are local directories at `~/.claude/skills/` or `.claude/skills/`, with no upload. Prebuilt document Skills are not available there, though the open-source Claude API skill is bundled. The local environment may have full network access; global package installs are discouraged.
-- **claude.ai**: custom skills are uploaded as zip files through user settings, require code execution, and are available on specified paid plans. Uploads are per-user, not centrally shared through an org admin. Prebuilt document Skills are supplied. Network availability depends on settings.
-- **Other platforms**: prebuilt and uploaded Skills are also supported on Claude Platform on AWS and Microsoft Foundry, with the latter requiring a Hosted on Anthropic deployment and following API runtime limitations.
+- **Claude API**: skills execute in a container with no network access or runtime package installation. Custom packages are shared across a workspace; bundled document capabilities differ from local coding installations.
+- **Claude Code**: skills live in the local environment rather than arriving through the API upload plane. The workstation can have network access, but its dependencies and permissions do not transfer to the API sandbox.
+- **claude.ai**: custom packages are user-owned rather than centrally distributed by an organization. Execution and network availability depend on the user's environment and settings.
+- **Other hosted platforms**: bundled and custom skills can run under platform-specific deployment and sandbox constraints, some matching the API boundary.
 
-Custom skills **do not synchronize across these surfaces**; the same directory must be deployed separately. The overview's Claude-specific structure forbids reserved names containing `anthropic` or `claude` and XML tags in metadata in addition to the length limits. Consult `claude-code-skills-reference` for its more detailed local discovery and extension-field rules.
+Custom skills **do not synchronize across these surfaces**; portability of the format does not imply availability or equivalent execution. The overview also imposes additional metadata validation beyond the portable format. Consult `claude-code-skills-reference` for local discovery behavior.
 
 ## Security and Governance Boundary
 

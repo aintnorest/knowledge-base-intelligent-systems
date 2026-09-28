@@ -8,7 +8,7 @@ timestamp: 2026-07-13T16:13:34Z
 
 # Bounded Tool Observations
 
-A tool result should be sufficient for the next decision without being a dump of every available field or document. Bounded tool observations use a small default projection, explicit counts and empty states, truncation notices, and an intentional expansion mechanism such as field selection, a query filter, pagination, or `--full`.
+A tool result should be sufficient for the next decision without dumping every available field or document. Bounded observations use a small default projection, explicit counts and empty states, truncation notices, and an intentional expansion path through field selection, filters or pagination.
 
 ## The Pattern
 
@@ -22,7 +22,7 @@ A tool result should be sufficient for the next decision without being a dump of
 
 Start from actual agent traces. If an agent repeatedly scans long results for one field, asks whether a list is complete, or confuses silence with success, add the missing bound or signal. Make expansion opt-in so simple tasks remain cheap, but preserve enough identifiers and continuation hints for the agent to request detail safely.
 
-A model-specific implementation example is OpenAI's Codex recommendation to cap tool output near 10,000 estimated tokens, preserve equal portions from the beginning and end, and mark the omitted middle explicitly. The exact budget is not universal; the durable properties are a declared bound, preserved boundary evidence, an unmistakable truncation marker, and a route to retrieve the missing region.
+For long tool output, retaining bounded evidence from both the beginning and end while explicitly marking an omitted middle can preserve useful context without hiding truncation. The durable properties are a declared bound, boundary evidence, an unmistakable omission marker and a route to retrieve the missing region; any particular budget must be tested against actual tasks.
 
 ## Tool Sets and Evidence Cards
 
@@ -36,7 +36,7 @@ Overly aggressive defaults can conceal the one field that matters and force extr
 
 ## Sources
 
-- [AXI: Agent eXperience Interface dossier](/dossiers/axi-agent-experience-interface.md) — groups token-efficient notation, small default schemas, truncation, pre-computed aggregates, definitive empty states, and contextual filtering into an agent-interface framework.
-- [Codex Prompting Guide dossier](/dossiers/openai-codex-prompting-guide.md) — supplies a concrete head-and-tail truncation policy for a coding-agent harness.
+- [AXI: Agent eXperience Interface dossier](/dossiers/axi-agent-experience-interface.md) — groups token-efficient notation, small default schemas, truncation, pre-computed aggregates, definitive empty states and contextual filtering; its expansion example uses `--full`.
+- [Codex Prompting Guide dossier](/dossiers/openai-codex-prompting-guide.md) — recommends a 10,000-estimated-token cap with equal head-and-tail retention and explicit middle omission.
 - [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — overlapping tools and verbose outputs as context failures.
 - [EviRCA: Decoupling Evidence Extraction from Reasoning for Microservice Root-Cause Analysis dossier](/dossiers/evirca-microservice-root-cause-analysis.md) — precomputed evidence cards with opt-in inspection; measured recall ceiling.
