@@ -31,6 +31,10 @@ A durable scheduler can restart a conversation or replace its machine without re
 - Keep shared capacity permits across an admitted operation's entire buffering and transformation chain, including configuration reload, so replacing a generation cannot reset the budget while old work remains outstanding.
 - Distinguish a retryable action from an already committed effect and a completed result awaiting delivery.
 
+For repository effects, bind receipts to the authority generation, exact intent version, and observed pre/post artifact identities. A prepare record before mutation and an expected-tree chain can distinguish broker effects from later out-of-band changes. A broken chain calls for reconciliation, not trust in the workspace as continuation state. Freeze the integration artifact and apply the same verified patch bytes so resumed execution cannot substitute a different mutable result.
+
+Compensation differs from idempotent retry. An inverse needs pre-effect recovery state and must account for downstream consequences; restoring a recorded field does not prove an externally observed effect was undone. Irreversible operations should wait rather than speculate that later repair will make them safe.
+
 ## Limitations
 
 Neither process fencing nor an append-only log makes an external service transactional. Some actions have no queryable receipt or safe idempotency key and must stop for review. Generation-scoped freeze requires a real enforcement boundary; an agent prompt cannot revoke already-running tools. Resource-budget continuity controls overload during interrupted work, not duplicate effects by itself.
@@ -43,3 +47,5 @@ Neither process fencing nor an append-only log makes an external service transac
 - [Hermes Agent — Subagent Delegation and Ownership Boundaries dossier](/dossiers/hermes-subagent-delegation.md) — separates durable completed-result delivery from unrecoverable in-flight children and requires explicit background-process ownership handoff.
 - [What we’ve learned building cloud agents dossier](/dossiers/cursor-cloud-agent-lessons.md) — separates durable execution from conversation streaming and retracts partial streamed output on retry.
 - [Symphony Service Specification dossier](/dossiers/openai-symphony-service-specification.md) — notes that tracker-based redispatch after restart can repeat externally visible actions despite persistent workspaces.
+- [Claim Plane: Enforceable Change Intents and Dynamic Scope for Parallel Coding Agents dossier](/dossiers/claim-plane-enforceable-change-intents.md) — prepare-before-effect records, fencing-bound observations, expected-tree provenance, and identical verified/applied patch bytes.
+- [CoAgent: Concurrency Control for Multi-Agent Systems dossier](/dossiers/coagent-concurrency-control-multi-agent.md) — recovery state captured before effects, registered inverses, and delayed irreversible writes.

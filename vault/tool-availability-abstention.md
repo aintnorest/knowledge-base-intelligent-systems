@@ -29,6 +29,8 @@ Availability should therefore be enforced by the runtime and reflected in evalua
 
 Put a deterministic call validator between model output and execution. It should reject unregistered names and schema-invalid arguments before they reach a tool runner, then give the model a bounded observation describing the missing capability. Keep the executor's actual result separate from model-authored text so a completion cannot be mistaken for a completed action.
 
+A registered execution tool does not imply that every executable, interpreter, file or privilege exists inside its environment. Expose or inspect those nested capabilities with bounded evidence, and preserve the executor's actual status separately from the agent's explanation. An unavailable privilege-elevation utility does not itself prove insufficient authority; similarly, empty output does not prove that a state-changing operation succeeded. Before adopting either premise, inspect the relevant environment fact. Missing-capability detection and correct interpretation of its failure are separate reliability obligations.
+
 Measure false action, unsupported direct answer, correct abstention, and unjustified refusal separately. A single tool-call success score conceals the distinction between “used an available tool well” and “recognized that no adequate tool exists.”
 
 ## Limitations
@@ -41,3 +43,5 @@ Measure false action, unsupported direct answer, correct abstention, and unjusti
 ## Sources
 
 - [The Reasoning Trap dossier](/dossiers/reasoning-trap-tool-hallucination.md) — introduces no-tool and distractor-tool tests and reports increased hallucination rates in its reasoning-enhanced model comparisons.
+- [Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces dossier](/dossiers/terminal-bench-cli-agent-benchmark.md) — command-failure analysis identifies unavailable executables and missing files as frequent observable error classes; it does not test a capability-disclosure intervention.
+- [Failure as a Process: An Anatomy of CLI Coding Agent Trajectories dossier](/dossiers/failure-as-a-process-cli-agent-trajectories.md) — false environment premises and misread tool feedback can determine later failure before visible symptoms appear.

@@ -22,7 +22,15 @@ A tool result should be sufficient for the next decision without dumping every a
 
 Start from actual agent traces. If an agent repeatedly scans long results for one field, asks whether a list is complete, or confuses silence with success, add the missing bound or signal. Make expansion opt-in so simple tasks remain cheap, but preserve enough identifiers and continuation hints for the agent to request detail safely.
 
+Bounds should support selective inspection, not force result-by-result completion. A compact search summary lets the agent choose a candidate; presenting one match per turn can induce exhaustive browsing even when the target is already identifiable. In one matched coding-agent experiment, summarized search reached 18.0% task success, versus 12.0% for iterative search and 15.7% without specialized search. A 100-line view also outperformed both a 30-line view and a whole-file view. These results establish a workload-specific tradeoff, not universal limits.
+
+A mutation result should distinguish authoritative state from a proposed state. On rejection, return the reason, enough of the failed proposal to diagnose it, and the original content that remains current. On acceptance, return the changed region directly when it supports the next decision. This can prevent reasoning against a rejected edit or an extra call merely to discover what happened; silence alone is not evidence of success.
+
 For long tool output, retaining bounded evidence from both the beginning and end while explicitly marking an omitted middle can preserve useful context without hiding truncation. The durable properties are a declared bound, boundary evidence, an unmistakable omission marker and a route to retrieve the missing region; any particular budget must be tested against actual tasks.
+
+Observation bounds can also apply over time. Keep recent tool evidence intact, replace older bulky observations with explicit omission markers, and preserve the actions and decisions that explain the trajectory. This differs from deleting entire turns or paraphrasing the whole history. An inexpensive age-based masking policy is a useful baseline before paying a model to summarize old interactions; preserve a retrieval path when late-needed details matter.
+
+Evaluate retention windows in units of useful evidence, not nominal turns alone. Retry messages and scaffold conventions can make identical window lengths retain very different state. Compare verified success, recovery calls, total episode cost and stopping behavior: summaries can reduce prompt size yet prolong exploration, while masking alone does not bound retained reasoning indefinitely. Neither strategy guarantees unchanged task performance.
 
 ## Tool Sets and Evidence Cards
 
@@ -40,3 +48,5 @@ Overly aggressive defaults can conceal the one field that matters and force extr
 - [Codex Prompting Guide dossier](/dossiers/openai-codex-prompting-guide.md) — recommends a 10,000-estimated-token cap with equal head-and-tail retention and explicit middle omission.
 - [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — overlapping tools and verbose outputs as context failures.
 - [EviRCA: Decoupling Evidence Extraction from Reasoning for Microservice Root-Cause Analysis dossier](/dossiers/evirca-microservice-root-cause-analysis.md) — precomputed evidence cards with opt-in inspection; measured recall ceiling.
+- [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering dossier](/dossiers/swe-agent-agent-computer-interfaces.md) — matched search and file-window ablations, immediate edit feedback, and rejected-proposal versus original-state diagnostics.
+- [The Complexity Trap: Simple Observation Masking Is as Efficient as LLM Summarization for Agent Context Management dossier](/dossiers/complexity-trap-observation-masking.md) — observation-only masking competes with summaries on software repair; documents summary overhead, trajectory elongation, scaffold-specific windows and configuration-specific performance losses.

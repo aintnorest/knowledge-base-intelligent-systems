@@ -2,7 +2,7 @@
 type: Synthesis
 title: Reversible, Query-Conditioned Compaction
 description: Pairing a compact default representation with query-time recovery from retained source material so future questions need not be predicted perfectly in advance.
-tags: [compaction, retrieval, agent-memory, long-context]
+tags: [compaction, retrieval, agent-memory, long-context, agents]
 timestamp: 2026-07-13T17:51:09Z
 ---
 
@@ -27,6 +27,10 @@ Query-agnostic scoring must guess which details will matter across many possible
 
 Use multi-fidelity storage for long-running work: a small active context, an indexed evidence archive, and a retrieval budget for expansion. Record provenance and version boundaries so recovery does not resurrect stale, inaccessible, or superseded material. Test with late questions whose evidence was intentionally kept out of the compact tier.
 
+For tool-using work, replace bulky active observations with durable references only when they support recovery of the required evidence. A document path or live URL is not automatically an immutable source: record the source version or retain a snapshot when later verification depends on the exact earlier content. External memory preserves recoverability only if the agent can find the right record and storage remains available under the correct access scope.
+
+Separate raw-source recovery from preservation of selected findings. A persistent file of conclusions can keep task state across fresh sessions, but it does not prove that cleared tool evidence is recoverable or that every important fact was externalized. Test these as distinct guarantees.
+
 ## First-Party Coding-Harness Policy
 
 In coding-agent histories, a useful compaction retains architectural decisions, unresolved bugs and implementation details while preserving access to the underlying files. Recent-file reattachment can help recovery but cannot guarantee that a late-needed older requirement survives; clearing obsolete tool results may be less lossy than compressing the whole history. Test recall over real agent traces before pruning for precision, including late-needed paths and verification evidence.
@@ -39,3 +43,5 @@ Reversibility is not free. It needs storage, indexing, retrieval latency, policy
 
 - [What to Keep, What to Forget dossier](/dossiers/rate-distortion-memory-compaction.md) — contrasts irreversible eviction and summary replacement with query-time retrieval and archival designs across the inference-to-agent-memory hierarchy.
 - [Effective context engineering for AI agents dossier](/dossiers/effective-context-engineering-ai-agents.md) — Claude Code summarizes task state and reattaches the five most recently accessed files after compaction; recommends recall-first evaluation and clearing obsolete tool results.
+- [Context Engineering for AI Agents: Lessons from Building Manus dossier](/dossiers/manus-context-engineering-lessons.md) — Manus proposes restoring omitted observations through filesystem paths and URLs; supplies no controlled recovery evaluation.
+- [Managing context on the Claude Developer Platform dossier](/dossiers/anthropic-context-management-platform.md) — Anthropic separates stale tool-result removal from client-owned persistent file memory without promising raw-source recovery.

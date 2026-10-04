@@ -31,6 +31,7 @@ A human can supervise only so many live conversations before repeatedly reconstr
 - Keep runtime prompts and policy versioned beside the work, but make the scheduler authoritative for claims and external state reconciliation.
 - Let health supervisors repair stalled ownership within defined bounds; escalate unresolved work to an explicit owner.
 - Require an independent integration gate for artifacts; when batching, verify the combined state and isolate failures without treating worker-local checks as sufficient.
+- Make the ledger editable mid-run so an operator can pause, re-scope, and resume a team without reconstructing state. A shared plain-text checklist degrades under many concurrent writers. Ledger locality is a tradeoff: a hosted tracker adds network, authentication, and client tooling to every worker, while a repository-versioned ledger travels with the work but inherits merge conflicts.
 
 ## Limitations
 
@@ -44,3 +45,4 @@ A canonical ledger becomes an availability and consistency dependency. Worktree 
 - [Paperclip Specification — Board-Governed Agent Control Plane dossier](/dossiers/paperclip-control-plane-spec.md) — specifies task assignment and atomic checkout with distinct human governance, heartbeat, and budget authority.
 - [Coder Agents: Architecture dossier](/dossiers/coder-agents-architecture.md) — places persistent conversation and status state in a control plane distinct from replaceable workspaces and model inference.
 - [Symphony Service Specification dossier](/dossiers/openai-symphony-service-specification.md) — assigns tracker reconciliation and claims to a single scheduler while keeping repository workflow policy and runtime sessions separate.
+- [Grit: rewriting Git in Rust with agents dossier](/dossiers/gitbutler-grit-agent-git-port.md) — operator moved long-running parallel agents from a shared checkbox plan to a local, repository-versioned ticket store after hosted trackers proved too heavy for every client.

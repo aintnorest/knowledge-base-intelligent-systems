@@ -30,6 +30,10 @@ This turns model replacement into a compatibility migration with three measurabl
 
 Tool schemas and output formats are part of an agent's effective training distribution. Matching a familiar format can reduce inference-time translation work, while explicit handoff instructions prevent a replacement model from copying obsolete tool calls found in conversation history.
 
+An edit representation is a model–task–applicator contract, not a universally superior syntax. Separate failures to parse, locate and apply an edit from failures to choose the correct change, then compare formats under matched prompts and application rules. A familiar format with tolerant interpretation can beat exact replacement on one refactoring workload, while independent search-replace blocks win for other models in a controlled generation task. A format description can improve generation while confusing the requested output type during application. Evaluate the pairing, including recovery turns and output cost, rather than ranking models through one inherited grammar.
+
+Observation-sensitive anchors can reduce the burden of reproducing old code while rejecting mutations based on stale state. Their guarantee depends on collision resistance, scope and freshness; a matching identifier neither proves that the surrounding context was understood nor establishes that the new code is correct. Likewise, immediate syntax guardrails can prevent cascading mistakes while forcing legitimate multi-step edits into a particular order. Prevent recurring tool errors structurally where possible, but measure prevention against workflow constraints and silent misapplication rather than treating every rejection or acceptance as beneficial.
+
 ## Operational Concerns
 
 Model switching is also an infrastructure event. Provider- and model-specific prompt caches may miss, and summarizing the history to reduce that cost can omit task-critical information. For difficult work, a fresh-context subagent with a tightly framed task can be preferable to transferring an entire mixed-model history.
@@ -73,3 +77,8 @@ Per-model tuning creates configuration and testing overhead, and vendor-specific
 - [Demystifying Agent Skills: Why They Work—Until They Don’t dossier](/dossiers/demystifying-agent-skills-why-they-work.md) — cross-framework comparisons and coded misapplication.
 - [What I learned building an opinionated and minimal coding agent dossier](/dossiers/pi-minimal-coding-agent.md) — describes a minimal observable harness, learned tool-use patterns, and best-effort cross-provider handoff and accounting.
 - [Harness Engineering: Anatomy, Architecture, and Evolution of Coding Agents dossier](/dossiers/coding-agent-harness-source-study.md) — compares eleven runtime designs across seven subsystems without claiming a common effectiveness benchmark.
+- [SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering dossier](/dossiers/swe-agent-agent-computer-interfaces.md) — matched interface ablations and syntax-guardrail ordering tradeoffs.
+- [Diff-XYZ: A Benchmark for Evaluating Diff Understanding dossier](/dossiers/diff-xyz-diff-understanding-benchmark.md) — controlled generation, application and reversal comparisons with model- and prompt-dependent format effects.
+- [We improved 15 LLMs at coding in one afternoon. Only the harness changed. dossier](/dossiers/hashline-harness-problem.md) — first-party content-hash anchors and reversible-mutation benchmark, with inconsistent reported figures and no behavioral oracle.
+- [Unified diffs make GPT-4 Turbo 3X less lazy dossier](/dossiers/aider-unified-diffs-laziness.md) — simplified coherent-block diffs coupled to tolerant application on 2023 models; the refactoring oracle does not establish behavioral correctness.
+- [Building effective agents dossier](/dossiers/anthropic-building-effective-agents.md) — practitioner account of reducing generation burden and structurally preventing recurring tool errors.

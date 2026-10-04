@@ -21,6 +21,10 @@ An agent's message is not a fresh user instruction merely because another agent 
 
 Local refusal does not suffice when a viewer can report a fake access problem and another agent treats its proposed remedy as work to execute. A peer message also cannot grant human consent or expand permissions. The boundary is both informational and operational: a teammate's origin must be recorded, and any newly proposed action must be checked against the user's task and the source of the proposal. Communication topology and memory visibility affect how far a message travels, but there is no universally safest arrangement; see [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md).
 
+Trust starts at discovery, before any peer message arrives. A schema-valid description can impersonate a near-duplicate identity or advertise benign capabilities that its backend does not honor. Cryptographically bound discovery metadata authenticates its publisher, not the truth of advertised behavior or the safety of a later request. Check identity, capability evidence, and authority for a particular effect separately.
+
+An intermediary can become a confused deputy in either direction: a peer-supplied address can induce a privileged agent to fetch an internal resource, while a returned artifact can carry untrusted renderable content toward a user's browser. Preserve origin across those hops and enforce independent controls at dereference and rendering boundaries. Protocol-valid waiting states and refinement cycles also need capacity quotas and progress bounds; content refusal alone cannot guarantee liveness. Benchmark canary propagation establishes a crossed data boundary, not necessarily browser execution or production compromise.
+
 ## Practical Use
 
 - Carry source and trust labels with quoted observations and derived summaries. Distinguish peer report, user request, and trusted control-plane signal at the receiving boundary.
@@ -41,3 +45,4 @@ Origin tags and message marking can reduce confusion but are not cryptographic p
 - [Orchestrate teams of Claude Code sessions dossier](/dossiers/claude-code-agent-teams-model.md) — documented separation between teammate-origin messages and human authorization.
 - [AgentSys: Secure and Dynamic LLM Agents through Explicit Hierarchical Memory Management dossier](/dossiers/agentsys-hierarchical-memory.md) — short-lived untrusted-observation processors and bounded parent returns, with remaining schema and action-check limitations.
 - [Cross-Agent Privilege Escalation: When Agents Free Each Other dossier](/dossiers/cross-agent-configuration-privilege-escalation.md) — demonstrated cross-agent configuration write that becomes another agent's executable authority on later load.
+- [A2ASecBench: A Protocol-Aware Security Benchmark for Agent-to-Agent Multi-Agent Systems dossier](/dossiers/a2asecbench-agent-to-agent-security.md) — demo-system discovery spoofing, capability cloaking, lifecycle exhaustion, intermediary request forgery, and artifact propagation; distinguishes authenticated claims from safe effects and canary metrics from proven compromise.
