@@ -2,8 +2,8 @@
 type: Synthesis
 title: Expectation-First Coding Contract
 description: "Recording trusted, agent-immutable expectations (acceptance criteria, reproducers, protected negative cases, and per-action predicted observations) before a coding agent acts, so that passing evidence cannot be redefined after the fact."
-tags: [coding-agents, verification, code-quality, human-in-the-loop, reliability, agents]
-timestamp: 2026-09-24T03:56:19Z
+tags: [llm-code-testing, coding-agents, code-quality, human-in-the-loop, reliability, agents]
+timestamp: 2026-10-04T07:48:20Z
 ---
 
 # Expectation-First Coding Contract
@@ -17,6 +17,8 @@ The same idea works at two granularities:
 
 For a long-horizon feature, write a finite contract of user-observable behavior **before** splitting the work into implementation milestones. Fresh validators can then exercise the running system against the prior contract as black-box users, instead of deriving acceptance from the worker's own implementation. This reduces anchoring but does not make an incomplete contract complete.
 
+Expectation-first means **expectation before interpretation**, not necessarily test before code. A fresh specification-grounded testing context can help even after implementation exists; a test-first label cannot rescue expectations inferred from the same faulty premise. [Implementation-Anchored Test Oracles](/vault/implementation-anchored-test-oracles.md) explains the measured context effects. An inferred specification is a proposal for its accountable owner, not new acceptance authority.
+
 ## Practical Use
 
 1. From the issue and a human review, state observable acceptance criteria and non-negotiable invariants. Cover a normal path, a boundary or error path, and a cross-feature path where interacting components can fail even though each passes locally.
@@ -27,7 +29,7 @@ For a long-horizon feature, write a finite contract of user-observable behavior 
 
 ## Action-Level Precommitment
 
-Cognition reports that Devin writes the expected visible state or backend effect *immediately before* each consequential UI action. It then records the action, the actual observation and a separate passed/failed/untested verdict in a replayable timeline with screenshots or video. A condition that was never exercised stays marked **untested** rather than being absorbed into a pass. Validate important side effects directly in logs or application state, and spot-check the agent's self-judgments against known-broken and known-passing cases. The vendor reports no calibrated false-pass rate, so treat the technique as a safeguard, not a measured guarantee.
+One practitioner account describes writing the expected visible state or backend effect *immediately before* each consequential UI action. The agent then records the action, the actual observation and a separate passed/failed/untested verdict in a replayable timeline with screenshots or video. A condition that was never exercised stays marked **untested** rather than being absorbed into a pass. Validate important side effects directly in logs or application state, and spot-check the agent's self-judgments against known-broken and known-passing cases. The account reports no calibrated false-pass rate, so treat the technique as a safeguard, not a measured guarantee.
 
 ## Protected Negative Intent
 
@@ -35,9 +37,19 @@ A negative test states what must *not* succeed. Its deliberately invalid credent
 
 ## Why This Is Not "Write More Tests"
 
-TDFlow reports 94.3% SWE-bench Verified resolution when given human-authored tests. In its own generated-test condition, Table 2 reports 68.0% (the abstract says 69.8%). In a paired intervention on 500 tasks, GPT-5.2 was induced to write tests in 322 additional tasks, but the number solved stayed at 359/500 while output tokens rose 19.8%. The two results answer different questions: a trusted expectation supplied *before* repair, versus an agent producing extra test files on its own. SpecBench shows that even complete visible feature tests can miss composed behavior. SWE-Proof shows that a self-written formal specification can also omit part of the task. A useful contract is externally meaningful and open to challenge, not self-certified.
+A repository-repair study reports 94.3% resolution with supplied human-authored tests versus 68.0% in its generated-test condition (the abstract says 69.8%). A separate paired intervention on 500 tasks induced tests on 322 additional tasks, but resolution stayed at 359/500 while output tokens rose 19.8%. These answer different questions: a trusted expectation supplied *before* repair, versus an agent producing extra test files on its own. Other studies show that complete visible feature tests can miss composed behavior and self-written formal specifications can omit task requirements. A useful contract is externally meaningful and open to challenge, not self-certified.
 
-Cross-version reproduction separates four outcomes: fail-before/pass-after exposes the issue; pass-before/pass-after may preserve valid behavior but does not reproduce it; fail-before/fail-after and pass-before/fail-after remain broken after the reference repair. Under this oracle, a successful generated suite needs at least one reproducing test and no post-repair failures, with the tests unchanged across versions. Record applicability and changed-line coverage separately: neither proves reproduction. In one controlled study, generated-test filtering raised repair precision to 47.8% at only 20% recall. That filter's reported criteria were not identical to the stricter reproduction-success rule. Measure both retained precision and recall rather than treating either gate as self-certification.
+Tests also serve as **generation-time specification context**, not just post-generation evidence. In a staged Python synthesis pipeline, supplied human examples increased private correctness from 69.67% to 82.45% on 399 tasks for the main model. Examples clarify signatures, boundaries, formulas, and input/output conventions. Because failed tasks received another attempt, the design does not isolate the causal effect of test context from extra generation opportunities. Retain held-out checks: satisfying supplied examples does not establish general conformance.
+
+For repair, [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) distinguishes reproduction from shared behavior and bug validation. A successful reproducing suite needs at least one fail-before/pass-after test and no post-repair failures, unchanged across versions. Applicability and changed-line coverage do not prove reproduction. One generated-test filter raised repair precision to 47.8% at only 20% recall, under criteria not identical to that stricter suite rule; report both rather than treating filtering as self-certification.
+
+## Expectation Changes During Review
+
+Test files commonly evolve after initial submission, but revision counts do not establish weak initial tests or unauthorized changes. Separate incidental maintenance from changes to what is accepted: replacing expected values or snapshots, dropping negative cases, widening tolerances, or skipping checks needs an authority-grounded explanation when it alters protection. Record the previous expectation, the new one, and its owner's rationale; a later green run does not authorize the change.
+
+Artifact presence, assertion syntax, and merge outcomes cannot substitute for that review. A field study's median assertion count of two for AI tests versus one for human tests does not establish stronger or more independent oracles, or justify one assertion per test. Several assertions may protect one coherent behavior.
+
+Practitioner guidance similarly recommends independent expectations, coherent workflows, and absence checks against **live forbidden outcomes**, rather than searches for retired text. Those are useful design judgments, not measured AI advantages: fewer-longer tests, flat structure, and bans on setup hooks remain unvalidated in the inspected AI evidence.
 
 ## Limitations
 
@@ -55,3 +67,11 @@ A human-written test can be wrong, incomplete or tied too closely to one impleme
 - [How Missions Work dossier](/dossiers/factory-missions-architecture.md) — defines observable acceptance assertions before decomposition and uses fresh black-box validators at milestones.
 - [The Future of Software Testing: AI-Powered Test Case Generation and Validation dossier](/dossiers/ai-test-generation-validation-baqar-khanda.md) — narrative case for human approval of behavior-changing self-healing.
 - [SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents dossier](/dossiers/swt-bench-test-generation-bug-fixes.md) — two-sided reproduction, separate applicability and changed-line coverage metrics, and patch-filter precision gains with low recall.
+- [Do LLMs generate test oracles that capture the actual or the expected program behaviour?](/dossiers/llm-oracles-actual-expected-behaviour.md) — implementation exposure biases oracle interpretation; descriptive names convey but do not authorize intent.
+- [On the risk of coding before testing](/dossiers/coding-before-testing-error-propagation.md) — its “test-driven” condition is fresh task-only generation, supporting context separation rather than mandatory chronology.
+- [Evaluating and Mitigating the Misguidance Effect of Buggy Code](/dossiers/buggy-code-test-misguidance.md) — replacement outperforms supplementation, but inferred specifications still preserve bugs.
+- [All Smoke, No Alarm](/dossiers/agent-authored-test-oracle-signals.md) — test-file and syntactic assertion signals do not establish independent expectations.
+- [Do Autonomous Agents Contribute Test Code?](/dossiers/test-inclusion-agentic-pull-requests.md) — lifecycle revisions show test evolution, not the authorization or correctness of changed expectations.
+- [Testing with AI Agents](/dossiers/ai-agent-test-frequency-quality-coverage.md) — two-versus-one median assertions without measured oracle validity or fault detection.
+- [Test-Driven Development for Code Generation](/dossiers/test-driven-development-code-generation.md) — TGen supplies human tests as prompt constraints, with private validation and extra-attempt confounding.
+- [Testing principles](/dossiers/kody-testing-principles.md) — kody supplies practitioner rationale for independent expectations and live negative intent, not empirical validation of its entire style.

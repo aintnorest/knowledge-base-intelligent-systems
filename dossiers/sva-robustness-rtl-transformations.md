@@ -4,7 +4,7 @@ title: Robustness of LLM-Generated SystemVerilog Assertions to Semantics-Preserv
 description: Paired metamorphic tests expose correct-to-wrong SVA generation despite unchanged intended RTL semantics, even when aggregate transformed accuracy improves.
 resource: https://arxiv.org/abs/2609.05658v1
 source: /archive/sva-robustness-rtl-transformations.pdf
-tags: [verification, evaluation, reliability, generalization]
+tags: [llm-code-testing, verification, evaluation, reliability, generalization]
 timestamp: 2026-09-24T03:45:00Z
 ---
 

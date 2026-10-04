@@ -10,6 +10,27 @@ timestamp: 2026-07-11T16:00:00Z
 
 ## Dossiers
 
+* [Testing principles](/dossiers/kody-testing-principles.md) — Kent C. Dodds's kody practitioner model combines coherent workflows, independent oracles, explicit isolated setup, and the lightest faithful test boundary, with only partial AI-specific empirical support.
+* [Do LLMs generate test oracles that capture the actual or the expected program behaviour?](/dossiers/llm-oracles-actual-expected-behaviour.md) — A controlled Java study finds implementation anchoring in oracle classification, useful semantic naming cues, and modest mutation gains without proof of specification correctness.
+* [On the risk of coding before testing: An empirical study on LLM-based test generation workflow](/dossiers/coding-before-testing-error-propagation.md) — Five-model Python experiments find weaker fault detection when generated tests retain faulty implementation context than when they use a fresh specification-only context.
+* [Evaluating and Mitigating the Misguidance Effect of Buggy Code in LLM-Generated Unit Tests](/dossiers/buggy-code-test-misguidance.md) — A Defects4J study distinguishes truly bug-validating tests from shared valid behavior and improves detection by replacing buggy bodies with critically derived specifications.
+* [Design choices made by LLM-based test generators prevent them from finding bugs](/dossiers/llm-test-generators-validate-bugs.md) — A Python evaluation shows pass-and-coverage filters rejecting bug-revealing candidates while retaining suites that validate defective implementations.
+* [All Smoke, No Alarm: Oracle Signals in Agent-Authored Test Code](/dossiers/agent-authored-test-oracle-signals.md) — Analysis of 86,156 agent test-file patches separates weak oracle syntax from stronger assertions and shows why raw merge associations mislead.
+* [Are Coding Agents Generating Over-Mocked Tests? An Empirical Study](/dossiers/coding-agents-over-mocked-tests.md) — Mining 1.25 million commits finds agents introduce doubles more often, without proving those additional mocks harm test effectiveness.
+* [Do Autonomous Agents Contribute Test Code? A Study of Tests in Agentic Pull Requests](/dossiers/test-inclusion-agentic-pull-requests.md) — Test inclusion grows in agent PRs and accompanies larger changes, but merge and issue-closure outcomes do not establish test adequacy.
+* [Testing with AI Agents: An Empirical Study of Test Generation Frequency, Quality, and Coverage](/dossiers/ai-agent-test-frequency-quality-coverage.md) — Selected TypeScript projects show slightly longer, assertion-rich linear agent tests and small coverage gains without measured oracle or mutation effectiveness.
+* [Do Coverage and Mutation Scores of LLM-Generated Test Suites Correlate with Their Effectiveness? (Replicability Study)](/dossiers/llm-test-metrics-replicability.md) — Conceptual replication finds that coverage and mutation can rank LLMs on fixed Java code but weakly predict within-model suites and lose usefulness when generation starts from buggy code.
+* [Mutation-Guided LLM-based Test Generation at Meta](/dossiers/meta-ach-mutation-guided-tests.md) — Industrial concern-directed mutant generation produces reviewed Kotlin regression tests with extra fault sensitivity even when line coverage does not increase.
+* [LLM vs. Human Unit Tests: Fault Detection on Real Python Bugs](/dossiers/llm-human-python-fault-detection.md) — Bug-context-informed Gemini tests detect more historical Python faults than general-purpose human baselines, with similar aggregate coverage and materially greater verbosity.
+* [On the Diffusion of Test Smells in LLM-Generated Unit Tests](/dossiers/llm-test-smell-diffusion.md) — Large Java comparison finds prompt-sensitive generated-test smell profiles and severe detector disagreement, requiring contextual triage rather than mechanical smell gates.
+* [Are “Solved Issues” in SWE-bench Really Solved Correctly? An Empirical Study](/dossiers/patchdiff-swe-bench-correctness.md) — Differential patch testing exposes regression escapes and behavioral divergence while separating incorrect fixes from underspecified or legitimate alternatives.
+* [UTBoost: Rigorous Evaluation of Coding Agents on SWE-Bench](/dossiers/utboost-rigorous-swe-bench.md) — Reviewed test augmentation and corrected result parsing reject 345 historical false-pass patch evaluations and change SWE-bench rankings.
+* [PGS: Effective LLM Code Refinement via Property-Oriented and Structurally Minimal Feedback](/dossiers/property-generated-solver-minimal-feedback.md) — Semantic property feedback and token-minimal counterexamples improve model repair, with property filtering and reporting limitations bounding the claims.
+* [Agentic Property-Based Testing: Finding Bugs Across the Python Ecosystem](/dossiers/agentic-property-based-testing.md) — Agent-mined properties uncover maintainer-accepted Python bugs, but selected-sample precision and intent ambiguity require independent triage.
+* [Test-Driven Development for Code Generation](/dossiers/test-driven-development-code-generation.md) — Supplied human tests improve held-out Python generation correctness in a staged rescue pipeline, with larger gains for Llama 3 and unresolved extra-attempt confounding.
+* [Structured Feedback Improves Repair in an LLM Agent Loop](/dossiers/veriharness-structured-feedback.md) — Paired TextWorld experiments attribute large repair gains to admissible alternatives rather than JSON syntax, while missed visible-test failures remain unrepairable.
+* [Does Fault Localization Beat a Fresh Attempt? A Placebo-Controlled Study of Test-Guided Code Repair](/dossiers/fault-localization-placebo-code-repair.md) — Matched-retry and random-span controls find localized infilling loses to fresh generation in tested code models, without establishing a preferred test granularity.
+* [SHERLOC: Structured Diagnostic Localization for Code Repair Agents](/dossiers/sherloc-structured-diagnostic-localization.md) — Repository locations plus actionable diagnosis improve several repair agents and reduce search cost, but misleading findings can hurt and quality filtering is retrospective.
 * [Towards a Science of Scaling Agent Systems](/dossiers/science-scaling-agent-systems.md) — Controlled six-benchmark comparison of coordination architectures, task alignment, capability saturation, and limited predictive transfer.
 * [Don't Build Multi-Agents](/dossiers/cognition-dont-build-multi-agents.md) — Cognition's June 2025 practitioner argument for decision continuity, shared traces, and history compression, contrasted with parallel research.
 * [When Instructions Multiply: Measuring and Estimating LLM Capabilities of Multiple Instructions Following](/dossiers/when-instructions-multiply.md) — ManyIFEval and StyleMBPP distinguish per-rule compliance from all-satisfied reliability, expose count-dependent judge inflation, and estimate joint success using count-only logistic regression.
@@ -440,6 +461,13 @@ timestamp: 2026-07-11T16:00:00Z
 
 ## Vault
 
+* [Implementation-Anchored Test Oracles](/vault/implementation-anchored-test-oracles.md)
+* [Context-Conditioned Test Adequacy](/vault/context-conditioned-test-adequacy.md)
+* [Concern-Directed Mutation Witnesses](/vault/concern-directed-mutation-witnesses.md)
+* [Dependency-Faithful Test Doubles](/vault/dependency-faithful-test-doubles.md)
+* [Contextual Test-Smell Triage](/vault/contextual-test-smell-triage.md)
+* [Minimal Property-Violation Feedback](/vault/minimal-property-violation-feedback.md)
+* [Test-Failure Localization for Agents](/vault/test-failure-localization-for-agents.md)
 * [Instruction-Density Compliance Decay](/vault/instruction-density-compliance-decay.md)
 * [Decomposed Checklist Evaluation](/vault/decomposed-checklist-evaluation.md)
 * [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)

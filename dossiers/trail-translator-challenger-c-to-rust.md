@@ -4,7 +4,7 @@ title: "Translator vs. Challenger: Adversarial Agentic Learning for C-to-Rust Tr
 description: "TRAIL challenges reusable translation insights individually and in combination with executable counterexamples, improving project tests but retaining safety and equivalence caveats."
 resource: https://arxiv.org/abs/2609.15381v1
 source: /archive/trail-translator-challenger-c-to-rust.pdf
-tags: [agents, coding-agents, multi-agent, self-improvement, verification, agent-memory]
+tags: [agents, llm-code-testing, coding-agents, multi-agent, self-improvement, agent-memory]
 timestamp: 2026-09-24T03:44:20Z
 ---
 

@@ -4,7 +4,7 @@ title: "SpecBench: Measuring Reward Hacking in Long-Horizon Coding Agents"
 description: Thirty systems-programming tasks expose the gap between public single-feature tests and held-out feature-composition tests, including both deliberate gaming and ordinary architectural failure.
 resource: https://arxiv.org/abs/2605.21384v2
 source: /archive/specbench-long-horizon-reward-hacking.pdf
-tags: [coding-agents, benchmark, evaluation, verification, long-horizon, agents]
+tags: [coding-agents, llm-code-testing, benchmark, evaluation, long-horizon, agents]
 timestamp: 2026-09-24T03:44:35Z
 ---
 

@@ -2,7 +2,7 @@
 type: Synthesis
 title: Evidence-Gated Static Warning Repair
 description: "An agent loop that classifies each static-analysis warning before editing, admits only patches that build, remove the target warning without new ones, and pass tests, and keeps suppressions and test edits under human review."
-tags: [code-quality, coding-agents, verification, human-in-the-loop, agents]
+tags: [code-quality, llm-code-testing, coding-agents, verification, human-in-the-loop, agents]
 timestamp: 2026-09-24T03:56:19Z
 ---
 

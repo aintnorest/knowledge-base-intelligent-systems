@@ -2,7 +2,7 @@
 type: Synthesis
 title: Oracle-Guided Failure Decomposition
 description: Replace selected components of a failing integrated candidate with a known-good implementation to isolate faults and assign independent investigations.
-tags: [agents, coding-agents, verification, decomposition, multi-agent]
+tags: [agents, llm-code-testing, coding-agents, verification, decomposition, multi-agent]
 timestamp: 2026-09-28T19:06:02Z
 ---
 

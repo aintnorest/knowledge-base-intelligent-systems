@@ -4,7 +4,7 @@ title: "AI-Driven Tools in Modern Software Quality Assurance: An Assessment of B
 description: "Journal study combining an AI-QA activity survey with small-scale acceptance-test generation and browser-agent regression experiments, including mutation-mask failures."
 resource: https://doi.org/10.15587/2706-5448.2025.330595
 source: /archive/ai-driven-software-quality-assurance-pysmennyi.pdf
-tags: [code-quality, agents, verification, evaluation, reliability, human-in-the-loop]
+tags: [code-quality, llm-code-testing, agents, evaluation, reliability, human-in-the-loop]
 timestamp: 2026-09-24T03:45:44Z
 ---
 

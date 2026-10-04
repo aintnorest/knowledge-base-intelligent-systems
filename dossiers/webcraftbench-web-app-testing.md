@@ -4,7 +4,7 @@ title: "WebCraftBench: Evaluating Web Application Generation from a Software Tes
 description: An interactive browser benchmark that separates coverage-guided exploration of generated web apps from evidence-based scoring of aesthetics, usability, and requirement alignment.
 resource: https://arxiv.org/abs/2609.15387v3
 source: /archive/webcraftbench-web-app-testing.pdf
-tags: [coding-agents, agents, computer-use, benchmark, evaluation, verification]
+tags: [coding-agents, llm-code-testing, agents, computer-use, benchmark, evaluation]
 timestamp: 2026-09-24T03:45:00Z
 ---
 

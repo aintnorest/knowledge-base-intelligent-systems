@@ -2,7 +2,7 @@
 type: Synthesis
 title: Safety-Constrained Regression Test Selection
 description: "Running only the tests affected by a change to shorten agent CI loops, while treating affected-test recall, not time saved, as the invariant and keeping a full-suite acceptance gate."
-tags: [verification, code-quality, coding-agents, reliability, agents]
+tags: [llm-code-testing, verification, code-quality, coding-agents, reliability, agents]
 timestamp: 2026-09-24T03:56:19Z
 ---
 

@@ -4,7 +4,7 @@ title: "The Verification Horizon: No Silver Bullet for Coding Agent Rewards"
 description: Qwen's four verifier designs show why test pass, static rubric scores, user feedback, and agentic judges each trade off scalability, fidelity to intent, and robustness under optimization.
 resource: https://arxiv.org/abs/2606.26300v2
 source: /archive/verification-horizon-coding-agent-rewards.pdf
-tags: [verification, coding-agents, reinforcement-learning, evaluation, reliability, agents]
+tags: [verification, llm-code-testing, coding-agents, reinforcement-learning, reliability, agents]
 timestamp: 2026-09-24T03:44:35Z
 ---
 

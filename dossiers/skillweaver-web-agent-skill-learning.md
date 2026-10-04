@@ -4,7 +4,7 @@ title: "SkillWeaver: Web Agents can Self-Improve by Discovering and Honing Skill
 description: "Web agents autonomously explore sites, turn successful Playwright trajectories into reusable Python APIs, then test and refine those APIs for reuse across agents."
 resource: https://arxiv.org/abs/2504.07079v1
 source: /archive/skillweaver-web-agent-skill-learning.pdf
-tags: [agents, agent-skills, self-improvement, computer-use, tool-use, verification]
+tags: [agents, llm-code-testing, agent-skills, self-improvement, computer-use, tool-use]
 timestamp: 2026-09-24T03:43:40Z
 ---
 

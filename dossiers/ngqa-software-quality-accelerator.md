@@ -4,7 +4,7 @@ title: "NGQA: Next-Gen Software Quality Accelerator using AI Agents and LLM Reas
 description: "ACM PROMISE 2026 pipeline combining SonarQube findings, RAG filtering, patching, repository mapping, local-agent test generation, and four-way testing across 70 repositories."
 resource: https://doi.org/10.1145/3803846.3807468
 source: /archive/ngqa-software-quality-accelerator.pdf
-tags: [code-quality, agents, coding-agents, verification, evaluation, reliability]
+tags: [code-quality, llm-code-testing, agents, coding-agents, evaluation, reliability]
 timestamp: 2026-09-24T03:45:44Z
 ---
 

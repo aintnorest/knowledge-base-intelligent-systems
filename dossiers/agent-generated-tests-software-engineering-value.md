@@ -4,7 +4,7 @@ title: Rethinking the Value of Agent-Generated Tests for LLM-Based Software Engi
 description: Trajectory analysis and paired prompt interventions finding that more self-authored test artifacts change coding-agent cost far more consistently than task resolution.
 resource: https://arxiv.org/abs/2602.07900v2
 source: /archive/agent-generated-tests-software-engineering-value.pdf
-tags: [coding-agents, verification, evaluation, agents, reliability]
+tags: [llm-code-testing, coding-agents, verification, evaluation, agents, reliability]
 timestamp: 2026-09-24T03:44:35Z
 ---
 

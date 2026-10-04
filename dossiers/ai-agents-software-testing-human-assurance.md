@@ -4,7 +4,7 @@ title: "AI agents in software testing: a human-in-the-loop assurance model"
 description: "Conceptual risk/control matrix for agent-generated tests and release gates: bounded autonomy, named approvers, evidence obligations, and escalation, without validated thresholds or performance data."
 resource: https://doi.org/10.46299/j.isjea.20260502.03
 source: /archive/ai-agents-software-testing-human-assurance.pdf
-tags: [agents, human-in-the-loop, governance, verification, coding-agents, reliability]
+tags: [llm-code-testing, agents, human-in-the-loop, governance, coding-agents, reliability]
 timestamp: 2026-09-24T03:48:01Z
 ---
 

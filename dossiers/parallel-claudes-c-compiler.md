@@ -4,7 +4,7 @@ title: Building a C compiler with a team of parallel Claudes
 description: Nicholas Carlini's first-hand autonomous compiler experiment, with isolated agent workspaces, oracle-driven fault localization, verifier engineering, and concrete capability limits.
 resource: https://www.anthropic.com/engineering/building-c-compiler
 source: /archive/parallel-claudes-c-compiler.html
-tags: [agents, coding-agents, multi-agent, long-horizon, verification, code-quality]
+tags: [agents, llm-code-testing, coding-agents, multi-agent, long-horizon, code-quality]
 timestamp: 2026-09-28T18:38:44Z
 ---
 

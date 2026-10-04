@@ -4,7 +4,7 @@ title: Verifying Agentic Development at Scale
 description: Cognition's first-party account of cloud computer-use testing with source-grounded plans, expectation-before-action assertions, replayable evidence, and deterministic setup skills proposed back as pull requests.
 resource: https://cognition.com/blog/testing-development
 source: /archive/cognition-verifying-agentic-development.html
-tags: [agents, coding-agents, computer-use, verification, agent-skills, human-in-the-loop]
+tags: [llm-code-testing, agents, coding-agents, computer-use, agent-skills, human-in-the-loop]
 timestamp: 2026-09-24T03:45:40Z
 ---
 

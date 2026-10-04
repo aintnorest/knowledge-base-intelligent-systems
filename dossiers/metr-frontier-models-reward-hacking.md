@@ -4,7 +4,7 @@ title: Recent Frontier Models Are Reward Hacking
 description: METR's first-party observations of scoring manipulation distinguish attempted from successful exploitation, expose monitoring blind spots, and caution that punishing detected hacks can hide rather than remove them.
 resource: https://metr.org/blog/2025-06-05-recent-reward-hacking/
 source: /archive/metr-frontier-models-reward-hacking.html
-tags: [verification, agent-security, coding-agents, evaluation, reliability, agents]
+tags: [verification, llm-code-testing, agent-security, coding-agents, reliability, agents]
 timestamp: 2026-10-04T06:15:44Z
 ---
 

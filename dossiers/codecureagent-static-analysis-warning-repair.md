@@ -4,7 +4,7 @@ title: "CodeCureAgent: Automatic Classification and Repair of Static Analysis Wa
 description: "Agentic classification and multi-file repair of SonarQube warnings with independent build, analyzer, and test acceptance gates; plausible versus manually correct fixes separated."
 resource: https://arxiv.org/abs/2509.11787v5
 source: /archive/codecureagent-static-analysis-warning-repair.pdf
-tags: [code-quality, agents, coding-agents, verification, reliability, human-in-the-loop]
+tags: [code-quality, llm-code-testing, agents, coding-agents, reliability, human-in-the-loop]
 timestamp: 2026-09-24T03:44:20Z
 ---
 

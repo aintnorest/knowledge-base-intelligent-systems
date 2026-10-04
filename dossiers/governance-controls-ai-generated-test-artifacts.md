@@ -4,7 +4,7 @@ title: Governance Controls for AI-Generated Test Artifacts in Autonomous Softwar
 description: "GATF wraps generated tests in validation, security, explanation, compliance, risk scoring, and audit controls, with substantial self-reported benchmark gains but limited experimental reproducibility detail."
 resource: https://arxiv.org/abs/2606.08806v1
 source: /archive/governance-controls-ai-generated-test-artifacts.pdf
-tags: [agents, governance, verification, evaluation, reliability, coding-agents]
+tags: [llm-code-testing, agents, governance, evaluation, reliability, coding-agents]
 timestamp: 2026-09-24T03:48:01Z
 ---
 

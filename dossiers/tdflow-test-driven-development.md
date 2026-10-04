@@ -4,7 +4,7 @@ title: "TDFlow: Agentic Workflows for Test Driven Development"
 description: A test-driven repository repair workflow that separates patch proposal, test-specific debugging, patch revision, and optional test generation, exposing the difference between solving trusted tests and writing them.
 resource: https://arxiv.org/abs/2510.23761v2
 source: /archive/tdflow-test-driven-development.pdf
-tags: [coding-agents, verification, orchestration, agents, evaluation]
+tags: [llm-code-testing, coding-agents, verification, orchestration, agents, evaluation]
 timestamp: 2026-09-24T03:44:35Z
 ---
 

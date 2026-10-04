@@ -4,7 +4,7 @@ title: "Grit: rewriting Git in Rust with agents"
 description: Scott Chacon's first-hand account of driving parallel and long-running coding agents to port Git to a library-first Rust implementation against Git's own test suite, with test gaming, a harness break misread as regression, coordination and resource friction, and cost-driven changes of strategy.
 resource: https://blog.gitbutler.com/true-grit
 source: /archive/gitbutler-grit-agent-git-port.html
-tags: [multi-agent, coding-agents, long-horizon, verification, orchestration, agents]
+tags: [multi-agent, llm-code-testing, coding-agents, long-horizon, orchestration, agents]
 timestamp: 2026-10-04T04:31:08Z
 ---
 

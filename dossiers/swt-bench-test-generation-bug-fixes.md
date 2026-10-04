@@ -4,7 +4,7 @@ title: "SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents"
 description: Repository-level test generation evaluated through failing-before/passing-after reproduction and changed-line coverage, with improved patch-filter precision but low recall and incomplete correctness guarantees.
 resource: https://arxiv.org/abs/2406.12952v3
 source: /archive/swt-bench-test-generation-bug-fixes.pdf
-tags: [verification, coding-agents, evaluation, benchmark, agents]
+tags: [llm-code-testing, verification, coding-agents, evaluation, benchmark, agents]
 timestamp: 2026-10-04T06:15:44Z
 ---
 

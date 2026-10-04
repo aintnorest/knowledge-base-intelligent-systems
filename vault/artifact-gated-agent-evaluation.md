@@ -2,8 +2,8 @@
 type: Synthesis
 title: Artifact-Gated Agent Evaluation
 description: Scoring an agent's final deliverable only after it satisfies explicit validity, safety, and provenance preconditions, then measuring quality with the most direct available signal.
-tags: [evaluation, verification, agents, computer-use]
-timestamp: 2026-07-14T16:06:03Z
+tags: [evaluation, llm-code-testing, verification, agents, coding-agents, computer-use]
+timestamp: 2026-10-04T07:48:26Z
 ---
 
 # Artifact-Gated Agent Evaluation
@@ -29,9 +29,9 @@ Keep references and evaluator-only state isolated from the acting agent. Make th
 For coding agents the admissible artifact is a *candidate change*, not a merged success.
 
 - **Candidate, not success.** A branch with lint and relevant CI results can be inspected. When a bounded retry budget runs out, keep the failed checks and escalate rather than relabel ([Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)).
-- **Protect the oracle.** Keep the patch author from editing trusted tests or verifier files. Require a failing-before/passing-after reproducer, unchanged regression behavior, and independent tests of feature composition. SpecBench's SQL case passes 100% of visible tests but only 35% of held-out composition cases, and a lookup-table compiler reaches 97% visible and 0% held-out ([Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)).
-- **Gate evidence before commitment.** ECLoop places a gate *before* consequential edits or submission, requiring task-specific repository observations first. Record audited fallback releases as not evidence-complete.
-- **Stack independent gates for maintenance patches.** For static-analysis repairs, gate on build, then an analyzer re-run showing the target warning gone with no new warnings, then tests. CodeCureAgent's ablations show each removed gate admits more false patches ([Evidence-Gated Static Warning Repair](/vault/evidence-gated-static-warning-repair.md)).
+- **Protect the oracle.** Keep the patch author from editing trusted tests or verifier files. Require a failing-before/passing-after reproducer for repairs, unchanged regression behavior, and independent tests of feature composition. A reported SQL case passes 100% of visible tests but only 35% of held-out composition cases, and a lookup-table compiler reaches 97% visible and 0% held-out ([Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)).
+- **Gate evidence before commitment.** Place a gate *before* consequential edits or submission, requiring task-specific repository observations first. Record audited fallback releases as not evidence-complete.
+- **Stack independent gates for maintenance patches.** For static-analysis repairs, gate on build, then an analyzer re-run showing the target warning gone with no new warnings, then tests. Reported ablations show each removed gate admits more false patches ([Evidence-Gated Static Warning Repair](/vault/evidence-gated-static-warning-repair.md)).
 - **Match the domain's acceptance surface.** Deploy and exercise reachable paths for a web app before judging screenshots. Check functional equivalence before post-place-and-route timing for RTL. Compare a causal-analysis script's extracted coefficient with a declared estimator, not merely confirm that it runs.
 - **Keep evidence types apart.** For UI changes, pair expectations written before each action with the observed screenshot or video, and mark untested assertions explicitly. A generated review report should keep executable test outcomes separate from model-written critique.
 
@@ -39,7 +39,18 @@ For milestone-based coding work, admit completion only after independent validat
 
 ## Generated Tests Are Artifacts Too
 
-An AI-generated test must itself be admissible before its green result counts as evidence. It should target the requested requirement, assert against an independent oracle, run reproducibly in a sandbox, and not come from the same producer that wrote both the behavior and its acceptance criterion. Track accepted tests by fault or mutation sensitivity as well as coverage, and prefer the cross-version checks in [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md). Repository-visible QA artifacts are common but are not effectiveness: 137 of 157 agent projects had conventional tests or specs, yet only 8 had explicit adversarial or prompt-injection test paths.
+An AI-generated test is a candidate evidence artifact, not its own acceptance authority. Separate these evidence layers rather than collapsing them into "has tests":
+
+- **Presence and execution validity:** the artifact exists, builds, reaches the intended boundary, and runs reproducibly in isolation. Test inclusion, merge outcomes, and double counts are inventory or workflow signals, not effectiveness.
+- **Oracle syntax:** an assertion or observable failure channel exists and propagates to the verdict. Syntax mining can triage missing checks but misses existing assertions outside a diff; interactions and reviewed snapshots can be valid contracts. More assertions, coverage, or fewer smell flags do not establish a stronger oracle.
+- **Independent expectation:** the protected outcome comes from reviewed requirements, domain laws, or another justified authority, not merely the implementation or its author's explanation. A fresh agent seeing the same faulty body can inherit the same premise.
+- **Measured fault sensitivity:** an unchanged check passes the trusted control and rejects a relevant fault for a behavioral reason. Use [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) for repairs and [Concern-Directed Mutation Witnesses](/vault/concern-directed-mutation-witnesses.md) for injected faults. Record reasoned sensitivity as reasoning, not execution; [Context-Conditioned Test Adequacy](/vault/context-conditioned-test-adequacy.md) explains why generator-level metric rankings are not candidate-level proof.
+
+A pass-on-current-code filter is legitimate **characterization**, not discovery of defects in that code. Preserve executable red candidates for authority-grounded diagnosis instead of discarding them or rewriting assertions to observed output. A test passing faulty code may still protect unaffected behavior; only the relevant two-sided result establishes defect discrimination. Repository-visible QA artifacts illustrate the inventory limit: 137 of 157 agent projects had conventional tests or specs, yet only 8 had explicit adversarial or prompt-injection test paths.
+
+Generated properties and standalone reproducers need the same gate. Check the input domain, the claimed law, reproduction, assertion propagation, and the actual violation independently of report plausibility. One property-mining audit found 28/50 valid and 16/50 reportable reports, sampled from the top 80% by initial score; its refined top-score subset is not held-out calibration. A rejected calendar interpretation and an appendix that swallowed assertion failures show why convincing reports are not executable assurance. Passing public examples filters some invalid properties but does not prove a universal law. See [Minimal Property-Violation Feedback](/vault/minimal-property-violation-feedback.md) for presenting validated failures to repair agents.
+
+Report **visible success, held-out success, failure detection, repair opportunity, and external acceptance** separately. A small code study records 15/15 visible first-attempt passes but only 14/15 hidden successes: the missed failure supplies no repair opportunity under any feedback policy. Another staged generation study reaches 52.82% public success versus 30.27% private success after rescue. Neither a green visible suite nor a merged patch validates all expectations. Require forbidden outcomes to remain reachable and falsifiable; preferences for fewer-longer tests or avoiding setup hooks remain practitioner guidance, not measured AI optima.
 
 For agent skills, the same discipline means running the same realistic task in fresh with-skill and without-skill sessions. Grade observable deliverables with quoted evidence, record tokens and duration next to pass rate, and discard assertions that pass equally either way ([Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)).
 
@@ -69,3 +80,18 @@ For agent skills, the same discipline means running the same realistic task in f
 - [TicTacBench: Benchmarking Timing Closure Capabilities of Coding Agents dossier](/dossiers/tictacbench-timing-closure-coding-agents.md) — post-place-and-route timing as the final gate for RTL repairs.
 - [CausalVerify: An Execution-Grounded Benchmark for LLM Causal Inference Workflows dossier](/dossiers/causalverify-execution-grounded-causal-inference.md) — executable but numerically wrong causal workflows (66 of 426).
 - [How Missions Work dossier](/dossiers/factory-missions-architecture.md) — prior behavioral contracts and fresh milestone validators found issues that became repair tasks in one long-running example.
+- [Design choices made by LLM-based test generators prevent them from finding bugs dossier](/dossiers/llm-test-generators-validate-bugs.md) — pass-and-coverage filtering excludes bug-revealing candidates and retains bug-validating suites.
+- [On the risk of coding before testing dossier](/dossiers/coding-before-testing-error-propagation.md) — faulty implementation context lowers detection relative to fresh specification-grounded generation.
+- [Evaluating and Mitigating the Misguidance Effect of Buggy Code dossier](/dossiers/buggy-code-test-misguidance.md) — distinguishes shared-behavior passes from pass-buggy/fail-fixed misguidance.
+- [All Smoke, No Alarm dossier](/dossiers/agent-authored-test-oracle-signals.md) — diff-level oracle syntax is triage, not complete-suite adequacy or measured sensitivity.
+- [Do Autonomous Agents Contribute Test Code? dossier](/dossiers/test-inclusion-agentic-pull-requests.md) — test presence and merge outcomes do not measure effectiveness.
+- [Testing with AI Agents dossier](/dossiers/ai-agent-test-frequency-quality-coverage.md) — structural assertion counts and coverage changes leave oracle correctness unmeasured.
+- [Are Coding Agents Generating Over-Mocked Tests? dossier](/dossiers/coding-agents-over-mocked-tests.md) — double prevalence does not establish boundary fidelity or harm.
+- [Mutation-Guided LLM-based Test Generation at Meta dossier](/dossiers/meta-ach-mutation-guided-tests.md) — generated tests carry baseline-pass/mutant-fail evidence independent of coverage gain.
+- [Do Coverage and Mutation Scores Correlate with Effectiveness? dossier](/dossiers/llm-test-metrics-replicability.md) — model-ranking proxies differ from individual-suite evidence.
+- [On the Diffusion of Test Smells dossier](/dossiers/llm-test-smell-diffusion.md) — lower assertion-smell rates can coexist with empty or assertion-free checks.
+- [Agentic Property-Based Testing dossier](/dossiers/agentic-property-based-testing.md) — score-selected validity audit, intended-behavior rejection, and swallowed appendix assertions require artifact review.
+- [PGS dossier](/dossiers/property-generated-solver-minimal-feedback.md) — public-example filtering improves but does not certify generated properties.
+- [Structured Feedback Improves Repair dossier](/dossiers/veriharness-structured-feedback.md) — 15 visible passes versus 14 hidden successes leave a missed failure without feedback.
+- [Test-Driven Development for Code Generation dossier](/dossiers/test-driven-development-code-generation.md) — visible and private outcomes diverge in a staged rescue pipeline.
+- [Testing principles dossier](/dossiers/kody-testing-principles.md) — live-path falsifiability is practitioner guidance; test length and hook preferences are unmeasured for AI.
