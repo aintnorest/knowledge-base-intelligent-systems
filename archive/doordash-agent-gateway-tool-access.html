@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<!-- Google Tag Manager -->
+	<script type="31a8c09c959e22bb9fee7954-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-K25TVW3');</script>
+	<!-- End Google Tag Manager -->
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v22.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How DoorDash Built a Centralized Gateway for AI Agent-Tool Access - DoorDash</title>
+	<meta name="description" content="How DoorDash built the Agent Gateway: one governed control plane where AI agents securely discover, authorize, and invoke internal and third-party tools." />
+	<link rel="canonical" href="https://careersatdoordash.com/blog/how-doordash-built-a-centralized-gateway-for-ai-agent-tool-access/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How DoorDash Built a Centralized Gateway for AI Agent-Tool Access - DoorDash" />
+	<meta property="og:description" content="How DoorDash built the Agent Gateway: one governed control plane where AI agents securely discover, authorize, and invoke internal and third-party tools." />
+	<meta property="og:url" content="https://careersatdoordash.com/blog/how-doordash-built-a-centralized-gateway-for-ai-agent-tool-access/" />
+	<meta property="og:site_name" content="DoorDash" />
+	<meta property="article:publisher" content="https://www.facebook.com/DoorDash/" />
+	<meta property="article:published_time" content="2026-07-30T20:43:12+00:00" />
+	<meta property="article:modified_time" content="2026-07-30T20:59:30+00:00" />
+	<meta property="og:image" content="https://careersatdoordash.com/wp-content/uploads/2026/07/agent-gateway-cover.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="600" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Siddarth Kodwani, Vasily Vlasov" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@DoorDash" />
+	<meta name="twitter:site" content="@DoorDash" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Siddarth Kodwani, Vasily Vlasov" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="12 minutes" />
+	<!-- / Yoast SEO plugin. -->
+
+
+
+<link rel="alternate" type="application/rss+xml" title="DoorDash &raquo; Feed" href="https://careersatdoordash.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="DoorDash &raquo; Comments Feed" href="https://careersatdoordash.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="DoorDash &raquo; How DoorDash Built a Centralized Gateway for AI Agent-Tool Access Comments Feed" href="https://careersatdoordash.com/blog/how-doordash-built-a-centralized-gateway-for-ai-agent-tool-access/feed/" />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://careersatdoordash.com/wp-includes/css/dist/block-library/style.min.css?ver=6.7.1' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--background: #f7f7f7;--wp--preset--color--foreground: #191919;--wp--preset--color--primary: #FF3008;--wp--preset--color--secondary: #FFC4FC;--wp--preset--color--tertiary: #F2D531;--wp--preset--color--gray: #6b6b6b;--wp--preset--color--light-gray: #F7F7F7;--wp--preset--color--yolk: #F2D531;--wp--preset--color--bouquet: #FFC4FC;--wp--preset--color--light-bouquet: #FFE8FE;--wp--preset--color--detergent: #80D8FF;--wp--preset--color--detergent-900: #005EA4;--wp--preset--color--motor-oil: #681109;--wp--preset--color--pinot-noir: #4C0C3A;--wp--preset--color--light-pinot-noir: #9A0558;--wp--preset--color--dark-green: #003135;--wp--preset--color--green: #00686e;--wp--preset--color--light-green: #17a3a9;--wp--preset--color--text: #191919;--wp--preset--color--red-5: #ff3008;--wp--preset--color--red-4: #eb1700;--wp--preset--color--red: #810b00;--wp--preset--color--red-3: #d91400;--wp--preset--color--red-2: #b71000;--wp--preset--color--flush: #fa7463;--wp--preset--color--flush-2: #fa9987;--wp--preset--color--flush-3: #f9beaa;--wp--preset--color--flush-4: #fcdacc;--wp--preset--color--flush-5: #fff1e7;--wp--preset--color--tide-pool: #003135;--wp--preset--color--tide-pool-2: #004c52;--wp--preset--color--tide-pool-3: #00686e;--wp--preset--color--tide-pool-4: #00838a;--wp--preset--color--tide-pool-5: #17a3a9;--wp--preset--color--sky: #62c0c3;--wp--preset--color--sky-2: #a1d8d9;--wp--preset--color--sky-3: #c5e8e9;--wp--preset--color--sky-4: #ddf4f4;--wp--preset--color--sky-5: #ecfbfb;--wp--preset--color--forest: #001206;--wp--preset--color--forest-2: #002f10;--wp--preset--color--forest-3: #004c1b;--wp--preset--color--forest-4: #3a744f;--wp--preset--color--forest-5: #578869;--wp--preset--color--sage: #689b7a;--wp--preset--color--sage-2: #87b396;--wp--preset--color--sage-3: #a7cab3;--wp--preset--color--sage-4: #c6e2cf;--wp--preset--color--sage-5: #e5f9eb;--wp--preset--color--caramel: #452700;--wp--preset--color--caramel-2: #643b00;--wp--preset--color--caramel-3: #835200;--wp--preset--color--caramel-4: #a16c00;--wp--preset--color--caramel-5: #bd8800;--wp--preset--color--lemon: #d5a600;--wp--preset--color--lemon-2: #e8c500;--wp--preset--color--lemon-3: #f0d73a;--wp--preset--color--lemon-4: #f9ef9a;--wp--preset--color--lemon-5: #faf4c2;--wp--preset--color--stone: #717069;--wp--preset--color--stone-2: #88877f;--wp--preset--color--stone-3: #a8a79a;--wp--preset--color--stone-4: #c7c6b7;--wp--preset--color--stone-5: #e7e5d9;--wp--preset--color--text-2: #666;--wp--preset--color--text-3: #b2b2b2;--wp--preset--color--text-4: #e7e7e7;--wp--preset--color--text-5: #f7f7f7;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 1291px;--wp--style--global--wide-size: 1291px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-gray-color{color: var(--wp--preset--color--gray) !important;}.has-light-gray-color{color: var(--wp--preset--color--light-gray) !important;}.has-yolk-color{color: var(--wp--preset--color--yolk) !important;}.has-bouquet-color{color: var(--wp--preset--color--bouquet) !important;}.has-light-bouquet-color{color: var(--wp--preset--color--light-bouquet) !important;}.has-detergent-color{color: var(--wp--preset--color--detergent) !important;}.has-detergent-900-color{color: var(--wp--preset--color--detergent-900) !important;}.has-motor-oil-color{color: var(--wp--preset--color--motor-oil) !important;}.has-pinot-noir-color{color: var(--wp--preset--color--pinot-noir) !important;}.has-light-pinot-noir-color{color: var(--wp--preset--color--light-pinot-noir) !important;}.has-dark-green-color{color: var(--wp--preset--color--dark-green) !important;}.has-green-color{color: var(--wp--preset--color--green) !important;}.has-light-green-color{color: var(--wp--preset--color--light-green) !important;}.has-text-color{color: var(--wp--preset--color--text) !important;}.has-red-5-color{color: var(--wp--preset--color--red-5) !important;}.has-red-4-color{color: var(--wp--preset--color--red-4) !important;}.has-red-color{color: var(--wp--preset--color--red) !important;}.has-red-3-color{color: var(--wp--preset--color--red-3) !important;}.has-red-2-color{color: var(--wp--preset--color--red-2) !important;}.has-flush-color{color: var(--wp--preset--color--flush) !important;}.has-flush-2-color{color: var(--wp--preset--color--flush-2) !important;}.has-flush-3-color{color: var(--wp--preset--color--flush-3) !important;}.has-flush-4-color{color: var(--wp--preset--color--flush-4) !important;}.has-flush-5-color{color: var(--wp--preset--color--flush-5) !important;}.has-tide-pool-color{color: var(--wp--preset--color--tide-pool) !important;}.has-tide-pool-2-color{color: var(--wp--preset--color--tide-pool-2) !important;}.has-tide-pool-3-color{color: var(--wp--preset--color--tide-pool-3) !important;}.has-tide-pool-4-color{color: var(--wp--preset--color--tide-pool-4) !important;}.has-tide-pool-5-color{color: var(--wp--preset--color--tide-pool-5) !important;}.has-sky-color{color: var(--wp--preset--color--sky) !important;}.has-sky-2-color{color: var(--wp--preset--color--sky-2) !important;}.has-sky-3-color{color: var(--wp--preset--color--sky-3) !important;}.has-sky-4-color{color: var(--wp--preset--color--sky-4) !important;}.has-sky-5-color{color: var(--wp--preset--color--sky-5) !important;}.has-forest-color{color: var(--wp--preset--color--forest) !important;}.has-forest-2-color{color: var(--wp--preset--color--forest-2) !important;}.has-forest-3-color{color: var(--wp--preset--color--forest-3) !important;}.has-forest-4-color{color: var(--wp--preset--color--forest-4) !important;}.has-forest-5-color{color: var(--wp--preset--color--forest-5) !important;}.has-sage-color{color: var(--wp--preset--color--sage) !important;}.has-sage-2-color{color: var(--wp--preset--color--sage-2) !important;}.has-sage-3-color{color: var(--wp--preset--color--sage-3) !important;}.has-sage-4-color{color: var(--wp--preset--color--sage-4) !important;}.has-sage-5-color{color: var(--wp--preset--color--sage-5) !important;}.has-caramel-color{color: var(--wp--preset--color--caramel) !important;}.has-caramel-2-color{color: var(--wp--preset--color--caramel-2) !important;}.has-caramel-3-color{color: var(--wp--preset--color--caramel-3) !important;}.has-caramel-4-color{color: var(--wp--preset--color--caramel-4) !important;}.has-caramel-5-color{color: var(--wp--preset--color--caramel-5) !important;}.has-lemon-color{color: var(--wp--preset--color--lemon) !important;}.has-lemon-2-color{color: var(--wp--preset--color--lemon-2) !important;}.has-lemon-3-color{color: var(--wp--preset--color--lemon-3) !important;}.has-lemon-4-color{color: var(--wp--preset--color--lemon-4) !important;}.has-lemon-5-color{color: var(--wp--preset--color--lemon-5) !important;}.has-stone-color{color: var(--wp--preset--color--stone) !important;}.has-stone-2-color{color: var(--wp--preset--color--stone-2) !important;}.has-stone-3-color{color: var(--wp--preset--color--stone-3) !important;}.has-stone-4-color{color: var(--wp--preset--color--stone-4) !important;}.has-stone-5-color{color: var(--wp--preset--color--stone-5) !important;}.has-text-2-color{color: var(--wp--preset--color--text-2) !important;}.has-text-3-color{color: var(--wp--preset--color--text-3) !important;}.has-text-4-color{color: var(--wp--preset--color--text-4) !important;}.has-text-5-color{color: var(--wp--preset--color--text-5) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-gray-background-color{background-color: var(--wp--preset--color--gray) !important;}.has-light-gray-background-color{background-color: var(--wp--preset--color--light-gray) !important;}.has-yolk-background-color{background-color: var(--wp--preset--color--yolk) !important;}.has-bouquet-background-color{background-color: var(--wp--preset--color--bouquet) !important;}.has-light-bouquet-background-color{background-color: var(--wp--preset--color--light-bouquet) !important;}.has-detergent-background-color{background-color: var(--wp--preset--color--detergent) !important;}.has-detergent-900-background-color{background-color: var(--wp--preset--color--detergent-900) !important;}.has-motor-oil-background-color{background-color: var(--wp--preset--color--motor-oil) !important;}.has-pinot-noir-background-color{background-color: var(--wp--preset--color--pinot-noir) !important;}.has-light-pinot-noir-background-color{background-color: var(--wp--preset--color--light-pinot-noir) !important;}.has-dark-green-background-color{background-color: var(--wp--preset--color--dark-green) !important;}.has-green-background-color{background-color: var(--wp--preset--color--green) !important;}.has-light-green-background-color{background-color: var(--wp--preset--color--light-green) !important;}.has-text-background-color{background-color: var(--wp--preset--color--text) !important;}.has-red-5-background-color{background-color: var(--wp--preset--color--red-5) !important;}.has-red-4-background-color{background-color: var(--wp--preset--color--red-4) !important;}.has-red-background-color{background-color: var(--wp--preset--color--red) !important;}.has-red-3-background-color{background-color: var(--wp--preset--color--red-3) !important;}.has-red-2-background-color{background-color: var(--wp--preset--color--red-2) !important;}.has-flush-background-color{background-color: var(--wp--preset--color--flush) !important;}.has-flush-2-background-color{background-color: var(--wp--preset--color--flush-2) !important;}.has-flush-3-background-color{background-color: var(--wp--preset--color--flush-3) !important;}.has-flush-4-background-color{background-color: var(--wp--preset--color--flush-4) !important;}.has-flush-5-background-color{background-color: var(--wp--preset--color--flush-5) !important;}.has-tide-pool-background-color{background-color: var(--wp--preset--color--tide-pool) !important;}.has-tide-pool-2-background-color{background-color: var(--wp--preset--color--tide-pool-2) !important;}.has-tide-pool-3-background-color{background-color: var(--wp--preset--color--tide-pool-3) !important;}.has-tide-pool-4-background-color{background-color: var(--wp--preset--color--tide-pool-4) !important;}.has-tide-pool-5-background-color{background-color: var(--wp--preset--color--tide-pool-5) !important;}.has-sky-background-color{background-color: var(--wp--preset--color--sky) !important;}.has-sky-2-background-color{background-color: var(--wp--preset--color--sky-2) !important;}.has-sky-3-background-color{background-color: var(--wp--preset--color--sky-3) !important;}.has-sky-4-background-color{background-color: var(--wp--preset--color--sky-4) !important;}.has-sky-5-background-color{background-color: var(--wp--preset--color--sky-5) !important;}.has-forest-background-color{background-color: var(--wp--preset--color--forest) !important;}.has-forest-2-background-color{background-color: var(--wp--preset--color--forest-2) !important;}.has-forest-3-background-color{background-color: var(--wp--preset--color--forest-3) !important;}.has-forest-4-background-color{background-color: var(--wp--preset--color--forest-4) !important;}.has-forest-5-background-color{background-color: var(--wp--preset--color--forest-5) !important;}.has-sage-background-color{background-color: var(--wp--preset--color--sage) !important;}.has-sage-2-background-color{background-color: var(--wp--preset--color--sage-2) !important;}.has-sage-3-background-color{background-color: var(--wp--preset--color--sage-3) !important;}.has-sage-4-background-color{background-color: var(--wp--preset--color--sage-4) !important;}.has-sage-5-background-color{background-color: var(--wp--preset--color--sage-5) !important;}.has-caramel-background-color{background-color: var(--wp--preset--color--caramel) !important;}.has-caramel-2-background-color{background-color: var(--wp--preset--color--caramel-2) !important;}.has-caramel-3-background-color{background-color: var(--wp--preset--color--caramel-3) !important;}.has-caramel-4-background-color{background-color: var(--wp--preset--color--caramel-4) !important;}.has-caramel-5-background-color{background-color: var(--wp--preset--color--caramel-5) !important;}.has-lemon-background-color{background-color: var(--wp--preset--color--lemon) !important;}.has-lemon-2-background-color{background-color: var(--wp--preset--color--lemon-2) !important;}.has-lemon-3-background-color{background-color: var(--wp--preset--color--lemon-3) !important;}.has-lemon-4-background-color{background-color: var(--wp--preset--color--lemon-4) !important;}.has-lemon-5-background-color{background-color: var(--wp--preset--color--lemon-5) !important;}.has-stone-background-color{background-color: var(--wp--preset--color--stone) !important;}.has-stone-2-background-color{background-color: var(--wp--preset--color--stone-2) !important;}.has-stone-3-background-color{background-color: var(--wp--preset--color--stone-3) !important;}.has-stone-4-background-color{background-color: var(--wp--preset--color--stone-4) !important;}.has-stone-5-background-color{background-color: var(--wp--preset--color--stone-5) !important;}.has-text-2-background-color{background-color: var(--wp--preset--color--text-2) !important;}.has-text-3-background-color{background-color: var(--wp--preset--color--text-3) !important;}.has-text-4-background-color{background-color: var(--wp--preset--color--text-4) !important;}.has-text-5-background-color{background-color: var(--wp--preset--color--text-5) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-gray-border-color{border-color: var(--wp--preset--color--gray) !important;}.has-light-gray-border-color{border-color: var(--wp--preset--color--light-gray) !important;}.has-yolk-border-color{border-color: var(--wp--preset--color--yolk) !important;}.has-bouquet-border-color{border-color: var(--wp--preset--color--bouquet) !important;}.has-light-bouquet-border-color{border-color: var(--wp--preset--color--light-bouquet) !important;}.has-detergent-border-color{border-color: var(--wp--preset--color--detergent) !important;}.has-detergent-900-border-color{border-color: var(--wp--preset--color--detergent-900) !important;}.has-motor-oil-border-color{border-color: var(--wp--preset--color--motor-oil) !important;}.has-pinot-noir-border-color{border-color: var(--wp--preset--color--pinot-noir) !important;}.has-light-pinot-noir-border-color{border-color: var(--wp--preset--color--light-pinot-noir) !important;}.has-dark-green-border-color{border-color: var(--wp--preset--color--dark-green) !important;}.has-green-border-color{border-color: var(--wp--preset--color--green) !important;}.has-light-green-border-color{border-color: var(--wp--preset--color--light-green) !important;}.has-text-border-color{border-color: var(--wp--preset--color--text) !important;}.has-red-5-border-color{border-color: var(--wp--preset--color--red-5) !important;}.has-red-4-border-color{border-color: var(--wp--preset--color--red-4) !important;}.has-red-border-color{border-color: var(--wp--preset--color--red) !important;}.has-red-3-border-color{border-color: var(--wp--preset--color--red-3) !important;}.has-red-2-border-color{border-color: var(--wp--preset--color--red-2) !important;}.has-flush-border-color{border-color: var(--wp--preset--color--flush) !important;}.has-flush-2-border-color{border-color: var(--wp--preset--color--flush-2) !important;}.has-flush-3-border-color{border-color: var(--wp--preset--color--flush-3) !important;}.has-flush-4-border-color{border-color: var(--wp--preset--color--flush-4) !important;}.has-flush-5-border-color{border-color: var(--wp--preset--color--flush-5) !important;}.has-tide-pool-border-color{border-color: var(--wp--preset--color--tide-pool) !important;}.has-tide-pool-2-border-color{border-color: var(--wp--preset--color--tide-pool-2) !important;}.has-tide-pool-3-border-color{border-color: var(--wp--preset--color--tide-pool-3) !important;}.has-tide-pool-4-border-color{border-color: var(--wp--preset--color--tide-pool-4) !important;}.has-tide-pool-5-border-color{border-color: var(--wp--preset--color--tide-pool-5) !important;}.has-sky-border-color{border-color: var(--wp--preset--color--sky) !important;}.has-sky-2-border-color{border-color: var(--wp--preset--color--sky-2) !important;}.has-sky-3-border-color{border-color: var(--wp--preset--color--sky-3) !important;}.has-sky-4-border-color{border-color: var(--wp--preset--color--sky-4) !important;}.has-sky-5-border-color{border-color: var(--wp--preset--color--sky-5) !important;}.has-forest-border-color{border-color: var(--wp--preset--color--forest) !important;}.has-forest-2-border-color{border-color: var(--wp--preset--color--forest-2) !important;}.has-forest-3-border-color{border-color: var(--wp--preset--color--forest-3) !important;}.has-forest-4-border-color{border-color: var(--wp--preset--color--forest-4) !important;}.has-forest-5-border-color{border-color: var(--wp--preset--color--forest-5) !important;}.has-sage-border-color{border-color: var(--wp--preset--color--sage) !important;}.has-sage-2-border-color{border-color: var(--wp--preset--color--sage-2) !important;}.has-sage-3-border-color{border-color: var(--wp--preset--color--sage-3) !important;}.has-sage-4-border-color{border-color: var(--wp--preset--color--sage-4) !important;}.has-sage-5-border-color{border-color: var(--wp--preset--color--sage-5) !important;}.has-caramel-border-color{border-color: var(--wp--preset--color--caramel) !important;}.has-caramel-2-border-color{border-color: var(--wp--preset--color--caramel-2) !important;}.has-caramel-3-border-color{border-color: var(--wp--preset--color--caramel-3) !important;}.has-caramel-4-border-color{border-color: var(--wp--preset--color--caramel-4) !important;}.has-caramel-5-border-color{border-color: var(--wp--preset--color--caramel-5) !important;}.has-lemon-border-color{border-color: var(--wp--preset--color--lemon) !important;}.has-lemon-2-border-color{border-color: var(--wp--preset--color--lemon-2) !important;}.has-lemon-3-border-color{border-color: var(--wp--preset--color--lemon-3) !important;}.has-lemon-4-border-color{border-color: var(--wp--preset--color--lemon-4) !important;}.has-lemon-5-border-color{border-color: var(--wp--preset--color--lemon-5) !important;}.has-stone-border-color{border-color: var(--wp--preset--color--stone) !important;}.has-stone-2-border-color{border-color: var(--wp--preset--color--stone-2) !important;}.has-stone-3-border-color{border-color: var(--wp--preset--color--stone-3) !important;}.has-stone-4-border-color{border-color: var(--wp--preset--color--stone-4) !important;}.has-stone-5-border-color{border-color: var(--wp--preset--color--stone-5) !important;}.has-text-2-border-color{border-color: var(--wp--preset--color--text-2) !important;}.has-text-3-border-color{border-color: var(--wp--preset--color--text-3) !important;}.has-text-4-border-color{border-color: var(--wp--preset--color--text-4) !important;}.has-text-5-border-color{border-color: var(--wp--preset--color--text-5) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='weglot-css-css' href='https://careersatdoordash.com/wp-content/plugins/weglot/dist/css/front-css.css?ver=4.3.0' media='all' />
+<link rel='stylesheet' id='new-flag-css-css' href='https://careersatdoordash.com/wp-content/plugins/weglot/app/styles/new-flags.css?ver=4.3.0' media='all' />
+<link rel='stylesheet' id='doordash-style-css' href='https://careersatdoordash.com/wp-content/themes/external-job-board/theme/style.css?ver=0.2.7' media='all' />
+<script src="https://careersatdoordash.com/wp-content/plugins/weglot/dist/front-js.js?ver=4.3.0" id="wp-weglot-js-js" type="31a8c09c959e22bb9fee7954-text/javascript"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://careersatdoordash.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.1" />
+<link rel='shortlink' href='https://careersatdoordash.com/?p=16701' />
+
+<link rel="icon" href="https://careersatdoordash.com/wp-content/uploads/2024/03/favicon@2x.png" sizes="32x32" />
+<link rel="icon" href="https://careersatdoordash.com/wp-content/uploads/2024/03/favicon@2x.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://careersatdoordash.com/wp-content/uploads/2024/03/favicon@2x.png" />
+<meta name="msapplication-TileImage" content="https://careersatdoordash.com/wp-content/uploads/2024/03/favicon@2x.png" />
+		<style id="wp-custom-css">
+			.page-id-12700 iframe {
+max-width: 600px; margin: auto;
+}
+.w-\[14px\] {
+width: 14px;
+}
+.inline-flex {
+	display: inline-flex
+}
+@media (min-width: 1024px) {
+.page-id-14651 .col-span-12.shadow.bg-white.fade:last-child .px-5 {
+	width: 60%;
+	margin: auto;
+}
+}
+.page-id-14651 .col-span-12.md\:col-span-6.shadow:last-child {
+	grid-column: span 12/span 12
+}
+@media (width >= 48rem) {
+  .md\:gap-y-0 {
+    row-gap: calc(var(--spacing) * 5);
+  }
+}
+
+#post-14651 section + section .md\:col-start-4.md\:col-span-6,
+#post-14651 section + section .md\:col-start-3 {
+	grid-column: span 12/span 12;
+	        grid-column-start: 1;
+}
+#post-14651 section + section .card--link--image.sm .card-bg {
+	height: 180px;
+	background-position: top -50px center;
+}
+.slug-ai-ml #masthead.bg-white,
+.slug-ai-ml #primary-menu.bg-white {
+background-color: #000;
+}
+.slug-ai-ml #content .text-primary,
+.slug-ai-ml #content .text-secondary {
+color: #FF3008;
+}
+.slug-ai-ml #content .btn:not(.btn-outline-blue):not(.btn-outline-pinot):not(.btn-outline-black):not(.btn-outline-white)  {
+background-color: #FF3008;
+}
+.slug-ai-ml #content .btn:not(.btn-outline-blue):not(.btn-outline-pinot):not(.btn-outline-black):hover {
+background-color: #CC0000;
+}
+
+.slug-ai-ml #content .btn.btn-outline-blue {
+background-color: #53a1fe
+}
+.slug-ai-ml #content .btn.btn-outline-blue:hover {
+background-color: transparent
+}
+.slug-ai-ml #content .btn.btn-outline-pinot {
+background-color: #9A0558
+}
+.slug-ai-ml #content .btn.btn-outline-pinot:hover {
+background-color: transparent
+}
+.slug-ai-ml #content .btn.btn-outline-black {
+background-color: transparent
+}
+.slug-ai-ml #content .btn.btn-outline-black:hover {
+background-color: #000
+}
+.page-template-career-area-ai .bg-white > .bg-background:first-of-type.relative {
+	display: none;
+}
+		</style>
+		</head>
+
+<body class="post-template-default single single-post postid-16701 single-format-standard wp-embed-responsive">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K25TVW3"
+				  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="page">
+	<a href="#content" class="sr-only">Skip to content</a>
+
+	
+<header id="masthead" class="bg-white relative z-40">
+	<div class="container px-5 h-[80px] flex items-center relative">
+		<div class="flex items-center">
+							<p><a href="https://careersatdoordash.com/" class="hover3d block"><img src="https://careersatdoordash.com/wp-content/themes/external-job-board/theme/images/doordash.png" alt="DoorDash" class="w-[181px]" /></a></p>
+					</div>
+
+		<nav id="site-navigation" class="grow flex justify-end"
+			 aria-label="Main Navigation">
+
+			<div
+				class="mobile-button mlg:hidden rounded-full h-[54px] w-[54px] flex justify-center items-center bg-black cursor-pointer">
+				<button class="hamburger hamburger--spin" type="button">
+				  <span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				  </span>
+				</button>
+			</div>
+
+			<div class="menu-primary-container"><ul id="primary-menu" class="w-full opacity-0 lg:opacity-100 bg-white absolute -left-full pb-4 mlg:pb-0 mlg:h-auto top-[80px] mlg:top-auto mlg:left-0 mlg:relative flex flex-col mlg:flex-row mlg:justify-end mlg:items-center transition-all duration-700" aria-label="submenu"><li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/mission-and-values/" class="menu-link">Mission &#038; Values</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/working-at-doordash/" class="menu-link">Working at DoorDash</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/belonging/" class="menu-link">Belonging</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://careersatdoordash.com/blog/" class="menu-link">Blogs</a>
+<ul class="sub-menu">
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/blog/" class="menu-link">Career Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/engineering-blog/" class="menu-link">Engineering Blog</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://careersatdoordash.com/career-areas/" class="menu-link">Career Areas</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page mlg:hidden"><a class="menu-link" href="https://careersatdoordash.com/career-areas/">Career Areas</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/analytics/" class="menu-link">Analytics</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/dashmart/" class="menu-link">DashMart</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/design/" class="menu-link">Design</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/finance/" class="menu-link">Finance</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/it/" class="menu-link">IT</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/marketing/" class="menu-link">Marketing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/people/" class="menu-link">People</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/policy-and-communications/" class="menu-link">Policy and Communications</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/product/" class="menu-link">Product</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/sales/" class="menu-link">Sales</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/strategy-operations/" class="menu-link">Strategy &amp; Operations</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/university-careers/" class="menu-link">University Careers</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://careersatdoordash.com/career-areas/engineering/" class="menu-link">Engineering</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page mlg:hidden"><a class="menu-link" href="https://careersatdoordash.com/career-areas/engineering/">Engineering</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/ai-ml/" class="menu-link">AI/ML</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="https://about.doordash.com/en-us/dot" class="menu-link">Autonomy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/doordash-air/" class="menu-link">DoorDash Air</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/career-areas/sevenrooms/" class="menu-link">SevenRooms</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="https://careersatdoordash.com/job-search/" class="menu-link">Search Jobs</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+	</div>
+</header><!-- #masthead -->
+
+	<div id="content">
+
+	<section id="primary">
+		<main id="main">
+
+			
+<article id="post-16701" class="post-16701 post type-post status-publish format-standard has-post-thumbnail hentry category-data-science-and-machine-learning category-engineering category-gen-ai tag-search-and-recommendations">
+    <section class="relative bg-white overflow-hidden">
+        <div class="px-5 md:px-20 py-20 m-auto grid grid-cols-12">
+            <div class="col-span-12">
+                <p class="text-sm lg:text-base text-detergent-900 font-bold pb-2">Blog</p>
+                <h1 class="text-lg lg:text-xl lg:text-[72px] text-detergent-900 font-bold h1-blog">How DoorDash Built a Centralized Gateway for AI Agent-Tool Access</h1>
+
+
+                <div class="mt-5 flex items-center">
+                    <p class="font-bold">
+                        July 30, 2026                    </p>
+                                            <div class="px-3">|</div>
+
+                                                
+                                                    <img alt='Siddarth Kodwani' src='https://careersatdoordash.com/wp-content/uploads/2026/07/SiddarthKodwaniAuthor.png' srcset='https://careersatdoordash.com/wp-content/uploads/2026/07/SiddarthKodwaniAuthor.png 2x' class='avatar avatar-96 photo avatar-default rounded-full w-10 h-10 object-cover me-3' height='96' width='96' decoding='async'/>                        <p class="font-bold me-8">Siddarth Kodwani</p>
+                                                    <img alt='Vasily Vlasov' src='https://careersatdoordash.com/wp-content/uploads/2026/07/vasilyv.png' srcset='https://careersatdoordash.com/wp-content/uploads/2026/07/vasilyv.png 2x' class='avatar avatar-96 photo avatar-default rounded-full w-10 h-10 object-cover me-3' height='96' width='96' decoding='async'/>                        <p class="font-bold me-8">Vasily Vlasov</p>                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="container px-5">
+        <div class="mb-10">
+            
+			<figure>
+				<img width="1200" height="600" src="https://careersatdoordash.com/wp-content/uploads/2026/07/agent-gateway-cover.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="How DoorDash Built a Centralized Gateway for AI Agent-Tool Access" decoding="async" fetchpriority="high" srcset="https://careersatdoordash.com/wp-content/uploads/2026/07/agent-gateway-cover.png 1200w, https://careersatdoordash.com/wp-content/uploads/2026/07/agent-gateway-cover-300x150.png 300w, https://careersatdoordash.com/wp-content/uploads/2026/07/agent-gateway-cover-1024x512.png 1024w, https://careersatdoordash.com/wp-content/uploads/2026/07/agent-gateway-cover-768x384.png 768w" sizes="(max-width: 1200px) 100vw, 1200px" />			</figure><!-- .post-thumbnail -->
+
+			        </div>
+
+        <div class="entry-content prose prose-doordash pb-20 max-w-none">
+            <!-- wp:paragraph -->
+<p>AI agents become useful when they can take action in real systems. At DoorDash, that means reaching internal APIs, engineering systems, observability platforms, ticketing systems, knowledge bases, and third-party SaaS products. The model context protocol (MCP) made those tools easier to expose by giving agents and servers a shared way to describe, discover, and invoke capabilities.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>As agents moved from experiments into real workflows, we ran into a different problem. While MCP standardized the shape of a tool call, it did not answer key production questions around that call:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Which agent is allowed to call this tool?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Which user, team, or service is it acting for?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Which credential should be used?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Which subset of tools should the agent even see?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>How do we revoke access?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>How do we know what happened after the call?</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>These questions grow quickly. A coding agent might need GitHub, Jira, code search, continuous integration (CI), observability, and docs. A third-party MCP server might expose hundreds of tools when a workflow needs only five. A user-facing agent might need a user's OAuth grant, while team automation should use a non-personal service principal. If each team solves these issues independently, every agent-tool pairing ends up with its own auth code, OAuth flow, secret handling, tool catalog, rate limits, and logs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>That’s why we built an Agent Gateway to make agent-tool access a platform capability. It is a single governed entry point where agents discover and invoke tools. The gateway authenticates the caller, checks authorization, exposes only the approved tool surface, injects the right credential, routes to the downstream MCP server, and records a structured usage event for every call.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The gateway is not just a proxy. It is the control plane for the agent ecosystem. It governs who can call tools, curates which tools agents can see, packages tools into task-oriented surfaces, and gives DoorDash one place to observe, rate-limit, revoke, and improve agent-tool access.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Problem: Tool access has three parts</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>While MCP helps agents invoke tools, the harder problem in production has three dimensions:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li>The first is access. The platform needs to know who is calling, whether they are allowed, and which credential model applies: internal identity, gateway-held token, per-user OAuth, or service-principal access.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The second is tool-surface curation. Agents should not receive a raw dump of every tool exposed by downstream MCP servers. Smaller, task-relevant catalogs improve safety, reduce model confusion, and make agents easier to operate.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The third is operations. Tool calls need rate limits, traces, metrics, usage events, cost attribution, ownership metadata, and production visibility.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Our Agent Gateway exists because access, curation, and operations belong in one shared platform, not copied into every agent and every MCP server.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Gateway architecture</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The gateway has two core pieces: a proxy and a registry, as shown in Figure 1 below. The proxy is the data plane; it receives each MCP request, authenticates the caller, authorizes the action, applies rate limits, injects credentials, forwards the request, and emits observability data. The registry is the control plane's source of truth; it stores agents, MCP servers, owners, transport configurations, auth modes, policies, discovered tool catalogs, and tool-surface configurations.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":16686,"width":"675px","height":"auto","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img src="https://careersatdoordash.com/wp-content/uploads/2026/07/image-22.png" alt="" class="wp-image-16686" style="width:675px;height:auto"/><figcaption class="wp-element-caption"><em>Figure 1: High Level Architecture of Agent Gateway</em></figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>This split gives the gateway a few properties that are hard to get from point-to-point integrations:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Agents use one consistent MCP endpoint pattern instead of learning every downstream server's auth and routing model.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Tool owners register capabilities once, attach ownership and policy, and see production usage.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Security teams get one place to enforce access, revoke grants, and audit calls.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Platform teams can improve the shared path once and have every agent inherit the improvement.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>We also keep internal and external trust boundaries separate. Internal DoorDash workflows and external-facing agentic use cases run through separate proxy planes with shared libraries and registry concepts. That contains the internet-facing blast radius and lets each auth model evolve independently.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Centralized identity, authorization, and secrets</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Every gateway request resolves to a caller: a user, a service, or an agent acting with delegated user context. That identity is carried through authorization, credential injection, routing, and observability so every downstream action can be attributed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The gateway checks authorization centrally. The policy questions do not stop with whether&nbsp; this caller can access this server. They may also be:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Can this agent access this server?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Can this user call this tool through this agent?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Can this tool be exposed in this environment?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Can this caller use a write-capable variant, or only a read-only one?</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Can this workflow use a team service principal, or does it require per-user OAuth?</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Because policy lives in the gateway, DoorDash has a single place to change access and revoke it. Tool owners avoid rebuilding authorization for every server, and agent builders avoid encoding security decisions in prompts or application code.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Credential handling follows the same pattern, as shown in Table 1:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><td><strong>Auth mode</strong></td><td><strong>Who holds the credential</strong></td><td><strong>What the gateway does</strong></td></tr><tr><td>Internal service identity</td><td>DoorDash infrastructure</td><td>Forwards verified caller context to internal services</td></tr><tr><td>Gateway-held token</td><td>Gateway secret storage</td><td>Injects a vendor or service token without exposing it to the agent</td></tr><tr><td>Per-user OAuth</td><td>Encrypted per-user grant store</td><td>Injects and refreshes the user's token for user-scoped actions</td></tr><tr><td>Service principal</td><td>Gateway-managed team principal</td><td>Mints or brokers short-lived non-personal credentials</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Agents should not hold raw credentials, such as vendor API keys, OAuth refresh tokens, or borrowed human grants for team automations. The gateway keeps those boundaries explicit and auditable.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Per-user OAuth without breaking the agent turn</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>User-scoped third-party tools need user authorization. Reading a user's docs, filing a ticket as that user, or updating SaaS data on their behalf cannot safely use a shared key. Before we deployed the gateway, each team tended to build its own OAuth flow, token storage, and "go connect first" experience.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The gateway centralizes the OAuth grant. The unit of access is scoped to the agent, user, and server. On the first call that requires authorization, the gateway starts the provider's OAuth flow, stores the resulting access and refresh encrypted tokens, and injects the user's token on future calls. Agents never see the raw token.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For clients that support MCP elicitation, the gateway can pause the tool call, ask the client to show a connection prompt, and resume the original call after the user authorizes it. For clients without elicitation support, it returns a structured authorization-required response with a connecting URL, as shown in Figure 2. This turns connection from a failed turn into a recoverable part of the tool call.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:image {"id":16684,"width":"685px","height":"auto","sizeSlug":"full","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-full is-resized"><img src="https://careersatdoordash.com/wp-content/uploads/2026/07/image-21.png" alt="" class="wp-image-16684" style="width:685px;height:auto"/><figcaption class="wp-element-caption"><em>Figure 2: Elicitation handshake</em></figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Curated tool surfaces: Bundles and filtering</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Agents do not naturally think in MCP servers. They think in tasks. A coding agent does not want GitHub, Jira, observability, and docs as separate setup steps; it wants the tool surface needed to investigate an issue, modify code, open a pull request, inspect CI, and understand production behavior.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>At the same time, most downstream MCP servers expose far more tools than any one agent should use. Third-party servers may publish hundreds of operations, including admin actions, destructive actions, billing APIs, and niche provider-specific features. Most DoorDash workflows need only a small approved subset of these.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The gateway solves both problems with curated tool surfaces, as shown in Figure 3. Bundles combine tools from multiple MCP servers into one logical MCP endpoint. Filters decide which tools from each server are exposed for a given bundle, agent, user group, environment, or audience.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For example, a developer-tools bundle can include:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>selected GitHub tools for repository and pull-request workflows;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>selected Jira tools for issue lookup and updates;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>selected observability tools for logs, metrics, and traces;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>selected code-search and documentation tools; and</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>selected deployment or feature-flag tools.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:image {"id":16704,"width":"826px","height":"auto","sizeSlug":"large","linkDestination":"none","align":"center"} -->
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="https://careersatdoordash.com/wp-content/uploads/2026/07/image-24-1024x683.png" alt="" class="wp-image-16704" style="width:826px;height:auto"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center"><em>Figure 3: User experience with bundled MCP pack</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The agent connects to one gateway URL, such as a developer-tools endpoint. Behind that URL, the gateway fans out tools/list across the servers in the bundle, applies authorization and tool filters, namespaces or aliases tool names where needed, and returns one coherent catalog. When the agent invokes tools/call, the gateway enforces policy again, routes the call to the correct downstream server, and applies that server's credential model.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This gives agents a product-quality interface instead of a raw dump of downstream capabilities, and includes such things as approved tools, stable names, clearer descriptions, ownership metadata, and audience-specific bundles. Engineering, data analysis, support operations, and external bundles can all use the same gateway primitives while exposing different tool surfaces.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The benefits are practical:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Agent setup is simpler: One gateway endpoint instead of many server endpoints.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Tool discovery is safer: Agents only see tools inside the approved boundary.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Model behavior improves: Smaller catalogs reduce irrelevant choices and tool confusion.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Authorization stays centralized: Discovery and invocation enforce the same policy.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>This is where the gateway becomes more than an access proxy. It shapes what agents can discover, what they can call, and how much irrelevant context they carry. A curated tool surface can be the difference between an agent that picks the right tool and one that wanders through an oversized API catalog.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Observability, cost attribution, and downstream protection</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Because every call flows through the gateway, each request can emit a structured event with:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>the server, tool, bundle, and owning team;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>the user, agent, service, and platform involved in the call;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>authorization result, status code, error source, and latency breakdown;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>request and response size; and</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>downstream-reported cost metadata when available.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The gateway also emits metrics for request volume, per-tool latency, authorization decisions, OAuth refresh outcomes, rate-limit decisions, streaming connections, and upstream failures. Trace propagation lets teams follow a call from the agent through the gateway to the downstream server.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This has direct operational value; security can audit access, platform teams can find noisy agents, tool owners can see adoption and errors, and infrastructure teams can attribute cost.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The same point protects downstream systems. Rate limits can be scoped by server, tool, caller, user, bundle, or caller type. New limits can run in shadow mode before enforcement, showing what would have been rejected without breaking production traffic.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The gateway turns governance into data instead of relying on every team to log the right fields and enforce the right limits.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Self-serve onboarding</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A gateway only works if teams prefer to use it rather than bypass it. Registration, discovery, filtering, and bundle management all must be self-serve.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Through the control-plane UI and API, teams can register MCP servers and agents, configure auth, discover tools, attach ownership, define filters, add tools to bundles, and inspect production usage.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The onboarding loop for the gateway follows these steps:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li>Register the MCP server.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Discover its raw tool catalog through tools/list.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Select and approve the tools DoorDash wants to expose.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Attach auth mode, ownership, and policy.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Add the approved tools to one or more bundles.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Watch traffic, latency, errors, authorization decisions, and cost.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Governance that requires tickets does not scale. The paved road has to be easier than copying a secret into an agent and connecting directly to a server.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What changed</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The gateway gives each group a different benefit:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Agent builders get one integration, one curated catalog, and no downstream auth, OAuth, secret handling, or per-tool routing.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Tool owners get a managed distribution path with access control, approved tool exposure, and production usage data.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Security teams get centralized policy, secrets, OAuth grants, revocation, and audit trails.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Platform teams get leverage; identity, rate limiting, observability, tool quality, cost attribution, and builder experience all improve in one place.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Agents get smaller catalogs, clearer tool names, task-oriented bundles, fewer irrelevant choices, and recoverable connection flows.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Adoption</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Adoption is the real test of a platform: teams only route through it if it's easier than going direct. By that measure, the Agent Gateway has become the default path for agent–tool access across DoorDash engineering:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>More than 200 MCP servers are registered behind the gateway, together exposing thousands of tools curated into approved, task-scoped subsets rather than raw catalogs.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>More than 30 agents and services, used by thousands of employees, reach those tools through the gateway and none of them handle raw credentials.&nbsp;</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Millions of tool calls every week are routed through the Agent Gateway, with each one authenticated, authorized, and recorded as a structured usage event.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Onboarding is self-serve and fast. Registering a new MCP server and its tools takes minutes, and pointing an agent at an already-registered tool is even faster.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Lessons learned</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Building and scaling the gateway reshaped how we think about agent–tool access. A few lessons stand out, not just at DoorDash:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>MCP solves invocation, not governance. Identity, policy, secrets, curation, observability, and revocation become the hard parts.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The discovered tool catalog is an interface, which means that names, descriptions, filtering, grouping, and audience matter.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Bundles are the right unit for workflows. Agents need task-oriented toolkits, not server lists.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Tool filtering improves both security and agent quality by exposing a smaller, clearer set of actions.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Credentials belong in the gateway, where they can be rotated, audited, and revoked centrally.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Missing OAuth grants are normal states, not exceptions, handling connection inside the protocol.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>The governed path must be self-serve or teams instead will go direct.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What's next</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The next major investment will be in stronger agent identity and user delegation. The target model gives every agent a cryptographic identity and lets the gateway mint short-lived delegated credentials scoped to the user, agent, task, and target tool. That gives the audit trail two real principals: the user and the agent.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>We are also investing in builder tooling, including quality and security report cards, checks for risky tool descriptions, detection of secrets or personally identifiable information in errors, scaffolded server creation, automatic registration, dynamic tool discovery, and redacted tool-call event streams for analytics and compliance.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Dynamic discovery continues the same theme. Instead of giving an agent every tool in a bundle, the gateway can use task context, policy, and usage signals to surface only the tools likely to be useful for the current job.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Conclusion</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Agent Gateway turns agent-tool access from repeated integration work into a shared platform capability. MCP made it easier to describe and invoke tools; the gateway makes that access governed, curated, observable, and scalable.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Acknowledgements</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><em>GenAI Platform:</em><a href="https://doordash.enterprise.slack.com/team/U02Q5HW5WAJ"> </a><a href="/cdn-cgi/l/email-protection#1c6f7f74756870696e747d6e75787d6f5c7873736e787d6f74327f7371">Swaroop Chitlur</a> <a href="/cdn-cgi/l/email-protection#fd8f888a9c93d39a98989a9c939c9a98bd999891948b988f9292d39e92d38896">Ruwan Geeganage</a> <a href="/cdn-cgi/l/email-protection#1574787467717070653b7e6078746755717a7a677174667d3b767a78">Amardeep Kumar</a> <a href="/cdn-cgi/l/email-protection#244e45474b460a4841524156644041484d5241564b4b0a474b0a514f">Jacob Lever</a> <a href="/cdn-cgi/l/email-protection#98e1f1b6f4fdfdd8fcfdf4f1eefdeaf7f7b6fbf7b6edf3">Yi Lee</a> <a href="/cdn-cgi/l/email-protection#42282d2a2c232c362a2d2c3b6c2637262f27312a0226272e2b3427302d2d6c212d6c3729">John Dudmesh</a> <a href="/cdn-cgi/l/email-protection#472d2e2a2a3e69342e29232f30262307232828352326342f6924282a">Jimmy Sindhwad</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><em>Identity/Auth team:</em><a href="https://doordash.enterprise.slack.com/team/U049KMH2T0S"> </a><a href="/cdn-cgi/l/email-protection#fe9c8c9f909a9190d0939f848b8cbe9a91918c9a9f8d96d09d9193">Brandon Mazur</a> <a href="/cdn-cgi/l/email-protection#14777c617a647d3a777c757a7354707b7b667075677c3a777b79">Chunpi Chang</a> <a href="/cdn-cgi/l/email-protection#7c1b1d1218141552081d18150c1d0e0814153c1813130e181d0f14521f1311">Gandhi Amarnadh Tadiparthi</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><em>Traffic:</em><a href="/cdn-cgi/l/email-protection#1c787d6e6f747568327b7d6a747d72795c7873736e787d6f74327f7371">Darshit Gavhane</a> <a href="/cdn-cgi/l/email-protection#fb9e899295d5918e888f92989ebb9f9494899f9a8893d5989496">Erin Justice</a></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->        </div><!-- .entry-content -->
+        
+                
+                    <!--begin code -->
+
+                    
+                    <div class="pp-multiple-authors-boxes-wrapper pp-multiple-authors-wrapper pp-multiple-authors-layout-boxed multiple-authors-target-shortcode box-post-id-12509 box-instance-id-1 ppma_boxes_12509"
+                    data-post_id="12509"
+                    data-instance_id="1"
+                    data-additional_class="pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode"
+                    data-original_class="pp-multiple-authors-boxes-wrapper pp-multiple-authors-wrapper box-post-id-12509 box-instance-id-1">
+                                                                                    <h2 class="widget-title box-header-title">About the Authors</h2>
+                                                                            <span class="ppma-layout-prefix"></span>
+                        <div class="ppma-author-category-wrap">
+                                                                                                                                    <span class="ppma-category-group ppma-category-group-1 category-index-0">
+                                                                                                                        <ul class="pp-multiple-authors-boxes-ul author-ul-0">
+                                                                                                                                                                                                                                                                                                
+                                                                                                                    <li class="pp-multiple-authors-boxes-li author_index_0 author_siddarth-kodwani has-avatar">
+                                                                                                                                                                                    <div class="pp-author-boxes-avatar">
+                                                                    <div class="avatar-image">
+                                                                                                                                                                                                                <img alt='Siddarth_Kodwani_DoorDash_Software_Engineer' src='https://careersatdoordash.com/wp-content/uploads/2026/07/SiddarthKodwaniAuthor.png' srcset='https://careersatdoordash.com/wp-content/uploads/2026/07/SiddarthKodwaniAuthor.png' class='multiple_authors_guest_author_avatar avatar' height='80' width='80'/>                                                                                                                                                                                                            </div>
+                                                                                                                                    </div>
+                                                            
+                                                            <div class="pp-author-boxes-avatar-details">
+                                                                                                                                                                                                                                                                        <p class="pp-author-boxes-description multiple-authors-description author-description-0">
+                                                                                                                                                    Siddarth Kodwani is a Tech Lead Engineer at DoorDash where he focuses on Generative AI platform                                                                                                                                                </p>
+                                                                                                                                
+                                                                                                                                
+                                                                                                                            </div>
+                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                                
+                                                                                                                    <li class="pp-multiple-authors-boxes-li author_index_1 author_vasily-vlasov has-avatar">
+                                                                                                                                                                                    <div class="pp-author-boxes-avatar">
+                                                                    <div class="avatar-image">
+                                                                                                                                                                                                                <img alt='' src='https://careersatdoordash.com/wp-content/uploads/2026/07/vasilyv.png' srcset='https://careersatdoordash.com/wp-content/uploads/2026/07/vasilyv.png' class='multiple_authors_guest_author_avatar avatar' height='80' width='80'/>                                                                                                                                                                                                            </div>
+                                                                                                                                    </div>
+                                                            
+                                                            <div class="pp-author-boxes-avatar-details">
+                                                                                                                                                                                                                                                                        <p class="pp-author-boxes-description multiple-authors-description author-description-1">
+                                                                                                                                                    Vasily Vlasov is a Principal Engineer at DoorDash.
+                                                                                                                                                </p>
+                                                                                                                                
+                                                                                                                                
+                                                                                                                            </div>
+                                                                                                                                                                                                                        </li>
+                                                                                                                                                                                                                                    </ul>
+                                                                            </span>
+                                                                                                                        </div>
+                        <span class="ppma-layout-suffix"></span>
+                                            </div>
+                    <!--end code -->
+                    
+                
+                                <style>
+                    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .box-header-title {
+        font-size: 25px !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .box-header-title {
+        font-weight: 500 !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .box-header-title {
+        color: #00686e !important; 
+    }
+
+.pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-author-boxes-avatar img { 
+        width: 80px !important; 
+        height: 80px !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-author-boxes-avatar img {
+        border-style: none !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-author-boxes-avatar img {
+        border-radius: 50% !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-author-boxes-name a {
+        color: #000000 !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-author-boxes-meta a {
+        background-color: #00838a !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-author-boxes-meta a {
+        color: #ffffff !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-author-boxes-meta a:hover {
+        color: #ffffff !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-author-boxes-recent-posts-title {
+        border-bottom-style: dotted !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-multiple-authors-boxes-li {
+        border-style: solid !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-multiple-authors-boxes-li {
+        border-width: 1px !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-multiple-authors-boxes-li {
+        border-color: #999 !important; 
+    }
+
+    .pp-multiple-authors-boxes-wrapper.pp-multiple-authors-layout-boxed.multiple-authors-target-shortcode .pp-multiple-authors-boxes-li {
+        color: #3c434a !important; 
+    }
+
+            </style>
+        
+        
+        <div class="py-20">
+            <div class="grid grid-cols-12 items-center bg-line fade">
+                <div class="col-span-6 md:col-span-4 lg:col-span-2 relative z-10">
+                    <h2 class="text-tide-pool-3 text-lg font-bold bg-white pe-5 inline-block">Related Jobs</h2>
+                </div>
+                <div
+                    class="col-span-6 md:col-span-4 md:col-start-9 lg:col-span-2 lg:col-start-11 text-end relative z-10">
+                    <div class="bg-white pl-5 inline-block">
+                        <a href="https://careersatdoordash.com/job-search/?department=Engineering "
+                           class="btn btn-green">View All Jobs</a>
+                    </div>
+                </div>
+                <div class="col-span-12 mt-10">
+                    <div class="job-item fade py-5 md:py-2 grid grid-cols-12 gap-5 text-center md:text-left">
+                    <div class="title-container col-span-12 md:col-span-4">
+                        <div class="value"><a href="https://careersatdoordash.com/jobs/staff-security-engineer-doordash-labs---air/8247159">Staff Security Engineer, DoorDash Labs - Air</a></div>
+                        <div class="label">Job ID: 3568308</div>
+                    </div>
+                    <div class="location-container col-span-12 md:col-span-4">
+                        <div class="label">Location</div>
+                        <div class="value-secondary">San Francisco, CA</div>
+                    </div>
+                    <div class="col-span-12 md:col-span-2">
+                                <div class="department-container">
+                                    <div class="label">Department</div>
+                                    <div class="value-secondary">Engineering</div>
+                                </div>
+                        </div>
+                    <div class="view-container col-span-12 md:col-span-2 flex items-center justify-end">
+                        <a href="https://careersatdoordash.com/jobs/staff-security-engineer-doordash-labs---air/8247159" class="btn inline-block">View Job <i class="fa-sharp fa-arrow-right icon"></i></a>
+                    </div>
+                </div><div class="job-item fade py-5 md:py-2 grid grid-cols-12 gap-5 text-center md:text-left">
+                    <div class="title-container col-span-12 md:col-span-4">
+                        <div class="value"><a href="https://careersatdoordash.com/jobs/software-engineer-machine-learning-all-levels-all-teams/5635021">Software Engineer, Machine Learning (All Levels / All Teams)</a></div>
+                        <div class="label">Job ID: 2728442</div>
+                    </div>
+                    <div class="location-container col-span-12 md:col-span-4">
+                        <div class="label">Location</div>
+                        <div class="value-secondary">Sunnyvale, CA; San Francisco, CA; Seattle, WA; New York, NY</div>
+                    </div>
+                    <div class="col-span-12 md:col-span-2">
+                                <div class="department-container">
+                                    <div class="label">Department</div>
+                                    <div class="value-secondary">Engineering</div>
+                                </div>
+                        </div>
+                    <div class="view-container col-span-12 md:col-span-2 flex items-center justify-end">
+                        <a href="https://careersatdoordash.com/jobs/software-engineer-machine-learning-all-levels-all-teams/5635021" class="btn inline-block">View Job <i class="fa-sharp fa-arrow-right icon"></i></a>
+                    </div>
+                </div><div class="job-item fade py-5 md:py-2 grid grid-cols-12 gap-5 text-center md:text-left">
+                    <div class="title-container col-span-12 md:col-span-4">
+                        <div class="value"><a href="https://careersatdoordash.com/jobs/engineering-manager-consumer-promotion-experience/8238670">Engineering Manager, Consumer Promotion Experience</a></div>
+                        <div class="label">Job ID: 2728459</div>
+                    </div>
+                    <div class="location-container col-span-12 md:col-span-4">
+                        <div class="label">Location</div>
+                        <div class="value-secondary">New York, NY</div>
+                    </div>
+                    <div class="col-span-12 md:col-span-2">
+                                <div class="department-container">
+                                    <div class="label">Department</div>
+                                    <div class="value-secondary">Engineering</div>
+                                </div>
+                        </div>
+                    <div class="view-container col-span-12 md:col-span-2 flex items-center justify-end">
+                        <a href="https://careersatdoordash.com/jobs/engineering-manager-consumer-promotion-experience/8238670" class="btn inline-block">View Job <i class="fa-sharp fa-arrow-right icon"></i></a>
+                    </div>
+                </div><div class="job-item fade py-5 md:py-2 grid grid-cols-12 gap-5 text-center md:text-left">
+                    <div class="title-container col-span-12 md:col-span-4">
+                        <div class="value"><a href="https://careersatdoordash.com/jobs/software-engineer-full-stack---experimentation-platform/8236946">Software Engineer, Full Stack - Experimentation Platform</a></div>
+                        <div class="label">Job ID: 3564387</div>
+                    </div>
+                    <div class="location-container col-span-12 md:col-span-4">
+                        <div class="label">Location</div>
+                        <div class="value-secondary">San Francisco, CA; Sunnyvale, CA; Seattle, WA; New York, NY; Los Angeles, CA</div>
+                    </div>
+                    <div class="col-span-12 md:col-span-2">
+                                <div class="department-container">
+                                    <div class="label">Department</div>
+                                    <div class="value-secondary">Engineering</div>
+                                </div>
+                        </div>
+                    <div class="view-container col-span-12 md:col-span-2 flex items-center justify-end">
+                        <a href="https://careersatdoordash.com/jobs/software-engineer-full-stack---experimentation-platform/8236946" class="btn inline-block">View Job <i class="fa-sharp fa-arrow-right icon"></i></a>
+                    </div>
+                </div><div class="job-item fade py-5 md:py-2 grid grid-cols-12 gap-5 text-center md:text-left">
+                    <div class="title-container col-span-12 md:col-span-4">
+                        <div class="value"><a href="https://careersatdoordash.com/jobs/machine-learning-intern-phd---summer-2027/8233953">Machine Learning Intern (PhD) - Summer 2027</a></div>
+                        <div class="label">Job ID: 3550778</div>
+                    </div>
+                    <div class="location-container col-span-12 md:col-span-4">
+                        <div class="label">Location</div>
+                        <div class="value-secondary">San Francisco, CA;  Sunnyvale, CA ; New York City, NY; Seattle, WA</div>
+                    </div>
+                    <div class="col-span-12 md:col-span-2">
+                                <div class="department-container">
+                                    <div class="label">Department</div>
+                                    <div class="value-secondary">Engineering</div>
+                                </div>
+                        </div>
+                    <div class="view-container col-span-12 md:col-span-2 flex items-center justify-end">
+                        <a href="https://careersatdoordash.com/jobs/machine-learning-intern-phd---summer-2027/8233953" class="btn inline-block">View Job <i class="fa-sharp fa-arrow-right icon"></i></a>
+                    </div>
+                </div>                </div>
+            </div>
+        </div>
+
+        <div class="py-20">
+            <div class="grid grid-cols-12 items-center bg-line fade">
+                <div class="col-span-6 md:col-span-4 lg:col-span-2 relative z-10">
+                    <h2 class="text-tide-pool-3 text-lg font-bold bg-white pe-5 inline-block">Recent Blogs</h2>
+                </div>
+                <div
+                    class="col-span-6 md:col-span-4 md:col-start-9 lg:col-span-2 lg:col-start-11 text-end relative z-10">
+                    <div class="bg-white pl-5 inline-block">
+                        <a href="https://careersatdoordash.com/blog" class="btn btn-green">View All Blogs</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-10">
+                                                            <div class="fade h-full">
+    <a        href="https://careersatdoordash.com/blog/doordash-stance-ai-interviewing/"
+       class="card--link card--link--image group">
+        <div class="card-bg"
+             style="background-image: url(https://careersatdoordash.com/wp-content/uploads/2025/10/HH.2-scaled.jpg);"></div>
+
+        <p class="px-5 with-tags">Our stance on AI and Interviewing</p>
+        <div class="flex items-center flex-wrap px-4 pb-4 gap-2">
+                            <div
+                    class="bg-gray text-white text-xxs uppercase rounded-full px-3 py-1">culture</div>
+                            <div
+                    class="bg-gray text-white text-xxs uppercase rounded-full px-3 py-1">DoorDash</div>
+                    </div>
+        <svg class="group-hover:scale-[1.1] transition-all [transform-style:preserve-3d]"
+             xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <rect x="1.5978" y="1.64077" width="26.6147" height="25.8678" rx="12.9339" class="stroke-pinot-noir"
+                  stroke-width="1.96455"></rect>
+            <path
+                d="M15.3567 19.4941C14.755 20.0775 14.755 21.0234 15.3567 21.6069C15.9583 22.1903 16.9338 22.1903 17.5355 21.6069L23.698 15.631C24.2997 15.0476 24.2997 14.1017 23.698 13.5183L17.5355 7.54247C16.9338 6.95905 15.9583 6.95905 15.3567 7.54247C14.755 8.1259 14.755 9.07181 15.3567 9.65524L18.8892 13.0807L7.20226 13.0807C6.35139 13.0807 5.66162 13.7496 5.66162 14.5747C5.66162 15.3997 6.35139 16.0686 7.20226 16.0686L18.8892 16.0686L15.3567 19.4941Z"
+                class="fill-pinot-noir"></path>
+        </svg>
+    </a>
+</div>
+
+                                            <div class="fade h-full">
+    <a        href="https://careersatdoordash.com/blog/doordash-mexico-city-new-office-opening/"
+       class="card--link card--link--image group">
+        <div class="card-bg"
+             style="background-image: url(https://careersatdoordash.com/wp-content/uploads/2025/04/1.jpeg);"></div>
+
+        <p class="px-5 with-tags">DoorDash celebrates the vibrant culture of Mexico City with new office opening</p>
+        <div class="flex items-center flex-wrap px-4 pb-4 gap-2">
+                            <div
+                    class="bg-gray text-white text-xxs uppercase rounded-full px-3 py-1">culture</div>
+                            <div
+                    class="bg-gray text-white text-xxs uppercase rounded-full px-3 py-1">DoorDash</div>
+                    </div>
+        <svg class="group-hover:scale-[1.1] transition-all [transform-style:preserve-3d]"
+             xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <rect x="1.5978" y="1.64077" width="26.6147" height="25.8678" rx="12.9339" class="stroke-pinot-noir"
+                  stroke-width="1.96455"></rect>
+            <path
+                d="M15.3567 19.4941C14.755 20.0775 14.755 21.0234 15.3567 21.6069C15.9583 22.1903 16.9338 22.1903 17.5355 21.6069L23.698 15.631C24.2997 15.0476 24.2997 14.1017 23.698 13.5183L17.5355 7.54247C16.9338 6.95905 15.9583 6.95905 15.3567 7.54247C14.755 8.1259 14.755 9.07181 15.3567 9.65524L18.8892 13.0807L7.20226 13.0807C6.35139 13.0807 5.66162 13.7496 5.66162 14.5747C5.66162 15.3997 6.35139 16.0686 7.20226 16.0686L18.8892 16.0686L15.3567 19.4941Z"
+                class="fill-pinot-noir"></path>
+        </svg>
+    </a>
+</div>
+
+                                            <div class="fade h-full">
+    <a        href="https://careersatdoordash.com/blog/doordash-toronto-canada-new-office-opening/"
+       class="card--link card--link--image group">
+        <div class="card-bg"
+             style="background-image: url(https://careersatdoordash.com/wp-content/uploads/2025/03/2025-DOORDASHTORONTO-PhotoCassRudolphviaLUUPE-FINALS-06024.jpg);"></div>
+
+        <p class="px-5 with-tags">DoorDash enhances Canada presence with new Toronto office opening</p>
+        <div class="flex items-center flex-wrap px-4 pb-4 gap-2">
+                            <div
+                    class="bg-gray text-white text-xxs uppercase rounded-full px-3 py-1">culture</div>
+                    </div>
+        <svg class="group-hover:scale-[1.1] transition-all [transform-style:preserve-3d]"
+             xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <rect x="1.5978" y="1.64077" width="26.6147" height="25.8678" rx="12.9339" class="stroke-pinot-noir"
+                  stroke-width="1.96455"></rect>
+            <path
+                d="M15.3567 19.4941C14.755 20.0775 14.755 21.0234 15.3567 21.6069C15.9583 22.1903 16.9338 22.1903 17.5355 21.6069L23.698 15.631C24.2997 15.0476 24.2997 14.1017 23.698 13.5183L17.5355 7.54247C16.9338 6.95905 15.9583 6.95905 15.3567 7.54247C14.755 8.1259 14.755 9.07181 15.3567 9.65524L18.8892 13.0807L7.20226 13.0807C6.35139 13.0807 5.66162 13.7496 5.66162 14.5747C5.66162 15.3997 6.35139 16.0686 7.20226 16.0686L18.8892 16.0686L15.3567 19.4941Z"
+                class="fill-pinot-noir"></path>
+        </svg>
+    </a>
+</div>
+
+                                                </div>
+        </div>
+    </section>
+
+
+</article><!-- #post-${ID} -->
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	
+<footer id="colophon" class="bg-background">
+	<div class="container px-5 py-10">
+		<div class="grid grid-cols-6">
+			<div class="col-span-6 flex justify-center mb-10">
+				<div class="w-[170px]">
+											<a href="" class="block"><img src="https://careersatdoordash.com/wp-content/themes/external-job-board/theme/images/doordash.png" alt="DoorDash" class="" /></a>
+									</div>
+			</div>
+			<div class="col-span-6 mt-5 md:mt-0">
+									<nav aria-label="Footer Menu">
+						<div class="menu-footer-container"><ul id="menu-footer" class="footer-menu md:flex md:flex-wrap justify-between gap-5 text-center"><li id="menu-item-57" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-57"><a href="/">Careers Home</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="https://careersatdoordash.com/working-at-doordash/">Working at DoorDash</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61"><a href="https://careersatdoordash.com/belonging/">Belonging</a></li>
+<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="https://careersatdoordash.com/career-areas/">Career Areas</a></li>
+<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="https://careersatdoordash.com/university-careers/">University Careers</a></li>
+<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="https://careersatdoordash.com/blog/">Career Blog</a></li>
+<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a href="https://www.gem.com/form?formID=49e87e7d-3ed2-4d15-911c-58158e4a516e">Talent Network</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="https://careersatdoordash.com/job-search/">Search Jobs</a></li>
+<li id="menu-item-16455" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16455"><a href="https://careersatdoordash.com/wp-content/uploads/2026/06/Gem-BABL-Bias-Audit-Results-2-1.pdf">Gem BABL</a></li>
+</ul></div>					</nav>
+							</div>
+			<div class="col-span-6 mt-10">
+				<p class="text-[#B2B2B2] text-[14px] text-justify">Statement of Non-Discrimination: In keeping with our beliefs and goals, no employee or applicant will face discrimination or harassment based on: race, color, ancestry, national origin, religion, age, gender, marital/domestic partner status, sexual orientation, gender identity or expression, disability status, or veteran status. Above and beyond discrimination and harassment based on “protected categories,” we also strive to prevent other subtler forms of inappropriate behavior (i.e., stereotyping) from ever gaining a foothold in our office. Whether blatant or hidden, barriers to success have no place at DoorDash. We value a diverse workforce – people who identify as women, nonbinary or gender non-conforming, LGBTQIA+, American Indian or Native Alaskan, Black or African American, Hispanic or Latinx, Native Hawaiian or Other Pacific Islander, differently-abled, caretakers and parents, and veterans are strongly encouraged to apply. Thank you to the Level Playing Field Institute for this statement of non-discrimination.
+				</p>
+			</div>
+		</div>
+	</div>
+
+</footer><!-- #colophon -->
+
+<div class="bg-pinot-noir py-5">
+	<div class="container px-5">
+		<div class="grid grid-cols-6">
+			<div class="col-span-6 md:col-span-4 flex flex-col md:flex-row justify-between text-center font-bold text-[14px] mb-5 md:mb-0">
+				<a class="text-white hover:opacity-70" href="https://help.doordash.com/consumers/s/terms-and-conditions-us?language=en_US" target="_blank">Terms of Service</a>
+				<a class="text-white hover:opacity-70" href="https://help.doordash.com/consumers/s/privacy-policy-us?language=en_US" target="_blank">Consumer Privacy</a>
+				<a class="text-white hover:opacity-70" href="https://help.doordash.com/legal/document?type=ax-privacy-notice&region=US&locale=en-US" target="_blank">Applicant Privacy Notice</a>
+				<p class="text-white">&copy; 2026 DoorDash</p>
+			</div>
+			<div class="col-span-6 md:col-span-2 flex justify-center md:justify-end">
+				<a href="https://twitter.com/doordash?lang=en" target="_blank" class="hover:opacity-70"><svg class="w-[24px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path class="fill-white" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"/></svg></a>
+				<a href="https://www.facebook.com/DoorDash/" target="_blank" class="hover:opacity-70 ms-4"><svg class="w-[24px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path class="fill-white" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg></a>
+				<a href="https://www.instagram.com/doordash/?hl=en" target="_blank" class="hover:opacity-70 ms-4"><svg class="w-[24px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path class="fill-white" d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"/></svg></a>
+				<a href="https://www.linkedin.com/company/doordash/" target="_blank" class="hover:opacity-70 ms-4"><svg class="w-[24px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path class="fill-white" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+				<a href="https://www.youtube.com/channel/UCXQ7Gzszfuw84cEWGpKlFiQ" target="_blank" class="hover:opacity-70 ms-4"><svg class="w-[24px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path class="fill-white" d="M282 256.2l-95.2-54.1V310.3L282 256.2zM384 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm14.4 136.1c7.6 28.6 7.6 88.2 7.6 88.2s0 59.6-7.6 88.1c-4.2 15.8-16.5 27.7-32.2 31.9C337.9 384 224 384 224 384s-113.9 0-142.2-7.6c-15.7-4.2-28-16.1-32.2-31.9C42 315.9 42 256.3 42 256.3s0-59.7 7.6-88.2c4.2-15.8 16.5-28.2 32.2-32.4C110.1 128 224 128 224 128s113.9 0 142.2 7.7c15.7 4.2 28 16.6 32.2 32.4z"/></svg></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div><!-- #page -->
+
+			<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="31a8c09c959e22bb9fee7954-text/javascript">
+				(function(){let request = new XMLHttpRequest();
+					let url = 'ht' + 'tps:' + '//' + 'api.weglot.com/' + 'pageviews?api_key=' + 'wg_c9382f5ca6f3c96b00a385cbbf47e1369';
+					let data = JSON.stringify({
+							url: location.protocol + '//' + location.host + location.pathname,
+							language: document.getElementsByTagName('html')[0].getAttribute('lang'),
+							browser_language: (navigator.language || navigator.userLanguage)
+						}
+					);
+					request.open('POST', url, true);
+					request.send(data);
+				})();
+			</script>
+		<link rel='stylesheet' id='dashicons-css' href='https://careersatdoordash.com/wp-includes/css/dashicons.min.css?ver=6.7.1' media='all' />
+<link rel='stylesheet' id='multiple-authors-widget-css-css' href='https://careersatdoordash.com/wp-content/plugins/publishpress-authors/src/assets/css/multiple-authors-widget.css?ver=4.7.3' media='all' />
+<style id='multiple-authors-widget-css-inline-css'>
+:root { --ppa-color-scheme: #655997; --ppa-color-scheme-active: #514779; }
+</style>
+<link rel='stylesheet' id='multiple-authors-fontawesome-css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css?ver=4.7.3' media='all' />
+<script src="https://careersatdoordash.com/wp-content/themes/external-job-board/theme/js/script.min.js?ver=0.2.7" id="doordash-script-js" type="31a8c09c959e22bb9fee7954-text/javascript"></script>
+<script src="https://careersatdoordash.com/wp-includes/js/comment-reply.min.js?ver=6.7.1" id="comment-reply-js" async data-wp-strategy="async" type="31a8c09c959e22bb9fee7954-text/javascript"></script>
+
+<script type="31a8c09c959e22bb9fee7954-text/javascript">
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+
+	if (urlParams.has('source') || urlParams.has('utm_source') || urlParams.has('gh_src')) {
+		localStorage.setItem('ddURL', queryString);
+	}
+</script>
+<!--Weglot 4.3.0--><aside data-wg-notranslate="" class="country-selector weglot-dropdown close_outside_click closed weglot-default wg-" tabindex="0" aria-expanded="false" aria-label="Language selected: English"><ul role="none"></ul></aside> <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="31a8c09c959e22bb9fee7954-|49" defer></script></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1790883109 -->

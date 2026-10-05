@@ -2,7 +2,7 @@
 type: Synthesis
 title: Clarification Need Decision
 description: A decision rule for when an AI system should interrupt the user with a clarifying question versus resolve ambiguity internally, plus how to generate a bounded, answerable question once asking is warranted.
-tags: [human-in-the-loop, agents, retrieval]
+tags: [human-in-the-loop, requirements-engineering, agents, retrieval]
 timestamp: 2026-07-23T04:00:00Z
 ---
 
@@ -19,6 +19,10 @@ Ambiguity in an information-seeking request is not one thing. Distinguish:
 - **Genuine under-specification** — a required argument or parameter is simply missing (a time, a location, a value) and no amount of retrieval invents it. In tool-use agents this is the dominant real-world case: an analysis of real user instructions found 56% of tool-use failures came from instructions missing key information, versus 11–17% each from multiple-reference ambiguity, instruction errors, or requests beyond tool capability (Wang et al., "Learning to Ask," EMNLP 2025).
 
 Only the latter two categories are properly resolved by asking the user; a system that asks about the first category is asking a question it should have answered itself.
+
+Known requirements deliberately left out of a prompt are a different gap from unknown intent. The system need not ask the owner to rediscover a constraint it already holds; it must decide how to communicate and independently evaluate it without instruction overload. Keep the full acceptance set even when the instructed subset is smaller. See [Prompt Contingency](/vault/prompt-contingency.md).
+
+Domain unfamiliarity is not automatically owner-only intent. Validate settled terminology and standards scope before asking stakeholders to repair a reviewer's missing knowledge; [Domain-Grounded Requirements Review](/vault/domain-grounded-requirements-review.md) explains this boundary and the risk of leading elicitation.
 
 ## The Decision Rule
 
@@ -37,6 +41,11 @@ Once asking is warranted, the question should be scoped to what the ambiguity ac
 - **Ask one question at a time.** Across the datasets surveyed, the dominant setup selects or generates a single best next question per turn rather than a battery of questions, since retrieval gains taper and interruption cost compounds with each additional turn (Rahmani et al., ACL 2023 survey).
 - **Prefer a trained question policy over zero-shot prompting.** Fine-tuned clarification-question generators consistently beat zero-shot prompting of the same base model on downstream usefulness, both in open-domain search and in domain-specific settings like coding assistants (Wang et al., 2025, coding-assistant clarification study).
 
+## Selecting a Behavioral Question
+
+For programs or formalized requirements, [Disagreement-Selected Clarification](/vault/disagreement-selected-clarification.md) chooses **what to ask** from concrete behaviors that separate candidate interpretations. This does not replace the ask/proceed cost decision. In a 15-programmer study of curated small code-evaluation tasks, mean correct evaluation was 0.40 without tests, 0.84 with pass/fail questions, and 0.64 with expected-output questions; only pass/fail significantly improved accuracy over baseline. Cognitive-load means fell from 45.46 to 28.00 and 29.52, but task-time differences were not significant. These results support a reviewable question surface, not proven coding acceleration; mistaken answers can eliminate correct candidates, and benchmark gains assume perfect-oracle feedback.
+
+
 ## Practical Use
 
 Implement this as two gated stages, not one prompt instruction: (1) a lightweight ask/proceed classifier or VoI estimate that runs before any question is drafted, conditioned on ambiguity type and the cost of a wrong action in that context; (2) a question generator invoked only after stage 1 fires, constrained to a small, coherent facet set so the user can answer in one short turn. Log which ambiguity type triggered the ask, and audit false-negative "confidently wrong" answers and false-positive over-asks separately — they have different costs and different fixes.
@@ -48,6 +57,14 @@ A missing requirement may only surface after repository search or a failing test
 Real sessions show the imbalance the monitor targets. In SWE-chat, Claude Code proactively asked for clarification in about 1.1–2.6% of turns, while users gave soft pushback after roughly 39% and hard-interrupted 3.3–6.0%. The data are observational and set no ideal questioning rate. Offer intervention before expensive or irreversible branch choices, then check whether corrections are followed and whether human repair effort falls.
 
 Anthropic's forecast that agents will "learn when to ask for help" sits under the *Predictions* heading of its trends report. It is not a measured deployed capability. Until it is, encode explicit escalation rules for high-stakes changes and missing product intent (e.g. Always / Ask first / Never tiers). Stripe's two-CI-round cap is one such rule, and it is a workflow limit, not the model recognizing its own uncertainty.
+
+### Separate Detection, Acquisition, and Integration
+
+Evaluate three capacities independently: **deciding to ask**, **obtaining the missing information**, and **incorporating it into the artifact**. Mandatory interaction tests the latter two conditional on an imposed interruption; its repair gains cannot certify spontaneous calibrated asking. Detection can change with both model and encouragement strength, and stronger encouragement can worsen calibration rather than monotonically improve it.
+
+One repository-repair evaluation found detection accuracy of **89%** under strong encouragement for one model, **84%** under moderate encouragement for another, and **50% with 100% false negatives** for a third under ordinary prompts. These are model- and prompt-specific early-turn results, not a transferable asking threshold. Ask about unavailable intent, not repository-discoverable locations or implementation facts; more questions or retrieved text do not prove successful answer integration.
+
+The repair experiment imposed clarification and used a simulated answerer with the full issue, developer hints, and target-file knowledge. Such privileged information injection is not validated realistic-user behavior. Its prose and repair-performance figure contradict one another, so aggregate narrative gains should not be silently reconciled; model-specific budgets and a subset condition further limit comparisons.
 
 ## Limitations
 
@@ -74,3 +91,8 @@ Anthropic's forecast that agents will "learn when to ask for help" sits under th
 - [2026 Agentic Coding Trends Report dossier](/dossiers/anthropic-agentic-coding-trends-2026.md) — "agents learn when to ask for help" is a prediction.
 - [How to write a good spec for AI agents dossier](/dossiers/good-spec-ai-agents.md) — Always / Ask first / Never boundaries and read-only planning.
 - [Minions: Stripe’s one-shot, end-to-end coding agents—Part 2 dossier](/dossiers/stripe-minions-blueprints-and-ci.md) — deterministic escalation after the second failed CI run.
+- [LLM-Based Test-Driven Interactive Code Generation: User Study and Empirical Evaluation dossier](/dossiers/ticoder-test-driven-interactive-code-generation.md) — TiCoder's small user study distinguishes pass/fail question benefits from expected-output burden and idealized benchmark feedback.
+- [What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts dossier](/dossiers/prompt-underspecification-what-prompts-dont-say.md) — distinguishes known requirements omitted from instructions from intent that only the owner can supply.
+- [Ambig-SWE: Interactive Agents to Overcome Underspecificity in Software Engineering dossier](/dossiers/ambig-swe-interactive-agents-underspecificity-software-engineering.md) — peer-reviewed ICLR 2026 study separates detection, information acquisition, and patch integration; compulsory interaction, a privileged proxy, model/prompt dependence, and prose–figure discrepancies constrain claims.
+- [Requirements Ambiguity Detection and Explanation with LLMs: An Industrial Study dossier](/dossiers/requirements-ambiguity-detection-explanation-industrial-study.md) — domain-unfamiliarity false alarms motivate validating recoverable context before escalating owner-only intent.
+- [LLMREI: Automating Requirements Elicitation Interviews with LLMs dossier](/dossiers/llmrei-automating-requirements-elicitation-interviews.md) — student role-play shows that adaptive questioning can become leading suggestions; asking alone does not establish faithful intent acquisition.

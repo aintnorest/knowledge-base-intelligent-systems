@@ -31,6 +31,14 @@ A replication also documents an assertion switching from the intended true resul
 
 **Label characterization explicitly.** Pinning reviewed existing outputs can be useful before a refactor. A pass-on-current-code filter fits that purpose, not a claim to discover existing defects. For conformance or repair, preserve independently justified failures and evaluate unchanged tests across versions using [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md).
 
+## Reconstructing Repaired Behavior Is Different Evidence
+
+An explicit contract reconstructed from **already repaired code** can improve test generation without demonstrating independence from implementation. In one workshop experiment, existing tests were removed; agents were blinded to the issue, commit message, and patch diff, but could inspect the fixed implementation. Generated suites had to pass fixed code, then run unchanged on reverse-patched buggy code; detection required a behavioral failure rather than a build failure.
+
+This is meaningful historical fault-sensitivity evidence: contract-guided generation raised detect@5 **53.4%→63.2%**. It is not evidence that the same process resists learning faulty behavior when first exposed to buggy code, or discovers unknown production bugs. The repaired implementation already contains information about the corrected behavior, even when the agent never sees the repair history. Do not collapse that setting into independent expectations inferred while exposed to a fault.
+
+The intermediate contract makes expectations inspectable, not authorized; see [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md). Human review was not evaluated, all generated contract suggestions were accepted automatically, and defect-specific coverage was assessed by an issue-informed model judge. Narrow single-file historical fixes, one organization and generator family, removed tests, repeated attempts, and added inference limit transfer. A fixed-pass requirement in this design is paired with a separate buggy-version test; it is not equivalent to discarding every test that challenges current faulty code.
+
 ## Limits
 
 An inferred specification remains a proposal. Manual inspection found original-bug preservation in 48/318 (15.09%) and 66/318 (20.75%) generated specifications for the two inspected models. Have the requirement owner resolve consequential inferred behavior; do not let a generated docstring acquire acceptance authority. Iterative feedback can improve detection while also adding misguided tests.
@@ -46,3 +54,4 @@ Passing faulty code alone does not establish anchoring: valid tests of unaffecte
 - [Test-metrics replicability study](/dossiers/llm-test-metrics-replicability.md) — buggy-input assertion reversal and context-dependent coverage/fault-detection relationships.
 - [SWT-Bench](/dossiers/swt-bench-test-generation-bug-fixes.md) — candidate-patch exposure gives limited reproduction gains regardless of patch correctness; target-test context helps more.
 - [Rethinking the Value of Agent-Generated Tests](/dossiers/agent-generated-tests-software-engineering-value.md) — induced GPT-5.2 test creation changes cost without net resolution gains; it does not test oracle-independence interventions.
+- [Grounding AI Agents in Contracts: An Empirical Evaluation of Spec-Driven Test Generation dossier](/dossiers/grounding-ai-agents-contracts-spec-driven-test-generation.md) — SpecOps 2026 workshop study reconstructs contracts from human-fixed code while blinded to repair history, then measures unchanged fixed-pass/reverse-patched-fail suites; it does not evaluate unknown-bug discovery or resistance to faulty-code anchoring.

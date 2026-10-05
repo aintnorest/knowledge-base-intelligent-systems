@@ -42,6 +42,7 @@ pages, not tags.
 | `long-horizon` | Tasks spanning many steps or sessions: persistence, drift, long-running autonomy. |
 | `self-improvement` | Frozen-weights system evolution: agents improving their own prompts, memory, tools, or scaffold at deployment time. Contrast with `reinforcement-learning`. |
 | `human-in-the-loop` | Human oversight, approval, feedback, or collaboration inside agent workflows. |
+| `interaction-design` | How plans, alternatives, outputs, evidence, and advice are represented to and manipulated by people working with AI — editable plans and chains, direct manipulation, side-by-side alternatives, explanation and advice-timing designs, review scaffolds — and their measured effects. Not agent-only. Contrast `human-in-the-loop` (who intervenes or approves, and when); agent-facing tool interfaces belong to `agent-harness`. |
 
 ## Memory & Context
 
@@ -70,6 +71,7 @@ pages, not tags.
 | `chain-of-thought` | Explicit intermediate reasoning: CoT variants, self-consistency, when CoT helps or hurts. |
 | `reasoning` | Model reasoning ability beyond prompting mechanics: latent reasoning, budgets, failure modes. |
 | `decomposition` | Breaking problems into solvable parts: least-to-most, task splitting, subgoal structures. |
+| `requirements-engineering` | Eliciting, specifying, and validating what an LLM or agent should do: intent clarification, prompt and task underspecification, specification artifacts and their refinement, ambiguity/contradiction/coverage analysis, and acceptance criteria fixed before implementation. Contrast `prompting` (instruction mechanics generally), `verification` (checking outputs against a specification), and `llm-code-testing` (tests as artifacts). |
 
 ## Security
 

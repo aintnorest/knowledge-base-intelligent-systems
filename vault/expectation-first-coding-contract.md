@@ -2,7 +2,7 @@
 type: Synthesis
 title: Expectation-First Coding Contract
 description: "Recording trusted, agent-immutable expectations (acceptance criteria, reproducers, protected negative cases, and per-action predicted observations) before a coding agent acts, so that passing evidence cannot be redefined after the fact."
-tags: [llm-code-testing, coding-agents, code-quality, human-in-the-loop, reliability, agents]
+tags: [llm-code-testing, requirements-engineering, coding-agents, code-quality, human-in-the-loop, agents]
 timestamp: 2026-10-04T07:48:20Z
 ---
 
@@ -18,6 +18,14 @@ The same idea works at two granularities:
 For a long-horizon feature, write a finite contract of user-observable behavior **before** splitting the work into implementation milestones. Fresh validators can then exercise the running system against the prior contract as black-box users, instead of deriving acceptance from the worker's own implementation. This reduces anchoring but does not make an incomplete contract complete.
 
 Expectation-first means **expectation before interpretation**, not necessarily test before code. A fresh specification-grounded testing context can help even after implementation exists; a test-first label cannot rescue expectations inferred from the same faulty premise. [Implementation-Anchored Test Oracles](/vault/implementation-anchored-test-oracles.md) explains the measured context effects. An inferred specification is a proposal for its accountable owner, not new acceptance authority.
+
+## Inferred Contracts as Inspectable Scaffolds
+
+A contract inferred from code, documentation, and usage can organize behavioral descriptions, preconditions, postconditions, and untested cases **before test generation**. This makes omissions reviewable without making the inferred artifact an independent acceptance authority. Preserve the distinction between a scaffold reconstructed after implementation and owner-authorized expectations fixed before repair.
+
+In a workshop study on **90 historical bugs**, agents saw repaired code, with existing tests removed and issue and patch information withheld. Tests had to pass that code and fail behaviorally when run unchanged on its reverse-patched buggy version. Contract-guided generation raised **detect@5 from 53.4% to 63.2%** and mean branch coverage **46.4%→48.9%**; mean line coverage did not improve (**74.8%→74.4%**), and detect@1's gain was not significant. Table-reported total tokens increased **38.0%**, with minor unresolved prose/table token discrepancies. This is greater historical sensitivity under repeated attempts, not cost-matched superiority or demonstrated discovery from faulty code.
+
+Judge-assessed **defect-specific contract coverage** reached **78.9% at five attempts**, but that is recall of the expectation for the known target bug, not coverage of all intended behavior. A covered expectation can still become ineffective tests through weak inputs, omitted scenarios, or assertions. Separate specification omissions from test-generation failures, and review hallucinated or overrestrictive conditions as well as missing ones. Human curation was supported by the design but omitted from the experiment; its benefit remains unmeasured.
 
 ## Practical Use
 
@@ -40,6 +48,8 @@ A negative test states what must *not* succeed. Its deliberately invalid credent
 A repository-repair study reports 94.3% resolution with supplied human-authored tests versus 68.0% in its generated-test condition (the abstract says 69.8%). A separate paired intervention on 500 tasks induced tests on 322 additional tasks, but resolution stayed at 359/500 while output tokens rose 19.8%. These answer different questions: a trusted expectation supplied *before* repair, versus an agent producing extra test files on its own. Other studies show that complete visible feature tests can miss composed behavior and self-written formal specifications can omit task requirements. A useful contract is externally meaningful and open to challenge, not self-certified.
 
 Tests also serve as **generation-time specification context**, not just post-generation evidence. In a staged Python synthesis pipeline, supplied human examples increased private correctness from 69.67% to 82.45% on 399 tasks for the main model. Examples clarify signatures, boundaries, formulas, and input/output conventions. Because failed tasks received another attempt, the design does not isolate the causal effect of test context from extra generation opportunities. Retain held-out checks: satisfying supplied examples does not establish general conformance.
+
+User-approved generated tests can also form a **partial specification for candidate selection**: execute the reviewed behavior against sampled programs to prune and rerank them before acceptance, rather than merely appending tests to a prompt. [Disagreement-Selected Clarification](/vault/disagreement-selected-clarification.md) explains how to choose those questions. User review supplies intent authority but is fallible: a mistaken answer can prune correct code. Report perfect-oracle benchmark gains separately from human feedback, and retain independent acceptance beyond the approved examples.
 
 For repair, [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) distinguishes reproduction from shared behavior and bug validation. A successful reproducing suite needs at least one fail-before/pass-after test and no post-repair failures, unchanged across versions. Applicability and changed-line coverage do not prove reproduction. One generated-test filter raised repair precision to 47.8% at only 20% recall, under criteria not identical to that stricter suite rule; report both rather than treating filtering as self-certification.
 
@@ -75,3 +85,5 @@ A human-written test can be wrong, incomplete or tied too closely to one impleme
 - [Testing with AI Agents](/dossiers/ai-agent-test-frequency-quality-coverage.md) — two-versus-one median assertions without measured oracle validity or fault detection.
 - [Test-Driven Development for Code Generation](/dossiers/test-driven-development-code-generation.md) — TGen supplies human tests as prompt constraints, with private validation and extra-attempt confounding.
 - [Testing principles](/dossiers/kody-testing-principles.md) — kody supplies practitioner rationale for independent expectations and live negative intent, not empirical validation of its entire style.
+- [LLM-Based Test-Driven Interactive Code Generation: User Study and Empirical Evaluation dossier](/dossiers/ticoder-test-driven-interactive-code-generation.md) — TiCoder uses reviewed tests as partial specifications to prune and rank candidates; mistaken answers can remove correct code, and benchmark feedback is a perfect reference oracle.
+- [Grounding AI Agents in Contracts: An Empirical Evaluation of Spec-Driven Test Generation dossier](/dossiers/grounding-ai-agents-contracts-spec-driven-test-generation.md) — SpecOps 2026 workshop evidence, archived arXiv v2, for inferred contracts as scaffolds: fixed-code detect@5 and branch-coverage gains, added token cost, and defect-specific judged coverage rather than independent acceptance authority.

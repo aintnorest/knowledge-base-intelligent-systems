@@ -29,6 +29,16 @@ Discourse coherence is not automatically retrieval-friendly. In Chroma's experim
 
 Vendor guidance supplies a practical but weakly evidenced companion rule: for Claude, place long documents before the query, preserve source metadata, and ask for quoted evidence before synthesis. Treat the reported benefit for 20k+ inputs as a model-specific hypothesis because the guide supplies no dataset, uncertainty, or reproducible method.
 
+## Position-Calibrated Attention as Relevance Estimation
+
+Raw attention is not a relevance score: document attention can combine useful content signals with a preference for its position. Estimate that nuisance component using a consistent dummy document at matched positions, then subtract the baseline from observed document attention. The resulting ranking is a relevance-oriented estimate under an approximate additive model, not direct measurement of true relevance.
+
+Separate the ranker from the reader. A calibrated score can select or reorder evidence; a model-internal intervention can instead redistribute document-level attention while preserving relative token weights within documents and total document attention mass. Better ranking recall does not imply an equal improvement in answering. Neither operation recovers missing evidence.
+
+Calibration adds forward passes across document positions and depends on baseline choice, document lengths, question placement, and layer selection. Early-layer intervention can destabilize generation; the supporting experiments restrict changes to later layers. Evidence comes from two 7B models on single-gold-document QA, not a general result for dispersed synthesis or current models. Middle gains can coexist with boundary losses. Combining calibration and reordering improves the corresponding reordering baseline in those comparisons but is not universally best against all alternatives.
+
+Useful top-*k* also depends on candidate discrimination and complete recall. More answer-like distractors can confuse the reader; requesting several values can produce repetitions and omissions even when one target is easily found. Test complete-set coverage and precision alongside downstream answers, rather than using single-item success to justify a larger context budget. For the evaluation axes, see [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md).
+
 ## Limitations
 
 - Pushing a known answer passage toward a prompt boundary is an evaluation aid, not a production strategy unless the reranker can predict relevance without answer labels.
@@ -41,3 +51,5 @@ Vendor guidance supplies a practical but weakly evidenced companion rule: for Cl
 - [Lost in the Middle: How Language Models Use Long Contexts dossier](/dossiers/lost-in-the-middle-long-contexts.md) — evidence that reader performance can be position-sensitive and may saturate before retriever recall.
 - [Context Rot dossier](/dossiers/context-rot-long-context-performance.md) — controlled evidence that content order and structure change retrieval even when the same evidence remains present.
 - [Prompting best practices dossier](/dossiers/claude-prompting-best-practices.md) — model-specific query-last and quote-first recommendations with explicitly weak evaluation detail.
+- [Found in the Middle: Calibrating Positional Attention Bias Improves Long Context Utilization dossier](/dossiers/found-in-the-middle-positional-attention-bias.md) — matched-position attention baselines, late-layer reader intervention, extra calibration passes, ranking-versus-answering results, and non-universal combination gains in two 7B models.
+- [RULER: What's the Real Context Size of Your Long-Context Language Models? dossier](/dossiers/ruler-real-context-size.md) — answer-like distractors and multi-query/multi-value tests expose discrimination and complete-recall limits beyond simple lookup.

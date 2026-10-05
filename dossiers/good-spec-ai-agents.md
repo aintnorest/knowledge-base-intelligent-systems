@@ -4,7 +4,7 @@ title: How to write a good spec for AI agents
 description: Addy Osmani's guide to an outcome-first, living coding-agent specification with bounded task context, explicit action boundaries, staged planning, and checkable acceptance criteria.
 resource: https://addyosmani.com/blog/good-spec/
 source: /archive/good-spec-ai-agents.html
-tags: [coding-agents, prompting, decomposition, human-in-the-loop, verification, agents]
+tags: [requirements-engineering, coding-agents, prompting, decomposition, human-in-the-loop, agents]
 timestamp: 2026-09-24T03:45:44Z
 ---
 

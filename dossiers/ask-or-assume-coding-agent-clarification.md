@@ -4,7 +4,7 @@ title: "Ask or Assume? Uncertainty-Aware Clarification-Seeking in Coding Agents"
 description: "Controlled OpenHands comparison of always-ask, never-ask, and continuously monitored clarification on underspecified SWE-bench issues, including model-specific query costs."
 resource: https://arxiv.org/abs/2603.26233v3
 source: /archive/ask-or-assume-coding-agent-clarification.pdf
-tags: [agents, coding-agents, human-in-the-loop, multi-agent, evaluation, reliability]
+tags: [requirements-engineering, coding-agents, human-in-the-loop, multi-agent, evaluation, agents]
 timestamp: 2026-09-24T03:44:20Z
 ---
 

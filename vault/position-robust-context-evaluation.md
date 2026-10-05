@@ -31,6 +31,16 @@ Use this for RAG, long-document QA, coding agents reading repositories, memory s
 
 When a weakness appears, compare focused retrieval, reranking, fewer or more coherent chunks, structured navigation, staged reading, and task-appropriate external verification. Do not assume that a fix for exact string lookup will repair multi-document interpretation.
 
+## Usable Context Is a Surface
+
+Measure usable context over evidence position, total length, task complexity, and query–evidence distance, rather than reducing it to one maximum length. Capability and length sweeps complement controlled position tests: a broad synthetic suite can expose distractor discrimination, complete-set retrieval, reference tracing, and aggregation without publishing a position-controlled breakdown.
+
+Keep the outcomes distinct. Ranking recall asks whether an evidence selector includes the relevant item; complete-set recall asks whether every requested item is recovered; answering asks whether evidence is used correctly; local next-token prediction asks whether the stream remains predictable. Success on one does not certify the others. Recall alone also leaves precision, unsupported additions, and citation fidelity unresolved.
+
+A threshold-defined effective length is specific to its benchmark, task weighting, chosen threshold, and tested lengths—not an intrinsic capacity boundary. Report the rule and component curves. Likewise, an improved middle score or mean can conceal endpoint regressions; test the whole position curve before declaring a reader intervention position-robust.
+
+For bounded-cache streaming, sweep query–evidence distance separately from stream duration and cache size. Stable local prediction over a long run does not imply access to old evidence: performance can deteriorate within the retained window and fail completely after eviction. See [Attention Sinks as Cache Stability Anchors](/vault/attention-sinks-as-cache-stability-anchors.md).
+
 ## Limitations
 
 - Synthetic or single-evidence tests do not fully model multi-hop synthesis, contradictory sources, or evidence spread across several items.
@@ -43,3 +53,6 @@ When a weakness appears, compare focused retrieval, reranking, fewer or more coh
 - [Lost in the Middle: How Language Models Use Long Contexts dossier](/dossiers/lost-in-the-middle-long-contexts.md) — controlled multi-document QA and UUID lookup experiments that vary target position, length, architecture, query placement, and retrieval depth.
 - [Context Rot dossier](/dossiers/context-rot-long-context-performance.md) — contrasts position-insensitive semantic retrieval with position-sensitive repeated-word generation across growing contexts.
 - [Large Language Models Can Be Easily Distracted by Irrelevant Context dossier](/dossiers/irrelevant-context-distraction.md) — a strong distractor result whose fixed near-question placement limits positional generalization.
+- [RULER: What's the Real Context Size of Your Long-Context Language Models? dossier](/dossiers/ruler-real-context-size.md) — capability and length sweeps complement position-controlled testing; its effective-length threshold and recall-based aggregate are benchmark-specific.
+- [Found in the Middle: Calibrating Positional Attention Bias Improves Long Context Utilization dossier](/dossiers/found-in-the-middle-positional-attention-bias.md) — distinguishes ranking from answering and measures endpoint regressions despite middle-position improvements.
+- [Efficient Streaming Language Models with Attention Sinks dossier](/dossiers/streaming-llm-attention-sinks.md) — stable local prediction under bounded caches, with distance sweeps showing imperfect retained-evidence recall and zero retrieval after eviction.

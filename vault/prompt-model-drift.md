@@ -36,6 +36,12 @@ First-party guides make the migration surface concrete. Reasoning defaults, verb
 
 Application evaluation should include an optimized reference where feasible. In a five-model study, independent prompt optimization changed several task winners while one routing task barely reordered. Drift sensitivity is itself task-specific; one migration score cannot characterize a model pair.
 
+## Monitor Omitted Requirements
+
+Visible instruction compliance is not the whole migration contract. Requirements satisfied through inferred defaults can regress even when no explicit instruction changes. In a requirement-level study, within-family model-version comparisons produced losses greater than 20 percentage points in 5.9% of unspecified cases versus 3.0% of specified cases. Across prompt variants, unspecified accuracy had an 8.9-point standard deviation, over twice the specified variation. The version-regression percentages do not measure prompt-edit regressions or imply that every application's failure probability doubles.
+
+Retain validators for the full intended requirement set across model and prompt changes, including constraints intentionally omitted from the current prompt. Inspect critical and conditional requirements separately from average satisfaction, and restore explicit instructions where defaults no longer hold. [Prompt Contingency](/vault/prompt-contingency.md) explains the tradeoff between instruction overload and selective inclusion. Curated tasks and imperfect validators limit the numerical findings' generality.
+
 ## Limitations
 
 The target's true optimal prompt is unknown; any measured gap is relative to the best prompt found under a particular search budget and evaluator. Drift can also be confounded by API, tool, or decoding changes unless those surfaces are held fixed. An adaptation that closes average task loss can still create safety, formatting, or slice-specific regressions.
@@ -49,3 +55,4 @@ The target's true optimal prompt is unknown; any measured gap is relative to the
 - [Codex Prompting Guide dossier](/dossiers/openai-codex-prompting-guide.md) — `gpt-5.3-codex` reverses older preamble guidance and depends on preserved assistant `phase` metadata.
 - [GPT-5 prompting guide dossier](/dossiers/openai-gpt-5-prompting-guide.md) — treats inherited prompts as migration artifacts and separates reasoning from verbosity.
 - [An update on recent Claude Code quality reports dossier](/dossiers/anthropic-claude-code-quality-postmortem.md) — production regression from a prompt whose model scope was too broad.
+- [What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts dossier](/dossiers/prompt-underspecification-what-prompts-dont-say.md) — measures greater default-behavior instability across prompts and model versions, motivating full-requirement migration checks.

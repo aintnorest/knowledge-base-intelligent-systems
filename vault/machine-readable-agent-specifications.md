@@ -2,7 +2,7 @@
 type: Synthesis
 title: Machine-Readable Agent Specifications
 description: Converting organizational policies, quality standards, procedures, and agreements into versioned, scoped, testable artifacts that can govern a fleet of agents consistently.
-tags: [governance, enterprise, evaluation, agents]
+tags: [governance, requirements-engineering, enterprise, evaluation, agents]
 timestamp: 2026-07-13T18:03:01Z
 ---
 
@@ -41,6 +41,14 @@ When an agent issues a quality or compliance verdict, bind it to the standard's 
 
 For unattended work, store handoff criteria, expected evidence, and task procedure in a repository-owned, versioned workflow contract so independent sessions apply the same standard. A scheduler must still own claims, ticket reconciliation, and dispatch; declarative workflow guidance does not confer those authorities. Reload revised policy for future decisions without restarting active workers, preserving the last valid version and reporting invalid revisions. Bind each running session to a consistent policy and tool-adapter snapshot so live edits cannot advertise one interface while executing another. See [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md) for the work-item authority boundary.
 
+## Translation and Premise Trust Boundary
+
+Formal analysis establishes properties of the encoded model, not fidelity to the owner's intent. A solver can correctly identify consistency, contradictions, or uncovered modeled cases while the translation itself encodes the wrong meaning. Keep the original requirement, its formal translation, and the translation's assumptions inspectable; ask the accountable owner about consequential alternatives rather than treating a proof as intent approval. [Disagreement-Selected Clarification](/vault/disagreement-selected-clarification.md) covers selecting scenarios that expose those alternatives.
+
+Background constraints are premises too. Inferred rules about valid states, ownership, or event ordering can make a counterexample impossible in reality, or hide behavior the owner actually permits. Repeated model agreement is only a heuristic for those premises, not independent domain validation or authority to add policy. Obtain owner authority for consequential inferred constraints and record their provenance.
+
+Coverage is relative to the modeled input and state space. Missing variables, temporal dependencies, and exception paths remain outside the proof; modeled completeness is not real-world completeness. The supporting design account offers no quantitative translation accuracy, detection performance, or downstream defect-reduction evidence.
+
 ## Limitations
 
 - Some norms are contextual or contested and cannot be reduced safely to deterministic rules.
@@ -57,3 +65,4 @@ For unattended work, store handoff criteria, expected evidence, and task procedu
 - [A Blueprint for AI-Driven Software Quality: Integrating LLMs with Established Standards dossier](/dossiers/standards-aligned-ai-software-quality.md) — maps LLM QA tasks to ISO quality standards without demonstrated certification.
 - [An open-source spec for Codex orchestration: Symphony dossier](/dossiers/openai-symphony-orchestration.md) — describes turning tacit ticket-to-review practices into repository-owned workflow policy shared across asynchronous workers.
 - [Symphony Service Specification dossier](/dossiers/openai-symphony-service-specification.md) — specifies hot reload with last-known-good fallback and separates the workflow contract from scheduler claims and reconciliation.
+- [Requirements analysis: catching requirement bugs before they become code dossier](/dossiers/kiro-requirements-analysis.md) — Kiro's May 2026 vendor account separates solver properties from intent fidelity and identifies inferred domain constraints and modeled coverage as limitations.

@@ -47,6 +47,14 @@ Prompt choice can change model rankings, not only scores. In a 6.5M-instance mul
 
 Living vendor guidance is additional evidence for revalidation, not a stable rulebook. Anthropic and OpenAI guides explicitly make behavior version-specific across thinking defaults, assistant prefill, verbosity, tool triggers, subagents, and phase metadata. Version prompt and harness artifacts with the target checkpoint and rerun local evaluations after upgrades.
 
+## Evaluated Requirements Versus Instructed Requirements
+
+Keep the full requirement set used for acceptance separate from the subset explicitly instructed in a prompt. Deliberate omission relies on inferred defaults; dropping the corresponding evaluation hides failure rather than saving instruction capacity. In a three-task, 60-requirement study, 41.1% of unspecified requirement cases reached approximately 98% satisfaction, but unspecified satisfaction averaged 22.6 percentage points below specified satisfaction. Defaults are useful dependencies, not reliable contracts.
+
+Specifying everything is not a universal remedy: 37.5% of requirements lost more than five satisfaction points when increasing from one to 19 instructions. Requirements-aware rewriting and subset search instead optimize against the full tracked set while changing what is explicit. Across the main tasks, the methods averaged a 4.8-point gain; subset search reduced prompt tokens by 41–45%. These aggregate findings do not license removing critical constraints merely to improve average compliance.
+
+Compare search budgets before attributing a gain to the method. In an equal-money code-explanation comparison, a generic rewriting optimizer trailed the requirements-aware variant by only 0.2 points but took 2.8× longer. The evidence supports better allocation of feedback and search, not unconditional superiority at equal cost. Validators remain imperfect, and the proposed complete developer lifecycle was not evaluated. Restore omitted instructions when defaults fail; [Prompt–Model Drift](/vault/prompt-model-drift.md) covers migration monitoring.
+
 ## Limitations
 
 Prompt contingency does not mean prompt design is arbitrary. Some interventions, such as explicit output formatting, can be consistently useful in a particular benchmark or product workflow. The point is that the scope of the claim should match the evidence.
@@ -73,3 +81,4 @@ Prompt contingency does not mean prompt design is arbitrary. Some interventions,
 - [Prompting best practices dossier](/dossiers/claude-prompting-best-practices.md) — a living vendor guide whose model-specific reversals make local reevaluation part of the advice.
 - [Codex Prompting Guide dossier](/dossiers/openai-codex-prompting-guide.md) — documents a version-specific reversal for intermediate updates and dependence on assistant `phase` metadata.
 - [GPT-5 prompting guide dossier](/dossiers/openai-gpt-5-prompting-guide.md) — separates reasoning effort from verbosity and treats model migration as prompt retuning.
+- [What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts dossier](/dossiers/prompt-underspecification-what-prompts-dont-say.md) — separates full requirement evaluation from selective instruction inclusion, measures overload and token savings, and qualifies optimization gains with an equal-money comparison.

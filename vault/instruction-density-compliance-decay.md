@@ -24,6 +24,8 @@ Published count curves are not interchangeable capacity tests. One evaluates het
 
 Consequently, strong average keyword inclusion at a large count can coexist with almost no perfectly compliant essays at a smaller count. Neither observation alone establishes that a newer model is better or worse than an older one. Keep the denominator, rule difficulty and compatibility, generation policy, retry or recovery protocol, model revision and core task fixed before attributing a difference to count.
 
+Requirement-level evidence also shows individual probabilities changing under joint presentation: individually specified requirements average 98.7% satisfaction, while 19 simultaneous requirements yield average specified satisfaction of 85.0% and 79.7% in the two reported model settings. These are per-requirement scores, not all-satisfied response rates. The curated tasks and imperfect validators constrain generalization, but the decline cannot be explained solely by multiplying unchanged individual success probabilities; overload also appears without obvious conflicts.
+
 ## Practical Use
 
 1. **Define the acceptance boundary.** Inventory active requirements and identify which must hold jointly. Report critical-rule violations separately so an easy-rule average cannot dilute consequential failures.
@@ -43,9 +45,11 @@ A reported near-zero success rate is sample- and task-dependent, not proof of an
 
 - [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md) — calibration must match the actual decision and its changing difficulty.
 - [Instruction Tuning](/vault/instruction-tuning.md) — learned responsiveness to instructions does not certify arbitrarily dense joint compliance.
+- [History-Conditioned Instruction Stability](/vault/history-conditioned-instruction-stability.md) — temporal adherence under evolving dialogue is distinct from simultaneous-rule density; a persistent instruction can fail even when the obligation count stays fixed.
 
 ## Sources
 
 - [When Instructions Multiply dossier](/dossiers/when-instructions-multiply.md) — peer-reviewed ManyIFEval/StyleMBPP results; GPT-4o reaches 0.85 per-rule accuracy but only 0.21 all-satisfied text responses at ten instructions; rule-based versus model-judge accuracy diverges more at larger counts.
 - [How Many Instructions Can LLMs Follow at Once? dossier](/dossiers/ifscale-how-many-instructions.md) — IFScale's 10–500 keyword ladder, per-instruction inclusion metric, descriptive threshold/linear/exponential decay and count-dependent primacy; best appendix mean is 68.9% at 500, not perfect-report success.
 - [Prompt Design at Scale dossier](/dossiers/prompt-design-at-scale.md) — non-peer-reviewed VeyraBench evidence for near-zero perfect responses by 80 mixed rules, model-specific format/placement effects, and changing structural-rule proportion; the dossier qualifies headline claims and reporting inconsistencies.
+- [What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts dossier](/dossiers/prompt-underspecification-what-prompts-dont-say.md) — individually specified requirements average 98.7% satisfaction; with 19 together, GPT-4o averages 85.0% and Llama-3.3-70B-Instruct 79.7%, with curated-task and validator limitations.
