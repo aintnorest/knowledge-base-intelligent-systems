@@ -1,0 +1,14 @@
+min_version = "2026.9.1"
+
+[settings]
+lockfile = true
+
+[tool_config]
+locked = true
+
+[env]
+pnpm_config_pm_on_fail = "error"
+
+[tools]
+node = "24.21.0"
+"npm:pnpm" = { version = "12.9.1", depends = ["node"] }

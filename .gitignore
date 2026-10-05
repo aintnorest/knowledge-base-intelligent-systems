@@ -11,3 +11,6 @@
 
 # Obsidian vault settings (local only)
 .obsidian/
+
+# Dependencies (installed by pnpm)
+node_modules/
