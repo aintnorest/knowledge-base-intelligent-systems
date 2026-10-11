@@ -57,4 +57,4 @@ Planner and final-answer overhead limit scaling; movie planning and answer gener
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)

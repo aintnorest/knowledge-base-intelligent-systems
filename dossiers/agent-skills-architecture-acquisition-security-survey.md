@@ -48,5 +48,5 @@ The paper explicitly calls this a **governance proposal**, not a tested system. 
 
 ## Vault Ideas Extracted
 
-* [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)
-* [Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)
+- [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)
+- [Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)

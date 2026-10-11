@@ -53,4 +53,4 @@ The authors also observe more bounded periodic output magnitudes at block bounda
 
 ## Vault Ideas Extracted
 
-* [Depth-Wise Attention Residuals](/vault/depth-wise-attention-residuals.md)
+- [Depth-Wise Attention Residuals](/vault/depth-wise-attention-residuals.md)

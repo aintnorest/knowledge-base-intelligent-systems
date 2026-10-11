@@ -65,6 +65,6 @@ The reducer runs *before* ObservationPack projects context; ObservationPack reco
 
 ## Vault Ideas Extracted
 
-* [Verified Log Evidence Receipts](/vault/verified-log-evidence-receipts.md) — distinct verified extraction boundary for large diagnostic logs.
-* [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md) — existing counterfactual for reusable optimizer claims.
-* [Bounded Tool Observations](/vault/bounded-tool-observations.md) and [Reversible, Query-Conditioned Compaction](/vault/reversible-query-conditioned-compaction.md) — existing patterns for bounded defaults with exact recovery.
+- [Verified Log Evidence Receipts](/vault/verified-log-evidence-receipts.md) — distinct verified extraction boundary for large diagnostic logs.
+- [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md) — existing counterfactual for reusable optimizer claims.
+- [Bounded Tool Observations](/vault/bounded-tool-observations.md) and [Reversible, Query-Conditioned Compaction](/vault/reversible-query-conditioned-compaction.md) — existing patterns for bounded defaults with exact recovery.

@@ -40,4 +40,3 @@ These are results with a simulated, unusually informed or stronger assistant, no
 * [Action-Observation Fusion](/vault/action-observation-fusion.md)
 * [Security-Aware Replanning](/vault/security-aware-replanning.md)
 * [Staged Effect Admission](/vault/staged-effect-admission.md)
-

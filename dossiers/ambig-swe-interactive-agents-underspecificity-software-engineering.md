@@ -76,4 +76,4 @@ Artificial summaries remove code snippets and error messages more aggressively t
 
 ## Vault Ideas Extracted
 
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)

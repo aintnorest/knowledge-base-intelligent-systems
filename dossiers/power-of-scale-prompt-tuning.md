@@ -86,5 +86,5 @@ Within this knowledge base, the finding that a prompt technique's value is conti
 
 ## Vault Ideas Extracted
 
-* [Prompt Tuning](/vault/prompt-tuning.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
+- [Prompt Tuning](/vault/prompt-tuning.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)

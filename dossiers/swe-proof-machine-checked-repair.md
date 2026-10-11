@@ -52,6 +52,6 @@ SWE-Proof is an attempt to pair **real repository issues** with machine-checked 
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)

@@ -66,4 +66,4 @@ The tables label one technique per dataset as “SoTA,” but this is explicitly
 
 ## Vault Ideas Extracted
 
-* [Application-Centric Prompt Taxonomy](/vault/application-centric-prompt-taxonomy.md)
+- [Application-Centric Prompt Taxonomy](/vault/application-centric-prompt-taxonomy.md)

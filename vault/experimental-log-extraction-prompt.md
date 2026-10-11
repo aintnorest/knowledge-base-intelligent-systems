@@ -23,6 +23,7 @@ A prompt pattern for extracting the complete empirical record from a published p
 **Task**: Create a comprehensive "experimental log" in markdown format. This is the raw material an automated paper-writing system will use to construct the final paper's results section.
 
 **Core Instructions**:
+
 1. **Crucial Rule: No References** — The output must be 100% self-contained. It must NEVER reference a figure or table number (e.g., "See Table 1" or "As shown in Fig. 5"). The paper-writing AI will only have this log.
 2. **Adopt Past-Tense Persona** — Use "We ran...", "We observed...", "The results were..."
 3. **Deconstruct Tables into Raw Data** — All numeric data from tables must be moved into a structured raw data section. Do NOT recreate table layouts. Be 100% accurate.

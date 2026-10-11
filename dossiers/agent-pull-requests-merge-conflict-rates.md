@@ -53,5 +53,5 @@ The paper's claim that build or semantic conflicts cannot occur until a “succe
 
 ## Vault Ideas Extracted
 
-* [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
-* [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)
+- [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
+- [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)

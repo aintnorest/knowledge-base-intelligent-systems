@@ -51,4 +51,4 @@ The result is direct counter-evidence to the blanket advice “make the coding a
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

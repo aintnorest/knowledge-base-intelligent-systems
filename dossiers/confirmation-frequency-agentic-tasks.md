@@ -77,4 +77,4 @@ Financial and environmental benefits are inferred from fewer repeated operations
 
 ## Vault Ideas Extracted
 
-* [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
+- [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)

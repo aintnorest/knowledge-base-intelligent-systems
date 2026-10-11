@@ -95,7 +95,7 @@ The guide presents compaction as first-class support for multi-hour runs, but su
 
 ## Vault Ideas Extracted
 
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
-* [Prompt-Model Drift](/vault/prompt-model-drift.md)
-* [Bounded Tool Observations](/vault/bounded-tool-observations.md)
-* [Repeated-Compaction Evaluation](/vault/repeated-compaction-evaluation.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Prompt-Model Drift](/vault/prompt-model-drift.md)
+- [Bounded Tool Observations](/vault/bounded-tool-observations.md)
+- [Repeated-Compaction Evaluation](/vault/repeated-compaction-evaluation.md)

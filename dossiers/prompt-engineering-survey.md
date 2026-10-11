@@ -84,7 +84,7 @@ The paper is organized into 8 sections plus a historical timeline:
 
 2. **DECOMP and ReAct are underappreciated**. These aren't just prompt tricks — they're architectural patterns. DECOMP is microservices for LLM tasks; ReAct is the observer pattern for reasoning. I should use these more systematically.
 
-3. **Security is not an afterthought**. The survey dedicates a full section to adversarial attacks, backdoors, and model stealing. In an era where we're building systems that ingest prompts from untrusted sources, this is essential reading. 
+3. **Security is not an afterthought**. The survey dedicates a full section to adversarial attacks, backdoors, and model stealing. In an era where we're building systems that ingest prompts from untrusted sources, this is essential reading.
 
 4. **Evaluation remains unsolved**. The tension between subjective and objective evaluation, the limitations of BLEU, and the inconsistency of automated metrics across models all point to a field that hasn't settled on how to measure success. This is both a challenge and an opportunity.
 
@@ -96,15 +96,15 @@ The paper is organized into 8 sections plus a historical timeline:
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
-* [Self-Consistency Decoding](/vault/self-consistency-decoding.md)
-* [Tree of Thoughts](/vault/tree-of-thoughts.md)
-* [ReAct Framework](/vault/react-framework.md)
-* [Decomposed Prompting](/vault/decomposed-prompting.md)
-* [Active Prompt](/vault/active-prompt.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
-* [Retrieval Augmentation](/vault/retrieval-augmentation.md)
-* [VLM Prompt Learning](/vault/vlm-prompt-learning.md)
-* [Prompt Security Taxonomy](/vault/prompt-security-taxonomy.md)
-* [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
-* [AI Agent Evolution](/vault/ai-agent-evolution.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [Self-Consistency Decoding](/vault/self-consistency-decoding.md)
+- [Tree of Thoughts](/vault/tree-of-thoughts.md)
+- [ReAct Framework](/vault/react-framework.md)
+- [Decomposed Prompting](/vault/decomposed-prompting.md)
+- [Active Prompt](/vault/active-prompt.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)
+- [Retrieval Augmentation](/vault/retrieval-augmentation.md)
+- [VLM Prompt Learning](/vault/vlm-prompt-learning.md)
+- [Prompt Security Taxonomy](/vault/prompt-security-taxonomy.md)
+- [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
+- [AI Agent Evolution](/vault/ai-agent-evolution.md)

@@ -56,6 +56,6 @@ ByteDance reports **>12,000 weekly active users** and **210,000 weekly page view
 
 ## Vault Ideas Extracted
 
-* [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

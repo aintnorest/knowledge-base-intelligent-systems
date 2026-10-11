@@ -63,4 +63,4 @@ ALE tries to make that trade-off more favorable by collecting workflows practiti
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)

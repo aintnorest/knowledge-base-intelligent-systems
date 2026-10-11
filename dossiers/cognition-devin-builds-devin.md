@@ -66,5 +66,5 @@ Cognition also describes auto-indexed documentation and a separate data-analysis
 
 ## Vault Ideas Extracted
 
-* [Feedback-Grounded Context Adaptation](/vault/feedback-grounded-context-adaptation.md)
-* [Repository Drift Garbage Collection](/vault/repository-drift-garbage-collection.md)
+- [Feedback-Grounded Context Adaptation](/vault/feedback-grounded-context-adaptation.md)
+- [Repository Drift Garbage Collection](/vault/repository-drift-garbage-collection.md)

@@ -50,5 +50,5 @@ A skill can influence tool use, run bundled code, and point Claude at external m
 
 ## Vault Ideas Extracted
 
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)

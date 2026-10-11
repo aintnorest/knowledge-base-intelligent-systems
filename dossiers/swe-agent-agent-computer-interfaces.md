@@ -52,5 +52,5 @@ The appendix reports **113/286 resolved trajectories as 31.5%** containing faile
 
 ## Vault Ideas Extracted
 
-* [Bounded Tool Observations](/vault/bounded-tool-observations.md)
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Bounded Tool Observations](/vault/bounded-tool-observations.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)

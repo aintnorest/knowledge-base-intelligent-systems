@@ -34,4 +34,3 @@ An administrator can enter the guest root environment, and guest agent API acces
 
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Assume Guest Compromise: Host Exposure Budget](/vault/assume-guest-compromise-host-exposure.md)
-

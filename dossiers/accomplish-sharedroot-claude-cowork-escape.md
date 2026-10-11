@@ -39,4 +39,3 @@ Treat guest root as part of the threat model when deciding what a VM can see on 
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Privileged Local Daemon Sandbox Bypass](/vault/privileged-local-daemon-sandbox-bypass.md)
 * [Assume Guest Compromise: Host Exposure Budget](/vault/assume-guest-compromise-host-exposure.md)
-

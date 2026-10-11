@@ -58,5 +58,5 @@ In repeated 50-task Lite runs, Topo raises Func@5 from 0.740 Â± 0.043 to 0.772 Â
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Structural Code Retrieval](/vault/structural-code-retrieval.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Structural Code Retrieval](/vault/structural-code-retrieval.md)

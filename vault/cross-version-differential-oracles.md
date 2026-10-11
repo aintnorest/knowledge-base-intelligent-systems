@@ -48,7 +48,6 @@ Generating from trusted **fixed code** can protect a known behavior; generating 
 
 A Python study detected 20/29 historical faults with generated tests informed by retrieved bug/patch context versus 5/29 with selected pre-existing general-purpose human tests. That is useful fix-time regression evidence, not an equal-information authorship comparison or unknown-bug discovery result. Report the information supplied to each generator, versions, selected human baseline, and outcome population; patch or reproducer knowledge is an undisclosed evaluation advantage if presented as prospective discovery.
 
-
 ## Differential Execution for Migrations
 
 For language or platform migrations, run the source and converted systems on the same representative and adversarial inputs. Normalize only explicitly allowed differences, and investigate every mismatch before acceptance. Prioritize date boundaries, rounding, nulls, currencies, and customer-visible or regulatory outputs. Record source and target revisions, runtime versions, model and run configuration, test-data provenance, tolerance rules, mismatches, accepted intentional changes, the reviewer and the release decision. The evidence is a comparison between *two systems*, not the converting agent's claim of correctness.

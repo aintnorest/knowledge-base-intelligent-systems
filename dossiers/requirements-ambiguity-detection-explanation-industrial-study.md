@@ -61,5 +61,5 @@ The binary formulation deliberately avoids overlapping ambiguity subtypes becaus
 
 ## Vault Ideas Extracted
 
-* [Domain-Grounded Requirements Review](/vault/domain-grounded-requirements-review.md)
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Domain-Grounded Requirements Review](/vault/domain-grounded-requirements-review.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)

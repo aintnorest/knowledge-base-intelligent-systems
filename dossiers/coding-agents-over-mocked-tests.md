@@ -56,6 +56,6 @@ Test commits add or modify recognized test paths. A mock commit introduces at le
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — test-double presence is not evidence of verified integration.
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — specify realistic boundary effects and independent oracles.
-* Proposed new synthesis: **Dependency-Faithful Test Doubles**, separating fast consumer assumptions from independently checked provider behavior.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — test-double presence is not evidence of verified integration.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — specify realistic boundary effects and independent oracles.
+- Proposed new synthesis: **Dependency-Faithful Test Doubles**, separating fast consumer assumptions from independently checked provider behavior.

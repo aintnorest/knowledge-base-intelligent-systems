@@ -135,6 +135,6 @@ This is a distinct failure mode: the prompt does not remove knowledge from the m
 
 ## Vault Ideas Extracted
 
-* [Prompt Contingency](/vault/prompt-contingency.md)
-* [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
-* [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)
+- [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
+- [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)

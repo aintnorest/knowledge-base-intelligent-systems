@@ -60,5 +60,5 @@ Which visual form helps which task, and when is plain text more precise? How can
 
 ## Vault Ideas Extracted
 
-* [Editable Plans as Boundary Objects](/vault/editable-plans-as-boundary-objects.md)
-* [Shared Alternatives Before Commitment](/vault/shared-alternatives-before-commitment.md)
+- [Editable Plans as Boundary Objects](/vault/editable-plans-as-boundary-objects.md)
+- [Shared Alternatives Before Commitment](/vault/shared-alternatives-before-commitment.md)

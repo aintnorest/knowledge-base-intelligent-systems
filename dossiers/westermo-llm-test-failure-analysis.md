@@ -46,5 +46,5 @@ Four real failures were selected: two used for development and **two for evaluat
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)

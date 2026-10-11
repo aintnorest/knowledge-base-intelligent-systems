@@ -50,5 +50,5 @@ Each agent receives turns sequentially, preserving project and trace. At every t
 
 ## Vault Ideas Extracted
 
-* [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)

@@ -50,6 +50,6 @@ Detectors are regex/structure-based. They have paired positive/negative mutation
 
 ## Vault Ideas Extracted
 
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
-* [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)

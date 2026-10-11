@@ -68,6 +68,6 @@ The article likens this to garbage collection: detect drift before repetition ma
 
 ## Vault Ideas Extracted
 
-* [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
-* [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
-* [Repository Drift Garbage Collection](/vault/repository-drift-garbage-collection.md)
+- [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
+- [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
+- [Repository Drift Garbage Collection](/vault/repository-drift-garbage-collection.md)

@@ -62,7 +62,7 @@ Test quality needs both useful inputs and an independently justified oracle. A p
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)

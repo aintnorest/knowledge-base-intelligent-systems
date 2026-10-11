@@ -65,5 +65,5 @@ The author explicitly allows that Cognition's theories are imperfect and expects
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)

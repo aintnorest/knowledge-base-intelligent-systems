@@ -81,4 +81,4 @@ This changes the question from "did the skill work once?" to whether it reliably
 
 ## Vault Ideas Extracted
 
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)

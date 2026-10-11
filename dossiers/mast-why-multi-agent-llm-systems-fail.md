@@ -70,4 +70,4 @@ Verification failure is not equivalent to neglecting to run any check. A verifie
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)

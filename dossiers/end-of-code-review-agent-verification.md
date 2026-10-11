@@ -49,4 +49,4 @@ The papers in this ingestion cluster directly pressure the broad replacement cla
 
 ## Vault Ideas Extracted
 
-* [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
+- [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)

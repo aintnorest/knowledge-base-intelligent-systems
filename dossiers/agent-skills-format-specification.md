@@ -47,6 +47,6 @@ The staging is a conceptual loader model, not a promise that every host uses ide
 
 ## Vault Ideas Extracted
 
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)

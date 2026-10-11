@@ -34,4 +34,3 @@ The reported attack exploits the legitimacy of *repairing an error* in a multi-a
 * [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
 * [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
 * [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)
-

@@ -61,6 +61,6 @@ The fixed initial plans, constrained executor, older model, and simulation limit
 
 ## Vault Ideas Extracted
 
-* [Editable Plans as Boundary Objects](/vault/editable-plans-as-boundary-objects.md)
-* [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Editable Plans as Boundary Objects](/vault/editable-plans-as-boundary-objects.md)
+- [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)

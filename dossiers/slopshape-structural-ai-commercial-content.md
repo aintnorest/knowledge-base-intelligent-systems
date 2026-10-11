@@ -61,6 +61,6 @@ Length-matching 1,545 posts leaves structural macro-F1 at 98.1. Removing domains
 
 ## Vault Ideas Extracted
 
-* [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
-* [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
-* [Structural Origin Signals Versus Content Quality](/vault/structural-origin-signals-versus-content-quality.md)
+- [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
+- [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
+- [Structural Origin Signals Versus Content Quality](/vault/structural-origin-signals-versus-content-quality.md)

@@ -50,6 +50,6 @@ Give failed assertions, targeted human complaints, transcripts, and current inst
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)

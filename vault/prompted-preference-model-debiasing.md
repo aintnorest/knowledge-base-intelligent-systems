@@ -35,4 +35,4 @@ It reduces a bias rather than removing it — the prompted scorer still fell wel
 
 ## Sources
 
-* [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — constructs a 'non-sycophantic' PM by prefixing the Claude 2 PM's dialog with a user request for truthful answers, and benchmarks it against the raw PM and an oracle PM under best-of-N.
+- [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — constructs a 'non-sycophantic' PM by prefixing the Claude 2 PM's dialog with a user request for truthful answers, and benchmarks it against the raw PM and an oracle PM under best-of-N.

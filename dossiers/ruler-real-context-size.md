@@ -90,6 +90,6 @@ The final Table 3 has **10 of 17 models** above the threshold at 32K. The abstra
 
 ## Vault Ideas Extracted
 
-* [Attention Sinks as Cache Stability Anchors](/vault/attention-sinks-as-cache-stability-anchors.md)
-* [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
-* [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)
+- [Attention Sinks as Cache Stability Anchors](/vault/attention-sinks-as-cache-stability-anchors.md)
+- [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
+- [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)

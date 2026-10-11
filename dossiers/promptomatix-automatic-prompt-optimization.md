@@ -67,5 +67,5 @@ These are limited, historical benchmark results, not evidence that automatic con
 
 ## Vault Ideas Extracted
 
-* [Zero-Configuration Prompt Optimization](/vault/zero-configuration-prompt-optimization.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Zero-Configuration Prompt Optimization](/vault/zero-configuration-prompt-optimization.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

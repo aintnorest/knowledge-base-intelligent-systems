@@ -119,7 +119,7 @@ On the football subset of DROP, where long passages naturally contain irrelevant
 
 ## Vault Ideas Extracted
 
-* [Self-Consistency Decoding](/vault/self-consistency-decoding.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
-* [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [Self-Consistency Decoding](/vault/self-consistency-decoding.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)
+- [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)

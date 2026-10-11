@@ -96,5 +96,5 @@ The published EMNLP paper expands the evidence to **12 evaluators**, dialogue an
 
 ## Vault Ideas Extracted
 
-* [Decomposed Checklist Evaluation](/vault/decomposed-checklist-evaluation.md)
-* [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
+- [Decomposed Checklist Evaluation](/vault/decomposed-checklist-evaluation.md)
+- [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)

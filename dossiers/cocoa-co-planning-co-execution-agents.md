@@ -62,5 +62,5 @@ The small CS/CS-adjacent sample, short lab tasks, and seven self-selected field 
 
 ## Vault Ideas Extracted
 
-* [Editable Plans as Boundary Objects](/vault/editable-plans-as-boundary-objects.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Editable Plans as Boundary Objects](/vault/editable-plans-as-boundary-objects.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)

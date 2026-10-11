@@ -63,5 +63,5 @@ Dedenting was the decisive counterexample. Alone it reduced resolution to 36%; w
 
 ## Vault Ideas Extracted
 
-* [Code-Context Minification](/vault/code-context-minification.md)
-* [Transformation-Aware Patch Application](/vault/transformation-aware-patch-application.md)
+- [Code-Context Minification](/vault/code-context-minification.md)
+- [Transformation-Aware Patch Application](/vault/transformation-aware-patch-application.md)

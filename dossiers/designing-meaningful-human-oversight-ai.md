@@ -51,4 +51,4 @@ The paper distinguishes **design-time** checks (boundary contracts, provenance c
 
 ## Vault Ideas Extracted
 
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)

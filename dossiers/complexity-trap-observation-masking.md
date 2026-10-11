@@ -56,5 +56,5 @@ The evidence is software repair with verbose observations, not a universal resul
 
 ## Vault Ideas Extracted
 
-* [Bounded Tool Observations](/vault/bounded-tool-observations.md)
-* [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
+- [Bounded Tool Observations](/vault/bounded-tool-observations.md)
+- [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)

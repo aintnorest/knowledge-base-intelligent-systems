@@ -51,6 +51,6 @@ The post cites a contemporaneous claim that about 90% of Claude Code's code was 
 
 ## Vault Ideas Extracted
 
-* [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
-* [Reviewable Change Units](/vault/reviewable-change-units.md)
-* [Scoped Guideline Memory](/vault/scoped-guideline-memory.md)
+- [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
+- [Reviewable Change Units](/vault/reviewable-change-units.md)
+- [Scoped Guideline Memory](/vault/scoped-guideline-memory.md)

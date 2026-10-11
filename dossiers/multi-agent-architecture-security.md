@@ -45,4 +45,3 @@ The work studies direct malicious-user requests, not injection, malicious peers,
 * [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
 * [Session-Composition Authorization](/vault/session-composition-authorization.md)
 * [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)
-

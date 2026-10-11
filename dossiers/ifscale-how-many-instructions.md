@@ -67,5 +67,5 @@ English business reports with one-word inclusion requirements do not model condi
 
 ## Vault Ideas Extracted
 
-* [Instruction-Density Compliance Decay](/vault/instruction-density-compliance-decay.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
+- [Instruction-Density Compliance Decay](/vault/instruction-density-compliance-decay.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)

@@ -13,6 +13,7 @@ A two-phase architecture for gathering and validating external references (paper
 ## The Problem
 
 Most LLM-based systems either:
+
 - Rely on parametric memory, leading to hallucinated citations
 - Use simple keyword search without verification, producing shallow or incorrect references
 - Generate generic surveys rather than targeted comparisons

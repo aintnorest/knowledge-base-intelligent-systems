@@ -67,5 +67,5 @@ A separate visualization-debugging demonstration used **five example pairs and f
 
 ## Vault Ideas Extracted
 
-* [Decomposed Prompting](/vault/decomposed-prompting.md)
-* [Shared Alternatives Before Commitment](/vault/shared-alternatives-before-commitment.md)
+- [Decomposed Prompting](/vault/decomposed-prompting.md)
+- [Shared Alternatives Before Commitment](/vault/shared-alternatives-before-commitment.md)

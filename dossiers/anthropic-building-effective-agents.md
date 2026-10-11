@@ -55,4 +55,4 @@ The account does not quantify how frequently patterns succeed, when routing erro
 
 ## Vault Ideas Extracted
 
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)

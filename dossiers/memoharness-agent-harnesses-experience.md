@@ -52,4 +52,4 @@ Transfer is positive but selective. A Terminal-Bench-trained harness reportedly 
 
 ## Vault Ideas Extracted
 
-* [Experience-Conditioned Harness Adaptation](/vault/experience-conditioned-harness-adaptation.md)
+- [Experience-Conditioned Harness Adaptation](/vault/experience-conditioned-harness-adaptation.md)

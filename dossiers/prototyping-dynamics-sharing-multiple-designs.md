@@ -71,4 +71,4 @@ Ad exposure was not perfectly even; the paper discusses platform capacity and ro
 
 ## Vault Ideas Extracted
 
-* [Shared Alternatives Before Commitment](/vault/shared-alternatives-before-commitment.md)
+- [Shared Alternatives Before Commitment](/vault/shared-alternatives-before-commitment.md)

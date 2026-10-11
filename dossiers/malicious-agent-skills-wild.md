@@ -50,8 +50,8 @@ The reported **99.6% precision** refers to the behavioral-verification pipeline'
 
 ## Vault Ideas Extracted
 
-* [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
-* [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
-* [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)
-* [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
-* [Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)
+- [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
+- [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
+- [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)
+- [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
+- [Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)

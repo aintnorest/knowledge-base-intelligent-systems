@@ -27,6 +27,7 @@ High candidate recall does not guarantee robust selection. On GSM-IC with 20 sam
 ## Integration
 
 Self-consistency can be combined with most sampling algorithms:
+
 - Temperature sampling
 - Top-k sampling
 - Nucleus (top-p) sampling

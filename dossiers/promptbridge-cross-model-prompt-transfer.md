@@ -109,7 +109,7 @@ The TravelPlanner experiments provide limited evidence of cross-domain transfer 
 
 ## Vault Ideas Extracted
 
-* [Prompt–Model Drift](/vault/prompt-model-drift.md)
-* [Cross-Model Prompt Mapping](/vault/cross-model-prompt-mapping.md)
-* Updated [Prompt Optimization](/vault/prompt-optimization.md)
-* Updated [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Prompt–Model Drift](/vault/prompt-model-drift.md)
+- [Cross-Model Prompt Mapping](/vault/cross-model-prompt-mapping.md)
+- Updated [Prompt Optimization](/vault/prompt-optimization.md)
+- Updated [Model-Aware Harness Design](/vault/model-aware-harness-design.md)

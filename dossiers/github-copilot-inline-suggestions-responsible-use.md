@@ -43,4 +43,4 @@ Even syntactically plausible suggestions may be incorrect, insecure, biased, inc
 
 ## Vault Ideas Extracted
 
-* [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)
+- [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)

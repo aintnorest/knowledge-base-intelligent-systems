@@ -55,4 +55,4 @@ For agent systems, this survey supplies the ML-level threat vocabulary but not a
 
 ## Vault Ideas Extracted
 
-* [Adversarial-ML Threat Lifecycle](/vault/adversarial-ml-threat-lifecycle.md)
+- [Adversarial-ML Threat Lifecycle](/vault/adversarial-ml-threat-lifecycle.md)

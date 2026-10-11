@@ -59,4 +59,4 @@ The reported total AgentDojo overhead is 9.93 seconds and 47.4K tokens per task,
 
 ## Vault Ideas Extracted
 
-* [Authorization–Provenance Graph Alignment](/vault/authorization-provenance-graph-alignment.md)
+- [Authorization–Provenance Graph Alignment](/vault/authorization-provenance-graph-alignment.md)

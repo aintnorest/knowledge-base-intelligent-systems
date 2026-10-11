@@ -83,6 +83,6 @@ It also offers a more precise language for several neighboring problems:
 
 ## Vault Ideas Extracted
 
-* [Prompting Complexity](/vault/prompting-complexity.md)
-* [Behavioral Prompting Complexity](/vault/behavioral-prompting-complexity.md)
-* [Prompting Distance](/vault/prompting-distance.md)
+- [Prompting Complexity](/vault/prompting-complexity.md)
+- [Behavioral Prompting Complexity](/vault/behavioral-prompting-complexity.md)
+- [Prompting Distance](/vault/prompting-distance.md)

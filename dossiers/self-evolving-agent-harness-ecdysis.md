@@ -59,5 +59,5 @@ An important qualification from the paper's own audit: recurrence by itself is n
 
 ## Vault Ideas Extracted
 
-* [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)
-* [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)
+- [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)
+- [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)

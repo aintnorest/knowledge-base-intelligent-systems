@@ -40,4 +40,3 @@ The document advises limiting accessible resources and credentials and keeping r
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Mediated Agent Execution Isolation](/vault/mediated-agent-execution-isolation.md)
 * [Partial-Scope Tool Sandboxing](/vault/partial-scope-tool-sandboxing.md)
-

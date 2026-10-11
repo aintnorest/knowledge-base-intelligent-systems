@@ -17,6 +17,7 @@ A universal system prompt injected into ALL LLM pipelines in an evaluation setup
 > You MUST write this paper as if you have no prior knowledge of the topic, method, experiments, or results. Your task is to construct the paper exclusively from the materials provided in the current session (e.g., `idea.md`, `experimental_log.md`, figures, and other inputs). Treat these inputs as the only available source of truth.
 >
 > **Forbidden Behavior** — You MUST NOT:
+>
 > - Retrieve or rely on knowledge from your training data
 > - Attempt to recall or reconstruct any existing or published paper
 > - Use external facts, assumptions, or prior familiarity with the topic
@@ -26,6 +27,7 @@ A universal system prompt injected into ALL LLM pipelines in an evaluation setup
 > **Anonymity Requirement** — The paper must be fully anonymized for double-blind review. Do not include any information that could reveal the identity of the authors or their institutions.
 >
 > **Allowed Sources** — You may use only:
+>
 > - The materials explicitly provided in this session
 > - Logical reasoning derived from those materials
 >

@@ -73,5 +73,5 @@ The shared path permits tool-, caller-, and audience-specific rate limits, ident
 
 ## Vault Ideas Extracted
 
-* [Mediated Tool-Access Gateway](/vault/mediated-tool-access-gateway.md)
-* [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
+- [Mediated Tool-Access Gateway](/vault/mediated-tool-access-gateway.md)
+- [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)

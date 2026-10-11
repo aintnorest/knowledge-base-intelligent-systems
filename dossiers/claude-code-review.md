@@ -48,7 +48,7 @@ In Anthropic's testing the **average review took around 20 minutes**. Reviews ar
 
 ## Vault Ideas Extracted
 
-* [Reviewable Change Units](/vault/reviewable-change-units.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
-* [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Reviewable Change Units](/vault/reviewable-change-units.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

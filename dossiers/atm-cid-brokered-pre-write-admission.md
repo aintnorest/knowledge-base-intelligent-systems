@@ -72,5 +72,5 @@ Much field/adopter evidence is summarized or available by request rather than pu
 
 ## Vault Ideas Extracted
 
-* [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
-* [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)
+- [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
+- [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)

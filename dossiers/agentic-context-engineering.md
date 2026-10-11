@@ -83,7 +83,7 @@ Baselines include plain ReAct/base LLM, in-context learning, MIPROv2, GEPA, and 
 
 ## Vault Ideas Extracted
 
-* [Evolving Context Playbooks](/vault/evolving-context-playbooks.md)
-* [Context Collapse](/vault/context-collapse.md)
-* [Incremental Delta Context Updates](/vault/incremental-delta-context-updates.md)
-* [Feedback-Grounded Context Adaptation](/vault/feedback-grounded-context-adaptation.md)
+- [Evolving Context Playbooks](/vault/evolving-context-playbooks.md)
+- [Context Collapse](/vault/context-collapse.md)
+- [Incremental Delta Context Updates](/vault/incremental-delta-context-updates.md)
+- [Feedback-Grounded Context Adaptation](/vault/feedback-grounded-context-adaptation.md)

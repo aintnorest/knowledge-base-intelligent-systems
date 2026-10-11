@@ -51,4 +51,4 @@ The benchmark is Python-only, uses popular public repositories and focuses on is
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

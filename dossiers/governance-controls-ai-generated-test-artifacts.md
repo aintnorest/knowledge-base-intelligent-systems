@@ -50,5 +50,5 @@ The five named governance dimensions are validation, security, explainability, c
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)

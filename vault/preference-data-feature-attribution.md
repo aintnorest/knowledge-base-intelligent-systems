@@ -34,4 +34,4 @@ The analysis is correlational and confined to the features you thought to name �
 
 ## Sources
 
-* [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — applies it to 15K hh-rlhf helpfulness comparisons with GPT-4 feature labeling and Bayesian logistic regression (NUTS, Laplace prior).
+- [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — applies it to 15K hh-rlhf helpfulness comparisons with GPT-4 feature labeling and Bayesian logistic regression (NUTS, Laplace prior).

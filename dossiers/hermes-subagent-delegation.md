@@ -38,4 +38,3 @@ The source is living product documentation, not a benchmark of correctness or a 
 * [Agent Work Liveness Invariants](/vault/agent-work-liveness-invariants.md)
 * [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
 * [Activation-Vested Risk Budget](/vault/activation-vested-risk-budget.md)
-

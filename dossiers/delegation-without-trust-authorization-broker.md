@@ -40,4 +40,3 @@ The broker must be independently trusted and consulted on every effectful action
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Authorization-Provenance Graph Alignment](/vault/authorization-provenance-graph-alignment.md)
 * [Attenuated Delegation Authority](/vault/attenuated-delegation-authority.md)
-

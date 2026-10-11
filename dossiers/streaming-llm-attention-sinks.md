@@ -98,5 +98,5 @@ The abstract's “infinite sequence length” is an architectural motivation for
 
 ## Vault Ideas Extracted
 
-* [Attention Sinks as Cache Stability Anchors](/vault/attention-sinks-as-cache-stability-anchors.md)
-* [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
+- [Attention Sinks as Cache Stability Anchors](/vault/attention-sinks-as-cache-stability-anchors.md)
+- [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)

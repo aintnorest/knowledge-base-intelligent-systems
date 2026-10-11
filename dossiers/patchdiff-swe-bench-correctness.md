@@ -55,7 +55,7 @@ Generated tests are filtered by target-function reachability and repeated execut
 
 ## Vault Ideas Extracted
 
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
-* [Safety-Constrained Regression Test Selection](/vault/safety-constrained-regression-test-selection.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
+- [Safety-Constrained Regression Test Selection](/vault/safety-constrained-regression-test-selection.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)

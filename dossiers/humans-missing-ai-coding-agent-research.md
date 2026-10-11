@@ -55,5 +55,5 @@ The authors argue that coding-agent research overweights solo task completion an
 
 ## Vault Ideas Extracted
 
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
-* [Repository-Relative Code Quality](/vault/repository-relative-code-quality.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Repository-Relative Code Quality](/vault/repository-relative-code-quality.md)

@@ -39,4 +39,3 @@ Treat a sandbox claim as a tuple of **covered processes, readable secrets, writa
 * [Privileged Local Daemon Sandbox Bypass](/vault/privileged-local-daemon-sandbox-bypass.md)
 * [Destination Allowlist as Capability Grant](/vault/destination-allowlist-as-capability-grant.md)
 * [Provider-Boundary Secret Substitution](/vault/provider-boundary-secret-substitution.md)
-

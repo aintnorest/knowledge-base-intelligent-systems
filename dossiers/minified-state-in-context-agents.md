@@ -66,4 +66,4 @@ On a 100-instance GPT-4.1 ablation, removing docstrings has the largest individu
 
 ## Vault Ideas Extracted
 
-* [Code Context Minification](/vault/code-context-minification.md)
+- [Code Context Minification](/vault/code-context-minification.md)

@@ -74,6 +74,6 @@ The evidence supports the narrower claim that, under these tasks and metrics, en
 
 ## Vault Ideas Extracted
 
-* [Declarative LM Pipeline Compilation](/vault/declarative-lm-pipeline-compilation.md)
-* [Metric-Gated Trace Bootstrapping](/vault/metric-gated-trace-bootstrapping.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Declarative LM Pipeline Compilation](/vault/declarative-lm-pipeline-compilation.md)
+- [Metric-Gated Trace Bootstrapping](/vault/metric-gated-trace-bootstrapping.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

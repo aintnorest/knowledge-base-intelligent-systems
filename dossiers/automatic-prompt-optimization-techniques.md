@@ -59,4 +59,4 @@ The surveyed coverage methods point to a separate design choice: one broad promp
 
 ## Vault Ideas Extracted
 
-* [Automatic Prompt Optimization Anatomy](/vault/automatic-prompt-optimization-anatomy.md)
+- [Automatic Prompt Optimization Anatomy](/vault/automatic-prompt-optimization-anatomy.md)

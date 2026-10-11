@@ -78,5 +78,5 @@ The model populations also differ: this study includes 2024 GPT-4o, Claude 3.5 a
 
 ## Vault Ideas Extracted
 
-* [Instruction-Density Compliance Decay](/vault/instruction-density-compliance-decay.md)
-* [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
+- [Instruction-Density Compliance Decay](/vault/instruction-density-compliance-decay.md)
+- [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)

@@ -82,6 +82,6 @@ The review treats manual prompt writing as insufficient for serious deployment. 
 
 ## Vault Ideas Extracted
 
-* [Prompt Optimization](/vault/prompt-optimization.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
-* [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)
+- [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)

@@ -73,5 +73,5 @@ The process-reward ablation is also informative. On Llama3-8B, the full outcome-
 
 ## Vault Ideas Extracted
 
-* [Co-occurrence-Grounded Retrieval Compression](/vault/cooccurrence-grounded-retrieval-compression.md)
-* [Process-Aware Trajectory Preference Optimization](/vault/process-aware-trajectory-preference-optimization.md)
+- [Co-occurrence-Grounded Retrieval Compression](/vault/cooccurrence-grounded-retrieval-compression.md)
+- [Process-Aware Trajectory Preference Optimization](/vault/process-aware-trajectory-preference-optimization.md)

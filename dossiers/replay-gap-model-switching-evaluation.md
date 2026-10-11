@@ -54,5 +54,5 @@ The manuscript reports **717 scored branch pairs**, whereas Table 1 arm counts s
 
 ## Vault Ideas Extracted
 
-* [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
-* [Counterfactual Agent Run Forking](/vault/counterfactual-agent-run-forking.md)
+- [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
+- [Counterfactual Agent Run Forking](/vault/counterfactual-agent-run-forking.md)

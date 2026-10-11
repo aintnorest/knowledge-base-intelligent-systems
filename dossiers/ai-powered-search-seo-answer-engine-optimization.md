@@ -79,5 +79,5 @@ Net read: cite this for *framing* the AEO shift, the awareness gap, and the prac
 
 ## Vault Ideas Extracted
 
-* [Generative Engine Optimization](/vault/generative-engine-optimization.md) — the AEO concept; merged into the GEO umbrella page during post-merge consolidation
-* [Zero-Click Search](/vault/zero-click-search.md)
+- [Generative Engine Optimization](/vault/generative-engine-optimization.md) — the AEO concept; merged into the GEO umbrella page during post-merge consolidation
+- [Zero-Click Search](/vault/zero-click-search.md)

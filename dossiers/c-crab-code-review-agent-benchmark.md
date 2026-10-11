@@ -62,7 +62,7 @@ Category analysis finds stronger coverage of functional correctness and localize
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
-* [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)

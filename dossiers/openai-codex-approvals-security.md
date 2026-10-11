@@ -46,4 +46,3 @@ This is first-party documentation of asserted behavior, not an independent penet
 * [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Destination Allowlist as Capability Grant](/vault/destination-allowlist-as-capability-grant.md)
-

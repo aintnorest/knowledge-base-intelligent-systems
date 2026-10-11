@@ -53,5 +53,5 @@ These are *descriptive* heuristics for coping with information overload, not tes
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)

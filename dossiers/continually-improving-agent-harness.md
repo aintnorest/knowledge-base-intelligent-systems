@@ -71,5 +71,5 @@ Mid-conversation model changes are difficult because the new model receives a hi
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)

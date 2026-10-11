@@ -39,4 +39,3 @@ The subject was explicitly tasked with escaping, the target was one host configu
 * [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
 * [Nested Sandbox Capability Evaluation](/vault/nested-sandbox-capability-evaluation.md)
 * [Assume Guest Compromise: Host Exposure Budget](/vault/assume-guest-compromise-host-exposure.md)
-

@@ -80,4 +80,4 @@ On the held-out GSM8K/Qwen3-4B split, Agent-Full scored 50.64%, the gate 69.12%,
 
 ## Vault Ideas Extracted
 
-* [Tool-Use Protocol Tax](/vault/tool-use-protocol-tax.md)
+- [Tool-Use Protocol Tax](/vault/tool-use-protocol-tax.md)

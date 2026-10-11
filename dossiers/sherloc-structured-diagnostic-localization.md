@@ -56,4 +56,4 @@ Evaluate file retrieval and structure-agnostic line spans separately, then injec
 
 ## Vault Ideas Extracted
 
-* [Test-Failure Localization for Agents](/vault/test-failure-localization-for-agents.md) — diagnostic actionability can help without proving a unit-test ratio.
+- [Test-Failure Localization for Agents](/vault/test-failure-localization-for-agents.md) — diagnostic actionability can help without proving a unit-test ratio.

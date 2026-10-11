@@ -52,7 +52,7 @@ The survey groups interventions by *where in the stack* they act, which is the f
 | Training data | Synthetic data containing explicit non-sycophantic behavior — respectful disagreement, factual correction of a user misconception | Yes | Scaling to large models; may suppress appropriate social nicety |
 | Fine-tuning objective | Adjust the Bradley–Terry preference model for annotator knowledge and task difficulty; multi-objective optimization; adversarial training; explicit annotator-reliability modeling | Yes | Trades against helpfulness and satisfaction |
 | Post-deployment control | **KL-then-steer**: minimize KL divergence between steered and unsteered models on benign inputs, then apply activation steering only to suspect queries. Also external-knowledge grounding and dynamic system prompts | No | Compute overhead; can introduce new inconsistencies |
-| Decoding | **Leading Query Contrastive Decoding**: run the neutral and leading query variants and subtract, `softmax[(1+α)·logit(y|x_n) − α·logit(y|x_l)]`. Also uncertainty-aware sampling and citation-constrained decoding | No | Weak on subtle sycophancy; miscalibrated α introduces artifacts |
+| Decoding | **Leading Query Contrastive Decoding**: run the neutral and leading query variants and subtract, `softmax[(1+α)·logit(y\|x_n) − α·logit(y\|x_l)]`. Also uncertainty-aware sampling and citation-constrained decoding | No | Weak on subtle sycophancy; miscalibrated α introduces artifacts |
 | Architecture | Modular separation of knowledge encoding from response generation; explicit epistemic/aleatoric uncertainty modeling; System 2 Attention | Yes | Expensive; broad performance risk |
 
 The useful ordering property is cost-of-intervention: decoding and steering are cheap and reversible, data and objective changes are slow and hard to revert, and architecture changes are the most expensive. That maps directly onto how much evidence you should demand before adopting one.
@@ -78,5 +78,5 @@ The useful ordering property is cost-of-intervention: decoding and steering are 
 
 ## Vault Ideas Extracted
 
-* [Leading-Query Contrastive Decoding](/vault/leading-query-contrastive-decoding.md)
-* [Side-Effect-Bounded Activation Steering](/vault/side-effect-bounded-activation-steering.md)
+- [Leading-Query Contrastive Decoding](/vault/leading-query-contrastive-decoding.md)
+- [Side-Effect-Bounded Activation Steering](/vault/side-effect-bounded-activation-steering.md)

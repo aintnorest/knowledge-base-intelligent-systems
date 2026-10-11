@@ -48,4 +48,3 @@ A Terminal-Bench 2.0 run with five trials per task is described, but the capture
 * [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
 * [Agent-Ergonomic Interface Design](/vault/agent-ergonomic-interface-design.md)
 * [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
-

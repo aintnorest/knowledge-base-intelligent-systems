@@ -38,4 +38,3 @@ Validate network identities once at the boundary in a representation both policy
 * [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
 * [Destination Allowlist as Capability Grant](/vault/destination-allowlist-as-capability-grant.md)
 * [Policy Compilation Fidelity](/vault/policy-compilation-fidelity.md)
-

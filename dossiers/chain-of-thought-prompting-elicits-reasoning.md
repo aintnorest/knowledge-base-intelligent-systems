@@ -103,6 +103,6 @@ No source currently in this knowledge base establishes whether exposed chain-of-
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
-* [In-Context Learning](/vault/in-context-learning.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [In-Context Learning](/vault/in-context-learning.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)

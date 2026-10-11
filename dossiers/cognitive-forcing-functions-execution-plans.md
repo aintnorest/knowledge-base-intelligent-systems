@@ -70,4 +70,4 @@ Feedback is manually coded against the prescribed defects; readiness revision co
 
 ## Vault Ideas Extracted
 
-* [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)
+- [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)

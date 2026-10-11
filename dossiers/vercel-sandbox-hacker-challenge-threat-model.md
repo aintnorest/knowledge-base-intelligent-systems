@@ -32,4 +32,3 @@ Adversarial evaluation should state the exact outer boundary, assume the stronge
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Nested Sandbox Capability Evaluation](/vault/nested-sandbox-capability-evaluation.md)
 * [Assume Guest Compromise: Host Exposure Budget](/vault/assume-guest-compromise-host-exposure.md)
-

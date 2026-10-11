@@ -71,4 +71,4 @@ Most classifiers use **Claude Sonnet 4.6**. Telemetry cross-checks and compariso
 
 ## Vault Ideas Extracted
 
-* [Expertise-Mediated Agent Steering](/vault/expertise-mediated-agent-steering.md)
+- [Expertise-Mediated Agent Steering](/vault/expertise-mediated-agent-steering.md)

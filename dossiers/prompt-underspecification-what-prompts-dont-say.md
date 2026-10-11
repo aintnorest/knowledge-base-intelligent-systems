@@ -66,7 +66,7 @@ Validators achieve **95.6% human agreement** on 1,095 sampled judgments; that is
 
 ## Vault Ideas Extracted
 
-* [Instruction-Density Compliance Decay](/vault/instruction-density-compliance-decay.md)
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
-* [Prompt–Model Drift](/vault/prompt-model-drift.md)
+- [Instruction-Density Compliance Decay](/vault/instruction-density-compliance-decay.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)
+- [Prompt–Model Drift](/vault/prompt-model-drift.md)

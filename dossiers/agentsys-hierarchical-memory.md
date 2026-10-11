@@ -45,4 +45,3 @@ The attacker can influence tool-returned observations, not the executor or world
 * [Bounded Model Security Adjudication](/vault/bounded-model-security-adjudication.md)
 * [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)
 * [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
-

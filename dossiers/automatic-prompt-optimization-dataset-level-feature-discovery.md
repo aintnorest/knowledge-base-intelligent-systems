@@ -71,5 +71,5 @@ The ablations also indicate practical trade-offs:
 
 ## Vault Ideas Extracted
 
-* [Dataset-Level Feature Discovery](/vault/dataset-level-feature-discovery.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Dataset-Level Feature Discovery](/vault/dataset-level-feature-discovery.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

@@ -52,4 +52,4 @@ Commit identities are snapshots retrieved during collection; the study does not 
 
 ## Vault Ideas Extracted
 
-* [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
+- [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)

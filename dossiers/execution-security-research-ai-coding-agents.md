@@ -90,4 +90,4 @@ This is an interpretive synthesis, not a demonstrated causal model. Still, it is
 
 ## Vault Ideas Extracted
 
-* [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
+- [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)

@@ -79,5 +79,5 @@ The zero-shot-CoT combination is consequential: on PaLM-540B GSM8K, the paper re
 
 ## Vault Ideas Extracted
 
-* [Self-Consistency Decoding](/vault/self-consistency-decoding.md)
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [Self-Consistency Decoding](/vault/self-consistency-decoding.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)

@@ -57,6 +57,6 @@ A window into how real developers *interact* with coding agents, not merely whet
 
 ## Vault Ideas Extracted
 
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Repository-Relative Code Quality](/vault/repository-relative-code-quality.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Repository-Relative Code Quality](/vault/repository-relative-code-quality.md)

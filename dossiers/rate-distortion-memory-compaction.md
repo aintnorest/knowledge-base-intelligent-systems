@@ -103,6 +103,6 @@ The important result is the evaluation shape, not the small-model numbers: a sin
 
 ## Vault Ideas Extracted
 
-* [Rate–Distortion Memory Compaction](/vault/rate-distortion-memory-compaction.md)
-* [Reversible, Query-Conditioned Compaction](/vault/reversible-query-conditioned-compaction.md)
-* [Repeated-Compaction Evaluation](/vault/repeated-compaction-evaluation.md)
+- [Rate–Distortion Memory Compaction](/vault/rate-distortion-memory-compaction.md)
+- [Reversible, Query-Conditioned Compaction](/vault/reversible-query-conditioned-compaction.md)
+- [Repeated-Compaction Evaluation](/vault/repeated-compaction-evaluation.md)

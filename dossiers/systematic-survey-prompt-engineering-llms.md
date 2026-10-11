@@ -88,6 +88,6 @@ Scratchpads, Program of Thoughts, Structured CoT, and Chain-of-Code all use inte
 
 ## Vault Ideas Extracted
 
-* [Application-Centric Prompt Taxonomy](/vault/application-centric-prompt-taxonomy.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
-* [Retrieval Augmentation for Hallucination Reduction](/vault/retrieval-augmentation.md)
+- [Application-Centric Prompt Taxonomy](/vault/application-centric-prompt-taxonomy.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)
+- [Retrieval Augmentation for Hallucination Reduction](/vault/retrieval-augmentation.md)

@@ -52,5 +52,5 @@ The study reuses Trans-Review, AutoTransform, and T5-Review datasets for revisio
 
 ## Vault Ideas Extracted
 
-* [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

@@ -58,5 +58,5 @@ A preliminary GPT-3.5 fine-tuning attempt used 50 retained transcripts from 70 h
 
 ## Vault Ideas Extracted
 
-* [Domain-Grounded Requirements Review](/vault/domain-grounded-requirements-review.md)
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Domain-Grounded Requirements Review](/vault/domain-grounded-requirements-review.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)

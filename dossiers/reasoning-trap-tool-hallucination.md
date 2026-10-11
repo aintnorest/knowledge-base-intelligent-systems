@@ -80,4 +80,4 @@ The practical lesson is not that agents should refuse whenever uncertain. The pr
 
 ## Vault Ideas Extracted
 
-* [Tool-Availability Abstention](/vault/tool-availability-abstention.md)
+- [Tool-Availability Abstention](/vault/tool-availability-abstention.md)

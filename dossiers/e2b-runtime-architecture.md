@@ -35,7 +35,6 @@ The document distinguishes routing ownership from historical records: a live nod
 
 ## Vault Ideas Extracted
 
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
-* [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
-
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
+- [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)

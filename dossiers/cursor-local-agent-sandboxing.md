@@ -35,5 +35,5 @@ Initial harness changes explained permission modes to the agent, but internal ev
 
 ## Vault Ideas Extracted
 
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Agent-Ergonomic Interface Design](/vault/agent-ergonomic-interface-design.md)
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Agent-Ergonomic Interface Design](/vault/agent-ergonomic-interface-design.md)

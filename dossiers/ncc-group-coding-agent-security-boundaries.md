@@ -39,4 +39,3 @@ This is a synthesis of the author's observations and previously published vendor
 * [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
 * [Assume-Compromise Boundary Testing](/vault/assume-compromise-boundary-testing.md)
 * [Partial-Scope Tool Sandboxing](/vault/partial-scope-tool-sandboxing.md)
-

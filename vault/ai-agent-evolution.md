@@ -27,6 +27,7 @@ Most production systems currently operate at **Phase 3 (Chains)** — using sequ
 ## Why This Matters for Prompt Engineering
 
 As the field progresses, the unit of abstraction shifts:
+
 - **Phase 1–2**: The prompt is the product. You craft one perfect prompt.
 - **Phase 3**: The chain is the product. You design sequences and transitions.
 - **Phase 4**: The agent is the product. You design behavior, memory, and tool policies.

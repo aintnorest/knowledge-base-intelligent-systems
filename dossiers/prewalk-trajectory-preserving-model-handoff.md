@@ -42,5 +42,5 @@ The article also reports lower attempts to search public GitHub solutions: Opus 
 
 ## Vault Ideas Extracted
 
-* [Trajectory-Preserving Model Handoff](/vault/trajectory-preserving-model-handoff.md)
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Trajectory-Preserving Model Handoff](/vault/trajectory-preserving-model-handoff.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)

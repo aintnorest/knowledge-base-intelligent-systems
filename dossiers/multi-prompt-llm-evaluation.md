@@ -134,6 +134,6 @@ A practical implementation should spend budget according to the intended decisio
 
 ## Vault Ideas Extracted
 
-* Update [Prompt Contingency](/vault/prompt-contingency.md) with the 6.5M-scale ranking evidence, especially the 15/25 tasks containing negative-τ prompt pairs and the opposite effects of the same “excludes”→“lacks” edit across Flan-T5 sizes.
-* Update [LLM Evaluation Methods](/vault/llm-evaluation-methods.md) with purpose-conditioned `MaxP`, `AvgP`, and `(Sat × MaxP)` evaluation, plus the requirement to define the prompt distribution and isolate prompt selection from final testing.
-* Update [Prompt Optimization](/vault/prompt-optimization.md) with `MaxP` as the downstream prompt-search objective, the held-out-selection requirement, and the finding that peak performance can make LLaMA-based models look competitive while average paraphrase performance exposes fragility.
+- Update [Prompt Contingency](/vault/prompt-contingency.md) with the 6.5M-scale ranking evidence, especially the 15/25 tasks containing negative-τ prompt pairs and the opposite effects of the same “excludes”→“lacks” edit across Flan-T5 sizes.
+- Update [LLM Evaluation Methods](/vault/llm-evaluation-methods.md) with purpose-conditioned `MaxP`, `AvgP`, and `(Sat × MaxP)` evaluation, plus the requirement to define the prompt distribution and isolate prompt selection from final testing.
+- Update [Prompt Optimization](/vault/prompt-optimization.md) with `MaxP` as the downstream prompt-search objective, the held-out-selection requirement, and the finding that peak performance can make LLaMA-based models look competitive while average paraphrase performance exposes fragility.

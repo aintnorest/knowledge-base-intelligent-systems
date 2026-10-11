@@ -97,6 +97,6 @@ The 86-page report substantially widens what can be audited beyond the Nature ma
 
 ## Vault Ideas Extracted
 
-* [Prompt Contingency](/vault/prompt-contingency.md)
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
-* [Rule-Based Rewards](/vault/rule-based-rewards.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [Rule-Based Rewards](/vault/rule-based-rewards.md)

@@ -65,5 +65,5 @@ The last three were pooled as cognitive forcing functions (CFF); the two immedia
 
 ## Vault Ideas Extracted
 
-* [Complementary Human–AI Performance](/vault/complementary-human-ai-performance.md)
-* [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)
+- [Complementary Human–AI Performance](/vault/complementary-human-ai-performance.md)
+- [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)

@@ -78,7 +78,7 @@ The author's closing lesson: "pick the next failing test" swarms of lightly coor
 
 ## Vault Ideas Extracted
 
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
-* [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
+- [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)

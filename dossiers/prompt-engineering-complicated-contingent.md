@@ -76,5 +76,5 @@ The prompt conditions are:
 
 ## Vault Ideas Extracted
 
-* [Prompt Contingency](/vault/prompt-contingency.md)
-* [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)
+- [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)

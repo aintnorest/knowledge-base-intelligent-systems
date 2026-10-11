@@ -36,4 +36,3 @@ The documented native replay coverage includes message text and dynamic tool/sea
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Control–Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
 * [Provider-Boundary Secret Substitution](/vault/provider-boundary-secret-substitution.md)
-

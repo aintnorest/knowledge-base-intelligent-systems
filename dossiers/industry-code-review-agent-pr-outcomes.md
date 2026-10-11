@@ -59,5 +59,5 @@ Among the **98 already closed-unmerged bot-only PRs**, 59 (60.2%) have a 0–30%
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)

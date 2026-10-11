@@ -40,4 +40,3 @@ A child can misuse an action that is legitimately authorized for its parent; par
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Assume-Compromise Boundary Testing](/vault/assume-compromise-boundary-testing.md)
 * [Session-Composition Authorization](/vault/session-composition-authorization.md)
-

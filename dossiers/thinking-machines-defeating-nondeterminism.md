@@ -53,4 +53,4 @@ The article's animated floating-point illustration shows values and an “Exact:
 
 ## Vault Ideas Extracted
 
-* [Counterfactual Agent Run Forking](/vault/counterfactual-agent-run-forking.md)
+- [Counterfactual Agent Run Forking](/vault/counterfactual-agent-run-forking.md)

@@ -74,6 +74,6 @@ The ablations support the components but do not make them universal facts:
 
 ## Vault Ideas Extracted
 
-* [Downstream-Aware Prompt Evaluation](/vault/downstream-aware-prompt-evaluation.md)
-* [Configuration-Aware Multi-Agent Prompt Optimization](/vault/configuration-aware-multi-agent-prompt-optimization.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Downstream-Aware Prompt Evaluation](/vault/downstream-aware-prompt-evaluation.md)
+- [Configuration-Aware Multi-Agent Prompt Optimization](/vault/configuration-aware-multi-agent-prompt-optimization.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

@@ -61,4 +61,4 @@ Shopify reports **a dozen engineers** had contributed features and workflows on 
 
 ## Vault Ideas Extracted
 
-* [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
+- [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)

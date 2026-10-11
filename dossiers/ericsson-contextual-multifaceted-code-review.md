@@ -50,5 +50,5 @@ The authors attribute few incorrect findings to repository context and credit se
 
 ## Vault Ideas Extracted
 
-* [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

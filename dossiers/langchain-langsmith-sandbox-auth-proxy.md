@@ -33,4 +33,3 @@ Workload isolation and network authority are separate concerns: an isolated proc
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
-

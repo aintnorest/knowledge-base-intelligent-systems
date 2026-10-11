@@ -82,5 +82,5 @@ The principal stability and tradeoff values are graphical rather than supplied a
 
 ## Vault Ideas Extracted
 
-* [Repeated-Input Contextualization](/vault/repeated-input-contextualization.md)
-* [History-Conditioned Instruction Stability](/vault/history-conditioned-instruction-stability.md)
+- [Repeated-Input Contextualization](/vault/repeated-input-contextualization.md)
+- [History-Conditioned Instruction Stability](/vault/history-conditioned-instruction-stability.md)

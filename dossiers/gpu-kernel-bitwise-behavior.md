@@ -42,4 +42,4 @@ With pinned-tree layout optimization, **19/27** tuned kernel measurements across
 
 ## Vault Ideas Extracted
 
-* No vault page was created or updated from this source; its ideas are recorded here only.
+- No vault page was created or updated from this source; its ideas are recorded here only.

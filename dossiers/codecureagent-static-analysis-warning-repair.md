@@ -57,5 +57,5 @@ The evaluation samples **1,000 warnings from 106 Java projects**, spanning **291
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Evidence-Gated Static Warning Repair](/vault/evidence-gated-static-warning-repair.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Evidence-Gated Static Warning Repair](/vault/evidence-gated-static-warning-repair.md)

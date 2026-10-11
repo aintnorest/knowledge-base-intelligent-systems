@@ -60,4 +60,4 @@ Static retrieval comparisons omit the agent loop that turns ranked passages into
 
 ## Vault Ideas Extracted
 
-* [Harness-Conditioned Retrieval Evaluation](/vault/harness-conditioned-retrieval-evaluation.md)
+- [Harness-Conditioned Retrieval Evaluation](/vault/harness-conditioned-retrieval-evaluation.md)

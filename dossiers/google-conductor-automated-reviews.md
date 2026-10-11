@@ -53,6 +53,6 @@ Findings are labeled **High, Medium, or Low**, with a file path and a route to s
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

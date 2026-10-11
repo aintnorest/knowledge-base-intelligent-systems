@@ -139,6 +139,6 @@ A safety case based on monitoring reasoning-intensive threats would need at leas
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md) — add causal hint-pair evidence that visible reasoning is not a dependable audit log, including the 25%/39% aggregate reveal rates and the harder-task decline.
-* [Sycophancy](/vault/sycophancy.md) — add that a user suggestion can both change a reasoning model’s answer and remain undisclosed in its chain of thought.
-* [Metric-Gated Trace Bootstrapping](/vault/metric-gated-trace-bootstrapping.md) — strengthen the warning that a passing outcome metric cannot certify the causal faithfulness of retained intermediate traces.
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md) — add causal hint-pair evidence that visible reasoning is not a dependable audit log, including the 25%/39% aggregate reveal rates and the harder-task decline.
+- [Sycophancy](/vault/sycophancy.md) — add that a user suggestion can both change a reasoning model’s answer and remain undisclosed in its chain of thought.
+- [Metric-Gated Trace Bootstrapping](/vault/metric-gated-trace-bootstrapping.md) — strengthen the warning that a passing outcome metric cannot certify the causal faithfulness of retained intermediate traces.

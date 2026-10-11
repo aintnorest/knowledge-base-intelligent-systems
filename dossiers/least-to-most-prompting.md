@@ -77,4 +77,4 @@ In 20 sampled DROP failures, 4 came from a bad or absent decomposition, 13 from 
 
 ## Vault Ideas Extracted
 
-* [Least-to-Most Prompting](/vault/least-to-most-prompting.md)
+- [Least-to-Most Prompting](/vault/least-to-most-prompting.md)

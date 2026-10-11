@@ -37,4 +37,3 @@ Security-relevant path names must be interpreted in the namespace of their event
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Partial-Scope Tool Sandboxing](/vault/partial-scope-tool-sandboxing.md)
 * [Writable-Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md)
-

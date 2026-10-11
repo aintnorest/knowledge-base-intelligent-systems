@@ -55,6 +55,6 @@ The archived PDF is internally inconsistent: the main text and repository table 
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)
-* [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)
+- [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)

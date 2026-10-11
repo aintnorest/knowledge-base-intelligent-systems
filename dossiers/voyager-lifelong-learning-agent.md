@@ -56,5 +56,5 @@ Baselines are the authors' MineDojo adaptations of ReAct, Reflexion, and AutoGPT
 
 ## Vault Ideas Extracted
 
-* [Executable Code Actions](/vault/executable-code-actions.md)
-* [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)
+- [Executable Code Actions](/vault/executable-code-actions.md)
+- [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)

@@ -62,6 +62,6 @@ Accuracy changes are not uniform: multi-span questions lose more than single-spa
 
 ## Vault Ideas Extracted
 
-* [Content-Keyed Block Routing](/vault/content-keyed-block-routing.md)
-* [Hybrid Linear–Global Attention](/vault/hybrid-linear-global-attention.md)
-* [Rate–Distortion Memory Compaction](/vault/rate-distortion-memory-compaction.md)
+- [Content-Keyed Block Routing](/vault/content-keyed-block-routing.md)
+- [Hybrid Linear–Global Attention](/vault/hybrid-linear-global-attention.md)
+- [Rate–Distortion Memory Compaction](/vault/rate-distortion-memory-compaction.md)

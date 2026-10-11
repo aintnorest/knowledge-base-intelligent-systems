@@ -30,7 +30,6 @@ The agent inherits the prompt author's workspace and template permissions and ex
 
 ## Vault Ideas Extracted
 
-* [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
-* [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)
-
+- [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)

@@ -67,6 +67,6 @@ The result is heterogeneous in the paper's own figures. Brief prompting allegedl
 
 ## Vault Ideas Extracted
 
-* [Reasoning-Budget Calibration](/vault/reasoning-budget-calibration.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [Reasoning-Budget Calibration](/vault/reasoning-budget-calibration.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)

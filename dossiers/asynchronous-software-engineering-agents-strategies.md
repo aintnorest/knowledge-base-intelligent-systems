@@ -64,5 +64,5 @@ The “single-agent plus CAID” comparison is described as approximating fallba
 
 ## Vault Ideas Extracted
 
-* [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)

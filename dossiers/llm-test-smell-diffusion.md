@@ -72,6 +72,6 @@ A smell catalog detects structural warning signs, not independent expectations o
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — reduced smell count must not substitute for admissible behavioral checks.
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — calibrate detector precision and metric tradeoffs before optimizing generated tests.
-* Proposed new synthesis: **Contextual Test-Smell Triage** — assess cohesion, diagnosis, oracle visibility, and real fault evidence before treating a static test-smell flag as a violation.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — reduced smell count must not substitute for admissible behavioral checks.
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — calibrate detector precision and metric tradeoffs before optimizing generated tests.
+- Proposed new synthesis: **Contextual Test-Smell Triage** — assess cohesion, diagnosis, oracle visibility, and real fault evidence before treating a static test-smell flag as a violation.

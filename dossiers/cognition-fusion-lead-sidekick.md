@@ -56,4 +56,4 @@ For an Astra-led FrontierCode comparison, the smaller GPT-5.6 Luna sidekick yiel
 
 ## Vault Ideas Extracted
 
-* [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
+- [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)

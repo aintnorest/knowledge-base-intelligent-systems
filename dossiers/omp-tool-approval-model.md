@@ -35,4 +35,3 @@ Interactive context changes the boundary. Provider-originated computer-use safet
 * [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
 * [CLI Agent Hook Event Surfaces](/vault/cli-agent-hook-event-surfaces.md)
 * [Tool Identity Versus Effect Authority](/vault/tool-identity-versus-effect-authority.md)
-

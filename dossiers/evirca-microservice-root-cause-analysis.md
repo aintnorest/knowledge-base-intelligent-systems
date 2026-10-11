@@ -51,5 +51,5 @@ Leave-one-out ablations show strong *local* dependencies. On Telecom, removing t
 
 ## Vault Ideas Extracted
 
-* [Bounded Tool Observations](/vault/bounded-tool-observations.md)
-* [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
+- [Bounded Tool Observations](/vault/bounded-tool-observations.md)
+- [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)

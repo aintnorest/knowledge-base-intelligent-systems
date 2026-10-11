@@ -94,5 +94,5 @@ The important point is not that every prompt should use all of these. The metric
 
 ## Vault Ideas Extracted
 
-* [Prompt-Technique SWOT Analysis](/vault/prompt-technique-swot-analysis.md)
-* [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
+- [Prompt-Technique SWOT Analysis](/vault/prompt-technique-swot-analysis.md)
+- [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)

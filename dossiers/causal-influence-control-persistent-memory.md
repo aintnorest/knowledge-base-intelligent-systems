@@ -93,7 +93,7 @@ The reproducibility protocol asks a future empirical paper to publish or escrow 
 
 ## Vault Ideas Extracted
 
-* [Causal Influence Signature](/vault/causal-influence-signature.md)
-* [Observed-Effect Divergence Rollback](/vault/observed-effect-divergence-rollback.md)
-* [Falsification-Bounded Architecture Proposal](/vault/falsification-bounded-architecture-proposal.md)
-* [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md) (updated)
+- [Causal Influence Signature](/vault/causal-influence-signature.md)
+- [Observed-Effect Divergence Rollback](/vault/observed-effect-divergence-rollback.md)
+- [Falsification-Bounded Architecture Proposal](/vault/falsification-bounded-architecture-proposal.md)
+- [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md) (updated)

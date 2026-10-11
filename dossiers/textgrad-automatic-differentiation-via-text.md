@@ -70,5 +70,5 @@ It also clarifies a boundary with DSPy. DSPy compiles a declared program against
 
 ## Vault Ideas Extracted
 
-* [Textual Feedback Backpropagation](/vault/textual-feedback-backpropagation.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Textual Feedback Backpropagation](/vault/textual-feedback-backpropagation.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

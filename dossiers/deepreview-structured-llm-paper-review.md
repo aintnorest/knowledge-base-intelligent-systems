@@ -76,6 +76,6 @@ Standard mode additionally supports **Reviewer Scaling**: synthesizing R=1 to R=
 
 ## Vault Ideas Extracted
 
-* [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
-* [Dual-Axis Judge Test-Time Scaling](/vault/dual-axis-judge-test-time-scaling.md)
-* [Decomposition-Induced Injection Resistance](/vault/decomposition-induced-injection-resistance.md)
+- [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
+- [Dual-Axis Judge Test-Time Scaling](/vault/dual-axis-judge-test-time-scaling.md)
+- [Decomposition-Induced Injection Resistance](/vault/decomposition-induced-injection-resistance.md)

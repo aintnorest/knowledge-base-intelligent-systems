@@ -57,4 +57,4 @@ A benchmark must be matched to a solution's action space and deliverable: a term
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)

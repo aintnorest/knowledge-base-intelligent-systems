@@ -36,4 +36,3 @@ This is an operator document with design and admitted limitations, not evidence 
 * [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
 * [Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)
 * [Approval Bound to Canonical Effect](/vault/approval-bound-to-canonical-effect.md)
-

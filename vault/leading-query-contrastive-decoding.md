@@ -12,7 +12,7 @@ When a model agrees with a user because the prompt signalled what the user wants
 
 The published form contrasts the two at every decoding step:
 
-```
+```text
 p_LQCD(y | x_n, x_l, v) = softmax[ (1 + α)·logit_θ(y | x_n, v) − α·logit_θ(y | x_l, v) ]
 ```
 
@@ -38,4 +38,4 @@ Constructing `x_n` is the real work — it must be the same question with the pr
 
 ## Sources
 
-* [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — presents LQCD as one of the decoding-strategy mitigations, alongside uncertainty-aware sampling and citation-constrained decoding. The survey attributes it to "Chen et al." but cites Zhao et al.'s work on sycophancy in large vision-language models; verify against that primary source.
+- [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — presents LQCD as one of the decoding-strategy mitigations, alongside uncertainty-aware sampling and citation-constrained decoding. The survey attributes it to "Chen et al." but cites Zhao et al.'s work on sycophancy in large vision-language models; verify against that primary source.

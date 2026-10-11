@@ -35,5 +35,5 @@ The authors report that the storage engine's cheap manifest copies originally se
 
 ## Vault Ideas Extracted
 
-* [Observed-Effect Divergence Rollback](/vault/observed-effect-divergence-rollback.md)
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Observed-Effect Divergence Rollback](/vault/observed-effect-divergence-rollback.md)
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)

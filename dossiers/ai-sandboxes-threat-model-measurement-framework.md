@@ -81,5 +81,5 @@ It then maps the dimensions to standards and regulation: NIST AI RMF and TEVV, I
 
 ## Vault Ideas Extracted
 
-* [Claim-Bounded Sandbox Evidence](/vault/claim-bounded-sandbox-evidence.md)
-* [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
+- [Claim-Bounded Sandbox Evidence](/vault/claim-bounded-sandbox-evidence.md)
+- [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)

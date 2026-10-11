@@ -53,6 +53,6 @@ Traditional automatic generators often record current outputs as expected values
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)

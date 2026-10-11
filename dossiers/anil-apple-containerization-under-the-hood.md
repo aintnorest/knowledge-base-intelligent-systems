@@ -40,4 +40,3 @@ The author explicitly notes that these are Linux containers, not macOS or iOS co
 
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Assume Guest Compromise: Host Exposure Budget](/vault/assume-guest-compromise-host-exposure.md)
-

@@ -69,4 +69,4 @@ The early study used a single-arm, within-subject remote design with 15 develope
 
 ## Vault Ideas Extracted
 
-* [In-Flow Socratic Prompt Coaching](/vault/in-flow-socratic-prompt-coaching.md)
+- [In-Flow Socratic Prompt Coaching](/vault/in-flow-socratic-prompt-coaching.md)

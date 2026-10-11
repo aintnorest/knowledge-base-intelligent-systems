@@ -59,4 +59,4 @@ Rejection-sampling training with evaluator-selected data (**9,139** examples in 
 
 ## Vault Ideas Extracted
 
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)

@@ -57,5 +57,5 @@ Anthropic says its developers use AI in roughly **60% of their work** yet report
 
 ## Vault Ideas Extracted
 
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)

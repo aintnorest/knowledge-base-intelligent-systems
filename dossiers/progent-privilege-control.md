@@ -57,4 +57,4 @@ The generic-policy prose says lower policies can further restrict the remaining 
 
 ## Vault Ideas Extracted
 
-* [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
+- [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)

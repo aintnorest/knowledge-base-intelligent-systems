@@ -55,5 +55,5 @@ Small, reviewable commits preserve these links between intent, implementation an
 
 ## Vault Ideas Extracted
 
-* [Reviewable Change Units](/vault/reviewable-change-units.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Reviewable Change Units](/vault/reviewable-change-units.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

@@ -68,5 +68,5 @@ Whether a model *should* update when challenged is genuinely underdetermined, so
 
 ## Sources
 
-* [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — ICLR 2024; documents all four forms across five production assistants and traces them to human preference data and preference models.
-* [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — technical survey mapping measurement methods, four causal factors, and five mitigation families by intervention point. Useful as a topic index; its citations are unreliable and should not be repeated unverified.
+- [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — ICLR 2024; documents all four forms across five production assistants and traces them to human preference data and preference models.
+- [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — technical survey mapping measurement methods, four causal factors, and five mitigation families by intervention point. Useful as a topic index; its citations are unreliable and should not be repeated unverified.

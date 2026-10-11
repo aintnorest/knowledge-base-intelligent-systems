@@ -54,5 +54,5 @@ A comparative field analysis linking provenance-labeled Codex, Devin, GitHub Cop
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Repository-Relative Code Quality](/vault/repository-relative-code-quality.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Repository-Relative Code Quality](/vault/repository-relative-code-quality.md)

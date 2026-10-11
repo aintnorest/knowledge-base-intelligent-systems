@@ -87,7 +87,7 @@ A consistent ordering emerges: **GRM > Memory Soup > SSC on quality, reversed on
 
 ## Vault Ideas Extracted
 
-* [Segmented Memory Checkpoint Caching](/vault/segmented-memory-checkpoint-caching.md)
-* [Content-Keyed Block Routing](/vault/content-keyed-block-routing.md)
-* [Hybrid Linear–Global Attention](/vault/hybrid-linear-global-attention.md) — updated with MC's reduction of hybrid stacks to segment-size-1 caching
-* [Rate–Distortion Memory Compaction](/vault/rate-distortion-memory-compaction.md) — updated with segmentation-granularity evidence
+- [Segmented Memory Checkpoint Caching](/vault/segmented-memory-checkpoint-caching.md)
+- [Content-Keyed Block Routing](/vault/content-keyed-block-routing.md)
+- [Hybrid Linear–Global Attention](/vault/hybrid-linear-global-attention.md) — updated with MC's reduction of hybrid stacks to segment-size-1 caching
+- [Rate–Distortion Memory Compaction](/vault/rate-distortion-memory-compaction.md) — updated with segmentation-granularity evidence

@@ -46,4 +46,4 @@ The source explicitly warns that malicious skill content or scripts may direct u
 
 ## Vault Ideas Extracted
 
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)

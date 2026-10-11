@@ -42,5 +42,5 @@ White-box experiments on Qwen2.5-VL-7B compare hidden states for matched text an
 
 ## Vault Ideas Extracted
 
-* [Cross-Modal Context Carrier](/vault/cross-modal-context-carrier.md)
-* [Rate–Distortion Memory Compaction](/vault/rate-distortion-memory-compaction.md)
+- [Cross-Modal Context Carrier](/vault/cross-modal-context-carrier.md)
+- [Rate–Distortion Memory Compaction](/vault/rate-distortion-memory-compaction.md)

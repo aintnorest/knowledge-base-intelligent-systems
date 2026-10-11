@@ -63,5 +63,5 @@ In an ablation with a fixed Claude model and 120 paired runs per condition, the 
 
 ## Vault Ideas Extracted
 
-* [Source-Backed Claim Admission](/vault/source-backed-claim-admission.md)
-* [Validated Fallback Composition](/vault/validated-fallback-composition.md)
+- [Source-Backed Claim Admission](/vault/source-backed-claim-admission.md)
+- [Validated Fallback Composition](/vault/validated-fallback-composition.md)

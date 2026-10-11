@@ -91,7 +91,7 @@ The RL ablation (Table 7) puts the rule reward first in importance: removing it 
 
 ## Vault Ideas Extracted
 
-* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
-* [Contrastive Preference Rule Extraction](/vault/contrastive-preference-rule-extraction.md)
-* [Rule-Based Rewards](/vault/rule-based-rewards.md)
-* [Cooperative Optimization Evaluation](/vault/cooperative-optimization-evaluation.md)
+- [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+- [Contrastive Preference Rule Extraction](/vault/contrastive-preference-rule-extraction.md)
+- [Rule-Based Rewards](/vault/rule-based-rewards.md)
+- [Cooperative Optimization Evaluation](/vault/cooperative-optimization-evaluation.md)

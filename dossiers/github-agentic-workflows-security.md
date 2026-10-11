@@ -34,8 +34,7 @@ Network destinations, model-proxy traffic, gateway/tool calls, and sensitive con
 
 ## Vault Ideas Extracted
 
-* [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
-* [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Staged Effect Admission](/vault/staged-effect-admission.md)
-
+- [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
+- [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Staged Effect Admission](/vault/staged-effect-admission.md)

@@ -152,6 +152,6 @@ This sensitivity defeats post-hoc storytelling. Breath, collaboration, concision
 
 ## Vault Ideas Extracted
 
-* Update [Prompt Optimization](/vault/prompt-optimization.md) with OPRO's primary score-conditioned loop, exact GSM8K/BBH evidence, and the requirement to bind winners to scorer and prompt position.
-* Update [Automatic Prompt Optimization Anatomy](/vault/automatic-prompt-optimization-anatomy.md) with the score/order/exemplar/batch/temperature ablations and the equal-budget one-step comparison.
-* Update [Prompt Contingency](/vault/prompt-contingency.md) with the 71.8% / 60.5% / 49.4% semantically similar GSM8K prompts and the severe BBH held-out regression.
+- Update [Prompt Optimization](/vault/prompt-optimization.md) with OPRO's primary score-conditioned loop, exact GSM8K/BBH evidence, and the requirement to bind winners to scorer and prompt position.
+- Update [Automatic Prompt Optimization Anatomy](/vault/automatic-prompt-optimization-anatomy.md) with the score/order/exemplar/batch/temperature ablations and the equal-budget one-step comparison.
+- Update [Prompt Contingency](/vault/prompt-contingency.md) with the 71.8% / 60.5% / 49.4% semantically similar GSM8K prompts and the severe BBH held-out regression.

@@ -59,5 +59,5 @@ The PPR restart-vector ablation is modest but consistent: combining relevance an
 
 ## Vault Ideas Extracted
 
-* [Single-Pass Concept Graph Construction](/vault/single-pass-concept-graph-construction.md)
-* [Frequency-Weighted Personalized PageRank](/vault/frequency-weighted-personalized-pagerank.md)
+- [Single-Pass Concept Graph Construction](/vault/single-pass-concept-graph-construction.md)
+- [Frequency-Weighted Personalized PageRank](/vault/frequency-weighted-personalized-pagerank.md)

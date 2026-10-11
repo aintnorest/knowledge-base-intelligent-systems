@@ -75,6 +75,6 @@ The maintenance comparison favors selective consolidation. MemoryOS's conservati
 
 ## Vault Ideas Extracted
 
-* [Workload-Aligned Agent Memory Architecture](/vault/workload-aligned-agent-memory-architecture.md)
-* [Hybrid Memory Retrieval Pipeline](/vault/hybrid-memory-retrieval-pipeline.md)
-* [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)
+- [Workload-Aligned Agent Memory Architecture](/vault/workload-aligned-agent-memory-architecture.md)
+- [Hybrid Memory Retrieval Pipeline](/vault/hybrid-memory-retrieval-pipeline.md)
+- [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)

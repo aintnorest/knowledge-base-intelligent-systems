@@ -39,4 +39,3 @@ Separate **work ownership**, **communication trust**, **execution permission**, 
 * [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)
 * [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
 * [Activation-Vested Risk Budget](/vault/activation-vested-risk-budget.md)
-

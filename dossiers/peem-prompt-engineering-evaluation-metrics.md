@@ -89,6 +89,6 @@ Rationales beat scalars on all three tasks — that comparison is internally con
 
 ## Vault Ideas Extracted
 
-* [Joint Prompt–Response Evaluation](/vault/joint-prompt-response-evaluation.md)
-* [Rationale-Guided Prompt Rewriting](/vault/rationale-guided-prompt-rewriting.md)
-* [Paraphrase–Adversarial Evaluator Validation](/vault/paraphrase-adversarial-evaluator-validation.md)
+- [Joint Prompt–Response Evaluation](/vault/joint-prompt-response-evaluation.md)
+- [Rationale-Guided Prompt Rewriting](/vault/rationale-guided-prompt-rewriting.md)
+- [Paraphrase–Adversarial Evaluator Validation](/vault/paraphrase-adversarial-evaluator-validation.md)

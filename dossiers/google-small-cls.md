@@ -50,4 +50,4 @@ A CL must not be *too* small either: a new API should normally have at least one
 
 ## Vault Ideas Extracted
 
-* [Reviewable Change Units](/vault/reviewable-change-units.md)
+- [Reviewable Change Units](/vault/reviewable-change-units.md)

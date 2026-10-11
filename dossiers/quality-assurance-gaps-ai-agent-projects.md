@@ -55,5 +55,5 @@ An empirical map of **repository-visible quality-assurance practices** in popula
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)

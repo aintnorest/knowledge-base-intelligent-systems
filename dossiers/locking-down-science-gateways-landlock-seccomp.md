@@ -86,4 +86,4 @@ The gateway architecture also reduces blast radius: only the Rust shim faces the
 
 ## Vault Ideas Extracted
 
-* [Runtime-Activated Application Sandboxing](/vault/runtime-activated-application-sandboxing.md)
+- [Runtime-Activated Application Sandboxing](/vault/runtime-activated-application-sandboxing.md)

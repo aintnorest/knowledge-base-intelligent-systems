@@ -50,5 +50,5 @@ For consequential document mutations, the guide recommends validated intermediat
 
 ## Vault Ideas Extracted
 
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)

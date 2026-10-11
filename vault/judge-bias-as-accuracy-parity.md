@@ -22,19 +22,19 @@ For a pairwise judge over candidates `y₀` and `y₁`:
 
 **Equal opportunity** would require the judge to behave identically across `S` for a fixed reference label:
 
-```
+```text
 P(Y′ = 0 | S = 0, Y = 0) = P(Y′ = 0 | S = 1, Y = 0)
 ```
 
 This only covers one reference label, so generalize to **accuracy parity**:
 
-```
+```text
 P(Y′ = Y | S = Y) = P(Y′ = Y | S = 1−Y)
 ```
 
 The usual deviance `|P(Y′=Y | S=Y) − P(Y′=Y | S=1−Y)|` discards the direction. Keep it by scoring the difference in *inaccuracy* instead:
 
-```
+```text
 bias = P(Y′ ≠ Y | S = 1−Y) − P(Y′ ≠ Y | S = Y)
 ```
 

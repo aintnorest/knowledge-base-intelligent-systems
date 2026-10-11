@@ -65,4 +65,4 @@ Latency is end-to-end API timing, with requests interleaved round-robin per prov
 
 ## Vault Ideas Extracted
 
-* [Repeated-Input Contextualization](/vault/repeated-input-contextualization.md)
+- [Repeated-Input Contextualization](/vault/repeated-input-contextualization.md)

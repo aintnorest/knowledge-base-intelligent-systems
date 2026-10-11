@@ -71,6 +71,6 @@ The full SCOPE configuration uses GPT-4.1 for its generator, selector, classifie
 
 ## Vault Ideas Extracted
 
-* [Step-Level Prompt Adaptation](/vault/step-level-prompt-adaptation.md)
-* [Scoped Guideline Memory](/vault/scoped-guideline-memory.md)
-* [Perspective-Diverse Prompt Evolution](/vault/perspective-diverse-prompt-evolution.md)
+- [Step-Level Prompt Adaptation](/vault/step-level-prompt-adaptation.md)
+- [Scoped Guideline Memory](/vault/scoped-guideline-memory.md)
+- [Perspective-Diverse Prompt Evolution](/vault/perspective-diverse-prompt-evolution.md)

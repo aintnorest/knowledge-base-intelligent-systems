@@ -65,4 +65,4 @@ It also notes the short path from research to deployment: inference engines and 
 
 ## Vault Ideas Extracted
 
-* [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
+- [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)

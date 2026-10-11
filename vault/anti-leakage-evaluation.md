@@ -30,6 +30,7 @@ A strict system prompt injected into ALL evaluated pipelines (not just the targe
 > You MUST write this paper as if you have no prior knowledge of the topic, method, experiments, or results. Your task is to construct the paper exclusively from the materials provided in the current session. Treat these inputs as the only available source of truth.
 
 **Forbidden behaviors explicitly listed**:
+
 - Retrieve or rely on knowledge from training data
 - Attempt to recall or reconstruct any existing or published paper
 - Use external facts, assumptions, or prior familiarity

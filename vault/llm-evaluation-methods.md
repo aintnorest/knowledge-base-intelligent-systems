@@ -38,18 +38,22 @@ A structured overview of how to evaluate prompt engineering effectiveness, spann
 ## Benchmark Categories
 
 ### Math Word Problems (MWP)
+
 - GSM8K, MATH, SVAMP, ASDiv, AQuA, MathQA
 - Tests numerical reasoning and mathematical problem-solving.
 
 ### Question Answering (QA)
+
 - MMLU, FEVER, HotPotQA, NarrativeQA, QuALITY, CommonsenseQA
 - Tests knowledge retrieval, multi-hop reasoning, and commonsense.
 
 ### Language Understanding
+
 - SST (sentiment), AG's News (classification), Subj (subjectivity)
 - Tests comprehension and classification.
 
 ### Multimodal Tasks
+
 - RefCOCO, RefCOCO+, RefCOCOg
 - Tests cross-modal understanding (vision + language).
 

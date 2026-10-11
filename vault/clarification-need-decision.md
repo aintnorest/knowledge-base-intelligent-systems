@@ -45,7 +45,6 @@ Once asking is warranted, the question should be scoped to what the ambiguity ac
 
 For programs or formalized requirements, [Disagreement-Selected Clarification](/vault/disagreement-selected-clarification.md) chooses **what to ask** from concrete behaviors that separate candidate interpretations. This does not replace the ask/proceed cost decision. In a 15-programmer study of curated small code-evaluation tasks, mean correct evaluation was 0.40 without tests, 0.84 with pass/fail questions, and 0.64 with expected-output questions; only pass/fail significantly improved accuracy over baseline. Cognitive-load means fell from 45.46 to 28.00 and 29.52, but task-time differences were not significant. These results support a reviewable question surface, not proven coding acceleration; mistaken answers can eliminate correct candidates, and benchmark gains assume perfect-oracle feedback.
 
-
 ## Practical Use
 
 Implement this as two gated stages, not one prompt instruction: (1) a lightweight ask/proceed classifier or VoI estimate that runs before any question is drafted, conditioned on ambiguity type and the cost of a wrong action in that context; (2) a question generator invoked only after stage 1 fires, constrained to a small, coherent facet set so the user can answer in one short turn. Log which ambiguity type triggered the ask, and audit false-negative "confidently wrong" answers and false-positive over-asks separately — they have different costs and different fixes.

@@ -51,7 +51,7 @@ Skill-library evaluation uses three **independent** arms with the same task and 
 
 ## Vault Ideas Extracted
 
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Evolving Context Playbooks](/vault/evolving-context-playbooks.md)
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
-* [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Evolving Context Playbooks](/vault/evolving-context-playbooks.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)

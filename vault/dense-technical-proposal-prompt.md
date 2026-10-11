@@ -23,10 +23,12 @@ A prompt pattern for reverse-engineering a comprehensive "Technical Proposal" fr
 **Task**: Reverse-engineer a comprehensive, highly detailed "Technical Proposal" from published paper content.
 
 **Critical Data Ingestion Rules**:
+
 - **Target Content**: Problem Definition, Motivation, Method/Algorithm, Architecture, Mathematical Formulation
 - **Exclusion Zone**: STRICTLY IGNORE experiments, results, evaluations, ablations, conclusions; do not mention specific accuracy numbers or SOTA claims
 
 **Instructions**:
+
 1. **Perspective & Tone**: First-Person Future Tense ("We will define...", "We formulate the loss as..."); act as if experiments have not yet happened
 2. **Preserve Technical Density**:
    - Equations are vital: preserve all mathematical formulations, loss functions, and algorithms using LaTeX

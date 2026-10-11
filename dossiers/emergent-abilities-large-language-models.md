@@ -72,7 +72,7 @@ Every reported threshold (13B for GPT-3 arithmetic, ~100B for CoT benefit, 540B 
 
 ## Vault Ideas Extracted
 
-* [Emergent Abilities](/vault/emergent-abilities.md) — the core concept and its measurement caveats
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md) — updated: CoT's benefit itself emerges at scale
-* [In-Context Learning](/vault/in-context-learning.md) — updated: few-shot task performance is near-random below threshold on many tasks
-* [Prompt Contingency](/vault/prompt-contingency.md) — updated: technique effects can flip sign across scale thresholds
+- [Emergent Abilities](/vault/emergent-abilities.md) — the core concept and its measurement caveats
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md) — updated: CoT's benefit itself emerges at scale
+- [In-Context Learning](/vault/in-context-learning.md) — updated: few-shot task performance is near-random below threshold on many tasks
+- [Prompt Contingency](/vault/prompt-contingency.md) — updated: technique effects can flip sign across scale thresholds

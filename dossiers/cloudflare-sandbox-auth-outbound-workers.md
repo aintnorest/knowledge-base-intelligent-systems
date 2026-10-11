@@ -32,4 +32,3 @@ An injected token cannot be stolen from the sandbox's files, but sandboxed code 
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
 * [Runtime-Activated Application Sandboxing](/vault/runtime-activated-application-sandboxing.md)
-

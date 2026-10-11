@@ -36,4 +36,3 @@ A VM prevents direct access to the user's machine but offers multiple mediated e
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Mediated Agent Execution Isolation](/vault/mediated-agent-execution-isolation.md)
 * [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
-

@@ -54,5 +54,5 @@ The PDF contains numerical inconsistencies. Table 1's independent Llama-3.1-8B C
 
 ## Vault Ideas Extracted
 
-* [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
-* [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)
+- [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
+- [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)

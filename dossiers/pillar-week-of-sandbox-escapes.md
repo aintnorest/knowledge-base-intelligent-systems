@@ -41,7 +41,6 @@ This is a vendor-research series overview, not a comparative exploit-rate study.
 
 ## Vault Ideas Extracted
 
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
-* [Writable-Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md)
-
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
+- [Writable-Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md)

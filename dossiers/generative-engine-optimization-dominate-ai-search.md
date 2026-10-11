@@ -131,7 +131,7 @@ Section 6 escalates this into a five-pillar "GEO operating system": engine-speci
 
 ## Vault Ideas Extracted
 
-* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
-* [Earned-Media Citation Bias](/vault/earned-media-citation-bias.md)
-* [Engine-Specific Citation Ecosystems](/vault/engine-specific-citation-ecosystems.md)
-* [Big-Brand Bias](/vault/big-brand-bias.md)
+- [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+- [Earned-Media Citation Bias](/vault/earned-media-citation-bias.md)
+- [Engine-Specific Citation Ecosystems](/vault/engine-specific-citation-ecosystems.md)
+- [Big-Brand Bias](/vault/big-brand-bias.md)

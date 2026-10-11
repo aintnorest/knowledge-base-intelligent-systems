@@ -52,7 +52,7 @@ The summary table reports **9 short** tasks under 10K reference LOC (mean **5.1K
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-* [Score-Gated Refinement](/vault/score-gated-refinement.md)
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Score-Gated Refinement](/vault/score-gated-refinement.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)

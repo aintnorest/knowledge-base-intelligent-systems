@@ -23,10 +23,12 @@ A prompt pattern for reverse-engineering a high-level "Concept Note" from a fini
 **Task**: Write a high-level "Concept Note" based on provided paper content.
 
 **Critical Data Ingestion Rules**:
+
 - **Target Content**: Problem Definition, Motivation, High-level Method/Algorithm
 - **Exclusion Zone**: STRICTLY IGNORE experiments, results, evaluations, comparisons, ablations
 
 **Instructions**:
+
 1. **Perspective**: First-Person Future Tense ("We propose to explore...", "We aim to investigate...")
 2. **Enforce Sparsity**:
    - Conceptual over mathematical: Do NOT use LaTeX or formulas

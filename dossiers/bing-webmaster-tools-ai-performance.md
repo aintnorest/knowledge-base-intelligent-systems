@@ -196,6 +196,6 @@ commitments:
 
 ## Vault Ideas Extracted
 
-* [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)
-* [Grounding Query Telemetry](/vault/grounding-query-telemetry.md)
-* [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md)
+- [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)
+- [Grounding Query Telemetry](/vault/grounding-query-telemetry.md)
+- [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md)

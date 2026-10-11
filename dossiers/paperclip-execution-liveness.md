@@ -41,4 +41,3 @@ A workflow status should encode a verifiable next owner and wake mechanism, not 
 * [Security-Aware Replanning](/vault/security-aware-replanning.md)
 * [Agent Work Liveness Invariants](/vault/agent-work-liveness-invariants.md)
 * [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
-

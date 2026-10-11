@@ -57,4 +57,4 @@ The stronger claim is about **adaptive training**, not deterministic runtime. Ev
 
 ## Vault Ideas Extracted
 
-* [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)
+- [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)

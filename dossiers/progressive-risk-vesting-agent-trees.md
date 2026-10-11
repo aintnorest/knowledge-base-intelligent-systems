@@ -46,4 +46,3 @@ The probability guarantee depends on valid selection-conditional certificates an
 * [Security-Aware Replanning](/vault/security-aware-replanning.md)
 * [Attenuated Delegation Authority](/vault/attenuated-delegation-authority.md)
 * [Activation-Vested Risk Budget](/vault/activation-vested-risk-budget.md)
-

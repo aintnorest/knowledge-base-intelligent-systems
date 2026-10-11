@@ -35,4 +35,3 @@ The document is architecture description rather than an empirical throughput or 
 * [Structured Execution Memory](/vault/structured-execution-memory.md)
 * [Reviewable Change Units](/vault/reviewable-change-units.md)
 * [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)
-

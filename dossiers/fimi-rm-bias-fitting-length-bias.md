@@ -70,6 +70,6 @@ The paper spends real effort defending its accuracy drop, and the argument is th
 
 ## Vault Ideas Extracted
 
-* [Learned Bias Fitting for Reward Debiasing](/vault/learned-bias-fitting-reward-debiasing.md)
-* [Stop-Gradient Correlation Decoupling](/vault/stop-gradient-correlation-decoupling.md)
-* [Confound-Partitioned Accuracy](/vault/confound-partitioned-accuracy.md)
+- [Learned Bias Fitting for Reward Debiasing](/vault/learned-bias-fitting-reward-debiasing.md)
+- [Stop-Gradient Correlation Decoupling](/vault/stop-gradient-correlation-decoupling.md)
+- [Confound-Partitioned Accuracy](/vault/confound-partitioned-accuracy.md)

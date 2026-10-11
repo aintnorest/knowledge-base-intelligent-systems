@@ -50,5 +50,5 @@ His preferred design distributes feedback throughout the pipeline instead of dis
 
 ## Vault Ideas Extracted
 
-* [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
-* [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
+- [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
+- [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)

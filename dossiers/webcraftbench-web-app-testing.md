@@ -53,6 +53,6 @@ The published total is a **relative z-score**: one-third aesthetics, one-third u
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Intended-Path Benchmark Validation](/vault/intended-path-benchmark-validation.md)
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Intended-Path Benchmark Validation](/vault/intended-path-benchmark-validation.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)

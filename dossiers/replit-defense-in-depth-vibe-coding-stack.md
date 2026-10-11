@@ -36,8 +36,7 @@ Security analysis occurs during development and before publish. The pre-publish 
 
 ## Vault Ideas Extracted
 
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
-* [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
-
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)

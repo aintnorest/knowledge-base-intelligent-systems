@@ -86,5 +86,5 @@ The application examples make clear that no pattern is a blanket solution.
 
 ## Vault Ideas Extracted
 
-* [Privileged–Quarantined Agent Split](/vault/privileged-quarantined-agent-split.md)
-* [Intent-Then-Isolate Execution](/vault/intent-then-isolate-execution.md)
+- [Privileged–Quarantined Agent Split](/vault/privileged-quarantined-agent-split.md)
+- [Intent-Then-Isolate Execution](/vault/intent-then-isolate-execution.md)

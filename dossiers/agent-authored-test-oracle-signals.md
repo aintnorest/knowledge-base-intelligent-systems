@@ -57,6 +57,6 @@ Eight categories separate W1 no assertion, W2 existence/non-null only, W3 Boolea
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — distinguish presence, oracle syntax, oracle authority, and observed fault sensitivity.
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — require independently justified assertions, not just agent-authored test structure.
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — syntactic gates are triage proxies that need semantic challenges.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — distinguish presence, oracle syntax, oracle authority, and observed fault sensitivity.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — require independently justified assertions, not just agent-authored test structure.
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — syntactic gates are triage proxies that need semantic challenges.

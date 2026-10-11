@@ -72,7 +72,7 @@ Prompt optimization is neither uniformly beneficial nor uniformly futile. Across
 
 ## Vault Ideas Extracted
 
-* [Configuration-Aware Multi-Agent Prompt Optimization](/vault/configuration-aware-multi-agent-prompt-optimization.md)
-* [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Configuration-Aware Multi-Agent Prompt Optimization](/vault/configuration-aware-multi-agent-prompt-optimization.md)
+- [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)

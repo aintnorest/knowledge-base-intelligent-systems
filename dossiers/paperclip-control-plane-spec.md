@@ -39,4 +39,3 @@ There is no controlled evaluation of throughput, safety, or operational reliabil
 * [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)
 * [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
 * [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)
-

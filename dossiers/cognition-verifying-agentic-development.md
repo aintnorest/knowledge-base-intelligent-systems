@@ -64,6 +64,6 @@ Test mode may be explicitly requested, or offered after a PR is opened when appl
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-* [Feedback-Grounded Context Adaptation](/vault/feedback-grounded-context-adaptation.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Feedback-Grounded Context Adaptation](/vault/feedback-grounded-context-adaptation.md)

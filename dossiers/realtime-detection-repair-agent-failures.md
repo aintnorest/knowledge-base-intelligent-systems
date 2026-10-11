@@ -56,4 +56,4 @@ The abstract says **770** episodes use real tools, while Section 5 describes all
 
 ## Vault Ideas Extracted
 
-* [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
+- [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
