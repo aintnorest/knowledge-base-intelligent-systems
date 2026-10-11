@@ -63,4 +63,4 @@ The experiments use all 16 hard Procgen environments.
 
 ## Vault Ideas Extracted
 
-* [Decoupled Behavior and Proximal Policies](/vault/decoupled-behavior-proximal-policies.md)
+- [Decoupled Behavior and Proximal Policies](/vault/decoupled-behavior-proximal-policies.md)

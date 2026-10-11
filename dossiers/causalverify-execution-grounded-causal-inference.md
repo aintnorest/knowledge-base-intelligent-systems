@@ -55,4 +55,4 @@ The result depends visibly on extraction/scoring rules: for Opus, regex → extr
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)

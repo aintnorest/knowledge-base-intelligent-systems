@@ -62,6 +62,6 @@ The combination is neither an unconstrained agent loop nor a purely fixed workfl
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
-* [Safety-Constrained Regression Test Selection](/vault/safety-constrained-regression-test-selection.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
+- [Safety-Constrained Regression Test Selection](/vault/safety-constrained-regression-test-selection.md)

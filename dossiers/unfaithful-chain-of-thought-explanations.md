@@ -118,7 +118,7 @@ CoT usually reduces stereotype alignment relative to No-CoT, but does not elimin
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
-* [User-Cue Perturbation Evaluation](/vault/user-cue-perturbation-evaluation.md)
-* [Sycophancy](/vault/sycophancy.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [User-Cue Perturbation Evaluation](/vault/user-cue-perturbation-evaluation.md)
+- [Sycophancy](/vault/sycophancy.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)

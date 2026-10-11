@@ -80,7 +80,7 @@ That last comparison is the paper's sharpest single number. It quantifies the he
 
 ## Vault Ideas Extracted
 
-* [Sycophancy](/vault/sycophancy.md)
-* [User-Cue Perturbation Evaluation](/vault/user-cue-perturbation-evaluation.md)
-* [Preference-Data Feature Attribution](/vault/preference-data-feature-attribution.md)
-* [Prompted Preference-Model Debiasing](/vault/prompted-preference-model-debiasing.md)
+- [Sycophancy](/vault/sycophancy.md)
+- [User-Cue Perturbation Evaluation](/vault/user-cue-perturbation-evaluation.md)
+- [Preference-Data Feature Attribution](/vault/preference-data-feature-attribution.md)
+- [Prompted Preference-Model Debiasing](/vault/prompted-preference-model-debiasing.md)

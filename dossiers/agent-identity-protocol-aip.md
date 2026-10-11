@@ -42,4 +42,3 @@ The authors' six scripted attack classes each receive 100 attempts: AIP rejects 
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)
 * [Attenuated Delegation Authority](/vault/attenuated-delegation-authority.md)
-

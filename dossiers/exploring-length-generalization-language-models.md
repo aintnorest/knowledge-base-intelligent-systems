@@ -57,4 +57,4 @@ The useful inference is not that prompting universally beats training. It is tha
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)

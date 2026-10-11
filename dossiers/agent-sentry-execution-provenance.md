@@ -62,4 +62,4 @@ The paper also reports that a tuned Layer-3 judge alone reaches 98.0% utility an
 
 ## Vault Ideas Extracted
 
-* [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
+- [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)

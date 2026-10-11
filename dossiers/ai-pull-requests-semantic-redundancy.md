@@ -47,6 +47,6 @@ A study of two different properties of real AI-authored pull requests: whether n
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Repository Drift Garbage Collection](/vault/repository-drift-garbage-collection.md)
-* [Repository-Relative Code Quality](/vault/repository-relative-code-quality.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Repository Drift Garbage Collection](/vault/repository-drift-garbage-collection.md)
+- [Repository-Relative Code Quality](/vault/repository-relative-code-quality.md)

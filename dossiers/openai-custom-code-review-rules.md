@@ -68,6 +68,6 @@ OpenAI suggests trying **two or three** rules in the applicable file and testing
 
 ## Vault Ideas Extracted
 
-* [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
-* [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
+- [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

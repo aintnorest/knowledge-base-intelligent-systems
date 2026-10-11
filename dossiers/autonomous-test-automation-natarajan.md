@@ -40,4 +40,4 @@ No identifiable software repository, benchmark dataset, number of bugs, test cou
 
 ## Vault Ideas Extracted
 
-* [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
+- [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)

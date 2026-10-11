@@ -60,5 +60,5 @@ Different questions are used in independent sessions rather than a paired task c
 
 ## Vault Ideas Extracted
 
-* [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
-* [Prompt Cache Stability](/vault/prompt-cache-stability.md)
+- [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
+- [Prompt Cache Stability](/vault/prompt-cache-stability.md)

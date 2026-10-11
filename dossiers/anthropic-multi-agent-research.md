@@ -42,8 +42,7 @@ The benchmark gains, token ratios, and time savings are internally reported and 
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
-* [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
-* [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
-
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
+- [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
+- [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)

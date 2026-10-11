@@ -34,7 +34,7 @@ S_M = \frac{1}{n}\sum_i J\left(y_i, M(P_{static}(x_i))\right),
 and evaluation selects the model with the highest score. In the application-centric formulation, a prompt optimizer uses training and validation examples to find a model-specific prompt \(P_M^*\), after which the held-out score becomes:
 
 \[
-S_M^* = \frac{1}{n}\sum_i J\left(y_i, M(P_M^*(x_i))\right).
+S_M^{\ast} = \frac{1}{n}\sum_i J\left(y_i, M(P_M^{\ast}(x_i))\right).
 \]
 
 This turns the object being selected from a bare model into a **model–prompt configuration**. That distinction matters because models have different response-format preferences, instruction-following behavior, and sensitivity to examples. A fair deployment evaluation should give each candidate a comparable opportunity to adapt its prompt, rather than implicitly favoring the model most compatible with one arbitrary template.

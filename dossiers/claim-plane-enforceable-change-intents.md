@@ -64,6 +64,6 @@ Dynamic execution records **seven successful promotions**, no rejected promotion
 
 ## Vault Ideas Extracted
 
-* [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
-* [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
-* [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)
+- [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
+- [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
+- [Pre-Write Intent Admission](/vault/pre-write-intent-admission.md)

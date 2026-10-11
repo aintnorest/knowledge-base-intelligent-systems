@@ -68,4 +68,4 @@ Isolation adds latency and cost. For **75.73%** of tested queries, the reported 
 
 ## Vault Ideas Extracted
 
-* [Mediated Agent Execution Isolation](/vault/mediated-agent-execution-isolation.md)
+- [Mediated Agent Execution Isolation](/vault/mediated-agent-execution-isolation.md)

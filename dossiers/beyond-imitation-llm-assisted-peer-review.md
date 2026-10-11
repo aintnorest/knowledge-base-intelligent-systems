@@ -51,4 +51,4 @@ The robustness result is deliberately less flattering: injected text intended to
 
 ## Vault Ideas Extracted
 
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

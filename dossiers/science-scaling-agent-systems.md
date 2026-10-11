@@ -79,5 +79,5 @@ Financial evidence streams can be researched separately and integrated; PlanCraf
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)

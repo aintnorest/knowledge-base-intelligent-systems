@@ -57,4 +57,4 @@ The source provides no dataset size, confidence intervals, independent evaluatio
 
 ## Vault Ideas Extracted
 
-* [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)
+- [Structured Agent Communication Contracts](/vault/structured-agent-communication-contracts.md)

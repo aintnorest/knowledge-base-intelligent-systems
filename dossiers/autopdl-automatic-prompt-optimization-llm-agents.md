@@ -69,5 +69,5 @@ The pattern choice varies materially:
 
 ## Vault Ideas Extracted
 
-* [Prompt Optimization](/vault/prompt-optimization.md)
-* [Declarative LM Pipeline Compilation](/vault/declarative-lm-pipeline-compilation.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)
+- [Declarative LM Pipeline Compilation](/vault/declarative-lm-pipeline-compilation.md)

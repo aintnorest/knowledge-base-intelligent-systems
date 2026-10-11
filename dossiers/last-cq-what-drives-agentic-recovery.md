@@ -53,6 +53,6 @@ The GPT-4o-mini judge calls 88.2% of 13,563 LAST-CQ+DB outputs at least partiall
 
 ## Vault Ideas Extracted
 
-* [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
-* [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)
-* [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
+- [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
+- [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)
+- [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)

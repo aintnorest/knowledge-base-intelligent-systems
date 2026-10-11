@@ -55,4 +55,4 @@ The survey says it analyzes **over 223 papers** from 2023–2025, then reports *
 
 ## Vault Ideas Extracted
 
-* [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
+- [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)

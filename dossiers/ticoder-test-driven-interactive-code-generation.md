@@ -82,6 +82,6 @@ These gains include population sampling, execution, reranking, and ideal answers
 
 ## Vault Ideas Extracted
 
-* [Disagreement-Selected Clarification](/vault/disagreement-selected-clarification.md)
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Disagreement-Selected Clarification](/vault/disagreement-selected-clarification.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

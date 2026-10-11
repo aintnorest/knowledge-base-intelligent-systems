@@ -39,4 +39,3 @@ The broker is opt-in. A reachable broker and gateway must be protected as real a
 * [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
 * [Control–Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
 * [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
-

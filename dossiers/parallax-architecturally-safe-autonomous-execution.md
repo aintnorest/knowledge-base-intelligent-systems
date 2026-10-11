@@ -72,6 +72,6 @@ These values are useful as prototype evidence and as a prompt to test the execut
 
 ## Vault Ideas Extracted
 
-* [Assume-Compromise Boundary Testing](/vault/assume-compromise-boundary-testing.md)
-* [Mediated Agent Execution Isolation](/vault/mediated-agent-execution-isolation.md)
-* [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
+- [Assume-Compromise Boundary Testing](/vault/assume-compromise-boundary-testing.md)
+- [Mediated Agent Execution Isolation](/vault/mediated-agent-execution-isolation.md)
+- [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)

@@ -71,5 +71,5 @@ The paper tests encoder-decoder models (Flan-T5-XXL and Flan-UL2), query-aware c
 
 ## Vault Ideas Extracted
 
-* [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
-* [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)
+- [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
+- [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)

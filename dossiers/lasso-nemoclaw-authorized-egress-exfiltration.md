@@ -45,4 +45,3 @@ The authors reported to NVIDIA and quote a vendor response treating their scenar
 * [Writable-Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md)
 * [Destination Allowlist as Capability Grant](/vault/destination-allowlist-as-capability-grant.md)
 * [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)
-

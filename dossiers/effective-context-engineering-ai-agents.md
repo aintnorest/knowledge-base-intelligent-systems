@@ -60,7 +60,7 @@ These interventions solve different problems. Compaction preserves one conversat
 
 ## Vault Ideas Extracted
 
-* [Bounded Tool Observations](/vault/bounded-tool-observations.md)
-* [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
-* [Reversible, Query-Conditioned Compaction](/vault/reversible-query-conditioned-compaction.md)
-* [Structured Execution Memory](/vault/structured-execution-memory.md)
+- [Bounded Tool Observations](/vault/bounded-tool-observations.md)
+- [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
+- [Reversible, Query-Conditioned Compaction](/vault/reversible-query-conditioned-compaction.md)
+- [Structured Execution Memory](/vault/structured-execution-memory.md)

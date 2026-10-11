@@ -74,7 +74,7 @@ The nine implementation areas, ordered by the paper's assessed leverage-per-effo
 
 ## Vault Ideas Extracted
 
-* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
-* [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md) — the answer-first, self-contained-passage writing discipline (merged into the existing page during post-merge consolidation)
-* [Entity Consistency](/vault/entity-consistency.md)
-* [AI Citation Rate](/vault/ai-citation-rate.md)
+- [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+- [Retrieval-Legible Content Structure](/vault/retrieval-legible-content-structure.md) — the answer-first, self-contained-passage writing discipline (merged into the existing page during post-merge consolidation)
+- [Entity Consistency](/vault/entity-consistency.md)
+- [AI Citation Rate](/vault/ai-citation-rate.md)

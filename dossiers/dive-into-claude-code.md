@@ -41,4 +41,3 @@ The analyzed snapshot is v2.1.88 and feature flags/build targets alter active pa
 * [Bounded Tool Observations](/vault/bounded-tool-observations.md)
 * [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
 * [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
-

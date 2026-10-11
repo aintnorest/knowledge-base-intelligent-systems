@@ -65,4 +65,4 @@ Participants spent **9.7 versus 8.8 minutes** in the exploratory and baseline co
 
 ## Vault Ideas Extracted
 
-* [Shared Alternatives Before Commitment](/vault/shared-alternatives-before-commitment.md)
+- [Shared Alternatives Before Commitment](/vault/shared-alternatives-before-commitment.md)

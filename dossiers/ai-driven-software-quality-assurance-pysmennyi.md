@@ -47,6 +47,6 @@ The survey separates **validation** (requirements, exploratory analysis, equival
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

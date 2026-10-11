@@ -40,4 +40,4 @@ The feedback coupling is the distinctive proposal: current risk sets monitoring 
 
 ## Vault Ideas Extracted
 
-* No vault page was created or updated from this source; its ideas are recorded here only.
+- No vault page was created or updated from this source; its ideas are recorded here only.

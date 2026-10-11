@@ -37,4 +37,4 @@ Define the benign set before choosing the vector — it must represent real traf
 
 ## Sources
 
-* [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — surveys KL-then-steer (Stickland et al.) as a post-deployment control mechanism for sycophancy, contrasted with retraining-based mitigations that are slower and harder to reverse.
+- [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — surveys KL-then-steer (Stickland et al.) as a post-deployment control mechanism for sycophancy, contrasted with retraining-based mitigations that are slower and harder to reverse.

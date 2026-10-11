@@ -36,4 +36,3 @@ Treat local daemon APIs as effective capability grants: allowed access to a sock
 
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Privileged Local Daemon Sandbox Bypass](/vault/privileged-local-daemon-sandbox-bypass.md)
-

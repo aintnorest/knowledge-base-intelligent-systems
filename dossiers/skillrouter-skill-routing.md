@@ -54,6 +54,6 @@ SkillRouter's **0.6B bi-encoder** indexes name, description, and a capped body a
 
 ## Vault Ideas Extracted
 
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
-* [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)

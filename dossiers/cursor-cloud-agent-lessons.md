@@ -35,7 +35,6 @@ As models improved, Cursor moved some fixed post-task checks, commit/push behavi
 
 ## Vault Ideas Extracted
 
-* [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
-* [Structured Execution Memory](/vault/structured-execution-memory.md)
-* [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
-
+- [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
+- [Structured Execution Memory](/vault/structured-execution-memory.md)
+- [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)

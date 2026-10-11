@@ -72,4 +72,4 @@ The paper's approach is few-shot: humans annotate trajectories by writing though
 
 ## Vault Ideas Extracted
 
-* [ReAct Framework](/vault/react-framework.md)
+- [ReAct Framework](/vault/react-framework.md)

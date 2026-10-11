@@ -67,7 +67,7 @@ This is primarily **regression characterization**: the current implementation su
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — generated tests arrive with an executable mutant-kill witness, not merely a green badge.
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — concern narratives remain distinct from characterization oracles.
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — use newly exposed fault classes to strengthen regression signal without optimizing a global proxy.
-* Proposed new synthesis: **Concern-Directed Mutation Witnesses** — a contract-relevant surviving injected fault can steer generation of one discriminating regression check, with equivalence triage and human oracle review.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — generated tests arrive with an executable mutant-kill witness, not merely a green badge.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — concern narratives remain distinct from characterization oracles.
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — use newly exposed fault classes to strengthen regression signal without optimizing a global proxy.
+- Proposed new synthesis: **Concern-Directed Mutation Witnesses** — a contract-relevant surviving injected fault can steer generation of one discriminating regression check, with equivalence triage and human oracle review.

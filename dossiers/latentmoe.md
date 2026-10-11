@@ -65,4 +65,4 @@ In a 73B hybrid Mamba-attention experiment trained for 1T tokens, l-MoEacc again
 
 ## Vault Ideas Extracted
 
-* [Latent-Space Expert Routing](/vault/latent-space-expert-routing.md)
+- [Latent-Space Expert Routing](/vault/latent-space-expert-routing.md)

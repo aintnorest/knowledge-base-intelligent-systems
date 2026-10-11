@@ -41,4 +41,3 @@ Isolation is not a claim that a reviewer lacks all shared biases: it may still s
 * [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
 * [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
 * [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
-

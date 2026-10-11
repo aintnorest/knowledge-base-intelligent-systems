@@ -43,4 +43,3 @@ With Sonnet 4, old and new agent achieve the same **68.0%** SWE-bench Verified s
 * [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)
 * [Layered Concurrent-Agent Isolation](/vault/layered-concurrent-agent-isolation.md)
 * [Structured Execution Memory](/vault/structured-execution-memory.md)
-

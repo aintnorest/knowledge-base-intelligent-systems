@@ -144,6 +144,6 @@ The vocabulary (generative engine, GEO, impression metrics for citations) has be
 
 ## Vault Ideas Extracted
 
-* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
-* [Generative Engine Visibility Metrics](/vault/generative-engine-visibility-metrics.md)
-* [Generative Engines](/vault/generative-engines.md)
+- [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+- [Generative Engine Visibility Metrics](/vault/generative-engine-visibility-metrics.md)
+- [Generative Engines](/vault/generative-engines.md)

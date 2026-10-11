@@ -73,4 +73,4 @@ The COW-fork runtime reports 1,000 forks in about 530 ms, or roughly 1,900 forks
 
 ## Vault Ideas Extracted
 
-* [Kernel-First Split Enforcement](/vault/kernel-first-split-enforcement.md)
+- [Kernel-First Split Enforcement](/vault/kernel-first-split-enforcement.md)

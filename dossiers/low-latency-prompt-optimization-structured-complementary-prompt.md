@@ -67,5 +67,5 @@ Removing role, audience, intent, tone, reasoning guidance, or output format degr
 
 ## Vault Ideas Extracted
 
-* [Classifier-Based Prompt Optimization](/vault/classifier-based-prompt-optimization.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Classifier-Based Prompt Optimization](/vault/classifier-based-prompt-optimization.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

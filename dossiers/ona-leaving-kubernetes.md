@@ -36,4 +36,5 @@ The resulting post-Kubernetes system retains declarative APIs and control loops 
 - This is retrospective vendor experience, not a controlled comparison of the replacement system; platform versions and 2022–2023 infrastructure limitations are historically contingent.
 
 ## Vault Ideas Extracted
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)

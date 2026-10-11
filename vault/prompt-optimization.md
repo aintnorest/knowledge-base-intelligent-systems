@@ -103,6 +103,7 @@ This decomposition makes a reported improvement reproducible: record the represe
 - Mutates one module from a small trace-bearing minibatch containing the current prompt, execution trace, score, and evaluator text; accepts improvements through an instance-wise Pareto pool rather than one global incumbent.
 - Under matched task-rollout caps, GEPA beat MIPROv2 across six reported tasks and Pareto selection beat greedy and beam parent selection in a four-task ablation.
 - **Use with care**: rollout accounting excludes reflection-model calls and does not normalize tokens, compute, latency, or money. The paper also does not isolate score-only from score-plus-text feedback.
+
 ### DSPy-Style Pipeline Compilation
 
 - Treats a multi-stage LM application—not one prompt string—as the unit of optimization.

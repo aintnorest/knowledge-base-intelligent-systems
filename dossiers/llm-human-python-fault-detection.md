@@ -62,7 +62,7 @@ Tests are evaluated unchanged on buggy and fixed revisions: fault detection mean
 
 ## Vault Ideas Extracted
 
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) — report detection directly using unchanged tests across buggy and repaired code.
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — fix-time retrieval is useful only when bug facts do not silently substitute for intended behavior.
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — admissible tests and source-code appearance remain separate from fault outcomes.
-* Proposed new synthesis: **Context-Conditioned Test Adequacy** — compare authors and generators only after documenting their unequal information and metric populations.
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) — report detection directly using unchanged tests across buggy and repaired code.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — fix-time retrieval is useful only when bug facts do not silently substitute for intended behavior.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — admissible tests and source-code appearance remain separate from fault outcomes.
+- Proposed new synthesis: **Context-Conditioned Test Adequacy** — compare authors and generators only after documenting their unequal information and metric populations.

@@ -49,4 +49,4 @@ The models and methods are 2023–2024 snapshots, some evaluations use small sub
 
 ## Vault Ideas Extracted
 
-* [Score-Gated Refinement](/vault/score-gated-refinement.md)
+- [Score-Gated Refinement](/vault/score-gated-refinement.md)

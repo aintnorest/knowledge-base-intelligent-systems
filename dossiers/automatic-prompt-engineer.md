@@ -73,4 +73,4 @@ The same principle appears in TruthfulQA. Optimizing truthfulness alone finds re
 
 ## Vault Ideas Extracted
 
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

@@ -82,6 +82,6 @@ The **15-task HumanEval** scope check exposes one public assertion to repair and
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — separate candidate generation, external acceptance, and detected-failure coverage.
-* [Agent-Ergonomic Interface Design](/vault/agent-ergonomic-interface-design.md) — add paired evidence for location/observed/expected alternatives, preserving the TextWorld scope limit.
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — no feedback repair can address a fault the validator fails to expose.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — separate candidate generation, external acceptance, and detected-failure coverage.
+- [Agent-Ergonomic Interface Design](/vault/agent-ergonomic-interface-design.md) — add paired evidence for location/observed/expected alternatives, preserving the TextWorld scope limit.
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — no feedback repair can address a fault the validator fails to expose.

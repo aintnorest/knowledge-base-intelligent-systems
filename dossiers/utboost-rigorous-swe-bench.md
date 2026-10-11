@@ -55,7 +55,7 @@ The second intervention fixes repository-specific log interpretation and reconst
 
 ## Vault Ideas Extracted
 
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

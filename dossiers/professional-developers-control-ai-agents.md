@@ -67,5 +67,5 @@ Task categories use an author-selected **2.5:1** suitability ratio and report co
 
 ## Vault Ideas Extracted
 
-* [Expertise-Mediated Agent Steering](/vault/expertise-mediated-agent-steering.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Expertise-Mediated Agent Steering](/vault/expertise-mediated-agent-steering.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)

@@ -34,7 +34,6 @@ Backend tools reach tests and operational telemetry; frontend sessions offer liv
 
 ## Vault Ideas Extracted
 
-* [Reviewable Change Units](/vault/reviewable-change-units.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
-* [Runtime-Activated Application Sandboxing](/vault/runtime-activated-application-sandboxing.md)
-
+- [Reviewable Change Units](/vault/reviewable-change-units.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Runtime-Activated Application Sandboxing](/vault/runtime-activated-application-sandboxing.md)

@@ -89,5 +89,5 @@ The concrete performance lesson is to budget retrieval like a product dependency
 
 ## Vault Ideas Extracted
 
-* [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)
-* [Hybrid Memory Retrieval Pipeline](/vault/hybrid-memory-retrieval-pipeline.md)
+- [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)
+- [Hybrid Memory Retrieval Pipeline](/vault/hybrid-memory-retrieval-pipeline.md)

@@ -49,4 +49,4 @@ A proposed **SAFE-AI** framework—**Safety, Auditability, Feedback, Explainabil
 
 ## Vault Ideas Extracted
 
-* [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
+- [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)

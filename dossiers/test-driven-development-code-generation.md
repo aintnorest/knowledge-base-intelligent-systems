@@ -69,6 +69,6 @@ Tables 1 and 3 report cumulative success **after private-test validation**. Pare
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — add supplied tests as generation-time disambiguation, with the staged-attempt caveat.
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — separate visible-example fit from expanded private evaluation.
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — semantic diversity and held-out tests matter after reference line coverage saturates.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — add supplied tests as generation-time disambiguation, with the staged-attempt caveat.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — separate visible-example fit from expanded private evaluation.
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — semantic diversity and held-out tests matter after reference line coverage saturates.

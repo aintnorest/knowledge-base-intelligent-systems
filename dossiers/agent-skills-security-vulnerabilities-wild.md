@@ -49,5 +49,5 @@ Pattern creation used an initial 500-skill sample, calibration used a disjoint 3
 
 ## Vault Ideas Extracted
 
-* [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
-* [Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)
+- [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
+- [Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)

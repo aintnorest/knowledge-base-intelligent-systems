@@ -53,5 +53,5 @@ Recorded method-specific runtime is lower for VRR in all eight tabulated compari
 
 ## Vault Ideas Extracted
 
-* [Score-Gated Refinement](/vault/score-gated-refinement.md)
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Score-Gated Refinement](/vault/score-gated-refinement.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)

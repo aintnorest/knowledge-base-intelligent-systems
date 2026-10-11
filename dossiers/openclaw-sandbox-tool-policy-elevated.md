@@ -44,4 +44,3 @@ The document also notes sandbox-specific gates for MCP tools: discovering a tool
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Partial-Scope Tool Sandboxing](/vault/partial-scope-tool-sandboxing.md)
 * [Tool Identity Versus Effect Authority](/vault/tool-identity-versus-effect-authority.md)
-

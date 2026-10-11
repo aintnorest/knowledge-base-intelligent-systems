@@ -65,6 +65,6 @@ For current-release test methods, they measure effective LOC, assertion counts, 
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — distinguish test presence, structural metrics, coverage execution, and fault-detection evidence.
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — more assertions do not establish independent expectations.
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — challenge coverage/assertion-count proxies with targeted faults instead of optimizing their counts.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — distinguish test presence, structural metrics, coverage execution, and fault-detection evidence.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — more assertions do not establish independent expectations.
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md) — challenge coverage/assertion-count proxies with targeted faults instead of optimizing their counts.

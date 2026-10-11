@@ -102,7 +102,7 @@ These appendix results show that badly interacting demonstrations can be catastr
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
-* [In-Context Learning](/vault/in-context-learning.md)
-* [Answer Engineering](/vault/answer-engineering.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [In-Context Learning](/vault/in-context-learning.md)
+- [Answer Engineering](/vault/answer-engineering.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)

@@ -62,6 +62,6 @@ For three smaller models also embedded in a Claude Code file-inspection loop, th
 
 ## Vault Ideas Extracted
 
-* [Harness-Conditioned Retrieval Evaluation](/vault/harness-conditioned-retrieval-evaluation.md)
-* [Query-Class Retrieval Routing](/vault/query-class-retrieval-routing.md)
-* [Structural Code Retrieval](/vault/structural-code-retrieval.md)
+- [Harness-Conditioned Retrieval Evaluation](/vault/harness-conditioned-retrieval-evaluation.md)
+- [Query-Class Retrieval Routing](/vault/query-class-retrieval-routing.md)
+- [Structural Code Retrieval](/vault/structural-code-retrieval.md)

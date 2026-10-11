@@ -80,5 +80,5 @@ This is a persuasive architectural agenda, but it does not validate a concrete s
 
 ## Vault Ideas Extracted
 
-* [Security-Aware Replanning](/vault/security-aware-replanning.md)
-* [Bounded Model Security Adjudication](/vault/bounded-model-security-adjudication.md)
+- [Security-Aware Replanning](/vault/security-aware-replanning.md)
+- [Bounded Model Security Adjudication](/vault/bounded-model-security-adjudication.md)

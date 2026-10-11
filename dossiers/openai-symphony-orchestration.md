@@ -44,4 +44,3 @@ The team says it implemented the specification in Elixir, then used Codex implem
 * [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
 * [Reviewable Change Units](/vault/reviewable-change-units.md)
 * [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)
-

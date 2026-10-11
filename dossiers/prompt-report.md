@@ -74,5 +74,5 @@ Its security discussion distinguishes **prompt injection** (untrusted input over
 
 ## Vault Ideas Extracted
 
-* [Answer Engineering](/vault/answer-engineering.md)
-* [Application-Centric Prompt Taxonomy](/vault/application-centric-prompt-taxonomy.md)
+- [Answer Engineering](/vault/answer-engineering.md)
+- [Application-Centric Prompt Taxonomy](/vault/application-centric-prompt-taxonomy.md)

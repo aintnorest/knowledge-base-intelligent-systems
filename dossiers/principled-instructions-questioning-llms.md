@@ -91,6 +91,6 @@ The scale trend is the most interesting empirical claim, and it is a specific in
 
 ## Vault Ideas Extracted
 
-* [Prompt Incentive Framing](/vault/prompt-incentive-framing.md)
-* [Output Priming](/vault/output-priming.md)
-* [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
+- [Prompt Incentive Framing](/vault/prompt-incentive-framing.md)
+- [Output Priming](/vault/output-priming.md)
+- [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)

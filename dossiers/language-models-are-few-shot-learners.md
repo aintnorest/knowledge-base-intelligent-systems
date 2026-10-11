@@ -92,5 +92,5 @@ The contamination framework remains conceptually useful, while its particular n-
 
 ## Vault Ideas Extracted
 
-* [In-Context Learning](/vault/in-context-learning.md)
-* [Anti-Leakage Evaluation](/vault/anti-leakage-evaluation.md)
+- [In-Context Learning](/vault/in-context-learning.md)
+- [Anti-Leakage Evaluation](/vault/anti-leakage-evaluation.md)

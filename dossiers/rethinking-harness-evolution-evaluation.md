@@ -52,4 +52,4 @@ For transfer, they evolve a harness on 45 tasks, select it on 10 validation task
 
 ## Vault Ideas Extracted
 
-* [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)
+- [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)

@@ -58,7 +58,7 @@ In July 2023, Google randomly assigned approximately half of developers to AutoC
 
 ## Vault Ideas Extracted
 
-* [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
-* [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
+- [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

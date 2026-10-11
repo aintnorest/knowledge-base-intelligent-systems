@@ -50,5 +50,5 @@ Across the 142 multi-commit histories, the paper finds no systematic decline in 
 
 ## Vault Ideas Extracted
 
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
-* [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)

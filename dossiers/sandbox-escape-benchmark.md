@@ -67,5 +67,5 @@ Transcript analysis adds a second lesson: capability scores can be confounded by
 
 ## Vault Ideas Extracted
 
-* [Nested Sandbox Capability Evaluation](/vault/nested-sandbox-capability-evaluation.md)
-* [Intended-Path Benchmark Validation](/vault/intended-path-benchmark-validation.md)
+- [Nested Sandbox Capability Evaluation](/vault/nested-sandbox-capability-evaluation.md)
+- [Intended-Path Benchmark Validation](/vault/intended-path-benchmark-validation.md)

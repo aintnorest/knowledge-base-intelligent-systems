@@ -37,4 +37,3 @@ This is independent adversarial research, not a vendor guarantee or a prevalence
 * [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
 * [Writable-Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md)
 * [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)
-

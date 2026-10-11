@@ -35,8 +35,7 @@ Uber reports adoption by thousands of internal agents and token-exchange API p99
 
 ## Vault Ideas Extracted
 
-* [Authorization–Provenance Graph Alignment](/vault/authorization-provenance-graph-alignment.md)
-* [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
-* [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
-* [Attenuated Delegation Authority](/vault/attenuated-delegation-authority.md)
-
+- [Authorization–Provenance Graph Alignment](/vault/authorization-provenance-graph-alignment.md)
+- [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
+- [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
+- [Attenuated Delegation Authority](/vault/attenuated-delegation-authority.md)

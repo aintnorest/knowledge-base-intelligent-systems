@@ -44,5 +44,5 @@ Automatic approximations were weak. Regularized linear models reached AUPRC 0.52
 
 ## Vault Ideas Extracted
 
-* [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
-* [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
+- [Quality Versus Correctness Prompt Evaluation](/vault/quality-versus-correctness-prompt-evaluation.md)
+- [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)

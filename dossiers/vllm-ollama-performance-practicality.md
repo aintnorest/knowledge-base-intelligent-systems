@@ -72,4 +72,4 @@ The peak observed request-throughput ratio was 3.23x at 128 concurrent requests 
 
 ## Vault Ideas Extracted
 
-* [Workload-Aligned Inference Engine Selection](/vault/workload-aligned-inference-engine-selection.md)
+- [Workload-Aligned Inference Engine Selection](/vault/workload-aligned-inference-engine-selection.md)

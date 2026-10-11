@@ -57,7 +57,7 @@ The main experiment uses up to **five iterations**, **five properties**, and **6
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
 
 Proposed new synthesis: **Minimal Property-Violation Feedback** — separate a validated behavior oracle from the compact counterexample communicated to a repair agent; preserve broader acceptance coverage and promote important failures to explicit regressions.

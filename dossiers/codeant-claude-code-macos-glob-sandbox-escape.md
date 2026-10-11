@@ -39,4 +39,3 @@ A deny rule and an allow rule need a common, literal interpretation of the same 
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Writable-Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md)
 * [Policy Compilation Fidelity](/vault/policy-compilation-fidelity.md)
-

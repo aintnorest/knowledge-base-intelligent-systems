@@ -75,6 +75,6 @@ The main implementation invokes the memory agent at the first step and then at a
 
 ## Vault Ideas Extracted
 
-* [Behavioral State Decay](/vault/behavioral-state-decay.md)
-* [Proactive Memory Intervention](/vault/proactive-memory-intervention.md)
-* [Structured Execution Memory](/vault/structured-execution-memory.md)
+- [Behavioral State Decay](/vault/behavioral-state-decay.md)
+- [Proactive Memory Intervention](/vault/proactive-memory-intervention.md)
+- [Structured Execution Memory](/vault/structured-execution-memory.md)

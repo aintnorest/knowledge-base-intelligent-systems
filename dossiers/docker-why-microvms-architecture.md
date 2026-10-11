@@ -37,4 +37,3 @@ A VM can stop a guest process from directly manipulating the host kernel under t
 
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Assume Guest Compromise: Host Exposure Budget](/vault/assume-guest-compromise-host-exposure.md)
-

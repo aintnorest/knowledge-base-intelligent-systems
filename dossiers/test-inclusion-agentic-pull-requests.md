@@ -66,6 +66,6 @@ The researchers retrieve missing commit timestamps to reconstruct these stages. 
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — presence, merge, and issue closure are different evidence from test adequacy.
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — review expectation changes across the PR lifecycle without assuming all revisions are bad.
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) — motivates checking code and tests changed together; this study does not execute that method.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — presence, merge, and issue closure are different evidence from test adequacy.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — review expectation changes across the PR lifecycle without assuming all revisions are bad.
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) — motivates checking code and tests changed together; this study does not execute that method.

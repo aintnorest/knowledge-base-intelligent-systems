@@ -40,8 +40,7 @@ The reported usage and red-team figures are Anthropic's observations, not indepe
 
 ## Vault Ideas Extracted
 
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
-* [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)
-* [Destination Allowlist as Capability Grant](/vault/destination-allowlist-as-capability-grant.md)
-
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
+- [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)
+- [Destination Allowlist as Capability Grant](/vault/destination-allowlist-as-capability-grant.md)

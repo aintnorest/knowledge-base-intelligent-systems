@@ -114,7 +114,7 @@ Post-training adds **+21.22 points** at 35B and **+18.18** at 30B under an ident
 
 ## Vault Ideas Extracted
 
-* [Trained Program-Evolution Operators](/vault/trained-program-evolution-operators.md)
-* [Operator-Conditioned Search Memory](/vault/operator-conditioned-search-memory.md)
-* [Quality–Progress–Novelty Parent Selection](/vault/quality-progress-novelty-parent-selection.md)
-* [Policy-Adaptive Reward Bounds](/vault/policy-adaptive-reward-bounds.md)
+- [Trained Program-Evolution Operators](/vault/trained-program-evolution-operators.md)
+- [Operator-Conditioned Search Memory](/vault/operator-conditioned-search-memory.md)
+- [Quality–Progress–Novelty Parent Selection](/vault/quality-progress-novelty-parent-selection.md)
+- [Policy-Adaptive Reward Bounds](/vault/policy-adaptive-reward-bounds.md)

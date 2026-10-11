@@ -112,7 +112,7 @@ The specific quantities are not. MMLU 75.2%, the 282-task knee, the per-benchmar
 
 ## Vault Ideas Extracted
 
-* [Instruction Tuning](/vault/instruction-tuning.md) — the umbrella concept: mixture design, scaling behavior, cost profile, and the paradigm-coverage requirement
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md) — updated: CoT ability depends on the post-training mixture, and zero-shot CoT is largely an instruction-tuning artifact
-* [Emergent Abilities](/vault/emergent-abilities.md) — updated: primary evidence qualifying the claim that instruction-tuning benefit is emergent at ~100B
-* [Prompt Contingency](/vault/prompt-contingency.md) — updated: which prompt formats work is contingent on the finetuning mixture, not only on scale
+- [Instruction Tuning](/vault/instruction-tuning.md) — the umbrella concept: mixture design, scaling behavior, cost profile, and the paradigm-coverage requirement
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md) — updated: CoT ability depends on the post-training mixture, and zero-shot CoT is largely an instruction-tuning artifact
+- [Emergent Abilities](/vault/emergent-abilities.md) — updated: primary evidence qualifying the claim that instruction-tuning benefit is emergent at ~100B
+- [Prompt Contingency](/vault/prompt-contingency.md) — updated: which prompt formats work is contingent on the finetuning mixture, not only on scale

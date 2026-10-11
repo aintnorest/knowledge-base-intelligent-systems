@@ -19,11 +19,11 @@ conflict with this playbook.
 
 ## Tagging
 
-All `tags:` frontmatter must use the controlled vocabulary in `TAXONOMY.md`:
-3–6 tags per page, most central first; `agents` on every agentic-systems page;
-at most one genre tag. Do not invent tags during ingest — if nothing fits, use
-the nearest broader tag and flag the gap in the final report as a candidate
-addition to `TAXONOMY.md`.
+All `tags:` frontmatter must use the controlled vocabulary in
+`docs/TAXONOMY.md`: 3–6 tags per page, most central first; `agents` on every
+agentic-systems page; at most one genre tag. Do not invent tags during ingest —
+if nothing fits, use the nearest broader tag and flag the gap in the final
+report as a candidate addition to `docs/TAXONOMY.md`.
 
 ## Candidate Reconciliation
 
@@ -150,6 +150,7 @@ Before finishing, verify that:
 - the diff contains only files required for the ingest
 - the dossier and any vault notes contain no setup steps, command syntax,
   configuration keys, or troubleshooting content copied from the source
+- `mise run lint` passes
 
 Report the selected source, why it was eligible, files created or updated,
 pre-existing inconsistencies left untouched, and whether every verification

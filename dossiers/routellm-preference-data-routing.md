@@ -62,4 +62,4 @@ Measured router throughput ranges from **2.9 requests/s** for similarity-weighte
 
 ## Vault Ideas Extracted
 
-* [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
+- [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)

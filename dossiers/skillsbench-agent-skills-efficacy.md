@@ -52,7 +52,7 @@ A third arm has agents author skill packs using a skill-creator and then solve w
 
 ## Vault Ideas Extracted
 
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
-* [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)

@@ -76,6 +76,6 @@ Two design choices deserve credit. Filtering to short gold answers makes "verbos
 
 ## Vault Ideas Extracted
 
-* [Verbosity Compensation](/vault/verbosity-compensation.md)
-* [Verbosity as an Uncertainty Signal](/vault/verbosity-as-uncertainty-signal.md)
-* [Verbosity-Triggered Model Cascade](/vault/verbosity-triggered-model-cascade.md)
+- [Verbosity Compensation](/vault/verbosity-compensation.md)
+- [Verbosity as an Uncertainty Signal](/vault/verbosity-as-uncertainty-signal.md)
+- [Verbosity-Triggered Model Cascade](/vault/verbosity-triggered-model-cascade.md)

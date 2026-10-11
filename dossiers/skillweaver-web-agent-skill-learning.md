@@ -55,6 +55,6 @@ Each site gets **160 exploration iterations**, where an iteration is an attempte
 
 ## Vault Ideas Extracted
 
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Executable Code Actions](/vault/executable-code-actions.md)
-* [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Executable Code Actions](/vault/executable-code-actions.md)
+- [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)

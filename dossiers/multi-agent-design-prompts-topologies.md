@@ -63,7 +63,7 @@ The discovered patterns are task-specific: the reported multi-hop knowledge task
 
 ## Vault Ideas Extracted
 
-* [Influence-Weighted Topology Search](/vault/influence-weighted-topology-search.md)
-* [Configuration-Aware Multi-Agent Prompt Optimization](/vault/configuration-aware-multi-agent-prompt-optimization.md)
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Influence-Weighted Topology Search](/vault/influence-weighted-topology-search.md)
+- [Configuration-Aware Multi-Agent Prompt Optimization](/vault/configuration-aware-multi-agent-prompt-optimization.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

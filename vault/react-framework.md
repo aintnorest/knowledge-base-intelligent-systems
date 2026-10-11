@@ -23,7 +23,7 @@ ReAct interleaves three types of steps in a single trajectory:
 2. **Action** — Execute one bounded operation, such as a database query, calculator call, browser interaction, or environment command.
 3. **Observation** — Record the tool result or state transition; use it as evidence for the next thought.
 
-```
+```text
 Thought 1: I need to check the places where I last used the key.
 Action 1: Check the entryway.
 Observation 1: Did not find the key.
@@ -45,6 +45,7 @@ For knowledge tasks, thoughts can be dense because each tool result needs interp
 ## Why It Matters
 
 ReAct is useful when solving a task requires both plan maintenance and environment feedback. It is particularly effective for:
+
 - Web navigation (reasoning + browser actions)
 - Multi-hop question answering and fact verification (reasoning + retrieval)
 - Data operations with clear read-only or reversible tool calls

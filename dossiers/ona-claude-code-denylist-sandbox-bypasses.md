@@ -38,4 +38,3 @@ This is a handful of qualitative trials in one environment without attack-rate e
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
 * [Kernel-First Split Enforcement](/vault/kernel-first-split-enforcement.md)
-

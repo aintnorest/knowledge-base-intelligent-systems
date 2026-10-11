@@ -70,5 +70,5 @@ Instead of relying on one pass rule, the study reports the overall trial-level a
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
-* [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)

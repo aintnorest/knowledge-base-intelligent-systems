@@ -44,4 +44,4 @@ The authors propose a **future** controlled user study comparing a raw agentic w
 
 ## Vault Ideas Extracted
 
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)

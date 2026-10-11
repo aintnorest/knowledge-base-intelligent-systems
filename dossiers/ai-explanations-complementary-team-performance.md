@@ -71,5 +71,5 @@ The essential mechanism is not “more explanation.” It is the relation betwee
 
 ## Vault Ideas Extracted
 
-* [Complementary Human–AI Performance](/vault/complementary-human-ai-performance.md)
-* [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)
+- [Complementary Human–AI Performance](/vault/complementary-human-ai-performance.md)
+- [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)

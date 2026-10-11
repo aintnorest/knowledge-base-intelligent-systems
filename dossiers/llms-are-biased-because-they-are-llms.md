@@ -126,7 +126,7 @@ Section 9 is unusual and worth reading on its own: Resnik prints reviewer and pr
 
 ## Vault Ideas Extracted
 
-* [Distributional Normativity Blindness](/vault/distributional-normativity-blindness.md) — the core in-principle claim
-* [Overt–Covert Bias Divergence](/vault/overt-covert-bias-divergence.md) — why behavioral evaluation cannot certify representational properties
-* [Anchor-Constrained Bias Mitigation](/vault/anchor-constrained-bias-mitigation.md) — why RLHF-style steering saturates
-* [Bias as Prior Dominance](/vault/bias-as-prior-dominance.md) — the KL-divergence operationalization of bias and harmful bias
+- [Distributional Normativity Blindness](/vault/distributional-normativity-blindness.md) — the core in-principle claim
+- [Overt–Covert Bias Divergence](/vault/overt-covert-bias-divergence.md) — why behavioral evaluation cannot certify representational properties
+- [Anchor-Constrained Bias Mitigation](/vault/anchor-constrained-bias-mitigation.md) — why RLHF-style steering saturates
+- [Bias as Prior Dominance](/vault/bias-as-prior-dominance.md) — the KL-divergence operationalization of bias and harmful bias

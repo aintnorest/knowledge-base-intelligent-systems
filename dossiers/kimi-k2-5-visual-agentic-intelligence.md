@@ -68,4 +68,4 @@ The report attributes some of the gain to proactive context management: isolated
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)

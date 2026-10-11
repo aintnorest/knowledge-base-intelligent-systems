@@ -42,4 +42,3 @@ Prefixing responses with an agent-origin label reduced attack success only 5% al
 * [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
 * [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)
 * [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)
-

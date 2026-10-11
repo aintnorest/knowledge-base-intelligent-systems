@@ -90,7 +90,7 @@ The document contains **no controlled experiments, outcome denominators, model c
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — distinguish independently justified live behavior from self-confirming values and protect negative intent.
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) — use unchanged cross-version checks to test discrimination rather than new-code/new-test agreement.
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — evaluate generated tests by falsifiable behavior, not count or green status.
-* [Safety-Constrained Regression Test Selection](/vault/safety-constrained-regression-test-selection.md) — retain fidelity and isolation when reducing verification cost; no universal test-layer quota.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — distinguish independently justified live behavior from self-confirming values and protect negative intent.
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) — use unchanged cross-version checks to test discrimination rather than new-code/new-test agreement.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — evaluate generated tests by falsifiable behavior, not count or green status.
+- [Safety-Constrained Regression Test Selection](/vault/safety-constrained-regression-test-selection.md) — retain fidelity and isolation when reducing verification cost; no universal test-layer quota.

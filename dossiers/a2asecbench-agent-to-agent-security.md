@@ -62,4 +62,4 @@ The workloads and attacks are model-generated adaptations of demos; no productio
 
 ## Vault Ideas Extracted
 
-* [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)
+- [Peer-Agent Message Trust](/vault/peer-agent-message-trust.md)

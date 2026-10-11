@@ -54,5 +54,5 @@ A five-insight retrieval budget performs best in the reported GPT sweep (88% com
 
 ## Vault Ideas Extracted
 
-* [Scoped Guideline Memory](/vault/scoped-guideline-memory.md)
-* [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)
+- [Scoped Guideline Memory](/vault/scoped-guideline-memory.md)
+- [Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)

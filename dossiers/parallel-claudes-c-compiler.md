@@ -42,4 +42,3 @@ The account gives unusually concrete expenditure and artifact evidence, but no m
 * [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
 * [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
 * [Oracle-Guided Failure Decomposition](/vault/oracle-guided-failure-decomposition.md)
-

@@ -67,6 +67,6 @@ For releases, the authors propose a draft–verify–publish pipeline using sign
 
 ## Vault Ideas Extracted
 
-* [Structural Code Retrieval](/vault/structural-code-retrieval.md)
-* [Query-Class Retrieval Routing](/vault/query-class-retrieval-routing.md)
-* [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)
+- [Structural Code Retrieval](/vault/structural-code-retrieval.md)
+- [Query-Class Retrieval Routing](/vault/query-class-retrieval-routing.md)
+- [MCP Tool Supply-Chain Assurance](/vault/mcp-tool-supply-chain-assurance.md)

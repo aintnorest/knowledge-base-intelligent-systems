@@ -112,5 +112,4 @@ No source currently in this knowledge base establishes that Zero-shot-CoT is nec
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
-
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)

@@ -58,6 +58,6 @@ SRMA holds the evaluation protocol fixed: run the current memory and a candidate
 
 ## Vault Ideas Extracted
 
-* [Feedback-Grounded Context Adaptation](/vault/feedback-grounded-context-adaptation.md)
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Score-Gated Refinement](/vault/score-gated-refinement.md)
+- [Feedback-Grounded Context Adaptation](/vault/feedback-grounded-context-adaptation.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Score-Gated Refinement](/vault/score-gated-refinement.md)

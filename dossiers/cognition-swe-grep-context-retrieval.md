@@ -64,4 +64,4 @@ The interactive comparison hosts stripped-down Fast Context and stock Claude Cod
 
 ## Vault Ideas Extracted
 
-* [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)
+- [Subagent Context Inheritance Modes](/vault/subagent-context-inheritance-modes.md)

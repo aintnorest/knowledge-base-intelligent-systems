@@ -77,4 +77,4 @@ The paper compares direct input-output prompting, CoT, CoT self-consistency, and
 
 ## Vault Ideas Extracted
 
-* [Tree of Thoughts](/vault/tree-of-thoughts.md)
+- [Tree of Thoughts](/vault/tree-of-thoughts.md)

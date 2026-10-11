@@ -45,6 +45,6 @@ Ablations support the architectural separation. The Skill Proposer benefits from
 
 ## Vault Ideas Extracted
 
-* [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)
-* [Score-Gated Refinement](/vault/score-gated-refinement.md)
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md)
+- [Memory Lifecycle Governance](/vault/memory-lifecycle-governance.md)
+- [Score-Gated Refinement](/vault/score-gated-refinement.md)
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md)

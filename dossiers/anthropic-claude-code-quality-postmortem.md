@@ -84,6 +84,6 @@ Anthropic commits to several changes aimed at the blind spots exposed by the inc
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md) — add production-build dogfooding, feedback segmentation by harness configuration, and soak/gradual rollout as bridges between offline scores and user outcomes.
-* [Model-Aware Harness Design](/vault/model-aware-harness-design.md) — add the concrete failure mode where an Opus 4.7 verbosity intervention leaked across model versions, motivating mechanically enforced per-model prompt scope.
-* [Context Collapse](/vault/context-collapse.md) — add repeated reasoning-history deletion after idle-session resumption as an operational context-collapse mechanism that degrades tool continuity and cache efficiency.
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md) — add production-build dogfooding, feedback segmentation by harness configuration, and soak/gradual rollout as bridges between offline scores and user outcomes.
+- [Model-Aware Harness Design](/vault/model-aware-harness-design.md) — add the concrete failure mode where an Opus 4.7 verbosity intervention leaked across model versions, motivating mechanically enforced per-model prompt scope.
+- [Context Collapse](/vault/context-collapse.md) — add repeated reasoning-history deletion after idle-session resumption as an operational context-collapse mechanism that degrades tool continuity and cache efficiency.

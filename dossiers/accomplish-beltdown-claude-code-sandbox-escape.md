@@ -37,4 +37,3 @@ Audit every privileged context-gathering call and enforce one shared Git-executi
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Partial-Scope Tool Sandboxing](/vault/partial-scope-tool-sandboxing.md)
 * [Writable-Artifact Authority Handoff](/vault/writable-artifact-authority-handoff.md)
-

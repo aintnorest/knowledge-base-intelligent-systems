@@ -55,7 +55,7 @@ The corpus combines **15 standard-library packages**, **15 hand-picked third-par
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
 
 Proposed new synthesis: **Minimal Property-Violation Feedback** — pair source-grounded properties with minimized examples and independent intent adjudication; keep sampled-check failures distinct from confirmed contractual defects.

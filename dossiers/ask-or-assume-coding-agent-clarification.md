@@ -61,5 +61,5 @@ The price is real: Claude multi-agent API cost averages **$3.50/task**, versus $
 
 ## Vault Ideas Extracted
 
-* [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)

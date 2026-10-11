@@ -61,7 +61,7 @@ The paper separates pooled, within-model, and between-model correlations. Betwee
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — distinguish generator-ranking proxies from candidate-level fault evidence.
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — buggy-code-conditioned assertions can certify faulty behavior.
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) — retain direct buggy/fixed discrimination separately from coverage.
-* Proposed new synthesis: **Context-Conditioned Test Adequacy** — calibrate a metric by generation context, comparison unit, aggregation, and real-fault outcome before transferring human-era conclusions.
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md) — distinguish generator-ranking proxies from candidate-level fault evidence.
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) — buggy-code-conditioned assertions can certify faulty behavior.
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md) — retain direct buggy/fixed discrimination separately from coverage.
+- Proposed new synthesis: **Context-Conditioned Test Adequacy** — calibrate a metric by generation context, comparison unit, aggregation, and real-fault outcome before transferring human-era conclusions.

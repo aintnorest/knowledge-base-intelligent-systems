@@ -69,6 +69,6 @@ The separate GitHub benchmark reports 100% success at $0.050 per task for `gh-ax
 
 ## Vault Ideas Extracted
 
-* [Agent-Ergonomic Interface Design](/vault/agent-ergonomic-interface-design.md)
-* [Action-Observation Fusion](/vault/action-observation-fusion.md)
-* [Bounded Tool Observations](/vault/bounded-tool-observations.md)
+- [Agent-Ergonomic Interface Design](/vault/agent-ergonomic-interface-design.md)
+- [Action-Observation Fusion](/vault/action-observation-fusion.md)
+- [Bounded Tool Observations](/vault/bounded-tool-observations.md)

@@ -44,4 +44,3 @@ OAuth issuer mix-ups can send an honest provider's code to an attacker-controlle
 * [Skill Supply-Chain Admission](/vault/skill-supply-chain-admission.md)
 * [Approval Bound to Canonical Effect](/vault/approval-bound-to-canonical-effect.md)
 * [Delegated OAuth Proxy Hazards](/vault/delegated-oauth-proxy-hazards.md)
-

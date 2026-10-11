@@ -66,7 +66,7 @@ Define `y₀`, `y₁` as the candidate pair, `Y ∈ {0,1}` the human-preferred i
 
 Equal opportunity would require `P(Y′=0 | S=0, Y=0) = P(Y′=0 | S=1, Y=0)`; the paper generalizes to accuracy parity, `P(Y′=Y | S=Y) = P(Y′=Y | S=1−Y)`. Rather than the usual absolute deviance, it reports a signed difference in *inaccuracy*:
 
-```
+```text
 verbosity bias = P(Y′ ≠ Y | S = 1−Y) − P(Y′ ≠ Y | S = Y)
 ```
 
@@ -101,6 +101,6 @@ The paper's own stated limitation on the metric is important: it only splits pai
 
 ## Vault Ideas Extracted
 
-* [Verbosity Bias in Preference Evaluation](/vault/verbosity-bias-in-preference-evaluation.md)
-* [Human-Anchored Judge-Bias Measurement](/vault/human-anchored-judge-bias-measurement.md)
-* [Judge Bias as Accuracy Parity](/vault/judge-bias-as-accuracy-parity.md)
+- [Verbosity Bias in Preference Evaluation](/vault/verbosity-bias-in-preference-evaluation.md)
+- [Human-Anchored Judge-Bias Measurement](/vault/human-anchored-judge-bias-measurement.md)
+- [Judge Bias as Accuracy Parity](/vault/judge-bias-as-accuracy-parity.md)

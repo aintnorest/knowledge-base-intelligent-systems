@@ -32,6 +32,9 @@ knowledge/
 ├── README.md              ← this file
 ├── index.md               ← table of contents (dossiers + vault pages)
 ├── log.md                 ← authoritative source registry and append-only ingest history
+├── docs/
+│   ├── INGEST.md          ← agent procedure for ingesting one source
+│   └── TAXONOMY.md        ← controlled tag vocabulary
 ├── inbox/                 ← drop zone: put PDFs/files here to ingest
 ├── archive/               ← immutable raw material, written once, never edited
 │   └── paperorchestra.pdf
@@ -54,7 +57,7 @@ knowledge/
 
 ## Workflow
 
-The complete agent procedure is in [`INGEST.md`](INGEST.md).
+The complete agent procedure is in [`docs/INGEST.md`](docs/INGEST.md).
 
 ### 1. Ingest
 
@@ -134,15 +137,31 @@ scheme), or `sha256:…` when no stronger identifier exists.
 - **Inbox handling**: do not modify source contents in `inbox/`; remove a source
   only by moving it to `archive/` after a successful ingest
 
+## Tooling
+
+[mise](https://mise.jdx.dev) pins Node, pnpm,
+[markdownlint-cli2](https://github.com/DavidAnson/markdownlint-cli2), and
+[prek](https://github.com/j178/prek); lint rules live in
+`.markdownlint-cli2.jsonc`. Linting covers `dossiers/`, `vault/`, and `docs/`.
+The prek pre-commit hook lints staged files in that scope and
+blocks the commit on any issue.
+
+```bash
+mise install          # install the pinned tools
+prek install          # enable the pre-commit hook (once per clone)
+mise run lint         # check dossiers, vault pages, and docs
+mise run lint:fix     # apply automatic fixes
+```
+
 ## Viewing in Obsidian
 
 The repo can be opened as an Obsidian vault for the graph view. The hub files
-(`index.md`, `archive/index.md`, `log.md`, `TAXONOMY.md`) link to nearly every
+(`index.md`, `archive/index.md`, `log.md`, `docs/TAXONOMY.md`) link to nearly every
 note and pull the graph into star clusters around them. To hide them, paste
 this into Graph view → Filters → search:
 
 ```
--path:index.md -path:log.md -path:TAXONOMY.md -path:README.md -path:INGEST.md
+-path:index.md -path:log.md -path:docs -path:README.md
 ```
 
 `.obsidian/` is gitignored; vault settings stay local.

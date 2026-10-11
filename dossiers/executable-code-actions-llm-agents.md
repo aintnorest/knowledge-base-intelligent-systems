@@ -59,4 +59,4 @@ However, the selection is also a source of bias: a model can learn the paper’s
 
 ## Vault Ideas Extracted
 
-* [Executable Code Actions](/vault/executable-code-actions.md)
+- [Executable Code Actions](/vault/executable-code-actions.md)

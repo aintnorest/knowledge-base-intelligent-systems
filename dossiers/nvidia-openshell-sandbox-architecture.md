@@ -40,8 +40,7 @@ A standalone proxy lacks caller-binary identity and workload isolation, so ident
 
 ## Vault Ideas Extracted
 
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
-* [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
-* [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
-
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
+- [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
+- [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)

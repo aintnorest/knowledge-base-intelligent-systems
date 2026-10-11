@@ -50,4 +50,4 @@ Its own threats-to-validity section acknowledges confounding from organizational
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

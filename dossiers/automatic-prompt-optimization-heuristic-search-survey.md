@@ -57,4 +57,4 @@ The authors flag soft-to-discrete projection, dynamic selection of the number of
 
 ## Vault Ideas Extracted
 
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

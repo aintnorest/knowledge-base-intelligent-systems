@@ -34,4 +34,3 @@ The article identifies failure cases such as a leftover DNS channel, fail-open e
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Destination Allowlist as Capability Grant](/vault/destination-allowlist-as-capability-grant.md)
 * [Egress Broker Credential Injection](/vault/egress-broker-credential-injection.md)
-

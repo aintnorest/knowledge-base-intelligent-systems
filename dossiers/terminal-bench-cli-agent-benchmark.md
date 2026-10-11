@@ -61,4 +61,4 @@ Internet access preserves useful workflows but allows changing dependencies and 
 
 ## Vault Ideas Extracted
 
-* [Tool-Availability Abstention](/vault/tool-availability-abstention.md)
+- [Tool-Availability Abstention](/vault/tool-availability-abstention.md)

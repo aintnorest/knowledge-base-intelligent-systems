@@ -53,4 +53,4 @@ The original experiment uses Qwen2.5-Coder-32B-Instruct-AWQ, Qwen3.6-27B, and Ge
 
 ## Vault Ideas Extracted
 
-* [Test-Failure Localization for Agents](/vault/test-failure-localization-for-agents.md) — separate test boundary size, diagnostic information, and edit scope.
+- [Test-Failure Localization for Agents](/vault/test-failure-localization-for-agents.md) — separate test boundary size, diagnostic information, and edit scope.

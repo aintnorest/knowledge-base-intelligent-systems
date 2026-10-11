@@ -34,4 +34,3 @@ This short document states enforcement requirements but supplies no penetration 
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Attenuated Delegation Authority](/vault/attenuated-delegation-authority.md)
 * [Staged Effect Admission](/vault/staged-effect-admission.md)
-

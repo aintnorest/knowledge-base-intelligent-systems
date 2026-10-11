@@ -44,5 +44,5 @@ The authors say features that required developers to remember an explicit trigge
 
 ## Vault Ideas Extracted
 
-* [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)

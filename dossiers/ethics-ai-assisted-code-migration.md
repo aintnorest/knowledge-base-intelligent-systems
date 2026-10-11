@@ -40,4 +40,4 @@ The paper cites an industry-survey claim of over **97%** AI-tool adoption but pr
 
 ## Vault Ideas Extracted
 
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)

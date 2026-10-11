@@ -104,7 +104,7 @@ The practical reconciliation is to keep TextGrad's graph and provenance machiner
 
 ## Vault Ideas Extracted
 
-* Update [Prompt Optimization](/vault/prompt-optimization.md) with the proposal-versus-selection interpretation, wrong-label and one-step ablations, and the prompt-only improve result.
-* Update [Textual Feedback Backpropagation](/vault/textual-feedback-backpropagation.md) with direct evidence that propagated critiques can remain useful while being loss-insensitive or factually wrong.
-* Update [Automatic Prompt Optimization Anatomy](/vault/automatic-prompt-optimization-anatomy.md) with candidate-count evidence that validation can act through prompt discovery rather than regression avoidance.
-* Update [Confound-Partitioned Accuracy](/vault/confound-partitioned-accuracy.md) with prevalence hacking as a prompt-optimization case: suppressing a minority “unknown” label raised aggregate Web-of-Lies accuracy while encoding a false rule.
+- Update [Prompt Optimization](/vault/prompt-optimization.md) with the proposal-versus-selection interpretation, wrong-label and one-step ablations, and the prompt-only improve result.
+- Update [Textual Feedback Backpropagation](/vault/textual-feedback-backpropagation.md) with direct evidence that propagated critiques can remain useful while being loss-insensitive or factually wrong.
+- Update [Automatic Prompt Optimization Anatomy](/vault/automatic-prompt-optimization-anatomy.md) with candidate-count evidence that validation can act through prompt discovery rather than regression avoidance.
+- Update [Confound-Partitioned Accuracy](/vault/confound-partitioned-accuracy.md) with prevalence hacking as a prompt-optimization case: suppressing a minority “unknown” label raised aggregate Web-of-Lies accuracy while encoding a false rule.

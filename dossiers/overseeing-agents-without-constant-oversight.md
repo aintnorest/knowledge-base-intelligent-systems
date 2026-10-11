@@ -75,4 +75,4 @@ Participants appreciate requirements, assumptions, annotations, and linking; all
 
 ## Vault Ideas Extracted
 
-* [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)
+- [Review Scaffolds and Calibrated Reliance](/vault/review-scaffolds-and-calibrated-reliance.md)

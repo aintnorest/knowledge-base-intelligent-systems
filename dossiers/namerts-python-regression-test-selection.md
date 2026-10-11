@@ -58,4 +58,4 @@ Instrumentation, per-commit selection, and one-time initialization cost **4.45%*
 
 ## Vault Ideas Extracted
 
-* [Safety-Constrained Regression Test Selection](/vault/safety-constrained-regression-test-selection.md)
+- [Safety-Constrained Regression Test Selection](/vault/safety-constrained-regression-test-selection.md)

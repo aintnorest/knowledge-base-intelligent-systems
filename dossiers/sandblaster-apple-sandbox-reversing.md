@@ -41,4 +41,3 @@ The study reverses built-in profiles across iOS 7, 8, and 9 and reports that res
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Kernel-First Split Enforcement](/vault/kernel-first-split-enforcement.md)
 * [Policy Compilation Fidelity](/vault/policy-compilation-fidelity.md)
-

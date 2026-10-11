@@ -74,4 +74,4 @@ The default is a *soft* prefill, which the model may override. For models that i
 
 ## Vault Ideas Extracted
 
-* [Latent Tool-Necessity Routing](/vault/latent-tool-necessity-routing.md)
+- [Latent Tool-Necessity Routing](/vault/latent-tool-necessity-routing.md)

@@ -53,5 +53,5 @@ Aggregation is per repository and PR number, then per PR/reviewer pair. A cross-
 
 ## Vault Ideas Extracted
 
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)

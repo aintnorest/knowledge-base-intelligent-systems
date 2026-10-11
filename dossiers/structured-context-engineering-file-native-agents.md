@@ -62,5 +62,5 @@ The paper also challenges a tempting proxy: a smaller representation is not nece
 
 ## Vault Ideas Extracted
 
-* [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
-* [Retrieval Interface Tax](/vault/retrieval-interface-tax.md)
+- [File-Native Context Retrieval](/vault/file-native-context-retrieval.md)
+- [Retrieval Interface Tax](/vault/retrieval-interface-tax.md)

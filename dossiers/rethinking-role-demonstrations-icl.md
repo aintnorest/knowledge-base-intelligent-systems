@@ -125,5 +125,5 @@ The release is useful but not a push-button reproduction of every reported cell.
 
 ## Vault Ideas Extracted
 
-* [In-Context Learning](/vault/in-context-learning.md) — update with the demonstration-bundle decomposition, random-label controls, and the distinction between task location and learning a novel mapping.
-* [Prompt Contingency](/vault/prompt-contingency.md) — update with the direct/channel asymmetry, dataset outliers, and the limits of transferring a 2022 random-label result to later post-training regimes.
+- [In-Context Learning](/vault/in-context-learning.md) — update with the demonstration-bundle decomposition, random-label controls, and the distinction between task location and learning a novel mapping.
+- [Prompt Contingency](/vault/prompt-contingency.md) — update with the direct/channel asymmetry, dataset outliers, and the limits of transferring a 2022 random-label result to later post-training regimes.

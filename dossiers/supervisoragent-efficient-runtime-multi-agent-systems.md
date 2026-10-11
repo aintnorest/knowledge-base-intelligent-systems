@@ -66,4 +66,4 @@ The overhead is not free. The reported supervisor token overhead averages 15.45%
 
 ## Vault Ideas Extracted
 
-* [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
+- [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)

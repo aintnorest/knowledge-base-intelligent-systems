@@ -13,6 +13,7 @@ If a test set contains a surface feature that correlates with the gold label, ag
 **Partition the evaluation set by whether the confound agrees with the label, and report both cells separately along with the majority share.**
 
 For a pairwise preference set with a suspected length bias, that means:
+
 - **agree** — the preferred item is also the longer one;
 - **disagree** — the rejected item is longer.
 

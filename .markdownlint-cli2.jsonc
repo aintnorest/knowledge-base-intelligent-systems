@@ -1,0 +1,17 @@
+{
+  "config": {
+    "default": true,
+    // Tables and one-line list entries cannot wrap.
+    "MD013": false,
+    // Dossiers repeat section names (Results, Limitations) under different parents.
+    "MD024": { "siblings_only": true },
+    // OKF frontmatter `title:` and a matching H1 are both house style.
+    "MD025": { "front_matter_title": "" },
+    // Dossier metadata headers use <br> for line breaks.
+    "MD033": { "allowed_elements": ["br"] },
+    // Notes cite bare canonical URLs.
+    "MD034": false,
+    // Pipe spacing in tables is cosmetic; notes use `|---|` separators.
+    "MD060": false
+  }
+}

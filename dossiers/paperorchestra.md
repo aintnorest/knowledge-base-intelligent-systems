@@ -37,6 +37,7 @@ Steps 2 and 3 run in parallel. Total latency is about 40 minutes (~60–70 LLM c
 ## The Benchmark (PaperWritingBench)
 
 They built the first standardized benchmark for this task by reverse-engineering 200 accepted papers from CVPR 2025 and ICLR 2025. They used an LLM to extract:
+
 - A **sparse idea** (high-level concept, no math) or **dense idea** (full equations and formalisms)
 - An **experimental log** (raw numbers, baselines, metrics, stripped of all figure/table references)
 
@@ -70,15 +71,15 @@ Everything is anonymized and de-contextualized so the system cannot cheat by mem
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Hybrid Discovery + Verification](/vault/hybrid-discovery-verification.md)
-* [Score-Gated Refinement](/vault/score-gated-refinement.md)
-* [Closed-Loop VLM Visual Generation](/vault/closed-loop-vlm-visual-generation.md)
-* [Benchmark Reverse Engineering](/vault/benchmark-reverse-engineering.md)
-* [Anti-Leakage Evaluation](/vault/anti-leakage-evaluation.md)
-* [Sparse Concept Note Prompt](/vault/sparse-concept-note-prompt.md)
-* [Dense Technical Proposal Prompt](/vault/dense-technical-proposal-prompt.md)
-* [Experimental Log Extraction Prompt](/vault/experimental-log-extraction-prompt.md)
-* [Anti-Leakage System Prompt](/vault/anti-leakage-system-prompt.md)
-* [Citation F1 Metric](/vault/citation-f1-metric.md)
-* [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Hybrid Discovery + Verification](/vault/hybrid-discovery-verification.md)
+- [Score-Gated Refinement](/vault/score-gated-refinement.md)
+- [Closed-Loop VLM Visual Generation](/vault/closed-loop-vlm-visual-generation.md)
+- [Benchmark Reverse Engineering](/vault/benchmark-reverse-engineering.md)
+- [Anti-Leakage Evaluation](/vault/anti-leakage-evaluation.md)
+- [Sparse Concept Note Prompt](/vault/sparse-concept-note-prompt.md)
+- [Dense Technical Proposal Prompt](/vault/dense-technical-proposal-prompt.md)
+- [Experimental Log Extraction Prompt](/vault/experimental-log-extraction-prompt.md)
+- [Anti-Leakage System Prompt](/vault/anti-leakage-system-prompt.md)
+- [Citation F1 Metric](/vault/citation-f1-metric.md)
+- [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)

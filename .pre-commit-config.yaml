@@ -1,0 +1,11 @@
+# Run by prek (https://github.com/j178/prek). Enable once per clone: `prek install`.
+repos:
+  - repo: local
+    hooks:
+      - id: markdownlint
+        name: markdownlint
+        # mise exec resolves the pinned version even when mise is not activated in the shell.
+        entry: mise exec -- markdownlint-cli2
+        language: system
+        # Scope must match the lint tasks in mise.toml.
+        files: ^(dossiers|vault|docs)/.+\.md$

@@ -112,7 +112,7 @@ The Swiss-cheese analogy is apt: offline evals are reproducible but can miss rea
 
 ## Vault Ideas Extracted
 
-* [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
-* [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
-* [Intended-Path Benchmark Validation](/vault/intended-path-benchmark-validation.md)
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [LLM Evaluation Methods](/vault/llm-evaluation-methods.md)
+- [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md)
+- [Intended-Path Benchmark Validation](/vault/intended-path-benchmark-validation.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)

@@ -116,6 +116,6 @@ Those results are a substantive challenge, not a final resolution. The rebuttal 
 
 ## Vault Ideas Extracted
 
-* [Answer Engineering](/vault/answer-engineering.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [Answer Engineering](/vault/answer-engineering.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)

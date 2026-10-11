@@ -56,4 +56,4 @@ An API-only emulation that restarts a request for each interrupt is **1.5× slow
 
 ## Vault Ideas Extracted
 
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)

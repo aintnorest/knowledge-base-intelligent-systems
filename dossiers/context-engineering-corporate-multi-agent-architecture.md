@@ -79,6 +79,6 @@ Its practical economic claim is directionally sound: resending ever-growing stat
 
 ## Vault Ideas Extracted
 
-* [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
-* [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
-* [Permission-Scoped Synthesis](/vault/permission-scoped-synthesis.md)
+- [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
+- [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
+- [Permission-Scoped Synthesis](/vault/permission-scoped-synthesis.md)

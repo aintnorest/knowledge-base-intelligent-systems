@@ -58,4 +58,4 @@ These are internal, scenario-specific results from an engineering post, not evid
 
 ## Vault Ideas Extracted
 
-* [Dominator-Based Agent Validation](/vault/dominator-based-agent-validation.md)
+- [Dominator-Based Agent Validation](/vault/dominator-based-agent-validation.md)

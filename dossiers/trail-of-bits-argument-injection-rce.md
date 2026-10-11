@@ -36,4 +36,3 @@ The affected vendors remain unnamed in this article, preventing product-level at
 * [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
 * [Assume-Compromise Boundary Testing](/vault/assume-compromise-boundary-testing.md)
 * [Tool Identity Versus Effect Authority](/vault/tool-identity-versus-effect-authority.md)
-

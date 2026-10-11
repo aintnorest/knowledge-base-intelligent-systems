@@ -39,4 +39,3 @@ The declared limits matter. Full request and response payloads are logged by def
 * [Control–Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
 * [Provenance-Conditioned Action Admission](/vault/provenance-conditioned-action-admission.md)
 * [Delegated OAuth Proxy Hazards](/vault/delegated-oauth-proxy-hazards.md)
-

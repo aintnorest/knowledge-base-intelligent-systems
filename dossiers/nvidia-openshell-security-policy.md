@@ -48,4 +48,3 @@ The standalone containment checker establishes modeled `Allowed(candidate) ⊆ A
 * [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
 * [Cross-Mechanism Execution-Security Evaluation](/vault/cross-mechanism-execution-security-evaluation.md)
 * [Approval Bound to Canonical Effect](/vault/approval-bound-to-canonical-effect.md)
-

@@ -34,4 +34,3 @@ Firecracker explicitly **does not filter guest network traffic**: outbound packe
 
 * [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
 * [Assume Guest Compromise: Host Exposure Budget](/vault/assume-guest-compromise-host-exposure.md)
-

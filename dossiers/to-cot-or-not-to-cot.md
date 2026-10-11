@@ -76,5 +76,5 @@ External execution is stronger in most tested settings. On GSM8K-Hard, for examp
 
 ## Vault Ideas Extracted
 
-* [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
-* [Prompt Contingency](/vault/prompt-contingency.md)
+- [Chain-of-Thought Prompting](/vault/chain-of-thought-prompting.md)
+- [Prompt Contingency](/vault/prompt-contingency.md)

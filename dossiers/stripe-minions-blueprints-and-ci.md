@@ -72,5 +72,5 @@ This policy is an explicit cost–latency–quality trade-off, not a proof that 
 
 ## Vault Ideas Extracted
 
-* [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)

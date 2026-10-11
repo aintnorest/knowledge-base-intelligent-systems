@@ -39,5 +39,5 @@ Recommended organizational controls include disclosure of AI-assisted content an
 
 ## Vault Ideas Extracted
 
-* [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)
-* [Source-Backed Claim Admission](/vault/source-backed-claim-admission.md)
+- [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)
+- [Source-Backed Claim Admission](/vault/source-backed-claim-admission.md)

@@ -55,5 +55,5 @@ Of 18 correct answers falsely rejected by self-review, the executor ignored 15 a
 
 ## Vault Ideas Extracted
 
-* [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

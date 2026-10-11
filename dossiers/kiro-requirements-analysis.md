@@ -70,5 +70,5 @@ Refinement cannot guarantee removal of ambiguity, consistency, or completeness. 
 
 ## Vault Ideas Extracted
 
-* [Disagreement-Selected Clarification](/vault/disagreement-selected-clarification.md)
-* [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)
+- [Disagreement-Selected Clarification](/vault/disagreement-selected-clarification.md)
+- [Machine-Readable Agent Specifications](/vault/machine-readable-agent-specifications.md)

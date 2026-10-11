@@ -51,4 +51,4 @@ DeepSeek's renaming condition is the striking example: **60 gains exceed 31 loss
 
 ## Vault Ideas Extracted
 
-* [Paraphrase–Adversarial Evaluator Validation](/vault/paraphrase-adversarial-evaluator-validation.md)
+- [Paraphrase–Adversarial Evaluator Validation](/vault/paraphrase-adversarial-evaluator-validation.md)

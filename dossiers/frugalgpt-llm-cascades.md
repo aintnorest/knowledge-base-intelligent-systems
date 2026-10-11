@@ -61,4 +61,4 @@ The [TMLR record and abstract](https://mlanthology.org/tmlr/2024/chen2024tmlr-fr
 
 ## Vault Ideas Extracted
 
-* [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
+- [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)

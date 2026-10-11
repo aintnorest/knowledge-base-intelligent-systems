@@ -63,5 +63,5 @@ Changing the description after release is a significant routing change, not a ca
 
 ## Vault Ideas Extracted
 
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Progressive Skill Disclosure](/vault/progressive-skill-disclosure.md)

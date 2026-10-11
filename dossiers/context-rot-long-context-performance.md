@@ -100,7 +100,7 @@ All families degrade as sequences lengthen. Correct unique-word placement concen
 
 ## Vault Ideas Extracted
 
-* [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
-* [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)
-* [Retrieval Augmentation for Hallucination Reduction](/vault/retrieval-augmentation.md)
-* [Human-Anchored Judge-Bias Measurement](/vault/human-anchored-judge-bias-measurement.md)
+- [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
+- [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)
+- [Retrieval Augmentation for Hallucination Reduction](/vault/retrieval-augmentation.md)
+- [Human-Anchored Judge-Bias Measurement](/vault/human-anchored-judge-bias-measurement.md)

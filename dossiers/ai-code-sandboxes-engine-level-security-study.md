@@ -76,5 +76,5 @@ Patch delivery is the most directly operator-controlled result. Coordinated upst
 
 ## Vault Ideas Extracted
 
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Downstream Security Patch Propagation](/vault/downstream-security-patch-propagation.md)

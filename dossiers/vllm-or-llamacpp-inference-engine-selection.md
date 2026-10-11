@@ -63,4 +63,4 @@ Choose **llama.cpp** when portability, minimal dependencies, fast startup, memor
 
 ## Vault Ideas Extracted
 
-* [Workload-Aligned Inference Engine Selection](/vault/workload-aligned-inference-engine-selection.md)
+- [Workload-Aligned Inference Engine Selection](/vault/workload-aligned-inference-engine-selection.md)

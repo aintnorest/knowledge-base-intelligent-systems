@@ -52,4 +52,4 @@ This separation gives each component a bounded task and tools. It can reduce irr
 
 ## Vault Ideas Extracted
 
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

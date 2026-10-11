@@ -51,4 +51,4 @@ The abstract reports that the selected ReviewAgent configuration improves action
 
 ## Vault Ideas Extracted
 
-* [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)
+- [Verification-Centric Generated-Review Evaluation](/vault/verification-centric-generated-review-evaluation.md)

@@ -63,4 +63,4 @@ No component ablation separates selection, mechanical locality, feedback, reuse,
 
 ## Vault Ideas Extracted
 
-* [Referent-Scoped Editing](/vault/referent-scoped-editing.md)
+- [Referent-Scoped Editing](/vault/referent-scoped-editing.md)

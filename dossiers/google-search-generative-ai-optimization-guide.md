@@ -77,6 +77,6 @@ The separate model-training and non-Search-grounding policy does **not** govern 
 
 ## Vault Ideas Extracted
 
-* [Generative Engine Optimization](/vault/generative-engine-optimization.md)
-* [Query Fan-Out](/vault/query-fan-out.md)
-* [Publisher AI Usage Controls](/vault/publisher-ai-usage-controls.md)
+- [Generative Engine Optimization](/vault/generative-engine-optimization.md)
+- [Query Fan-Out](/vault/query-fan-out.md)
+- [Publisher AI Usage Controls](/vault/publisher-ai-usage-controls.md)

@@ -38,7 +38,6 @@ Several application body bounds have defaults but no shared platform maximum; an
 
 ## Vault Ideas Extracted
 
-* [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
-* [Bounded Tool Observations](/vault/bounded-tool-observations.md)
-* [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
-
+- [Deployment-Conditioned Sandbox Security](/vault/deployment-conditioned-sandbox-security.md)
+- [Bounded Tool Observations](/vault/bounded-tool-observations.md)
+- [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)

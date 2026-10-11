@@ -168,7 +168,7 @@ GEPA can also optimize *against* performance. With 150 generations over AIME 202
 
 ## Vault Ideas Extracted
 
-* Updated [Prompt Optimization](/vault/prompt-optimization.md)
-* Updated [Rationale-Guided Prompt Rewriting](/vault/rationale-guided-prompt-rewriting.md)
-* Updated [Quality–Progress–Novelty Parent Selection](/vault/quality-progress-novelty-parent-selection.md)
-* Updated [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)
+- Updated [Prompt Optimization](/vault/prompt-optimization.md)
+- Updated [Rationale-Guided Prompt Rewriting](/vault/rationale-guided-prompt-rewriting.md)
+- Updated [Quality–Progress–Novelty Parent Selection](/vault/quality-progress-novelty-parent-selection.md)
+- Updated [Budget-Matched Harness-Evolution Evaluation](/vault/budget-matched-harness-evolution-evaluation.md)

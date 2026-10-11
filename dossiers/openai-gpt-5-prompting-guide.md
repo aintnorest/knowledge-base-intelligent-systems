@@ -102,6 +102,6 @@ Treat every model upgrade as a harness migration. Re-run representative tasks wi
 
 ## Vault Ideas Extracted
 
-* Update [Reasoning-Budget Calibration](/vault/reasoning-budget-calibration.md) — GPT-5 separates reasoning effort from final-answer verbosity and shifts more planning/persistence scaffolding into the prompt at minimal effort.
-* Update [Model-Aware Harness Design](/vault/model-aware-harness-design.md) — Cursor found an earlier-model thoroughness instruction induced repetitive search in GPT-5, while reversibility semantics and local code-verbosity overrides improved autonomy and readability.
-* Update [Prompt–Model Drift](/vault/prompt-model-drift.md) — a concrete within-product generation change made inherited context-gathering language counterproductive, supporting requalification on model upgrades.
+- Update [Reasoning-Budget Calibration](/vault/reasoning-budget-calibration.md) — GPT-5 separates reasoning effort from final-answer verbosity and shifts more planning/persistence scaffolding into the prompt at minimal effort.
+- Update [Model-Aware Harness Design](/vault/model-aware-harness-design.md) — Cursor found an earlier-model thoroughness instruction induced repetitive search in GPT-5, while reversibility semantics and local code-verbosity overrides improved autonomy and readability.
+- Update [Prompt–Model Drift](/vault/prompt-model-drift.md) — a concrete within-product generation change made inherited context-gathering language counterproductive, supporting requalification on model upgrades.

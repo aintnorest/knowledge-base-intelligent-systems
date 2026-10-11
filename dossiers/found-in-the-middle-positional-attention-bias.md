@@ -85,5 +85,5 @@ The method avoids weight training, but requires **O(K) extra model forward passe
 
 ## Vault Ideas Extracted
 
-* [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
-* [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)
+- [Position-Robust Context Evaluation](/vault/position-robust-context-evaluation.md)
+- [Context Ordering as Retrieval Control](/vault/context-ordering-as-retrieval-control.md)

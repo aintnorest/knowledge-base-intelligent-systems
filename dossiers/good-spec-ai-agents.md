@@ -52,5 +52,5 @@ A trivial, isolated styling tweak does not need a huge PRD; an OAuth flow with r
 
 ## Vault Ideas Extracted
 
-* [Clarification Need Decision](/vault/clarification-need-decision.md)
-* [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)
+- [Clarification Need Decision](/vault/clarification-need-decision.md)
+- [Intent Engineering for Agents](/vault/intent-engineering-for-agents.md)

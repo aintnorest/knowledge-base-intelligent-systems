@@ -33,8 +33,7 @@ The agent has limited repository access and verifier tools in a tightly constrai
 
 ## Vault Ideas Extracted
 
-* [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
-* [Staged Effect Admission](/vault/staged-effect-admission.md)
-
+- [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Staged Effect Admission](/vault/staged-effect-admission.md)

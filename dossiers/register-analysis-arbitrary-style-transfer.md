@@ -98,6 +98,6 @@ Results are read off Pareto frontiers of style strength (Biber-Towards) against 
 
 ## Vault Ideas Extracted
 
-* [Framework-Anchored Intermediate Descriptions](/vault/framework-anchored-intermediate-descriptions.md)
-* [Contrastive Exemplar Characterization](/vault/contrastive-exemplar-characterization.md)
-* [Exemplar Copy Leakage](/vault/exemplar-copy-leakage.md)
+- [Framework-Anchored Intermediate Descriptions](/vault/framework-anchored-intermediate-descriptions.md)
+- [Contrastive Exemplar Characterization](/vault/contrastive-exemplar-characterization.md)
+- [Exemplar Copy Leakage](/vault/exemplar-copy-leakage.md)

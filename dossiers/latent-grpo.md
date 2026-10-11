@@ -57,4 +57,4 @@ Removing one-sided noise sampling caused sharp degradation and eventual collapse
 
 ## Vault Ideas Extracted
 
-* [Manifold-Safe Latent Reinforcement Learning](/vault/manifold-safe-latent-rl.md)
+- [Manifold-Safe Latent Reinforcement Learning](/vault/manifold-safe-latent-rl.md)

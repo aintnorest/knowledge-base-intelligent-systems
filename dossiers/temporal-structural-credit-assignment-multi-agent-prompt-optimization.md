@@ -64,5 +64,5 @@ These are preprint, benchmark-specific results. The rendered main-results table 
 
 ## Vault Ideas Extracted
 
-* [Credit-Guided Multi-Agent Prompt Optimization](/vault/credit-guided-multi-agent-prompt-optimization.md)
-* [Prompt Optimization](/vault/prompt-optimization.md)
+- [Credit-Guided Multi-Agent Prompt Optimization](/vault/credit-guided-multi-agent-prompt-optimization.md)
+- [Prompt Optimization](/vault/prompt-optimization.md)

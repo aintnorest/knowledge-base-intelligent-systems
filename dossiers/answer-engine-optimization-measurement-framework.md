@@ -101,7 +101,7 @@ Prompt set standardization (no shared benchmark prompt taxonomies per vertical, 
 
 ## Vault Ideas Extracted
 
-* [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)
-* [Citation Half-Life](/vault/citation-half-life.md)
-* [AI Crawler Traffic Classes](/vault/ai-crawler-traffic-classes.md)
-* [AI Crawler Content Parsability](/vault/ai-crawler-content-parsability.md)
+- [AI Search Visibility Measurement](/vault/ai-search-visibility-measurement.md)
+- [Citation Half-Life](/vault/citation-half-life.md)
+- [AI Crawler Traffic Classes](/vault/ai-crawler-traffic-classes.md)
+- [AI Crawler Content Parsability](/vault/ai-crawler-content-parsability.md)

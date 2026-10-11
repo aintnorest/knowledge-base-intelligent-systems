@@ -53,5 +53,5 @@ On a fixed **100-task** GPT-5-mini ablation, the complete layer solves **68** ve
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

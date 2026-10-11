@@ -47,7 +47,7 @@ Review effort can trade speed for deeper analysis, but the documentation provide
 
 ## Vault Ideas Extracted
 
-* [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
-* [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
-* [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Calibrated Code-Review Rules](/vault/calibrated-code-review-rules.md)
+- [Cost-Aware Inference Control](/vault/cost-aware-inference-control.md)
+- [Normative-Source-Grounded AI Assistance](/vault/normative-source-grounded-ai-assistance.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)

@@ -40,5 +40,5 @@ The proposed adoption sequence maps testing activities to approved autonomy mode
 
 ## Vault Ideas Extracted
 
-* [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
-* [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)
+- [Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)
+- [Weakest-Link Assurance Composition](/vault/weakest-link-assurance-composition.md)

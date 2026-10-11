@@ -45,5 +45,5 @@ An LLM-assisted analysis of **240 complete trajectories** identifies failure the
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Intended-Path Benchmark Validation](/vault/intended-path-benchmark-validation.md)
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Intended-Path Benchmark Validation](/vault/intended-path-benchmark-validation.md)

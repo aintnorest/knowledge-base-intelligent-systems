@@ -70,4 +70,4 @@ The hyperparameter experiment is equally instructive. GPT-5 mini matched the ori
 
 ## Vault Ideas Extracted
 
-* [Delayed Local Trajectory Reduction](/vault/delayed-local-trajectory-reduction.md)
+- [Delayed Local Trajectory Reduction](/vault/delayed-local-trajectory-reduction.md)

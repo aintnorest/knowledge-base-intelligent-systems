@@ -50,4 +50,4 @@ The early RAG filter drops SonarQube alerts before repair. If it incorrectly fil
 
 ## Vault Ideas Extracted
 
-* [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)
+- [Cross-Version Differential Oracles](/vault/cross-version-differential-oracles.md)

@@ -38,4 +38,3 @@ This source is vendor documentation, not a measured reliability study. Worktree 
 * [Reviewable Change Units](/vault/reviewable-change-units.md)
 * [Agent Work Liveness Invariants](/vault/agent-work-liveness-invariants.md)
 * [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)
-

@@ -76,6 +76,6 @@ For self-improvement:
 
 ## Vault Ideas Extracted
 
-* [Decomposed Checklist Evaluation](/vault/decomposed-checklist-evaluation.md)
-* [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
-* [Score-Gated Refinement](/vault/score-gated-refinement.md)
+- [Decomposed Checklist Evaluation](/vault/decomposed-checklist-evaluation.md)
+- [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
+- [Score-Gated Refinement](/vault/score-gated-refinement.md)

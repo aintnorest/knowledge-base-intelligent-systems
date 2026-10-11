@@ -50,6 +50,6 @@ His talk cites a study claiming generated `AGENTS.md` rules reduced success roug
 
 ## Vault Ideas Extracted
 
-* [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
-* [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
-* [Scoped Guideline Memory](/vault/scoped-guideline-memory.md)
+- [Bounded Hybrid Coding Workflow](/vault/bounded-hybrid-coding-workflow.md)
+- [Multi-Agent Orchestration](/vault/multi-agent-orchestration.md)
+- [Scoped Guideline Memory](/vault/scoped-guideline-memory.md)

@@ -79,5 +79,5 @@ Final pass rates range from **19% to 45%** across the 21 model–scaffold system
 
 ## Vault Ideas Extracted
 
-* [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
-* [Tool-Availability Abstention](/vault/tool-availability-abstention.md)
+- [Adaptive Runtime Agent Supervision](/vault/adaptive-runtime-agent-supervision.md)
+- [Tool-Availability Abstention](/vault/tool-availability-abstention.md)

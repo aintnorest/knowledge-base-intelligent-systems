@@ -50,6 +50,6 @@ The metric conflates illegitimate deference with legitimate updating — a user'
 
 ## Sources
 
-* [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — SycophancyEval builds four metrics (feedback, "are you sure?", answer, mimicry) on this pattern across five assistants.
-* [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — surveys five measurement families (ground-truth comparison, human evaluation, automated metrics, adversarial probing, comparative evaluation) and imports the FlipFlop CTR/EIR/PIR metrics.
-* [Language Models Don’t Always Say What They Think dossier](/dossiers/unfaithful-chain-of-thought-explanations.md) — applies counterfactual cue tests to answer changes and explanation disclosure.
+- [Towards Understanding Sycophancy in Language Models](/dossiers/understanding-sycophancy-language-models.md) — SycophancyEval builds four metrics (feedback, "are you sure?", answer, mimicry) on this pattern across five assistants.
+- [Sycophancy in Large Language Models: Causes and Mitigations](/dossiers/sycophancy-large-language-models-causes-mitigations.md) — surveys five measurement families (ground-truth comparison, human evaluation, automated metrics, adversarial probing, comparative evaluation) and imports the FlipFlop CTR/EIR/PIR metrics.
+- [Language Models Don’t Always Say What They Think dossier](/dossiers/unfaithful-chain-of-thought-explanations.md) — applies counterfactual cue tests to answer changes and explanation disclosure.

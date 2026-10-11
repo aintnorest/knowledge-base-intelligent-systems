@@ -35,8 +35,7 @@ One Slack-clone example ran 16.5 hours, with 9.98 hours implementation and 6.14 
 
 ## Vault Ideas Extracted
 
-* [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
-* [Reviewable Change Units](/vault/reviewable-change-units.md)
-* [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
-* [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)
-
+- [Artifact-Gated Agent Evaluation](/vault/artifact-gated-agent-evaluation.md)
+- [Reviewable Change Units](/vault/reviewable-change-units.md)
+- [Verifier Co-Evolution Under Optimization](/vault/verifier-co-evolution.md)
+- [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)

@@ -50,6 +50,6 @@ Popular claims like "GPT can search Reddit" attribute retrieval capability to mo
 
 ## Vault Ideas Extracted
 
-* [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
-* [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
-* [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)
+- [Retrieval as Host Capability](/vault/retrieval-as-host-capability.md)
+- [Source-Adapter Decoupling](/vault/source-adapter-decoupling.md)
+- [Retrieval-Depth Grading](/vault/retrieval-depth-grading.md)

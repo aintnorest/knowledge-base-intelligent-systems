@@ -66,5 +66,5 @@ The runtime also costs model tokens. With Claude 3.5 Sonnet under attack, the me
 
 ## Vault Ideas Extracted
 
-* [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
-* [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)
+- [Capability-Enforced Agent Execution](/vault/capability-enforced-agent-execution.md)
+- [Control-Data Plane Separation for Agents](/vault/control-data-plane-separation-for-agents.md)

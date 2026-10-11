@@ -48,4 +48,3 @@ This is a normative draft, not an operational evaluation. Optional remote SSH wo
 * [Agent Work Liveness Invariants](/vault/agent-work-liveness-invariants.md)
 * [Interruption Recovery Without Duplicate Effects](/vault/interruption-recovery-without-duplicate-effects.md)
 * [Ledger-Centered Agent Control Plane](/vault/ledger-centered-agent-control-plane.md)
-

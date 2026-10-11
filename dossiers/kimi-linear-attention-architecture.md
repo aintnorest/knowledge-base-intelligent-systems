@@ -59,4 +59,4 @@ The paper releases kernels and a vLLM implementation, which matters because subq
 
 ## Vault Ideas Extracted
 
-* [Hybrid Linear–Global Attention](/vault/hybrid-linear-global-attention.md)
+- [Hybrid Linear–Global Attention](/vault/hybrid-linear-global-attention.md)

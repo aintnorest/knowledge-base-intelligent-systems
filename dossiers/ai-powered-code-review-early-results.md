@@ -45,4 +45,4 @@ The source contains conspicuous publication-template residue (a Woodstock’22 p
 
 ## Vault Ideas Extracted
 
-* [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)
+- [Staged Evidence-Grounded Judgment](/vault/staged-evidence-grounded-judgment.md)

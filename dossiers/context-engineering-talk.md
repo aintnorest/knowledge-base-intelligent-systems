@@ -109,6 +109,6 @@ The speaker cautions that some benchmark numbers were rough. The more durable cl
 
 ## Vault Ideas Extracted
 
-* [Conflict-Aware Context Retrieval](/vault/conflict-aware-context-retrieval.md)
-* [Expert-Weighted Retrieval](/vault/expert-weighted-retrieval.md)
-* [Permission-Scoped Synthesis](/vault/permission-scoped-synthesis.md)
+- [Conflict-Aware Context Retrieval](/vault/conflict-aware-context-retrieval.md)
+- [Expert-Weighted Retrieval](/vault/expert-weighted-retrieval.md)
+- [Permission-Scoped Synthesis](/vault/permission-scoped-synthesis.md)

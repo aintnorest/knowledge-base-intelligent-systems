@@ -56,5 +56,5 @@ The paper calls execution precision the fraction of attempted skill invocations 
 
 ## Vault Ideas Extracted
 
-* [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
-* [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)
+- [Evaluated Skill Routing](/vault/evaluated-skill-routing.md)
+- [Self-Improvement Update Targets](/vault/self-improvement-update-targets.md)

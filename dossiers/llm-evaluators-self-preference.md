@@ -49,4 +49,4 @@ The abstract defines self-preference relative to equal-quality human judgments, 
 
 ## Vault Ideas Extracted
 
-* [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
+- [LLM-as-Judge with Anti-Inflation](/vault/llm-as-judge-with-anti-inflation.md)
