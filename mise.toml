@@ -12,3 +12,14 @@ pnpm_config_pm_on_fail = "error"
 [tools]
 node = "24.21.0"
 "npm:pnpm" = { version = "12.9.1", depends = ["node"] }
+"npm:markdownlint-cli2" = { version = "0.23.3", depends = ["node"] }
+prek = "0.5.5"
+
+# Scope must match `files` in .pre-commit-config.yaml.
+[tasks.lint]
+description = "Lint dossiers, vault pages, and docs with markdownlint"
+run = "markdownlint-cli2 'dossiers/**/*.md' 'vault/**/*.md' 'docs/**/*.md'"
+
+[tasks."lint:fix"]
+description = "Apply markdownlint's automatic fixes to dossiers, vault pages, and docs"
+run = "markdownlint-cli2 --fix 'dossiers/**/*.md' 'vault/**/*.md' 'docs/**/*.md'"
