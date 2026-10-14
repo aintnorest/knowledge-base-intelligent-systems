@@ -3,7 +3,7 @@ type: Synthesis
 title: File-Native Context Retrieval
 description: Letting an agent navigate persistent structured knowledge through files and native search tools so it retrieves task-relevant context on demand rather than receiving every record in its initial prompt.
 tags: [context-engineering, retrieval, tool-use, agents]
-timestamp: 2026-07-13T18:04:21Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # File-Native Context Retrieval
@@ -30,6 +30,12 @@ For work spanning fresh sessions, keep specifications, current priorities, and t
 
 The navigable surface need not stop at repository content. Tool interface definitions can also be indexed as files and loaded only for the operations a task needs. In source-inspected coding runtimes, path and lexical search, structural parsing, and deferred local guidance provide common navigation mechanisms; the observed absence of vector retrieval over their source trees does not establish that embeddings are unhelpful for other stores or workloads.
 
+## Navigation Versus Redundant Overview Prose
+
+A navigable knowledge structure and an up-front repository summary are different interventions. In a controlled Python repository-task study, context-file overviews did not meaningfully reduce steps to the first interaction with a file changed by the reference patch. That localization proxy is narrower than finding all necessary evidence and excludes runs that never touched such a file. A summary may duplicate searchable documentation without improving navigation; adding one does not validate the file-native architecture or establish its failure.
+
+Test the marginal information supplied by the navigator or summary, not just its apparent completeness. In an artificial countercondition, removing documentation and examples after generating the context file made generated guidance improve success by a reported 2.7% on average across three configurations. This supports a redundancy explanation, not deleting documentation or assuming the same gain in naturally undocumented repositories. Compare navigation and task outcomes with existing documentation intact, and distinguish genuinely missing knowledge from information merely repeated up front.
+
 ## Limitations
 
 - Retrieval adds planning and tool-use failure modes; a model that searches poorly can do worse than receiving a bounded prompt directly.
@@ -46,3 +52,4 @@ The navigable surface need not stop at repository content. Tool interface defini
 - [What I learned building an opinionated and minimal coding agent dossier](/dossiers/pi-minimal-coding-agent.md) — favors visible planning files and separately observed research artifacts over opaque in-session context gathering.
 - [Harness Engineering: Anatomy, Architecture, and Evolution of Coding Agents dossier](/dossiers/coding-agent-harness-source-study.md) — finds file and lexical navigation across eleven source-inspected runtimes but no vector-based source-tree retrieval, with a conversation-search caveat.
 - [Code execution with MCP: Building more efficient agents dossier](/dossiers/anthropic-code-execution-mcp.md) — illustrates discoverable tool API files as a way to load only selected interface definitions.
+- [Evaluating AGENTS.md dossier](/dossiers/evaluating-agents-md-repository-context-files.md) — repository overviews did not meaningfully accelerate first reference-changed-file interaction; a documentation-removal ablation supports marginal-information testing, with Python-only tasks, one completion per condition, and localization-proxy limitations.

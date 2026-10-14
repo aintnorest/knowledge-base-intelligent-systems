@@ -3,7 +3,7 @@ type: Synthesis
 title: Intent Engineering for Agents
 description: Encoding organizational priorities, trade-off rules, and escalation boundaries as testable decision policy so an agent does not optimize a convenient proxy for its actual mandate.
 tags: [governance, requirements-engineering, agents, evaluation, enterprise]
-timestamp: 2026-07-13T18:03:01Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Intent Engineering for Agents
@@ -35,6 +35,10 @@ A coding-agent specification is the shared account of what should change for use
 
 Enforce the tiers with permissions and approval gates, not prose alone. If generation outpaces verification, slow generation or add check capacity rather than silently relaxing a non-negotiable bar. Do not rewrite the spec to fit a faulty implementation, which ratifies the error. A giant spec crowds out task-relevant code, and a vague one lets agents invent requirements. See [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md) for turning the spec's acceptance criteria into protected oracles.
 
+Keep three decisions separate: **authorized intent**, **repository feasibility**, and **accepted implementation**. Explicit requirements make assumptions inspectable but do not establish any of these on their own. Phase-specific discovery can establish which interfaces and dependencies exist; artifact validation can challenge inconsistent or infeasible plans. Neither gives the repository authority to decide what users should receive. Accountable owners must still approve consequential requirements, and acceptance must independently check the delivered behavior.
+
+A staged grounding experiment improved model-judged quality from 3.51 to 3.66 within its full-workflow family, versus 3.46 to 3.50 for direct-flow grounding. Its plan checkpoints were automatically approved, and operational success required only a modified pull request without a critical execution error. Those measures do not establish substantive intent review, feature acceptance, or defect reduction. The small human-preference study did not corroborate the judge winner; this evidence supports distinguishing the checks, not declaring specification staging itself the cause of better outcomes.
+
 ## Limitations
 
 - Formalizing intent cannot remove genuine organizational disagreement; it makes the disagreement visible and requires an owner to resolve it.
@@ -47,3 +51,4 @@ Enforce the tiers with permissions and approval gates, not prose alone. If gener
 - [How to write a good spec for AI agents dossier](/dossiers/good-spec-ai-agents.md) — goal-first specs, modular tasks, and Always / Ask first / Never tiers.
 - [My LLM coding workflow going into 2026 dossier](/dossiers/ai-coding-workflow-2026.md) — human-reviewed spec and plan before each coding increment.
 - [Agentic Code Quality dossier](/dossiers/agentic-code-quality.md) — explicit quality-gate capacity and policy trade-offs.
+- [Spec Kit Agents: Context-Grounded Agentic Workflows dossier](/dossiers/spec-kit-agents-context-grounded-agentic-workflows.md) — repository-grounding hooks address feasibility, while auto-approved plans and pull-request production leave intent authority and accepted feature behavior untested.

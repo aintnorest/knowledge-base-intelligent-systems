@@ -3,7 +3,7 @@ type: Synthesis
 title: Instruction-Density Compliance Decay
 description: Joint compliance becomes less reliable as simultaneous obligations multiply, even when individual-rule accuracy stays high; usable limits depend on rule difficulty, scoring, model and task.
 tags: [prompting, reliability, evaluation, context-engineering, verification]
-timestamp: 2026-10-04T06:39:21Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Instruction-Density Compliance Decay
@@ -25,6 +25,12 @@ Published count curves are not interchangeable capacity tests. One evaluates het
 Consequently, strong average keyword inclusion at a large count can coexist with almost no perfectly compliant essays at a smaller count. Neither observation alone establishes that a newer model is better or worse than an older one. Keep the denominator, rule difficulty and compatibility, generation policy, retry or recovery protocol, model revision and core task fixed before attributing a difference to count.
 
 Requirement-level evidence also shows individual probabilities changing under joint presentation: individually specified requirements average 98.7% satisfaction, while 19 simultaneous requirements yield average specified satisfaction of 85.0% and 79.7% in the two reported model settings. These are per-requirement scores, not all-satisfied response rates. The curated tasks and imperfect validators constrain generalization, but the decline cannot be explained solely by multiplying unchanged individual success probabilities; overload also appears without obvious conflicts.
+
+## Compliance Failure Versus Compliant-but-Unproductive Work
+
+Extra obligations can add cost without being disobeyed. A controlled Python repository-task evaluation found that persistent context files increased testing, exploration, reasoning, and inference cost without significantly improving issue resolution over omission. Traces supported uptake of tool recommendations, although mention-conditioned tool-use comparisons did not randomize individual instructions. This is evidence for separating adherence from usefulness, not evidence that instruction count caused compliance decay.
+
+Record adherence, core task outcomes, and cost as separate axes. The same study found no clear accuracy or cost relationship when binning files by length; length is not instruction count, and this null does not establish that either never matters. Nor does unchanged test-based resolution show that security, maintainability, or other mandatory requirements are unnecessary: those outcomes were not directly measured. Keep count-driven adherence experiments distinct from evaluations of whether followed guidance improves the intended result.
 
 ## Practical Use
 
@@ -53,3 +59,4 @@ A reported near-zero success rate is sample- and task-dependent, not proof of an
 - [How Many Instructions Can LLMs Follow at Once? dossier](/dossiers/ifscale-how-many-instructions.md) — IFScale's 10–500 keyword ladder, per-instruction inclusion metric, descriptive threshold/linear/exponential decay and count-dependent primacy; best appendix mean is 68.9% at 500, not perfect-report success.
 - [Prompt Design at Scale dossier](/dossiers/prompt-design-at-scale.md) — non-peer-reviewed VeyraBench evidence for near-zero perfect responses by 80 mixed rules, model-specific format/placement effects, and changing structural-rule proportion; the dossier qualifies headline claims and reporting inconsistencies.
 - [What Prompts Don't Say: Understanding and Managing Underspecification in LLM Prompts dossier](/dossiers/prompt-underspecification-what-prompts-dont-say.md) — individually specified requirements average 98.7% satisfaction; with 19 together, GPT-4o averages 85.0% and Llama-3.3-70B-Instruct 79.7%, with curated-task and validator limitations.
+- [Evaluating AGENTS.md dossier](/dossiers/evaluating-agents-md-repository-context-files.md) — increased instruction uptake and work without significant resolution gains distinguish compliant-but-unproductive behavior from count-driven adherence decay; the study does not identify instruction count as the cause.

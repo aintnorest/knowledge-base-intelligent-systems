@@ -3,7 +3,7 @@ type: Synthesis
 title: "Self-Improvement Update Targets"
 description: "A systems taxonomy for distinguishing model-parameter improvement from prompt, memory, tool, and full-scaffold improvement in agent feedback loops."
 tags: [self-improvement, taxonomy, agents, governance, tool-use, agent-memory]
-timestamp: 2026-07-22T00:32:30Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Self-Improvement Update Targets
@@ -38,6 +38,12 @@ Critics and evaluators are part of the system's attack surface. Separate proposa
 
 Each has different rollback and evidence requirements. A light factory should try reversible, sandboxed skill and harness changes first, keep them distinct from model training, and measure whether each artifact transfers to held-out tasks. An improved benchmark score is not general self-evolution.
 
+## Coupled Scaffold Search and Shared-Weight Training
+
+An improvement cycle can alternate update targets: hold weights fixed while searching workflow roles, output contracts, and call order; execute selected workflows to collect training traces; fine-tune shared parameters; then use the successor as executor, optimizer, and evaluator for the next cycle. This is actual weight recursion when the successor closes the loop, not merely frozen-model scaffold evolution. Record each completed cycle and distinguish improvements transferred to optimization or judging from directly supervised workflow-edit behavior. Two completed cycles do not establish monotonic or indefinite improvement, and gains on one task family can accompany regressions on another.
+
+Joint orchestrator–worker trace distillation fits within this coupled target rather than requiring a separate kind of self-improvement. Shared parameters learn complementary prediction problems: delegation and integration from orchestrator traces, bounded execution from worker traces. Removing the searched workflow from orchestrator training inputs can teach spontaneous coordination rather than dependence on that prompt. Compare training-task coverage, sampling, checkpoint selection, and held-out outcomes before attributing a pooled advantage to trace decomposition; fewer processed supervised tokens are not lower total pipeline cost when search and teacher generation are excluded.
+
 ## Limitations
 
 - Many real systems update more than one target, so taxonomy is not a substitute for an explicit causal ablation.
@@ -54,3 +60,4 @@ Each has different rollback and evidence requirements. A light factory should tr
 - [Skill or Skip? Learning Selective Skill Invocation in Agentic Tasks via Dual-Granularity Preference Learning dossier](/dossiers/skill-or-skip-agent-skills.md) — DPO-trained invocation policy over a fixed library.
 - [Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills dossier](/dossiers/socratic-swe.md) — trace-derived skills that drive exercise generation and weight training.
 - [Ecdysis: Efficient and Effective Training of Runtime Harnesses for LLM Agents dossier](/dossiers/self-evolving-agent-harness-ecdysis.md) — fixed task model with an edited, score-gated harness.
+- [Recursive Self-Improvement through Multi-Agent Self-Supervision dossier](/dossiers/recursive-self-improvement-multi-agent-self-supervision.md) — MASS completes two scaffold-search/shared-weight fine-tuning cycles, with held-out synthetic-task win shares of 53.9% then 69.9% against the base and transfer to optimization/evaluation without dedicated role supervision. The joint-trace student reaches 68.3% pooled win share using 28.82M processed supervised tokens versus a single-agent control's 64.0% using 42M, but training coverage, sampling, and checkpoint selection differ; both students in the shared-test comparison score 48.3%. Search/teacher costs are excluded, coding scores regress, and two cycles do not establish long-run improvement.

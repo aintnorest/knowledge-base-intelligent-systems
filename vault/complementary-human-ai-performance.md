@@ -3,7 +3,7 @@ type: Synthesis
 title: Complementary Human–AI Performance
 description: Collaboration adds accuracy value only when it exceeds both solo partners through recoverable differences in errors, not merely greater acceptance of advice.
 tags: [evaluation, reliability, verification]
-timestamp: 2026-10-05T23:22:56Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Complementary Human–AI Performance
@@ -26,6 +26,16 @@ Advice timing is a separate intervention axis. Requiring an independent answer, 
 - **Over- and under-reliance:** measure adoption of incorrect advice and rejection of correct advice, distinguishing disagreement from successful correction. An independently recorded initial answer can help interpret revisions.
 - **Other utility:** measure effort, latency, workload, and accountability outcomes when they motivate collaboration. Preference and confidence cannot substitute for final decision quality.
 
+## Augmentation, Substitution, and Strict Complementarity
+
+For artifact-production tasks, apply the same both-solo logic to the relevant quality outcome rather than assuming classification accuracy is the only objective. Distinguish **augmentation** (assisted people improve over unaided people), **substitution** (assistance supplies some benefit otherwise provided by a second person), and **strict complementarity** (collaboration exceeds both comparable solo partners). These require different baselines.
+
+A workplace innovation experiment found proposal-quality gains of **0.245 SD** for unaided human pairs, **0.373 SD** for assisted individuals, and **0.392 SD** for assisted pairs, all relative to unaided individuals. Assisted individuals were described as comparable to unaided pairs, suggesting partial substitution for collaborative functions, not formal equivalence. Direct assisted-pair versus unaided-pair quality contrasts were nonsignificant. There was **no matched AI-alone quality baseline**; an AI-only semantic-similarity exercise cannot establish strict complementarity.
+
+Tail performance needs its own direct comparisons. Assisted pairs increased top-decile proposal incidence by **9.2 percentage points** over an unaided-individual baseline of **5.8%**, but contrasts against unaided pairs and assisted individuals did not meet p < 0.05 in any reported specification. A significant baseline contrast and nonsignificant alternative contrasts do not establish exceptional team synergy or equivalence between configurations.
+
+These proposal ratings concern short-run ideation, not commercial success, implementation, or retained expertise. The archived working paper also has unresolved sample and timing discrepancies. Evaluate person-hours and portfolio diversity alongside mean and tail quality when deciding whether to augment people or reorganize work; see [AI-Induced Work Reallocation](/vault/ai-induced-work-reallocation.md).
+
 ## Limits
 
 The supporting peer-reviewed studies used selected crowdworker tasks, not representative expert or agent deployments. The complementarity study selected unambiguous samples with comparable pilot partner accuracy and supplied correctness feedback and performance incentives. Its reasoning-task retained-participant claims are internally inconsistent, so the recruited total is not a clean analyzed sample size. Plausible explanations for wrong alternatives were not independently correct solutions, and nonsignificant contrasts do not establish equivalence.
@@ -36,3 +46,4 @@ The advice-timing study used a simulated, specific upstream perception error in 
 
 - [Does the Whole Exceed its Parts? The Effect of AI Explanations on Complementary Team Performance dossier](/dossiers/ai-explanations-complementary-team-performance.md) — peer-reviewed CHI 2021 evidence for both-solo baselines, complementary confidence-display teams, no significant incremental explanation gain, task-dependent wrong-advice acceptance, selected samples, and inconsistent LSAT retained-N accounting.
 - [To Trust or to Think: Cognitive Forcing Functions Can Reduce Overreliance on AI in AI-assisted Decision-making dossier](/dossiers/to-trust-or-to-think-cognitive-forcing.md) — peer-reviewed CSCW 2021 advice-timing experiment separating subdecision overreliance reduction from aggregate performance, successful correction, and motivation-dependent benefit.
+- [The Cybernetic Teammate dossier](/dossiers/cybernetic-teammate-generative-ai-teamwork.md) — archived April 2025 NBER working paper on P&G innovation with GPT-4/GPT-4o; augmentation and partial human-team substitution without a matched AI-alone quality baseline, and top-decile improvement only established against unaided individuals rather than other collaborative configurations.

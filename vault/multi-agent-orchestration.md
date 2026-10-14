@@ -3,7 +3,7 @@ type: Synthesis
 title: Multi-Agent Orchestration
 description: Decomposing a complex task into specialized agents that run in a coordinated pipeline, with explicit handoffs, configuration-aware evaluation, and parallel execution where dependencies allow.
 tags: [multi-agent, orchestration, evaluation, agents]
-timestamp: 2026-07-23T20:03:07Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Multi-Agent Orchestration
@@ -97,6 +97,14 @@ Where workers share governed surfaces, distinguish ownership messages from enfor
 
 Compare quality, latency, and spend against a competent solo baseline. Free-form peer cooperation can lose substantial solo capability, while manager-led isolated integration can improve quality without reducing wall-clock time. These are different execution regimes, not contradictory laws about agent count. Extra workers and review can purchase stronger results with more computation; unequal action budgets must not be described as pure coordination gains.
 
+## Delegate the Bottleneck, Preserve the Join
+
+Choose worker roles by what prevents the owner from making progress. When behavior is unknown, parallel investigators can expand the evidence available to one implementation owner; when architecture and tests already supply the decomposition, bounded construction may be the better delegation target. Clean file ownership alone does not establish useful scaling: narrower assignments can transfer more decisions to workers without increasing discoveries or the owner's integration checks. Measure new evidence and accepted integrated behavior, not worker count alone. Unequal-budget comparisons identify operating points, not a pure coordination advantage over equally funded solo work.
+
+Asynchronous delivery needs an explicit report-collection boundary before a dependent decision or final completion. The lead may continue independent work while workers run, but must reconcile required returns before claiming the integrated task is finished. This preserves concurrent execution without treating partial findings as a complete result; it is not a requirement to block all useful lead work.
+
+Contracts and call order can also become learning interfaces. Workflow search can specify bounded worker outputs and their consumers, then shared-weight training can internalize delegation and integration from execution traces. Evaluate both spontaneous and explicitly prompted coordination: more successful calls or artifact handoffs show deployment of a coordination behavior, not successful repair or preservation of the original task. Descriptive changes in workflow text do not establish that contracts caused the gain; retain independent end-to-end checks when optimizing or learning these interfaces.
+
 ## Sources
 
 - [PaperOrchestra dossier](/dossiers/paperorchestra.md) — 5 specialized agents in a fork-join pipeline; ~60–70 LLM calls; 39.6 min mean latency
@@ -119,3 +127,5 @@ Compare quality, latency, and spend against a competent solo baseline. Free-form
 - [Effective Strategies for Asynchronous Software Engineering Agents dossier](/dossiers/asynchronous-software-engineering-agents-strategies.md) — dependency-ready delegation and isolated integration improve benchmark scores with greater total actions, cost, and runtime.
 - [Towards a Science of Scaling Agent Systems dossier](/dossiers/science-scaling-agent-systems.md) — standardized tools, task prompts, and budgets expose Finance-Agent gains and PlanCraft losses; capability saturation is the authors' strongest robustness result, while frontier winner selection fails despite moderate score calibration.
 - [Don't Build Multi-Agents dossier](/dossiers/cognition-dont-build-multi-agents.md) — June 2025 practitioner argument that identical starting context does not prevent incompatible decisions made during parallel execution; qualitative evidence, not a measured universal disadvantage.
+- [Scaling Inference-Time Compute with Teams of Coding Agents dossier](/dossiers/scaling-inference-compute-coding-agent-teams.md) — ProgramBench favors parallel discovery: planning approximately matches all-stage reward at half the inference cost; implementation and verification plateau beyond four workers despite only 0.1% overlapping-file edits and five to six lead reference checks. Minimal asynchronous teams lose about six reward points versus blocking; explicit report collection closes the gap. Commit0-Lite instead favors implementation, with only 16 tasks and substantial saturation; budgets are unequal.
+- [Recursive Self-Improvement through Multi-Agent Self-Supervision dossier](/dossiers/recursive-self-improvement-multi-agent-self-supervision.md) — MASS searches contracts and call order, then trains shared orchestrator/worker weights; bare-prompt delegation rises 1/110 → 48/110 → 87/110. Retained-workflow embedding analysis covers only 8–9 tasks and 43–51 agents and is descriptive, not causal; coordination frequency does not certify scientific task fidelity.

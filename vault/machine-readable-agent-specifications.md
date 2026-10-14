@@ -3,7 +3,7 @@ type: Synthesis
 title: Machine-Readable Agent Specifications
 description: Converting organizational policies, quality standards, procedures, and agreements into versioned, scoped, testable artifacts that can govern a fleet of agents consistently.
 tags: [governance, requirements-engineering, enterprise, evaluation, agents]
-timestamp: 2026-07-13T18:03:01Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Machine-Readable Agent Specifications
@@ -49,6 +49,14 @@ Background constraints are premises too. Inferred rules about valid states, owne
 
 Coverage is relative to the modeled input and state space. Missing variables, temporal dependencies, and exception paths remain outside the proof; modeled completeness is not real-world completeness. The supporting design account offers no quantitative translation accuracy, detection performance, or downstream defect-reduction evidence.
 
+## Inspectable Intent Versus Downstream Assurance
+
+A specification is a control surface, not an automatic defect guarantee. Distinguish artifact presence, completeness of its representation, correctness of its domain assumptions, and actual use in the workflow. A linked ticket or detailed pull-request description does not establish that requirements preceded implementation, were approved by an owner, or were consumed by an agent. Preserve evidence of those steps when evaluating a specification-governed process.
+
+An observational study of 88,052 merged pull requests found no robust protective association for its measured artifacts after risk adjustment, and no significant quality–defect or quality–rework relationship. Its treatment was predominantly issue/ticket references rather than observed structured agent workflows; identifiable tool output was absent from inspected version control, which does not exclude private use. A completeness-oriented quality rubric had only moderate overall human–model agreement on 38 pull requests and did not establish domain correctness. These results neither justify automatic assurance claims nor directly refute an unobserved specification-to-agent intervention.
+
+Evaluate governance benefits and downstream quality separately. Trace the authoritative requirement, its translation, and its use, then independently validate acceptance and later repair outcomes. See [Outcome-Grounded Agent Evaluation](/vault/outcome-grounded-agent-evaluation.md) for selection effects and outcome-proxy limitations.
+
 ## Limitations
 
 - Some norms are contextual or contested and cannot be reduced safely to deterministic rules.
@@ -66,3 +74,4 @@ Coverage is relative to the modeled input and state space. Missing variables, te
 - [An open-source spec for Codex orchestration: Symphony dossier](/dossiers/openai-symphony-orchestration.md) — describes turning tacit ticket-to-review practices into repository-owned workflow policy shared across asynchronous workers.
 - [Symphony Service Specification dossier](/dossiers/openai-symphony-service-specification.md) — specifies hot reload with last-known-good fallback and separates the workflow contract from scheduler claims and reconciliation.
 - [Requirements analysis: catching requirement bugs before they become code dossier](/dossiers/kiro-requirements-analysis.md) — Kiro's May 2026 vendor account separates solver properties from intent fidelity and identifies inferred domain constraints and modeled coverage as limitations.
+- [Specification Artifacts in Open-Source Pull Request Workflows Do Not Reduce Defects dossier](/dossiers/spec-artifacts-pull-requests-do-not-reduce-defects.md) — ticket-reference-heavy observational treatment, completeness-oriented quality scoring, and no robust protective association after risk adjustment; actual specification-to-agent exposure remains unobserved.

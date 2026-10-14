@@ -3,7 +3,7 @@ type: Synthesis
 title: Outcome-Grounded Agent Evaluation
 description: Evaluating agent changes with layered offline and online evidence, including delayed product outcomes that better reflect whether users kept the result.
 tags: [evaluation, coding-agents, reliability, agents]
-timestamp: 2026-07-13T16:02:28Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Outcome-Grounded Agent Evaluation
@@ -50,6 +50,16 @@ Keep these stages separate: posted comment, independently validated finding, app
 
 For interactive software, explore the app without disclosing the acceptance checklist, keep the browser trace, and score criteria against that evidence. Keep a separate trace track for process constraints: MTAC-IFBench finds 98% runnable final projects alongside 8.7% strict turn-level constraint success.
 
+## Evaluating Process Adoption Without Mistaking Selection for Effect
+
+Workflow changes require the same outcome discipline as harness changes. First establish actual exposure: an associated artifact is not proof that a process preceded implementation or that an agent used it. Validate attribution coverage too; low-recall AI detection means untagged changes cannot serve as a clean human-only baseline.
+
+**Confounding by indication** arises when teams apply more process to harder or riskier tasks. Those tasks may need more repairs regardless of the process. In an 88,052-pull-request study, the within-author, size-controlled defect association was +1.4 percentage points; additional risk controls attenuated it, and matching observed risk profiles yielded −0.6 points across 17,375 pairs (p = 0.133). Matched rework was +0.5 points across 19,648 pairs (p = 0.146). These are observational associations, not evidence that process causes harm or that adjustment reveals its causal effect. Matching cannot remove unmeasured selection, and controlling change size may condition on a consequence of the intervention.
+
+**Outcome proximity does not establish label validity.** History-based defect attribution can mechanically give larger changes and older files more blame targets, making error differential between groups. A later corrective change in overlapping files does not establish that the earlier change caused it or quantify repair effort. Audit labels independently, report coverage and comparable discovery horizons, and distinguish externally reported error rates from validation of the dataset being evaluated.
+
+**Nonsignificance is not equivalence.** Declare a decision-relevant effect margin before analysis, report uncertainty and detectable effects, and use an appropriate equivalence design before claiming that two processes are effectively the same. A matched null without those bounds supports “no detected protective association,” not “no useful benefit.” Keep any claim about a structured agent workflow within the exposure actually observed.
+
 ## Practical Use
 
 For every harness change, declare the primary outcome, guardrail metrics, comparison population, and observation window before rollout. Investigate divergence: a falling keep rate with stable benchmark scores points to a missing product-use behavior, while rising tool errors may explain both increased cost and declining quality.
@@ -82,3 +92,4 @@ Delayed retention is still a proxy. Users may keep incorrect output, overwrite g
 - [MTAC-IFBench: Benchmarking Instruction-Following in Multi-Turn Agentic Coding dossier](/dossiers/mtac-ifbench-multi-turn-coding-instructions.md) — final functionality versus turn-level constraint compliance.
 - [From LLMs to LLM-based Agents for Software Engineering: A Survey of Current, Challenges and Future dossier](/dossiers/llm-agents-software-engineering-survey.md) — six-domain survey separating direct LLM scores from agentic workflows and their QA challenges.
 - [A Survey on Code Generation with LLM-based Agents dossier](/dossiers/code-generation-agents-survey.md) — separates function, contest and repository benchmarks, and functional from non-functional quality.
+- [Specification Artifacts in Open-Source Pull Request Workflows Do Not Reduce Defects dossier](/dossiers/spec-artifacts-pull-requests-do-not-reduce-defects.md) — process-selection confounding, ticket-reference exposure proxies, differential SZZ-label risk, low-recall AI attribution, and matched nulls that do not establish causal equivalence.

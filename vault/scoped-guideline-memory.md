@@ -3,7 +3,7 @@ type: Synthesis
 title: Scoped Guideline Memory
 description: Maintaining agent instructions as small rules whose lifetime is explicitly limited to a task or promoted to persistent memory only after a confidence and quality gate.
 tags: [agents, agent-memory, context-engineering, prompt-optimization, governance]
-timestamp: 2026-07-13T18:06:35Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Scoped Guideline Memory
@@ -28,6 +28,12 @@ A coding session may propose a reusable lesson after a failed build or an omitte
 
 Test before promoting. TRAIL structures C-to-Rust lessons as Trigger/Goal/Constraint/Risk and asks a Challenger for executable counterexamples. Only a revised lesson whose translation passes replay becomes active. It also challenges related lessons jointly, because individually sound constraints can conflict (e.g. NUL-terminated storage versus Rust slice length). A successful trace is a hypothesis, and a tested boundary case still needs held-out transfer ([Skill Artifact Quality Gates](/vault/skill-artifact-quality-gates.md)).
 
+## Measure the Marginal Value of Persistent Guidance
+
+Persistent guidance is an intervention, not free context. In controlled Python repository-task evaluations, generated and developer-committed context files increased interaction steps and inference cost without a statistically significant resolution gain over omitting the file. Traces showed more testing, exploration, and use of recommended tools: guidance can be taken up yet still add work without improving the measured outcome. This is distinct from a failure to obey instructions.
+
+Before promotion, compare a candidate rule or summary against an omission baseline on representative tasks. Separate information already retrievable from the repository from nonredundant requirements that would otherwise be missing. Measure the intended requirement, core task success, and total cost separately; neither concise wording nor faithful execution establishes value. Preserve mandatory security, maintainability, or organizational constraints even when test-based resolution cannot measure their benefit. The reported nulls are not equivalence findings, and the Python-only tasks and one completion per condition limit generalization.
+
 ## Limitations
 
 - Model confidence is not calibrated evidence. Use execution results, held-out validation, or review when a strategic rule changes safety, cost, privacy, or externally visible behavior.
@@ -41,3 +47,4 @@ Test before promoting. TRAIL structures C-to-Rust lessons as Trigger/Goal/Constr
 - [The Code Agent Orchestra - what makes multi-agent coding work dossier](/dossiers/code-agent-orchestra.md) — approved AGENTS.md lessons; generated instruction files can regress agents.
 - [My LLM coding workflow going into 2026 dossier](/dossiers/ai-coding-workflow-2026.md) — curated CLAUDE.md/GEMINI.md guidance across sessions.
 - [Translator vs. Challenger: Adversarial Agentic Learning for C-to-Rust Translation dossier](/dossiers/trail-translator-challenger-c-to-rust.md) — counterexample-challenged, replay-gated lessons with composition checks.
+- [Evaluating AGENTS.md dossier](/dossiers/evaluating-agents-md-repository-context-files.md) — generated guidance increased reported mean inference cost by 20% on SWE-bench Lite and 23% on CTXbench; generated and developer-committed files induced extra work without significant resolution gains versus omission, with unmeasured security and maintainability outcomes.

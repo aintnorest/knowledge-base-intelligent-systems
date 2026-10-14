@@ -3,7 +3,7 @@ type: Synthesis
 title: Cost-Aware Inference Control
 description: Balancing task quality, latency, and total inference cost through measured routing, reuse, serving configuration, and complete-episode accounting.
 tags: [inference-efficiency, routing, model-serving, evaluation, agents]
-timestamp: 2026-07-13T16:02:21Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Cost-Aware Inference Control
@@ -42,6 +42,12 @@ Treat the selector and acceptance gate as distribution-dependent components. Rel
 
 Code review makes request-level routing concrete: reserve deeper reasoning for sensitive, complex or cross-service changes, and use a faster path for routine issues. Vendor cost estimates are not controlled quality/cost measurements. Record the effective review effort per revision and compare severity-specific detection, noise, latency and spend on risk-matched changes ([Risk-Tiered Review and Approval](/vault/risk-tiered-review-and-approval.md)).
 
+## Role-Specific Model Placement
+
+Within a team episode, route by decision responsibility as well as task difficulty. Cheap investigators can supply observations to a capable owner who retains consequential implementation and verification decisions. Cheap implementers instead transfer those decisions and add integration burden; evidence for one substitution does not validate the other. Evaluate each lead–worker pairing and role against its own solo and all-strong baselines rather than treating price as a capability measure.
+
+Report incremental reward recovered and incremental cost paid separately from absolute quality, total spend, and wall-clock latency. Recovering roughly half an all-strong team's gain over solo is not matching that team's quality. Adding many inexpensive workers can improve the operating point when evidence gathering is the bottleneck, but does not establish equal-cost superiority to longer solo inference or guarantee that construction and verification scale similarly.
+
 ## Limitations
 
 Classification and routing add operational complexity and can make product quality inconsistent. Optimizations also interact: aggressive quantization may change speculative-decoding acceptance, while cache savings disappear when prompt reuse is low. Results must be validated on representative traffic, hardware, and pricing rather than copied from vendor case studies.
@@ -57,3 +63,4 @@ Classification and routing add operational complexity and can make product quali
 - [RouteLLM: Learning to Route LLMs with Preference Data dossier](/dossiers/routellm-preference-data-routing.md) — ICLR 2025 prompt-only routing study showing domain-augmentation benefits, bounded cross-model-pair transfer, and quality-gap-dependent savings.
 - [How Do AI Agents Spend Your Money? Analyzing and Predicting Token Consumption in Agentic Coding Tasks dossier](/dossiers/agent-token-consumption-agentic-coding.md) — repeated-history and cache-read costs, model-dependent exploration, run-to-run variability, and costly, systematically low self-estimates in a fixed coding harness.
 - [The Replay Gap: Static Evaluation of Model Switching in LLM Agents Scores the Wrong World dossier](/dossiers/replay-gap-model-switching-evaluation.md) — live forks show why logged futures cannot price counterfactual switches; a small budget-exhaustion comparison motivates separating model capability from episode completion.
+- [Scaling Inference-Time Compute with Teams of Coding Agents dossier](/dossiers/scaling-inference-compute-coding-agent-teams.md) — Sol-led Luna planners recover 47.5% of the all-Sol team's incremental reward for 13.9% of its added cost; sixteen Luna planners approach the homogeneous comparator within 1.4 reward points at 70% lower total inference cost. Cheap implementation underperforms solo Sol, but Terra-plus-Luna implementation scores 0.482 versus Terra solo's 0.471; role and lead tier matter. Unequal budgets and untested equal-cost solo scaling limit frontier claims.

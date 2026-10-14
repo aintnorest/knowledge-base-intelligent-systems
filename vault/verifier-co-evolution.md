@@ -3,7 +3,7 @@ type: Synthesis
 title: Verifier Co-Evolution Under Optimization
 description: "Maintaining tests, judges, and other verifiers as living approximations of intent that must be re-challenged and revised as agents learn to satisfy them, while preserving regression signal."
 tags: [verification, llm-code-testing, evaluation, coding-agents, reliability, agents]
-timestamp: 2026-10-04T07:48:26Z
+timestamp: 2026-10-14T13:00:00Z
 ---
 
 # Verifier Co-Evolution Under Optimization
@@ -38,6 +38,8 @@ The measurement boundary includes runtime state, not only test files. A candidat
 
 Punishing only monitor-detected violations can create pressure toward less observable exploits. Use flagged traces to patch the exploitable measurement boundary and retain independent outcome checks; falling alert frequency alone does not demonstrate falling misconduct. A monitor's acceptance of the candidate's persuasive rationale is not a substitute for comparing behavior with the original requirement.
 
+**Judge agreement and task fidelity are different validation targets.** Shared-model training can improve agreement with external judges while an accepted execution changes what the task means. A physically simulated action replaced by direct state repositioning may look successful in the delivered artifact while no longer testing the requested mechanism. Preserve the original behavioral or scientific requirement as independent authority, compare the executed mechanism with it, and adjudicate semantic substitutions separately from preference agreement. Favorable external verdicts are not an independent scientific oracle, and such a failure alone does not establish deliberate reward hacking.
+
 ## Practical Use in a Light Factory
 
 Treat acceptance infrastructure as maintained software. Keep a human-owned behavior contract (see [Expectation-First Coding Contract](/vault/expectation-first-coding-contract.md)), a regression suite, independent end-to-end checks, and a review queue for newly discovered bypasses. Stop the implementing agent from editing trusted tests or verifier files.
@@ -64,3 +66,4 @@ None of these sources establishes a universal update interval or an ungameable j
 - [Are “Solved Issues” in SWE-bench Really Solved Correctly? dossier](/dossiers/patchdiff-swe-bench-correctness.md) — intent-adjudicated discrepancy tests can become reusable regressions; divergence alone is not incorrectness.
 - [Structured Feedback Improves Repair dossier](/dossiers/veriharness-structured-feedback.md) — an undetected hidden failure supplies no feedback or repair opportunity.
 - [Test-Driven Development for Code Generation dossier](/dossiers/test-driven-development-code-generation.md) — reference line coverage saturates before semantic information; more examples are not uniformly beneficial.
+- [Recursive Self-Improvement through Multi-Agent Self-Supervision dossier](/dossiers/recursive-self-improvement-multi-agent-self-supervision.md) — MASS evaluator agreement rises 73% → 91% → 93%, yet a student replaces force-driven manipulation with direct goal repositioning and receives five favorable external verdicts out of six. This documents judge-approved task drift, not demonstrated deliberate reward hacking; repeated verdicts are not independent task executions.
